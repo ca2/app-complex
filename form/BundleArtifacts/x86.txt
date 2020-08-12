@@ -1,0 +1,2 @@
+﻿MainPackage=C:\winmetro\time\Win32\basis\winmetro_simple_form_simple_form\winmetro_simple_form_simple_form_1.1.17.0_Win32_basis.appx
+ResourcePack=C:\winmetro\time\Win32\basis\winmetro_simple_form_simple_form\winmetro_simple_form_simple_form_1.1.17.0_scale-100.appx

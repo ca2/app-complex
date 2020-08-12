@@ -1,0 +1,8 @@
+﻿; app_simple_message_box.def
+
+LIBRARY  "m_simple_message_box"
+; For Win32 DLLs, only EXPORTs really required.
+
+EXPORTS
+get_new_library
+

@@ -1,0 +1,8 @@
+; app_simple_helloworld.def
+
+LIBRARY  "app_simple_helloworld"
+; For Win32 DLLs, only EXPORTs really required.
+
+EXPORTS
+app_simple_helloworld_get_new_library
+

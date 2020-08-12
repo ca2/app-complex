@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:/xcore/app-simple/drawing/drawing.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:/xcore/app-simple/form/form.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:/xcore/app-simple/notify_drawing/notify_drawing.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:/xcore/app-simple/drag_and_drop/drag_and_drop.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../app/ace/ace.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../drag_and_drop/app_simple_drag_and_drop.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../drawing/app_simple_drawing.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../form/app_simple_form.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../notify_drawing/app_simple_notify_drawing.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../third/aqua/aqua.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../third/iconv/atomiconv.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:../../app/aura/.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../third/expat/auraexpat.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../third/pcre/aurapcre.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:../../app/axis/axis.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../third/idn/axisidn.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:../../app/base/base.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:../../app/aura/.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:../../app/draw2d_quartz2d/draw2d_quartz2d.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:../../app/experience_core/experience_core.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../app/experience_tranquillum/experience_tranquillum.xcodeproj">
+   </FileRef>
+</Workspace>

@@ -1,0 +1,2 @@
+﻿MainPackage=C:\winmetro\time\Win32\basis\winmetro_simple_drag_and_drop_simsimple_drag_and_dropnmetro_simsimple_drag_and_dropmsimple_drag_and_drop1.17.0_Win32_basis.appx
+ResourcePack=C:\winmetro\time\Win32\basis\winmetro_simple_drag_and_drop_simple_drag_and_drop\winmetro_simple_drag_and_drop_simple_drag_and_drop_1.1.17.0_scale-100.appx

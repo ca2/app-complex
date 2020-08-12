@@ -1,0 +1,3 @@
+/* Localized versions of Info.plist keys */
+"CFBundleDisplayName" = "Simple Drag'nDrop";
+"CFBundleName" = "Simple Drag'nDrop";
