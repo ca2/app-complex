@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="app_simple_drawing" />
+		<Option title="app_complex_drawing" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -93,43 +93,26 @@
 		</Compiler>
 		<Linker>
 			<Add option="-Wl,-rpath=\\$$$ORIGIN" />
-			<Add option="-lX11" />
-			<Add option="-lsqlite3" />
-			<Add option="-lbz2" />
-			<Add option="-lz" />
-			<Add option="-lssl" />
-			<Add option="-lidn" />
-			<Add option="-lfreetype" />
 			<Add option="-laura" />
+			<Add option="-lcore" />
+			<Add option="-lapp_simple_drawing" />
 			<Add option="-Wl,-z,defs" />
 			<Add directory="$(#time_dir)/x64/$(TARGET_NAME)" />
 		</Linker>
 		<ExtraCommands>
-			<Add after="$(#archive)/tool-linux/bin/app._.sh $(WORKSPACE_DIR) $(PROJECT_DIR) $(TARGET_NAME) $(PROJECT_NAME) $(#time_name) $(#archive) $(#config)  app-simple/drawing" />
+			<Add after="$(#archive)/tool-linux/bin/app._.sh $(WORKSPACE_DIR) $(PROJECT_DIR) $(TARGET_NAME) $(PROJECT_NAME) $(#time_name) $(#archive) $(#config)  app-complex/drawing" />
 			<Mode after="always" />
 		</ExtraCommands>
 		<Unit filename="_.h" />
 		<Unit filename="application.cpp" />
 		<Unit filename="application.h" />
-		<Unit filename="document.cpp" />
-		<Unit filename="document.h" />
-		<Unit filename="frame.cpp" />
-		<Unit filename="frame.h" />
 		<Unit filename="framework.cpp" />
 		<Unit filename="framework.h">
 			<Option compile="1" />
 			<Option weight="0" />
 		</Unit>
-		<Unit filename="main_frame.cpp" />
-		<Unit filename="main_frame.h" />
+		<Unit filename="pane_view.cpp" />
 		<Unit filename="pane_view.h" />
-		<Unit filename="render.cpp" />
-		<Unit filename="render.h" />
-		<Unit filename="render_1through3.cpp" />
-		<Unit filename="render_arcs.cpp" />
-		<Unit filename="tab_view.cpp" />
-		<Unit filename="view.cpp" />
-		<Unit filename="view.h" />
 		<Extensions>
 			<DoxyBlocks>
 				<comment_style block="0" line="0" />
