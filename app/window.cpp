@@ -58,7 +58,7 @@ namespace simple_app
 
       auto colorBackground = get_color(pstyle, ::user::element_background);
 
-      pgraphics->fill_solid_rect(rectClient, ARGB(127, 255, 255, 255));
+      pgraphics->fill_rect(rectClient, ARGB(127, 255, 255, 255));
       
       double dBase = (double) rectClient.minimum_signed_absolute_dimension() / 17.0;
 

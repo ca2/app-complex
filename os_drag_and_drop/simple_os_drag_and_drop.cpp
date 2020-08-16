@@ -247,7 +247,7 @@ namespace simple_os_drag_and_drop
 
       ::rect rClient(m_rect);
 
-      pgraphics->fill_solid_rect(rClient, ARGB(255, 192, 192, 185));
+      pgraphics->fill_rect(rClient, ARGB(255, 192, 192, 185));
 
       int iColumnCount = 8;
 
