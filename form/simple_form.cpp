@@ -2,7 +2,7 @@
 #include <math.h>
 
 
-CLASS_DECL_AURA void g_track_popup_lyricview(::user::interaction * pinteraction, ::message::mouse * pmouse);
+//CLASS_DECL_AURA void g_track_popup_lyricview(::user::interaction * pinteraction, ::message::mouse * pmouse);
 
 
 namespace simple_form
