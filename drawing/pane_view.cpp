@@ -143,7 +143,7 @@ namespace complex_drawing
    void pane_view::on_create_impact(::user::impact_data * pimpactdata)
    {
 
-      if (Application.has_property("notabs"))
+      if (ThisApp.has_property("notabs"))
       {
 
          return;
@@ -254,7 +254,7 @@ namespace complex_drawing
 
             m_pviewTopic->m_prender->m_strHoverFontFamilyName = strFont1;
 
-            Application.m_pstrHoverFontFamilyName = &m_pviewTopic->m_prender->m_strHoverFontFamilyName;
+            ThisApp.m_pstrHoverFontFamilyName = &m_pviewTopic->m_prender->m_strHoverFontFamilyName;
 
             m_pfontview->m_pview->ensure_sel_visible();
 
@@ -264,7 +264,7 @@ namespace complex_drawing
       else
       {
 
-         Application.m_pstrHoverFontFamilyName = nullptr;
+         ThisApp.m_pstrHoverFontFamilyName = nullptr;
 
       }
 
@@ -370,7 +370,7 @@ namespace complex_drawing
 
                ::output_debug_string("\n\nSIMPLE_DRAWING::PANE_VIEW::" + strId + "\n\n");
 
-               Application.data_set(strId, m_pviewTopic->m_prender->m_hlsText);
+               ThisApp.data_set(strId, m_pviewTopic->m_prender->m_hlsText);
 
             }
 
@@ -398,10 +398,10 @@ namespace complex_drawing
             if (strFont.has_char())
             {
 
-               if (Application.m_pstrHoverFontFamilyName)
+               if (ThisApp.m_pstrHoverFontFamilyName)
                {
 
-                  *Application.m_pstrHoverFontFamilyName = strFont;
+                  *ThisApp.m_pstrHoverFontFamilyName = strFont;
 
                }
 

@@ -7,7 +7,8 @@ namespace complex_drawing
 
    class CLASS_DECL_APP_COMPLEX_DRAWING pane_view :
       virtual public ::simple_drawing::tab_view,
-      virtual public ::userex::pane_tab_view
+      virtual public ::userex::pane_tab_view,
+      virtual public __application_consumer
    {
    public:
 
