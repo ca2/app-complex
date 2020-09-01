@@ -111,7 +111,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3979"
             endingLineNumber = "3979"
-            landmarkName = "interaction_impl::window_thread_apply_visual()"
+            landmarkName = "interaction_impl::window_show()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -207,7 +207,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "4127"
             endingLineNumber = "4127"
-            landmarkName = "interaction_impl::window_thread_apply_visual()"
+            landmarkName = "interaction_impl::window_show()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -223,7 +223,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "4148"
             endingLineNumber = "4148"
-            landmarkName = "interaction_impl::window_thread_apply_visual()"
+            landmarkName = "interaction_impl::window_show()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
