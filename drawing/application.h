@@ -7,7 +7,8 @@ namespace complex_drawing
 
 
    class CLASS_DECL_APP_COMPLEX_DRAWING application :
-      virtual public ::simple_drawing::application
+      virtual public ::simple_drawing::application,
+      virtual public ::core::application
    {
    public:
 

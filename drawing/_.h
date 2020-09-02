@@ -2,6 +2,7 @@
 
 
 #include "app-simple/drawing/_.h"
+#include "core/_.h"
 
 
 #ifdef _APP_COMPLEX_DRAWING_LIBRARY
