@@ -92,6 +92,8 @@
 		<Linker>
 			<Add option="-Wl,-rpath=\\$$$ORIGIN" />
 			<Add option="-laura" />
+			<Add option="-laxis" />
+			<Add option="-lbase" />
 			<Add option="-lcore" />
 			<Add option="-lapp_simple_drawing" />
 			<Add option="-Wl,-z,defs" />
