@@ -74,7 +74,7 @@ namespace helloworld
 
 
 extern "C"
-::aura::library * app_simple_helloworld_get_new_library(::object * pobject)
+::apex::library * app_simple_helloworld_get_new_library(::layered * pobjectContext)
 {
 
    return new ::aura::single_application_library < ::helloworld::application >(papp, "app-simple/helloworld");

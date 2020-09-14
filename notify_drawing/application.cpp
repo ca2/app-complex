@@ -177,7 +177,7 @@ namespace notify_drawing
 
 
 //extern "C"
-//::aura::library * app_simple_notify_drawing_get_new_library()
+//::apex::library * app_simple_notify_drawing_get_new_library()
 //{
 //
 //   return new ::aura::single_application_library < ::notify_drawing::application >("app-simple/notify_drawing");

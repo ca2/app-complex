@@ -25,7 +25,7 @@ namespace simple_shader
    }
 
 
-   ::estatus render::initialize(::object* pobjectContext)
+   ::estatus render::initialize(::layered * pobjectContext)
    {
 
       auto estatus = ::object::initialize(pobjectContext);

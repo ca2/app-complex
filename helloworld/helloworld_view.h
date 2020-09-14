@@ -14,7 +14,7 @@ namespace helloworld
    public:
 
 
-      view(::object * pobject);
+      view(::layered * pobjectContext);
       virtual ~view();
 
       virtual void assert_valid() const;

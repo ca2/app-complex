@@ -6,7 +6,7 @@ namespace helloworld
 {
 
 
-   frame::frame(::object * pobject) :
+   frame::frame(::layered * pobjectContext) :
       ::object(papp),
       simple_frame_window(papp)
    {
