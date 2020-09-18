@@ -189,7 +189,7 @@ namespace simple_form
 //::apex::library * app_simple_form_get_new_library()
 //{
 //
-//   return new ::aura::single_application_library < ::simple_form::application >("app-simple/form");
+//   return new ::apex::single_application_library < ::simple_form::application >("app-simple/form");
 //
 //}
 //

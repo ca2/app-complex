@@ -19,7 +19,7 @@ namespace simple_os_drag_and_drop
 	   virtual void dump(dump_context & dumpcontext) const override;
 
 
-//      virtual bool get_translucency(::user::e_translucency & etranslucency, ::user::e_element eelement, ::user::style_context * pinteraction) override;
+//      virtual ::user::e_translucency get_translucency(::user::style * pstyle) const override;
 
 
    };
