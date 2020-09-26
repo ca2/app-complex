@@ -112,7 +112,7 @@
 			<Add directory="$(WORKSPACEDIR)/../../time-$(#platform_modifier)/x64/$(TARGET_NAME)" />
 		</Linker>
 		<ExtraCommands>
-			<Add after="$(#archive)/tool-linux/bin/app._.sh $(WORKSPACE_DIR) $(PROJECT_DIR) $(TARGET_NAME) $(PROJECT_NAME) $(#platform_modifier) $(#archive) $(#config)app-simple/os_drag_and_drop" />
+			<Add after="$(#archive)/tool-linux/bin/app._.sh $(WORKSPACE_DIR) $(PROJECT_DIR) $(TARGET_NAME) $(PROJECT_NAME) $(#platform_modifier) $(#archive) $(#config) app-simple/os_drag_and_drop" />
 			<Mode after="always" />
 		</ExtraCommands>
 		<Unit filename="application.cpp" />
