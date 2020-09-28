@@ -95,7 +95,7 @@ namespace simple_os_drag_and_drop
 
       rect rect;
 
-      int iSize = MIN(m_rect.width(), m_rect.height());
+      int iSize = min(m_rect.width(), m_rect.height());
 
       iSize = iSize * 3 / 4;
 
