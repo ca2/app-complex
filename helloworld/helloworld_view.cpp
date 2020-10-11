@@ -82,7 +82,7 @@ namespace helloworld
 
       pgraphics->SelectObject(font);
 
-      pgraphics->draw_text("Hello World!!", rectClient, DT_CENTER | DT_VCENTER);
+      pgraphics->draw_text("Hello World!!", rectClient, e_align_horizontal_center | e_align_vertical_center);
 
    }
 
