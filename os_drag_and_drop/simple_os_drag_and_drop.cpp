@@ -180,7 +180,7 @@ namespace simple_os_drag_and_drop
 
          pgraphics->set(brush);
 
-         //pgraphics->draw_text("Simple Drawing", rectText, e_align_horizontal_center | e_align_vertical_center);
+         //pgraphics->draw_text("Simple Drawing", rectText, e_align_center);
 
       }
 
