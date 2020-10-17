@@ -38,7 +38,7 @@ namespace simple_shader
       bool BaseOnControlEvent(::user::form_window * pview,::user::control_event * pevent);
       void on_change_cur_sel() override;
 
-      virtual void update(::update * pupdate) override;
+      virtual void on_apply(::action * paction) override;
 
       virtual void on_control_event(::user::control_event * pevent) override;
 

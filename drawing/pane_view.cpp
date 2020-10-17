@@ -176,11 +176,11 @@ namespace complex_drawing
    //}
 
 
-   void pane_view::update(::update * pupdate)
+   void pane_view::on_apply(::action * paction)
    {
 
 
-      ::simple_drawing::tab_view::update(pupdate);
+      ::simple_drawing::tab_view::on_apply(paction);
 
    }
 

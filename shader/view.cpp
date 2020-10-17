@@ -193,17 +193,17 @@ namespace simple_shader
    }
 
 
-   void view::update(::update * pupdate)
+   void view::on_apply(::action * paction)
    {
 
-      if (pupdate->m_id == id_simple_checkbox || pupdate->m_id == id_no_client_frame)
+      if (paction->id() == id_simple_checkbox || paction->id() == id_no_client_frame)
       {
 
          set_need_redraw();
 
       }
 
-      ::user::impact::update(pupdate);
+      ::user::impact::on_apply(paction);
 
    }
 

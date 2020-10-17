@@ -256,14 +256,14 @@ namespace simple_form
    }
 
 
-   void tab_view::update(::update * pupdate)
+   void tab_view::on_apply(::action * paction)
    {
 
       //////__update(::update)
       //{
 
-      //   if (pupdate->m_id == id_control_event
-      //         && pupdate->m_puserinteraction == m_pfontview
+      //   if (paction->id() == id_control_event
+      //         && paction->m_puserinteraction == m_pfontview
       //         && m_pviewLast != NULL)
       //   {
 
@@ -284,8 +284,8 @@ namespace simple_form
 
       //}
 
-//      ::userex::pane_tab_view::update(pupdate);
-      ::user::tab_view::update(pupdate);
+//      ::userex::pane_tab_view::on_apply(paction);
+      ::user::tab_view::on_apply(paction);
 
    }
 

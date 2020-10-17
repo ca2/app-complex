@@ -195,11 +195,11 @@ namespace simple_shader
    }
 
 
-   void tab_view::update(::update * pupdate)
+   void tab_view::on_apply(::action * paction)
    {
 
 
-      ::user::tab_view::update(pupdate);
+      ::user::tab_view::on_apply(paction);
 
    }
 
