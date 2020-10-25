@@ -23,8 +23,8 @@ namespace simple_app
 
       ::user::interaction::install_message_routing(pchannel);
 
-      IGUI_MSG_LINK(WM_CLOSE, pchannel, this, &window::_001OnClose);
-      IGUI_MSG_LINK(WM_DISPLAYCHANGE, pchannel, this, &window::_001OnDisplayChange);
+      MESSAGE_LINK(WM_CLOSE, pchannel, this, &window::_001OnClose);
+      MESSAGE_LINK(WM_DISPLAYCHANGE, pchannel, this, &window::_001OnDisplayChange);
 
    }
 

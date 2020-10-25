@@ -62,8 +62,8 @@ namespace simple_os_drag_and_drop
 
       ::user::impact::install_message_routing(psender);
 
-      IGUI_MSG_LINK(WM_CREATE,psender,this,&view::_001OnCreate);
-      IGUI_MSG_LINK(WM_DESTROY, psender, this, &view::_001OnDestroy);
+      MESSAGE_LINK(e_message_create,psender,this,&view::_001OnCreate);
+      MESSAGE_LINK(e_message_destroy, psender, this, &view::_001OnDestroy);
 
    }
 

@@ -43,7 +43,7 @@ namespace simple_os_drag_and_drop
 
       ::user::tab_view::install_message_routing(pchannel);
 
-      IGUI_MSG_LINK(WM_CREATE, pchannel, this, &tab_view::_001OnCreate);
+      MESSAGE_LINK(e_message_create, pchannel, this, &tab_view::_001OnCreate);
 
    }
 

@@ -97,7 +97,7 @@ namespace simple_form
 
       ::user::form_view::install_message_routing(psender);
 
-      IGUI_MSG_LINK(WM_CREATE, psender, this, &simple_form::_001OnCreate);
+      MESSAGE_LINK(e_message_create, psender, this, &simple_form::_001OnCreate);
 
    }
 

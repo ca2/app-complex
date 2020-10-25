@@ -39,7 +39,7 @@ namespace simple_shader
 
       ::user::tab_view::install_message_routing(pchannel);
 
-      IGUI_MSG_LINK(WM_CREATE, pchannel, this, &tab_view::_001OnCreate);
+      MESSAGE_LINK(e_message_create, pchannel, this, &tab_view::_001OnCreate);
 
    }
 

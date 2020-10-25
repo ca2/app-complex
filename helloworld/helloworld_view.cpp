@@ -41,7 +41,7 @@ namespace helloworld
 
       ::user::impact::install_message_handling(pdispatch);
 
-      IGUI_WIN_MSG_LINK(WM_CREATE,pdispatch,this,&view::_001OnCreate);
+      IGUI_WIN_MSG_LINK(e_message_create,pdispatch,this,&view::_001OnCreate);
 
    }
 

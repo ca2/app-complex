@@ -64,9 +64,9 @@ namespace simple_shader
 
       ::user::impact::install_message_routing(psender);
       ::user::interaction::install_simple_ui_default_mouse_handling(psender);
-      IGUI_MSG_LINK(WM_CREATE,psender,this,&view::_001OnCreate);
-      IGUI_MSG_LINK(WM_DESTROY, psender, this, &view::_001OnDestroy);
-      IGUI_MSG_LINK(WM_KEYDOWN, psender, this, &view::_001OnKeyDown);
+      MESSAGE_LINK(e_message_create,psender,this,&view::_001OnCreate);
+      MESSAGE_LINK(e_message_destroy, psender, this, &view::_001OnDestroy);
+      MESSAGE_LINK(WM_KEYDOWN, psender, this, &view::_001OnKeyDown);
 
    }
 
