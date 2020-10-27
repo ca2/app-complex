@@ -46,7 +46,9 @@ namespace complex_drawing
    ::estatus application::init_instance()
    {
 
-      User.will_use_view_hint(FONTSEL_IMPACT);
+      auto puser = User;
+
+      puser->will_use_view_hint(FONTSEL_IMPACT);
 
       create_factory <::complex_drawing::pane_view >();
 

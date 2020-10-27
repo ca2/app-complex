@@ -31,7 +31,7 @@ namespace notify_drawing
 
       ::aura::session * pcoression = &Session;
 
-      User.will_use_view_hint(FONTSEL_IMPACT);
+      puser->will_use_view_hint(FONTSEL_IMPACT);
 
       create_factory <::notify_drawing::main_frame >();
       create_factory <::notify_drawing::view >();

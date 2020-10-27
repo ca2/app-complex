@@ -85,7 +85,7 @@ namespace simple_shader
 
       set_local_data();
 
-      User.will_use_view_hint(FONTSEL_IMPACT);
+      puser->will_use_view_hint(FONTSEL_IMPACT);
 
       create_factory <::simple_shader::document >();
       create_factory <::simple_shader::frame >();
