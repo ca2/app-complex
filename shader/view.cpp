@@ -66,7 +66,7 @@ namespace simple_shader
       ::user::interaction::install_simple_ui_default_mouse_handling(psender);
       MESSAGE_LINK(e_message_create,psender,this,&view::_001OnCreate);
       MESSAGE_LINK(e_message_destroy, psender, this, &view::_001OnDestroy);
-      MESSAGE_LINK(WM_KEYDOWN, psender, this, &view::_001OnKeyDown);
+      MESSAGE_LINK(e_message_key_down, psender, this, &view::_001OnKeyDown);
 
    }
 
