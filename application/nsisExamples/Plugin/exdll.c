@@ -8,7 +8,7 @@ HWND g_hwndParent;
 // functions for accessing the variables and the stack.
 
 void __declspec(dllexport) myFunction(HWND hwndParent, int string_size, 
-                                      LPTSTR variables, stack_t **stacktop,
+                                      char * variables, stack_t **stacktop,
                                       extra_parameters *extra, ...)
 {
   EXDLL_INIT();
@@ -24,11 +24,11 @@ void __declspec(dllexport) myFunction(HWND hwndParent, int string_size,
 
   // do your stuff here
   {
-    LPTSTR msgbuf = (LPTSTR) GlobalAlloc(GPTR, (3 + string_size + 1) * sizeof(*msgbuf));
+    char * msgbuf = (char *) GlobalAlloc(GPTR, (3 + string_size + 1) * sizeof(*msgbuf));
     if (msgbuf)
     {
       wsprintf(msgbuf, TEXT("$0=%s"), getuservariable(INST_0));
-      MessageBox(g_hwndParent, msgbuf, TEXT("Message from example plugin"), MB_OK);
+      MessageBox(g_hwndParent, msgbuf, TEXT("Message from example plugin"), e_message_box_ok);
       GlobalFree(msgbuf);
     }
   }
