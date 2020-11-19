@@ -3,7 +3,7 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "experience::aura::experience::experience(object*)::$_0::operator()() const:experience_core_experience.cpp">
+         contextName = "experience::aura::experience::experience(object*)::$_0::operator()() const:experience_lite_experience.cpp">
       </ContextState>
       <ContextState
          contextName = "aura::system::process_init():aura_system.cpp">

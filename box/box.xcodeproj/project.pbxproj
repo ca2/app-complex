@@ -16,7 +16,7 @@
 		9A79F73A2453602E0016804C /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A79F7342453602E0016804C /* libaura.dylib */; };
 		9A79F73C2453603B0016804C /* libaura.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A79F7342453602E0016804C /* libaura.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A79F73E2453603F0016804C /* libdraw2d_quartz2d.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A79F7332453602D0016804C /* libdraw2d_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A79F73F245360420016804C /* libexperience_core.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A79F7352453602E0016804C /* libexperience_core.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A79F73F245360420016804C /* libexperience_lite.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A79F7352453602E0016804C /* libexperience_lite.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A79F740245360440016804C /* libidn.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A79F7302453602D0016804C /* libidn.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A79F741245360450016804C /* libpcre.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A79F7312453602D0016804C /* libpcre.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8B639024CBD75C00A93185 /* libimaging_coreimage.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8B638F24CBD75C00A93185 /* libimaging_coreimage.dylib */; };
@@ -45,7 +45,7 @@
 				9A79F73E2453603F0016804C /* libdraw2d_quartz2d.dylib in CopyFiles */,
 				9A79F740245360440016804C /* libidn.dylib in CopyFiles */,
 				9A79F741245360450016804C /* libpcre.dylib in CopyFiles */,
-				9A79F73F245360420016804C /* libexperience_core.dylib in CopyFiles */,
+				9A79F73F245360420016804C /* libexperience_lite.dylib in CopyFiles */,
 				9A79F73C2453603B0016804C /* libaura.dylib in CopyFiles */,
 				9A79F72E245360140016804C /* libcrypto.dylib in CopyFiles */,
 			);
@@ -77,7 +77,7 @@
 		9A79F7312453602D0016804C /* libpcre.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcre.dylib; path = "../../time-macos/library/Debug/libpcre.dylib"; sourceTree = "<group>"; };
 		9A79F7332453602D0016804C /* libdraw2d_quartz2d.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdraw2d_quartz2d.dylib; path = "../../time-macos/library/Debug/libdraw2d_quartz2d.dylib"; sourceTree = "<group>"; };
 		9A79F7342453602E0016804C /* libaura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaura.dylib; path = "../../time-macos/library/Debug/libaura.dylib"; sourceTree = "<group>"; };
-		9A79F7352453602E0016804C /* libexperience_core.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexperience_core.dylib; path = "../../time-macos/library/Debug/libexperience_core.dylib"; sourceTree = "<group>"; };
+		9A79F7352453602E0016804C /* libexperience_lite.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexperience_lite.dylib; path = "../../time-macos/library/Debug/libexperience_lite.dylib"; sourceTree = "<group>"; };
 		9A8B638F24CBD75C00A93185 /* libimaging_coreimage.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libimaging_coreimage.dylib; path = "../../time-macos/library/Debug/libimaging_coreimage.dylib"; sourceTree = "<group>"; };
 		9AE5CC9022CBECFA00EDEAD1 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,7 +157,7 @@
 				9A79F7342453602E0016804C /* libaura.dylib */,
 				9A8B638F24CBD75C00A93185 /* libimaging_coreimage.dylib */,
 				9A79F7332453602D0016804C /* libdraw2d_quartz2d.dylib */,
-				9A79F7352453602E0016804C /* libexperience_core.dylib */,
+				9A79F7352453602E0016804C /* libexperience_lite.dylib */,
 				9A79F7302453602D0016804C /* libidn.dylib */,
 				9A79F7312453602D0016804C /* libpcre.dylib */,
 				9A79F72724535FDA0016804C /* libapp_simple_box.dylib */,

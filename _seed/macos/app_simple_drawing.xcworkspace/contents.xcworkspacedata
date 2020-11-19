@@ -59,7 +59,7 @@
       location = "container:../../app/draw2d_quartz2d/draw2d_quartz2d.xcodeproj">
    </FileRef>
    <FileRef
-      location = "container:../../app/experience_core/experience_core.xcodeproj">
+      location = "container:../../app/experience_lite/experience_lite.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:../../app/experience_tranquillum/experience_tranquillum.xcodeproj">

@@ -15,7 +15,7 @@
 		9A204B3B2433E91600D45614 /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A204B272433E91600D45614 /* libaura.dylib */; };
 		9A204B3F2433E95700D45614 /* libaura.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A204B272433E91600D45614 /* libaura.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A204B422433E95C00D45614 /* libdraw2d_quartz2d.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A204B162433E91500D45614 /* libdraw2d_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A204B432433E95F00D45614 /* libexperience_core.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A204B1D2433E91500D45614 /* libexperience_core.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A204B432433E95F00D45614 /* libexperience_lite.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A204B1D2433E91500D45614 /* libexperience_lite.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A204B442433E96000D45614 /* libidn.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A204B192433E91500D45614 /* libidn.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A204B452433E96200D45614 /* libpcre.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A204B172433E91500D45614 /* libpcre.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A79F72624535FCB0016804C /* libapp_simple_application.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A79F72424535FC20016804C /* libapp_simple_application.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -45,7 +45,7 @@
 				9A204B3F2433E95700D45614 /* libaura.dylib in CopyFiles */,
 				9A204B452433E96200D45614 /* libpcre.dylib in CopyFiles */,
 				9A204B442433E96000D45614 /* libidn.dylib in CopyFiles */,
-				9A204B432433E95F00D45614 /* libexperience_core.dylib in CopyFiles */,
+				9A204B432433E95F00D45614 /* libexperience_lite.dylib in CopyFiles */,
 				9A204B422433E95C00D45614 /* libdraw2d_quartz2d.dylib in CopyFiles */,
 				9A204AFD2433E13600D45614 /* libcrypto.dylib in CopyFiles */,
 			);
@@ -75,7 +75,7 @@
 		9A204B162433E91500D45614 /* libdraw2d_quartz2d.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdraw2d_quartz2d.dylib; path = "../../time-macos/library/Debug/libdraw2d_quartz2d.dylib"; sourceTree = "<group>"; };
 		9A204B172433E91500D45614 /* libpcre.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcre.dylib; path = "../../time-macos/library/Debug/libpcre.dylib"; sourceTree = "<group>"; };
 		9A204B192433E91500D45614 /* libidn.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libidn.dylib; path = "../../time-macos/library/Debug/libidn.dylib"; sourceTree = "<group>"; };
-		9A204B1D2433E91500D45614 /* libexperience_core.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexperience_core.dylib; path = "../../time-macos/library/Debug/libexperience_core.dylib"; sourceTree = "<group>"; };
+		9A204B1D2433E91500D45614 /* libexperience_lite.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexperience_lite.dylib; path = "../../time-macos/library/Debug/libexperience_lite.dylib"; sourceTree = "<group>"; };
 		9A204B272433E91600D45614 /* libaura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaura.dylib; path = "../../time-macos/library/Debug/libaura.dylib"; sourceTree = "<group>"; };
 		9A79F72424535FC20016804C /* libapp_simple_application.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libapp_simple_application.dylib; path = "../../time-macos/library/Debug/libapp_simple_application.dylib"; sourceTree = "<group>"; };
 		9A8B638D24CBD74500A93185 /* libimaging_coreimage.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libimaging_coreimage.dylib; path = "../../time-macos/library/Debug/libimaging_coreimage.dylib"; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 				9A204B272433E91600D45614 /* libaura.dylib */,
 				9A8B638D24CBD74500A93185 /* libimaging_coreimage.dylib */,
 				9A204B162433E91500D45614 /* libdraw2d_quartz2d.dylib */,
-				9A204B1D2433E91500D45614 /* libexperience_core.dylib */,
+				9A204B1D2433E91500D45614 /* libexperience_lite.dylib */,
 				9A204B192433E91500D45614 /* libidn.dylib */,
 				9A204B172433E91500D45614 /* libpcre.dylib */,
 			);

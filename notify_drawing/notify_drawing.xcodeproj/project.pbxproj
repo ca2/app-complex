@@ -13,7 +13,7 @@
 		9A204BC52433F9A000D45614 /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A204BB12433F99F00D45614 /* libaura.dylib */; };
 		9A204BD72433FA1300D45614 /* libpcre.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A204BB32433F99F00D45614 /* libpcre.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A204BD82433FA1500D45614 /* libidn.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A204BB82433F99F00D45614 /* libidn.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A204BD92433FA1800D45614 /* libexperience_core.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A204BBE2433F99F00D45614 /* libexperience_core.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A204BD92433FA1800D45614 /* libexperience_lite.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A204BBE2433F99F00D45614 /* libexperience_lite.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A204BDA2433FA1A00D45614 /* libdraw2d_quartz2d.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A204BB52433F99F00D45614 /* libdraw2d_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A204BDD2433FA2800D45614 /* libaura.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A204BB12433F99F00D45614 /* libaura.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A204BDE2433FA2A00D45614 /* libapp_simple_notify_drawing.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A204BBA2433F99F00D45614 /* libapp_simple_notify_drawing.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -45,7 +45,7 @@
 				9A204BDE2433FA2A00D45614 /* libapp_simple_notify_drawing.dylib in CopyFiles */,
 				9A204BDD2433FA2800D45614 /* libaura.dylib in CopyFiles */,
 				9A204BDA2433FA1A00D45614 /* libdraw2d_quartz2d.dylib in CopyFiles */,
-				9A204BD92433FA1800D45614 /* libexperience_core.dylib in CopyFiles */,
+				9A204BD92433FA1800D45614 /* libexperience_lite.dylib in CopyFiles */,
 				9A204BD82433FA1500D45614 /* libidn.dylib in CopyFiles */,
 				9A204BD72433FA1300D45614 /* libpcre.dylib in CopyFiles */,
 			);
@@ -78,7 +78,7 @@
 		9A204BB82433F99F00D45614 /* libidn.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libidn.dylib; path = "../../time-macos/library/Debug/libidn.dylib"; sourceTree = "<group>"; };
 		9A204BBA2433F99F00D45614 /* libapp_simple_notify_drawing.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libapp_simple_notify_drawing.dylib; path = "../../time-macos/library/Debug/libapp_simple_notify_drawing.dylib"; sourceTree = "<group>"; };
 		9A204BBD2433F99F00D45614 /* libcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore.dylib; path = "../../time-macos/library/Debug/libcore.dylib"; sourceTree = "<group>"; };
-		9A204BBE2433F99F00D45614 /* libexperience_core.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexperience_core.dylib; path = "../../time-macos/library/Debug/libexperience_core.dylib"; sourceTree = "<group>"; };
+		9A204BBE2433F99F00D45614 /* libexperience_lite.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexperience_lite.dylib; path = "../../time-macos/library/Debug/libexperience_lite.dylib"; sourceTree = "<group>"; };
 		9A8B642824CBE60400A93185 /* libimaging_coreimage.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libimaging_coreimage.dylib; path = "../../time-macos/library/Debug/libimaging_coreimage.dylib"; sourceTree = "<group>"; };
 		9AE5CC9222CBED0B00EDEAD1 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,7 +159,7 @@
 				9A204BB12433F99F00D45614 /* libaura.dylib */,
 				9A204BBD2433F99F00D45614 /* libcore.dylib */,
 				9A204BB52433F99F00D45614 /* libdraw2d_quartz2d.dylib */,
-				9A204BBE2433F99F00D45614 /* libexperience_core.dylib */,
+				9A204BBE2433F99F00D45614 /* libexperience_lite.dylib */,
 				9A204BB82433F99F00D45614 /* libidn.dylib */,
 				9A8B642824CBE60400A93185 /* libimaging_coreimage.dylib */,
 				9A204BB32433F99F00D45614 /* libpcre.dylib */,

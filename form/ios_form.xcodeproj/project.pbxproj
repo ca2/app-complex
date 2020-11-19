@@ -212,7 +212,7 @@
 			containerPortal = 9AAA7CE32489EC69009B10B7 /* experience_tranquillum.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9AE24E691904CFE2001AEFFB;
-			remoteInfo = experience_core_iosTests;
+			remoteInfo = experience_lite_iosTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -652,7 +652,7 @@
 			children = (
 				9AAA7CF42489EC69009B10B7 /* libexperience_tranquillum.dylib */,
 				9AAA7CF62489EC69009B10B7 /* libios_experience_tranquillum.dylib */,
-				9AAA7CF82489EC69009B10B7 /* experience_core_iosTests.xctest */,
+				9AAA7CF82489EC69009B10B7 /* experience_lite_iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -906,10 +906,10 @@
 			remoteRef = 9AAA7CF52489EC69009B10B7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AAA7CF82489EC69009B10B7 /* experience_core_iosTests.xctest */ = {
+		9AAA7CF82489EC69009B10B7 /* experience_lite_iosTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = experience_core_iosTests.xctest;
+			path = experience_lite_iosTests.xctest;
 			remoteRef = 9AAA7CF72489EC69009B10B7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
