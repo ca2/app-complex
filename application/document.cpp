@@ -41,7 +41,7 @@ namespace simple_application
    }
 
 
-   bool document::on_open_document(const var & varFile)
+   bool document::on_open_document(const payload & varFile)
    {
 
       view * pview = get_typed_view < view >();

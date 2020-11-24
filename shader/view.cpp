@@ -142,12 +142,12 @@ namespace simple_shader
 
          auto pproperty = Application.fetch_property(id);
 
-         var var;
+         payload payload;
 
-         if (Application.data_get(id, var))
+         if (Application.data_get(id, payload))
          {
 
-            pproperty->convert(var);
+            pproperty->convert(payload);
 
          }
 

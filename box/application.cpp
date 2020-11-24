@@ -31,12 +31,12 @@ namespace simple_message_box
 
       m_strAppName = "Simple Message Box!!";
 
-      add(e_callback_finish, [=](const var& var)
+      add(e_callback_finish, [=](const payload& payload)
          {
 
             auto pcallbacks = callbacks(e_callback_finish);
 
-            if (var == "no")
+            if (payload == "no")
             {
 
                message_box(
