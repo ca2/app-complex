@@ -176,11 +176,11 @@ namespace complex_drawing
    //}
 
 
-   void pane_view::on_apply(::action * paction)
+   void pane_view::on_subject(::promise::subject * psubject, ::promise::context * pcontext)
    {
 
 
-      ::simple_drawing::tab_view::on_apply(paction);
+      ::simple_drawing::tab_view::on_subject(psubject, pcontext);
 
    }
 

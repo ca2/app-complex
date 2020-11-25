@@ -256,14 +256,14 @@ namespace simple_form
    }
 
 
-   void tab_view::on_apply(::action * paction)
+   void tab_view::on_subject(::promise::subject * psubject, ::promise::context * pcontext)
    {
 
       //////__update(::update)
       //{
 
-      //   if (paction->id() == id_control_event
-      //         && paction->m_puserinteraction == m_pfontview
+      //   if (psubject->id() == id_control_event
+      //         && psubject->m_puserinteraction == m_pfontview
       //         && m_pviewLast != NULL)
       //   {
 
@@ -284,8 +284,8 @@ namespace simple_form
 
       //}
 
-//      ::userex::pane_tab_view::on_apply(paction);
-      ::user::tab_view::on_apply(paction);
+//      ::userex::pane_tab_view::on_subject(psubject, pcontext);
+      ::user::tab_view::on_subject(psubject, pcontext);
 
    }
 
