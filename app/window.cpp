@@ -101,7 +101,7 @@ namespace simple_app
 
       _001InitialFramePosition(rectWindow, { 0.05, 0.05, 0.4, 0.4 });
 
-      display(display_normal);
+      display(e_display_normal);
 
       place(rectWindow);
 
