@@ -22,7 +22,7 @@ namespace simple_form
       virtual void dump(dump_context & dumpcontext) const override;
 
 
-      //virtual ::user::e_translucency get_translucency(::user::style * pstyle) const override;
+      //virtual ::user::enum_translucency get_translucency(::user::style * pstyle) const override;
       virtual ::experience::frame * experience_get_frame() override;
 
       virtual bool has_pending_graphical_update() override;
