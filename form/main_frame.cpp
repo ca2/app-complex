@@ -76,9 +76,9 @@ namespace simple_form
    //   //      return true;
 
    //   //}
-   //   //etranslucency = ::user::translucency_present;
+   //   //etranslucency = ::user::e_translucency_present;
 
-   //   ////      etranslucency = ::user::translucency_none;
+   //   ////      etranslucency = ::user::e_translucency_none;
 
    //   //return true;
 

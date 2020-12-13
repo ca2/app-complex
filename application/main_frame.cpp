@@ -14,7 +14,7 @@ namespace simple_application
 
       window_enable_full_screen();
 
-      m_etranslucencyFrame = ::user::translucency_total;
+      m_etranslucencyFrame = ::user::e_translucency_total;
 
    }
 

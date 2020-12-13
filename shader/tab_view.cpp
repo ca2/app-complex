@@ -178,7 +178,7 @@ namespace simple_shader
 
          pviewShader->m_prender->m_strShaderPrefix = strId;
 
-         pimpactdata->m_eflag.add(::user::flag_hide_topic_on_show);
+         pimpactdata->m_eflag.add(::user::e_flag_hide_topic_on_show);
 
       }
 

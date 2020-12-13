@@ -209,7 +209,7 @@ namespace simple_form
       ::user::tab_view::on_create_impact(pimpactdata);
 //      ::userex::pane_tab_view::on_create_impact(pimpactdata);
 
-      pimpactdata->m_eflag.add(::user::flag_hide_all_others_on_show);
+      pimpactdata->m_eflag.add(::user::e_flag_hide_all_others_on_show);
 
    }
 
@@ -222,12 +222,12 @@ namespace simple_form
             && pevent->m_puie != nullptr)
       {
 
-         if(pevent->m_eevent == ::user::event_after_change_text)
+         if(pevent->m_eevent == ::user::e_event_after_change_text)
          {
 
 
          }
-         else if (pevent->m_eevent == ::user::event_set_check && pevent->m_puie != NULL)
+         else if (pevent->m_eevent == ::user::e_event_set_check && pevent->m_puie != NULL)
          {
 
             string strCheck = pevent->m_puie->m_id;
@@ -267,13 +267,13 @@ namespace simple_form
       //         && m_pviewLast != NULL)
       //   {
 
-      //      if(pupdate->m_pcontrolevent->m_eevent == ::user::event_after_change_cur_sel)
+      //      if(pupdate->m_pcontrolevent->m_eevent == ::user::e_event_after_change_cur_sel)
       //      {
 
       //         string strFont = m_pfontview->m_pview->get_cur_sel_face_name();
 
       //      }
-      //      else if (pupdate->m_pcontrolevent->m_eevent == ::user::event_after_change_cur_hover)
+      //      else if (pupdate->m_pcontrolevent->m_eevent == ::user::e_event_after_change_cur_hover)
       //      {
 
       //         string strFont = m_pfontview->m_pview->get_cur_hover_face_name();
