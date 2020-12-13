@@ -317,7 +317,7 @@ namespace complex_drawing
 
    //      pview->m_prender->initialize_simple_drawing(atoi(strId));
 
-   //      pimpactdata->m_eflag.add(::user::flag_hide_topic_on_show);
+   //      pimpactdata->m_eflag.add(::user::e_flag_hide_topic_on_show);
 
    //   }
 
@@ -354,12 +354,12 @@ namespace complex_drawing
       if (pevent->m_puie == m_pcolorview)
       {
 
-         if (pevent->m_eevent == ::user::event_after_change_cur_sel || pevent->m_eevent == ::user::event_after_change_cur_hover)
+         if (pevent->m_eevent == ::user::e_event_after_change_cur_sel || pevent->m_eevent == ::user::e_event_after_change_cur_hover)
          {
 
             m_pcolorview->get_color().get_hls(m_pviewTopic->m_prender->m_hlsText);
 
-            if (pevent->m_eevent == ::user::event_after_change_cur_sel)
+            if (pevent->m_eevent == ::user::e_event_after_change_cur_sel)
             {
 
                string strId;
@@ -382,7 +382,7 @@ namespace complex_drawing
       else if (pevent->m_id == impact_font_sel)
       {
 
-         if (pevent->m_eevent == ::user::event_after_change_cur_sel)
+         if (pevent->m_eevent == ::user::e_event_after_change_cur_sel)
          {
 
             string strFont = m_pfontview->m_pview->get_cur_sel_face_name();
@@ -390,7 +390,7 @@ namespace complex_drawing
             m_pviewTopic->m_prender->set_font(strFont);
 
          }
-         else if (pevent->m_eevent == ::user::event_after_change_cur_hover)
+         else if (pevent->m_eevent == ::user::e_event_after_change_cur_hover)
          {
 
             string strFont = m_pfontview->m_pview->get_cur_hover_face_name();

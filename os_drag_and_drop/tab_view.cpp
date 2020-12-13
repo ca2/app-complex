@@ -180,7 +180,7 @@ namespace simple_os_drag_and_drop
 
       }
 
-      pimpactdata->m_eflag.add(::user::flag_hide_topic_on_show);
+      pimpactdata->m_eflag.add(::user::e_flag_hide_topic_on_show);
 
       //::userex::pane_tab_view::on_create_impact(pimpactdata);
       ::user::tab_view::on_create_impact(pimpactdata);
@@ -194,12 +194,12 @@ namespace simple_os_drag_and_drop
       if(m_pdocMenu != nullptr && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0) && pevent->m_puie != nullptr)
       {
 
-         if(pevent->m_eevent == ::user::event_after_change_text)
+         if(pevent->m_eevent == ::user::e_event_after_change_text)
          {
 
 
          }
-         else if (pevent->m_eevent == ::user::event_set_check && pevent->m_puie != nullptr)
+         else if (pevent->m_eevent == ::user::e_event_set_check && pevent->m_puie != nullptr)
          {
 
             string strCheck = pevent->m_puie->m_id;
@@ -239,13 +239,13 @@ namespace simple_os_drag_and_drop
       //         && m_pviewTopic != nullptr)
       //   {
 
-      //      if(pupdate->m_pcontrolevent->m_eevent == ::user::event_after_change_cur_sel)
+      //      if(pupdate->m_pcontrolevent->m_eevent == ::user::e_event_after_change_cur_sel)
       //      {
 
       //         string strFont = m_pfontview->m_pview->get_cur_sel_face_name();
 
       //      }
-      //      else if (pupdate->m_pcontrolevent->m_eevent == ::user::event_after_change_cur_hover)
+      //      else if (pupdate->m_pcontrolevent->m_eevent == ::user::e_event_after_change_cur_hover)
       //      {
 
       //         string strFont = m_pfontview->m_pview->get_cur_hover_face_name();
