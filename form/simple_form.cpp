@@ -23,7 +23,7 @@ namespace simple_form
          //class point ptCursor;
          //ptCursor = pmouse->m_pt;
          //if (m_lyrictemplatelines.hit_test(ptCursor, iLine, iToken, iChar)
-         //   == ::user::line_hit_link)
+         //   == ::user::e_line_hit_link)
          //{
          //   string str;
          //   lyriclines.GetLink(str, iLine, iToken, iChar);
