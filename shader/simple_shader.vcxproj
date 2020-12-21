@@ -152,7 +152,7 @@
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)/local/include;$(__archive)/third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)/third-windows/include;$(__archive)/third-windows/third/include;$(__archive)/third-windows/thirdparty/$(PlatformName)/$(Configuration)/include;$(__archive)/third-windows/include/;;$(__archive)/local/include;$(SolutionDir)../../nodelfs/$(PlatformName)/include;$(SolutionDir)../../../archive/platform-windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)local/include;$(__archive)third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include;$(__archive)third-windows/third/include;$(__archive)third-windows/thirdparty/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include/;;$(__archive)local/include;$(SolutionDir)../../nodelfs/$(PlatformName)/include;$(SolutionDir)../../../archive/platform-windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_APP_SIMPLE_SHADER_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -223,7 +223,7 @@
       </Command>
     </PostBuildEvent>
     <CustomBuildStep>
-      <Command>$(__archive)\tool-windows\program\app._.exe "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
+      <Command>$(__archive)tool-windows\program\app._.exe "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>$(OutDir)$(TargetName).exe</Outputs>
@@ -245,7 +245,7 @@
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)/local/include;$(__archive)/third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)/third-windows/include;$(__archive)/third-windows/third/include;$(__archive)/third-windows/thirdparty/$(PlatformName)/$(Configuration)/include;$(__archive)/third-windows/include/;;$(__archive)/local/include;$(SolutionDir)../../nodelfs/$(PlatformName)/include;$(SolutionDir)../../../archive/platform-windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)local/include;$(__archive)third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include;$(__archive)third-windows/third/include;$(__archive)third-windows/thirdparty/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include/;;$(__archive)local/include;$(SolutionDir)../../nodelfs/$(PlatformName)/include;$(SolutionDir)../../../archive/platform-windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_APP_SIMPLE_SHADER_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -316,7 +316,7 @@
       </Command>
     </PostBuildEvent>
     <CustomBuildStep>
-      <Command>$(__archive)\tool-windows\program\app._.exe "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
+      <Command>$(__archive)tool-windows\program\app._.exe "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>$(OutDir)$(TargetName).exe</Outputs>
@@ -338,7 +338,7 @@
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)/local/include;$(__archive)/third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)/third-windows/include;$(__archive)/third-windows/third/include;$(__archive)/third-windows/thirdparty/$(PlatformName)/$(Configuration)/include;$(__archive)/third-windows/include/;;$(__archive)/local/include;$(SolutionDir)../../nodelfs/$(PlatformName)/include;$(SolutionDir)../../../archive/platform-windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)local/include;$(__archive)third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include;$(__archive)third-windows/third/include;$(__archive)third-windows/thirdparty/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include/;;$(__archive)local/include;$(SolutionDir)../../nodelfs/$(PlatformName)/include;$(SolutionDir)../../../archive/platform-windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_APP_SIMPLE_SHADER_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <ExceptionHandling>Async</ExceptionHandling>
@@ -420,7 +420,7 @@
       </Command>
     </PostBuildEvent>
     <CustomBuildStep>
-      <Command>$(__archive)\tool-windows\program\app._.exe "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
+      <Command>$(__archive)tool-windows\program\app._.exe "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>$(OutDir)$(TargetName).exe</Outputs>
@@ -443,7 +443,7 @@
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)/local/include;$(__archive)/third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)/third-windows/include;$(__archive)/third-windows/third/include;$(__archive)/third-windows/thirdparty/$(PlatformName)/$(Configuration)/include;$(__archive)/third-windows/include/;;$(__archive)/local/include;$(SolutionDir)../../nodelfs/$(PlatformName)/include;$(SolutionDir)../../../archive/platform-windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)local/include;$(__archive)third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include;$(__archive)third-windows/third/include;$(__archive)third-windows/thirdparty/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include/;;$(__archive)local/include;$(SolutionDir)../../nodelfs/$(PlatformName)/include;$(SolutionDir)../../../archive/platform-windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_APP_SIMPLE_SHADER_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -480,7 +480,7 @@
     <Link>
       <AdditionalDependencies>windowscodecs.lib;gdiplus.lib;winmm.lib;version.lib;vfw32.lib;opengl32.lib;glu32.lib;Psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <AdditionalLibraryDirectories>$(OutDir);$(__archive)\storage-windows\third\library\$(PlatformName)\$(Configuration)\;$(__archive)\storage-windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(OutDir);$(__archive)storage-windows\third\library\$(PlatformName)\$(Configuration)\;$(__archive)storage-windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>
       </IgnoreAllDefaultLibraries>
       <IgnoreSpecificDefaultLibraries>
@@ -509,7 +509,7 @@
       <PreserveSBR>false</PreserveSBR>
     </Bscmake>
     <CustomBuildStep>
-      <Command>$(__archive)\tool-windows\program\app._.exe "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
+      <Command>$(__archive)tool-windows\program\app._.exe "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>$(OutDir)$(TargetName).exe</Outputs>
@@ -526,7 +526,7 @@
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)/local/include;$(__archive)/third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)/third-windows/include;$(__archive)/third-windows/third/include;$(__archive)/third-windows/thirdparty/$(PlatformName)/$(Configuration)/include;$(__archive)/third-windows/include/;;$(__archive)/local/include;$(SolutionDir)../../nodelfs/$(PlatformName)/include;$(SolutionDir)../../../archive/platform-windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)local/include;$(__archive)third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include;$(__archive)third-windows/third/include;$(__archive)third-windows/thirdparty/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include/;;$(__archive)local/include;$(SolutionDir)../../nodelfs/$(PlatformName)/include;$(SolutionDir)../../../archive/platform-windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_APP_SIMPLE_SHADER_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -594,7 +594,7 @@
       <PreserveSBR>false</PreserveSBR>
     </Bscmake>
     <CustomBuildStep>
-      <Command>$(__archive)\tool-windows\program\app._.exe "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
+      <Command>$(__archive)tool-windows\program\app._.exe "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>$(OutDir)$(TargetName).exe</Outputs>
@@ -611,7 +611,7 @@
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)/local/include;$(__archive)/third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)/third-windows/include;$(__archive)/third-windows/third/include;$(__archive)/third-windows/thirdparty/$(PlatformName)/$(Configuration)/include;$(__archive)/third-windows/include/;;$(__archive)/local/include;$(SolutionDir)../../nodelfs/$(PlatformName)/include;$(SolutionDir)../../../archive/platform-windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)local/include;$(__archive)third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include;$(__archive)third-windows/third/include;$(__archive)third-windows/thirdparty/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include/;;$(__archive)local/include;$(SolutionDir)../../nodelfs/$(PlatformName)/include;$(SolutionDir)../../../archive/platform-windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_APP_SIMPLE_SHADER_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <ExceptionHandling>Async</ExceptionHandling>
@@ -687,7 +687,7 @@
       <PreserveSBR>false</PreserveSBR>
     </Bscmake>
     <CustomBuildStep>
-      <Command>$(__archive)\tool-windows\program\app._.exe "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
+      <Command>$(__archive)tool-windows\program\app._.exe "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>$(OutDir)$(TargetName).exe</Outputs>
