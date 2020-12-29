@@ -31,7 +31,7 @@ namespace simple_shader
       virtual ~render();
 
 
-      virtual ::estatus initialize(::layered * pobjectContext) override;
+      virtual ::e_status initialize(::layered * pobjectContext) override;
 
 #ifdef DEBUG
       virtual int64_t add_ref(OBJ_REF_DBG_PARAMS) override;
@@ -39,11 +39,11 @@ namespace simple_shader
 #endif
 
       string get_font();
-      ::estatus set_font(const string& strFont);
+      ::e_status set_font(const string& strFont);
 
-      virtual ::estatus update_shader();
+      virtual ::e_status update_shader();
       virtual void defer_update_shader();
-      virtual ::estatus _update_shader();
+      virtual ::e_status _update_shader();
 
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics);
 

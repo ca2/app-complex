@@ -25,7 +25,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   ::estatus application::init_instance()
+   ::e_status application::init_instance()
    {
 
       set_local_data();

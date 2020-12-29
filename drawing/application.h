@@ -20,7 +20,7 @@ namespace complex_drawing
       virtual ::type get_pane_view_type() const;
 
 
-      virtual ::estatus init_instance() override;
+      virtual ::e_status init_instance() override;
 
 
    };

@@ -80,7 +80,7 @@ namespace simple_shader
    }
 
 
-   ::estatus application::init_instance()
+   ::e_status application::init_instance()
    {
 
       set_local_data();
