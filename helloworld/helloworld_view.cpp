@@ -78,7 +78,7 @@ namespace helloworld
 
       ::draw2d::font_pointer font(this_create);
 
-      font->create_point_font(FONT_SANS, min(rectClient.height() / 5.0, rectClient.width() / 10.0), 800);
+      font->create_point_font(os_font_name(e_font_sans), min(rectClient.height() / 5.0, rectClient.width() / 10.0), 800);
 
       pgraphics->SelectObject(font);
 
