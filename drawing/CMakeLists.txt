@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.17)
-project(app_simple_drawing CXX)
+project(app_complex_drawing CXX)
 
 
 set(CMAKE_CXX_STANDARD 14)
@@ -20,27 +20,15 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../../time-${PLATFORM_NAM
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../../time-${PLATFORM_NAME}/cmake)
 
 
-list(APPEND app_simple_application_source
+list(APPEND app_complex_drawing_source
    _.h
    _drawing.h
    application.cpp
    application.h
-   document.cpp
-   document.h
    framework.cpp
    framework.h
-   frame.cpp
-   frame.h
-   main_frame.cpp
-   main_frame.h
-   render.cpp
-   render.h
-   render_1through3.cpp
-   render_arcs.cpp
-   tab_view.cpp
-   tab_view.h
-   view.cpp
-   view.h
+   pane_view.cpp
+   pane_view.h
    )
 
 
@@ -51,43 +39,46 @@ else ()
 endif ()
 
 
-add_library(app_simple_drawing SHARED ${app_simple_application_source})
+add_library(app_complex_drawing SHARED ${app_complex_drawing_source})
 
-target_precompile_headers(app_simple_drawing PRIVATE framework.h)
+target_precompile_headers(app_complex_drawing PRIVATE framework.h)
 
-set_target_properties(app_simple_drawing PROPERTIES LINKER_LANGUAGE CXX)
+set_target_properties(app_complex_drawing PROPERTIES LINKER_LANGUAGE CXX)
 
 
-list(APPEND app_simple_drawing_references
+list(APPEND app_complex_drawing_references
    acme
    apex
    aqua
    aura
    axis
    base
+   bred
+   core
+   app_simple_drawing
    )
 
 
 if (MSVC)
 
-   target_compile_options(app_simple_drawing PRIVATE "/MD$<$<CONFIG:Debug>:d>")
-   target_link_options(app_simple_drawing PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
-   target_link_options(app_simple_drawing PRIVATE "/SUBSYSTEM:WINDOWS")
-   target_link_libraries(app_simple_drawing PRIVATE ${app_simple_drawing_references})
-   add_dependencies(app_simple_drawing draw2d_gdiplus imaging_wic)
+   target_compile_options(app_complex_drawing PRIVATE "/MD$<$<CONFIG:Debug>:d>")
+   target_link_options(app_complex_drawing PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
+   target_link_options(app_complex_drawing PRIVATE "/SUBSYSTEM:WINDOWS")
+   target_link_libraries(app_complex_drawing PRIVATE ${app_complex_drawing_references})
+   add_dependencies(app_complex_drawing draw2d_gdiplus imaging_wic)
 
 elseif (LINUX)
 
-   target_compile_options(app_simple_drawing PRIVATE -fpermissive)
-   target_link_options(app_simple_drawing PRIVATE -Wl,-rpath=\$ORIGIN)
-   target_link_libraries(app_simple_drawing PRIVATE ${app_simple_drawing_references})
-   target_link_options(app_simple_drawing PRIVATE -Wl,-z,defs)
-   add_dependencies(app_simple_drawing draw2d_cairo imaging_freeimage)
+   target_compile_options(app_complex_drawing PRIVATE -fpermissive)
+   target_link_options(app_complex_drawing PRIVATE -Wl,-rpath=\$ORIGIN)
+   target_link_libraries(app_complex_drawing PRIVATE ${app_complex_drawing_references})
+   target_link_options(app_complex_drawing PRIVATE -Wl,-z,defs)
+   add_dependencies(app_complex_drawing draw2d_cairo imaging_freeimage)
 
 endif ()
 
 
-add_dependencies(app_simple_drawing experience_core)
+add_dependencies(app_complex_drawing experience_core)
 
 
 list(APPEND library_link_directories
@@ -97,7 +88,7 @@ list(APPEND library_link_directories
    )
 
 
-target_link_directories(app_simple_drawing PRIVATE ${library_link_directories})
+target_link_directories(app_complex_drawing PRIVATE ${library_link_directories})
 
 
 list(APPEND library_include_directories
@@ -118,48 +109,48 @@ list(APPEND library_include_directories
    )
 
 
-target_include_directories(app_simple_drawing PRIVATE ${library_include_directories})
+target_include_directories(app_complex_drawing PRIVATE ${library_include_directories})
 
 
-target_compile_definitions(app_simple_drawing PRIVATE _APP_SIMPLE_DRAWING_LIBRARY)
-target_compile_definitions(app_simple_drawing PRIVATE UNICODE)
-target_compile_definitions(app_simple_drawing PRIVATE _UNICODE)
+target_compile_definitions(app_complex_drawing PRIVATE _APP_complex_DRAWING_LIBRARY)
+target_compile_definitions(app_complex_drawing PRIVATE UNICODE)
+target_compile_definitions(app_complex_drawing PRIVATE _UNICODE)
 
-add_executable(_app_simple_drawing ${PLATFORM_NAME}/main.cpp)
-target_compile_definitions(_app_simple_drawing PRIVATE UNICODE)
-target_compile_definitions(_app_simple_drawing PRIVATE _UNICODE)
+add_executable(_app_complex_drawing ${PLATFORM_NAME}/main.cpp)
+target_compile_definitions(_app_complex_drawing PRIVATE UNICODE)
+target_compile_definitions(_app_complex_drawing PRIVATE _UNICODE)
 
 
-target_compile_definitions(_app_simple_drawing PRIVATE _APP_ID="app-simple/drawing")
+target_compile_definitions(_app_complex_drawing PRIVATE _APP_ID="app-complex/drawing")
 
 
 if (MSVC)
 
-   target_compile_options(_app_simple_drawing PRIVATE "/MD$<$<CONFIG:Debug>:d>")
-   target_link_options(_app_simple_drawing PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
-   target_link_options(_app_simple_drawing PRIVATE "/SUBSYSTEM:WINDOWS")
-   target_link_libraries(_app_simple_drawing PRIVATE ${app_simple_drawing_references})
-   add_dependencies(_app_simple_drawing draw2d_gdiplus imaging_wic)
+   target_compile_options(_app_complex_drawing PRIVATE "/MD$<$<CONFIG:Debug>:d>")
+   target_link_options(_app_complex_drawing PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
+   target_link_options(_app_complex_drawing PRIVATE "/SUBSYSTEM:WINDOWS")
+   target_link_libraries(_app_complex_drawing PRIVATE ${app_complex_drawing_references})
+   add_dependencies(_app_complex_drawing draw2d_gdiplus imaging_wic)
 
 elseif (LINUX)
 
-   target_compile_options(_app_simple_drawing PRIVATE -fpermissive)
-   target_link_options(_app_simple_drawing PRIVATE -Wl,-rpath=\$ORIGIN)
-   target_link_libraries(_app_simple_drawing PRIVATE ${app_simple_drawing_references})
-   target_link_options(_app_simple_drawing PRIVATE -Wl,-z,defs)
-   add_dependencies(_app_simple_drawing draw2d_cairo imaging_freeimage)
+   target_compile_options(_app_complex_drawing PRIVATE -fpermissive)
+   target_link_options(_app_complex_drawing PRIVATE -Wl,-rpath=\$ORIGIN)
+   target_link_libraries(_app_complex_drawing PRIVATE ${app_complex_drawing_references})
+   target_link_options(_app_complex_drawing PRIVATE -Wl,-z,defs)
+   add_dependencies(_app_complex_drawing draw2d_cairo imaging_freeimage)
 
 endif ()
 
-add_dependencies(_app_simple_drawing app_simple_drawing)
+add_dependencies(_app_complex_drawing app_complex_drawing)
 
-target_include_directories(_app_simple_drawing PRIVATE ${library_include_directories})
+target_include_directories(_app_complex_drawing PRIVATE ${library_include_directories})
 
-target_link_directories(_app_simple_drawing PRIVATE ${library_link_directories})
+target_link_directories(_app_complex_drawing PRIVATE ${library_link_directories})
 
-target_link_libraries(_app_simple_drawing PRIVATE acme apex)
+target_link_libraries(_app_complex_drawing PRIVATE acme apex)
 
-set_target_properties(_app_simple_drawing PROPERTIES LINKER_LANGUAGE CXX)
+set_target_properties(_app_complex_drawing PROPERTIES LINKER_LANGUAGE CXX)
 
 
 
