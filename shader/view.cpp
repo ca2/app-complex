@@ -74,7 +74,7 @@ namespace simple_shader
    void view::_001OnCreate(::message::message * pmessage)
    {
 
-      SCAST_PTR(::message::create,pcreate,pmessage);
+      __pointer(::message::create) pcreate(pmessage);
 
       pcreate->previous();
 
@@ -85,7 +85,7 @@ namespace simple_shader
 
       }
 
-      GetTopLevelFrame()->set_prodevian();
+      top_level_frame()->set_prodevian();
 
       auto predraw = [this]()
          {
@@ -177,7 +177,7 @@ namespace simple_shader
    void view::_001OnKeyDown(::message::message* pmessage)
    {
 
-      SCAST_PTR(::message::key, pkey, pmessage);
+      __pointer(::message::key) pkey(pmessage);
 
       if (pkey->m_ekey == ::user::key_s)
       {

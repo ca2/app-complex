@@ -148,7 +148,7 @@ namespace simple_os_drag_and_drop
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->m_pcommandline->m_varQuery["document"].cast < document >()->get_typed_view < ::user::tab_view >()->GetTopLevelFrame()->prodevian_prepare_window_maximize();
+         pcreate->m_pcommandline->m_varQuery["document"].cast < document >()->get_typed_view < ::user::tab_view >()->top_level_frame()->prodevian_prepare_window_maximize();
 
       }
 
