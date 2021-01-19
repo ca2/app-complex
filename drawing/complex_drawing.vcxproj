@@ -266,7 +266,7 @@
       <SDLCheck>true</SDLCheck>
       <UseFullPaths>true</UseFullPaths>
       <IntrinsicFunctions>false</IntrinsicFunctions>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <ResourceCompile>
       <AdditionalIncludeDirectories>$(SolutionDir)../../..</AdditionalIncludeDirectories>
@@ -754,7 +754,7 @@
       <ObjectFileName>$(IntDir)%(Directory)</ObjectFileName>
       <SDLCheck>true</SDLCheck>
       <UseFullPaths>true</UseFullPaths>
-      <LanguageStandard>stdcpp14</LanguageStandard>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <ResourceCompile>
       <AdditionalIncludeDirectories>$(SolutionDir)../../..</AdditionalIncludeDirectories>
@@ -1181,9 +1181,6 @@
     <ResourceCompile Include="..\..\..\archive\platform-windows\version.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\source\app-simple\drawing\simple_drawing.vcxproj">
-      <Project>{3f1119cf-6041-4ae9-970e-4ddab57c5e48}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\source\app\acme\acme.vcxproj">
       <Project>{638b242f-0f21-41c3-9f66-724660046133}</Project>
     </ProjectReference>

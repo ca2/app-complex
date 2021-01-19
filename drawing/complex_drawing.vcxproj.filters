@@ -41,8 +41,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="..\..\platform-windows\version.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
+    <ResourceCompile Include="..\..\..\archive\platform-windows\version.rc" />
   </ItemGroup>
 </Project>
