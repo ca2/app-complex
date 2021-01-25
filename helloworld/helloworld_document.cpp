@@ -48,7 +48,7 @@ namespace helloworld
    }
 
 
-   bool document::on_open_document(const payload & varFile)
+   bool document::on_open_document(const ::payload & varFile)
    {
 
       return true;

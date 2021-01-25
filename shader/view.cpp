@@ -142,7 +142,7 @@ namespace simple_shader
 
          auto pproperty = Application.fetch_property(id);
 
-         payload payload;
+         ::payload payload;
 
          if (Application.data_get(id, payload))
          {

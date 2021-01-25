@@ -12,7 +12,7 @@ namespace simple_message_box
    public:
 
 
-      payload      m_varMessage;
+      ::payload      m_varMessage;
 
 
       application();

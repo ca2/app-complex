@@ -31,7 +31,7 @@ namespace simple_message_box
 
       m_strAppName = "Simple Message Box!!";
 
-      add(e_callback_finish, [=](const payload& payload)
+      add(e_callback_finish, [=](const ::payload & payload)
          {
 
             auto pcallbacks = callbacks(e_callback_finish);

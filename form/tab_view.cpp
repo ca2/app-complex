@@ -61,7 +61,7 @@ namespace simple_form
 
       string strForm;
 
-      strForm = Application.value("tab");
+      strForm = Application.payload("tab");
 
       string_array straForm;
 

@@ -19,7 +19,7 @@ namespace simple_form
 	   virtual void dump(dump_context & dumpcontext) const override;
 
       virtual bool on_new_document() override;
-      virtual bool on_open_document(const payload & varFile) override;
+      virtual bool on_open_document(const ::payload & varFile) override;
 
 
 #ifdef DEBUG

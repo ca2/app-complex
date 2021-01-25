@@ -44,7 +44,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   bool document::on_open_document(const payload & varFile)
+   bool document::on_open_document(const ::payload & varFile)
    {
 
       view * pview = get_typed_view < view >();
