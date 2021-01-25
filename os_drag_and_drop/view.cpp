@@ -9,7 +9,7 @@ namespace simple_os_drag_and_drop
    view::view()
    {
 
-      value(FONTSEL_IMPACT) = true;
+      payload(FONTSEL_IMPACT) = true;
 
       m_flagNonClient.remove(non_client_background);
 
