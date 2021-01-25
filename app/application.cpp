@@ -60,7 +60,7 @@ namespace simple_app
 
       m_pwindow->_001InitialFramePosition(rectWindow, {0.05, 0.05, 0.4, 0.4});
 
-      ::user::system_struct cs(0, nullptr, "simple_app", WS_VISIBLE, rectWindow);
+      ::user::system cs(0, nullptr, "simple_app", WS_VISIBLE, rectWindow);
 
       m_pwindow->create_window_ex(cs);
 
