@@ -1205,6 +1205,9 @@
     <ProjectReference Include="..\..\..\source\app\core\core.vcxproj">
       <Project>{29c1eb5b-060e-4021-ae12-d1bcfb1b1359}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\app-simple\drawing\simple_drawing.vcxproj">
+      <Project>{3f1119cf-6041-4ae9-970e-4ddab57c5e48}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
