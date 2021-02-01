@@ -1027,7 +1027,7 @@
 				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = (
 					"$(inherited)",
 					"\"$(TARGET_BUILD_DIR)\"",
-					"$(HOME)/__archive/archive/storage-ios/iPhoneSimulator13.4-x86_64.sdk/lib",
+					"$(WorkspaceDir)/archive $(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER)/storage-ios/iPhoneSimulator13.4-x86_64.sdk/lib",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PLATFORM_MODIFIER = ios;
@@ -1037,7 +1037,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SEPARATE_STRIP = YES;
 				STRIP_STYLE = debugging;
-				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/include $(WorkspaceDir)/app/_include . ..  $(WorkspaceDir)/../.. $(WorkspaceDir)/app $(WorkspaceDir)/.. $(WorkspaceDir) $(WorkspaceDir)/app $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER)";
+				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER)/_include . ..  $(WorkspaceDir)/../.. $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/.. $(WorkspaceDir) $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1072,7 +1072,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SEPARATE_STRIP = YES;
 				STRIP_STYLE = debugging;
-				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/include $(WorkspaceDir)/app/_include . ..  $(WorkspaceDir)/../.. $(WorkspaceDir)/app $(WorkspaceDir)/.. $(WorkspaceDir) $(WorkspaceDir)/app $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER)";
+				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER)/_include . ..  $(WorkspaceDir)/../.. $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/.. $(WorkspaceDir) $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1180,7 +1180,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LIBRARY_SEARCH_PATHS = "$(HOME)/__archive/archive/storage-ios/iPhoneSimulator11.2-x86_64.sdk/lib";
+				LIBRARY_SEARCH_PATHS = "$(WorkspaceDir)/archive $(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER)/storage-ios/iPhoneSimulator11.2-x86_64.sdk/lib";
 				ONLY_ACTIVE_ARCH = YES;
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1188,8 +1188,8 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/include $(WorkspaceDir)/app/_include . ..  $(WorkspaceDir)/../.. $(WorkspaceDir)/app $(WorkspaceDir)/.. $(WorkspaceDir) $(WorkspaceDir)/app/base aura/ $(WorkspaceDir)/app $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER)";
-				WorkspaceDir = "$(SRCROOT)/../..";
+				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER)/_include . ..  $(WorkspaceDir)/../.. $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/.. $(WorkspaceDir) $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER)/base aura/ $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER)";
+				WorkspaceDir = "$(SRCROOT)/../../..";
 			};
 			name = Debug;
 		};
@@ -1235,14 +1235,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LIBRARY_SEARCH_PATHS = "$(HOME)/__archive/archive/storage-ios/iPhoneSimulator11.2-x86_64.sdk/lib";
+				LIBRARY_SEARCH_PATHS = "$(WorkspaceDir)/archive $(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER)/storage-ios/iPhoneSimulator11.2-x86_64.sdk/lib";
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/include $(WorkspaceDir)/app/_include . ..  $(WorkspaceDir)/../.. $(WorkspaceDir)/app $(WorkspaceDir)/.. $(WorkspaceDir) $(WorkspaceDir)/app/base aura/ $(WorkspaceDir)/app $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER)";
-				WorkspaceDir = "$(SRCROOT)/../..";
+				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER)/_include . ..  $(WorkspaceDir)/../.. $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/.. $(WorkspaceDir) $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER)/base aura/ $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER)";
+				WorkspaceDir = "$(SRCROOT)/../../..";
 			};
 			name = Release;
 		};
