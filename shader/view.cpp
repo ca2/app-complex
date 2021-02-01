@@ -273,7 +273,7 @@ namespace simple_shader
 
       }
 
-      m_prender->m_rect = rectClient;
+      m_prender->m_rectangle = rectClient;
 
       m_prender->on_layout(pgraphics);
 

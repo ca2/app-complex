@@ -72,7 +72,7 @@ namespace helloworld
    void view::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      rect rectClient;
+      rectangle_i32 rectClient;
 
       GetClientRect(rectClient);
 

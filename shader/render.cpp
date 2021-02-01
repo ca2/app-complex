@@ -81,7 +81,7 @@ namespace simple_shader
    void render::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      if (m_rect.area() <= 0)
+      if (m_rectangle.area() <= 0)
       {
 
          return;
@@ -91,7 +91,7 @@ namespace simple_shader
       if (m_pcontext)
       {
 
-         m_pcontext->resize_offscreen_buffer(m_rect.size());
+         m_pcontext->resize_offscreen_buffer(m_rectangle.size());
 
       }
       
@@ -316,11 +316,11 @@ namespace simple_shader
          pgraphics->get(matrixOriginal);
          ::draw2d::matrix matrix(matrixOriginal);
          matrix.scale(1.0, -1.0);
-         matrix.translate(0, m_rect.height());
+         matrix.translate(0, m_rectangle.height());
          pgraphics->set(matrix);
 #endif
 
-         pgraphics->draw(m_rect, m_pcontext->m_pbuffer->m_pimage);
+         pgraphics->draw(m_rectangle, m_pcontext->m_pbuffer->m_pimage);
 
 #if !defined(__APPLE__)
          pgraphics->set(matrixOriginal);

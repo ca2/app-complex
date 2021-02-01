@@ -159,7 +159,7 @@ namespace simple_os_drag_and_drop
 
       }
 
-      m_psimpleosdraganddrop->m_rect = rectClient;
+      m_psimpleosdraganddrop->m_rectangle = rectClient;
 
    }
 

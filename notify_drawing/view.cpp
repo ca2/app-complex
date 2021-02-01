@@ -59,7 +59,7 @@ namespace notify_drawing
 
       }
 
-      m_prender->m_rect = rectClient * (351.0 / 1024.0);
+      m_prender->m_rectangle = rectClient * (351.0 / 1024.0);
 
    }
 

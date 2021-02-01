@@ -20,7 +20,7 @@ namespace simple_form
          //index iLine;
          //index iToken;
          //strsize iChar;
-         //class point ptCursor;
+         //class point_i32 ptCursor;
          //ptCursor = pmouse->m_pt;
          //if (m_lyrictemplatelines.hit_test(ptCursor, iLine, iToken, iChar)
          //   == ::user::e_line_hit_link)

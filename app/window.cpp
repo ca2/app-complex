@@ -50,7 +50,7 @@ namespace simple_app
 
       pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
 
-      ::rect rectClient;
+      ::rectangle_i32 rectClient;
 
       get_client_rect(rectClient);
 
@@ -97,7 +97,7 @@ namespace simple_app
    void window::_001OnDisplayChange(::message::message* pmessage)
    {
 
-      ::rect rectWindow;
+      ::rectangle_i32 rectWindow;
 
       _001InitialFramePosition(rectWindow, { 0.05, 0.05, 0.4, 0.4 });
 

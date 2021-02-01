@@ -54,7 +54,7 @@ namespace simple_os_drag_and_drop
    void simple_os_drag_and_drop::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      //INFO("simple_os_drag_and_drop::_001OnDraw (%d, %d)", m_rect.width(), m_rect.height());
+      //INFO("simple_os_drag_and_drop::_001OnDraw (%d, %d)", m_rectangle.width(), m_rectangle.height());
 
       if(m_iDragAndDrop <= 3)
       {
@@ -93,19 +93,19 @@ namespace simple_os_drag_and_drop
 
       pen->create_solid(4.0, ARGB(255, 50, 180, 255));
 
-      rect rect;
+      rectangle_i32 rectangle;
 
-      int iSize = min(m_rect.width(), m_rect.height());
+      int iSize = min(m_rectangle.width(), m_rectangle.height());
 
       iSize = iSize * 3 / 4;
 
-      rect.set_size(iSize, iSize);
+      rectangle.set_size(iSize, iSize);
 
-      rect.Align(e_align_center, m_rect);
+      rectangle.Align(e_align_center, m_rectangle);
 
-      rect.offset_x(-iSize/5 * 3);
+      rectangle.offset_x(-iSize/5 * 3);
 
-      rect.offset_x(iSize/5 * m_iDragAndDrop);
+      rectangle.offset_x(iSize/5 * m_iDragAndDrop);
 
       if(m_iDragAndDrop == 3)
       {
@@ -116,7 +116,7 @@ namespace simple_os_drag_and_drop
       else
       {
 
-         brush->CreateLinearGradientBrush(rect.top_left(), rect.bottom_right(), ARGB(255, 255, 255, 200), ARGB(255, 255, 125, 100));
+         brush->CreateLinearGradientBrush(rectangle.top_left(), rectangle.bottom_right(), ARGB(255, 255, 255, 200), ARGB(255, 255, 125, 100));
 
       }
 
@@ -124,12 +124,12 @@ namespace simple_os_drag_and_drop
 
       pgraphics->set(brush);
 
-      pgraphics->ellipse(rect);
+      pgraphics->ellipse(rectangle);
 
       if(m_iDragAndDrop >= 2)
       {
 
-         ::rect rectText(rect);
+         ::rectangle_i32 rectText(rectangle);
 
          rectText.inflate(100, 100);
 
@@ -245,13 +245,13 @@ namespace simple_os_drag_and_drop
       daStart.add(45.0);
       daAngle.add(-100.0);
 
-      ::rect rClient(m_rect);
+      ::rectangle_i32 rClient(m_rectangle);
 
       pgraphics->fill_rect(rClient, ARGB(255, 192, 192, 185));
 
       int iColumnCount = 8;
 
-      rect r;
+      rectangle_i32 r;
 
       r.top = 0;
 
@@ -294,7 +294,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void simple_os_drag_and_drop::draw_arc(::draw2d::graphics_pointer & pgraphics, rect & r, double dStart, double dAngle, bool bPath)
+   void simple_os_drag_and_drop::draw_arc(::draw2d::graphics_pointer & pgraphics, rectangle_i32 & r, double dStart, double dAngle, bool bPath)
    {
 
 
