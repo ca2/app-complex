@@ -18,7 +18,7 @@ namespace simple_shader
 
       font->create_pixel_font(strFontFamily, 14.0, FW_LIGHT);
 
-      ::color color(m_hlsText);
+      ::color::color color(m_hlsText);
 
       pgraphics->set_text_color(color);
 

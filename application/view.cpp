@@ -111,7 +111,7 @@ namespace simple_application
 
       pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
 
-      ::color color_dk(dk_red());
+      ::color::color color_dk(dk_red());
 
       color_dk.m_iA = 127;
 
