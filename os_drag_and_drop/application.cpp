@@ -106,13 +106,13 @@ namespace simple_os_drag_and_drop
 
       output_debug_string("_DEBUG build? (basis)");
 
-      ASSERT(FALSE);
+      ASSERT(false);
 
 #else
 
       output_debug_string("RELEASE build? (stage)");
 
-      ASSERT(FALSE);
+      ASSERT(false);
 
 #endif
 
