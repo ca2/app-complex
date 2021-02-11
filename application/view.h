@@ -11,7 +11,7 @@ namespace simple_application
    {
    public:
 
-      ::draw2d::font_pointer     m_pfontThomasBS_;
+      ::write_text::font_pointer     m_pfontThomasBS_;
       string         m_strFont1;
 
       view();

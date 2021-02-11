@@ -79,7 +79,7 @@ namespace simple_application
 
       }
 
-      m_pfontThomasBS_ = ::draw2d::point_font("Fira Code", 24);
+      m_pfontThomasBS_ = ::write_text::point_font("Fira Code", 24);
 
    }
 

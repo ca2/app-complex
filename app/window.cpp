@@ -58,7 +58,7 @@ namespace simple_app
 
       auto colorBackground = get_color(pstyle, ::user::e_element_background);
 
-      pgraphics->fill_rect(rectClient, ARGB(127, 255, 255, 255));
+      pgraphics->fill_rectangle(rectClient, argb(127, 255, 255, 255));
       
       double dBase = (double) rectClient.minimum_signed_absolute_dimension() / 17.0;
 
@@ -66,18 +66,18 @@ namespace simple_app
 
       double y = dBase * 3;
 
-      pgraphics->fill_solid_rect_dim(x, y, dBase * 5.0, dBase * 5.0, ARGB(127, 40, 150, 235));
+      pgraphics->fill_solid_rect_dim(x, y, dBase * 5.0, dBase * 5.0, argb(127, 40, 150, 235));
 
-      pgraphics->fill_solid_rect_dim(x + dBase * 6.0, y, dBase * 5.0, dBase * 5.0, ARGB(127, 40, 150, 235));
+      pgraphics->fill_solid_rect_dim(x + dBase * 6.0, y, dBase * 5.0, dBase * 5.0, argb(127, 40, 150, 235));
 
-      pgraphics->fill_solid_rect_dim(x, y + dBase * 6.0, dBase * 11.0, dBase * 5.0, ARGB(127, 255, 110, 150));
+      pgraphics->fill_solid_rect_dim(x, y + dBase * 6.0, dBase * 11.0, dBase * 5.0, argb(127, 255, 110, 150));
 
       rectClient.deflate(dBase);
 
       for (int i = 0; i < dBase; i++)
       {
 
-         pgraphics->draw3d_rect(rectClient, ARGB(255, 127, 127, 127));
+         pgraphics->draw3d_rect(rectClient, argb(255, 127, 127, 127));
 
          rectClient.deflate(1, 1);
 

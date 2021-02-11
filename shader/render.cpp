@@ -181,7 +181,7 @@ namespace simple_shader
 
       }
 
-      color32_t crText = ARGB(255, 55, 210, 120);
+      color32_t crText = argb(255, 55, 210, 120);
 
       string strProjection = m_strProjection;
 

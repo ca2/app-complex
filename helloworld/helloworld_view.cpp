@@ -76,7 +76,7 @@ namespace helloworld
 
       GetClientRect(rectClient);
 
-      ::draw2d::font_pointer font(this_create);
+      ::write_text::font_pointer font(this_create);
 
       font->create_point_font(os_font_name(e_font_sans), min(rectClient.height() / 5.0, rectClient.width() / 10.0), 800);
 

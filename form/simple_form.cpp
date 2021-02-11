@@ -107,7 +107,7 @@ namespace simple_form
 
       auto rectClient = get_client_rect();
 
-      pgraphics->fill_rect(rectClient, ARGB(127, 245, 250, 255));
+      pgraphics->fill_rectangle(rectClient, argb(127, 245, 250, 255));
 
    }
 

@@ -46,7 +46,9 @@ namespace complex_drawing
    ::e_status application::init_instance()
    {
 
-      auto puser = User;
+      auto psession = Session;
+
+      auto puser = Usr(psession);
 
       puser->will_use_view_hint(FONTSEL_IMPACT);
 
