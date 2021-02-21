@@ -56,12 +56,12 @@ namespace simple_form
 
       simple_form::install_message_routing(psender);
 
-      MESSAGE_LINK(e_message_create, psender, this, &simple_form_001::_001OnCreate);
+      MESSAGE_LINK(e_message_create, psender, this, &simple_form_001::on_message_create);
 
    }
 
 
-   void simple_form_001::_001OnCreate(::message::message * pmessage)
+   void simple_form_001::on_message_create(::message::message * pmessage)
    {
 
       __pointer(::message::create) pcreate(pmessage);

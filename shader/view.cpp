@@ -64,14 +64,14 @@ namespace simple_shader
 
       ::user::impact::install_message_routing(psender);
       ::user::interaction::install_simple_ui_default_mouse_handling(psender);
-      MESSAGE_LINK(e_message_create,psender,this,&view::_001OnCreate);
+      MESSAGE_LINK(e_message_create,psender,this,&view::on_message_create);
       MESSAGE_LINK(e_message_destroy, psender, this, &view::_001OnDestroy);
       MESSAGE_LINK(e_message_key_down, psender, this, &view::_001OnKeyDown);
 
    }
 
 
-   void view::_001OnCreate(::message::message * pmessage)
+   void view::on_message_create(::message::message * pmessage)
    {
 
       __pointer(::message::create) pcreate(pmessage);

@@ -62,12 +62,12 @@ namespace simple_form
 
       ::user::impact::install_message_routing(psender);
 
-      MESSAGE_LINK(e_message_create,psender,this,&view::_001OnCreate);
+      MESSAGE_LINK(e_message_create,psender,this,&view::on_message_create);
 
    }
 
 
-   void view::_001OnCreate(::message::message * pmessage)
+   void view::on_message_create(::message::message * pmessage)
    {
 
       __pointer(::message::create) pcreate(pmessage);

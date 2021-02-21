@@ -39,12 +39,12 @@ namespace simple_shader
 
       ::user::tab_view::install_message_routing(pchannel);
 
-      MESSAGE_LINK(e_message_create, pchannel, this, &tab_view::_001OnCreate);
+      MESSAGE_LINK(e_message_create, pchannel, this, &tab_view::on_message_create);
 
    }
 
 
-   void tab_view::_001OnCreate(::message::message * pmessage)
+   void tab_view::on_message_create(::message::message * pmessage)
    {
 
       if(pmessage->previous())

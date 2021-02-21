@@ -25,7 +25,7 @@ namespace helloworld
 
       virtual void on_update(::user::impact * pimpact, ::user::e_update eupdate, ::object * pobject) override;
 
-      DECL_GEN_SIGNAL(_001OnCreate);
+      DECL_GEN_SIGNAL(on_message_create);
 
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics);
 
