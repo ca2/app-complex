@@ -39,7 +39,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void main_view::on_subject(::promise::subject * psubject, ::promise::context * pcontext)
+   void main_view::on_subject(::subject::subject * psubject, ::subject::context * pcontext)
    {
 
       ::user::split_view::on_subject(psubject, pcontext);
