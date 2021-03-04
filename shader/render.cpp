@@ -39,7 +39,7 @@ namespace simple_shader
 
       initialize_application_consumer();
 
-      m_pcontext = System.get_gpu()->create_context();
+      m_pcontext = System->get_gpu()->create_context();
 
       if (!m_pcontext)
       {

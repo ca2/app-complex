@@ -68,7 +68,7 @@ namespace simple_os_drag_and_drop
 //      if (m_ptopview == NULL)
 //      {
 //
-//         System.message_box("Could not create folder edit view");
+//         System->message_box("Could not create folder edit view");
 //
 //      }
 //
@@ -81,7 +81,7 @@ namespace simple_os_drag_and_drop
 //      if(m_pview == NULL)
 //      {
 //
-//         System.message_box("Could not create file list ::user::impact");
+//         System->message_box("Could not create file list ::user::impact");
 //
 //      }
 //
