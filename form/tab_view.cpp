@@ -61,7 +61,7 @@ namespace simple_form
 
       string strForm;
 
-      strForm = Application.payload("tab");
+      strForm = papplication->payload("tab");
 
       string_array straForm;
 

@@ -28,14 +28,14 @@ namespace simple_form
          //   string str;
          //   lyriclines.GetLink(str, iLine, iToken, iChar);
          //   m_strCurrentLink = str;
-         //   //::user::menu menu(get_object());
+         //   //::user::menu menu(this);
          //}
          //else
          {
             //            bool bTemporary =get_task()->m_bTemporary;
             //            get_task()->m_bTemporary = true;
-            string strMatter = Context.dir().matter("popup_lyricview.xml");
-            ::file::path path = Context.defer_process_path(strMatter);
+            string strMatter = pcontext->dir().matter("popup_lyricview.xml");
+            ::file::path path = pcontext->defer_process_path(strMatter);
             //__pointer(::message::mouse) p=pmouse->
             //main_async([this,p]()
             //{

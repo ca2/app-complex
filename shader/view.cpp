@@ -96,9 +96,9 @@ namespace simple_shader
 
          };
 
-      Application.m_mapRunnable[id_simple_checkbox] += predraw;
+      papplication->m_mapRunnable[id_simple_checkbox] += predraw;
 
-      Application.m_mapRunnable[id_no_client_frame] += predraw;
+      papplication->m_mapRunnable[id_no_client_frame] += predraw;
 
       auto estatus = __construct_new(m_prender);
 
@@ -140,20 +140,20 @@ namespace simple_shader
 
          ::id id = id_simple_text;
 
-         auto pproperty = Application.fetch_property(id);
+         auto pproperty = papplication->fetch_property(id);
 
          ::payload payload;
 
-         if (Application.data_get(id, payload))
+         if (papplication->data_get(id, payload))
          {
 
             pproperty->convert(payload);
 
          }
 
-         auto idRunnable = Application.translate_property_id(id);
+         auto idRunnable = papplication->translate_property_id(id);
 
-         Application.m_mapRunnable[idRunnable] += [this, id]()
+         papplication->m_mapRunnable[idRunnable] += [this, id]()
          {
 
             auto pproperty = fetch_property(id);
@@ -247,9 +247,9 @@ namespace simple_shader
 
                saveimage.m_eformat = ::draw2d::format_png;
 
-               string strDate = System->datetime().international().get_gmt_date_time(INTERNATIONAL_DATE_TIME_FORMAT_FOR_FILE);
+               string strDate = psystem->datetime().international().get_gmt_date_time(INTERNATIONAL_DATE_TIME_FORMAT_FOR_FILE);
 
-               Context.save_image("image://app_simple_shader-" + strDate + ".png", pimage, &saveimage);
+               pcontext->save_image("image://app_simple_shader-" + strDate + ".png", pimage, &saveimage);
 
             });
 

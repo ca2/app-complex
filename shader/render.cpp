@@ -25,10 +25,10 @@ namespace simple_shader
    }
 
 
-   ::e_status render::initialize(::layered * pobjectContext)
+   ::e_status render::initialize(::context_object * pcontextobject)
    {
 
-      auto estatus = ::object::initialize(pobjectContext);
+      auto estatus = ::object::initialize(pcontextobject);
 
       if (!estatus)
       {
@@ -39,7 +39,7 @@ namespace simple_shader
 
       initialize_application_consumer();
 
-      m_pcontext = System->get_gpu()->create_context();
+      m_pcontext = psystem->get_gpu()->create_context();
 
       if (!m_pcontext)
       {
@@ -346,7 +346,7 @@ namespace simple_shader
 
       strDataId = m_pview->m_id;
 
-      if (!Application.data_set(strDataId + ".font_family", m_strFont1))
+      if (!papplication->data_set(strDataId + ".font_family", m_strFont1))
       {
 
          return error_failed;
@@ -365,7 +365,7 @@ namespace simple_shader
 
       string strFont;
 
-      strFont = Application.get_hover_font();
+      strFont = papplication->get_hover_font();
 
       if (strFont.has_char())
       {
@@ -381,7 +381,7 @@ namespace simple_shader
 
          strDataId = m_pview->m_id;
 
-         if (!Application.data_get(strDataId + ".font_family", m_strFont1)
+         if (!papplication->data_get(strDataId + ".font_family", m_strFont1)
             || m_strFont1.is_empty())
          {
 

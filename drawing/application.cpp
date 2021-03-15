@@ -46,7 +46,7 @@ namespace complex_drawing
    ::e_status application::init_instance()
    {
 
-      auto psession = Session;
+      auto psession = get_session();
 
       auto puser = Usr(psession);
 

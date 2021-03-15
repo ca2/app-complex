@@ -89,7 +89,7 @@ namespace simple_app
    void window::_001OnClose(::message::message* pmessage)
    {
 
-      Application.close(::aura::end_app);
+      papplication->close(::aura::end_app);
 
    }
 

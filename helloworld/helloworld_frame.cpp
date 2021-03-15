@@ -6,14 +6,14 @@ namespace helloworld
 {
 
 
-   frame::frame(::layered * pobjectContext) :
+   frame::frame(::context_object * pcontextobject) :
       ::object(papp),
       simple_frame_window(papp)
    {
 
       window_enable_full_screen();
 
-      m_bWindowFrame = !Application.has_property("client_only");
+      m_bWindowFrame = !papplication->has_property("client_only");
 
    }
 
@@ -43,7 +43,7 @@ namespace helloworld
    ::experience::frame * frame::experience_get_frame()
    {
 
-      auto pframe = Application.experience().experience_get_frame(NULL, "001");
+      auto pframe = papplication->experience().experience_get_frame(NULL, "001");
 
       pframe->set_style("StyleLightBlue");
 

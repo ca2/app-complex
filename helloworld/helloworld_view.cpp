@@ -6,7 +6,7 @@ namespace helloworld
 {
 
 
-   view::view(::layered * pobjectContext) :
+   view::view(::context_object * pcontextobject) :
       ::object(papp)
    {
 

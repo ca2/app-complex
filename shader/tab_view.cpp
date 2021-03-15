@@ -54,7 +54,7 @@ namespace simple_shader
 
       }
 
-      Application.m_ppaneview = this;
+      papplication->m_ppaneview = this;
 
       set_tab("Menu", MENU_IMPACT);
       set_tab("1", "shader1");
@@ -145,7 +145,7 @@ namespace simple_shader
    void tab_view::on_create_impact(::user::impact_data * pimpactdata)
    {
 
-      if (Application.has_property("notabs"))
+      if (papplication->has_property("notabs"))
       {
 
          return;
@@ -168,7 +168,7 @@ namespace simple_shader
       if(::str::begins_eat_ci(strId, "shader"))
       {
 
-         auto pview = Application.create_simple_shader_view(this, pimpactdata);
+         auto pview = papplication->create_simple_shader_view(this, pimpactdata);
 
          pview->m_id = pimpactdata->m_id;
 

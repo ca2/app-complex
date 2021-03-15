@@ -68,7 +68,7 @@ namespace simple_os_drag_and_drop
 //      if (m_ptopview == NULL)
 //      {
 //
-//         System->message_box("Could not create folder edit view");
+//         psystem->message_box("Could not create folder edit view");
 //
 //      }
 //
@@ -81,7 +81,7 @@ namespace simple_os_drag_and_drop
 //      if(m_pview == NULL)
 //      {
 //
-//         System->message_box("Could not create file list ::user::impact");
+//         psystem->message_box("Could not create file list ::user::impact");
 //
 //      }
 //
@@ -92,7 +92,7 @@ namespace simple_os_drag_and_drop
 //
 //         string strText;
 //
-//         Application.data_get("cur_text",strText);
+//         papplication->data_get("cur_text",strText);
 //
 //         peditview->_001SetText(strText, ::e_source_initialize);
 //

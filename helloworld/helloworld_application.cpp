@@ -74,7 +74,7 @@ namespace helloworld
 
 
 extern "C"
-::apex::library * app_simple_helloworld_get_new_library(::layered * pobjectContext)
+::apex::library * app_simple_helloworld_get_new_library(::context_object * pcontextobject)
 {
 
    return new ::apex::single_application_library < ::helloworld::application >(papp, "app-simple/helloworld");

@@ -8,7 +8,7 @@ namespace simple_application
    main_frame::main_frame()
    {
 
-      set_bitmap_source("Simple Application!!");
+      set_bitmap_source("Simple papplication!!");
 
       m_bDefaultCreateToolbar = false;
 
