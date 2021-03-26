@@ -25,10 +25,10 @@ namespace simple_shader
    }
 
 
-   ::e_status render::initialize(::context_object * pcontextobject)
+   ::e_status render::initialize(::object * pobject)
    {
 
-      auto estatus = ::object::initialize(pcontextobject);
+      auto estatus = ::object::initialize(pobject);
 
       if (!estatus)
       {

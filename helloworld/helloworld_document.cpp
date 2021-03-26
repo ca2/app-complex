@@ -5,7 +5,7 @@ namespace helloworld
 {
 
 
-   document::document(::context_object * pcontextobject) :
+   document::document(::object * pobject) :
       ::object(papp),
       ::data::data_container_base(papp),
       ::user::document(papp)

@@ -106,7 +106,7 @@ namespace simple_app
 
 //
 //extern "C"
-//::apex::library * app_simple_drawing_get_new_library()
+//::acme::library * app_simple_drawing_get_new_library()
 //{
 //
 //   return new ::apex::single_application_library < ::simple_app::application >("app-simple/drawing");
