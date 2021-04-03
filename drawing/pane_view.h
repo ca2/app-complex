@@ -6,9 +6,8 @@ namespace complex_drawing
 
 
    class CLASS_DECL_APP_COMPLEX_DRAWING pane_view :
-      virtual public ::simple_drawing::tab_view,
-      virtual public ::userex::pane_tab_view,
-      virtual public __application_consumer
+      virtual public ::application_consumer < application, ::userex::pane_tab_view >
+      
    {
    public:
 
@@ -23,6 +22,13 @@ namespace complex_drawing
 
       pane_view();
       virtual ~pane_view();
+
+
+
+      //virtual ::e_status on_initialize_object() override;
+
+
+      //inline ::complex_drawing::application* get_application() const { return ::application_consumer < ::complex_drawing::application>::application(); }
 
 
       void on_create_impact(::user::impact_data * pimpactdata) override;

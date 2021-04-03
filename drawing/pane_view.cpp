@@ -1,5 +1,6 @@
 #include "framework.h"
 #include "aura/update.h"
+#include "base/user/user/tab_pane.h"
 
 
 namespace complex_drawing
@@ -16,6 +17,18 @@ namespace complex_drawing
    {
 
    }
+
+
+   //::e_status pane_view::on_initialize_object()
+   //{
+
+   //   auto estatus1 = ::application_consumer < ::simple_drawing::application >::on_initialize_object();
+
+   //   auto estatus2 = ::application_consumer < ::complex_drawing::application >::on_initialize_object();
+
+   //   return estatus1 && estatus2;
+
+   //}
 
 
    void pane_view::assert_valid() const
@@ -37,7 +50,7 @@ namespace complex_drawing
    void pane_view::install_message_routing(::channel * pchannel)
    {
 
-      ::simple_drawing::tab_view::install_message_routing(pchannel);
+      ::userex::pane_tab_view::install_message_routing(pchannel);
 
       MESSAGE_LINK(e_message_create, pchannel, this, &pane_view::on_message_create);
 
@@ -55,7 +68,12 @@ namespace complex_drawing
       }
 
       //papplication->__refer(papplication->m_ppaneview, this);
-
+      set_tab("Menu", MENU_IMPACT);
+      set_tab("text://app-simple/drawing/:001", "drawing1");
+      set_tab("text://app-simple/drawing/:002", "drawing2");
+      set_tab("text://app-simple/drawing/:003", "drawing3");
+      set_tab("text://app-simple/drawing/:arcs", "drawing4");
+      set_tab("text://app-simple/drawing/:arcpths", "drawing5");
       set_tab("Font", FONTSEL_IMPACT);
       set_tab("Color", COLORSEL_IMPACT);
       set_tab("Open", FILEMANAGER_IMPACT);
@@ -68,7 +86,7 @@ namespace complex_drawing
    void pane_view::_001OnNcDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      ::simple_drawing::tab_view::_001OnNcDraw(pgraphics);
+      ::userex::pane_tab_view::_001OnNcDraw(pgraphics);
 
    }
 
@@ -76,7 +94,7 @@ namespace complex_drawing
    void pane_view::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      ::simple_drawing::tab_view::_001OnDraw(pgraphics);
+      ::userex::pane_tab_view::_001OnDraw(pgraphics);
 
    }
 
@@ -142,11 +160,31 @@ namespace complex_drawing
 
    void pane_view::on_create_impact(::user::impact_data * pimpactdata)
    {
+      
+      auto papplication = get_application();
 
-      if (m_papplication->has_property("notabs"))
+      if (papplication->has_property("notabs"))
       {
 
          return;
+
+      }
+
+
+
+
+      string strId = pimpactdata->m_id;
+
+      if (::str::begins_eat_ci(strId, "drawing"))
+      {
+
+         auto pview = m_papplication->create_simple_drawing_view(this, pimpactdata);
+
+         pview->m_id = pimpactdata->m_id;
+
+         pview->m_prender->initialize_simple_drawing(atoi(strId));
+
+         pimpactdata->m_eflag.add(::user::e_flag_hide_topic_on_show);
 
       }
 
@@ -161,7 +199,7 @@ namespace complex_drawing
       break;
       }
 
-      ::simple_drawing::tab_view::on_create_impact(pimpactdata);
+      //::simple_drawing::tab_view::on_create_impact(pimpactdata);
       ::userex::pane_tab_view::on_create_impact(pimpactdata);
 
    }
@@ -180,7 +218,7 @@ namespace complex_drawing
    {
 
 
-      ::simple_drawing::tab_view::on_subject(psubject, pcontext);
+      ::userex::pane_tab_view::on_subject(psubject, pcontext);
 
    }
 
@@ -254,7 +292,9 @@ namespace complex_drawing
 
             m_pviewTopic->m_prender->m_strHoverFontFamilyName = strFont1;
 
-            m_papplication->m_pstrHoverFontFamilyName = &m_pviewTopic->m_prender->m_strHoverFontFamilyName;
+            auto papplication = get_application();
+
+            papplication->m_pstrHoverFontFamilyName = &m_pviewTopic->m_prender->m_strHoverFontFamilyName;
 
             m_pfontview->m_pview->ensure_sel_visible();
 
@@ -264,7 +304,9 @@ namespace complex_drawing
       else
       {
 
-         m_papplication->m_pstrHoverFontFamilyName = nullptr;
+         auto papplication = get_application();
+
+         papplication->m_pstrHoverFontFamilyName = nullptr;
 
       }
 
@@ -370,7 +412,9 @@ namespace complex_drawing
 
                ::output_debug_string("\n\nSIMPLE_DRAWING::PANE_VIEW::" + strId + "\n\n");
 
-               m_papplication->data_set(strId, m_pviewTopic->m_prender->m_hlsText);
+               auto papplication = get_application();
+
+               papplication->data_set(strId, m_pviewTopic->m_prender->m_hlsText);
 
             }
 
@@ -398,10 +442,12 @@ namespace complex_drawing
             if (strFont.has_char())
             {
 
-               if (m_papplication->m_pstrHoverFontFamilyName)
+               auto papplication = get_application();
+
+               if (papplication->m_pstrHoverFontFamilyName)
                {
 
-                  *m_papplication->m_pstrHoverFontFamilyName = strFont;
+                  *papplication->m_pstrHoverFontFamilyName = strFont;
 
                }
 

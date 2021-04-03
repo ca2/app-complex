@@ -385,7 +385,7 @@ namespace simple_shader
             || m_strFont1.is_empty())
          {
 
-            m_strFont1 = os_font_name(e_font_sans_ex);
+            m_strFont1 = pnode->font_name(e_font_sans_ex);
 
          }
 

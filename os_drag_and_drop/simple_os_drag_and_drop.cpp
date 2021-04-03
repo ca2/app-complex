@@ -87,7 +87,7 @@ namespace simple_os_drag_and_drop
 
       ::write_text::font_pointer font(e_create);
 
-      font->create_pixel_font(os_font_name(e_font_sans_ex), 100.0, 800);
+      font->create_pixel_font(pnode->font_name(e_font_sans_ex), 100.0, 800);
 
       pgraphics->set(font);
 
@@ -300,7 +300,7 @@ namespace simple_os_drag_and_drop
 
       ::write_text::font_pointer font(e_create);
 
-      font->create_point_font(os_font_name(e_font_sans), 14.0, FW_LIGHT);
+      font->create_point_font(pnode->font_name(e_font_sans), 14.0, FW_LIGHT);
 
       pgraphics->set_text_color(argb(255, 0, 0, 0));
 

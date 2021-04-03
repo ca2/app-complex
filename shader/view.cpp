@@ -249,7 +249,7 @@ namespace simple_shader
 
                string strDate = psystem->datetime().international().get_gmt_date_time(INTERNATIONAL_DATE_TIME_FORMAT_FOR_FILE);
 
-               pcontext->m_pcontext->save_image("image://app_simple_shader-" + strDate + ".png", pimage, &saveimage);
+               pcontext->m_papexcontext->save_image("image://app_simple_shader-" + strDate + ".png", pimage, &saveimage);
 
             });
 
