@@ -40,9 +40,9 @@ namespace simple_shader
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
 
-      DECL_GEN_SIGNAL(on_message_create);
-      DECL_GEN_SIGNAL(_001OnDestroy);
-      DECL_GEN_SIGNAL(_001OnKeyDown);
+      DECLARE_MESSAGE_HANDLER(on_message_create);
+      DECLARE_MESSAGE_HANDLER(_001OnDestroy);
+      DECLARE_MESSAGE_HANDLER(_001OnKeyDown);
 
       virtual bool keyboard_focus_is_focusable() override;
 

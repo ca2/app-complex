@@ -33,7 +33,7 @@ namespace simple_os_drag_and_drop
 
       virtual void dump(dump_context & dumpcontext) const override;
 
-      DECL_GEN_SIGNAL(on_message_create);
+      DECLARE_MESSAGE_HANDLER(on_message_create);
       bool BaseOnControlEvent(::user::form_window * pview,::user::control_event * pevent);
       void on_change_cur_sel() override;
 

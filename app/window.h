@@ -25,8 +25,8 @@ namespace simple_app
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
 
 
-      DECL_GEN_SIGNAL(_001OnClose);
-      DECL_GEN_SIGNAL(_001OnDisplayChange);
+      DECLARE_MESSAGE_HANDLER(_001OnClose);
+      DECLARE_MESSAGE_HANDLER(_001OnDisplayChange);
 
 
    };

@@ -47,7 +47,7 @@ namespace simple_shader
       virtual string get_hover_font() const;
 
 
-      //DECL_GEN_SIGNAL(_001OnSimpleCheckbox);
+      //DECLARE_MESSAGE_HANDLER(_001OnSimpleCheckbox);
 
       // slowly phase out this idle/poll approach?
       // is it good for later consolidated evaluation?
@@ -56,7 +56,7 @@ namespace simple_shader
       // isn't it taking this "_001OnUpdate" approach (and assuming this single advantage) builtin
       // early optimization with the cost of idle update? (is it really a optimization if the update is
       // done through idle/polled evaluation)?
-      //DECL_GEN_SIGNAL(_001OnUpdateSimpleCheckbox);
+      //DECLARE_MESSAGE_HANDLER(_001OnUpdateSimpleCheckbox);
 
 
       virtual ::id translate_property_id(const ::id& id) override;

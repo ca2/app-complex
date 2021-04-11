@@ -247,7 +247,7 @@ namespace simple_shader
 
                saveimage.m_eformat = ::draw2d::format_png;
 
-               string strDate = psystem->datetime().international().get_gmt_date_time(INTERNATIONAL_DATE_TIME_FORMAT_FOR_FILE);
+               string strDate = pdatetime->international().get_gmt_date_time(INTERNATIONAL_DATE_TIME_FORMAT_FOR_FILE);
 
                pcontext->m_papexcontext->save_image("image://app_simple_shader-" + strDate + ".png", pimage, &saveimage);
 
