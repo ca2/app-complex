@@ -408,7 +408,9 @@ namespace complex_drawing
 
                strId = m_pviewTopic->m_id + ".color";
 
-               m_pviewTopic->get_document()->set(strId, m_pviewTopic->m_prender->m_hlsText);
+               auto pdocument = m_pviewTopic->get_document();
+
+               pdocument->payload(strId) = m_pviewTopic->m_prender->m_hlsText;
 
                ::output_debug_string("\n\nSIMPLE_DRAWING::PANE_VIEW::" + strId + "\n\n");
 
