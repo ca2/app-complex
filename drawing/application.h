@@ -17,10 +17,10 @@ namespace complex_drawing
       virtual ~application();
 
 
-      virtual ::type get_pane_view_type() const;
+      ::type get_pane_view_type() const override;
 
 
-      virtual ::e_status init_instance() override;
+      ::e_status init_instance() override;
 
 
    };
