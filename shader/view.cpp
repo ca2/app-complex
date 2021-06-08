@@ -232,9 +232,9 @@ namespace simple_shader
 
          m_bSaveFrame = false;
 
-         auto rectClient = get_client_rect();
+         auto rectangleClient = get_client_rect();
 
-         auto pimage = create_image(rectClient);
+         auto pimage = create_image(rectangleClient);
 
          ::draw2d::graphics_pointer pgraphics = pimage->get_graphics();
 
@@ -264,16 +264,16 @@ namespace simple_shader
    void view::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectClient = get_client_rect();
+      auto rectangleClient = get_client_rect();
 
-      if(rectClient.is_empty())
+      if(rectangleClient.is_empty())
       {
 
          return;
 
       }
 
-      m_prender->m_rectangle = rectClient;
+      m_prender->m_rectangle = rectangleClient;
 
       m_prender->on_layout(pgraphics);
 

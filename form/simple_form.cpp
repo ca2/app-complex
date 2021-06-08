@@ -105,9 +105,9 @@ namespace simple_form
    void simple_form::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectClient = get_client_rect();
+      auto rectangleClient = get_client_rect();
 
-      pgraphics->fill_rectangle(rectClient, argb(127, 245, 250, 255));
+      pgraphics->fill_rectangle(rectangleClient, argb(127, 245, 250, 255));
 
    }
 

@@ -117,9 +117,9 @@ namespace simple_form
    void view::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectClient = get_client_rect();
+      auto rectangleClient = get_client_rect();
 
-      pgraphics->fill_rectangle(rectClient, argb(127, 255, 255, 255));
+      pgraphics->fill_rectangle(rectangleClient, argb(127, 255, 255, 255));
 
    }
 
@@ -127,9 +127,9 @@ namespace simple_form
    void view::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectClient = get_client_rect();
+      auto rectangleClient = get_client_rect();
 
-      if (rectClient.area() <= 0)
+      if (rectangleClient.area() <= 0)
       {
 
          return;
