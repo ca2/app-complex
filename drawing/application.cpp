@@ -1,5 +1,4 @@
 #include "framework.h"
-#include "aura/application.h"
 #include "aura/update.h"
 
 
@@ -66,9 +65,6 @@ namespace complex_drawing
       return true;
 
    }
-
-
-   __namespace_application_factory("app-complex/drawing");
 
 
 } // namespace complex_drawing
