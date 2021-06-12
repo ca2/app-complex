@@ -51,9 +51,6 @@ namespace complex_drawing
       virtual void _001OnNcDraw(::draw2d::graphics_pointer & pgraphics) override;
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
 
-      //virtual void on_change_cur_sel() override;
-
-      //virtual string get_hover_font();
 
    };
 
