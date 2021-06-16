@@ -24,6 +24,7 @@
 		9A42DB9B26667D7F0011645D /* libbred.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42DB9A26667D7F0011645D /* libbred.dylib */; };
 		9A42DB9C26667D7F0011645D /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42DB8A26667D240011645D /* libcore.dylib */; };
 		9A42DB9D26667E510011645D /* libapp_simple_drawing.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42DB7826667CF60011645D /* libapp_simple_drawing.dylib */; };
+		9AEA1C682679797F006F4A68 /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA1C652679797F006F4A68 /* _.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		9A42DB9626667D560011645D /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A42DB9826667D560011645D /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A42DB9A26667D7F0011645D /* libbred.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbred.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AEA1C652679797F006F4A68 /* _.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,13 +136,14 @@
 		9A42DA4A26667BD00011645D /* drawing */ = {
 			isa = PBXGroup;
 			children = (
-				9A42DB0C26667BD10011645D /* application.cpp */,
-				9A42DA7126667BD00011645D /* framework.cpp */,
-				9A42DB3526667BD20011645D /* pane_view.cpp */,
+				9AEA1C652679797F006F4A68 /* _.cpp */,
 				9A42DB3D26667BD20011645D /* _.h */,
 				9A42DB0626667BD10011645D /* _drawing.h */,
+				9A42DB0C26667BD10011645D /* application.cpp */,
 				9A42DA7326667BD00011645D /* application.h */,
+				9A42DA7126667BD00011645D /* framework.cpp */,
 				9A42DB0726667BD10011645D /* framework.h */,
+				9A42DB3526667BD20011645D /* pane_view.cpp */,
 				9A42DAED26667BD00011645D /* pane_view.h */,
 			);
 			name = drawing;
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A42DB5626667BD30011645D /* framework.cpp in Sources */,
+				9AEA1C682679797F006F4A68 /* _.cpp in Sources */,
 				9A42DB6B26667BD30011645D /* pane_view.cpp in Sources */,
 				9A42DB6A26667BD30011645D /* application.cpp in Sources */,
 			);
