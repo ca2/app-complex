@@ -17,7 +17,7 @@ namespace complex_drawing
 
       m_strAppName = "app-complex/drawing";
 
-      m_strBaseSupportId = "ca2_flag";
+      m_strBaseSupportId = "app-complex/drawing";
 
       m_bLicense = false;
 
