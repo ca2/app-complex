@@ -701,7 +701,7 @@ __forceinline byte Clip(int clr)
 
 __forceinline RGBQUAD ConvertYCrCbToRGB(
    int y,
-   int cr,
+   int color32,
    int cb
 )
 {
@@ -709,7 +709,7 @@ __forceinline RGBQUAD ConvertYCrCbToRGB(
 
    int c = y - 16;
    int d = cb - 128;
-   int e = cr - 128;
+   int e = color32 - 128;
 
    rgbq.rgbRed = Clip((298 * c + 409 * e + 128) >> 8);
    rgbq.rgbGreen = Clip((298 * c - 100 * d - 208 * e + 128) >> 8);
@@ -850,27 +850,27 @@ void TransformImage_NV12(
          int  y2 = (int)lpLineY2[0];
          int  y3 = (int)lpLineY2[1];
          int  cb = (int)lpLineCb[0];
-         int  cr = (int)lpLineCr[0];
+         int  color32 = (int)lpLineCr[0];
 
-         RGBQUAD r = ConvertYCrCbToRGB(y0, cr, cb);
+         RGBQUAD r = ConvertYCrCbToRGB(y0, color32, cb);
          lpDibLine1[0] = rectangle.rgbBlue;
          lpDibLine1[1] = rectangle.rgbGreen;
          lpDibLine1[2] = rectangle.rgbRed;
          lpDibLine1[3] = 0; // Alpha
 
-         r = ConvertYCrCbToRGB(y1, cr, cb);
+         r = ConvertYCrCbToRGB(y1, color32, cb);
          lpDibLine1[4] = rectangle.rgbBlue;
          lpDibLine1[5] = rectangle.rgbGreen;
          lpDibLine1[6] = rectangle.rgbRed;
          lpDibLine1[7] = 0; // Alpha
 
-         r = ConvertYCrCbToRGB(y2, cr, cb);
+         r = ConvertYCrCbToRGB(y2, color32, cb);
          lpDibLine2[0] = rectangle.rgbBlue;
          lpDibLine2[1] = rectangle.rgbGreen;
          lpDibLine2[2] = rectangle.rgbRed;
          lpDibLine2[3] = 0; // Alpha
 
-         r = ConvertYCrCbToRGB(y3, cr, cb);
+         r = ConvertYCrCbToRGB(y3, color32, cb);
          lpDibLine2[4] = rectangle.rgbBlue;
          lpDibLine2[5] = rectangle.rgbGreen;
          lpDibLine2[6] = rectangle.rgbRed;
