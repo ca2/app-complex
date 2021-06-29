@@ -47,7 +47,7 @@ namespace complex_drawing
 
       auto psession = get_session();
 
-      auto puser = psession->user();
+      auto puser = psession->user()->m_pcoreuser;
 
       puser->will_use_view_hint(FONTSEL_IMPACT);
 
