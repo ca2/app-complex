@@ -46,7 +46,7 @@ if (MSVC)
 elseif (LINUX)
 
    target_compile_options(app_complex_drawing PRIVATE -fpermissive)
-   target_link_options(app_complex_drawing PRIVATE -Wl,-rpath=\$ORIGIN)
+   #target_link_options(app_complex_drawing PRIVATE -Wl,-rpath=$ORIGIN)
    target_link_libraries(app_complex_drawing PRIVATE ${library_references})
    target_link_options(app_complex_drawing PRIVATE -Wl,-z,defs)
 
@@ -84,7 +84,7 @@ if (MSVC)
 elseif (LINUX)
 
    target_compile_options(_app_complex_drawing PRIVATE -fpermissive)
-   target_link_options(_app_complex_drawing PRIVATE -Wl,-rpath=\$ORIGIN)
+   #target_link_options(_app_complex_drawing PRIVATE -Wl,-rpath=$ORIGIN)
    target_link_libraries(_app_complex_drawing PRIVATE acme apex app_complex_drawing)
    target_link_options(_app_complex_drawing PRIVATE -Wl,-z,defs)
 
