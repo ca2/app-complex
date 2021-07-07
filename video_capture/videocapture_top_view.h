@@ -1,11 +1,11 @@
 #pragma once
 
 
-namespace videocapture
+namespace video_capture
 {
 
 
-   class CLASS_DECL_APP_CORE_VIDEOCAPTURE top_view:
+   class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE top_view:
       virtual public ::user::split_view
    {
    public:
@@ -15,7 +15,7 @@ namespace videocapture
       toggle_view *                 m_ptoggleview;
 
 
-      top_view(::object * pobject);
+      top_view();
       virtual ~top_view();
 
 
@@ -27,13 +27,13 @@ namespace videocapture
 
       virtual void on_subject(::subject::subject * psubject, ::subject::context * pcontext) override;
 
-      virtual bool is_this_visible() override;
+      //bool is_this_visible(::user::enum_layout elayout = ::user::e_layout_design) override;
 
 
    };
 
 
-} // namespace videocapture
+} // namespace video_capture
 
 
 

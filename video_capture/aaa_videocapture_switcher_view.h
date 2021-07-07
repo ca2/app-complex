@@ -1,22 +1,22 @@
 #pragma once
 
 
-namespace videocapture
+namespace video_capture
 {
 
 
-   class CLASS_DECL_APP_CORE_VIDEOCAPTURE font_view:
+   class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE switcher_view:
       virtual public ::user::split_view
    {
    public:
 
 
-      top_view *                    m_ptopview;
-      ::user::font_list_view *      m_pview;
+      top_view *              m_ptopview;
+      view *                  m_pview;
 
 
-      font_view(::object * pobject);
-      virtual ~font_view();
+      switcher_view();
+      virtual ~switcher_view();
 
 
       virtual void assert_valid() const;
@@ -33,7 +33,7 @@ namespace videocapture
    };
 
 
-} // namespace videocapture
+} // namespace video_capture
 
 
 

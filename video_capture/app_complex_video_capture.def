@@ -1,0 +1,8 @@
+; app_complex_video_capture.def
+
+LIBRARY  "app_complex_video_capture"
+; For Win32 DLLs, only EXPORTs really required.
+
+EXPORTS
+
+

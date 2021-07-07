@@ -65,7 +65,7 @@ typedef i64 off64_t;
 
 #include <stddef.h>
 #include <stdint.h>
-#include <stdbool.h
+#include <stdbool.h>
 #include <sys/types.h>
 
 #define SIZE_T_FORMAT "%zu"

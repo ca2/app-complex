@@ -20,41 +20,41 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C7AFCEFA-3079-4B23-8F97-4543BB980265}</ProjectGuid>
-    <RootNamespace>app_core_videocapture</RootNamespace>
+    <RootNamespace>app_core_video_capture</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <ProjectName>app_complex_oculus</ProjectName>
+    <ProjectName>app_complex_video_capture</ProjectName>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
     <UseOfMfc>false</UseOfMfc>
     <UseOfAtl>false</UseOfAtl>
     <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='stage|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
     <UseOfMfc>false</UseOfMfc>
     <UseOfAtl>false</UseOfAtl>
     <PlatformToolset>v142</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
     <UseOfMfc>false</UseOfMfc>
     <UseOfAtl>false</UseOfAtl>
     <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='stage|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
     <UseOfMfc>false</UseOfMfc>
     <UseOfAtl>false</UseOfAtl>
     <PlatformToolset>v142</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -115,8 +115,8 @@
     <ClCompile>
       <AdditionalOptions>/bigobj</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)local/include;$(__archive)third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include;$(__archive)third-windows/third/include;$(SolutionDir)../../../archive/platform-windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_APP_CORE_VIDEOCAPTURE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)local/include;$(__archive)third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include;$(__archive)third-windows/third/include;$(__archive)third-windows/third/include/include;$(SolutionDir)../../../archive/platform-windows/_include;$(SolutionDir)../../../archive/platform-windows;$(SolutionDir)../../../archive/platform-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/third/include;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_APP_COMPLEX_VIDEO_CAPTURE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -146,6 +146,7 @@
       <SDLCheck>true</SDLCheck>
       <UseFullPaths>true</UseFullPaths>
       <IntrinsicFunctions>true</IntrinsicFunctions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -188,7 +189,7 @@
       </Command>
     </PostBuildEvent>
     <CustomBuildStep>
-      <Command>"$(OutDir)app._.exe" "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
+      <Command>$(__archive)tool-windows\program\app._.exe "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>$(OutDir)$(TargetName).exe</Outputs>
@@ -210,8 +211,8 @@
     <ClCompile>
       <AdditionalOptions>/bigobj</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)local/include;$(__archive)third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include;$(__archive)third-windows/third/include;$(SolutionDir)../../../archive/platform-windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_APP_CORE_VIDEOCAPTURE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)local/include;$(__archive)third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include;$(__archive)third-windows/third/include;$(__archive)third-windows/third/include/include;$(SolutionDir)../../../archive/platform-windows/_include;$(SolutionDir)../../../archive/platform-windows;$(SolutionDir)../../../archive/platform-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/third/include;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_APP_COMPLEX_OCULUS_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -249,6 +250,7 @@
       <OmitFramePointers>true</OmitFramePointers>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
       <UseFullPaths>true</UseFullPaths>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -295,7 +297,7 @@
       </Command>
     </PostBuildEvent>
     <CustomBuildStep>
-      <Command>"$(OutDir)app._.exe" "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
+      <Command>$(__archive)tool-windows\program\app._.exe "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>$(OutDir)$(TargetName).exe</Outputs>
@@ -318,8 +320,8 @@
     <ClCompile>
       <AdditionalOptions>/bigobj</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)local/include;$(__archive)third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include;$(__archive)third-windows/third/include;$(SolutionDir)../../../archive/platform-windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_APP_CORE_VIDEOCAPTURE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)local/include;$(__archive)third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include;$(__archive)third-windows/third/include;$(__archive)third-windows/third/include/include;$(SolutionDir)../../../archive/platform-windows/_include;$(SolutionDir)../../../archive/platform-windows;$(SolutionDir)../../../archive/platform-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/third/include;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_APP_COMPLEX_VIDEO_CAPTURE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -350,6 +352,7 @@
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <SDLCheck>true</SDLCheck>
       <UseFullPaths>true</UseFullPaths>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -387,7 +390,7 @@
       <PreserveSBR>false</PreserveSBR>
     </Bscmake>
     <CustomBuildStep>
-      <Command>"$(OutDir)app._.exe" "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
+      <Command>$(__archive)tool-windows\program\app._.exe "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>$(OutDir)$(TargetName).exe</Outputs>
@@ -404,8 +407,8 @@
     <ClCompile>
       <AdditionalOptions>/bigobj</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)local/include;$(__archive)third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include;$(__archive)third-windows/third/include;$(SolutionDir)../../../archive/platform-windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_APP_CORE_VIDEOCAPTURE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)local/include;$(__archive)third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include;$(__archive)third-windows/third/include;$(__archive)third-windows/third/include/include;$(SolutionDir)../../../archive/platform-windows/_include;$(SolutionDir)../../../archive/platform-windows;$(SolutionDir)../../../archive/platform-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/third/include;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_APP_COMPLEX_OCULUS_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -443,6 +446,7 @@
       </SDLCheck>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <UseFullPaths>true</UseFullPaths>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -482,7 +486,7 @@
       <PreserveSBR>false</PreserveSBR>
     </Bscmake>
     <CustomBuildStep>
-      <Command>"$(OutDir)app._.exe" "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
+      <Command>$(__archive)tool-windows\program\app._.exe "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>$(OutDir)$(TargetName).exe</Outputs>
@@ -495,105 +499,20 @@
     <ClCompile Include=".\videocapture_application.cpp" />
     <ClCompile Include=".\videocapture_document.cpp" />
     <ClCompile Include=".\videocapture_frame.cpp" />
-    <ClCompile Include="dshowcapture\capture-filter.cpp" />
-    <ClCompile Include="dshowcapture\device.cpp" />
-    <ClCompile Include="dshowcapture\dshow-base.cpp" />
-    <ClCompile Include="dshowcapture\dshow-demux.cpp" />
-    <ClCompile Include="dshowcapture\dshow-encoded-device.cpp" />
-    <ClCompile Include="dshowcapture\dshow-enum.cpp" />
-    <ClCompile Include="dshowcapture\dshow-formats.cpp" />
-    <ClCompile Include="dshowcapture\dshow-media-type.cpp" />
-    <ClCompile Include="dshowcapture\dshowcapture.cpp" />
-    <ClCompile Include="dshowcapture\dshowencode.cpp" />
-    <ClCompile Include="dshowcapture\encoder.cpp" />
-    <ClCompile Include="dshowcapture\log.cpp" />
-    <ClCompile Include="dshowcapture\output-filter.cpp" />
-    <ClCompile Include="dshow\ffmpeg-decode.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="dshow\win-dshow.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="media-io\audio-io.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="media-io\audio-resampler-ffmpeg.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="media-io\format-conversion.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="media-io\media-remux.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="media-io\video-fourcc.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="media-io\video-frame.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="media-io\video-io.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="media-io\video-matrices.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="media-io\video-scaler-ffmpeg.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="videocapture.cpp" />
     <ClCompile Include=".\videocapture_pane_view.cpp" />
+    <ClCompile Include=".\videocapture_view.cpp" />
     <ClCompile Include="framework.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include=".\videocapture_view.cpp" />
     <ClCompile Include="videocapture_edit_view.cpp" />
-    <ClCompile Include="videocapture_font_view.cpp" />
-    <ClCompile Include="videocapture_gcom.cpp" />
     <ClCompile Include="videocapture_main_frame.cpp" />
     <ClCompile Include="videocapture_main_view.cpp" />
     <ClCompile Include="videocapture_render.cpp" />
-    <ClCompile Include="videocapture_switcher_view.cpp" />
     <ClCompile Include="videocapture_toggle_view.cpp" />
     <ClCompile Include="videocapture_top_view.cpp" />
     <ClCompile Include="videocapture_view_base.cpp" />
-    <ClCompile Include="user_font_list.cpp" />
+    <ClCompile Include="_.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="a_capture.h" />
@@ -629,32 +548,24 @@
     <ClInclude Include="videocapture_application.h" />
     <ClInclude Include="videocapture_document.h" />
     <ClInclude Include="videocapture_edit_view.h" />
-    <ClInclude Include="videocapture_font_view.h" />
     <ClInclude Include="videocapture_frame.h" />
-    <ClInclude Include="videocapture.h" />
-    <ClInclude Include="videocapture_gcom.h" />
+    <ClInclude Include="_.h" />
     <ClInclude Include="videocapture_main_frame.h" />
     <ClInclude Include="videocapture_main_view.h" />
     <ClInclude Include="videocapture_pane_view.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="videocapture_render.h" />
-    <ClInclude Include="videocapture_switcher_view.h" />
     <ClInclude Include="videocapture_toggle_view.h" />
     <ClInclude Include="videocapture_top_view.h" />
     <ClInclude Include="videocapture_view.h" />
     <ClInclude Include="videocapture_view_base.h" />
     <ClInclude Include="user_font_list.h" />
+    <ClInclude Include="_app_complex_video_capture.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include=".\app_core_videocapture.def" />
+    <None Include="app_complex_video_capture.def" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\source\app\ace\ace.vcxproj">
-      <Project>{21dcc811-4bce-4f16-b674-c0941f847127}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\source\app\ace\_ace.vcxproj">
-      <Project>{699d6807-4f43-40e9-86ab-2a8b856707a9}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\source\app\aura\aura.vcxproj">
       <Project>{03e5b8e7-9e3b-44dd-9ede-e0a74d52c1c5}</Project>
     </ProjectReference>
@@ -667,8 +578,23 @@
     <ProjectReference Include="..\..\..\source\app\aura\aura.vcxproj">
       <Project>{e000ffaf-392f-4e32-bf51-fd7ed638991f}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\gcom\gcom.vcxproj">
-      <Project>{f30bd15a-0eb5-4fa6-88d3-3b4604a41b4e}</Project>
+    <ProjectReference Include="..\..\app-core\video_input\video_input.vcxproj">
+      <Project>{20fd0446-aa14-4013-84e0-b5cb63fa354f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\app\acme\acme.vcxproj">
+      <Project>{638b242f-0f21-41c3-9f66-724660046133}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\app\apex\apex.vcxproj">
+      <Project>{e000ffaf-392f-4e32-bf51-777ca238991f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\app\aqua\aqua.vcxproj">
+      <Project>{1b06fe5f-f783-41a1-ac68-0e02880dbbac}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\app\bred\bred.vcxproj">
+      <Project>{dfbf067f-aff9-4bd6-a5e1-72af984d1476}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\app\core\core.vcxproj">
+      <Project>{29c1eb5b-060e-4021-ae12-d1bcfb1b1359}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

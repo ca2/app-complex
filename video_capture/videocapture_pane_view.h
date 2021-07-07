@@ -1,27 +1,23 @@
 #pragma once
 
 
-namespace videocapture
+namespace video_capture
 {
 
 
-   class CLASS_DECL_APP_CORE_VIDEOCAPTURE pane_view :
-      virtual public ::userex::pane_tab_view,
-      virtual public ::user::form_callback
+   class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE pane_view :
+      virtual public ::application_consumer < application, ::userex::pane_tab_view, ::user::form_callback >
    {
    public:
 
 
       ::user::split_view *                            m_ptopviewLast;
-      impact_base *                                     m_pviewLast;
-      view *                                          m_pviewLastBilbo;
+      impact_base *                                   m_pviewLast;
 
-      __pointer(::user::document)                            m_pdocMenu;
-      ::calculator::plain_edit_view *                 m_prollfps;
-      array < ::user::check_box * >                   m_checkptraBilbo;
+      __pointer(::user::document)                     m_pdocMenu;
 
 
-      pane_view(::object * pobject);
+      pane_view();
       virtual ~pane_view();
 
 
@@ -42,7 +38,7 @@ namespace videocapture
    };
 
 
-} // namespace videocapture
+} // namespace video_capture
 
 
 

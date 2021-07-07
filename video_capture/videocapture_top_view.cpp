@@ -1,15 +1,11 @@
 #include "framework.h"
 
 
-namespace videocapture
+namespace video_capture
 {
 
 
-   top_view::top_view(::object * pobject):
-      object(pobject),
-      ::user::split_layout(pobject),
-      ::user::split_view(pobject),
-      place_holder_container(pobject)
+   top_view::top_view()
    {
       m_peditview = nullptr;
       m_ptoggleview = nullptr;
@@ -84,16 +80,9 @@ namespace videocapture
 
    }
 
-   bool top_view::is_this_visible()
-   {
-
-      return ::user::split_view::is_this_visible() && !get_top_level()->frame_is_transparent();
-
-   }
 
 
-
-} // namespace videocapture
+} // namespace video_capture
 
 
 

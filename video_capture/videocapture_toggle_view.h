@@ -1,11 +1,11 @@
 #pragma once
 
 
-namespace videocapture
+namespace video_capture
 {
 
 
-   class CLASS_DECL_APP_CORE_VIDEOCAPTURE toggle_view:
+   class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE toggle_view:
       virtual public ::user::impact,
       virtual public ::user::button
    {
@@ -15,7 +15,7 @@ namespace videocapture
       top_view *           m_ptopview;
 
 
-      toggle_view(::object * pobject);
+      toggle_view();
       virtual ~toggle_view();
 
 
@@ -31,7 +31,7 @@ namespace videocapture
    };
 
 
-} // namespace videocapture
+} // namespace video_capture
 
 
 

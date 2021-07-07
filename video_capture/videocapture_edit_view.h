@@ -1,11 +1,11 @@
 #pragma once
 
 
-namespace videocapture
+namespace video_capture
 {
 
 
-   class CLASS_DECL_APP_CORE_VIDEOCAPTURE edit_view:
+   class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE edit_view:
       virtual public ::user::show < ::user::plain_edit >
    {
    public:
@@ -14,7 +14,7 @@ namespace videocapture
       top_view * m_ptopview;
 
 
-      edit_view(::object * pobject);
+      edit_view();
       virtual ~edit_view();
 
       virtual void _001OnAfterChangeText(const ::action_context & action_context);
@@ -31,12 +31,12 @@ namespace videocapture
 
       //virtual i64 dec_ref(OBJ_REF_DBG_PARAMS);
 
-      bool is_window_visible() override;
+      //bool is_this_visible(::user::enum_layout elayout = ::user::e_layout_design) override;
 
    };
 
 
-} // namespace videocapture
+} // namespace video_capture
 
 
 

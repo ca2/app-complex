@@ -1,13 +1,13 @@
 #pragma once
 
 
-namespace videocapture
+namespace video_capture
 {
 
 
-   class CLASS_DECL_APP_CORE_VIDEOCAPTURE gcom :
+   class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE gcom :
       virtual public impact_base,
-      virtual public ::backview::user::impact
+      virtual public ::backview::user_interaction
    {
    public:
 
@@ -16,13 +16,14 @@ namespace videocapture
       bool                    m_bBkLoaded;
 
 
-      gcom(::object * pobject);
+      gcom();
       virtual ~gcom();
 
 
       virtual void assert_valid() const;
       virtual void dump(dump_context & dumpcontext) const;
 
+      ::e_status initialize(::object * pobject) override;
 
       virtual void install_message_routing(::channel * pchannel);
 
@@ -51,7 +52,7 @@ namespace videocapture
    };
 
 
-} // namespace videocapture
+} // namespace video_capture
 
 
 

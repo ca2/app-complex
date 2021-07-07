@@ -1,19 +1,18 @@
 #include "framework.h"
 
 
-namespace videocapture
+namespace video_capture
 {
 
 
-   toggle_view::toggle_view(::object * pobject):
-      object(pobject),
-      ::user::interaction(pobject),
-      ::user::button(pobject)
+   toggle_view::toggle_view()
    {
 
       m_ptopview = nullptr;
 
    }
+
+
    toggle_view::~toggle_view()
    {
 
@@ -45,7 +44,7 @@ namespace videocapture
    }
 
 
-} // namespace videocapture
+} // namespace video_capture
 
 
 

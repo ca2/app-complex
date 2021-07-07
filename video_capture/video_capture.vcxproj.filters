@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include=".\videocapture_application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\videocapture_document.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="videocapture_edit_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\videocapture_frame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="videocapture_main_frame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="videocapture_main_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\videocapture_pane_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="videocapture_render.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="videocapture_toggle_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="videocapture_top_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\videocapture_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="videocapture_view_base.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="_.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="framework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="a_capture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="media-io\audio-io.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="media-io\audio-resampler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dshowcapture\avermedia-encode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="media-io\audio-math.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dshowcapture\capture-filter.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dshowcapture\ComPtr.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dshowcapture\device.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dshowcapture\dshow-base.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dshowcapture.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dshowcapture\dshow-demux.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dshowcapture\CoTaskMemPtr.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dshowcapture\dshow-device-defs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dshowcapture\dshow-enum.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dshowcapture\dshow-formats.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dshowcapture\dshow-media-type.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dshow\encode-dstr.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dshowcapture\encoder.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dshow\ffmpeg-decode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="media-io\format-conversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="media-io\frame-rate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dshowcapture\log.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dshowcapture\IVideoCaptureFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="media-io\media-io-defs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="media-io\media-remux.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dshowcapture\output-filter.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="media-io\video-scaler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="media-io\video-io.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="media-io\video-frame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="videocapture_view_base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="videocapture_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="videocapture_top_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="videocapture_toggle_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="videocapture_render.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="user_font_list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="_.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="videocapture_application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="videocapture_document.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="videocapture_edit_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="videocapture_frame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="videocapture_main_frame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="videocapture_main_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="videocapture_pane_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="_app_complex_video_capture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4b5774d0-48e6-451f-bf94-404d558f8ff9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{45c35aee-97c9-4e19-952b-26a1e99c9dc5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app_complex_video_capture.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

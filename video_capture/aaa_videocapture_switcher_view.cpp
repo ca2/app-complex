@@ -1,15 +1,11 @@
 #include "framework.h"
 
 
-namespace videocapture
+namespace video_capture
 {
 
 
-   switcher_view::switcher_view(::object * pobject):
-      object(pobject),
-      ::user::split_layout(pobject),
-      ::user::split_view(pobject),
-      place_holder_container(pobject)
+   switcher_view::switcher_view()
    {
 
       m_pview = nullptr;
@@ -131,7 +127,7 @@ namespace videocapture
 
    }
 
-} // namespace videocapture
+} // namespace video_capture
 
 
 

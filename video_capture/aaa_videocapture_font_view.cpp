@@ -1,7 +1,7 @@
 #include "framework.h"
 
 
-namespace videocapture
+namespace video_capture
 {
 
 
@@ -149,7 +149,7 @@ namespace videocapture
 
    }
 
-} // namespace videocapture
+} // namespace video_capture
 
 
 

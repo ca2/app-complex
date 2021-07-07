@@ -1,17 +1,17 @@
 #pragma once
 
 
-namespace videocapture
+namespace video_capture
 {
 
 
-   class CLASS_DECL_APP_CORE_VIDEOCAPTURE document :
+   class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE document :
       public ::user::document
    {
    public:
 
 
-      document(::object * pobject);
+      document();
 	   virtual ~document();
 
       
@@ -29,7 +29,7 @@ namespace videocapture
    };
 
 
-} // namespace videocapture
+} // namespace video_capture
 
 
 

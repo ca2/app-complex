@@ -1,11 +1,11 @@
 #pragma once
 
 
-namespace videocapture
+namespace video_capture
 {
 
 
-   class CLASS_DECL_APP_CORE_VIDEOCAPTURE main_frame :
+   class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE main_frame :
       virtual public simple_frame_window
    {
    public:
@@ -15,7 +15,7 @@ namespace videocapture
       ::user::enum_translucency      m_etranslucency;
       view *                     m_pview;
 
-      main_frame(::object * pobject);
+      main_frame();
       virtual ~main_frame();
 
       DECLARE_MESSAGE_HANDLER(_001OnCaptureEvent);
@@ -34,7 +34,7 @@ namespace videocapture
    };
 
 
-} // namespace videocapture
+} // namespace video_capture
 
 
 

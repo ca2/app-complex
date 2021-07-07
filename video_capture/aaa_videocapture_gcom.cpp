@@ -1,14 +1,11 @@
 #include "framework.h"
 
-namespace videocapture
+namespace video_capture
 {
 
 
 
-   gcom::gcom(::object * pobject) :
-      object(pobject),
-      m_pimageBk,
-      impact_base(pobject)
+   gcom::gcom()
    {
 
       m_bBkLoaded = false;
@@ -152,7 +149,7 @@ namespace videocapture
 
 
 
-} // namespace videocapture
+} // namespace video_capture
 
 
 

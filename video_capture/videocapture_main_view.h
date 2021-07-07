@@ -1,11 +1,11 @@
 #pragma once
 
 
-namespace videocapture
+namespace video_capture
 {
 
 
-   class CLASS_DECL_APP_CORE_VIDEOCAPTURE main_view:
+   class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE main_view:
       virtual public ::user::split_view
    {
    public:
@@ -15,7 +15,7 @@ namespace videocapture
       view *                  m_pview;
 
 
-      main_view(::object * pobject);
+      main_view();
       virtual ~main_view();
 
 
@@ -33,7 +33,7 @@ namespace videocapture
    };
 
 
-} // namespace videocapture
+} // namespace video_capture
 
 
 
