@@ -1,8 +1,0 @@
-; app_code_videocapture.def
-
-LIBRARY  "app_core_videocapture"
-; For Win32 DLLs, only EXPORTs really required.
-
-EXPORTS
-app_core_videocapture_get_new_library
-
