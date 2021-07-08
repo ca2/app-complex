@@ -25,8 +25,8 @@ namespace simple_app
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
 
 
-      DECLARE_MESSAGE_HANDLER(_001OnClose);
-      DECLARE_MESSAGE_HANDLER(_001OnDisplayChange);
+      DECLARE_MESSAGE_HANDLER(on_message_close);
+      DECLARE_MESSAGE_HANDLER(on_message_display_change);
 
 
    };

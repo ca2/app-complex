@@ -60,7 +60,7 @@ namespace simple_application
       ::user::impact::install_message_routing(psender);
 
       MESSAGE_LINK(e_message_create,psender,this,&view::on_message_create);
-      MESSAGE_LINK(e_message_destroy, psender, this, &view::_001OnDestroy);
+      MESSAGE_LINK(e_message_destroy, psender, this, &view::on_message_destroy);
 
    }
 
@@ -84,7 +84,7 @@ namespace simple_application
    }
 
 
-   void view::_001OnDestroy(::message::message * pmessage)
+   void view::on_message_destroy(::message::message * pmessage)
    {
 
    }

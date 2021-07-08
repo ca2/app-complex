@@ -41,8 +41,8 @@ namespace simple_shader
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
-      DECLARE_MESSAGE_HANDLER(_001OnDestroy);
-      DECLARE_MESSAGE_HANDLER(_001OnKeyDown);
+      DECLARE_MESSAGE_HANDLER(on_message_destroy);
+      DECLARE_MESSAGE_HANDLER(on_message_key_down);
 
       virtual bool keyboard_focus_is_focusable() override;
 

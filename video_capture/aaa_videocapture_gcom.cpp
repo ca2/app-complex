@@ -53,7 +53,7 @@ namespace video_capture
       ::backview::user::impact::install_message_routing(pchannel);
 
       MESSAGE_LINK(e_message_create, pchannel, this, &gcom::on_message_create);
-      MESSAGE_LINK(e_message_destroy, pchannel, this, &gcom::_001OnDestroy);
+      MESSAGE_LINK(e_message_destroy, pchannel, this, &gcom::on_message_destroy);
 
    }
 
@@ -74,7 +74,7 @@ namespace video_capture
 
    }
 
-   void gcom::_001OnDestroy(::message::message * pmessage)
+   void gcom::on_message_destroy(::message::message * pmessage)
    {
 
 

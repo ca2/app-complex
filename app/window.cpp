@@ -23,8 +23,8 @@ namespace simple_app
 
       ::user::interaction::install_message_routing(pchannel);
 
-      MESSAGE_LINK(e_message_close, pchannel, this, &window::_001OnClose);
-      MESSAGE_LINK(e_message_display_change, pchannel, this, &window::_001OnDisplayChange);
+      MESSAGE_LINK(e_message_close, pchannel, this, &window::on_message_close);
+      MESSAGE_LINK(e_message_display_change, pchannel, this, &window::on_message_display_change);
 
    }
 
@@ -86,7 +86,7 @@ namespace simple_app
    }
 
 
-   void window::_001OnClose(::message::message* pmessage)
+   void window::on_message_close(::message::message* pmessage)
    {
 
       papplication->close(::aura::end_app);
@@ -94,7 +94,7 @@ namespace simple_app
    }
 
 
-   void window::_001OnDisplayChange(::message::message* pmessage)
+   void window::on_message_display_change(::message::message* pmessage)
    {
 
       ::rectangle_i32 rectWindow;

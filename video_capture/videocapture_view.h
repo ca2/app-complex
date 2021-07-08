@@ -50,7 +50,7 @@ namespace video_capture
       //virtual void OnCaptureEvent(wparam wparam, lparam lparam);
       
       DECLARE_MESSAGE_HANDLER(on_message_create);
-      DECLARE_MESSAGE_HANDLER(_001OnDestroy);
+      DECLARE_MESSAGE_HANDLER(on_message_destroy);
 
             virtual void defer_check_on_draw_layout();
       virtual void on_draw_image_layer(::draw2d::graphics_pointer & pgraphics);
