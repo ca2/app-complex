@@ -236,7 +236,7 @@ namespace complex_drawing
    void pane_view::on_control_event(::user::control_event* pevent)
    {
 
-      if (pevent->m_puie == m_pcolorview)
+      if (pevent->m_puserinteraction == m_pcolorview)
       {
 
          if (pevent->m_eevent == ::user::e_event_after_change_cur_sel || pevent->m_eevent == ::user::e_event_after_change_cur_hover)

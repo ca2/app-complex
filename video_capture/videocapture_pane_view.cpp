@@ -176,38 +176,38 @@ namespace video_capture
    void pane_view::on_control_event(::user::control_event * pevent)
    {
 
-      if(m_pdocMenu != nullptr && dynamic_cast < ::user::impact * > (pevent->m_pform) == m_pdocMenu->get_view(0) && pevent->m_puie != nullptr)
+      if(m_pdocMenu != nullptr && dynamic_cast < ::user::impact * > (pevent->m_pform) == m_pdocMenu->get_view(0) && pevent->m_puserinteraction != nullptr)
       {
 
          if(pevent->m_eevent == ::user::e_event_after_change_text)
          {
 
 
-            if (pevent->m_eevent == ::user::e_event_set_check && pevent->m_puie != nullptr)
+            if (pevent->m_eevent == ::user::e_event_set_check && pevent->m_puserinteraction != nullptr)
             {
 
-               string strCheck = pevent->m_puie->m_id;
+               string strCheck = pevent->m_puserinteraction->m_id;
 
 
             }
-         //if(pevent->m_puie->m_id == "clockverse")
+         //if(pevent->m_puserinteraction->m_id == "clockverse")
          //   {
-         //      papplication->set_binding_clockverse_country_time_zone_set_on_hover(pevent->m_puie->_001GetCheck() == ::check_checked);
+         //      papplication->set_binding_clockverse_country_time_zone_set_on_hover(pevent->m_puserinteraction->_001GetCheck() == ::check_checked);
          //      return true;
          //   }
-         //   else if(pevent->m_puie->m_id == "clockverse_auto")
+         //   else if(pevent->m_puserinteraction->m_id == "clockverse_auto")
          //   {
-         //      papplication->set_auto_launch_clockverse_on_hover(pevent->m_puie->_001GetCheck() == ::check_checked);
+         //      papplication->set_auto_launch_clockverse_on_hover(pevent->m_puserinteraction->_001GetCheck() == ::check_checked);
          //      return true;
          //   }
-         //   else if(pevent->m_puie->m_id == "flag")
+         //   else if(pevent->m_puserinteraction->m_id == "flag")
          //   {
-         //      papplication->set_binding_flag_country_ca2_domain_image_on_hover(pevent->m_puie->_001GetCheck() == ::check_checked);
+         //      papplication->set_binding_flag_country_ca2_domain_image_on_hover(pevent->m_puserinteraction->_001GetCheck() == ::check_checked);
          //      return true;
          //   }
-         //   else if(pevent->m_puie->m_id == "flag_auto")
+         //   else if(pevent->m_puserinteraction->m_id == "flag_auto")
          //   {
-         //      papplication->set_auto_launch_flag_on_hover(pevent->m_puie->_001GetCheck() == ::check_checked);
+         //      papplication->set_auto_launch_flag_on_hover(pevent->m_puserinteraction->_001GetCheck() == ::check_checked);
          //      return true;
          //   }
          }

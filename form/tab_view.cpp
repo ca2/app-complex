@@ -219,7 +219,7 @@ namespace simple_form
 
       if(m_pdocMenu != nullptr
             && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0)
-            && pevent->m_puie != nullptr)
+            && pevent->m_puserinteraction != nullptr)
       {
 
          if(pevent->m_eevent == ::user::e_event_after_change_text)
@@ -227,21 +227,21 @@ namespace simple_form
 
 
          }
-         else if (pevent->m_eevent == ::user::e_event_set_check && pevent->m_puie != NULL)
+         else if (pevent->m_eevent == ::user::e_event_set_check && pevent->m_puserinteraction != NULL)
          {
 
-            string strCheck = pevent->m_puie->m_id;
+            string strCheck = pevent->m_puserinteraction->m_id;
 
 
             if (::str::begins_eat_ci(strCheck, "bilbo"))
             {
 
-               if (pevent->m_puie != NULL && pevent->m_actioncontext.is_user_source())
+               if (pevent->m_puserinteraction != NULL && pevent->m_actioncontext.is_user_source())
                {
 
                   //int iCheck = atoi(strCheck);
 
-                  //__pointer(::user::check) pcheck = pevent->m_puie;
+                  //__pointer(::user::check) pcheck = pevent->m_puserinteraction;
 
                }
 

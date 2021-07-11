@@ -125,7 +125,7 @@ namespace simple_os_drag_and_drop
       if(pevent->m_eevent == ::user::e_event_button_clicked)
       {
 
-         if(pevent->m_puie->m_id == "simple_drag_and_drop_toggle")
+         if(pevent->m_puserinteraction->m_id == "simple_drag_and_drop_toggle")
          {
 
             m_pview->set_need_layout();

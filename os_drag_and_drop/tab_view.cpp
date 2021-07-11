@@ -191,7 +191,7 @@ namespace simple_os_drag_and_drop
    bool tab_view::BaseOnControlEvent(::user::form_window * pview,::user::control_event * pevent)
    {
 
-      if(m_pdocMenu != nullptr && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0) && pevent->m_puie != nullptr)
+      if(m_pdocMenu != nullptr && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0) && pevent->m_puserinteraction != nullptr)
       {
 
          if(pevent->m_eevent == ::user::e_event_after_change_text)
@@ -199,21 +199,21 @@ namespace simple_os_drag_and_drop
 
 
          }
-         else if (pevent->m_eevent == ::user::e_event_set_check && pevent->m_puie != nullptr)
+         else if (pevent->m_eevent == ::user::e_event_set_check && pevent->m_puserinteraction != nullptr)
          {
 
-            string strCheck = pevent->m_puie->m_id;
+            string strCheck = pevent->m_puserinteraction->m_id;
 
 
             if (::str::begins_eat_ci(strCheck, "bilbo"))
             {
 
-               if (pevent->m_puie != nullptr && pevent->m_actioncontext.is_user_source())
+               if (pevent->m_puserinteraction != nullptr && pevent->m_actioncontext.is_user_source())
                {
 
                   //int iCheck = atoi(strCheck);
 
-                  //__pointer(::user::check) pcheck = pevent->m_puie;
+                  //__pointer(::user::check) pcheck = pevent->m_puserinteraction;
 
                }
 

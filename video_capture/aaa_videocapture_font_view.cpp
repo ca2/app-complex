@@ -91,7 +91,7 @@ namespace video_capture
       if(pevent->m_eevent == ::user::e_event_button_clicked)
       {
 
-         if(pevent->m_puie->m_id == "switcher_toggle")
+         if(pevent->m_puserinteraction->m_id == "switcher_toggle")
          {
 
             __pointer(view) pview = m_pview;
@@ -99,7 +99,7 @@ namespace video_capture
             pview->m_prender->m_bLite = !pview->m_prender->m_bLite;
 
          }
-         //else if(pevent->m_puie->m_id == "videocapture_toggle")
+         //else if(pevent->m_puserinteraction->m_id == "videocapture_toggle")
          //{
 
          //   if(m_pview->m_prender->m_bLite && !papplication->m_bLoadAiFont)
@@ -120,7 +120,7 @@ namespace video_capture
       else if(pevent->m_eevent == ::user::e_event_after_change_cur_sel)
       {
 
-         if(m_pview == pevent->m_puie)
+         if(m_pview == pevent->m_puserinteraction)
          {
 
             if(GetTypedParent < pane_view >()->m_pviewLast != nullptr)
