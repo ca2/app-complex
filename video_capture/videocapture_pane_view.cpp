@@ -61,7 +61,7 @@ namespace video_capture
       set_tab("video_capture", MAIN_IMPACT);
       set_tab("Open", FILEMANAGER_IMPACT);
 
-      set_cur_tab_by_id(MAIN_IMPACT);
+      set_current_tab_by_id(MAIN_IMPACT);
 
    }
 

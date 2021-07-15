@@ -75,7 +75,7 @@ namespace simple_shader
       set_tab("Color", COLORSEL_IMPACT);
       set_tab("Open", FILEMANAGER_IMPACT);
 
-      set_cur_tab_by_id("shader1");
+      set_current_tab_by_id("shader1");
 
    }
 
