@@ -83,7 +83,7 @@ namespace video_capture
       else if (get_view_id() == MENU_IMPACT)
       {
 
-         ::user::tab_pane * ppane = get_pane(id_pane(get_view_id()));
+         auto ptabpaneMenu = get_current_tab_index();
 
          ::file::path path = prepare_menu_view();
 

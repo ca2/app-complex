@@ -112,17 +112,21 @@ namespace simple_os_drag_and_drop
       if(get_view_id() == MAIN_IMPACT)
       {
 
-         if(get_pane_by_id(FILEMANAGER_IMPACT) != nullptr && get_pane_by_id(FILEMANAGER_IMPACT)->m_pplaceholder != nullptr)
+         auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
+
+         if(ptabpaneFileManager != nullptr && ptabpaneFileManager->m_pplaceholder != nullptr)
          {
 
-            get_pane_by_id(FILEMANAGER_IMPACT)->m_pplaceholder->hide();
+            ptabpaneFileManager->m_pplaceholder->hide();
 
          }
 
-         if (get_pane_by_id(FONTSEL_IMPACT) != nullptr && get_pane_by_id(FONTSEL_IMPACT)->m_pplaceholder != nullptr)
+         auto ptabpaneFontSel = get_tab_by_id(FONTSEL_IMPACT);
+
+         if (ptabpaneFontSel != nullptr && ptabpaneFontSel->m_pplaceholder != nullptr)
          {
 
-            get_pane_by_id(FONTSEL_IMPACT)->m_pplaceholder->hide();
+            ptabpaneFontSel->m_pplaceholder->hide();
 
          }
 
@@ -132,7 +136,7 @@ namespace simple_os_drag_and_drop
       //else if (get_view_id() == FONTSEL_IMPACT)
       //{
 
-      //   __pointer(::user::font_list_view) pfontview = get_pane_by_id(FONTSEL_IMPACT)->m_pplaceholder->get_child_by_id("font_list_view");
+      //   __pointer(::user::font_list_view) pfontview = ptabpaneFontSel->m_pplaceholder->get_child_by_id("font_list_view");
 
       //   if (m_pviewTopic != nullptr && pfontview.is_set())
       //   {

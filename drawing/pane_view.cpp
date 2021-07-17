@@ -168,17 +168,21 @@ namespace complex_drawing
       if (::str::begins(get_view_id().to_string(), "drawing"))
       {
 
-         if (get_pane_by_id(FILEMANAGER_IMPACT) != nullptr && get_pane_by_id(FILEMANAGER_IMPACT)->m_pplaceholder != nullptr)
+         auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
+
+         if (ptabpaneFileManager != nullptr && ptabpaneFileManager->m_pplaceholder != nullptr)
          {
 
-            get_pane_by_id(FILEMANAGER_IMPACT)->m_pplaceholder->hide();
+            ptabpaneFileManager->m_pplaceholder->hide();
 
          }
 
-         if (get_pane_by_id(FONTSEL_IMPACT) != nullptr && get_pane_by_id(FONTSEL_IMPACT)->m_pplaceholder != nullptr)
+         auto ptabpaneFontSel = get_tab_by_id(FONTSEL_IMPACT);
+
+         if (ptabpaneFontSel != nullptr && ptabpaneFontSel->m_pplaceholder != nullptr)
          {
 
-            get_pane_by_id(FONTSEL_IMPACT)->m_pplaceholder->hide();
+            ptabpaneFontSel->m_pplaceholder->hide();
 
          }
 
