@@ -15,7 +15,7 @@ namespace simple_form
 
       ON_WM_RBUTTONUP
       {
-         //__pointer(::message::mouse) pmouse(pmessage);
+         //auto pmouse = pmessage->m_pmouse;
          //::karaoke::lyric_view_lines & lyriclines = GetLyricLines();
          //index iLine;
          //index iToken;
