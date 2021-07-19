@@ -104,7 +104,7 @@ namespace video_capture
 
       ::draw2d::graphics * pdcParam = pgraphicsParam;
 
-      pdcParam->set_alpha_mode(::draw2d::alpha_mode_blend);
+      pdcParam->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
       //      m_pimagePost->get_graphics()->FillSolidRect(110,110,100,100,argb(184,177,184,60));
 

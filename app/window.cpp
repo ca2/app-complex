@@ -48,7 +48,7 @@ namespace simple_app
    void window::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
+      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
       ::rectangle_i32 rectangleClient;
 
