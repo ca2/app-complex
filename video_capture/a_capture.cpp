@@ -24,7 +24,7 @@ STDMETHODIMP CaptureManager::CaptureEngineCB::QueryInterface(REFIID riid, void**
 
 STDMETHODIMP_(ULONG) CaptureManager::CaptureEngineCB::AddRef()
 {
-   return add_ref(OBJ_REF_DBG_ARGS);
+   return increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
 }
 
 STDMETHODIMP_(ULONG) CaptureManager::CaptureEngineCB::Release()

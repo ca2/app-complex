@@ -43,18 +43,18 @@ namespace simple_shader
    }
 
 
-   int64_t view::add_ref(OBJ_REF_DBG_PARAMS_DEF)
+   int64_t view::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
-      return  ::user::impact::add_ref(OBJ_REF_DBG_ARGS);
+      return  ::user::impact::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
 
    }
 
 
-   int64_t view::dec_ref(OBJ_REF_DBG_PARAMS_DEF)
+   int64_t view::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
-      return  ::user::impact::dec_ref(OBJ_REF_DBG_ARGS);
+      return  ::user::impact::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
 
    }
 

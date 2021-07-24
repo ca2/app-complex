@@ -166,17 +166,17 @@ namespace video_capture
 
 
 
-   i64 application::add_ref()
+   i64 application::increment_reference_count()
    {
 
-      return ::object::add_ref(OBJ_REF_DBG_ARGS);
+      return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
 
    }
 
-   i64 application::dec_ref()
+   i64 application::decrement_reference_count()
    {
 
-      return ::object::dec_ref(OBJ_REF_DBG_ARGS);
+      return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
 
    }
 

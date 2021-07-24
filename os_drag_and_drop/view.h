@@ -21,8 +21,8 @@ namespace simple_os_drag_and_drop
       virtual void dump(dump_context & dumpcontext) const override;
 
 #ifdef DEBUG
-      virtual int64_t add_ref(OBJ_REF_DBG_PARAMS) override;
-      virtual int64_t dec_ref(OBJ_REF_DBG_PARAMS) override;
+      virtual int64_t increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
+      virtual int64_t decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 #endif
 
       virtual void install_message_routing(::channel * psender) override;

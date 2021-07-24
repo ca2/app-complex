@@ -35,18 +35,18 @@ namespace simple_form
    }
 
 
-   int64_t simple_form_001::add_ref(OBJ_REF_DBG_PARAMS_DEF)
+   int64_t simple_form_001::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
-      return ::object::add_ref(OBJ_REF_DBG_ARGS);
+      return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
 
    }
 
 
-   int64_t simple_form_001::dec_ref(OBJ_REF_DBG_PARAMS_DEF)
+   int64_t simple_form_001::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
-      return ::object::dec_ref(OBJ_REF_DBG_ARGS);
+      return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
 
    }
 

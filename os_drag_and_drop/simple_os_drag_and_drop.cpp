@@ -22,18 +22,18 @@ namespace simple_os_drag_and_drop
    }
 
 
-   int64_t simple_os_drag_and_drop::add_ref(OBJ_REF_DBG_PARAMS_DEF)
+   int64_t simple_os_drag_and_drop::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
-      return ::object::add_ref(OBJ_REF_DBG_ARGS);
+      return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
 
    }
 
 
-   int64_t simple_os_drag_and_drop::dec_ref(OBJ_REF_DBG_PARAMS_DEF)
+   int64_t simple_os_drag_and_drop::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
-      return ::object::dec_ref(OBJ_REF_DBG_ARGS);
+      return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
 
    }
 

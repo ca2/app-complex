@@ -22,13 +22,13 @@ namespace simple_drag_and_drop
       virtual ~simple_drag_and_drop();
 
 
-      virtual int64_t add_ref()
+      virtual int64_t increment_reference_count()
       {
-         return ::object::add_ref();
+         return ::object::increment_reference_count();
       }
-      virtual int64_t dec_ref()
+      virtual int64_t decrement_reference_count()
       {
-         return ::object::dec_ref();
+         return ::object::decrement_reference_count();
       }
 
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics);

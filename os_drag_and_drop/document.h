@@ -22,8 +22,8 @@ namespace simple_os_drag_and_drop
       virtual bool on_open_document(const ::payload & varFile) override;
 
 #ifdef DEBUG
-      virtual int64_t add_ref(OBJ_REF_DBG_PARAMS) override;
-      virtual int64_t dec_ref(OBJ_REF_DBG_PARAMS) override;
+      virtual int64_t increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
+      virtual int64_t decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 #endif
 
 
