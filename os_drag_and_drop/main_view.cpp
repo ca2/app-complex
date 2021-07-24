@@ -122,7 +122,7 @@ namespace simple_os_drag_and_drop
    bool main_view::BaseOnControlEvent(::user::control_event * pevent)
    {
 
-      if(pevent->m_eevent == ::user::e_event_button_clicked)
+      if(pevent->m_eevent == ::user::e_event_click)
       {
 
          if(pevent->m_puserinteraction->m_id == "simple_drag_and_drop_toggle")

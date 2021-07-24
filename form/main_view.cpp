@@ -137,7 +137,7 @@ namespace simple_form
    bool main_view::BaseOnControlEvent(::user::control_event * pevent)
    {
 
-      if(pevent->m_eevent == ::user::e_event_button_clicked)
+      if(pevent->m_eevent == ::user::e_event_click)
       {
 
          if(pevent->m_puserinteraction->m_id == "simple_form_toggle")

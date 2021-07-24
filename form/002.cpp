@@ -144,7 +144,7 @@ namespace simple_form
    void simple_form_002::on_control_event(::user::control_event * pevent)
    {
 
-      if (pevent->m_eevent == ::user::e_event_button_clicked)
+      if (pevent->m_eevent == ::user::e_event_click)
       {
 
          if (pevent->m_id == "send_button")
