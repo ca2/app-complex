@@ -144,7 +144,7 @@ static inline void *CreateDShowEncoder(video_data *settings,
 		encoder = new DShowEncoder(context, device);
 		UpdateDShowEncoder(encoder, settings);
 
-	} catch (const char *error) {
+	} catch (const ::string &error) {
 		//blog(LOG_ERROR, "Could not create DirectShow encoder '%s': %s",
 		//		obs_encoder_get_name(context), error);
 	}

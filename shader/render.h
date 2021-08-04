@@ -55,7 +55,7 @@ namespace simple_shader
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
 
-      virtual void defer_load_fragment(const char* pszPath);
+      virtual void defer_load_fragment(const ::string & pszPath);
 
 
    };

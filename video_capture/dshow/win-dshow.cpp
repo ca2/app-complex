@@ -76,7 +76,7 @@ static inline bool DecodeDeviceDStr(DStr &name, DStr &path,
    return true;
 }
 
-static inline bool DecodeDeviceId(DShow::DeviceId &out, const char *device_id)
+static inline bool DecodeDeviceId(DShow::DeviceId &out, const ::string &device_id)
 {
    DStr name, path;
 
@@ -167,7 +167,7 @@ enum class BufferingType : i64 {
 	Off
 };
 
-//void ffmpeg_log(void *bla, int level, const char *msg, va_list args)
+//void ffmpeg_log(void *bla, int level, const ::string &msg, va_list args)
 //{
 //	DStr str;
 //	if (level == AV_LOG_WARNING)
@@ -644,7 +644,7 @@ struct PropertiesData {
 	vector<VideoDevice> devices;
 	vector<AudioDevice> audioDevices;
 
-	bool GetDevice(VideoDevice &device, const char *encoded_id) const
+	bool GetDevice(VideoDevice &device, const ::string &encoded_id) const
 	{
 		DeviceId deviceId;
 		DecodeDeviceId(deviceId, encoded_id);
@@ -661,7 +661,7 @@ struct PropertiesData {
 	}
 };
 
-static inline bool ConvertRes(int &cx, int &cy, const char *res)
+static inline bool ConvertRes(int &cx, int &cy, const ::string &res)
 {
 	return sscanf(res, "%dx%d", &cx, &cy) == 2;
 }
@@ -944,8 +944,8 @@ bool DShowInput::UpdateVideoConfig(aura_data *settings)
 			"\tfps: %0.2f (interval: %lld)\n"
 			"\tformat: %s",
 			obs_source_get_name(source),
-			(const char*)name_utf8,
-			(const char*)path_utf8,
+			(const ::string &)name_utf8,
+			(const ::string &)path_utf8,
 			videoConfig.cx, videoConfig.cy,
 			fps, videoConfig.frameInterval,
 			formatName->array);
@@ -994,7 +994,7 @@ bool DShowInput::UpdateAudioConfig(aura_data *settings)
 			audioConfig.useVideoDevice ? "yes" : "no");
 
 	if (!audioConfig.useVideoDevice)
-		blog(LOG_INFO, "\taudio device: %s", (const char*)name_utf8);
+		blog(LOG_INFO, "\taudio device: %s", (const ::string &)name_utf8);
 
 	const char *mode = "";
 
@@ -1103,7 +1103,7 @@ static void *CreateDShowInput(aura_data *settings, video_enc *source)
 
 	try {
 		dshow = new DShowInput(source, settings);
-	} catch (const char *error) {
+	} catch (const ::string &error) {
 		blog(LOG_ERROR, "Could not create device '%s': %s",
 				obs_source_get_name(source), error);
 	}
