@@ -15,7 +15,6 @@ list(APPEND library_source
    )
 
 
-
 list(APPEND library_references
    acme
    apex
