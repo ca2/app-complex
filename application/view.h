@@ -20,7 +20,7 @@ namespace simple_application
       virtual void assert_valid() const override;
       virtual void dump(dump_context & dumpcontext) const override;
 
-#ifdef DEBUG
+#ifdef _DEBUG
       virtual int64_t increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
       virtual int64_t decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 #endif
