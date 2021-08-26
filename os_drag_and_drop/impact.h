@@ -5,7 +5,7 @@ namespace simple_os_drag_and_drop
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_OS_DRAG_AND_DROP view :
+   class CLASS_DECL_APP_SIMPLE_OS_DRAG_AND_DROP impact :
       virtual public ::user::impact
    {
    public:
@@ -14,8 +14,8 @@ namespace simple_os_drag_and_drop
       __pointer(simple_os_drag_and_drop)       m_psimpleosdraganddrop;
 
 
-      view();
-      virtual ~view();
+      impact();
+      virtual ~impact();
 
       virtual void assert_valid() const override;
       virtual void dump(dump_context & dumpcontext) const override;

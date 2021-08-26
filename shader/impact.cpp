@@ -7,7 +7,7 @@ namespace simple_shader
 {
 
 
-   view::view()
+   impact::impact()
    {
 
       m_iView = -1;
@@ -21,13 +21,13 @@ namespace simple_shader
    }
 
 
-   view::~view()
+   impact::~impact()
    {
 
    }
 
 
-   void view::assert_valid() const
+   void impact::assert_valid() const
    {
 
       user::box::assert_valid();
@@ -35,7 +35,7 @@ namespace simple_shader
    }
 
 
-   void view::dump(dump_context & dumpcontext) const
+   void impact::dump(dump_context & dumpcontext) const
    {
 
       user::box::dump(dumpcontext);
@@ -43,7 +43,7 @@ namespace simple_shader
    }
 
 
-   int64_t view::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t impact::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
       return  ::user::impact::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
@@ -51,7 +51,7 @@ namespace simple_shader
    }
 
 
-   int64_t view::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t impact::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
       return  ::user::impact::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
@@ -59,19 +59,19 @@ namespace simple_shader
    }
 
 
-   void view::install_message_routing(::channel * psender)
+   void impact::install_message_routing(::channel * psender)
    {
 
       ::user::impact::install_message_routing(psender);
       ::user::interaction::install_simple_ui_default_mouse_handling(psender);
-      MESSAGE_LINK(e_message_create,psender,this,&view::on_message_create);
-      MESSAGE_LINK(e_message_destroy, psender, this, &view::on_message_destroy);
-      MESSAGE_LINK(e_message_key_down, psender, this, &view::on_message_key_down);
+      MESSAGE_LINK(e_message_create,psender,this,&impact::on_message_create);
+      MESSAGE_LINK(e_message_destroy, psender, this, &impact::on_message_destroy);
+      MESSAGE_LINK(e_message_key_down, psender, this, &impact::on_message_key_down);
 
    }
 
 
-   void view::on_message_create(::message::message * pmessage)
+   void impact::on_message_create(::message::message * pmessage)
    {
 
       __pointer(::message::create) pcreate(pmessage);
@@ -113,7 +113,7 @@ namespace simple_shader
 
       m_prender->initialize_application_consumer();
 
-      m_prender->m_pview = this;
+      m_prender->m_pimpact = this;
 
       string strId = get_document()->m_pimpactsystem->m_strMatter;
 
@@ -168,13 +168,13 @@ namespace simple_shader
    }
 
 
-   void view::on_message_destroy(::message::message * pmessage)
+   void impact::on_message_destroy(::message::message * pmessage)
    {
 
    }
 
 
-   void view::on_message_key_down(::message::message* pmessage)
+   void impact::on_message_key_down(::message::message* pmessage)
    {
 
       auto pkey = pmessage->m_pkey;
@@ -193,7 +193,7 @@ namespace simple_shader
    }
 
 
-   void view::on_subject(::subject::subject * psubject, ::subject::context * pcontext)
+   void impact::on_subject(::subject::subject * psubject, ::subject::context * pcontext)
    {
 
       if (psubject->id() == id_simple_checkbox || psubject->id() == id_no_client_frame)
@@ -208,7 +208,7 @@ namespace simple_shader
    }
 
 
-   ::user::document * view::get_document()
+   ::user::document * impact::get_document()
    {
 
       return ::user::impact::get_document();
@@ -216,7 +216,7 @@ namespace simple_shader
    }
 
 
-   bool view::keyboard_focus_is_focusable()
+   bool impact::keyboard_focus_is_focusable()
    {
 
       return true;
@@ -224,7 +224,7 @@ namespace simple_shader
    }
 
 
-   void view::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
       if (m_bSaveFrame)
@@ -261,7 +261,7 @@ namespace simple_shader
    }
 
 
-   void view::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
       auto rectangleClient = get_client_rect();

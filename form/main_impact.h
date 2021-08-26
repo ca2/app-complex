@@ -1,22 +1,23 @@
 #pragma once
 
 
-namespace simple_os_drag_and_drop
+namespace simple_form
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_OS_DRAG_AND_DROP main_view:
-      virtual public ::user::split_view
+   class CLASS_DECL_APP_SIMPLE_FORM main_impact:
+      virtual public ::user::split_view,
+      virtual public __application_consumer
    {
    public:
 
 
-      // ::userex::top_view* m_ptopview;
-      view *                  m_pview;
+      //::userex::top_view *    m_ptopview;
+      impact *                  m_pimpact;
 
 
-      main_view();
-      virtual ~main_view();
+      main_impact();
+      virtual ~main_impact();
 
 
       virtual void assert_valid() const override;
@@ -38,7 +39,7 @@ namespace simple_os_drag_and_drop
    };
 
 
-} // namespace simple_os_drag_and_drop
+} // namespace simple_form
 
 
 

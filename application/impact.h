@@ -1,18 +1,21 @@
 #pragma once
 
 
-namespace simple_form
+namespace simple_application
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_FORM view :
-      virtual public ::user::impact
+   class CLASS_DECL_APP_SIMPLE_APPLICATION impact :
+      virtual public ::user::impact,
+      virtual public __application_consumer
    {
    public:
 
+      ::write_text::font_pointer     m_pfontThomasBS_;
+      string         m_strFont1;
 
-      view();
-      virtual ~view();
+      impact();
+      virtual ~impact();
 
       virtual void assert_valid() const override;
       virtual void dump(dump_context & dumpcontext) const override;
@@ -21,7 +24,6 @@ namespace simple_form
       virtual int64_t increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
       virtual int64_t decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 #endif
-
 
       virtual void install_message_routing(::channel * psender) override;
 
@@ -34,10 +36,11 @@ namespace simple_form
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
+      DECLARE_MESSAGE_HANDLER(on_message_destroy);
 
    };
 
 
-} // namespace simple_form
+} // namespace simple_application
 
 

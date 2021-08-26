@@ -1,29 +1,34 @@
 #pragma once
 
 
-namespace simple_application
+namespace simple_shader
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_APPLICATION view :
+   class CLASS_DECL_APP_SIMPLE_SHADER impact :
       virtual public ::user::impact,
       virtual public __application_consumer
    {
    public:
 
-      ::write_text::font_pointer     m_pfontThomasBS_;
-      string         m_strFont1;
 
-      view();
-      virtual ~view();
+      int                     m_iView;
+      __pointer(render)       m_prender;
+      bool                    m_bSaveFrame;
+
+
+      impact();
+      virtual ~impact();
 
       virtual void assert_valid() const override;
       virtual void dump(dump_context & dumpcontext) const override;
+
 
 #ifdef _DEBUG
       virtual int64_t increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
       virtual int64_t decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 #endif
+
 
       virtual void install_message_routing(::channel * psender) override;
 
@@ -37,10 +42,13 @@ namespace simple_application
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
       DECLARE_MESSAGE_HANDLER(on_message_destroy);
+      DECLARE_MESSAGE_HANDLER(on_message_key_down);
+
+      virtual bool keyboard_focus_is_focusable() override;
 
    };
 
 
-} // namespace simple_application
+} // namespace simple_shader
 
 

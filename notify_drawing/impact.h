@@ -5,14 +5,14 @@ namespace notify_drawing
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_NOTIFY_DRAWING view :
-      virtual public ::simple_drawing::view
+   class CLASS_DECL_APP_SIMPLE_NOTIFY_DRAWING impact :
+      virtual public ::simple_drawing::impact
    {
    public:
 
 
-      view();
-      virtual ~view();
+      impact();
+      virtual ~impact();
 
       virtual void assert_valid() const;
       virtual void dump(dump_context & dumpcontext) const;
