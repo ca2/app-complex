@@ -5,18 +5,18 @@ namespace video_capture
 {
 
 
-   class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE main_view:
+   class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE main_impact:
       virtual public ::user::split_view
    {
    public:
 
 
       top_view *              m_ptopview;
-      view *                  m_pview;
+      impact *                  m_pimpact;
 
 
-      main_view();
-      virtual ~main_view();
+      main_impact();
+      virtual ~main_impact();
 
 
       virtual void assert_valid() const;

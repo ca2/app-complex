@@ -22,7 +22,7 @@ namespace video_capture
 
       ::image_pointer         m_pimage;
 
-      view *                  m_pview;
+      impact *                  m_pimpact;
 
 
       render();

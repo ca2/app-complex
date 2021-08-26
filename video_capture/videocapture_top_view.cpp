@@ -59,7 +59,7 @@ namespace video_capture
       if(m_peditview == nullptr)
       {
 
-         message_box(nullptr,"Could not create folder edit view");
+         message_box(nullptr,"Could not create folder edit impact");
 
       }
 

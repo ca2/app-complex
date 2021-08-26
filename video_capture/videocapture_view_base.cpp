@@ -151,7 +151,7 @@ namespace video_capture
 
       //char sz[512];
 
-      //::output_debug_string("view:");
+      //::output_debug_string("impact:");
       //::ansi_from_u64(sz, micros, 10);
       //::output_debug_string(sz);
       //::output_debug_string(", ");

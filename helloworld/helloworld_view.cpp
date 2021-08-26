@@ -6,7 +6,7 @@ namespace helloworld
 {
 
 
-   view::view(::object * pobject) :
+   impact::impact(::object * pobject) :
       ::object(papp)
    {
 
@@ -14,13 +14,13 @@ namespace helloworld
    }
 
 
-   view::~view()
+   impact::~impact()
    {
 
    }
 
 
-   void view::assert_valid() const
+   void impact::assert_valid() const
    {
 
       ::user::impact::assert_valid();
@@ -28,7 +28,7 @@ namespace helloworld
    }
 
 
-   void view::dump(dump_context & dumpcontext) const
+   void impact::dump(dump_context & dumpcontext) const
    {
 
       ::user::impact::dump(dumpcontext);
@@ -36,17 +36,17 @@ namespace helloworld
    }
 
 
-   void view::install_message_handling(::message::dispatch * pdispatch)
+   void impact::install_message_handling(::message::dispatch * pdispatch)
    {
 
       ::user::impact::install_message_handling(pdispatch);
 
-      IGUI_WIN_MSG_LINK(e_message_create,pdispatch,this,&view::on_message_create);
+      IGUI_WIN_MSG_LINK(e_message_create,pdispatch,this,&impact::on_message_create);
 
    }
 
 
-   void view::on_message_create(signal_details * pmessage)
+   void impact::on_message_create(signal_details * pmessage)
    {
 
       __pointer(::message::create) pcreate(pmessage);
@@ -59,7 +59,7 @@ namespace helloworld
    }
 
 
-   void view::on_update(::user::impact * pimpact, ::user::e_update eupdate, ::object * pobject)
+   void impact::on_update(::user::impact * pimpact, ::user::e_update eupdate, ::object * pobject)
    {
 
       UNREFERENCED_PARAMETER(pSender);
@@ -69,7 +69,7 @@ namespace helloworld
    }
 
 
-   void view::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
       rectangle_i32 rectangleClient;

@@ -178,7 +178,7 @@ namespace simple_shader
 
          pview->m_iView = atoi(strId);
 
-         __pointer(view) pviewShader = pview;
+         __pointer(impact) pviewShader = pview;
 
          pviewShader->m_prender->m_strShaderPrefix = strId;
 

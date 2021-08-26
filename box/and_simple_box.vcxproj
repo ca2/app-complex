@@ -688,10 +688,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='memdleak|Android'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='profiler|Android'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include=".\view.cpp" />
+    <ClCompile Include=".\impact.cpp" />
     <ClCompile Include="edit_view.cpp" />
     <ClCompile Include="lite_view.cpp" />
-    <ClCompile Include="main_view.cpp" />
+    <ClCompile Include="main_impact.cpp" />
     <ClCompile Include="switcher_view.cpp" />
     <ClCompile Include="toggle_view.cpp" />
     <ClCompile Include="top_view.cpp" />
@@ -705,14 +705,14 @@
     <ClInclude Include="simple_message_box.h" />
     <ClInclude Include="full_view.h" />
     <ClInclude Include="lite_view.h" />
-    <ClInclude Include="main_view.h" />
+    <ClInclude Include="main_impact.h" />
     <ClInclude Include="pane_view.h" />
 
     <ClInclude Include="framework.h" />
     <ClInclude Include="switcher_view.h" />
     <ClInclude Include="toggle_view.h" />
     <ClInclude Include="top_view.h" />
-    <ClInclude Include="view.h" />
+    <ClInclude Include="impact.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".\simple_message_box.def" />

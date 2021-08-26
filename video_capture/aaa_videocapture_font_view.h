@@ -12,7 +12,7 @@ namespace video_capture
 
 
       top_view *                    m_ptopview;
-      ::user::font_list_view *      m_pview;
+      ::user::font_list_view *      m_pimpact;
 
 
       font_view(::object * pobject);

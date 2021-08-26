@@ -270,13 +270,13 @@ namespace simple_form
       //      if(pupdate->m_pcontrolevent->m_eevent == ::user::e_event_after_change_cur_sel)
       //      {
 
-      //         string strFont = m_pfontview->m_pview->get_cur_sel_face_name();
+      //         string strFont = m_pfontview->m_pimpact->get_cur_sel_face_name();
 
       //      }
       //      else if (pupdate->m_pcontrolevent->m_eevent == ::user::e_event_after_change_cur_hover)
       //      {
 
-      //         string strFont = m_pfontview->m_pview->get_cur_hover_face_name();
+      //         string strFont = m_pfontview->m_pimpact->get_cur_hover_face_name();
 
       //      }
 

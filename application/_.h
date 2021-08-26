@@ -18,7 +18,7 @@ namespace simple_application
    class application;
    class pane_view;
    class document;
-   class view;
+   class impact;
 
 } // namespace flag
 

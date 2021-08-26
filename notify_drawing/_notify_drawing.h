@@ -27,7 +27,7 @@ namespace notify_drawing
 {
 
    class application;
-   class view;
+   class impact;
 
 } // namespace flag
 
@@ -36,7 +36,7 @@ namespace notify_drawing
 #define APP_TYPE ::notify_drawing::application
 
 
-#include "view.h"
+#include "impact.h"
 #include "main_frame.h"
 
 

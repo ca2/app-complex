@@ -27,7 +27,7 @@ namespace helloworld
 
       create_factory <::helloworld::document >();
       create_factory <::helloworld::frame >();
-      create_factory <::helloworld::view >();
+      create_factory <::helloworld::impact >();
 
       if(!::aura::application::initialize_application())
          return false;
@@ -41,7 +41,7 @@ namespace helloworld
 		   "main",
          __type(::helloworld::document),
 		   __type(::helloworld::frame),
-		   __type(::helloworld::view));
+		   __type(::helloworld::impact));
 
       add_document_template(pdocumenttemplate);
 

@@ -148,7 +148,7 @@ namespace simple_os_drag_and_drop
                   
                   ::image_pointer pimage = result;
 
-                  m_pview->set_need_redraw();
+                  m_pimpact->set_need_redraw();
 
                   ::image_pointer pimpl = pimage->clone();
 
@@ -158,9 +158,9 @@ namespace simple_os_drag_and_drop
 
                   m_pimagemap["pat1grayed"]->saturation(0->0);
 
-                  m_pview->set_need_redraw();
+                  m_pimpact->set_need_redraw();
                   
-                  m_pview->post_redraw();
+                  m_pimpact->post_redraw();
 
                   return ::success;
 

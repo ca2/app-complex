@@ -36,10 +36,10 @@ namespace video_capture
 
       __pointer(::user::message) pusermessage(pmessage);
 
-      //if (m_pview != nullptr)
+      //if (m_pimpact != nullptr)
       //{
 
-      //   m_pview->OnCaptureEvent(pusermessage->m_wparam, pusermessage->m_lparam);
+      //   m_pimpact->OnCaptureEvent(pusermessage->m_wparam, pusermessage->m_lparam);
 
       //}
 

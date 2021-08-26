@@ -157,12 +157,12 @@
     <ClInclude Include="frame.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="main_frame.h" />
-    <ClInclude Include="main_view.h" />
+    <ClInclude Include="main_impact.h" />
     <ClInclude Include="pane_view.h" />
     <ClInclude Include="simple_form.h" />
     <ClInclude Include="simple_form_001.h" />
     <ClInclude Include="simple_form_002.h" />
-    <ClInclude Include="view.h" />
+    <ClInclude Include="impact.h" />
     <ClInclude Include="_.h" />
   </ItemGroup>
   <ItemGroup>
@@ -173,10 +173,10 @@
     <ClCompile Include="frame.cpp" />
     <ClCompile Include="framework.cpp" />
     <ClCompile Include="main_frame.cpp" />
-    <ClCompile Include="main_view.cpp" />
+    <ClCompile Include="main_impact.cpp" />
     <ClCompile Include="pane_view.cpp" />
     <ClCompile Include="simple_form.cpp" />
-    <ClCompile Include="view.cpp" />
+    <ClCompile Include="impact.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

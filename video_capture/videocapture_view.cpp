@@ -6,7 +6,7 @@ namespace video_capture
 {
 
 
-   view::view()
+   impact::impact()
    {
 
       m_flagNonClient.erase(non_client_background);
@@ -14,33 +14,33 @@ namespace video_capture
 
    }
 
-   view::~view()
+   impact::~impact()
    {
    }
 
-   void view::assert_valid() const
+   void impact::assert_valid() const
    {
       user::box::assert_valid();
    }
 
-   void view::dump(dump_context & dumpcontext) const
+   void impact::dump(dump_context & dumpcontext) const
    {
       user::box::dump(dumpcontext);
    }
 
-   void view::install_message_routing(::channel * pchannel)
+   void impact::install_message_routing(::channel * pchannel)
    {
 
       impact_base::install_message_routing(pchannel);
 
       
-      MESSAGE_LINK(e_message_create,pchannel,this,&view::on_message_create);
-      MESSAGE_LINK(e_message_destroy, pchannel, this, &view::on_message_destroy);
+      MESSAGE_LINK(e_message_create,pchannel,this,&impact::on_message_create);
+      MESSAGE_LINK(e_message_destroy, pchannel, this, &impact::on_message_destroy);
 
    }
 
 
-   void view::on_message_create(::message::message * pmessage)
+   void impact::on_message_create(::message::message * pmessage)
    {
 
       __pointer(::message::create) pcreate(pmessage);
@@ -57,7 +57,7 @@ namespace video_capture
    }
 
 
-   void view::on_message_destroy(::message::message * pmessage)
+   void impact::on_message_destroy(::message::message * pmessage)
    {
 
       if (m_prender)
@@ -72,7 +72,7 @@ namespace video_capture
    }
 
 
-   void view::on_subject(::subject::subject * psubject, ::subject::context * pcontext)
+   void impact::on_subject(::subject::subject * psubject, ::subject::context * pcontext)
    {
 
       if(psubject->m_id = INITIAL_UPDATE)
@@ -88,7 +88,7 @@ namespace video_capture
    }
 
 
-   ::user::document * view::get_document()
+   ::user::document * impact::get_document()
    {
 
       return  (::user::impact::get_document());
@@ -96,7 +96,7 @@ namespace video_capture
    }
 
 
-   void view::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
       if (m_prender)
@@ -109,7 +109,7 @@ namespace video_capture
    }
 
 
-   void view::defer_check_on_draw_layout()
+   void impact::defer_check_on_draw_layout()
    {
 
       if (m_prender != nullptr)
@@ -119,13 +119,13 @@ namespace video_capture
    }
 
 
-   void view::on_draw_image_layer(::draw2d::graphics_pointer & pgraphics)
+   void impact::on_draw_image_layer(::draw2d::graphics_pointer & pgraphics)
    {
 
    }
 
 
-   bool view::start_capture()
+   bool impact::start_capture()
    {
 
       if (!m_prender)

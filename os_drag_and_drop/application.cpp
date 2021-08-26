@@ -38,8 +38,8 @@ namespace simple_os_drag_and_drop
       create_factory <::simple_os_drag_and_drop::frame >();
       create_factory <::simple_os_drag_and_drop::main_frame >();
       create_factory <::user::button_view >();
-      create_factory <::simple_os_drag_and_drop::view >();
-      create_factory <::simple_os_drag_and_drop::main_view >();
+      create_factory <::simple_os_drag_and_drop::impact >();
+      create_factory <::simple_os_drag_and_drop::main_impact >();
       create_factory <::simple_os_drag_and_drop::tab_view >();
 
       if (!::aura::application::init_instance())
@@ -65,7 +65,7 @@ namespace simple_os_drag_and_drop
                           "main",
                           __type(document),
                           __type(frame),
-                          __type(main_view)));
+                          __type(main_impact)));
 
       m_ptemplateSimpleDrawingView = pdoctemplate;
       add_document_template(pdoctemplate);
@@ -181,10 +181,10 @@ namespace simple_os_drag_and_drop
    }
 
 
-   __pointer(view) application::create_simple_os_drag_and_drop_view(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
+   __pointer(impact) application::create_simple_os_drag_and_drop_view(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
    {
 
-      return pimpactParent->create_view < view >(pimpactdata);
+      return pimpactParent->create_view < impact >(pimpactdata);
 
    }
 

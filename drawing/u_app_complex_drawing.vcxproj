@@ -35,7 +35,7 @@
     <ClInclude Include="pane_view.h" />
     <ClInclude Include="render.h" />
     <ClInclude Include="simple_drawing.h" />
-    <ClInclude Include="view.h" />
+    <ClInclude Include="impact.h" />
     <ClInclude Include="_.h" />
     <ClInclude Include="_drawing.h" />
   </ItemGroup>
@@ -56,7 +56,7 @@
     <ClCompile Include="render.cpp" />
     <ClCompile Include="render_1through3.cpp" />
     <ClCompile Include="render_arcs.cpp" />
-    <ClCompile Include="view.cpp" />
+    <ClCompile Include="impact.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\source\app\aura\w_aura.vcxproj">

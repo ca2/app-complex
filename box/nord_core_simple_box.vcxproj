@@ -194,7 +194,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x86'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x86'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="main_view.cpp">
+    <ClCompile Include="main_impact.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x86'">true</ExcludedFromBuild>
@@ -224,7 +224,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x86'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x86'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="view.cpp">
+    <ClCompile Include="impact.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x86'">true</ExcludedFromBuild>
@@ -245,12 +245,12 @@
     <ClInclude Include="document.h" />
     <ClInclude Include="frame.h" />
     <ClInclude Include="gcom.h" />
-    <ClInclude Include="main_view.h" />
+    <ClInclude Include="main_impact.h" />
     <ClInclude Include="pane_view.h" />
 
     <ClInclude Include="render.h" />
     <ClInclude Include="switcher_view.h" />
-    <ClInclude Include="view.h" />
+    <ClInclude Include="impact.h" />
     <ClInclude Include="view_base.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

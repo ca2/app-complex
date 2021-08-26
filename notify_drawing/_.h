@@ -16,7 +16,7 @@ namespace notify_drawing
 {
 
    class application;
-   class view;
+   class impact;
 
 } // namespace flag
 

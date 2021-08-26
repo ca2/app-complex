@@ -7,7 +7,7 @@ namespace video_capture
 {
 
 
-   class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE view :
+   class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE impact :
       virtual public impact_base
    {
    public:
@@ -18,8 +18,8 @@ namespace video_capture
 
 
 
-      view();
-      virtual ~view();
+      impact();
+      virtual ~impact();
 
       virtual void assert_valid() const;
       virtual void dump(dump_context & dumpcontext) const;

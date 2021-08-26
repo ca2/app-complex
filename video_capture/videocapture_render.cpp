@@ -18,7 +18,7 @@ namespace video_capture
    render::render()
    {
 
-      m_pview                    = nullptr;
+      m_pimpact                    = nullptr;
 
    }
 

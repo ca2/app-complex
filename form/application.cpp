@@ -61,8 +61,8 @@ namespace simple_form
       create_factory <::simple_form::frame >();
       create_factory <::simple_form::main_frame >();
       create_factory <::user::button_view >();
-      create_factory <::simple_form::view >();
-      create_factory <::simple_form::main_view >();
+      create_factory <::simple_form::impact >();
+      create_factory <::simple_form::main_impact >();
       create_factory <::simple_form::tab_view >();
       create_factory <::simple_form::simple_form_001 >();
       create_factory <::simple_form::simple_form_002 >();
@@ -87,7 +87,7 @@ namespace simple_form
                           "main",
                           __type(document),
                           __type(frame),
-                          __type(main_view)));
+                          __type(main_impact)));
       m_ptemplateBeatMapperView = pdoctemplate;
       add_document_template(pdoctemplate);
 

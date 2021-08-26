@@ -13,7 +13,7 @@ namespace video_capture
 
       bool                       m_bExplicitTranslucency;
       ::user::enum_translucency      m_etranslucency;
-      view *                     m_pview;
+      impact *                     m_pimpact;
 
       main_frame();
       virtual ~main_frame();

@@ -24,9 +24,9 @@ namespace simple_form
 {
 
    class application;
-   class main_view;
+   class main_impact;
    class document;
-   class view;
+   class impact;
    class tab_view;
 
 } // namespace flag
@@ -42,8 +42,8 @@ namespace simple_form
 
 
 #include "document.h"
-#include "view.h"
-#include "main_view.h"
+#include "impact.h"
+#include "main_impact.h"
 #include "frame.h"
 #include "main_frame.h"
 

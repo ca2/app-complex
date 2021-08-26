@@ -8,14 +8,14 @@ namespace helloworld
    class document;
 
 
-   class CLASS_DECL_APP_SIMPLE_HELLOWORLD view :
+   class CLASS_DECL_APP_SIMPLE_HELLOWORLD impact :
       public ::user::impact
    {
    public:
 
 
-      view(::object * pobject);
-      virtual ~view();
+      impact(::object * pobject);
+      virtual ~impact();
 
       virtual void assert_valid() const;
       virtual void dump(dump_context & dumpcontext) const;

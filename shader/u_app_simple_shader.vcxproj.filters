@@ -42,7 +42,7 @@
     <ClInclude Include="simple_shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="view.h">
+    <ClInclude Include="impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -68,7 +68,7 @@
     <ClCompile Include="simple_shader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="view.cpp">
+    <ClCompile Include="impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="simple_shader_arcs.cpp">

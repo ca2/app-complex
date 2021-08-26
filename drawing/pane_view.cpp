@@ -208,7 +208,7 @@ namespace complex_drawing
 
             papplication->m_pstrHoverFontFamilyName = &m_pviewTopic->m_prender->m_strHoverFontFamilyName;
 
-            m_pfontview->m_pview->ensure_sel_visible();
+            m_pfontview->m_pimpact->ensure_sel_visible();
 
          }
 
@@ -278,7 +278,7 @@ namespace complex_drawing
          if (pevent->m_eevent == ::user::e_event_after_change_cur_sel)
          {
 
-            string strFont = m_pfontview->m_pview->get_cur_sel_face_name();
+            string strFont = m_pfontview->m_pimpact->get_cur_sel_face_name();
 
             m_pviewTopic->m_prender->set_font(strFont);
 
@@ -286,7 +286,7 @@ namespace complex_drawing
          else if (pevent->m_eevent == ::user::e_event_after_change_cur_hover)
          {
 
-            string strFont = m_pfontview->m_pview->get_cur_hover_face_name();
+            string strFont = m_pfontview->m_pimpact->get_cur_hover_face_name();
             
             if (strFont.has_char())
             {

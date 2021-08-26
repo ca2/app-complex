@@ -37,7 +37,7 @@ namespace simple_application
 
       create_factory <::simple_application::document >();
       create_factory <::simple_application::main_frame >();
-      create_factory <::simple_application::view >();
+      create_factory <::simple_application::impact >();
 
       if (!::aura::application::init_instance())
       {
@@ -50,7 +50,7 @@ namespace simple_application
                                "main",
                                __type(document),
                                __type(main_frame),
-                               __type(view)));
+                               __type(impact)));
 
       __compose(m_ptemplateSimpleDrawingMain, pdoctemplate);
 

@@ -25,10 +25,10 @@
     <ClCompile Include="main_frame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main_view.cpp">
+    <ClCompile Include="main_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="view.cpp">
+    <ClCompile Include="impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="framework.cpp">
@@ -54,10 +54,10 @@
     <ClInclude Include="main_frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main_view.h">
+    <ClInclude Include="main_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="view.h">
+    <ClInclude Include="impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="framework.h">

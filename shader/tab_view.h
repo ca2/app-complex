@@ -14,7 +14,7 @@ namespace simple_shader
 
 
       ::user::split_view *                            m_ptopviewLast;
-      __reference(view)                               m_pviewTopic;
+      __reference(impact)                               m_pviewTopic;
       string                                          m_strTopicTitle;
 
 

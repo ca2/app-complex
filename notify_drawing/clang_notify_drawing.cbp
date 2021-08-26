@@ -127,8 +127,8 @@
 		</Unit>
 		<Unit filename="main_frame.cpp" />
 		<Unit filename="main_frame.h" />
-		<Unit filename="view.cpp" />
-		<Unit filename="view.h" />
+		<Unit filename="impact.cpp" />
+		<Unit filename="impact.h" />
 		<Extensions>
 			<DoxyBlocks>
 				<comment_style block="0" line="0" />

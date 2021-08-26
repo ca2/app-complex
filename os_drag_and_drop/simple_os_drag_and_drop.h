@@ -12,7 +12,7 @@ namespace simple_os_drag_and_drop
 
 
       rectangle_i32                                m_rectangle;
-      ::user::impact *                    m_pview;
+      ::user::impact *                    m_pimpact;
       string                              m_strFont;
       int                                 m_iDragAndDrop;
       string_map < ::image_pointer >                m_pimagemap;

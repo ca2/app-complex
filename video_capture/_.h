@@ -18,9 +18,9 @@ namespace video_capture
 
    class application;
    class top_view;
-   class main_view;
+   class main_impact;
    class document;
-   class view;
+   class impact;
 
 } // namespace video_capture
 

@@ -47,7 +47,7 @@ namespace simple_shader
    bool document::on_open_document(const ::payload & varFile)
    {
 
-      view * pview = get_typed_view < view >();
+      impact * pview = get_typed_view < impact >();
 
       if(pview == NULL)
       {

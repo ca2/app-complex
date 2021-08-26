@@ -130,15 +130,15 @@
 		</Unit>
 		<Unit filename="main_frame.cpp" />
 		<Unit filename="main_frame.h" />
-		<Unit filename="main_view.cpp" />
-		<Unit filename="main_view.h" />
+		<Unit filename="main_impact.cpp" />
+		<Unit filename="main_impact.h" />
 		<Unit filename="pane_view.cpp" />
 		<Unit filename="pane_view.h" />
 		<Unit filename="simple_drag_and_drop.h" />
 		<Unit filename="simple_drawing_simple_drawing.h" />
 		<Unit filename="simple_os_drag_and_drop.cpp" />
-		<Unit filename="view.cpp" />
-		<Unit filename="view.h" />
+		<Unit filename="impact.cpp" />
+		<Unit filename="impact.h" />
 		<Extensions>
 			<DoxyBlocks>
 				<comment_style block="0" line="0" />

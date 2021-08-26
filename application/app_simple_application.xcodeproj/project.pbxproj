@@ -11,14 +11,14 @@
 		9A415C29247393C100EF2BCD /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C6240C09F00097E249 /* application.cpp */; };
 		9A415C2A247393C100EF2BCD /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C9240C09F10097E249 /* document.cpp */; };
 		9A415C2C247393C100EF2BCD /* main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C3240C09F00097E249 /* main_frame.cpp */; };
-		9A415C2E247393C100EF2BCD /* view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C2240C09F00097E249 /* view.cpp */; };
+		9A415C2E247393C100EF2BCD /* impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C2240C09F00097E249 /* impact.cpp */; };
 		9A8AB5422484BC0200F55E6A /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAC1D3E2474FE010013AB72 /* libaura.dylib */; };
-		9A8F90CE240C09F10097E249 /* view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C2240C09F00097E249 /* view.cpp */; };
+		9A8F90CE240C09F10097E249 /* impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C2240C09F00097E249 /* impact.cpp */; };
 		9A8F90CF240C09F10097E249 /* main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C3240C09F00097E249 /* main_frame.cpp */; };
 		9A8F90D1240C09F10097E249 /* document.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8F90C5240C09F00097E249 /* document.h */; };
 		9A8F90D2240C09F10097E249 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C6240C09F00097E249 /* application.cpp */; };
 		9A8F90D3240C09F10097E249 /* main_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8F90C7240C09F00097E249 /* main_frame.h */; };
-		9A8F90D4240C09F10097E249 /* view.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8F90C8240C09F10097E249 /* view.h */; };
+		9A8F90D4240C09F10097E249 /* impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8F90C8240C09F10097E249 /* impact.h */; };
 		9A8F90D5240C09F10097E249 /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C9240C09F10097E249 /* document.cpp */; };
 		9A8F90D6240C09F10097E249 /* application.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8F90CA240C09F10097E249 /* application.h */; };
 		9AE24EA11904CFFD001AEFFB /* libapp_simple_application.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libapp_simple_application.a */; };
@@ -77,12 +77,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9A8F90C2240C09F00097E249 /* view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = view.cpp; sourceTree = "<group>"; };
+		9A8F90C2240C09F00097E249 /* impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = impact.cpp; sourceTree = "<group>"; };
 		9A8F90C3240C09F00097E249 /* main_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main_frame.cpp; sourceTree = "<group>"; };
 		9A8F90C5240C09F00097E249 /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = document.h; sourceTree = "<group>"; };
 		9A8F90C6240C09F00097E249 /* application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
 		9A8F90C7240C09F00097E249 /* main_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main_frame.h; sourceTree = "<group>"; };
-		9A8F90C8240C09F10097E249 /* view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = view.h; sourceTree = "<group>"; };
+		9A8F90C8240C09F10097E249 /* impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = impact.h; sourceTree = "<group>"; };
 		9A8F90C9240C09F10097E249 /* document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = document.cpp; sourceTree = "<group>"; };
 		9A8F90CA240C09F10097E249 /* application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
 		9AAC1D372474FE010013AB72 /* aura.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura.xcodeproj; path = ../../app/aura/aura.xcodeproj; sourceTree = "<group>"; };
@@ -168,8 +168,8 @@
 				9AEB75BF16F78E600085103B /* framework.h */,
 				9A8F90C3240C09F00097E249 /* main_frame.cpp */,
 				9A8F90C7240C09F00097E249 /* main_frame.h */,
-				9A8F90C2240C09F00097E249 /* view.cpp */,
-				9A8F90C8240C09F10097E249 /* view.h */,
+				9A8F90C2240C09F00097E249 /* impact.cpp */,
+				9A8F90C8240C09F10097E249 /* impact.h */,
 			);
 			name = simple_application;
 			sourceTree = "<group>";
@@ -181,7 +181,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A8F90D4240C09F10097E249 /* view.h in Headers */,
+				9A8F90D4240C09F10097E249 /* impact.h in Headers */,
 				9A8F90D6240C09F10097E249 /* application.h in Headers */,
 				9A8F90D3240C09F10097E249 /* main_frame.h in Headers */,
 				9AEB75DE16F78E600085103B /* framework.h in Headers */,
@@ -349,7 +349,7 @@
 				9A415C29247393C100EF2BCD /* application.cpp in Sources */,
 				9A415C2A247393C100EF2BCD /* document.cpp in Sources */,
 				9A415C2C247393C100EF2BCD /* main_frame.cpp in Sources */,
-				9A415C2E247393C100EF2BCD /* view.cpp in Sources */,
+				9A415C2E247393C100EF2BCD /* impact.cpp in Sources */,
 				07B65520190F3001002DAADE /* framework.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,7 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A8F90CF240C09F10097E249 /* main_frame.cpp in Sources */,
-				9A8F90CE240C09F10097E249 /* view.cpp in Sources */,
+				9A8F90CE240C09F10097E249 /* impact.cpp in Sources */,
 				9A8F90D5240C09F10097E249 /* document.cpp in Sources */,
 				9AEB75DD16F78E600085103B /* framework.cpp in Sources */,
 				9A8F90D2240C09F10097E249 /* application.cpp in Sources */,

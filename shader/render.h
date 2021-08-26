@@ -18,7 +18,7 @@ namespace simple_shader
       __pointer(::gpu::context)           m_pcontext;
       __pointer(::gpu::program)           m_pprogram;
       rectangle_i32                                m_rectangle;
-      ::user::impact *                    m_pview;
+      ::user::impact *                    m_pimpact;
       string                              m_strFont1;
       string_map < ::image_pointer >      m_pimagemap;
       ::image_pointer                     m_pimage1;

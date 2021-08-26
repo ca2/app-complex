@@ -16,7 +16,7 @@ namespace user
 
 
 #include "document.h"
-#include "view.h"
+#include "impact.h"
 #include "main_frame.h"
 
 

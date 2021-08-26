@@ -13,7 +13,7 @@ namespace complex_drawing
 
 
       ::user::split_view *                      m_ptopviewLast;
-      __reference(::simple_drawing::view)       m_pviewTopic;
+      __reference(::simple_drawing::impact)       m_pviewTopic;
       string                                    m_strTopicTitle;
 
 

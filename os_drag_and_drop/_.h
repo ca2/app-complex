@@ -25,9 +25,9 @@ namespace simple_os_drag_and_drop
 {
 
    class application;
-   class main_view;
+   class main_impact;
    class document;
-   class view;
+   class impact;
 
 } // namespace flag
 
@@ -40,8 +40,8 @@ namespace simple_os_drag_and_drop
 
 
 #include "document.h"
-#include "view.h"
-#include "main_view.h"
+#include "impact.h"
+#include "main_impact.h"
 #include "frame.h"
 #include "main_frame.h"
 

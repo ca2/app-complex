@@ -36,7 +36,7 @@
     <ClInclude Include="simple_drawing.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="view.h">
+    <ClInclude Include="impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="render.h">
@@ -62,7 +62,7 @@
     <ClCompile Include="pane_view.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="view.cpp">
+    <ClCompile Include="impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="render_arcs.cpp">

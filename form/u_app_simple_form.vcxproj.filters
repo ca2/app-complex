@@ -4,7 +4,7 @@
     <ClCompile Include="framework.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="view.cpp">
+    <ClCompile Include="impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="simple_form.cpp">
@@ -13,7 +13,7 @@
     <ClCompile Include="pane_view.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main_view.cpp">
+    <ClCompile Include="main_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main_frame.cpp">
@@ -39,7 +39,7 @@
     <ClInclude Include="framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="view.h">
+    <ClInclude Include="impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="simple_form_002.h">
@@ -51,7 +51,7 @@
     <ClInclude Include="pane_view.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main_view.h">
+    <ClInclude Include="main_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="main_frame.h">

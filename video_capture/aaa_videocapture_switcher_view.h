@@ -12,7 +12,7 @@ namespace video_capture
 
 
       top_view *              m_ptopview;
-      view *                  m_pview;
+      impact *                  m_pimpact;
 
 
       switcher_view();

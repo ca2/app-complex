@@ -706,7 +706,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='cover|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="view.cpp" />
+    <ClCompile Include="impact.cpp" />
     <ClCompile Include="main_frame.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -714,7 +714,7 @@
     <ClInclude Include="_.h" />
     <ClInclude Include="main_frame.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="view.h" />
+    <ClInclude Include="impact.h" />
     <ClInclude Include="_notify_drawing.h" />
   </ItemGroup>
   <ItemGroup>

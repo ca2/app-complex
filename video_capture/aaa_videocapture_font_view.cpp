@@ -12,7 +12,7 @@ namespace video_capture
       place_holder_container(pobject)
    {
 
-      m_pview = nullptr;
+      m_pimpact = nullptr;
 
       m_ptopview = nullptr;
 
@@ -66,15 +66,15 @@ namespace video_capture
       if(m_ptopview == nullptr)
       {
 
-         message_box(nullptr,"Could not create folder edit view");
+         message_box(nullptr,"Could not create folder edit impact");
 
       }
 
       //SetPane(0,m_ptopview,false);
 
-      m_pview = create_view < ::user::font_list_view >(nullptr, get_pane_holder(1),"font_list_view");
+      m_pimpact = create_view < ::user::font_list_view >(nullptr, get_pane_holder(1),"font_list_view");
 
-      if(m_pview == nullptr)
+      if(m_pimpact == nullptr)
       {
 
          message_box(nullptr,"Could not create file list ::user::impact");
@@ -94,7 +94,7 @@ namespace video_capture
          if(pevent->m_puserinteraction->m_id == "switcher_toggle")
          {
 
-            __pointer(view) pview = m_pview;
+            __pointer(impact) pview = m_pimpact;
 
             pview->m_prender->m_bLite = !pview->m_prender->m_bLite;
 
@@ -102,17 +102,17 @@ namespace video_capture
          //else if(pevent->m_puserinteraction->m_id == "videocapture_toggle")
          //{
 
-         //   if(m_pview->m_prender->m_bLite && !papplication->m_bLoadAiFont)
+         //   if(m_pimpact->m_prender->m_bLite && !papplication->m_bLoadAiFont)
          //   {
 
          //      papplication->load_ai_font();
 
          //   }
 
-         //   m_pview->m_prender->m_bLite = !m_pview->m_prender->m_bLite;
+         //   m_pimpact->m_prender->m_bLite = !m_pimpact->m_prender->m_bLite;
 
 
-         //   m_pview->on_layout(::draw2d::graphics_pointer & pgraphics);
+         //   m_pimpact->on_layout(::draw2d::graphics_pointer & pgraphics);
 
          //}
 
@@ -120,13 +120,13 @@ namespace video_capture
       else if(pevent->m_eevent == ::user::e_event_after_change_cur_sel)
       {
 
-         if(m_pview == pevent->m_puserinteraction)
+         if(m_pimpact == pevent->m_puserinteraction)
          {
 
             if(GetTypedParent < pane_view >()->m_pviewLast != nullptr)
             {
 
-               string strFont = m_pview->get_cur_sel_face_name();
+               string strFont = m_pimpact->get_cur_sel_face_name();
 
                if(strFont.has_char())
                {

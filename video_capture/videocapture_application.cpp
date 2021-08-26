@@ -75,8 +75,8 @@ namespace video_capture
       create_factory <::video_capture::main_frame >();
       create_factory <::video_capture::edit_view >();
       create_factory <::user::button_view >();
-      create_factory <::video_capture::view >();
-      create_factory <::video_capture::main_view >();
+      create_factory <::video_capture::impact >();
+      create_factory <::video_capture::main_impact >();
       create_factory <::video_capture::pane_view >();
       create_factory <::video_capture::top_view >();
       create_factory <::video_capture::toggle_view >();
@@ -103,7 +103,7 @@ namespace video_capture
                           "main",
                           __type(document),
                           __type(frame),
-                          __type(main_view)));
+                          __type(main_impact)));
       add_document_template(pDocTemplate);
       
       m_ptemplateHelloMultiverseView = pDocTemplate;

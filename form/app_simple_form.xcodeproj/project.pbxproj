@@ -13,8 +13,8 @@
 		9A39EA62243364EC000FECDA /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA49243364EA000FECDA /* document.cpp */; };
 		9A39EA63243364EC000FECDA /* document.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A39EA4A243364EA000FECDA /* document.h */; };
 		9A39EA64243364EC000FECDA /* pane_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA4B243364EA000FECDA /* pane_view.cpp */; };
-		9A39EA65243364EC000FECDA /* view.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A39EA4C243364EA000FECDA /* view.h */; };
-		9A39EA66243364EC000FECDA /* main_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA4D243364EA000FECDA /* main_view.cpp */; };
+		9A39EA65243364EC000FECDA /* impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A39EA4C243364EA000FECDA /* impact.h */; };
+		9A39EA66243364EC000FECDA /* main_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA4D243364EA000FECDA /* main_impact.cpp */; };
 		9A39EA67243364EC000FECDA /* simple_form_001.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A39EA4E243364EA000FECDA /* simple_form_001.h */; };
 		9A39EA68243364EC000FECDA /* simple_form.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA4F243364EA000FECDA /* simple_form.cpp */; };
 		9A39EA6A243364EC000FECDA /* 001.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA51243364EA000FECDA /* 001.cpp */; };
@@ -27,8 +27,8 @@
 		9A39EA72243364EC000FECDA /* main_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A39EA59243364EB000FECDA /* main_frame.h */; };
 		9A39EA73243364EC000FECDA /* main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA5A243364EB000FECDA /* main_frame.cpp */; };
 		9A39EA74243364EC000FECDA /* simple_form_002.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A39EA5B243364EB000FECDA /* simple_form_002.h */; };
-		9A39EA76243364EC000FECDA /* view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA5D243364EB000FECDA /* view.cpp */; };
-		9A39EA77243364EC000FECDA /* main_view.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A39EA5E243364EB000FECDA /* main_view.h */; };
+		9A39EA76243364EC000FECDA /* impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA5D243364EB000FECDA /* impact.cpp */; };
+		9A39EA77243364EC000FECDA /* main_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A39EA5E243364EB000FECDA /* main_impact.h */; };
 		9A39EA7C24336531000FECDA /* wiosapp_core_beatmapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA7A2433652A000FECDA /* wiosapp_core_beatmapperTests.m */; };
 		9A415C102473939C00EF2BCD /* 001.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA51243364EA000FECDA /* 001.cpp */; };
 		9A415C112473939C00EF2BCD /* 002.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA56243364EB000FECDA /* 002.cpp */; };
@@ -36,10 +36,10 @@
 		9A415C132473939C00EF2BCD /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA49243364EA000FECDA /* document.cpp */; };
 		9A415C142473939C00EF2BCD /* frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA53243364EB000FECDA /* frame.cpp */; };
 		9A415C152473939C00EF2BCD /* main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA5A243364EB000FECDA /* main_frame.cpp */; };
-		9A415C162473939C00EF2BCD /* main_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA4D243364EA000FECDA /* main_view.cpp */; };
+		9A415C162473939C00EF2BCD /* main_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA4D243364EA000FECDA /* main_impact.cpp */; };
 		9A415C172473939C00EF2BCD /* pane_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA4B243364EA000FECDA /* pane_view.cpp */; };
 		9A415C182473939C00EF2BCD /* simple_form.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA4F243364EA000FECDA /* simple_form.cpp */; };
-		9A415C192473939C00EF2BCD /* view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA5D243364EB000FECDA /* view.cpp */; };
+		9A415C192473939C00EF2BCD /* impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA5D243364EB000FECDA /* impact.cpp */; };
 		9ACE47D61D2041A300A1E0AD /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACE47D51D2041A300A1E0AD /* libaura.dylib */; };
 		9AE24EA11904CFFD001AEFFB /* libapp_simple_form.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libapp_simple_form.a */; };
 		9AE24EA71904CFFD001AEFFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AE24EA51904CFFD001AEFFB /* InfoPlist.strings */; };
@@ -96,8 +96,8 @@
 		9A39EA49243364EA000FECDA /* document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = document.cpp; sourceTree = "<group>"; };
 		9A39EA4A243364EA000FECDA /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = document.h; sourceTree = "<group>"; };
 		9A39EA4B243364EA000FECDA /* pane_view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pane_view.cpp; sourceTree = "<group>"; };
-		9A39EA4C243364EA000FECDA /* view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = view.h; sourceTree = "<group>"; };
-		9A39EA4D243364EA000FECDA /* main_view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main_view.cpp; sourceTree = "<group>"; };
+		9A39EA4C243364EA000FECDA /* impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = impact.h; sourceTree = "<group>"; };
+		9A39EA4D243364EA000FECDA /* main_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main_impact.cpp; sourceTree = "<group>"; };
 		9A39EA4E243364EA000FECDA /* simple_form_001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = simple_form_001.h; sourceTree = "<group>"; };
 		9A39EA4F243364EA000FECDA /* simple_form.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simple_form.cpp; sourceTree = "<group>"; };
 		9A39EA51243364EA000FECDA /* 001.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 001.cpp; sourceTree = "<group>"; };
@@ -110,8 +110,8 @@
 		9A39EA59243364EB000FECDA /* main_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main_frame.h; sourceTree = "<group>"; };
 		9A39EA5A243364EB000FECDA /* main_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main_frame.cpp; sourceTree = "<group>"; };
 		9A39EA5B243364EB000FECDA /* simple_form_002.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = simple_form_002.h; sourceTree = "<group>"; };
-		9A39EA5D243364EB000FECDA /* view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = view.cpp; sourceTree = "<group>"; };
-		9A39EA5E243364EB000FECDA /* main_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main_view.h; sourceTree = "<group>"; };
+		9A39EA5D243364EB000FECDA /* impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = impact.cpp; sourceTree = "<group>"; };
+		9A39EA5E243364EB000FECDA /* main_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main_impact.h; sourceTree = "<group>"; };
 		9A39EA7A2433652A000FECDA /* wiosapp_core_beatmapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = wiosapp_core_beatmapperTests.m; path = wiosapp_core_simple_formTests/wiosapp_core_beatmapperTests.m; sourceTree = SOURCE_ROOT; };
 		9A8C49441F6069A8004A5BA4 /* libace.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libace.dylib; path = ../../../../Volumes/apple/archive/Xcode/DerivedData/Build/Products/Debug/libace.dylib; sourceTree = "<group>"; };
 		9A920FD71F3BF68500CD9D94 /* libcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore.dylib; path = ../../../../Volumes/apple/archive/Xcode/DerivedData/Build/Products/Debug/libcore.dylib; sourceTree = "<group>"; };
@@ -258,16 +258,16 @@
 				9A39EA52243364EB000FECDA /* frame.h */,
 				9A39EA5A243364EB000FECDA /* main_frame.cpp */,
 				9A39EA59243364EB000FECDA /* main_frame.h */,
-				9A39EA4D243364EA000FECDA /* main_view.cpp */,
-				9A39EA5E243364EB000FECDA /* main_view.h */,
+				9A39EA4D243364EA000FECDA /* main_impact.cpp */,
+				9A39EA5E243364EB000FECDA /* main_impact.h */,
 				9A39EA4B243364EA000FECDA /* pane_view.cpp */,
 				9A39EA48243364EA000FECDA /* pane_view.h */,
 				9A39EA4E243364EA000FECDA /* simple_form_001.h */,
 				9A39EA5B243364EB000FECDA /* simple_form_002.h */,
 				9A39EA4F243364EA000FECDA /* simple_form.cpp */,
 				9A39EA54243364EB000FECDA /* simple_form.h */,
-				9A39EA5D243364EB000FECDA /* view.cpp */,
-				9A39EA4C243364EA000FECDA /* view.h */,
+				9A39EA5D243364EB000FECDA /* impact.cpp */,
+				9A39EA4C243364EA000FECDA /* impact.h */,
 				9AEB75BE16F78E600085103B /* framework.cpp */,
 				9AEB75BF16F78E600085103B /* framework.h */,
 			);
@@ -287,9 +287,9 @@
 				9A39EA61243364EB000FECDA /* pane_view.h in Headers */,
 				9A39EA6D243364EC000FECDA /* simple_form.h in Headers */,
 				9A39EA63243364EC000FECDA /* document.h in Headers */,
-				9A39EA65243364EC000FECDA /* view.h in Headers */,
+				9A39EA65243364EC000FECDA /* impact.h in Headers */,
 				9A39EA71243364EC000FECDA /* application.h in Headers */,
-				9A39EA77243364EC000FECDA /* main_view.h in Headers */,
+				9A39EA77243364EC000FECDA /* main_impact.h in Headers */,
 				9A39EA67243364EC000FECDA /* simple_form_001.h in Headers */,
 				9A39EA74243364EC000FECDA /* simple_form_002.h in Headers */,
 				9A39EA72243364EC000FECDA /* main_frame.h in Headers */,
@@ -437,10 +437,10 @@
 				9A415C132473939C00EF2BCD /* document.cpp in Sources */,
 				9A415C142473939C00EF2BCD /* frame.cpp in Sources */,
 				9A415C152473939C00EF2BCD /* main_frame.cpp in Sources */,
-				9A415C162473939C00EF2BCD /* main_view.cpp in Sources */,
+				9A415C162473939C00EF2BCD /* main_impact.cpp in Sources */,
 				9A415C172473939C00EF2BCD /* pane_view.cpp in Sources */,
 				9A415C182473939C00EF2BCD /* simple_form.cpp in Sources */,
-				9A415C192473939C00EF2BCD /* view.cpp in Sources */,
+				9A415C192473939C00EF2BCD /* impact.cpp in Sources */,
 				07B65520190F3001002DAADE /* framework.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,10 +462,10 @@
 				9A39EA6F243364EC000FECDA /* 002.cpp in Sources */,
 				9A39EA62243364EC000FECDA /* document.cpp in Sources */,
 				9A39EA73243364EC000FECDA /* main_frame.cpp in Sources */,
-				9A39EA66243364EC000FECDA /* main_view.cpp in Sources */,
+				9A39EA66243364EC000FECDA /* main_impact.cpp in Sources */,
 				9A39EA6C243364EC000FECDA /* frame.cpp in Sources */,
 				9A39EA68243364EC000FECDA /* simple_form.cpp in Sources */,
-				9A39EA76243364EC000FECDA /* view.cpp in Sources */,
+				9A39EA76243364EC000FECDA /* impact.cpp in Sources */,
 				9A39EA60243364EB000FECDA /* application.cpp in Sources */,
 				9AEB75DD16F78E600085103B /* framework.cpp in Sources */,
 			);

@@ -137,13 +137,13 @@
     <ClInclude Include="frame.h" />
     <ClInclude Include="full_view.h" />
     <ClInclude Include="lite_view.h" />
-    <ClInclude Include="main_view.h" />
+    <ClInclude Include="main_impact.h" />
     <ClInclude Include="pane_view.h" />
 
     <ClInclude Include="switcher_view.h" />
     <ClInclude Include="toggle_view.h" />
     <ClInclude Include="top_view.h" />
-    <ClInclude Include="view.h" />
+    <ClInclude Include="impact.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="framework.cpp">
@@ -158,13 +158,13 @@
     <ClCompile Include="frame.cpp" />
     <ClCompile Include="full_view.cpp" />
     <ClCompile Include="lite_view.cpp" />
-    <ClCompile Include="main_view.cpp" />
+    <ClCompile Include="main_impact.cpp" />
     <ClCompile Include="pane_view.cpp" />
 
     <ClCompile Include="switcher_view.cpp" />
     <ClCompile Include="toggle_view.cpp" />
     <ClCompile Include="top_view.cpp" />
-    <ClCompile Include="view.cpp" />
+    <ClCompile Include="impact.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\source\app\aura\m_aura.vcxproj">
