@@ -4,12 +4,42 @@
     <None Include="uwp_app_simple_drawing_TemporaryKey.pfx">
       <Filter>UWP</Filter>
     </None>
-    <None Include="..\..\..\archive\storage-universal_windows\binary\Win32\basis\libeay32.dll" />
-    <None Include="..\..\..\archive\storage-universal_windows\binary\Win32\basis\ssleay32.dll" />
-    <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\bzip2.dll" />
-    <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\pcre.dll" />
-    <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\sqlite.dll" />
-    <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\zlib.dll" />
+    <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\bzip2.dll">
+      <Filter>Library\Win32\basis</Filter>
+    </None>
+    <None Include="..\..\..\archive\storage-universal_windows\binary\Win32\basis\libeay32.dll">
+      <Filter>Library\Win32\basis</Filter>
+    </None>
+    <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\pcre.dll">
+      <Filter>Library\Win32\basis</Filter>
+    </None>
+    <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\sqlite.dll">
+      <Filter>Library\Win32\basis</Filter>
+    </None>
+    <None Include="..\..\..\archive\storage-universal_windows\binary\Win32\basis\ssleay32.dll">
+      <Filter>Library\Win32\basis</Filter>
+    </None>
+    <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\zlib.dll">
+      <Filter>Library\Win32\basis</Filter>
+    </None>
+    <None Include="..\..\..\archive\storage-universal_windows\binary\x64\basis\libcrypto-1_1-x64.dll">
+      <Filter>Library\x64\basis</Filter>
+    </None>
+    <None Include="..\..\..\archive\storage-universal_windows\binary\x64\basis\libssl-1_1-x64.dll">
+      <Filter>Library\x64\basis</Filter>
+    </None>
+    <None Include="..\..\..\archive\storage-universal_windows\third\binary\x64\basis\bzip2.dll">
+      <Filter>Library\x64\basis</Filter>
+    </None>
+    <None Include="..\..\..\archive\storage-universal_windows\third\binary\x64\basis\pcre.dll">
+      <Filter>Library\x64\basis</Filter>
+    </None>
+    <None Include="..\..\..\archive\storage-universal_windows\third\binary\x64\basis\sqlite.dll">
+      <Filter>Library\x64\basis</Filter>
+    </None>
+    <None Include="..\..\..\archive\storage-universal_windows\third\binary\x64\basis\zlib.dll">
+      <Filter>Library\x64\basis</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Assets">
@@ -29,6 +59,15 @@
     </Filter>
     <Filter Include="UWP">
       <UniqueIdentifier>{505be0c3-4167-4a15-8ec8-dcd1ca3afcb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\x64">
+      <UniqueIdentifier>{0f379721-8c82-45ff-a67a-56da742ca32d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\x64\basis">
+      <UniqueIdentifier>{1f51e71f-2f0b-4d63-9c81-d36ecfb6bb64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\universal_windows">
+      <UniqueIdentifier>{c01a5280-469f-4039-9551-0c6c3d1c275c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -87,8 +126,19 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="universal_windows\_.cpp">
+    <ClCompile Include="universal_windows\main.cpp">
+      <Filter>Source Files\universal_windows</Filter>
+    </ClCompile>
+    <ClCompile Include="framework.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="_app.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

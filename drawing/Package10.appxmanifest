@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="app-simple.drawing" Publisher="CN=camilo" Version="1.1.18.0" />
+  <Identity Name="app-complex.drawing" Publisher="CN=camilo" Version="1.1.18.0" />
   <mp:PhoneIdentity PhoneProductId="1e4c7cd3-fcc2-44e7-9e13-eb7aacb60680" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>Beat Mapper!!</DisplayName>
+    <DisplayName>Complex Drawing!!</DisplayName>
     <PublisherDisplayName>Camilo</PublisherDisplayName>
     <Logo>assets\Square50.png</Logo>
   </Properties>
@@ -14,8 +14,8 @@
     <Resource Language="x-generate" />
   </Resources>
   <Applications>
-    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="SimpleDrawing.SimpleDrawing">
-      <uap:VisualElements DisplayName="SimpleDrawing" Square150x150Logo="Assets\Square150.png" Square44x44Logo="Assets\Square44.png" Description="Simple Drawing" BackgroundColor="transparent">
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="ComplexDrawing.ComplexDrawing">
+      <uap:VisualElements DisplayName="ComplexDrawing" Square150x150Logo="Assets\Square150.png" Square44x44Logo="Assets\Square44.png" Description="Complex Drawing" BackgroundColor="transparent">
         <uap:LockScreen Notification="badge" BadgeLogo="assets\Square24.png" />
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150.png" ShortName="Beat Mapper!!" Square310x310Logo="assets\Square310.png" Square71x71Logo="Assets\Square71.png">
           <uap:ShowNameOnTiles>

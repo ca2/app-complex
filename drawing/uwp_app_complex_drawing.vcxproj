@@ -162,7 +162,7 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)local/include;$(__archive)third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include;$(__archive)third-windows/third/include;$(__archive)third-windows/thirdparty/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include/;;$(__archive)local/include;$(SolutionDir)../../nodelfs/$(PlatformName)/include;$(SolutionDir)../../platform-universal_windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)local/include;$(__archive)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__archive)third-universal_windows/include;$(__archive)third-universal_windows/third/include;$(__archive)third-universal_windows/third/include/include;$(SolutionDir)../../../archive/platform-universal_windows/_include;$(SolutionDir)../../../archive/platform-universal_windows;$(SolutionDir)../../../archive/platform-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/third/include;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -202,7 +202,7 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)local/include;$(__archive)third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include;$(__archive)third-windows/third/include;$(__archive)third-windows/thirdparty/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include/;;$(__archive)local/include;$(SolutionDir)../../nodelfs/$(PlatformName)/include;$(SolutionDir)../../platform-universal_windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)local/include;$(__archive)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__archive)third-universal_windows/include;$(__archive)third-universal_windows/third/include;$(__archive)third-universal_windows/third/include/include;$(SolutionDir)../../../archive/platform-universal_windows/_include;$(SolutionDir)../../../archive/platform-universal_windows;$(SolutionDir)../../../archive/platform-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/third/include;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -241,7 +241,7 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)local/include;$(__archive)third-windows/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include;$(__archive)third-windows/third/include;$(__archive)third-windows/thirdparty/$(PlatformName)/$(Configuration)/include;$(__archive)third-windows/include/;;$(__archive)local/include;$(SolutionDir)../../nodelfs/$(PlatformName)/include;$(SolutionDir)../../platform-universal_windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)local/include;$(__archive)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__archive)third-universal_windows/include;$(__archive)third-universal_windows/third/include;$(__archive)third-universal_windows/third/include/include;$(SolutionDir)../../../archive/platform-universal_windows/_include;$(SolutionDir)../../../archive/platform-universal_windows;$(SolutionDir)../../../archive/platform-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/third/include;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -258,21 +258,171 @@
   <ItemGroup>
     <None Include="..\..\..\archive\storage-universal_windows\binary\Win32\basis\libeay32.dll">
       <DeploymentContent>true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|x64'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|x64'">false</DeploymentContent>
     </None>
     <None Include="..\..\..\archive\storage-universal_windows\binary\Win32\basis\ssleay32.dll">
       <DeploymentContent>true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|x64'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|x64'">false</DeploymentContent>
+    </None>
+    <None Include="..\..\..\archive\storage-universal_windows\binary\x64\basis\libcrypto-1_1-x64.dll">
+      <DeploymentContent>true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|x64'">false</DeploymentContent>
+    </None>
+    <None Include="..\..\..\archive\storage-universal_windows\binary\x64\basis\libssl-1_1-x64.dll">
+      <DeploymentContent>true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|x64'">false</DeploymentContent>
     </None>
     <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\bzip2.dll">
       <DeploymentContent>true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|x64'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|x64'">false</DeploymentContent>
     </None>
     <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\pcre.dll">
       <DeploymentContent>true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|x64'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|x64'">false</DeploymentContent>
     </None>
     <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\sqlite.dll">
       <DeploymentContent>true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|x64'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|x64'">false</DeploymentContent>
     </None>
     <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\zlib.dll">
       <DeploymentContent>true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|x64'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|x64'">false</DeploymentContent>
+    </None>
+    <None Include="..\..\..\archive\storage-universal_windows\third\binary\x64\basis\bzip2.dll">
+      <DeploymentContent>true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|x64'">false</DeploymentContent>
+    </None>
+    <None Include="..\..\..\archive\storage-universal_windows\third\binary\x64\basis\pcre.dll">
+      <DeploymentContent>true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|x64'">false</DeploymentContent>
+    </None>
+    <None Include="..\..\..\archive\storage-universal_windows\third\binary\x64\basis\sqlite.dll">
+      <DeploymentContent>true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|x64'">false</DeploymentContent>
+    </None>
+    <None Include="..\..\..\archive\storage-universal_windows\third\binary\x64\basis\zlib.dll">
+      <DeploymentContent>true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|x64'">false</DeploymentContent>
     </None>
     <None Include="uwp_app_simple_drawing_TemporaryKey.pfx" />
   </ItemGroup>
@@ -316,24 +466,92 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\source\app\aura\w_aura.vcxproj">
-      <Project>{b3e5b8e7-9e3b-44dd-9ede-e0a74d52c1c5}</Project>
+    <ClCompile Include="framework.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="universal_windows\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\archive\platform-universal_windows\aura_universal_windows\u_aura_universal_windows.vcxproj">
+      <Project>{05c4cf3f-fcb7-4017-a39b-1a03158ec0f3}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\source\app\draw2d_direct2d\w_draw2d_direct2d.vcxproj">
+    <ProjectReference Include="..\..\..\archive\platform-universal_windows\node_universal_windows\u_node_universal_windows.vcxproj">
+      <Project>{6e17ec26-b5fa-4cdd-a944-c880c4b90c7d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\archive\platform-universal_windows\windowing_universal_windows\u_windowing_universal_windows.vcxproj">
+      <Project>{14fd1464-37de-419c-9584-b35afd6ba322}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\archive\platform-windows_common\apex_windows_common\u_apex_windows_common.vcxproj">
+      <Project>{9b59539c-abd7-4ff5-a64b-521813534736}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\archive\platform-windows_common\aura_windows_common\u_aura_windows_common.vcxproj">
+      <Project>{e256890d-cf1e-420b-b1f9-8c88434ca1c1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\archive\platform-windows_common\directx\u_directx.vcxproj">
+      <Project>{134d39e3-ed4c-4b2f-bc9c-e56db236747d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\archive\platform-windows_common\draw2d_direct2d\u_draw2d_direct2d.vcxproj">
+      <Project>{e5945dd0-328c-4e97-a0dd-97e608e96db1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\archive\platform-windows_common\write_text_direct2d\u_write_text_direct2d.vcxproj">
+      <Project>{e90b52b8-ab16-4d55-87d6-cf2389746776}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\app\core\u_core.vcxproj">
+      <Project>{65070f1f-14db-474e-96de-cb920740dcc4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\app\database_sqlite3\u_database_sqlite3.vcxproj">
       <Project>{ba9bff50-1888-4722-8dee-73a3b5b32bcb}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\source\app\experience_lite\u_experience_lite.vcxproj">
-      <Project>{b2d7833b-9b59-4826-bbdf-c270a2115e86}</Project>
+    <ProjectReference Include="R:\basis\archive\platform-universal_windows\acme_universal_windows\u_acme_universal_windows.vcxproj">
+      <Project>{7d2387eb-a3de-4ea5-b061-48a856dd7211}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\source\app\wic_imaging\u_wic_imaging.vcxproj">
+    <ProjectReference Include="R:\basis\archive\platform-universal_windows\apex_universal_windows\u_apex_universal_windows.vcxproj">
+      <Project>{699c5c28-fe00-4e04-91ee-47d857588020}</Project>
+    </ProjectReference>
+    <ProjectReference Include="R:\basis\archive\platform-windows_common\acme_windows_common\u_acme_windows_common.vcxproj">
+      <Project>{4a44d9ca-a46e-4bb3-8ad5-8bcace5228ce}</Project>
+    </ProjectReference>
+    <ProjectReference Include="R:\basis\archive\platform-windows_common\direct2d\u_direct2d.vcxproj">
+      <Project>{91608259-0b1f-4deb-a867-873618075395}</Project>
+    </ProjectReference>
+    <ProjectReference Include="R:\basis\archive\platform-windows_common\imaging_wic\u_imaging_wic.vcxproj">
       <Project>{b3a245f9-c92f-4487-aef7-cb0531f665bd}</Project>
     </ProjectReference>
-    <ProjectReference Include="u_app_simple_drawing.vcxproj">
+    <ProjectReference Include="R:\basis\source\app-simple\drawing\u_app_simple_drawing.vcxproj">
       <Project>{cac77a44-c0fa-49ed-8373-1e101f53d2d6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="R:\basis\source\app\acme\u_acme.vcxproj">
+      <Project>{74a3ea71-9358-4441-a0cc-d5771df8dfbd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="R:\basis\source\app\apex\u_apex.vcxproj">
+      <Project>{b86508de-6e32-42ac-b45c-08bf0932dcf8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="R:\basis\source\app\aqua\u_aqua.vcxproj">
+      <Project>{d6fc3dc0-a19a-4f63-a3f1-3426fe53920b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="R:\basis\source\app\aura\u_aura.vcxproj">
+      <Project>{b3b6a9d8-7776-434e-8e3b-d2696632df39}</Project>
+    </ProjectReference>
+    <ProjectReference Include="R:\basis\source\app\axis\u_axis.vcxproj">
+      <Project>{0412ea6f-50d0-4baa-99e3-ac14fc63a879}</Project>
+    </ProjectReference>
+    <ProjectReference Include="R:\basis\source\app\base\u_base.vcxproj">
+      <Project>{0680a465-39a7-4e1b-8dc1-0607a3243ea2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="R:\basis\source\app\bred\u_bred.vcxproj">
+      <Project>{08c317fc-6ee8-4371-84cb-18150e439021}</Project>
+    </ProjectReference>
+    <ProjectReference Include="R:\basis\source\app\experience_core\u_experience_core.vcxproj">
+      <Project>{b2d7833b-9b59-4826-bbdf-c270a2115e86}</Project>
+    </ProjectReference>
+    <ProjectReference Include="u_app_complex_drawing.vcxproj">
+      <Project>{d0f0d410-ac70-44bb-8fe0-a31d83f6db6c}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="universal_windows\_.cpp" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="_app.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
