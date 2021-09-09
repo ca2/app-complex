@@ -41,7 +41,7 @@ namespace simple_shader
       if(!bCheckOk)
       {
        
-         message_box("simple_check_box is not ok");
+         output_message_box_error("simple_check_box is not ok");
          
       }
       

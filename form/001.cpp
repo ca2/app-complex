@@ -133,7 +133,7 @@ namespace simple_form
 
             m_pedit->_001GetText(strText);
 
-            message_box("send_button clicked\nText: " + strText);
+            output_message_box_error("send_button clicked\nText: " + strText);
 
             pevent->m_bRet = true;
 
