@@ -40,6 +40,7 @@
     <None Include="..\..\..\archive\storage-universal_windows\third\binary\x64\basis\zlib.dll">
       <Filter>Library\x64\basis</Filter>
     </None>
+    <None Include="uwp_app_complex_drawing_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Assets">

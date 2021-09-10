@@ -84,7 +84,7 @@ namespace video_capture
    void gcom::on_subject(::subject::subject * psubject, ::subject::context * pcontext)
    {
 
-      UNREFERENCED_PARAMETER(psubject);
+      __UNREFERENCED_PARAMETER(psubject);
 
    }
 

@@ -84,7 +84,7 @@ namespace video_capture
          //}
 
       }
-      UNREFERENCED_PARAMETER(psubject);
+      __UNREFERENCED_PARAMETER(psubject);
    }
 
 

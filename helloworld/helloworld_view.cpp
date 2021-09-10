@@ -62,9 +62,9 @@ namespace helloworld
    void impact::on_update(::user::impact * pimpact, ::user::e_update eupdate, ::object * pobject)
    {
 
-      UNREFERENCED_PARAMETER(pSender);
-      UNREFERENCED_PARAMETER(lHint);
-      UNREFERENCED_PARAMETER(psubject);
+      __UNREFERENCED_PARAMETER(pSender);
+      __UNREFERENCED_PARAMETER(lHint);
+      __UNREFERENCED_PARAMETER(psubject);
 
    }
 

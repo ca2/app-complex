@@ -37,7 +37,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="u_app_core_complex_drawing.def">
+    <None Include="u_app_complex_drawing.def">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
