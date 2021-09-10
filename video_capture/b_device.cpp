@@ -798,9 +798,9 @@ void TransformImage_YUY2(
       {
          // Byte order is U0 Y0 V0 Y1
 
-         int y0 = (int)LOBYTE(pSrcPel[x]);
+         int y0 = (int)__LOBYTE(pSrcPel[x]);
          int u0 = (int)HIBYTE(pSrcPel[x]);
-         int y1 = (int)LOBYTE(pSrcPel[x + 1]);
+         int y1 = (int)__LOBYTE(pSrcPel[x + 1]);
          int v0 = (int)HIBYTE(pSrcPel[x + 1]);
 
          pDestPel[x] = ConvertYCrCbToRGB(y0, v0, u0);
