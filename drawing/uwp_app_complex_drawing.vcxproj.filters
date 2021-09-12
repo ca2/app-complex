@@ -7,16 +7,10 @@
     <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\bzip2.dll">
       <Filter>Library\Win32\basis</Filter>
     </None>
-    <None Include="..\..\..\archive\storage-universal_windows\binary\Win32\basis\libeay32.dll">
-      <Filter>Library\Win32\basis</Filter>
-    </None>
     <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\pcre.dll">
       <Filter>Library\Win32\basis</Filter>
     </None>
     <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\sqlite.dll">
-      <Filter>Library\Win32\basis</Filter>
-    </None>
-    <None Include="..\..\..\archive\storage-universal_windows\binary\Win32\basis\ssleay32.dll">
       <Filter>Library\Win32\basis</Filter>
     </None>
     <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\zlib.dll">
@@ -41,6 +35,12 @@
       <Filter>Library\x64\basis</Filter>
     </None>
     <None Include="uwp_app_complex_drawing_TemporaryKey.pfx" />
+    <None Include="..\..\..\archive\storage-universal_windows\binary\Win32\basis\libcrypto-1_1.dll">
+      <Filter>Library\Win32\basis</Filter>
+    </None>
+    <None Include="..\..\..\archive\storage-universal_windows\binary\Win32\basis\libssl-1_1.dll">
+      <Filter>Library\Win32\basis</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Assets">
