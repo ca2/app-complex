@@ -158,7 +158,7 @@ namespace simple_form
 
             strData = m_pcombobox->get_current_item_string_value();
 
-            output_message_box_error("<h1>send_button clicked</h1><h2>Text: " + strText + "</h2><h2>Data: " + strData+"</h2>");
+            output_error_message("<h1>send_button clicked</h1><h2>Text: " + strText + "</h2><h2>Data: " + strData+"</h2>");
 
          }
 

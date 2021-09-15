@@ -114,7 +114,7 @@ namespace simple_form
       if (pcreate->m_pcommandline->m_varQuery.has_property("m"))
       {
 
-         output_message_box_error("m=1");
+         output_error_message("m=1");
 
          set_finish();
 
