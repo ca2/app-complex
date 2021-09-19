@@ -40,7 +40,7 @@ namespace video_capture
    }
 
 
-   void edit_view::on_subject(::subject::subject * psubject, ::subject::context * pcontext)
+   void edit_view::handle(::subject * psubject, ::context * pcontext)
    {
 
    }

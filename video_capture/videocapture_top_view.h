@@ -25,7 +25,7 @@ namespace video_capture
 
       void on_create_split_impact();
 
-      virtual void on_subject(::subject::subject * psubject, ::subject::context * pcontext) override;
+      virtual void handle(::subject * psubject, ::context * pcontext) override;
 
       //bool is_this_visible(::user::enum_layout elayout = ::user::e_layout_design) override;
 

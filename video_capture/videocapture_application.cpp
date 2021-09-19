@@ -3,7 +3,7 @@
 //void throw_a_::exception::exception_through_one_single_function_boundary(string str)
 //{
 //
-//   __throw(::exception::exception(str + " this is also a very artificial simple exception to test if exception can be safely thrown and caught at this environment (in this specific case: Android)... but across a single function boundary (thrown in function, should be caught in caller...) ..."));
+//   __throw(::exception(str + " this is also a very artificial simple exception to test if exception can be safely thrown and caught at this environment (in this specific case: Android)... but across a single function boundary (thrown in function, should be caught in caller...) ..."));
 //
 //}
 

@@ -141,13 +141,13 @@ namespace simple_form
    }
 
 
-   void simple_form_002::on_control_event(::user::control_event * pevent)
+   void simple_form_002::handle(::subject * psubject, ::context * pcontext)
    {
 
-      if (pevent->m_eevent == ::user::e_event_click)
+      if (psubject->m_id == ::e_subject_click)
       {
 
-         if (pevent->m_id == "send_button")
+         if (psubject->m_puserelement->m_id == "send_button")
          {
 
             string strText;

@@ -279,12 +279,12 @@ struct DShowInput {
 
 		//semaphore = CreateSemaphore(nullptr, 0, 0x7FFFFFFF, nullptr);
 		//if (!semaphore)
-		//	__throw(::exception::exception("Failed to create semaphore"));
+		//	__throw(::exception("Failed to create semaphore"));
 
 		//thread = CreateThread(nullptr, 0, DShowThread, this, 0,
 		//		nullptr);
 		//if (!thread)
-		//	__throw(::exception::exception("Failed to create thread"));
+		//	__throw(::exception("Failed to create thread"));
 
 		if (settings->aura_data_get_int("active")) {
 			QueueAction(Action::Activate);

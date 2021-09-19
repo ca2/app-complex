@@ -37,7 +37,7 @@ namespace video_capture
       virtual void install_message_routing(::channel * pchannel);
 
 
-      virtual void on_subject(::subject::subject * psubject, ::subject::context * pcontext) override;
+      virtual void handle(::subject * psubject, ::context * pcontext) override;
 
       ::user::document * get_document();
 

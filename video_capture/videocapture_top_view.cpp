@@ -34,9 +34,9 @@ namespace video_capture
    }
 
 
-   void top_view::on_subject(::subject::subject * psubject, ::subject::context * pcontext)
+   void top_view::handle(::subject * psubject, ::context * pcontext)
    {
-      ::user::split_view::on_subject(psubject, pcontext);
+      ::user::split_view::handle(psubject, pcontext);
    }
 
 

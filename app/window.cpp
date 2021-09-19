@@ -56,7 +56,7 @@ namespace simple_app
 
       auto pstyle = get_style(pgraphics);
 
-      auto colorBackground = get_color(pstyle, ::user::e_element_background);
+      auto colorBackground = get_color(pstyle, ::e_element_background);
 
       pgraphics->fill_rectangle(rectangleClient, argb(127, 255, 255, 255));
       

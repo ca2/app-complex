@@ -37,9 +37,9 @@ namespace video_capture
    }
 
 
-   void switcher_view::on_subject(::subject::subject * psubject, ::subject::context * pcontext)
+   void switcher_view::handle(::subject * psubject, ::context * pcontext)
    {
-      ::user::split_view::on_subject(psubject, pcontext);
+      ::user::split_view::handle(psubject, pcontext);
    }
 
 
@@ -89,13 +89,13 @@ namespace video_capture
 
 
 
-   void switcher_view::on_control_event(::user::control_event * pevent)
+   void switcher_view::handle(::subject * psubject, ::context * pcontext)
    {
 
-      if(pevent->m_eevent == ::user::e_event_click)
+      if(psubject->m_id == ::e_subject_click)
       {
 
-         if(pevent->m_puserinteraction->m_id == "switcher_toggle")
+         if(psubject->m_puserinteraction->m_id == "switcher_toggle")
          {
 
             __pointer(impact) pview = m_pimpact;
@@ -103,7 +103,7 @@ namespace video_capture
             pview->m_prender->m_bLite = !pview->m_prender->m_bLite;
 
          }
-         else if(pevent->m_puserinteraction->m_id == "videocapture_toggle")
+         else if(psubject->m_puserinteraction->m_id == "videocapture_toggle")
          {
 
             if(m_pimpact->m_prender->m_bLite && !papplication->m_bLoadAiFont)

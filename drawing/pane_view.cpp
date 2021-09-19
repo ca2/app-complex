@@ -129,11 +129,11 @@ namespace complex_drawing
    }
 
 
-   void pane_view::on_subject(::subject::subject * psubject, ::subject::context * pcontext)
+   void pane_view::handle(::subject * psubject, ::context * pcontext)
    {
 
 
-      ::userex::pane_tab_view::on_subject(psubject, pcontext);
+      ::userex::pane_tab_view::handle(psubject, pcontext);
 
    }
 
@@ -237,18 +237,18 @@ namespace complex_drawing
    }
 
 
-   void pane_view::on_control_event(::user::control_event* pevent)
+   void pane_view::handle(::subject * psubject, ::context * pcontext)
    {
 
-      if (pevent->m_puserinteraction == m_pcolorview)
+      if (psubject->m_puserinteraction == m_pcolorview)
       {
 
-         if (pevent->m_eevent == ::user::e_event_after_change_cur_sel || pevent->m_eevent == ::user::e_event_after_change_cur_hover)
+         if (psubject->m_id == ::e_subject_after_change_cur_sel || psubject->m_id == ::e_subject_after_change_cur_hover)
          {
 
             m_pcolorview->get_color().get_hls(m_pviewTopic->m_prender->m_hlsText);
 
-            if (pevent->m_eevent == ::user::e_event_after_change_cur_sel)
+            if (psubject->m_id == ::e_subject_after_change_cur_sel)
             {
 
                string strId;
@@ -272,10 +272,10 @@ namespace complex_drawing
          }
 
       }
-      else if (pevent->m_id == impact_font_sel)
+      else if (psubject->m_puserelement->m_id == impact_font_sel)
       {
 
-         if (pevent->m_eevent == ::user::e_event_after_change_cur_sel)
+         if (psubject->m_id == ::e_subject_after_change_cur_sel)
          {
 
             string strFont = m_pfontview->m_pimpact->get_cur_sel_face_name();
@@ -283,7 +283,7 @@ namespace complex_drawing
             m_pviewTopic->m_prender->set_font(strFont);
 
          }
-         else if (pevent->m_eevent == ::user::e_event_after_change_cur_hover)
+         else if (psubject->m_id == ::e_subject_after_change_cur_hover)
          {
 
             string strFont = m_pfontview->m_pimpact->get_cur_hover_face_name();

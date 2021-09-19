@@ -195,29 +195,29 @@ namespace simple_os_drag_and_drop
    bool tab_view::BaseOnControlEvent(::user::form_window * pview,::user::control_event * pevent)
    {
 
-      if(m_pdocMenu != nullptr && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0) && pevent->m_puserinteraction != nullptr)
+      if(m_pdocMenu != nullptr && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0) && psubject->m_puserinteraction != nullptr)
       {
 
-         if(pevent->m_eevent == ::user::e_event_after_change_text)
+         if(psubject->m_id == ::e_subject_after_change_text)
          {
 
 
          }
-         else if (pevent->m_eevent == ::user::e_event_set_check && pevent->m_puserinteraction != nullptr)
+         else if (psubject->m_id == ::e_subject_set_check && psubject->m_puserinteraction != nullptr)
          {
 
-            string strCheck = pevent->m_puserinteraction->m_id;
+            string strCheck = psubject->m_puserinteraction->m_id;
 
 
             if (::str::begins_eat_ci(strCheck, "bilbo"))
             {
 
-               if (pevent->m_puserinteraction != nullptr && pevent->m_actioncontext.is_user_source())
+               if (psubject->m_puserinteraction != nullptr && psubject->m_actioncontext.is_user_source())
                {
 
                   //int iCheck = atoi(strCheck);
 
-                  //__pointer(::user::check) pcheck = pevent->m_puserinteraction;
+                  //__pointer(::user::check) pcheck = psubject->m_puserinteraction;
 
                }
 
@@ -232,7 +232,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void tab_view::on_subject(::subject::subject * psubject, ::subject::context * pcontext)
+   void tab_view::handle(::subject * psubject, ::context * pcontext)
    {
 
       ////__update(::update)
@@ -243,13 +243,13 @@ namespace simple_os_drag_and_drop
       //         && m_pviewTopic != nullptr)
       //   {
 
-      //      if(pupdate->m_pcontrolevent->m_eevent == ::user::e_event_after_change_cur_sel)
+      //      if(pupdate->m_pcontrolevent->m_eevent == ::e_subject_after_change_cur_sel)
       //      {
 
       //         string strFont = m_pfontview->m_pimpact->get_cur_sel_face_name();
 
       //      }
-      //      else if (pupdate->m_pcontrolevent->m_eevent == ::user::e_event_after_change_cur_hover)
+      //      else if (pupdate->m_pcontrolevent->m_eevent == ::e_subject_after_change_cur_hover)
       //      {
 
       //         string strFont = m_pfontview->m_pimpact->get_cur_hover_face_name();
@@ -260,8 +260,8 @@ namespace simple_os_drag_and_drop
 
       //}
 
-//      ::userex::pane_tab_view::on_subject(psubject, pcontext);
-      ::user::tab_view::on_subject(psubject, pcontext);
+//      ::userex::pane_tab_view::handle(psubject, pcontext);
+      ::user::tab_view::handle(psubject, pcontext);
 
    }
 

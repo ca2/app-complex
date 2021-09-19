@@ -25,9 +25,9 @@ namespace video_capture
 
       void on_create_split_impact();
 
-      virtual void on_subject(::subject::subject * psubject, ::subject::context * pcontext) override;
+      virtual void handle(::subject * psubject, ::context * pcontext) override;
 
-      virtual void on_control_event(::user::control_event * pevent);
+      virtual void handle(::subject * psubject, ::context * pcontext);
 
 
    };

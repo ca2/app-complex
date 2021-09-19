@@ -28,10 +28,10 @@ namespace video_capture
    }
 
 
-   void toggle_view::on_subject(::subject::subject * psubject, ::subject::context * pcontext)
+   void toggle_view::handle(::subject * psubject, ::context * pcontext)
    {
 
-      ::user::impact::on_subject(psubject, pcontext);
+      ::user::impact::handle(psubject, pcontext);
 
    }
 
