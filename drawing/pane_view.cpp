@@ -118,7 +118,7 @@ namespace complex_drawing
       case MENU_IMPACT:
       {
 
-         ::user::impact::create_view < ::user::menu_list_view >(pimpactdata);
+         //::user::impact::create_view < ::user::menu_list_view >(pimpactdata);
 
       }
       break;
@@ -131,6 +131,72 @@ namespace complex_drawing
 
    void pane_view::handle(::subject * psubject, ::context * pcontext)
    {
+
+      if (psubject->user_interaction() == m_pcolorview)
+      {
+
+         if (psubject->m_id == ::e_subject_after_change_cur_sel || psubject->m_id == ::e_subject_after_change_cur_hover)
+         {
+
+            m_pcolorview->get_color().get_hls(m_pviewTopic->m_prender->m_hlsText);
+
+            if (psubject->m_id == ::e_subject_after_change_cur_sel)
+            {
+
+               string strId;
+
+               strId = m_pviewTopic->m_id + ".color";
+
+               auto pdocument = m_pviewTopic->get_document();
+
+               pdocument->payload(strId) = m_pviewTopic->m_prender->m_hlsText;
+
+               ::output_debug_string("\n\nSIMPLE_DRAWING::PANE_VIEW::" + strId + "\n\n");
+
+               auto papplication = get_application();
+
+               papplication->data_set(strId, m_pviewTopic->m_prender->m_hlsText);
+
+            }
+
+            m_pviewTopic->set_need_redraw();
+
+         }
+
+      }
+      else if (psubject->m_puserelement->m_id == impact_font_sel)
+      {
+
+         if (psubject->m_id == ::e_subject_after_change_cur_sel)
+         {
+
+            string strFont = m_pfontview->m_pimpact->get_cur_sel_face_name();
+
+            m_pviewTopic->m_prender->set_font(strFont);
+
+         }
+         else if (psubject->m_id == ::e_subject_after_change_cur_hover)
+         {
+
+            string strFont = m_pfontview->m_pimpact->get_cur_hover_face_name();
+
+            if (strFont.has_char())
+            {
+
+               auto papplication = get_application();
+
+               if (papplication->m_pstrHoverFontFamilyName)
+               {
+
+                  *papplication->m_pstrHoverFontFamilyName = strFont;
+
+               }
+
+            }
+
+         }
+
+      }
 
 
       ::userex::pane_tab_view::handle(psubject, pcontext);
@@ -149,21 +215,21 @@ namespace complex_drawing
 
       stra.explode("->:<-", strId);
 
-      if (get_view_id() == MENU_IMPACT)
-      {
+      //if (get_view_id() == MENU_IMPACT)
+      //{
 
-         __pointer(::user::menu_list_view) pmenuview = get_view_uie();
+      //   __pointer(::user::menu_list_view) pmenuview = get_view_uie();
 
-         pmenuview->destroy_menu();
+      //   pmenuview->destroy_menu();
 
-         if (pmenuview->load_xml_menu("matter://simple_menu.xml"))
-         {
+      //   if (pmenuview->load_xml_menu("matter://simple_menu.xml"))
+      //   {
 
-            pmenuview->create_inline_menu(this, m_pimpactdata->m_pplaceholder);
+      //      pmenuview->create_inline_menu(this, m_pimpactdata->m_pplaceholder);
 
-         }
+      //   }
 
-      }
+      //}
 
       if (::str::begins(get_view_id().to_string(), "drawing"))
       {
@@ -237,76 +303,76 @@ namespace complex_drawing
    }
 
 
-   void pane_view::handle(::subject * psubject, ::context * pcontext)
-   {
+   //void pane_view::handle(::subject * psubject, ::context * pcontext)
+   //{
 
-      if (psubject->m_puserinteraction == m_pcolorview)
-      {
+   //   if (psubject->m_puserinteraction == m_pcolorview)
+   //   {
 
-         if (psubject->m_id == ::e_subject_after_change_cur_sel || psubject->m_id == ::e_subject_after_change_cur_hover)
-         {
+   //      if (psubject->m_id == ::e_subject_after_change_cur_sel || psubject->m_id == ::e_subject_after_change_cur_hover)
+   //      {
 
-            m_pcolorview->get_color().get_hls(m_pviewTopic->m_prender->m_hlsText);
+   //         m_pcolorview->get_color().get_hls(m_pviewTopic->m_prender->m_hlsText);
 
-            if (psubject->m_id == ::e_subject_after_change_cur_sel)
-            {
+   //         if (psubject->m_id == ::e_subject_after_change_cur_sel)
+   //         {
 
-               string strId;
+   //            string strId;
 
-               strId = m_pviewTopic->m_id + ".color";
+   //            strId = m_pviewTopic->m_id + ".color";
 
-               auto pdocument = m_pviewTopic->get_document();
+   //            auto pdocument = m_pviewTopic->get_document();
 
-               pdocument->payload(strId) = m_pviewTopic->m_prender->m_hlsText;
+   //            pdocument->payload(strId) = m_pviewTopic->m_prender->m_hlsText;
 
-               ::output_debug_string("\n\nSIMPLE_DRAWING::PANE_VIEW::" + strId + "\n\n");
+   //            ::output_debug_string("\n\nSIMPLE_DRAWING::PANE_VIEW::" + strId + "\n\n");
 
-               auto papplication = get_application();
+   //            auto papplication = get_application();
 
-               papplication->data_set(strId, m_pviewTopic->m_prender->m_hlsText);
+   //            papplication->data_set(strId, m_pviewTopic->m_prender->m_hlsText);
 
-            }
+   //         }
 
-            m_pviewTopic->set_need_redraw();
+   //         m_pviewTopic->set_need_redraw();
 
-         }
+   //      }
 
-      }
-      else if (psubject->m_puserelement->m_id == impact_font_sel)
-      {
+   //   }
+   //   else if (psubject->m_puserelement->m_id == impact_font_sel)
+   //   {
 
-         if (psubject->m_id == ::e_subject_after_change_cur_sel)
-         {
+   //      if (psubject->m_id == ::e_subject_after_change_cur_sel)
+   //      {
 
-            string strFont = m_pfontview->m_pimpact->get_cur_sel_face_name();
+   //         string strFont = m_pfontview->m_pimpact->get_cur_sel_face_name();
 
-            m_pviewTopic->m_prender->set_font(strFont);
+   //         m_pviewTopic->m_prender->set_font(strFont);
 
-         }
-         else if (psubject->m_id == ::e_subject_after_change_cur_hover)
-         {
+   //      }
+   //      else if (psubject->m_id == ::e_subject_after_change_cur_hover)
+   //      {
 
-            string strFont = m_pfontview->m_pimpact->get_cur_hover_face_name();
-            
-            if (strFont.has_char())
-            {
+   //         string strFont = m_pfontview->m_pimpact->get_cur_hover_face_name();
+   //         
+   //         if (strFont.has_char())
+   //         {
 
-               auto papplication = get_application();
+   //            auto papplication = get_application();
 
-               if (papplication->m_pstrHoverFontFamilyName)
-               {
+   //            if (papplication->m_pstrHoverFontFamilyName)
+   //            {
 
-                  *papplication->m_pstrHoverFontFamilyName = strFont;
+   //               *papplication->m_pstrHoverFontFamilyName = strFont;
 
-               }
+   //            }
 
-            }
+   //         }
 
-         }
+   //      }
 
-      }
+   //   }
 
-   }
+   //}
 
 
 } // namespace complex_drawing
