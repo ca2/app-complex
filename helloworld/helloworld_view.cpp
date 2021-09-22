@@ -78,7 +78,7 @@ namespace helloworld
 
       ::write_text::font_pointer font(this_create);
 
-      font->create_point_font(pnode->font_name(e_font_sans), minimum(rectangleClient.height() / 5.0, rectangleClient.width() / 10.0), 800);
+      pfont->create_point_font(pnode->font_name(e_font_sans), minimum(rectangleClient.height() / 5.0, rectangleClient.width() / 10.0), 800);
 
       pgraphics->SelectObject(font);
 

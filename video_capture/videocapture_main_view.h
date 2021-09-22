@@ -27,7 +27,7 @@ namespace video_capture
 
       virtual void handle(::subject * psubject, ::context * pcontext) override;
 
-      virtual void handle(::subject * psubject, ::context * pcontext);
+      //virtual void handle(::subject * psubject, ::context * pcontext);
 
 
    };

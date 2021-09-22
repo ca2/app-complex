@@ -81,17 +81,17 @@ namespace simple_os_drag_and_drop
    void simple_os_drag_and_drop::_001OnDraw1Through3(::draw2d::graphics_pointer & pgraphics)
    {
 
-      ::draw2d::pen_pointer pen(e_create);
+      auto ppen = __create < ::draw2d::pen > ();
 
-      ::draw2d::brush_pointer brush(e_create);
+      auto pbrush = __create < ::draw2d::brush >();
 
-      ::write_text::font_pointer font(e_create);
+      auto pfont = __create < ::write_text::font > ();
 
-      font->create_pixel_font(pnode->font_name(e_font_sans_ex), 100.0, 800);
+      pfont->create_pixel_font(pnode->font_name(e_font_sans_ex), 100.0, 800);
 
-      pgraphics->set(font);
+      pgraphics->set(pfont);
 
-      pen->create_solid(4.0, argb(255, 50, 180, 255));
+      ppen->create_solid(4.0, argb(255, 50, 180, 255));
 
       rectangle_i32 rectangle;
 
@@ -110,28 +110,28 @@ namespace simple_os_drag_and_drop
       if(m_iDragAndDrop == 3)
       {
 
-         brush->CreatePatternBrush(get_image("matter://pat1.jpg"));
+         pbrush->CreatePatternBrush(get_image("matter://pat1.jpg"));
 
       }
       else
       {
 
-         brush->CreateLinearGradientBrush(rectangle.top_left(), rectangle.bottom_right(), argb(255, 255, 255, 200), argb(255, 255, 125, 100));
+         pbrush->CreateLinearGradientBrush(rectangle.top_left(), rectangle.bottom_right(), argb(255, 255, 255, 200), argb(255, 255, 125, 100));
 
       }
 
-      pgraphics->set(pen);
+      pgraphics->set(ppen);
 
-      pgraphics->set(brush);
+      pgraphics->set(pbrush);
 
       pgraphics->ellipse(rectangle);
 
       if(m_iDragAndDrop >= 2)
       {
 
-         ::rectangle_i32 rectText(rectangle);
+         ::rectangle_i32 rectangleText(rectangle);
 
-         rectText.inflate(100, 100);
+         rectangleText.inflate(100, 100);
 
          pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
@@ -168,19 +168,19 @@ namespace simple_os_drag_and_drop
 
             }
 
-            brush->CreatePatternBrush(m_pimagemap["pat1grayed"]);
+            pbrush->CreatePatternBrush(m_pimagemap["pat1grayed"]);
 
          }
          else
          {
 
-            brush->CreateLinearGradientBrush(rectText.top_left(), rectText.bottom_right(), argb(255, 55, 210, 120), argb(255, 255, 255, 200));
+            pbrush->CreateLinearGradientBrush(rectangleText.top_left(), rectangleText.bottom_right(), argb(255, 55, 210, 120), argb(255, 255, 255, 200));
 
          }
 
-         pgraphics->set(brush);
+         pgraphics->set(pbrush);
 
-         //pgraphics->draw_text("Simple Drawing", rectText, e_align_center);
+         //pgraphics->draw_text("Simple Drawing", rectangleText, e_align_center);
 
       }
 
@@ -298,13 +298,13 @@ namespace simple_os_drag_and_drop
    {
 
 
-      ::write_text::font_pointer font(e_create);
+      auto pfont = __create < ::write_text::font > ();
 
-      font->create_point_font(pnode->font_name(e_font_sans), 14.0, FW_LIGHT);
+      pfont->create_point_font(pnode->font_name(e_font_sans), 14.0, FW_LIGHT);
 
       pgraphics->set_text_color(argb(255, 0, 0, 0));
 
-      pgraphics->set(font);
+      pgraphics->set(pfont);
 
       string str;
 
@@ -316,7 +316,7 @@ namespace simple_os_drag_and_drop
 
       pgraphics->text_out(r.left, r.top + 20, str);
 
-      ::draw2d::pen_pointer pen(e_create);
+      auto ppen = __create < ::draw2d::pen > ();
 
       if (dAngle < 0.0)
       {
@@ -324,13 +324,13 @@ namespace simple_os_drag_and_drop
          if (bPath)
          {
 
-            pen->create_solid(4.0, dk_red());
+            ppen->create_solid(4.0, dk_red());
 
          }
          else
          {
 
-            pen->create_solid(4.0, argb(255, 255, 230, 155));
+            ppen->create_solid(4.0, argb(255, 255, 230, 155));
 
 
          }
@@ -342,19 +342,19 @@ namespace simple_os_drag_and_drop
          if (bPath)
          {
 
-            pen->create_solid(4.0, argb(255, 255, 255, 255));
+            ppen->create_solid(4.0, argb(255, 255, 255, 255));
 
          }
          else
          {
 
-            pen->create_solid(4.0, argb(255, 50, 180, 255));
+            ppen->create_solid(4.0, argb(255, 50, 180, 255));
 
          }
 
       }
 
-      pgraphics->set(pen);
+      pgraphics->set(ppen);
 
       pgraphics->Arc(r, dStart, dAngle);
 

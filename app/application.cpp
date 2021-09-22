@@ -56,17 +56,17 @@ namespace simple_app
 
       __refer(m_pwindow, __create_new < window >());
 
-      ::rectangle_i32 rectWindow;
+      ::rectangle_i32 rectangleWindow;
 
-      m_pwindow->_001InitialFramePosition(rectWindow, {0.05, 0.05, 0.4, 0.4});
+      m_pwindow->_001InitialFramePosition(rectangleWindow, {0.05, 0.05, 0.4, 0.4});
 
-      ::user::system cs(0, nullptr, "simple_app", WS_VISIBLE, rectWindow);
+      ::user::system cs(0, nullptr, "simple_app", WS_VISIBLE, rectangleWindow);
 
       m_pwindow->create_window_ex(cs);
 
       m_pwindow->display(e_display_normal);
 
-      m_pwindow->place(rectWindow);
+      m_pwindow->place(rectangleWindow);
 
       m_pwindow->set_need_layout();
 

@@ -118,7 +118,8 @@ namespace complex_drawing
       case MENU_IMPACT:
       {
 
-         //::user::impact::create_view < ::user::menu_list_view >(pimpactdata);
+         ::user::impact::create_view < ::user::menu_list_view >(pimpactdata);
+         return;
 
       }
       break;
@@ -215,21 +216,23 @@ namespace complex_drawing
 
       stra.explode("->:<-", strId);
 
-      //if (get_view_id() == MENU_IMPACT)
-      //{
+      if (m_pimpactdata->m_id == MENU_IMPACT)
+      {
 
-      //   __pointer(::user::menu_list_view) pmenuview = get_view_uie();
+         __pointer(::user::menu_list_view) pmenuview = get_view_uie();
 
-      //   pmenuview->destroy_menu();
+         pmenuview->destroy_menu();
 
-      //   if (pmenuview->load_xml_menu("matter://simple_menu.xml"))
-      //   {
+         if (pmenuview->load_xml_menu("matter://simple_menu.xml"))
+         {
 
-      //      pmenuview->create_inline_menu(this, m_pimpactdata->m_pplaceholder);
+            pmenuview->create_inline_menu(this, m_pimpactdata->m_pplaceholder);
 
-      //   }
+         }
 
-      //}
+         return;
+
+      }
 
       if (::str::begins(get_view_id().to_string(), "drawing"))
       {

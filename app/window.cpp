@@ -97,13 +97,13 @@ namespace simple_app
    void window::on_message_display_change(::message::message* pmessage)
    {
 
-      ::rectangle_i32 rectWindow;
+      ::rectangle_i32 rectangleWindow;
 
-      _001InitialFramePosition(rectWindow, { 0.05, 0.05, 0.4, 0.4 });
+      _001InitialFramePosition(rectangleWindow, { 0.05, 0.05, 0.4, 0.4 });
 
       display(e_display_normal);
 
-      place(rectWindow);
+      place(rectangleWindow);
 
       set_need_layout();
 
