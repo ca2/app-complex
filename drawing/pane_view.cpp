@@ -55,6 +55,7 @@ namespace complex_drawing
 
       }
 
+
       set_tab("Menu", MENU_IMPACT);
       set_tab("text://app-simple/drawing/:001", "drawing1");
       set_tab("text://app-simple/drawing/:002", "drawing2");
@@ -257,7 +258,7 @@ namespace complex_drawing
 
          __refer(m_pviewTopic, m_pimpactdata->m_pplaceholder->get_hold());
 
-         m_pviewTopic->m_prender->m_strHoverFontFamilyName.Empty();
+         m_pviewTopic->m_prender->properties().m_strHoverFontFamilyName.Empty();
 
       }
       
@@ -271,11 +272,11 @@ namespace complex_drawing
 
             m_pfontview->set_sel_by_name(strFont1);
 
-            m_pviewTopic->m_prender->m_strHoverFontFamilyName = strFont1;
+            m_pviewTopic->m_prender->properties().m_strHoverFontFamilyName = strFont1;
 
             auto papplication = get_application();
 
-            papplication->m_pstrHoverFontFamilyName = &m_pviewTopic->m_prender->m_strHoverFontFamilyName;
+            papplication->m_pstrHoverFontFamilyName = &m_pviewTopic->m_prender->properties().m_strHoverFontFamilyName;
 
             m_pfontview->m_pimpact->ensure_sel_visible();
 

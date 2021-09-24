@@ -23,8 +23,6 @@ namespace complex_drawing
 
       m_bMultiverseChat = true;
 
-      m_strMainTitle = "Simple Drawing";
-
    }
 
 
@@ -45,6 +43,7 @@ namespace complex_drawing
    ::e_status application::init_instance()
    {
 
+
       auto psession = get_session();
 
       auto puser = psession->user()->m_pcoreuser;
@@ -59,6 +58,8 @@ namespace complex_drawing
          return false;
 
       }
+
+      properties().m_strMainTitle = "Simple Drawing";
 
       add_matter_locator("app-simple/drawing");
 
