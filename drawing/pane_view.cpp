@@ -55,8 +55,8 @@ namespace complex_drawing
 
       }
 
-
       set_tab("Menu", MENU_IMPACT);
+      set_tab("Options", OPTIONS_IMPACT);
       set_tab("text://app-simple/drawing/:001", "drawing1");
       set_tab("text://app-simple/drawing/:002", "drawing2");
       set_tab("text://app-simple/drawing/:003", "drawing3");
@@ -112,18 +112,6 @@ namespace complex_drawing
 
          pimpactdata->m_eflag.add(::user::e_flag_hide_topic_on_show);
 
-      }
-
-      switch(pimpactdata->m_id)
-      {
-      case MENU_IMPACT:
-      {
-
-         ::user::impact::create_view < ::user::menu_list_view >(pimpactdata);
-         return;
-
-      }
-      break;
       }
 
       ::userex::pane_tab_view::on_create_impact(pimpactdata);
@@ -216,7 +204,6 @@ namespace complex_drawing
       string_array stra;
 
       stra.explode("->:<-", strId);
-
 
       if (::str::begins(get_view_id().to_string(), "drawing"))
       {
