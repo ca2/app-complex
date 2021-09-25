@@ -183,10 +183,10 @@ namespace video_capture
          {
 
 
-            if (psubject->m_id == ::e_subject_set_check && psubject->m_puserinteraction != nullptr)
+            if (psubject->m_id == ::e_subject_set_check && psubject->user_interaction() != nullptr)
             {
 
-               string strCheck = psubject->m_puserinteraction->m_id;
+               string strCheck = psubject->user_element_id();
 
 
             }

@@ -84,15 +84,15 @@ namespace video_capture
    }
 
 
-   void main_impact::handle(::subject * psubject, ::context * pcontext)
-   {
+   //void main_impact::handle(::subject * psubject, ::context * pcontext)
+   //{
 
-      if(psubject->m_id == ::e_subject_click)
-      {
+   //   if(psubject->m_id == ::e_subject_click)
+   //   {
 
-      }
+   //   }
 
-   }
+   //}
 
 
 } // namespace video_capture
