@@ -140,7 +140,7 @@ namespace simple_form
       if(psubject->m_id == ::e_subject_click)
       {
 
-         if(psubject->m_puserinteraction->m_id == "simple_form_toggle")
+         if(psubject->user_element_id() == "simple_form_toggle")
          {
 
             m_pimpact->set_need_layout();

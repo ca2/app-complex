@@ -95,7 +95,7 @@ namespace video_capture
       if(psubject->m_id == ::e_subject_click)
       {
 
-         if(psubject->m_puserinteraction->m_id == "switcher_toggle")
+         if(psubject->user_element_id() == "switcher_toggle")
          {
 
             __pointer(impact) pview = m_pimpact;
@@ -103,7 +103,7 @@ namespace video_capture
             pview->m_prender->m_bLite = !pview->m_prender->m_bLite;
 
          }
-         else if(psubject->m_puserinteraction->m_id == "videocapture_toggle")
+         else if(psubject->user_element_id() == "videocapture_toggle")
          {
 
             if(m_pimpact->m_prender->m_bLite && !papplication->m_bLoadAiFont)

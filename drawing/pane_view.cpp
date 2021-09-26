@@ -280,7 +280,7 @@ namespace complex_drawing
    //void pane_view::handle(::subject * psubject, ::context * pcontext)
    //{
 
-   //   if (psubject->m_puserinteraction == m_pcolorview)
+   //   if (psubject->user_interaction() == m_pcolorview)
    //   {
 
    //      if (psubject->m_id == ::e_subject_after_change_cur_sel || psubject->m_id == ::e_subject_after_change_cur_hover)

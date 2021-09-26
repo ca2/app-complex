@@ -125,7 +125,7 @@ namespace simple_os_drag_and_drop
       if(psubject->m_id == ::e_subject_click)
       {
 
-         if(psubject->m_puserinteraction->m_id == "simple_drag_and_drop_toggle")
+         if(psubject->user_element_id() == "simple_drag_and_drop_toggle")
          {
 
             m_pimpact->set_need_layout();

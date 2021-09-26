@@ -190,24 +190,24 @@ namespace video_capture
 
 
             }
-         //if(psubject->m_puserinteraction->m_id == "clockverse")
+         //if(psubject->user_element_id() == "clockverse")
          //   {
-         //      papplication->set_binding_clockverse_country_time_zone_set_on_hover(psubject->m_puserinteraction->_001GetCheck() == ::check_checked);
+         //      papplication->set_binding_clockverse_country_time_zone_set_on_hover(psubject->user_interaction()->_001GetCheck() == ::check_checked);
          //      return true;
          //   }
-         //   else if(psubject->m_puserinteraction->m_id == "clockverse_auto")
+         //   else if(psubject->user_element_id() == "clockverse_auto")
          //   {
-         //      papplication->set_auto_launch_clockverse_on_hover(psubject->m_puserinteraction->_001GetCheck() == ::check_checked);
+         //      papplication->set_auto_launch_clockverse_on_hover(psubject->user_interaction()->_001GetCheck() == ::check_checked);
          //      return true;
          //   }
-         //   else if(psubject->m_puserinteraction->m_id == "flag")
+         //   else if(psubject->user_element_id() == "flag")
          //   {
-         //      papplication->set_binding_flag_country_ca2_domain_image_on_hover(psubject->m_puserinteraction->_001GetCheck() == ::check_checked);
+         //      papplication->set_binding_flag_country_ca2_domain_image_on_hover(psubject->user_interaction()->_001GetCheck() == ::check_checked);
          //      return true;
          //   }
-         //   else if(psubject->m_puserinteraction->m_id == "flag_auto")
+         //   else if(psubject->user_element_id() == "flag_auto")
          //   {
-         //      papplication->set_auto_launch_flag_on_hover(psubject->m_puserinteraction->_001GetCheck() == ::check_checked);
+         //      papplication->set_auto_launch_flag_on_hover(psubject->user_interaction()->_001GetCheck() == ::check_checked);
          //      return true;
          //   }
          }
