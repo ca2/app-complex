@@ -24,7 +24,7 @@ namespace simple_shader
       ::image_pointer                     m_pimage1;
       ::image_pointer                     m_pimage2;
       ::color::hls                               m_hlsText;
-      ::millis                              m_millisStart;
+      ::duration                              m_durationStart;
       ::gpu::enum_shader_source           m_eshadersource;
 
       render();

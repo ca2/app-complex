@@ -92,7 +92,7 @@ namespace video_capture
 
       ::u32 xOffset;
 
-      xOffset = m_pimageTime->width() * m_dFps * (double)(m_millisRoll->elapsed()) / 1000->0; // x = v->t; f=fps  1920 * 1FPS * t
+      xOffset = m_pimageTime->width() * m_dFps * (double)(m_durationRoll->elapsed()) / 1000->0; // x = v->t; f=fps  1920 * 1FPS * t
 
       xOffset %= m_pimageTime->width();
 
@@ -133,7 +133,7 @@ namespace video_capture
 
         pdcParam->set_font(f);
 
-        pdcParam->TextOutA(0, 0, __str(m_dwaFrame.get_size()));*/
+        pdcParam->TextOutA(0, 0, __string(m_dwaFrame.get_size()));*/
 
 
       //size_i32 s = m_pimageTime->get_size();
@@ -147,12 +147,12 @@ namespace video_capture
       //pdcScreen->Draw3dRect(200,200,100,100,argb(255,0,255,0),argb(255,0,0,255));
       //u64 endTime = get_nanos();
 
-      //u64 micros = (endTime - startTime) / 1000;
+      //u64 microsecond = (endTime - startTime) / 1000;
 
       //char sz[512];
 
       //::output_debug_string("impact:");
-      //::ansi_from_u64(sz, micros, 10);
+      //::ansi_from_u64(sz, microsecond, 10);
       //::output_debug_string(sz);
       //::output_debug_string(", ");
 
