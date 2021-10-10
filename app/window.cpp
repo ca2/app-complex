@@ -77,7 +77,7 @@ namespace simple_app
       for (int i = 0; i < dBase; i++)
       {
 
-         pgraphics->draw3d_rect(rectangleClient, argb(255, 127, 127, 127));
+         pgraphics->draw_inset_3d_rectangle(rectangleClient, argb(255, 127, 127, 127));
 
          rectangleClient.deflate(1, 1);
 

@@ -19,7 +19,7 @@ namespace video_capture
       virtual ~toggle_view();
 
 
-      virtual void install_message_routing(::channel * pchannel);
+      void install_message_routing(::channel * pchannel) override;
 
 
       virtual void handle(::subject * psubject, ::context * pcontext) override;

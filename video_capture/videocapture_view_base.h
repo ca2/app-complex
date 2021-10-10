@@ -26,11 +26,11 @@ namespace video_capture
       }
 
 
-      virtual void assert_valid() const;
-      virtual void dump(dump_context & dumpcontext) const;
+      void assert_valid() const override;
+      void dump(dump_context & dumpcontext) const override;
 
 
-      virtual void install_message_routing(::channel * pchannel);
+      void install_message_routing(::channel * pchannel) override;
 
       virtual void _006OnDraw(::draw2d::graphics_pointer & pgraphics);
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics);

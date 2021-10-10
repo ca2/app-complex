@@ -15,8 +15,8 @@ namespace helloworld
       virtual ~frame();
 
 
-	   virtual void assert_valid() const;
-	   virtual void dump(dump_context & dumpcontext) const;
+	   void assert_valid() const override;
+	   void dump(dump_context & dumpcontext) const override;
 
 
       virtual bool get_translucency(::user::ETranslucency & etranslucency);
