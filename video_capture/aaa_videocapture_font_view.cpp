@@ -112,7 +112,7 @@ namespace video_capture
          //   m_pimpact->m_prender->m_bLite = !m_pimpact->m_prender->m_bLite;
 
 
-         //   m_pimpact->on_layout(::draw2d::graphics_pointer & pgraphics);
+         //   m_pimpact->on_layout(pgraphics);
 
          //}
 
@@ -133,7 +133,7 @@ namespace video_capture
 
                   GetTypedParent < pane_view >()->m_pviewLast->m_strNewFont = strFont;
 
-                  GetTypedParent < pane_view >()->m_pviewLast->on_layout(::draw2d::graphics_pointer & pgraphics);
+                  GetTypedParent < pane_view >()->m_pviewLast->on_layout(pgraphics);
 
                }
 
