@@ -75,8 +75,9 @@ namespace video_capture
    void impact::handle(::subject * psubject, ::context * pcontext)
    {
 
-      if(psubject->m_id = INITIAL_UPDATE)
+      if(psubject->m_id == INITIAL_UPDATE)
       {
+
          __pointer(::userex::pane_tab_view) ppaneview = GetTypedParent < ::userex::pane_tab_view >();
          //if(ppaneview.is_set())
          //{
