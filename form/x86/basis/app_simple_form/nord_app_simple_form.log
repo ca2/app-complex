@@ -187,7 +187,7 @@
    undefined reference to 'single_lock::single_lock(sync*, bool)'
    undefined reference to 'sync::~sync()'
    undefined reference to 'single_lock::~single_lock()'
-   undefined reference to 'demangle(string_base<char>&, char const*)'
+   undefined reference to 'string_base<char>&, char const*'
    undefined reference to '__assert_valid_object(context_object const*, char const*, int)'
    undefined reference to '__assert_valid_object(context_object const*, char const*, int)'
    undefined reference to 'is_debugger_attached()'
