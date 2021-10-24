@@ -153,11 +153,11 @@ namespace video_capture
 
          auto pcommandline = pcreate->m_pcommandline;
 
-         auto& varFile = pcommandline->m_varFile;
+         auto& payloadFile = pcommandline->m_varFile;
 
          auto papplication = get_application();
 
-         papplication->m_ptemplateHelloMultiverseView->open_document_file(papplication, varFile, true, pimpactdata->m_pplaceholder);
+         papplication->m_ptemplateHelloMultiverseView->open_document_file(papplication, payloadFile, true, pimpactdata->m_pplaceholder);
 
       }
 

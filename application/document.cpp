@@ -41,7 +41,7 @@ namespace simple_application
    }
 
 
-   bool document::on_open_document(const ::payload & varFile)
+   bool document::on_open_document(const ::payload & payloadFile)
    {
 
       impact * pview = get_typed_view < impact >();
