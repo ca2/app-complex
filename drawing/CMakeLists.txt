@@ -3,7 +3,6 @@ project(app_complex_drawing CXX)
 
 
 list(APPEND library_source
-   _.cpp
    _.h
    _drawing.h
    application.cpp
@@ -67,10 +66,7 @@ target_include_directories(app_complex_drawing PRIVATE ${library_include_directo
 target_compile_definitions(app_complex_drawing PRIVATE _APP_COMPLEX_DRAWING_LIBRARY)
 
 
-add_executable(_app_complex_drawing ${PLATFORM_NAME}/main.cpp)
-
-
-target_compile_definitions(_app_complex_drawing PRIVATE _APP_ID="app-complex/drawing")
+add_executable(_app_complex_drawing _.cpp)
 
 
 if (MSVC)
@@ -102,7 +98,7 @@ target_include_directories(_app_complex_drawing PRIVATE ${library_include_direct
 
 target_link_directories(_app_complex_drawing PRIVATE ${library_link_directories})
 
-target_link_libraries(_app_complex_drawing PRIVATE acme apex)
+target_link_libraries(_app_complex_drawing PRIVATE acme apex app_complex_drawing)
 
 set_target_properties(_app_complex_drawing PROPERTIES LINKER_LANGUAGE CXX)
 
