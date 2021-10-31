@@ -834,7 +834,7 @@ bool DShowInput::UpdateVideoConfig(aura_data *settings)
 
 	DeviceId id;
 	if (!DecodeDeviceId(id, video_device_id.c_str())) {
-		blog(LOG_WARNING, "%s: DecodeDeviceId failed",
+		blog(LOG_FORMATTED_WARNING, "%s: DecodeDeviceId failed",
 			obs_source_get_name(source));
 		return false;
 	}
@@ -843,7 +843,7 @@ bool DShowInput::UpdateVideoConfig(aura_data *settings)
 	Device::EnumVideoDevices(data.devices);
 	VideoDevice dev;
 	if (!data.GetDevice(dev, video_device_id.c_str())) {
-		blog(LOG_WARNING, "%s: data.GetDevice failed",
+		blog(LOG_FORMATTED_WARNING, "%s: data.GetDevice failed",
 			obs_source_get_name(source));
 		return false;
 	}
@@ -857,7 +857,7 @@ bool DShowInput::UpdateVideoConfig(aura_data *settings)
 		bool has_autosel_val;
 		string resolution = obs_data_get_string(settings, RESOLUTION);
 		if (!ResolutionValid(resolution, cx, cy)) {
-			blog(LOG_WARNING, "%s: ResolutionValid failed",
+			blog(LOG_FORMATTED_WARNING, "%s: ResolutionValid failed",
 				obs_source_get_name(source));
 			return false;
 		}
@@ -881,7 +881,7 @@ bool DShowInput::UpdateVideoConfig(aura_data *settings)
 				FrameRateMatcher(interval));
 
 		if (!caps_match && !video_format_match) {
-			blog(LOG_WARNING, "%s: Video format match failed",
+			blog(LOG_FORMATTED_WARNING, "%s: Video format match failed",
 				obs_source_get_name(source));
 			return false;
 		}
@@ -908,7 +908,7 @@ bool DShowInput::UpdateVideoConfig(aura_data *settings)
 		videoConfig.format = videoConfig.internalFormat;
 
 	if (!device.SetVideoConfig(&videoConfig)) {
-		blog(LOG_WARNING, "%s: device.SetVideoConfig failed",
+		blog(LOG_FORMATTED_WARNING, "%s: device.SetVideoConfig failed",
 			obs_source_get_name(source));
 		return false;
 	}
@@ -916,7 +916,7 @@ bool DShowInput::UpdateVideoConfig(aura_data *settings)
 	if (videoConfig.internalFormat == VideoFormat::MJPEG) {
 		videoConfig.format = VideoFormat::XRGB;
 		if (!device.SetVideoConfig(&videoConfig)) {
-			blog(LOG_WARNING, "%s: device.SetVideoConfig (XRGB) "
+			blog(LOG_FORMATTED_WARNING, "%s: device.SetVideoConfig (XRGB) "
 					"failed", obs_source_get_name(source));
 			return false;
 		}
@@ -1051,13 +1051,13 @@ inline bool DShowInput::Activate(aura_data *settings)
 		return false;
 
 	if (!UpdateVideoConfig(settings)) {
-		blog(LOG_WARNING, "%s: Video configuration failed",
+		blog(LOG_FORMATTED_WARNING, "%s: Video configuration failed",
 				obs_source_get_name(source));
 		return false;
 	}
 
 	if (!UpdateAudioConfig(settings))
-		blog(LOG_WARNING, "%s: Audio configuration failed, ignoring "
+		blog(LOG_FORMATTED_WARNING, "%s: Audio configuration failed, ignoring "
 		                  "audio", obs_source_get_name(source));
 
 	if (!device.ConnectFilters())
@@ -1104,7 +1104,7 @@ static void *CreateDShowInput(aura_data *settings, video_enc *source)
 	try {
 		dshow = new DShowInput(source, settings);
 	} catch (const ::string &error) {
-		blog(LOG_ERROR, "Could not create device '%s': %s",
+		blog(LOG_FORMATTED_ERROR, "Could not create device '%s': %s",
 				obs_source_get_name(source), error);
 	}
 
