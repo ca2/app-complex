@@ -1,0 +1,8 @@
+﻿; app_simple_form.def
+
+LIBRARY  "m_simple_form_simple_form"
+; For Win32 DLLs, only EXPORTs really required.
+
+EXPORTS
+get_new_library
+
