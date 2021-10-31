@@ -5,15 +5,15 @@ namespace complex_form
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_FORM complex_form_001 :
-      virtual public complex_form,
-      virtual public simple_form::simple_form_001,
+   class CLASS_DECL_APP_COMPLEX_FORM form_001 :
+      virtual public form,
+      virtual public simple_form::form_001
    {
    public:
 
 
-      simple_form_001();
-      ~simple_form_001() override;
+      form_001();
+      ~form_001() override;
 
 
       void assert_valid() const override;
@@ -38,6 +38,7 @@ namespace complex_form
    };
 
 
-} // namespace simple_form
+} // namespace complex_form
+
 
 

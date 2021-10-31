@@ -1,12 +1,13 @@
 #include "framework.h"
+#include "base/user/user/tab_pane.h"
 #include "aura/update.h"
 
 
-namespace simple_form
+namespace complex_form
 {
 
 
-   tab_view::tab_view()
+   pane_view::pane_view()
    {
 
       m_pviewLast = NULL;
@@ -14,13 +15,13 @@ namespace simple_form
    }
 
 
-   tab_view::~tab_view()
+   pane_view::~pane_view()
    {
 
    }
 
 
-   void tab_view::assert_valid() const
+   void pane_view::assert_valid() const
    {
 
       ::user::impact::assert_valid();
@@ -28,7 +29,7 @@ namespace simple_form
    }
 
 
-   void tab_view::dump(dump_context & dumpcontext) const
+   void pane_view::dump(dump_context & dumpcontext) const
    {
 
       ::user::impact::dump(dumpcontext);
@@ -36,21 +37,27 @@ namespace simple_form
    }
 
 
-   void tab_view::install_message_routing(::channel * pchannel)
+   void pane_view::install_message_routing(::channel * pchannel)
    {
 
-      ::user::tab_view::install_message_routing(pchannel);
+      ::simple_form::tab_view::install_message_routing(pchannel);
 
-      MESSAGE_LINK(e_message_create, pchannel, this, &tab_view::on_message_create);
+      MESSAGE_LINK(e_message_create, pchannel, this, &pane_view::on_message_create);
 
    }
 
 
-   void tab_view::on_message_create(::message::message * pmessage)
+   void pane_view::on_message_create(::message::message * pmessage)
    {
 
+      pmessage->m_iRouteIndex--;
+
       if(pmessage->previous())
+      {
+
          return;
+
+      }
 
       add_tab("Menu",MENU_IMPACT);
       add_tab("001", "form1");
@@ -83,47 +90,16 @@ namespace simple_form
    }
 
 
-   void tab_view::_001OnNcDraw(::draw2d::graphics_pointer & pgraphics)
+   void pane_view::on_change_cur_sel()
    {
 
-      //::userex::pane_tab_view::_001OnNcDraw(pgraphics);
-      ::user::tab_view::_001OnNcDraw(pgraphics);
+      //::userex::pane_pane_view::on_change_cur_sel();
+      ::simple_form::tab_view::on_change_cur_sel();
 
-   }
-
-
-   void tab_view::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
-   {
-
-      ::user::tab_view::_001OnDraw(pgraphics);
-
-   }
-
-
-   void tab_view::on_change_cur_sel()
-   {
-
-      //::userex::pane_tab_view::on_change_cur_sel();
-      ::user::tab_view::on_change_cur_sel();
       string strId = get_view_id();
       string_array stra;
 
       stra.explode("->:<-",strId);
-
-      if (get_view_id() == MENU_IMPACT)
-      {
-
-         //__pointer(::user::menu_list_view) pmenuview = get_view_uie();
-
-         //pmenuview->load_xml_menu("matter://simple_menu.xml");
-
-         //pmenuview->create_inline_menu(m_pimpactdataOld->m_puserinteraction, m_pimpactdata->m_pplaceholder);
-
-         //}
-
-         //hide_all_except({ get_view_id(), ::impact_karaoke });
-
-      }
 
       if(get_view_id() == ::impact_simple_form)
       {
@@ -155,26 +131,15 @@ namespace simple_form
    }
 
 
-   void tab_view::on_create_impact(::user::impact_data * pimpactdata)
+   void pane_view::on_create_impact(::user::impact_data * pimpactdata)
    {
-
-      switch(pimpactdata->m_id)
-      {
-      case MENU_IMPACT:
-      {
-
-         //::user::impact::create_view < ::user::menu_list_view >(pimpactdata);
-
-      }
-      break;
-      }
 
       string strId = pimpactdata->m_id;
 
       if(::str::begins_eat_ci(strId, "form"))
       {
 
-         __pointer(simple_form) pform;
+         __pointer(form) pform;
 
          index iId = atoi(strId);
 
@@ -182,13 +147,13 @@ namespace simple_form
          {
          case 1:
 
-            pform = create_view<simple_form_001>(pimpactdata);
+            pform = create_view < form_001 >(pimpactdata);
 
             break;
 
          case 2:
 
-            pform = create_view<simple_form_002>(pimpactdata);
+            pform = create_view < form_002 >(pimpactdata);
 
             break;
 
@@ -204,84 +169,22 @@ namespace simple_form
 
          pform->m_id = pimpactdata->m_id;
 
+         return;
+
       }
 
-      ::user::tab_view::on_create_impact(pimpactdata);
-//      ::userex::pane_tab_view::on_create_impact(pimpactdata);
+      ::simple_form::tab_view::on_create_impact(pimpactdata);
+
+      ::userex::pane_tab_view::on_create_impact(pimpactdata);
 
       pimpactdata->m_eflag.add(::user::e_flag_hide_all_others_on_show);
 
    }
 
 
-   //bool tab_view::handle(::subject * psubject, ::context * pcontext)
-   //{
-
-   //   if(m_pdocMenu != nullptr
-   //         && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0)
-   //         && psubject->user_interaction() != nullptr)
-   //   {
-
-   //      if(psubject->m_id == ::e_subject_after_change_text)
-   //      {
-
-
-   //      }
-   //      else if (psubject->m_id == ::e_subject_set_check && psubject->user_interaction() != NULL)
-   //      {
-
-   //         string strCheck = psubject->user_element_id();
-
-   //         if (::str::begins_eat_ci(strCheck, "bilbo"))
-   //         {
-
-   //            if (psubject->user_interaction() != NULL && psubject->m_actioncontext.is_user_source())
-   //            {
-
-   //               //int iCheck = atoi(strCheck);
-
-   //               //__pointer(::user::check) pcheck = psubject->user_interaction();
-
-   //            }
-
-   //         }
-
-   //      }
-
-   //   }
-
-   //   return false;
-
-   //}
-
-
-   void tab_view::handle(::subject * psubject, ::context * pcontext)
+   void pane_view::handle(::subject * psubject, ::context * pcontext)
    {
 
-      //////__update(::update)
-      //{
-
-      //   if (psubject->id() == id_control_event
-      //         && psubject->user_interaction() == m_pfontview
-      //         && m_pviewLast != NULL)
-      //   {
-
-      //      if(pupdate->m_pcontrolevent->m_eevent == ::e_subject_after_change_cur_sel)
-      //      {
-
-      //         string strFont = m_pfontview->m_pimpact->get_cur_sel_face_name();
-
-      //      }
-      //      else if (pupdate->m_pcontrolevent->m_eevent == ::e_subject_after_change_cur_hover)
-      //      {
-
-      //         string strFont = m_pfontview->m_pimpact->get_cur_hover_face_name();
-
-      //      }
-
-      //   }
-
-      //}
       if (m_pdocMenu != nullptr
          && psubject->get_form() == m_pdocMenu->get_view(0)
          && ::is_set(psubject->m_puserelement))
@@ -315,15 +218,12 @@ namespace simple_form
 
       }
 
-//      ::userex::pane_tab_view::handle(psubject, pcontext);
-      ::user::tab_view::handle(psubject, pcontext);
+      ::simple_form::tab_view::handle(psubject, pcontext);
 
    }
 
 
-} // namespace simple_form
-
-
+} // namespace complex_form
 
 
 

@@ -1,18 +1,18 @@
 #pragma once
 
 
-namespace simple_form
+namespace complex_form
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_FORM frame :
+   class CLASS_DECL_APP_COMPLEX_FORM frame :
       virtual public simple_frame_window
    {
    public:
 
 
       frame();
-      virtual ~frame();
+      ~frame() override;
 
 
 	   void assert_valid() const override;

@@ -2,11 +2,11 @@
 #include <math.h>
 
 
-namespace simple_form
+namespace complex_form
 {
 
 
-   simple_form::simple_form()
+   form::form()
    {
 
 
@@ -50,13 +50,13 @@ namespace simple_form
    }
 
 
-   simple_form::~simple_form()
+   form::~form()
    {
 
    }
 
 
-   void simple_form::assert_valid() const
+   void form::assert_valid() const
    {
 
       ::user::form_view::assert_valid();
@@ -64,7 +64,7 @@ namespace simple_form
    }
 
 
-   void simple_form::dump(dump_context & dumpcontext) const
+   void form::dump(dump_context & dumpcontext) const
    {
 
       ::user::form_view::dump(dumpcontext);
@@ -75,7 +75,7 @@ namespace simple_form
 #ifdef _DEBUG
 
 
-   int64_t simple_form::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t form::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
       return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
@@ -83,7 +83,7 @@ namespace simple_form
    }
 
 
-   int64_t simple_form::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t form::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
       return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
@@ -94,17 +94,18 @@ namespace simple_form
 #endif
 
 
-   void simple_form::install_message_routing(::channel * psender)
+   void form::install_message_routing(::channel * psender)
    {
 
       ::user::form_view::install_message_routing(psender);
 
-      MESSAGE_LINK(e_message_create, psender, this, &simple_form::on_message_create);
+      MESSAGE_LINK(e_message_create, psender, this, &form::on_message_create);
+      MESSAGE_LINK(e_message_context_menu, psender, this, &form::on_message_context_menu);
 
    }
 
 
-   void simple_form::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void form::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
       auto rectangleClient = get_client_rect();
@@ -114,7 +115,7 @@ namespace simple_form
    }
 
 
-   void simple_form::on_message_create(::message::message * pmessage)
+   void form::on_message_create(::message::message * pmessage)
    {
 
       __pointer(::message::create) pcreate(pmessage);
@@ -131,7 +132,21 @@ namespace simple_form
    }
 
 
-   void simple_form::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void form::on_message_context_menu(::message::message * pmessage)
+   {
+
+      auto pcontextmenu = pmessage->m_union.m_pcontextmenu;
+
+      auto point = pcontextmenu->GetPoint();
+
+      auto puser = user();
+
+      puser->track_popup_xml_menu(this, "matter://form/form.menu", 0, point);
+
+   }
+
+
+   void form::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
       ::user::form_view::on_layout(pgraphics);
@@ -139,7 +154,7 @@ namespace simple_form
    }
 
 
-} // namespace simple_form
+} // namespace complex_form
 
 
 

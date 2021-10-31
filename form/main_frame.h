@@ -1,44 +1,34 @@
 #pragma once
 
 
-namespace simple_form
+namespace complex_form
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_FORM main_frame :
-      virtual public simple_main_frame
+   class CLASS_DECL_APP_COMPLEX_FORM main_frame :
+      virtual public simple_form::main_frame
    {
    public:
 
 
-      bool                       m_bExplicitTranslucency;
 
 
       main_frame();
-      virtual ~main_frame();
+      ~main_frame() override;
 
 
       void assert_valid() const override;
       void dump(dump_context & dumpcontext) const override;
 
 
-      //virtual ::user::enum_translucency get_translucency(::user::style * pstyle) const override;
-      virtual ::experience::frame * experience_get_frame() override;
+      ::experience::frame * experience_get_frame() override;
 
-      virtual bool has_pending_graphical_update() override;
+      bool has_pending_graphical_update() override;
 
    };
 
 
 } // namespace simple_form
-
-
-
-
-
-
-
-
 
 
 

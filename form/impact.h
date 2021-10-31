@@ -1,18 +1,18 @@
 #pragma once
 
 
-namespace simple_form
+namespace complex_form
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_FORM impact :
-      virtual public ::user::impact
+   class CLASS_DECL_APP_COMPLEX_FORM impact :
+      virtual public ::simple_form::impact
    {
    public:
 
 
       impact();
-      virtual ~impact();
+      ~impact() override;
 
       void assert_valid() const override;
       void dump(dump_context & dumpcontext) const override;
@@ -23,21 +23,22 @@ namespace simple_form
 #endif
 
 
-      virtual void install_message_routing(::channel * psender) override;
+      void install_message_routing(::channel * psender) override;
 
-      virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
+      void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
 
-      virtual void handle(::subject * psubject, ::context * pcontext) override;
+      void handle(::subject * psubject, ::context * pcontext) override;
 
       ::user::document * get_document();
 
-      virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
+      void on_layout(::draw2d::graphics_pointer & pgraphics) override;
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
+
 
    };
 
 
-} // namespace simple_form
+} // namespace complex_form
 
 

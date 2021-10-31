@@ -1,7 +1,7 @@
-﻿#include "framework.h"
+#include "framework.h"
 
 
-namespace simple_form
+namespace complex_form
 {
 
 
@@ -15,9 +15,6 @@ namespace simple_form
    {
 
    }
-
-
-
 
 
    void document::assert_valid() const
@@ -36,6 +33,9 @@ namespace simple_form
    }
 
 
+#ifdef _DEBUG
+
+
    int64_t document::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
@@ -50,6 +50,10 @@ namespace simple_form
       return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
 
    }
+
+
+#endif
+
 
    bool document::on_new_document()
    {
@@ -79,23 +83,7 @@ namespace simple_form
    }
 
 
-
-
-} // namespace simple_form
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+} // namespace complex_form
 
 
 

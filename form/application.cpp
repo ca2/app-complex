@@ -1,10 +1,10 @@
 #include "framework.h"
-#include "aura/application.h"
 
 
 #define new ACME_NEW
 
-namespace simple_form
+
+namespace complex_form
 {
 
 
@@ -14,9 +14,9 @@ namespace simple_form
       m_ptemplateBeatMapperMain  = NULL;
       m_ptemplateBeatMapperView  = NULL;
 
-      m_strAppId                 = "app-simple/form";
-      m_strAppName               = "app-simple/form";
-      m_strBaseSupportId         = "ca2_flag";
+      m_strAppId                 = "app-complex/form";
+      m_strAppName               = "app-complex/form";
+      m_strBaseSupportId         = "app-complex/form";
       m_bLicense                 = false;
 
       m_bMultiverseChat          = true;
@@ -29,6 +29,9 @@ namespace simple_form
    application::~application()
    {
    }
+
+
+#ifdef _DEBUG
 
 
    int64_t application::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
@@ -47,27 +50,27 @@ namespace simple_form
    }
 
 
+#endif
+
 
    ::e_status application::init_instance()
    {
 
       set_local_data();
 
-      ::aura::session * pcoression = &Session;
+      //puser->will_use_view_hint(FONTSEL_IMPACT);
 
-      pcoression->will_use_view_hint(FONTSEL_IMPACT);
-
-      create_factory <::simple_form::document >();
-      create_factory <::simple_form::frame >();
-      create_factory <::simple_form::main_frame >();
+      create_factory <::complex_form::document >();
+      create_factory <::complex_form::frame >();
+      create_factory <::complex_form::main_frame >();
       create_factory <::user::button_view >();
-      create_factory <::simple_form::impact >();
-      create_factory <::simple_form::main_impact >();
-      create_factory <::simple_form::tab_view >();
-      create_factory <::simple_form::simple_form_001 >();
-      create_factory <::simple_form::simple_form_002 >();
+      create_factory <::complex_form::impact >();
+      create_factory <::complex_form::main_impact >();
+      create_factory <::complex_form::pane_view >();
+      create_factory <::complex_form::form_001 >();
+      create_factory <::complex_form::form_002 >();
 
-      if (!::aura::application::init_instance())
+      if (!::base::application::init_instance())
       {
 
          return false;
@@ -78,7 +81,7 @@ namespace simple_form
                                "main",
                                __type(document),
                                __type(main_frame),
-                               __type(tab_view)));
+                               __type(pane_view)));
       m_ptemplateBeatMapperMain = pdoctemplate;
       add_document_template(pdoctemplate);
 
@@ -114,9 +117,9 @@ namespace simple_form
       if (pcreate->m_pcommandline->m_varQuery.has_property("m"))
       {
 
-         output_error_message("m=1");
+         //output_error_message("m=1");
 
-         set_finish();
+         _001TryCloseApplication();
 
          return;
 
@@ -159,7 +162,7 @@ namespace simple_form
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->m_pcommandline->m_varQuery["document"].cast < document >()->get_typed_view < ::user::tab_view >()->top_level_frame()->prodevian_prepare_window_maximize();
+         pcreate->m_pcommandline->m_varQuery["document"].cast < document >()->get_typed_view < ::user::tab_view >()->top_level_frame()->sketch_prepare_window_maximize();
 
       }
 
@@ -170,30 +173,17 @@ namespace simple_form
 
    string application::preferred_experience()
    {
-
+      
       return "tranquillum";
+      
+      //return "core";
+
+//      return "tranquillum";
 
    }
 
 
-
-   
-   __namespace_application_factory("app-simple/form");
+} // namespace complex_form
 
 
-} // namespace simple_form
 
-
-//
-//extern "C"
-//::acme::library * app_simple_form_get_new_library()
-//{
-//
-//   return new ::apex::single_application_library < ::simple_form::application >("app-simple/form");
-//
-//}
-//
-//
-//aura_app aura_app_simple_form("app-simple/form", &app_simple_form_get_new_library);
-//
-//

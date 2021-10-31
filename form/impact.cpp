@@ -2,16 +2,14 @@
 #include <math.h>
 
 
-namespace simple_form
+namespace complex_form
 {
 
 
    impact::impact()
    {
 
-
       payload(FONTSEL_IMPACT) = true;
-
 
       m_flagNonClient.erase(non_client_background);
       m_flagNonClient.erase(non_client_focus_rect);
@@ -41,6 +39,9 @@ namespace simple_form
    }
 
 
+#ifdef _DEBUG
+
+
    int64_t impact::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
@@ -56,6 +57,9 @@ namespace simple_form
 
    }
    
+
+#endif
+
    
    void impact::install_message_routing(::channel * psender)
    {
@@ -74,10 +78,14 @@ namespace simple_form
 
       pcreate->previous();
 
-      if(pcreate->m_bRet)
+      if (pcreate->m_bRet)
+      {
+
          return;
 
-      string strId = get_document()->m_pimpactsystem->m_strMatter;
+      }
+
+      string strId = get_document()->m_pimpactsystem->m_id;
 
       string strText;
 
@@ -139,8 +147,7 @@ namespace simple_form
    }
 
 
-
-} // namespace simple_form
+} // namespace complex_form
 
 
 

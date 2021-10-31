@@ -26,7 +26,4 @@ namespace complex_drawing
 
 
 
-#include "application.h"
-
-
 

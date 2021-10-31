@@ -18,20 +18,20 @@ list(APPEND library_source
    frame.h
    framework.cpp
    framework.h
+   impact.cpp
+   impact.h
    main_frame.cpp
    main_frame.h
    main_impact.cpp
    main_impact.h
-   tab_view.cpp
-   tab_view.h
-   impact.cpp
-   impact.h
+   pane_view.cpp
+   pane_view.h
    )
 
 add_library(app_complex_form ${library_source})
 
 
-target_link_libraries(app_complex_form PRIVATE
+list(APPEND library_references
    acme
    apex
    aqua
@@ -39,6 +39,8 @@ target_link_libraries(app_complex_form PRIVATE
    axis
    base
    app_simple_form
+   bred
+   core
    )
 
 
@@ -50,11 +52,11 @@ if (MSVC)
    target_compile_options(app_complex_form PRIVATE "/MD$<$<CONFIG:Debug>:d>")
    target_link_options(app_complex_form PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
    target_link_options(app_complex_form PRIVATE "/SUBSYSTEM:WINDOWS")
-   target_link_libraries(app_complex_form PRIVATE acme apex aqua aura axis base)
+   target_link_libraries(app_complex_form PRIVATE ${library_references})
    add_dependencies(app_complex_form draw2d_gdiplus imaging_wic)
 elseif (LINUX)
    target_compile_options(app_complex_form PRIVATE -fpermissive)
-   #target_link_options(app_complex_form PRIVATE -Wl,-rpath=$ORIGIN)
+   target_link_libraries(app_complex_form PRIVATE ${library_references})
    target_link_options(app_complex_form PRIVATE -Wl,-z,defs)
 endif ()
 
@@ -75,10 +77,21 @@ target_include_directories(app_complex_form PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/
 target_include_directories(app_complex_form PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 
-target_compile_definitions(app_complex_form PRIVATE _APP_SIMPLE_FORM_LIBRARY)
+target_compile_definitions(app_complex_form PRIVATE _APP_COMPLEX_FORM_LIBRARY)
 
 
 add_executable(_app_complex_form _.cpp)
+
+target_include_directories(_app_complex_form PRIVATE ${library_include_directories})
+
+target_link_directories(_app_complex_form PRIVATE ${library_link_directories})
+
+
+list(APPEND executable_references
+   acme
+   apex
+   app_complex_form
+   )
 
 
 if (MSVC)
@@ -86,13 +99,12 @@ if (MSVC)
    target_compile_options(_app_complex_form PRIVATE "/MD$<$<CONFIG:Debug>:d>")
    target_link_options(_app_complex_form PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
    target_link_options(_app_complex_form PRIVATE "/SUBSYSTEM:WINDOWS")
-   target_link_libraries(_app_complex_form PRIVATE ${library_references})
+   target_link_libraries(_app_complex_form PRIVATE ${executable_references})
 
 elseif (LINUX)
 
    target_compile_options(_app_complex_form PRIVATE -fpermissive)
-   #target_link_options(_app_complex_form PRIVATE -Wl,-rpath=$ORIGIN)
-   target_link_libraries(_app_complex_form PRIVATE ${library_references})
+   target_link_libraries(_app_complex_form PRIVATE ${executable_references})
    target_link_options(_app_complex_form PRIVATE -Wl,-z,defs)
 
 endif ()
@@ -106,16 +118,7 @@ add_dependencies(_app_complex_form ${app_common_dependencies})
 add_dependencies(_app_complex_form experience_core)
 
 
-target_include_directories(_app_complex_form PRIVATE ${library_include_directories})
-
-target_link_directories(_app_complex_form PRIVATE ${library_link_directories})
-
-target_link_libraries(_app_complex_form PRIVATE acme apex app_complex_form)
-
 set_target_properties(_app_complex_form PROPERTIES LINKER_LANGUAGE CXX)
-
-
-
 
 
 
