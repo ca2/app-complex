@@ -1,19 +1,11 @@
-//
-// Created by camilo on 2021-06-10 15:05 BRT <3 Thomas Borregaard Sørensen __!!
-//
 #include "framework.h"
+#define SYSTEM core
+#define APPLICATION complex_drawing
+#define __APP_ID "app-complex/drawing"
+#if defined(WINDOWS_DESKTOP) && defined(CUBE)
+#include "_static_factory_exchange.inl"
+#endif
 #include "aura/application.h"
-
-
-namespace complex_drawing
-{
-
-
-   __namespace_application_factory("app-complex/drawing");
-
-
-} // namespace complex_drawing
-
 
 
 

@@ -185,18 +185,21 @@
       <PreserveSBR>false</PreserveSBR>
     </Bscmake>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>build_helper $(ProjectDir)</Command>
     </PostBuildEvent>
     <CustomBuildStep>
-      <Command>$(__archive)tool-windows\program\app._.exe "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
+      <Command>
+      </Command>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Outputs>$(OutDir)$(TargetName).exe</Outputs>
+      <Outputs>
+      </Outputs>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Inputs>$(OutDir)app.exe;$(OutDir)$(TargetName)$(TargetExt)</Inputs>
-      <TreatOutputAsContent>true</TreatOutputAsContent>
+      <Inputs>
+      </Inputs>
+      <TreatOutputAsContent>
+      </TreatOutputAsContent>
     </CustomBuildStep>
     <CustomBuildStep />
     <Xdcmake>
@@ -293,20 +296,23 @@
       <PreserveSBR>false</PreserveSBR>
     </Bscmake>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>build_helper $(ProjectDir)</Command>
     </PostBuildEvent>
     <CustomBuildStep>
-      <Command>$(__archive)tool-windows\program\app._.exe "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
+      <Command>
+      </Command>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Outputs>$(OutDir)$(TargetName).exe</Outputs>
+      <Outputs>
+      </Outputs>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Inputs>$(OutDir)app.exe;$(OutDir)$(TargetName)$(TargetExt)</Inputs>
+      <Inputs>
+      </Inputs>
     </CustomBuildStep>
     <CustomBuildStep>
-      <TreatOutputAsContent>true</TreatOutputAsContent>
+      <TreatOutputAsContent>
+      </TreatOutputAsContent>
     </CustomBuildStep>
     <Xdcmake>
       <DocumentLibraryDependencies>false</DocumentLibraryDependencies>
@@ -390,14 +396,20 @@
       <PreserveSBR>false</PreserveSBR>
     </Bscmake>
     <CustomBuildStep>
-      <Command>$(__archive)tool-windows\program\app._.exe "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
+      <Command>
+      </Command>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Outputs>$(OutDir)$(TargetName).exe</Outputs>
+      <Outputs>
+      </Outputs>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Inputs>$(OutDir)app.exe;$(OutDir)$(TargetName)$(TargetExt)</Inputs>
+      <Inputs>
+      </Inputs>
     </CustomBuildStep>
+    <PostBuildEvent>
+      <Command>build_helper $(ProjectDir)</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='stage|x64'">
     <PreBuildEvent>
@@ -486,14 +498,20 @@
       <PreserveSBR>false</PreserveSBR>
     </Bscmake>
     <CustomBuildStep>
-      <Command>$(__archive)tool-windows\program\app._.exe "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
+      <Command>
+      </Command>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Outputs>$(OutDir)$(TargetName).exe</Outputs>
+      <Outputs>
+      </Outputs>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Inputs>$(OutDir)app.exe;$(OutDir)$(TargetName)$(TargetExt)</Inputs>
+      <Inputs>
+      </Inputs>
     </CustomBuildStep>
+    <PostBuildEvent>
+      <Command>build_helper $(ProjectDir)</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include=".\videocapture_application.cpp" />

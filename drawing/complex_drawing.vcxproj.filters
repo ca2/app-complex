@@ -46,4 +46,12 @@
   <ItemGroup>
     <ResourceCompile Include="..\..\..\archive\platform-windows\version.rc" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="deps.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="matter.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
 </Project>
