@@ -6,7 +6,7 @@ namespace complex_form
 
 
    class CLASS_DECL_APP_COMPLEX_FORM impact :
-      virtual public ::simple_form::impact
+      virtual public ::app_simple_form::impact
    {
    public:
 

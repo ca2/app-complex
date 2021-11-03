@@ -1,12 +1,12 @@
 #pragma once
 
 
-namespace complex_drawing
+namespace app_complex_drawing
 {
 
 
    class CLASS_DECL_APP_COMPLEX_DRAWING pane_view :
-      virtual public application_pane_tab_view < application, ::userex::pane_tab_view, ::simple_drawing::tab_view >
+      virtual public application_pane_tab_view < application, ::userex::pane_tab_view, ::app_simple_drawing::tab_view >
    {
    public:
 

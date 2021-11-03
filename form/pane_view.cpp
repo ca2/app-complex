@@ -40,7 +40,7 @@ namespace complex_form
    void pane_view::install_message_routing(::channel * pchannel)
    {
 
-      ::simple_form::tab_view::install_message_routing(pchannel);
+      ::app_simple_form::tab_view::install_message_routing(pchannel);
 
       MESSAGE_LINK(e_message_create, pchannel, this, &pane_view::on_message_create);
 
@@ -94,7 +94,7 @@ namespace complex_form
    {
 
       //::userex::pane_pane_view::on_change_cur_sel();
-      ::simple_form::tab_view::on_change_cur_sel();
+      ::app_simple_form::tab_view::on_change_cur_sel();
 
       string strId = get_view_id();
       string_array stra;
@@ -173,7 +173,7 @@ namespace complex_form
 
       }
 
-      ::simple_form::tab_view::on_create_impact(pimpactdata);
+      ::app_simple_form::tab_view::on_create_impact(pimpactdata);
 
       ::userex::pane_tab_view::on_create_impact(pimpactdata);
 
@@ -218,7 +218,7 @@ namespace complex_form
 
       }
 
-      ::simple_form::tab_view::handle(psubject, pcontext);
+      ::app_simple_form::tab_view::handle(psubject, pcontext);
 
    }
 

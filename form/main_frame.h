@@ -6,7 +6,7 @@ namespace complex_form
 
 
    class CLASS_DECL_APP_COMPLEX_FORM main_frame :
-      virtual public simple_form::main_frame
+      virtual public app_simple_form::main_frame
    {
    public:
 

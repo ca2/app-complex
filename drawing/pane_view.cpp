@@ -3,7 +3,7 @@
 #include "base/user/user/tab_pane.h"
 
 
-namespace complex_drawing
+namespace app_complex_drawing
 {
 
 

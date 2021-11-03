@@ -20,7 +20,7 @@ namespace user
 } // namespace user
 
 
-namespace simple_form
+namespace app_simple_form
 {
 
    class application;

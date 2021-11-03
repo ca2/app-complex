@@ -22,7 +22,7 @@ namespace complex_form
    void form_002::assert_valid() const
    {
 
-      ::simple_form::form_002::assert_valid();
+      ::app_simple_form::form_002::assert_valid();
 
    }
 
@@ -30,7 +30,7 @@ namespace complex_form
    void form_002::dump(dump_context & dumpcontext) const
    {
 
-      ::simple_form::form_002::dump(dumpcontext);
+      ::app_simple_form::form_002::dump(dumpcontext);
 
    }
 
@@ -60,7 +60,7 @@ namespace complex_form
    void form_002::install_message_routing(::channel * psender)
    {
 
-      ::simple_form::form_002::install_message_routing(psender);
+      ::app_simple_form::form_002::install_message_routing(psender);
 
       form::install_message_routing(psender);
 
@@ -133,7 +133,7 @@ namespace complex_form
    void form_002::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      ::simple_form::form_002::on_layout(pgraphics);
+      ::app_simple_form::form_002::on_layout(pgraphics);
 
 //      double iLeft = 100.;
 //
@@ -212,7 +212,7 @@ namespace complex_form
 //
 //      }
 
-      ::simple_form::form_002::handle(psubject, pcontext);
+      ::app_simple_form::form_002::handle(psubject, pcontext);
 
    }
 

@@ -12,7 +12,7 @@
 #endif
 
 
-namespace complex_drawing
+namespace app_complex_drawing
 {
 
    

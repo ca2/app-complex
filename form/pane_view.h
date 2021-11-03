@@ -6,7 +6,7 @@ namespace complex_form
 
 
    class CLASS_DECL_APP_COMPLEX_FORM pane_view :
-      virtual public application_pane_tab_view < application, ::userex::pane_tab_view, ::simple_form::tab_view >
+      virtual public application_pane_tab_view < application, ::userex::pane_tab_view, ::app_simple_form::tab_view >
    {
    public:
 

@@ -2,7 +2,7 @@
 #include "aura/update.h"
 
 
-namespace complex_drawing
+namespace app_complex_drawing
 {
 
 
@@ -50,9 +50,9 @@ namespace complex_drawing
 
       puser->will_use_view_hint(FONTSEL_IMPACT);
 
-      create_factory <::complex_drawing::pane_view >();
+      create_factory <::app_complex_drawing::pane_view >();
 
-      if (!::simple_drawing::application::init_instance())
+      if (!::app_simple_drawing::application::init_instance())
       {
 
          return false;
