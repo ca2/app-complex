@@ -1222,6 +1222,7 @@
     <ClCompile Include="main_impact.cpp" />
     <ClCompile Include="impact.cpp" />
     <ClCompile Include="pane_view.cpp" />
+    <ClCompile Include="_.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="form.h" />

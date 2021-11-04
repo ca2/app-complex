@@ -3,7 +3,7 @@
 #include "aura/update.h"
 
 
-namespace complex_form
+namespace app_complex_form
 {
 
 
@@ -223,7 +223,7 @@ namespace complex_form
    }
 
 
-} // namespace complex_form
+} // namespace app_complex_form
 
 
 
