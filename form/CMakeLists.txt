@@ -3,6 +3,7 @@ project(app_complex_form CXX)
 
 
 list(APPEND library_source
+   _.cpp
    _.h
    application.cpp
    application.h
@@ -80,7 +81,7 @@ target_include_directories(app_complex_form PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_compile_definitions(app_complex_form PRIVATE _APP_COMPLEX_FORM_LIBRARY)
 
 
-add_executable(_app_complex_form _.cpp)
+add_executable(_app_complex_form _main.cpp)
 
 target_include_directories(_app_complex_form PRIVATE ${library_include_directories})
 
