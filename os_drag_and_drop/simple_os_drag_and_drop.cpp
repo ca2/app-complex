@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include <math.h>
 
 CLASS_DECL_AURA color32_t dk_red(); // <3 tbs

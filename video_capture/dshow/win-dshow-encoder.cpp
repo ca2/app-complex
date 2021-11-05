@@ -1,4 +1,4 @@
-#include "dshowcapture.hpp"
+﻿#include "dshowcapture.hpp"
 #include "common.h"
 
 using namespace DShow;

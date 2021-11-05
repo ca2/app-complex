@@ -1,4 +1,4 @@
-//
+﻿//
 //  videocapture_render.cpp
 //  app_core_videocapture
 //

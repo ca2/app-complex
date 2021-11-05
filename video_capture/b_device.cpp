@@ -1,4 +1,4 @@
-#include "Common.h"
+﻿#include "Common.h"
 //#include "BufferLock.h"
 
 const ::u32 NUM_BACK_BUFFERS = 2;

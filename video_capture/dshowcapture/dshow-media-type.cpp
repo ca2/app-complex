@@ -1,4 +1,4 @@
-/*
+﻿/*
  *  Copyright (C) 2014 Hugh Bailey <obs.jim@gmail.com>
  *
  *  This library is free software; you can redistribute it and/or
