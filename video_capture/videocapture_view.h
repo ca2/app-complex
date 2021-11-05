@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 //#include <mfcaptureengine.h>
 //class CaptureManager;

@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 const ::u32 WM_APP_PREVIEW_ERROR = WM_APP + 1;    // wparam = HRESULT
 

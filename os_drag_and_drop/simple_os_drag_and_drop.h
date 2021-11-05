@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 
 namespace simple_os_drag_and_drop

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * aver_prophwencode.h  --  This header filer is provide to 3rd party AP
  * to use the HW encode function of AVerMedia.
  *

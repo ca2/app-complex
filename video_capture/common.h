@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "media-io/audio-io.h"
 #include "media-io/video-io.h"

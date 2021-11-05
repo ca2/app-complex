@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 
 #include "app-simple/drawing/_app_simple_drawing.h"

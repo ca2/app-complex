@@ -1,4 +1,4 @@
-#include <d3d9.h>
+﻿#include <d3d9.h>
 #include <Windows.h>
 #undef GET_X_LPARAM
 #undef GET_Y_LPARAM

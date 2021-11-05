@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright (c) 2015 Hugh Bailey <obs.jim@gmail.com>
  *
  * Permission to use, copy, modify, and distribute this software for any
