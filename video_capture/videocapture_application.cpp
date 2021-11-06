@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 
 //void throw_a_::exception::exception_through_one_single_function_boundary(string str)
 //{

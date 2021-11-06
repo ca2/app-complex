@@ -1,4 +1,4 @@
-﻿#include <objbase.h>
+#include <objbase.h>
 
 //#include <obs-module.h>
 //#include <obs.hpp>

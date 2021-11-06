@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 #include "base/user/user/tab_pane.h"
 #include "aura/update.h"
 

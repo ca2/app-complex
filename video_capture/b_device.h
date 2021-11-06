@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 // Function pointer for the function that transforms the pimage->
 
