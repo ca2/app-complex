@@ -51,9 +51,6 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="uwp_app_simple_form_TemporaryKey.pfx">
-      <Filter>UWP</Filter>
-    </None>
     <None Include="..\..\..\archive\storage-universal_windows\binary\x64\basis\libcrypto-1_1-x64.dll">
       <Filter>Library\x64\basis</Filter>
     </None>
@@ -72,22 +69,22 @@
     <None Include="..\..\..\archive\storage-universal_windows\third\binary\x64\basis\zlib.dll">
       <Filter>Library\x64\basis</Filter>
     </None>
-    <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\bzip2.dll">
+    <None Include="uwp_app_complex_form_TemporaryKey.pfx">
+      <Filter>UWP</Filter>
+    </None>
+    <None Include="..\..\..\..\archive\storage-universal_windows\Win32\basis\binary\libcrypto-3.dll">
       <Filter>Library\Win32\basis</Filter>
     </None>
-    <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\pcre.dll">
+    <None Include="..\..\..\..\archive\storage-universal_windows\Win32\basis\binary\libssl-3.dll">
       <Filter>Library\Win32\basis</Filter>
     </None>
-    <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\sqlite.dll">
+    <None Include="..\..\..\..\archive\storage-universal_windows\Win32\basis\third\binary\pcre.dll">
       <Filter>Library\Win32\basis</Filter>
     </None>
-    <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\zlib.dll">
+    <None Include="..\..\..\..\archive\storage-universal_windows\Win32\basis\third\binary\sqlite.dll">
       <Filter>Library\Win32\basis</Filter>
     </None>
-    <None Include="..\..\..\archive\storage-universal_windows\binary\Win32\basis\libcrypto-1_1.dll">
-      <Filter>Library\Win32\basis</Filter>
-    </None>
-    <None Include="..\..\..\archive\storage-universal_windows\binary\Win32\basis\libssl-1_1.dll">
+    <None Include="..\..\..\..\archive\storage-universal_windows\Win32\basis\third\binary\zlib.dll">
       <Filter>Library\Win32\basis</Filter>
     </None>
   </ItemGroup>
@@ -110,9 +107,6 @@
     <Filter Include="UWP">
       <UniqueIdentifier>{19996d9b-ff1a-4dea-899f-ac30beeb022f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\universal_windows">
-      <UniqueIdentifier>{75f2922d-d8de-405e-9d04-f130964922ec}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Library\x64">
       <UniqueIdentifier>{3e95a251-4f53-427a-a9e5-78749d03eb72}</UniqueIdentifier>
     </Filter>
@@ -126,10 +120,10 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="universal_windows\main.cpp">
-      <Filter>Source Files\universal_windows</Filter>
-    </ClCompile>
     <ClCompile Include="framework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="_app_complex_form.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -53,21 +53,23 @@
   <ItemGroup>
     <ClInclude Include="application.h" />
     <ClInclude Include="document.h" />
+    <ClInclude Include="form.h" />
+    <ClInclude Include="form_001.h" />
+    <ClInclude Include="form_002.h" />
     <ClInclude Include="frame.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="main_frame.h" />
     <ClInclude Include="main_impact.h" />
-    <ClInclude Include="simple_form_001.h" />
-    <ClInclude Include="simple_form_002.h" />
-    <ClInclude Include="tab_view.h" />
     <ClInclude Include="impact.h" />
+    <ClInclude Include="pane_view.h" />
     <ClInclude Include="_.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="001.cpp" />
-    <ClCompile Include="002.cpp" />
     <ClCompile Include="application.cpp" />
     <ClCompile Include="document.cpp" />
+    <ClCompile Include="form.cpp" />
+    <ClCompile Include="form_001.cpp" />
+    <ClCompile Include="form_002.cpp" />
     <ClCompile Include="frame.cpp" />
     <ClCompile Include="framework.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">Create</PrecompiledHeader>
@@ -85,14 +87,17 @@
     </ClCompile>
     <ClCompile Include="main_frame.cpp" />
     <ClCompile Include="main_impact.cpp" />
-    <ClCompile Include="simple_form.cpp" />
-    <ClCompile Include="tab_view.cpp" />
     <ClCompile Include="impact.cpp" />
+    <ClCompile Include="pane_view.cpp" />
+    <ClCompile Include="_.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="u_app_simple_form.def" />
+    <None Include="u_app_complex_form.def" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\app-simple\form\u_app_simple_form.vcxproj">
+      <Project>{4324ba4a-fae3-42fe-8a09-1fba4bc0d688}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\app\acme\u_acme.vcxproj">
       <Project>{74a3ea71-9358-4441-a0cc-d5771df8dfbd}</Project>
     </ProjectReference>
@@ -111,12 +116,18 @@
     <ProjectReference Include="..\..\app\base\u_base.vcxproj">
       <Project>{0680a465-39a7-4e1b-8dc1-0607a3243ea2}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\app\bred\u_bred.vcxproj">
+      <Project>{08c317fc-6ee8-4371-84cb-18150e439021}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\app\core\u_core.vcxproj">
+      <Project>{65070f1f-14db-474e-96de-cb920740dcc4}</Project>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{2917AC89-E863-41D4-B386-9EA78AA8BE65}</ProjectGuid>
     <Keyword>DynamicLibrary</Keyword>
-    <ProjectName>app_simple_form</ProjectName>
-    <RootNamespace>simple_form_simple_form</RootNamespace>
+    <ProjectName>app_complex_form</ProjectName>
+    <RootNamespace>app-complex</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
@@ -325,7 +336,7 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <CompileAsWinRT>false</CompileAsWinRT>
-      <PreprocessorDefinitions>_APP_SIMPLE_FORM_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_APP_COMPLEX_FORM_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__archive)local/include;$(__archive)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__archive)third-universal_windows/include;$(__archive)third-universal_windows/third/include;$(__archive)third-universal_windows/third/include/include;$(SolutionDir)../../../archive/platform-universal_windows/_include;$(SolutionDir)../../../archive/platform-universal_windows;$(SolutionDir)../../../archive/platform-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/third/include;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
@@ -356,7 +367,7 @@
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
-      <PreprocessorDefinitions>_APP_SIMPLE_FORM_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_APP_COMPLEX_FORM_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CompileAsManaged>false</CompileAsManaged>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -425,7 +436,7 @@
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
-      <PreprocessorDefinitions>_APP_SIMPLE_FORM_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_APP_COMPLEX_FORM_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
@@ -449,7 +460,7 @@
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
-      <PreprocessorDefinitions>_APP_SIMPLE_FORM_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_APP_COMPLEX_FORM_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
@@ -472,7 +483,7 @@
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
-      <PreprocessorDefinitions>_APP_SIMPLE_FORM_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_APP_COMPLEX_FORM_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CompileAsManaged>false</CompileAsManaged>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -518,7 +529,7 @@
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
-      <PreprocessorDefinitions>_APP_SIMPLE_FORM_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_APP_COMPLEX_FORM_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CompileAsManaged>false</CompileAsManaged>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -565,7 +576,7 @@
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
-      <PreprocessorDefinitions>_APP_SIMPLE_FORM_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_APP_COMPLEX_FORM_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
@@ -589,7 +600,7 @@
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
-      <PreprocessorDefinitions>_APP_SIMPLE_FORM_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_APP_COMPLEX_FORM_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CompileAsManaged>false</CompileAsManaged>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>

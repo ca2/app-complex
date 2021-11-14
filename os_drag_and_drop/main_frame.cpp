@@ -16,7 +16,7 @@ namespace simple_os_drag_and_drop
 
       window_enable_full_screen();
 
-      //m_bWindowFrame = !papplication->has_property("client_only");
+      //m_bWindowFrame = !papplication->m_bExperienceMainFrame;
 
       //if (papplication->has_property("opaque"))
       //{
