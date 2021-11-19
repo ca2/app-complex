@@ -38,6 +38,9 @@
     <None Include="..\..\..\..\archive\storage-universal_windows\Win32\basis\third\binary\zlib.dll">
       <Filter>Library\Win32\basis</Filter>
     </None>
+    <None Include="_matter.zip">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Assets">
