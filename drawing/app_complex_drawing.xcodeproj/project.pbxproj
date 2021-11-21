@@ -22,7 +22,6 @@
 		9A42DB9726667D560011645D /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42DB9626667D560011645D /* libaxis.dylib */; };
 		9A42DB9926667D560011645D /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42DB9826667D560011645D /* libbase.dylib */; };
 		9A42DB9B26667D7F0011645D /* libbred.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42DB9A26667D7F0011645D /* libbred.dylib */; };
-		9A42DB9C26667D7F0011645D /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42DB8A26667D240011645D /* libcore.dylib */; };
 		9A42DB9D26667E510011645D /* libapp_simple_drawing.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42DB7826667CF60011645D /* libapp_simple_drawing.dylib */; };
 		9AEA1C682679797F006F4A68 /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA1C652679797F006F4A68 /* _.cpp */; };
 /* End PBXBuildFile section */
@@ -56,20 +55,6 @@
 			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
 			remoteInfo = app_simple_drawing;
 		};
-		9A42DB8926667D240011645D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A42DB8526667D240011645D /* core.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AE63304252A5A0300BED5B8;
-			remoteInfo = core;
-		};
-		9A42DB8B26667D3B0011645D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A42DB8526667D240011645D /* core.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9AE63303252A5A0300BED5B8;
-			remoteInfo = core;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -83,7 +68,6 @@
 		9A42DB3526667BD20011645D /* pane_view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pane_view.cpp; sourceTree = "<group>"; };
 		9A42DB3D26667BD20011645D /* _.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
 		9A42DB7126667CF60011645D /* app_simple_drawing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_drawing.xcodeproj; path = "../../app-simple/drawing/app_simple_drawing.xcodeproj"; sourceTree = "<group>"; };
-		9A42DB8526667D240011645D /* core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = core.xcodeproj; path = ../../app/core/core.xcodeproj; sourceTree = "<group>"; };
 		9A42DB8E26667D560011645D /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A42DB9026667D560011645D /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A42DB9226667D560011645D /* libaqua.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaqua.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,7 +88,6 @@
 				9A42DB9726667D560011645D /* libaxis.dylib in Frameworks */,
 				9A42DB9926667D560011645D /* libbase.dylib in Frameworks */,
 				9A42DB9B26667D7F0011645D /* libbred.dylib in Frameworks */,
-				9A42DB9C26667D7F0011645D /* libcore.dylib in Frameworks */,
 				9A42DB8F26667D560011645D /* libacme.dylib in Frameworks */,
 				9A42DB9126667D560011645D /* libapex.dylib in Frameworks */,
 				9A42DB9326667D560011645D /* libaqua.dylib in Frameworks */,
@@ -118,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				9A42DB7126667CF60011645D /* app_simple_drawing.xcodeproj */,
-				9A42DB8526667D240011645D /* core.xcodeproj */,
 				9A42DA4A26667BD00011645D /* drawing */,
 				9A42DA3F26667B9E0011645D /* Products */,
 				9A42DB8D26667D560011645D /* Frameworks */,
@@ -155,14 +137,6 @@
 				9A42DB7826667CF60011645D /* libapp_simple_drawing.dylib */,
 				9A42DB7A26667CF60011645D /* libios_app_simple_drawing.a */,
 				9A42DB7C26667CF60011645D /* app_core_hellomultiverse_iosTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		9A42DB8626667D240011645D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9A42DB8A26667D240011645D /* libcore.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,7 +184,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				9A42DB8C26667D3B0011645D /* PBXTargetDependency */,
 				9A42DB8426667D100011645D /* PBXTargetDependency */,
 			);
 			name = app_complex_drawing;
@@ -247,10 +220,6 @@
 					ProductGroup = 9A42DB7226667CF60011645D /* Products */;
 					ProjectRef = 9A42DB7126667CF60011645D /* app_simple_drawing.xcodeproj */;
 				},
-				{
-					ProductGroup = 9A42DB8626667D240011645D /* Products */;
-					ProjectRef = 9A42DB8526667D240011645D /* core.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -281,13 +250,6 @@
 			remoteRef = 9A42DB7B26667CF60011645D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A42DB8A26667D240011645D /* libcore.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = libcore.dylib;
-			remoteRef = 9A42DB8926667D240011645D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -309,11 +271,6 @@
 			isa = PBXTargetDependency;
 			name = app_simple_drawing;
 			targetProxy = 9A42DB8326667D100011645D /* PBXContainerItemProxy */;
-		};
-		9A42DB8C26667D3B0011645D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = core;
-			targetProxy = 9A42DB8B26667D3B0011645D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

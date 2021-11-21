@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1300"
+   LastUpgradeVersion = "1310"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -46,10 +46,19 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "070B8EE91B6E53F900D26137"
             BuildableName = "_app_simple_form.app"
+            BlueprintName = "_app_complex_form"
+            ReferencedContainer = "container:_app_complex_form.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "070B8EE91B6E53F900D26137"
+            BuildableName = "_app_simple_form.app"
             BlueprintName = "_app_simple_form"
             ReferencedContainer = "container:_app_simple_form.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
