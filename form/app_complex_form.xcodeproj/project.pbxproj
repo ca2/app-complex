@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9AC020CB2748F1C6006BEBCC /* form.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC01F752748F1B7006BEBCC /* form.cpp */; };
+		9AC020CD2748F1C6006BEBCC /* document.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC020B52748F1C1006BEBCC /* document.h */; };
+		9AC020D12748F1C6006BEBCC /* main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC01F912748F1B8006BEBCC /* main_frame.cpp */; };
+		9AC020D22748F1C6006BEBCC /* form.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC01F9B2748F1B8006BEBCC /* form.h */; };
+		9AC020D32748F1C6006BEBCC /* frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC020C82748F1C6006BEBCC /* frame.h */; };
+		9AC020D92748F1C6006BEBCC /* application.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC01FA92748F1B9006BEBCC /* application.h */; };
+		9AC020E52748F1C6006BEBCC /* main_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC020B32748F1C1006BEBCC /* main_frame.h */; };
+		9AC020F02748F1C6006BEBCC /* impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC020B82748F1C2006BEBCC /* impact.cpp */; };
+		9AC020F62748F1C6006BEBCC /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC020252748F1BB006BEBCC /* _.cpp */; };
+		9AC020F72748F1C6006BEBCC /* form_002.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC020272748F1BB006BEBCC /* form_002.h */; };
+		9AC020F82748F1C6006BEBCC /* pane_view.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC020282748F1BB006BEBCC /* pane_view.h */; };
+		9AC020F92748F1C6006BEBCC /* _app_complex_form.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC020292748F1BB006BEBCC /* _app_complex_form.h */; };
+		9AC020FF2748F1C6006BEBCC /* form_002.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC020512748F1BD006BEBCC /* form_002.cpp */; };
+		9AC021042748F1C6006BEBCC /* form_001.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0205B2748F1BD006BEBCC /* form_001.cpp */; };
+		9AC021072748F1C6006BEBCC /* form_001.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC020672748F1BE006BEBCC /* form_001.h */; };
+		9AC021092748F1C6006BEBCC /* pane_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC020872748F1BF006BEBCC /* pane_view.cpp */; };
+		9AC0210E2748F1C6006BEBCC /* _.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC020962748F1C0006BEBCC /* _.h */; };
+		9AC022A62748F7A4006BEBCC /* frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC022A32748F7A4006BEBCC /* frame.cpp */; };
+		9AC022A72748F7A4006BEBCC /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC022A42748F7A4006BEBCC /* application.cpp */; };
+		9AC022A82748F7A4006BEBCC /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC022A52748F7A4006BEBCC /* framework.cpp */; };
+		9AC022AD2748F7DF006BEBCC /* main_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC022A92748F7DF006BEBCC /* main_impact.cpp */; };
+		9AC022AE2748F7DF006BEBCC /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC022AA2748F7DF006BEBCC /* framework.h */; };
+		9AC022AF2748F7DF006BEBCC /* impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC022AB2748F7DF006BEBCC /* impact.h */; };
+		9AC022B02748F7DF006BEBCC /* main_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC022AC2748F7DF006BEBCC /* main_impact.h */; };
+		9AC022B22748F814006BEBCC /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC022B12748F814006BEBCC /* document.cpp */; };
+		9AC022B82748FABC006BEBCC /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC022B72748FABC006BEBCC /* libacme.dylib */; };
+		9AC022BA2748FABC006BEBCC /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC022B92748FABC006BEBCC /* libapex.dylib */; };
+		9AC022BC2748FABC006BEBCC /* libaqua.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC022BB2748FABC006BEBCC /* libaqua.dylib */; };
+		9AC022BE2748FABC006BEBCC /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC022BD2748FABC006BEBCC /* libaura.dylib */; };
+		9AC022C02748FABC006BEBCC /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC022BF2748FABC006BEBCC /* libaxis.dylib */; };
+		9AC022C22748FABC006BEBCC /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC022C12748FABC006BEBCC /* libbase.dylib */; };
+		9AC022C42748FABC006BEBCC /* libbred.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC022C32748FABC006BEBCC /* libbred.dylib */; };
+		9AC022C52748FABC006BEBCC /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC0228C2748F1F5006BEBCC /* libcore.dylib */; };
+		9AC022C62748FAC9006BEBCC /* libapp_simple_form.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC022952748F21F006BEBCC /* libapp_simple_form.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9AC0228B2748F1F5006BEBCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC022872748F1F5006BEBCC /* core.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE63304252A5A0300BED5B8;
+			remoteInfo = core;
+		};
+		9AC022942748F21F006BEBCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC0228D2748F21E006BEBCC /* app_simple_form.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
+			remoteInfo = app_simple_form;
+		};
+		9AC022962748F21F006BEBCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC0228D2748F21E006BEBCC /* app_simple_form.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE24E8A1904CFFD001AEFFB;
+			remoteInfo = ios_app_simple_form;
+		};
+		9AC022982748F21F006BEBCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC0228D2748F21E006BEBCC /* app_simple_form.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE24E991904CFFD001AEFFB;
+			remoteInfo = app_core_hellomultiverse_iosTests;
+		};
+		9AC0229F2748F3AC006BEBCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC0228D2748F21E006BEBCC /* app_simple_form.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
+			remoteInfo = app_simple_form;
+		};
+		9AC022A12748F3B7006BEBCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC022872748F1F5006BEBCC /* core.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AE63303252A5A0300BED5B8;
+			remoteInfo = core;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9AC01F652748F177006BEBCC /* libapp_complex_form.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapp_complex_form.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC01F752748F1B7006BEBCC /* form.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = form.cpp; sourceTree = "<group>"; };
+		9AC01F912748F1B8006BEBCC /* main_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main_frame.cpp; sourceTree = "<group>"; };
+		9AC01F9B2748F1B8006BEBCC /* form.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = form.h; sourceTree = "<group>"; };
+		9AC01FA92748F1B9006BEBCC /* application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
+		9AC020252748F1BB006BEBCC /* _.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _.cpp; sourceTree = "<group>"; };
+		9AC020272748F1BB006BEBCC /* form_002.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = form_002.h; sourceTree = "<group>"; };
+		9AC020282748F1BB006BEBCC /* pane_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pane_view.h; sourceTree = "<group>"; };
+		9AC020292748F1BB006BEBCC /* _app_complex_form.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _app_complex_form.h; sourceTree = "<group>"; };
+		9AC020512748F1BD006BEBCC /* form_002.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = form_002.cpp; sourceTree = "<group>"; };
+		9AC0205B2748F1BD006BEBCC /* form_001.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = form_001.cpp; sourceTree = "<group>"; };
+		9AC020672748F1BE006BEBCC /* form_001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = form_001.h; sourceTree = "<group>"; };
+		9AC020872748F1BF006BEBCC /* pane_view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pane_view.cpp; sourceTree = "<group>"; };
+		9AC020962748F1C0006BEBCC /* _.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
+		9AC020B32748F1C1006BEBCC /* main_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main_frame.h; sourceTree = "<group>"; };
+		9AC020B52748F1C1006BEBCC /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = document.h; sourceTree = "<group>"; };
+		9AC020B82748F1C2006BEBCC /* impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = impact.cpp; sourceTree = "<group>"; };
+		9AC020C82748F1C6006BEBCC /* frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = frame.h; sourceTree = "<group>"; };
+		9AC022872748F1F5006BEBCC /* core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = core.xcodeproj; path = ../../app/core/core.xcodeproj; sourceTree = "<group>"; };
+		9AC0228D2748F21E006BEBCC /* app_simple_form.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_form.xcodeproj; path = "../../app-simple/form/app_simple_form.xcodeproj"; sourceTree = "<group>"; };
+		9AC022A32748F7A4006BEBCC /* frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = frame.cpp; sourceTree = "<group>"; };
+		9AC022A42748F7A4006BEBCC /* application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
+		9AC022A52748F7A4006BEBCC /* framework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
+		9AC022A92748F7DF006BEBCC /* main_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main_impact.cpp; sourceTree = "<group>"; };
+		9AC022AA2748F7DF006BEBCC /* framework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
+		9AC022AB2748F7DF006BEBCC /* impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = impact.h; sourceTree = "<group>"; };
+		9AC022AC2748F7DF006BEBCC /* main_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main_impact.h; sourceTree = "<group>"; };
+		9AC022B12748F814006BEBCC /* document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = document.cpp; sourceTree = "<group>"; };
+		9AC022B72748FABC006BEBCC /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC022B92748FABC006BEBCC /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC022BB2748FABC006BEBCC /* libaqua.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaqua.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC022BD2748FABC006BEBCC /* libaura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC022BF2748FABC006BEBCC /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC022C12748FABC006BEBCC /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC022C32748FABC006BEBCC /* libbred.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbred.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9AC01F632748F177006BEBCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AC022C62748FAC9006BEBCC /* libapp_simple_form.dylib in Frameworks */,
+				9AC022B82748FABC006BEBCC /* libacme.dylib in Frameworks */,
+				9AC022BA2748FABC006BEBCC /* libapex.dylib in Frameworks */,
+				9AC022BC2748FABC006BEBCC /* libaqua.dylib in Frameworks */,
+				9AC022BE2748FABC006BEBCC /* libaura.dylib in Frameworks */,
+				9AC022C02748FABC006BEBCC /* libaxis.dylib in Frameworks */,
+				9AC022C22748FABC006BEBCC /* libbase.dylib in Frameworks */,
+				9AC022C42748FABC006BEBCC /* libbred.dylib in Frameworks */,
+				9AC022C52748FABC006BEBCC /* libcore.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9AC01F5C2748F177006BEBCC = {
+			isa = PBXGroup;
+			children = (
+				9AC0228D2748F21E006BEBCC /* app_simple_form.xcodeproj */,
+				9AC022872748F1F5006BEBCC /* core.xcodeproj */,
+				9AC01F6C2748F1B7006BEBCC /* form */,
+				9AC01F662748F177006BEBCC /* Products */,
+				9AC022B62748FABC006BEBCC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9AC01F662748F177006BEBCC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AC01F652748F177006BEBCC /* libapp_complex_form.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AC01F6C2748F1B7006BEBCC /* form */ = {
+			isa = PBXGroup;
+			children = (
+				9AC020252748F1BB006BEBCC /* _.cpp */,
+				9AC020962748F1C0006BEBCC /* _.h */,
+				9AC020292748F1BB006BEBCC /* _app_complex_form.h */,
+				9AC022A42748F7A4006BEBCC /* application.cpp */,
+				9AC01FA92748F1B9006BEBCC /* application.h */,
+				9AC022B12748F814006BEBCC /* document.cpp */,
+				9AC020B52748F1C1006BEBCC /* document.h */,
+				9AC0205B2748F1BD006BEBCC /* form_001.cpp */,
+				9AC020672748F1BE006BEBCC /* form_001.h */,
+				9AC020512748F1BD006BEBCC /* form_002.cpp */,
+				9AC020272748F1BB006BEBCC /* form_002.h */,
+				9AC01F752748F1B7006BEBCC /* form.cpp */,
+				9AC01F9B2748F1B8006BEBCC /* form.h */,
+				9AC022A32748F7A4006BEBCC /* frame.cpp */,
+				9AC020C82748F1C6006BEBCC /* frame.h */,
+				9AC022A52748F7A4006BEBCC /* framework.cpp */,
+				9AC022AA2748F7DF006BEBCC /* framework.h */,
+				9AC020B82748F1C2006BEBCC /* impact.cpp */,
+				9AC022AB2748F7DF006BEBCC /* impact.h */,
+				9AC01F912748F1B8006BEBCC /* main_frame.cpp */,
+				9AC020B32748F1C1006BEBCC /* main_frame.h */,
+				9AC022A92748F7DF006BEBCC /* main_impact.cpp */,
+				9AC022AC2748F7DF006BEBCC /* main_impact.h */,
+				9AC020872748F1BF006BEBCC /* pane_view.cpp */,
+				9AC020282748F1BB006BEBCC /* pane_view.h */,
+			);
+			name = form;
+			sourceTree = "<group>";
+		};
+		9AC022882748F1F5006BEBCC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AC0228C2748F1F5006BEBCC /* libcore.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AC0228E2748F21E006BEBCC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AC022952748F21F006BEBCC /* libapp_simple_form.dylib */,
+				9AC022972748F21F006BEBCC /* libapp_simple_form.a */,
+				9AC022992748F21F006BEBCC /* app_core_hellomultiverse_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AC022B62748FABC006BEBCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AC022B72748FABC006BEBCC /* libacme.dylib */,
+				9AC022B92748FABC006BEBCC /* libapex.dylib */,
+				9AC022BB2748FABC006BEBCC /* libaqua.dylib */,
+				9AC022BD2748FABC006BEBCC /* libaura.dylib */,
+				9AC022BF2748FABC006BEBCC /* libaxis.dylib */,
+				9AC022C12748FABC006BEBCC /* libbase.dylib */,
+				9AC022C32748FABC006BEBCC /* libbred.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9AC01F612748F177006BEBCC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AC022AF2748F7DF006BEBCC /* impact.h in Headers */,
+				9AC020D32748F1C6006BEBCC /* frame.h in Headers */,
+				9AC020CD2748F1C6006BEBCC /* document.h in Headers */,
+				9AC020F72748F1C6006BEBCC /* form_002.h in Headers */,
+				9AC0210E2748F1C6006BEBCC /* _.h in Headers */,
+				9AC022AE2748F7DF006BEBCC /* framework.h in Headers */,
+				9AC020D22748F1C6006BEBCC /* form.h in Headers */,
+				9AC020F82748F1C6006BEBCC /* pane_view.h in Headers */,
+				9AC020F92748F1C6006BEBCC /* _app_complex_form.h in Headers */,
+				9AC021072748F1C6006BEBCC /* form_001.h in Headers */,
+				9AC020D92748F1C6006BEBCC /* application.h in Headers */,
+				9AC022B02748F7DF006BEBCC /* main_impact.h in Headers */,
+				9AC020E52748F1C6006BEBCC /* main_frame.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9AC01F642748F177006BEBCC /* app_complex_form */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AC01F692748F177006BEBCC /* Build configuration list for PBXNativeTarget "app_complex_form" */;
+			buildPhases = (
+				9AC01F612748F177006BEBCC /* Headers */,
+				9AC01F622748F177006BEBCC /* Sources */,
+				9AC01F632748F177006BEBCC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AC022A22748F3B7006BEBCC /* PBXTargetDependency */,
+				9AC022A02748F3AC006BEBCC /* PBXTargetDependency */,
+			);
+			name = app_complex_form;
+			productName = app_complex_form;
+			productReference = 9AC01F652748F177006BEBCC /* libapp_complex_form.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9AC01F5D2748F177006BEBCC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					9AC01F642748F177006BEBCC = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 9AC01F602748F177006BEBCC /* Build configuration list for PBXProject "app_complex_form" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9AC01F5C2748F177006BEBCC;
+			productRefGroup = 9AC01F662748F177006BEBCC /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9AC0228E2748F21E006BEBCC /* Products */;
+					ProjectRef = 9AC0228D2748F21E006BEBCC /* app_simple_form.xcodeproj */;
+				},
+				{
+					ProductGroup = 9AC022882748F1F5006BEBCC /* Products */;
+					ProjectRef = 9AC022872748F1F5006BEBCC /* core.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				9AC01F642748F177006BEBCC /* app_complex_form */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9AC0228C2748F1F5006BEBCC /* libcore.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libcore.dylib;
+			remoteRef = 9AC0228B2748F1F5006BEBCC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AC022952748F21F006BEBCC /* libapp_simple_form.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libapp_simple_form.dylib;
+			remoteRef = 9AC022942748F21F006BEBCC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AC022972748F21F006BEBCC /* libapp_simple_form.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libapp_simple_form.a;
+			remoteRef = 9AC022962748F21F006BEBCC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AC022992748F21F006BEBCC /* app_core_hellomultiverse_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = app_core_hellomultiverse_iosTests.xctest;
+			remoteRef = 9AC022982748F21F006BEBCC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9AC01F622748F177006BEBCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AC020D12748F1C6006BEBCC /* main_frame.cpp in Sources */,
+				9AC021042748F1C6006BEBCC /* form_001.cpp in Sources */,
+				9AC022A82748F7A4006BEBCC /* framework.cpp in Sources */,
+				9AC022A72748F7A4006BEBCC /* application.cpp in Sources */,
+				9AC020F62748F1C6006BEBCC /* _.cpp in Sources */,
+				9AC020F02748F1C6006BEBCC /* impact.cpp in Sources */,
+				9AC020CB2748F1C6006BEBCC /* form.cpp in Sources */,
+				9AC022AD2748F7DF006BEBCC /* main_impact.cpp in Sources */,
+				9AC022B22748F814006BEBCC /* document.cpp in Sources */,
+				9AC022A62748F7A4006BEBCC /* frame.cpp in Sources */,
+				9AC021092748F1C6006BEBCC /* pane_view.cpp in Sources */,
+				9AC020FF2748F1C6006BEBCC /* form_002.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9AC022A02748F3AC006BEBCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = app_simple_form;
+			targetProxy = 9AC0229F2748F3AC006BEBCC /* PBXContainerItemProxy */;
+		};
+		9AC022A22748F3B7006BEBCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = core;
+			targetProxy = 9AC022A12748F3B7006BEBCC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9AC01F672748F177006BEBCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++2a";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = framework.h;
+				GCC_PREPROCESSOR_DEFINITIONS = _DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "@executable_path";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(WorkspaceDir)/archive",
+					"$(WorkspaceDir)/archive/storage-$(PLATFORM_MODIFIER)/library/$(ARCHS)/$(CONFIGURATION)",
+					"$(WorkspaceDir)/archive/storage-$(PLATFORM_MODIFIER)/third/library/$(ARCHS)/$(CONFIGURATION)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-all_load";
+				PLATFORM_MODIFIER = macos;
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/archive",
+					"$(WorkspaceDir)/archive/third-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/archive/third-$(PLATFORM_MODIFIER)/third/include/include",
+					"$(WorkspaceDir)/archive/third-$(PLATFORM_MODIFIER)/third/include",
+					"$(WorkspaceDir)/source/third/include",
+					"$(WorkspaceDir)/source/app",
+				);
+				USER_HEADER_SEARCH_PATHS = (
+					.,
+					"$(WorkspaceDir)/source",
+					"$(WorkspaceDir)/source/include",
+					"$(WorkspaceDir)/source/app",
+					"$(WorkspaceDir)/source/app/_include",
+					"$(WorkspaceDir)/archive",
+					"$(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER)",
+					"$(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER)/_include",
+					"$(WorkspaceDir)/source/third/include",
+					"$(WorkspaceDir)/archive/third-$(PLATFORM_MODIFIER)/third/include/include",
+					"$(WorkspaceDir)/archive/third-$(PLATFORM_MODIFIER)/third/include",
+					"$(PROJECT_DIR)",
+					"$(HOME)/sensitive/sensitive/include",
+				);
+				USE_HEADERMAP = NO;
+				WorkspaceDir = "$(SRCROOT)/../../..";
+			};
+			name = Debug;
+		};
+		9AC01F682748F177006BEBCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++2a";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = framework.h;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "@executable_path";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(WorkspaceDir)/archive",
+					"$(WorkspaceDir)/archive/storage-$(PLATFORM_MODIFIER)/library/$(ARCHS)/$(CONFIGURATION)",
+					"$(WorkspaceDir)/archive/storage-$(PLATFORM_MODIFIER)/third/library/$(ARCHS)/$(CONFIGURATION)",
+					"$(WorkspaceDir)/archive",
+					"$(WorkspaceDir)/archive/storage-$(PLATFORM_MODIFIER)/third/library/$(ARCHS)/$(CONFIGURATION)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-all_load";
+				PLATFORM_MODIFIER = macos;
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/archive",
+					"$(WorkspaceDir)/archive/third-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/archive/third-$(PLATFORM_MODIFIER)/third/include/include",
+					"$(WorkspaceDir)/archive/third-$(PLATFORM_MODIFIER)/third/include",
+					"$(WorkspaceDir)/source/third/include",
+					"$(WorkspaceDir)/source/app",
+				);
+				USER_HEADER_SEARCH_PATHS = (
+					.,
+					"$(WorkspaceDir)/source",
+					"$(WorkspaceDir)/source/include",
+					"$(WorkspaceDir)/source/app",
+					"$(WorkspaceDir)/source/app/_include",
+					"$(WorkspaceDir)/archive",
+					"$(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER)",
+					"$(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER)/_include",
+					"$(WorkspaceDir)/source/third/include",
+					"$(WorkspaceDir)/archive/third-$(PLATFORM_MODIFIER)/third/include/include",
+					"$(WorkspaceDir)/archive/third-$(PLATFORM_MODIFIER)/third/include",
+					"$(PROJECT_DIR)",
+					"$(HOME)/sensitive/sensitive/include",
+				);
+				USE_HEADERMAP = NO;
+				VALIDATE_PRODUCT = YES;
+				WorkspaceDir = "$(SRCROOT)/../../..";
+			};
+			name = Release;
+		};
+		9AC01F6A2748F177006BEBCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L8N5V6TZE5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/nsisExamples/Plugin/nsis",
+				);
+				PLATFORM_MODIFIER = macos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9AC01F6B2748F177006BEBCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L8N5V6TZE5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/nsisExamples/Plugin/nsis",
+				);
+				PLATFORM_MODIFIER = macos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9AC01F602748F177006BEBCC /* Build configuration list for PBXProject "app_complex_form" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AC01F672748F177006BEBCC /* Debug */,
+				9AC01F682748F177006BEBCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AC01F692748F177006BEBCC /* Build configuration list for PBXNativeTarget "app_complex_form" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AC01F6A2748F177006BEBCC /* Debug */,
+				9AC01F6B2748F177006BEBCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9AC01F5D2748F177006BEBCC /* Project object */;
+}
