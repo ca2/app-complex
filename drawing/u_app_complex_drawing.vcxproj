@@ -75,9 +75,7 @@
     <ClCompile Include="pane_view.cpp" />
     <ClCompile Include="_.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="u_app_complex_drawing.def" />
-  </ItemGroup>
+  
   <ItemGroup>
     <ProjectReference Include="..\..\app-simple\drawing\u_app_simple_drawing.vcxproj">
       <Project>{cac77a44-c0fa-49ed-8373-1e101f53d2d6}</Project>

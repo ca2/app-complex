@@ -60,15 +60,15 @@ namespace app_complex_form
 
       //puser->will_use_view_hint(FONTSEL_IMPACT);
 
-      create_factory <::app_complex_form::document >();
-      create_factory <::app_complex_form::frame >();
-      create_factory <::app_complex_form::main_frame >();
-      create_factory <::user::button_view >();
-      create_factory <::app_complex_form::impact >();
-      create_factory <::app_complex_form::main_impact >();
-      create_factory <::app_complex_form::pane_view >();
-      create_factory <::app_complex_form::form_001 >();
-      create_factory <::app_complex_form::form_002 >();
+      ::factory::add_factory_item <::app_complex_form::document >();
+      ::factory::add_factory_item <::app_complex_form::frame >();
+      ::factory::add_factory_item <::app_complex_form::main_frame >();
+      ::factory::add_factory_item <::user::button_view >();
+      ::factory::add_factory_item <::app_complex_form::impact >();
+      ::factory::add_factory_item <::app_complex_form::main_impact >();
+      ::factory::add_factory_item <::app_complex_form::pane_view >();
+      ::factory::add_factory_item <::app_complex_form::form_001 >();
+      ::factory::add_factory_item <::app_complex_form::form_002 >();
 
       if (!::base::application::init_instance())
       {

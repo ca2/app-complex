@@ -91,9 +91,7 @@
     <ClCompile Include="pane_view.cpp" />
     <ClCompile Include="_.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="u_app_complex_form.def" />
-  </ItemGroup>
+  
   <ItemGroup>
     <ProjectReference Include="..\..\app-simple\form\u_app_simple_form.vcxproj">
       <Project>{4324ba4a-fae3-42fe-8a09-1fba4bc0d688}</Project>

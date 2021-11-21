@@ -65,9 +65,7 @@
     <ClCompile Include="simple_drag_and_drop_view.cpp" />
     <ClCompile Include="simple_drag_and_drop_view_base.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="simple_drag_and_drop_simple_drag_and_drop.def" />
-  </ItemGroup>
+  
   <ItemGroup>
     <ProjectReference Include="..\..\..\source\app\ace\w_ace.vcxproj">
       <Project>{e8826c3e-de08-4292-b797-4802c710e2c3}</Project>

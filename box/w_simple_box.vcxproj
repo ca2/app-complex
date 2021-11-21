@@ -65,9 +65,7 @@
     <ClCompile Include="impact.cpp" />
     <ClCompile Include="view_base.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="simple_message_box.def" />
-  </ItemGroup>
+  
   <ItemGroup>
     <ProjectReference Include="..\..\..\source\app\ace\w_ace.vcxproj">
       <Project>{e8826c3e-de08-4292-b797-4802c710e2c3}</Project>

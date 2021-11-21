@@ -738,9 +738,7 @@
     <ClInclude Include="impact.h" />
     <ClInclude Include="_.h" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="app_simple_drag_and_drop.def" />
-  </ItemGroup>
+  
   <ItemGroup>
     <ResourceCompile Include="..\..\..\archive\platform-windows\version.rc" />
   </ItemGroup>

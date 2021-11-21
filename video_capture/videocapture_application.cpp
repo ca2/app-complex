@@ -70,16 +70,16 @@ namespace video_capture
    ::e_status application::init_instance()
    {
       
-      create_factory <::video_capture::document >();
-      create_factory <::video_capture::frame >();
-      create_factory <::video_capture::main_frame >();
-      create_factory <::video_capture::edit_view >();
-      create_factory <::user::button_view >();
-      create_factory <::video_capture::impact >();
-      create_factory <::video_capture::main_impact >();
-      create_factory <::video_capture::pane_view >();
-      create_factory <::video_capture::top_view >();
-      create_factory <::video_capture::toggle_view >();
+      ::factory::add_factory_item <::video_capture::document >();
+      ::factory::add_factory_item <::video_capture::frame >();
+      ::factory::add_factory_item <::video_capture::main_frame >();
+      ::factory::add_factory_item <::video_capture::edit_view >();
+      ::factory::add_factory_item <::user::button_view >();
+      ::factory::add_factory_item <::video_capture::impact >();
+      ::factory::add_factory_item <::video_capture::main_impact >();
+      ::factory::add_factory_item <::video_capture::pane_view >();
+      ::factory::add_factory_item <::video_capture::top_view >();
+      ::factory::add_factory_item <::video_capture::toggle_view >();
 
       if (!::aura::application::init_instance())
       {

@@ -33,8 +33,8 @@ namespace notify_drawing
 
       puser->will_use_view_hint(FONTSEL_IMPACT);
 
-      create_factory <::notify_drawing::main_frame >();
-      create_factory <::notify_drawing::impact >();
+      add_factory_item <::notify_drawing::main_frame >();
+      add_factory_item <::notify_drawing::impact >();
 
       if (!::simple_drawing::application::init_instance())
       {

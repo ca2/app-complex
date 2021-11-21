@@ -35,9 +35,9 @@ namespace simple_application
 
       set_local_data();
 
-      create_factory <::simple_application::document >();
-      create_factory <::simple_application::main_frame >();
-      create_factory <::simple_application::impact >();
+      add_factory_item <::simple_application::document >();
+      add_factory_item <::simple_application::main_frame >();
+      add_factory_item <::simple_application::impact >();
 
       if (!::aura::application::init_instance())
       {

@@ -25,9 +25,9 @@ namespace helloworld
    bool application::initialize_application()
    {
 
-      create_factory <::helloworld::document >();
-      create_factory <::helloworld::frame >();
-      create_factory <::helloworld::impact >();
+      add_factory_item <::helloworld::document >();
+      add_factory_item <::helloworld::frame >();
+      add_factory_item <::helloworld::impact >();
 
       if(!::aura::application::initialize_application())
          return false;

@@ -40,7 +40,7 @@ namespace app_complex_form
    ::experience::frame * main_frame::experience_get_frame()
    {
 
-      auto pframe = get_frame_experience(nullptr, "008", "LightBlue");
+      auto pframe = frame_experience(nullptr, "008", "LightBlue");
 
       return pframe;
 

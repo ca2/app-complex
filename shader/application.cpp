@@ -87,12 +87,12 @@ namespace simple_shader
 
       puser->will_use_view_hint(FONTSEL_IMPACT);
 
-      create_factory <::simple_shader::document >();
-      create_factory <::simple_shader::frame >();
-      create_factory <::simple_shader::main_frame >();
-      create_factory <::user::button_view >();
-      create_factory <::simple_shader::impact >();
-      create_factory <::simple_shader::tab_view >();
+      add_factory_item <::simple_shader::document >();
+      add_factory_item <::simple_shader::frame >();
+      add_factory_item <::simple_shader::main_frame >();
+      add_factory_item <::user::button_view >();
+      add_factory_item <::simple_shader::impact >();
+      add_factory_item <::simple_shader::tab_view >();
 
       default_toggle_check_handling(id_simple_checkbox);
 

@@ -728,9 +728,7 @@
       <Project>{3f1119cf-6041-4ae9-970e-4ddab57c5e48}</Project>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="app_simple_notify_drawing.def" />
-  </ItemGroup>
+  
   <ItemGroup>
     <ResourceCompile Include="..\..\..\archive\platform-windows\version.rc" />
   </ItemGroup>

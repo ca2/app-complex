@@ -34,13 +34,13 @@ namespace simple_os_drag_and_drop
 
       pcoression->will_use_view_hint(FONTSEL_IMPACT);
 
-      create_factory <::simple_os_drag_and_drop::document >();
-      create_factory <::simple_os_drag_and_drop::frame >();
-      create_factory <::simple_os_drag_and_drop::main_frame >();
-      create_factory <::user::button_view >();
-      create_factory <::simple_os_drag_and_drop::impact >();
-      create_factory <::simple_os_drag_and_drop::main_impact >();
-      create_factory <::simple_os_drag_and_drop::tab_view >();
+      add_factory_item <::simple_os_drag_and_drop::document >();
+      add_factory_item <::simple_os_drag_and_drop::frame >();
+      add_factory_item <::simple_os_drag_and_drop::main_frame >();
+      add_factory_item <::user::button_view >();
+      add_factory_item <::simple_os_drag_and_drop::impact >();
+      add_factory_item <::simple_os_drag_and_drop::main_impact >();
+      add_factory_item <::simple_os_drag_and_drop::tab_view >();
 
       if (!::aura::application::init_instance())
       {

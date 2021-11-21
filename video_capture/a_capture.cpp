@@ -193,7 +193,7 @@ CaptureManager::InitializeCaptureManager(HWND hwndPreview, IMFCaptureEngineOnSam
       goto Exit;
    }
 
-   // Create the factory object for the capture engine.
+   // Create the factory_item object for the capture engine.
    hr = CoCreateInstance(CLSID_MFCaptureEngineClassFactory, nullptr,
       CLSCTX_INPROC_SERVER, IID_PPV_ARGS(&pFactory));
    if (FAILED(hr))

@@ -50,7 +50,7 @@ namespace app_complex_drawing
 
       puser->will_use_view_hint(FONTSEL_IMPACT);
 
-      create_factory <::app_complex_drawing::pane_view >();
+      ::factory::add_factory_item <::app_complex_drawing::pane_view >();
 
       if (!::app_simple_drawing::application::init_instance())
       {

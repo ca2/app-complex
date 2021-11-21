@@ -46,7 +46,7 @@ namespace simple_application
 
       auto & user = User;
 
-      auto pframe = get_frame_experience(nullptr, "013", "LightBlue");
+      auto pframe = frame_experience(nullptr, "013", "LightBlue");
 
       return pframe;
 
