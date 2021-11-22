@@ -42,7 +42,7 @@ if (MSVC)
    target_link_options(app_complex_drawing PRIVATE "/SUBSYSTEM:WINDOWS")
    target_link_libraries(app_complex_drawing PRIVATE ${library_references})
 
-elseif (LINUX)
+elseif(LINUX OR FREEBSD)
 
    target_compile_options(app_complex_drawing PRIVATE -fpermissive)
    #target_link_options(app_complex_drawing PRIVATE -Wl,-rpath=$ORIGIN)
@@ -89,7 +89,7 @@ if (MSVC)
    target_link_options(_app_complex_drawing PRIVATE "/SUBSYSTEM:WINDOWS")
    target_link_libraries(_app_complex_drawing PRIVATE ${executable_references})
 
-elseif (LINUX)
+elseif(LINUX OR FREEBSD)
 
    target_compile_options(_app_complex_drawing PRIVATE -fpermissive)
    #target_link_options(_app_complex_drawing PRIVATE -Wl,-rpath=$ORIGIN)
