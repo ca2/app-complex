@@ -41,12 +41,12 @@ namespace simple_application
    }
 
 
-   ::experience::frame * main_frame::experience_get_frame()
+   ::experience::frame * main_frame::frame_experience()
    {
 
       auto & user = User;
 
-      auto pframe = frame_experience(nullptr, "013", "LightBlue");
+      auto pframe = ::simple_main_frame::frame_experience(nullptr, "013", "LightBlue");
 
       return pframe;
 

@@ -60,10 +60,10 @@ namespace simple_os_drag_and_drop
    }
 
 
-   ::experience::frame * main_frame::experience_get_frame()
+   ::experience::frame * main_frame::frame_experience()
    {
 
-      auto pframe = papplication->experience()->experience_get_frame(NULL, "013", "LightBlue");
+      auto pframe = papplication->experience()->frame_experience(NULL, "013", "LightBlue");
 
       return pframe;
 
