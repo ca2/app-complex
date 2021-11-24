@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "070B8EE91B6E53F900D26137"
-            BuildableName = "_app_simple_form.app"
+            BuildableName = "_app_complex_form.app"
             BlueprintName = "_app_complex_form"
             ReferencedContainer = "container:_app_complex_form.xcodeproj">
          </BuildableReference>

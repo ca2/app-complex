@@ -713,13 +713,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../app/draw2d_quartz2d/draw2d_quartz2d_factory_exchange.cpp"
+            filePath = "../../app/draw2d_quartz2d/draw2d_quartz2d_factory.cpp"
             timestampString = "587010530.367015"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
             endingLineNumber = "31"
-            landmarkName = "draw2d_factory_exchange(::object * pobject)"
+            landmarkName = "draw2d_factory(::object * pobject)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
