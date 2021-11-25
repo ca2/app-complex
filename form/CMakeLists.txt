@@ -91,8 +91,34 @@ target_link_directories(_app_complex_form PRIVATE ${library_link_directories})
 list(APPEND executable_references
    acme
    apex
+   aqua
+   aura
+   axis
+   base
+   bred
+   core
    app_complex_form
    )
+
+
+if(LINUX)
+
+
+   add_custom_command(
+      TARGET ${PROJECT_NAME}
+      POST_BUILD
+      WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+      COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
+      COMMAND ld -r -b binary -o ${PROJECT_BINARY_DIR}/_matter.zip.o _matter.zip
+   )
+
+
+   list(APPEND executable_references ${PROJECT_BINARY_DIR}/_matter.zip.o)
+
+
+endif()
+
+add_dependencies(_${PROJECT_NAME} folder_zip)
 
 
 if (MSVC)
