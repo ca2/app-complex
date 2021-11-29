@@ -82,22 +82,24 @@ list(APPEND executable_references
    app_complex_drawing)
 
 
-if(LINUX)
+if(LINUX OR FREEBSD)
 
 
-   add_custom_command(
-      TARGET ${PROJECT_NAME}
-      POST_BUILD
-      WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
-      COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
-      COMMAND ld -r -b binary -o ${PROJECT_BINARY_DIR}/_matter.zip.o _matter.zip
-   )
+    add_custom_command(
+       TARGET ${PROJECT_NAME}
+       POST_BUILD
+       WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+       COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
+       COMMAND ld -r -b binary -o ${PROJECT_BINARY_DIR}/_matter.zip.o _matter.zip
+       VERBATIM
+    )
 
 
-   list(APPEND executable_references ${PROJECT_BINARY_DIR}/_matter.zip.o)
+    list(APPEND executable_references ${PROJECT_BINARY_DIR}/_matter.zip.o)
 
 
 endif()
+
 
 
 if (MSVC)
