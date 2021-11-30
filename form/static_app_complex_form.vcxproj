@@ -272,6 +272,9 @@
     <ProjectReference Include="..\..\app\experience_core\experience_core.vcxproj">
       <Project>{e2d7833b-9b59-4826-bbdf-c270a2115e86}</Project>
     </ProjectReference>
+    <ProjectReference Include="complex_form.vcxproj">
+      <Project>{9a40d3d5-9296-45d8-9842-de7f6eb46842}</Project>
+    </ProjectReference>
     <ProjectReference Include="simple_drawing.vcxproj">
       <Project>{3f1119cf-6041-4ae9-970e-4ddab57c5e48}</Project>
     </ProjectReference>

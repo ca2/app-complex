@@ -234,7 +234,7 @@ namespace video_capture
 
       path = pcontext->m_papexcontext->dir().appdata() / "videocapture_menu.html";
 
-      pcontext->m_papexcontext->file().put_contents(path, str);
+      pcontext->m_papexcontext->file().put_text(path, str);
 
       return path;
 
