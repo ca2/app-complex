@@ -84,9 +84,4 @@
       <UniqueIdentifier>{6d29a659-233d-4a35-9301-ee01694e8f92}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="u_app_complex_form.def">
-      <Filter>Source Files</Filter>
-    </None>
-  </ItemGroup>
 </Project>
