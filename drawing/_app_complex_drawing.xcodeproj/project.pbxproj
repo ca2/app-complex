@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		070B8F041B6E53FA00D26137 /* Hello_Multiverse__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */; };
 		07C6AA1C1CA4F16B00B4E555 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C6AA191CA4F16B00B4E555 /* Images.xcassets */; };
-		9A23A83B26CF407900F98012 /* libcrypto.1.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A23A83926CF407900F98012 /* libcrypto.1.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A23A83C26CF407900F98012 /* libssl.1.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A23A83A26CF407900F98012 /* libssl.1.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A23A83B26CF407900F98012 /* libcrypto.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A23A83926CF407900F98012 /* libcrypto.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A23A83C26CF407900F98012 /* libssl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A23A83A26CF407900F98012 /* libssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A2BB922271CA27E00EB0DDC /* libapp_simple_drawing.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42DA1226667AAB0011645D /* libapp_simple_drawing.dylib */; };
 		9A2BB923271CA27E00EB0DDC /* libapp_simple_drawing.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A42DA1226667AAB0011645D /* libapp_simple_drawing.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AC01F2E2748E60F006BEBCC /* _app_complex_drawing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC01F2D2748E606006BEBCC /* _app_complex_drawing.cpp */; };
@@ -242,8 +242,8 @@
 			files = (
 				9AC01F492748EBED006BEBCC /* libcrypto_openssl.dylib in Embed Libraries */,
 				9AEA1C3726796DA9006F4A68 /* libapp_complex_drawing.dylib in Embed Libraries */,
-				9A23A83B26CF407900F98012 /* libcrypto.1.1.dylib in Embed Libraries */,
-				9A23A83C26CF407900F98012 /* libssl.1.1.dylib in Embed Libraries */,
+				9A23A83B26CF407900F98012 /* libcrypto.dylib in Embed Libraries */,
+				9A23A83C26CF407900F98012 /* libssl.dylib in Embed Libraries */,
 				9AEA1C4D26796DAC006F4A68 /* libdraw2d_quartz2d.dylib in Embed Libraries */,
 				9AEA1C4526796DAB006F4A68 /* libbase.dylib in Embed Libraries */,
 				9AEA1C2D26796DA9006F4A68 /* libacme_posix.dylib in Embed Libraries */,
@@ -289,8 +289,8 @@
 		9A204B1D2433E91500D45614 /* libexperience_lite.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexperience_lite.dylib; path = "../../time-macos/library/Debug/libexperience_lite.dylib"; sourceTree = "<group>"; };
 		9A204B202433E91600D45614 /* libapp_simple_drawing.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libapp_simple_drawing.dylib; path = "../../time-macos/library/Debug/libapp_simple_drawing.dylib"; sourceTree = "<group>"; };
 		9A204B272433E91600D45614 /* libaura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaura.dylib; path = "../../time-macos/library/Debug/libaura.dylib"; sourceTree = "<group>"; };
-		9A23A83926CF407900F98012 /* libcrypto.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.1.1.dylib; path = "../../../archive/storage-macos/library/x86_64/Debug/libcrypto.1.1.dylib"; sourceTree = "<group>"; };
-		9A23A83A26CF407900F98012 /* libssl.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.1.1.dylib; path = "../../../archive/storage-macos/library/x86_64/Debug/libssl.1.1.dylib"; sourceTree = "<group>"; };
+		9A23A83926CF407900F98012 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = "../../../archive/storage-macos/library/x86_64/Debug/libcrypto.dylib"; sourceTree = "<group>"; };
+		9A23A83A26CF407900F98012 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = "../../../archive/storage-macos/library/x86_64/Debug/libssl.dylib"; sourceTree = "<group>"; };
 		9A417B29266686EB001FB663 /* experience_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_core.xcodeproj; path = ../../app/experience_core/experience_core.xcodeproj; sourceTree = "<group>"; };
 		9A42D8CE266669E40011645D /* database_sqlite3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = database_sqlite3.xcodeproj; path = ../../app/database_sqlite3/database_sqlite3.xcodeproj; sourceTree = "<group>"; };
 		9A42D8D4266669E50011645D /* draw2d_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = draw2d_quartz2d.xcodeproj; path = "../../../archive/platform-apple/draw2d_quartz2d/draw2d_quartz2d.xcodeproj"; sourceTree = "<group>"; };
@@ -508,8 +508,8 @@
 				9AEA1C1926796DA8006F4A68 /* libapex.dylib */,
 				9AEA1C1A26796DA8006F4A68 /* libapex_apple.dylib */,
 				9AEA1C1B26796DA8006F4A68 /* libapex_macos.dylib */,
-				9A23A83926CF407900F98012 /* libcrypto.1.1.dylib */,
-				9A23A83A26CF407900F98012 /* libssl.1.1.dylib */,
+				9A23A83926CF407900F98012 /* libcrypto.dylib */,
+				9A23A83A26CF407900F98012 /* libssl.dylib */,
 				9AEA1C1C26796DA8006F4A68 /* libapex_posix.dylib */,
 				9AEA1C1D26796DA8006F4A68 /* libaqua.dylib */,
 				9AEA1C1E26796DA8006F4A68 /* libaura.dylib */,
@@ -921,7 +921,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/archive",
-					"$(WorkspaceDir)/archive/storage-$(PLATFORM_MODIFIER)/library/$(ARCHS)/$(CONFIGURATION)",
+					"\"$(WorkspaceDir)/archive/storage-$(PLATFORM_MODIFIER)/library/$(ARCHS)/$(CONFIGURATION)\"",
+					"\"$(WorkspaceDir)/time-$(PLATFORM_MODIFIER)/$(ARCHS)/$(CONFIGURATION)\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -982,7 +983,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/archive",
-					"$(WorkspaceDir)/archive/storage-$(PLATFORM_MODIFIER)/library/$(ARCHS)/$(CONFIGURATION)",
+					"\"$(WorkspaceDir)/archive/storage-$(PLATFORM_MODIFIER)/library/$(ARCHS)/$(CONFIGURATION)\"",
+					"\"$(WorkspaceDir)/time-$(PLATFORM_MODIFIER)/$(ARCHS)/$(CONFIGURATION)\"",
 					"$(WorkspaceDir)/archive",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
