@@ -84,37 +84,43 @@ list(APPEND executable_references
 
 if(LINUX OR FREEBSD)
 
+   add_custom_command(
+      COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
+      COMMAND ${CMAKE_COMMAND} -E touch ${CMAKE_BINARY_DIR}/matter.timestamp
+      OUTPUT ${CMAKE_BINARY_DIR}/matter.timestamp
+      WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+      BYPRODUCTS ${PROJECT_SOURCE_DIR}/.link_object/_matter.zip.o
+      DEPENDS deps.txt matter.txt
+      VERBATIM
+   )
 
-    add_custom_command(
-       TARGET ${PROJECT_NAME}
-       POST_BUILD
-       WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
-       COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
-       COMMAND ld -r -b binary -o ${PROJECT_BINARY_DIR}/_matter.zip.o _matter.zip
-       VERBATIM
-    )
+   add_custom_target(${PROJECT_NAME}_matter
+      DEPENDS ${CMAKE_BINARY_DIR}/matter.timestamp
+      )
 
+   list(APPEND executable_references ${PROJECT_SOURCE_DIR}/.link_object/_matter.zip.o)
 
-    list(APPEND executable_references ${PROJECT_BINARY_DIR}/_matter.zip.o)
-
+   add_dependencies(_${PROJECT_NAME} ${PROJECT_NAME}_matter)
 
 endif()
 
 
-
 if (MSVC)
+
 
    target_compile_options(_app_complex_drawing PRIVATE "/MD$<$<CONFIG:Debug>:d>")
    target_link_options(_app_complex_drawing PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
    target_link_options(_app_complex_drawing PRIVATE "/SUBSYSTEM:WINDOWS")
    target_link_libraries(_app_complex_drawing PRIVATE ${executable_references})
 
+
 elseif(LINUX OR FREEBSD)
 
+
    target_compile_options(_app_complex_drawing PRIVATE -fpermissive)
-   #target_link_options(_app_complex_drawing PRIVATE -Wl,-rpath=$ORIGIN)
    target_link_libraries(_app_complex_drawing PRIVATE ${executable_references})
    target_link_options(_app_complex_drawing PRIVATE -Wl,-z,defs)
+
 
 endif ()
 
