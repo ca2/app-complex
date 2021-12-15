@@ -67,7 +67,7 @@ target_include_directories(app_complex_drawing PRIVATE ${library_include_directo
 target_compile_definitions(app_complex_drawing PRIVATE _APP_COMPLEX_DRAWING_LIBRARY)
 
 
-add_executable(_app_complex_drawing _app_complex_drawing.cpp)
+add_executable(_${PROJECT_NAME} _${PROJECT_NAME}_${UNDERSCORE_PLATFORM}.cpp)
 
 
 list(APPEND executable_references
