@@ -1,0 +1,6 @@
+platform-windows/draw2d_gdiplus
+app/experience_core
+platform-windows_common/imaging_wic
+platform-windows/node_windows
+platform-windows/windowing_win32
+platform-windows/write_text_win32

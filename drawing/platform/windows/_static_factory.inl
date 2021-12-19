@@ -5,4 +5,3 @@ do(imaging_wic); \
 do(node_windows); \
 do(windowing_win32); \
 do(write_text_win32);
-
