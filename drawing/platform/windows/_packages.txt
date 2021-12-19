@@ -1,8 +1,8 @@
 app-complex/app_complex_drawing
-platform-windows/draw2d_gdiplus
-app/experience_core
-platform-windows_common/imaging_wic
-platform-windows/node_windows
+app/core
+app/bred
+app/base
+app/axis
 app/aura
 app/aqua
 app/apex
@@ -16,7 +16,12 @@ platform-windows/apex_windows
 platform-windows_common/apex_windows_common
 platform-windows/aura_windows
 platform-windows_common/aura_windows_common
+platform-windows/node_windows
+platform-windows/windowing_win32
 app/crypto_openssl
 app/folder_zip
-platform-windows/windowing_win32
+app-simple/app_simple_drawing
+platform-windows/draw2d_gdiplus
+app/experience_core
+platform-windows_common/imaging_wic
 platform-windows/write_text_win32
