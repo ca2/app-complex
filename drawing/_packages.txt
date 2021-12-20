@@ -22,7 +22,7 @@ default_aura_platform3
 default_node
 app/crypto_openssl
 app/folder_zip
-app-simple/drawing
+app-simple/app_simple_drawing
 default_draw2d
 app/experience_core
 default_imaging

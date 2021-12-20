@@ -1,2 +1,2 @@
 app/core
-app-simple/app_simple_drawing
+app-simple/drawing
