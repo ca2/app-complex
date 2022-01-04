@@ -24,7 +24,6 @@
 		9A42DB9B26667D7F0011645D /* libbred.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42DB9A26667D7F0011645D /* libbred.dylib */; };
 		9A42DB9D26667E510011645D /* libapp_simple_drawing.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42DB7826667CF60011645D /* libapp_simple_drawing.dylib */; };
 		9A7F401F274D777000D914CC /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7F401E274D777000D914CC /* libcore.dylib */; };
-		9A7F4020274D777000D914CC /* libcore.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A7F401E274D777000D914CC /* libcore.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AEA1C682679797F006F4A68 /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA1C652679797F006F4A68 /* _.cpp */; };
 /* End PBXBuildFile section */
 
@@ -42,13 +41,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 9AE24E8A1904CFFD001AEFFB;
 			remoteInfo = ios_app_simple_drawing;
-		};
-		9A42DB7B26667CF60011645D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A42DB7126667CF60011645D /* app_simple_drawing.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AE24E991904CFFD001AEFFB;
-			remoteInfo = app_core_hellomultiverse_iosTests;
 		};
 		9A42DB8326667D100011645D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -72,20 +64,6 @@
 			remoteInfo = core;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		9A7F4021274D777000D914CC /* Embed Libraries */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				9A7F4020274D777000D914CC /* libcore.dylib in Embed Libraries */,
-			);
-			name = "Embed Libraries";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9A42DA3E26667B9E0011645D /* libapp_complex_drawing.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapp_complex_drawing.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,7 +148,6 @@
 			children = (
 				9A42DB7826667CF60011645D /* libapp_simple_drawing.dylib */,
 				9A42DB7A26667CF60011645D /* libios_app_simple_drawing.a */,
-				9A42DB7C26667CF60011645D /* app_core_hellomultiverse_iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,7 +201,6 @@
 				9A42DA3A26667B9E0011645D /* Headers */,
 				9A42DA3B26667B9E0011645D /* Sources */,
 				9A42DA3C26667B9E0011645D /* Frameworks */,
-				9A7F4021274D777000D914CC /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -291,13 +267,6 @@
 			fileType = archive.ar;
 			path = libios_app_simple_drawing.a;
 			remoteRef = 9A42DB7926667CF60011645D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9A42DB7C26667CF60011645D /* app_core_hellomultiverse_iosTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = app_core_hellomultiverse_iosTests.xctest;
-			remoteRef = 9A42DB7B26667CF60011645D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		9A7F4029274D80C400D914CC /* libcore.dylib */ = {
