@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		070B8F041B6E53FA00D26137 /* Hello_Multiverse__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */; };
+		9A4E96DC2785491900B74C76 /* libapp_complex_form.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AC0229C2748F22F006BEBCC /* libapp_complex_form.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8C64942783E9F2000C8587 /* _app_complex_form.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8C645E2783E9F2000C8587 /* _app_complex_form.cpp */; };
 		9A8C64C52783EA0D000C8587 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C64C02783EA0D000C8587 /* MainMenu.xib */; };
 		9A8C64C62783EA0D000C8587 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C64C22783EA0D000C8587 /* Images.xcassets */; };
@@ -248,6 +249,7 @@
 				9AC022CC27491258006BEBCC /* libapp_simple_form.dylib in Embed Libraries */,
 				9AEA1B812679469C006F4A68 /* libapex_posix.dylib in Embed Libraries */,
 				9AEA1B892679469C006F4A68 /* libaura_apple.dylib in Embed Libraries */,
+				9A4E96DC2785491900B74C76 /* libapp_complex_form.dylib in Embed Libraries */,
 				9AEA1B9D2679469E006F4A68 /* libnode_macos.dylib in Embed Libraries */,
 				9AEA1B7F2679469C006F4A68 /* libapex_macos.dylib in Embed Libraries */,
 				9AEA1B8F2679469D006F4A68 /* libaxis.dylib in Embed Libraries */,
