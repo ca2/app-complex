@@ -348,28 +348,6 @@
 		};
 /* End PBXReferenceProxy section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		9A81F18C274F452F003F38EC /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/application_matter.txt",
-				"$(SRCROOT)/matter.txt",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/bash;
-			shellScript = "$HOME/bin/application_build_helper $SRCROOT\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		9AC01F622748F177006BEBCC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
