@@ -27,5 +27,5 @@ app-simple/app_simple_form
 default_draw2d
 app/experience_core
 default_imaging
-default_windowing
 default_write_text
+default_windowing
