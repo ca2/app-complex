@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		070B8F041B6E53FA00D26137 /* Hello_Multiverse__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */; };
 		9A4E96DC2785491900B74C76 /* libapp_complex_form.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AC0229C2748F22F006BEBCC /* libapp_complex_form.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A4E96E72785592F00B74C76 /* libbred.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4E96E62785592F00B74C76 /* libbred.dylib */; };
+		9A4E96E82785592F00B74C76 /* libbred.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A4E96E62785592F00B74C76 /* libbred.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8C64942783E9F2000C8587 /* _app_complex_form.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8C645E2783E9F2000C8587 /* _app_complex_form.cpp */; };
 		9A8C64C52783EA0D000C8587 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C64C02783EA0D000C8587 /* MainMenu.xib */; };
 		9A8C64C62783EA0D000C8587 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C64C22783EA0D000C8587 /* Images.xcassets */; };
@@ -242,6 +244,7 @@
 				9AEA1B9F2679469E006F4A68 /* libwindowing_macos.dylib in Embed Libraries */,
 				9AEA1B952679469D006F4A68 /* libdraw2d_quartz2d.dylib in Embed Libraries */,
 				9AEA1B8D2679469D006F4A68 /* libaura_posix.dylib in Embed Libraries */,
+				9A4E96E82785592F00B74C76 /* libbred.dylib in Embed Libraries */,
 				9AEA1B9B2679469E006F4A68 /* libimaging_coreimage.dylib in Embed Libraries */,
 				9AEA1B992679469E006F4A68 /* libidn.dylib in Embed Libraries */,
 				9AEA1B7D2679469C006F4A68 /* libapex_apple.dylib in Embed Libraries */,
@@ -270,6 +273,7 @@
 		070B8F021B6E53FA00D26137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hello_Multiverse__Tests.m; sourceTree = "<group>"; };
 		9A42D7C3266597540011645D /* experience_tranquillum.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_tranquillum.xcodeproj; path = ../../app/experience_tranquillum/experience_tranquillum.xcodeproj; sourceTree = "<group>"; };
+		9A4E96E62785592F00B74C76 /* libbred.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbred.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8C645E2783E9F2000C8587 /* _app_complex_form.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _app_complex_form.cpp; sourceTree = "<group>"; };
 		9A8C64C12783EA0D000C8587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9A8C64C22783EA0D000C8587 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -314,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AC022C82748FAE5006BEBCC /* libcore.dylib in Frameworks */,
+				9A4E96E72785592F00B74C76 /* libbred.dylib in Frameworks */,
 				9AC022CB27491258006BEBCC /* libapp_simple_form.dylib in Frameworks */,
 				9AC022B32748F8BB006BEBCC /* libapp_complex_form.dylib in Frameworks */,
 				9AEA1B5D26794642006F4A68 /* libacme.dylib in Frameworks */,
@@ -501,6 +506,7 @@
 		9ADF1D4522C16E1600456537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A4E96E62785592F00B74C76 /* libbred.dylib */,
 				9A8C836A27845E92000C8587 /* libfolder_zip.dylib */,
 				9AC022CA27491258006BEBCC /* libapp_simple_form.dylib */,
 				9AC022C72748FAE5006BEBCC /* libcore.dylib */,
