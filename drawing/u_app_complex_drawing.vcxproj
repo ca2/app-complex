@@ -338,9 +338,7 @@
       </ModuleDefinitionFile>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
     </Link>
-    <PreBuildEvent>
-      <Command>%USERPROFILE%/bin/application_build_helper $(ProjectDir)</Command>
-    </PreBuildEvent>
+
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_basis|Win32'">
     <ClCompile>
@@ -393,9 +391,7 @@
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
     </Link>
-    <PreBuildEvent>
-      <Command>%USERPROFILE%/bin/application_build_helper $(ProjectDir)</Command>
-    </PreBuildEvent>
+
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_stage|Win32'">
     <ClCompile>
@@ -457,9 +453,7 @@
       <ModuleDefinitionFile>u_$(TargetName).def</ModuleDefinitionFile>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
     </Link>
-    <PreBuildEvent>
-      <Command>%USERPROFILE%/bin/application_build_helper $(ProjectDir)</Command>
-    </PreBuildEvent>
+
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_basis|arm'">
     <ClCompile>
@@ -510,9 +504,7 @@
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
     </Link>
-    <PreBuildEvent>
-      <Command>%USERPROFILE%/bin/application_build_helper $(ProjectDir)</Command>
-    </PreBuildEvent>
+
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_stage|arm'">
     <ClCompile>
@@ -564,9 +556,7 @@
       <ModuleDefinitionFile>u_$(TargetName).def</ModuleDefinitionFile>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
     </Link>
-    <PreBuildEvent>
-      <Command>%USERPROFILE%/bin/application_build_helper $(ProjectDir)</Command>
-    </PreBuildEvent>
+
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_basis|x64'">
     <ClCompile>
@@ -618,9 +608,7 @@
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
     </Link>
-    <PreBuildEvent>
-      <Command>%USERPROFILE%/bin/application_build_helper $(ProjectDir)</Command>
-    </PreBuildEvent>
+
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_stage|x64'">
     <ClCompile>
