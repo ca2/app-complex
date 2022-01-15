@@ -14,7 +14,7 @@ namespace app_complex_drawing
 
       
       application();
-      virtual ~application();
+      ~application() override;
 
 
       ::type get_pane_view_type() const override;

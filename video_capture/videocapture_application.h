@@ -35,10 +35,10 @@ namespace video_capture
       ::user::single_document_template *     m_ptemplateHelloMultiverseView;
 
       application();
-      virtual ~application();
+      ~application() override;
 
 
-      virtual ::e_status init_instance() override;
+      void init_instance() override;
       //virtual void exit_instance() override;
 
       virtual void on_request(::create * pcreate);

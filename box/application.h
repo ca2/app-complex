@@ -16,7 +16,7 @@ namespace simple_message_box
 
 
       application();
-      virtual ~application();
+      ~application() override;
 
       virtual void on_request(::create * pcreate) override;
 

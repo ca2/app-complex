@@ -67,7 +67,7 @@ namespace video_capture
    }
 
 
-   ::e_status application::init_instance()
+   void application::init_instance()
    {
       
       ::factory::add_factory_item <::video_capture::document >();

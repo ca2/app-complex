@@ -40,7 +40,7 @@ namespace app_complex_drawing
    }
 
 
-   ::e_status application::init_instance()
+   void application::init_instance()
    {
 
 

@@ -15,7 +15,7 @@ namespace helloworld
 
 
       application();
-      virtual ~application();
+      ~application() override;
 
 
       virtual bool initialize_application();
