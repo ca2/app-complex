@@ -52,18 +52,20 @@ namespace app_complex_drawing
 
       ::factory::add_factory_item <::app_complex_drawing::pane_view >();
 
-      if (!::app_simple_drawing::application::init_instance())
-      {
+      ::app_simple_drawing::application::init_instance();
 
-         return false;
+      //if (!::app_simple_drawing::application::init_instance())
+      //{
 
-      }
+      //   return false;
+
+      //}
 
       properties().m_strMainTitle = "Simple Drawing";
 
       add_matter_locator("app-simple/drawing");
 
-      return true;
+      //return true;
 
    }
 

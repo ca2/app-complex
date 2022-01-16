@@ -20,7 +20,7 @@ namespace app_complex_drawing
       ::type get_pane_view_type() const override;
 
 
-      ::e_status init_instance() override;
+      void init_instance() override;
 
 
    };

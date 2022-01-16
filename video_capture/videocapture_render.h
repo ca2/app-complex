@@ -26,10 +26,10 @@ namespace video_capture
 
 
       render();
-      virtual ~render();
+      ~render() override;
 
 
-      virtual ::e_status run();
+      virtual void run();
 
 
       virtual void full_render();

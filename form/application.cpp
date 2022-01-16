@@ -70,12 +70,14 @@ namespace app_complex_form
       ::factory::add_factory_item <::app_complex_form::form_001 >();
       ::factory::add_factory_item <::app_complex_form::form_002 >();
 
-      if (!::base::application::init_instance())
-      {
+      ::base::application::init_instance();
 
-         return false;
+      //if (!::base::application::init_instance())
+      //{
 
-      }
+      //   return false;
+
+      //}
 
       auto pdoctemplate = __new(::user::single_document_template(
                                "main",
@@ -94,10 +96,7 @@ namespace app_complex_form
       m_ptemplateBeatMapperView = pdoctemplate;
       add_document_template(pdoctemplate);
 
-
-
-
-      return true;
+      //return true;
 
    }
 

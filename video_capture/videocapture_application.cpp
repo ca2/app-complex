@@ -81,12 +81,16 @@ namespace video_capture
       ::factory::add_factory_item <::video_capture::top_view >();
       ::factory::add_factory_item <::video_capture::toggle_view >();
 
-      if (!::aura::application::init_instance())
-      {
 
-         return false;
+      ::aura::application::init_instance();
 
-      }
+
+      //if (!::aura::application::init_instance())
+      //{
+
+      //   return false;
+
+      //}
 
       
       auto pDocTemplate = __new(::user::single_document_template(
@@ -111,7 +115,8 @@ namespace video_capture
 
       m_bMFStartup = true;
 
-      return true;
+      //return true;
+
    }
 
    //i32 application::exit_application()

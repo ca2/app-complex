@@ -16,7 +16,7 @@ namespace app_complex_form
       ~application() override;
 
       string preferred_experience() override;
-      ::e_status init_instance() override;
+      void init_instance() override;
       void term_application() override;
 
       void on_request(::create * pcreate) override;

@@ -35,7 +35,9 @@ namespace video_capture
 
    }
 
-   ::e_status render::run()
+   //::e_status
+   
+   void render::run()
    {
 
       while(task_get_run())
@@ -58,9 +60,10 @@ namespace video_capture
 
       }
 
-      return 0;
+      //return 0;
 
    }
+
 
    void render::videocapture_render()
    {
