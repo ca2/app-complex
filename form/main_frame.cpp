@@ -8,7 +8,7 @@ namespace app_complex_form
    main_frame::main_frame()
    {
 
-      m_bDefaultCreateToolbar = false;
+      //m_bDefaultCreateToolbar = false;
 
       window_enable_full_screen();
 

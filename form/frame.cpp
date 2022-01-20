@@ -8,7 +8,7 @@ namespace app_complex_form
    frame::frame()
    {
 
-      m_bDefaultCreateToolbar = false;
+      //m_bDefaultCreateToolbar = false;
 
    }
 
