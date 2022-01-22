@@ -20,6 +20,8 @@ platform-windows/node_windows
 platform-windows/windowing_win32
 app/crypto_openssl
 app/folder_zip
+app/database_sqlite3
+third/sqlite
 app-simple/app_simple_form
 platform-windows/draw2d_gdiplus
 app/experience_core
