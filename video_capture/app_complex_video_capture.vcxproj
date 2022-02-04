@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C7AFCEFA-3079-4B23-8F97-4543BB980265}</ProjectGuid>
+    <ProjectGuid>{DFECDA74-728A-4C86-9F91-DC4272E8A116}</ProjectGuid>
     <RootNamespace>app_core_video_capture</RootNamespace>
     <Keyword>Win32Proj</Keyword>
     <ProjectName>app_complex_video_capture</ProjectName>
@@ -108,7 +108,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|x64'" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='stage|x64'" />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">
-
     <ClCompile>
       <AdditionalOptions>/bigobj</AdditionalOptions>
       <Optimization>Disabled</Optimization>
@@ -164,7 +163,6 @@
       <RandomizedBaseAddress>true</RandomizedBaseAddress>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <TargetMachine>MachineX86</TargetMachine>
-      
       <ShowProgress>NotSet</ShowProgress>
     </Link>
     <Manifest>
@@ -205,7 +203,6 @@
     </Xdcmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">
-
     <ClCompile>
       <AdditionalOptions>/bigobj</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
@@ -269,7 +266,6 @@
       <RandomizedBaseAddress>true</RandomizedBaseAddress>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <TargetMachine>MachineX86</TargetMachine>
-      
       <FixedBaseAddress>false</FixedBaseAddress>
       <ShowProgress>NotSet</ShowProgress>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
@@ -315,7 +311,6 @@
     </Xdcmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='basis|x64'">
-
     <ClCompile>
       <AdditionalOptions>/bigobj</AdditionalOptions>
       <Optimization>Disabled</Optimization>
@@ -371,7 +366,6 @@
       </EntryPointSymbol>
       <RandomizedBaseAddress>true</RandomizedBaseAddress>
       <DataExecutionPrevention>true</DataExecutionPrevention>
-      
       <MapFileName>$(TargetDir)$(TargetName).map</MapFileName>
     </Link>
     <Manifest>
@@ -406,7 +400,6 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='stage|x64'">
-
     <ClCompile>
       <AdditionalOptions>/bigobj</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
@@ -469,7 +462,6 @@
       </EntryPointSymbol>
       <RandomizedBaseAddress>true</RandomizedBaseAddress>
       <DataExecutionPrevention>true</DataExecutionPrevention>
-      
       <FixedBaseAddress>false</FixedBaseAddress>
       <MapFileName>$(TargetDir)$(TargetName).map</MapFileName>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
@@ -572,7 +564,6 @@
     <ClInclude Include="user_font_list.h" />
     <ClInclude Include="_app_complex_video_capture.h" />
   </ItemGroup>
-  
   <ItemGroup>
     <ProjectReference Include="..\..\..\source\app\aura\aura.vcxproj">
       <Project>{03e5b8e7-9e3b-44dd-9ede-e0a74d52c1c5}</Project>
