@@ -182,7 +182,7 @@ namespace app_complex_form
    }
 
 
-   void pane_view::handle(::subject * psubject, ::context * pcontext)
+   void pane_view::handle(::topic * psubject, ::context * pcontext)
    {
 
       if (m_pdocMenu != nullptr
@@ -190,12 +190,12 @@ namespace app_complex_form
          && ::is_set(psubject->m_puserelement))
       {
 
-         if (psubject->m_id == ::e_subject_after_change_text)
+         if (psubject->m_id == ::id_after_change_text)
          {
 
 
          }
-         else if (psubject->m_id == ::e_subject_set_check && ::is_set(psubject->m_puserelement))
+         else if (psubject->m_id == ::id_set_check && ::is_set(psubject->m_puserelement))
          {
 
             string strCheck = psubject->m_puserelement->m_id;

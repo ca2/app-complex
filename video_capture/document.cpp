@@ -44,7 +44,7 @@ namespace app_complex_video_capture
    bool document::on_open_document(const ::payload & payloadFile)
    {
 
-      impact * pview = get_typed_view < impact >();
+      impact * pview = get_type_impact < impact >();
 
       if(pview == nullptr)
       {
@@ -57,6 +57,9 @@ namespace app_complex_video_capture
       return true;
 
    }
+
+
+#ifdef _DEBUG
 
 
    i64 document::increment_reference_count()
@@ -73,6 +76,16 @@ namespace app_complex_video_capture
 
    }
 
+
+#endif
+
+
+   impact * document::get_impact()
+   {
+
+      return get_type_impact < impact >();
+
+   }
 
 
 } // namespace app_complex_video_capture

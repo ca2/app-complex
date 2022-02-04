@@ -1,5 +1,6 @@
 #include "framework.h"
 #include <math.h>
+#include "aura/graphics/draw2d/image_drawing.h"
 
 
 namespace app_complex_video_capture
@@ -28,10 +29,11 @@ namespace app_complex_video_capture
       user::box::dump(dumpcontext);
    }
 
+
    void impact::install_message_routing(::channel * pchannel)
    {
 
-      impact_base::install_message_routing(pchannel);
+      ::user::impact::install_message_routing(pchannel);
 
       
       MESSAGE_LINK(e_message_create,pchannel,this,&impact::on_message_create);
@@ -72,7 +74,38 @@ namespace app_complex_video_capture
    }
 
 
-   void impact::handle(::subject * psubject, ::context * pcontext)
+   void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   {
+
+      auto pvideoinputdevice = get_application()->m_pvideoinputdevice;
+
+      if (!pvideoinputdevice)
+      {
+
+         pgraphics->text_out(10, 10, "No video input device selected.");
+
+         return;
+
+      }
+
+      ::rectangle_i32 rectangleClient;
+
+      get_client_rect(rectangleClient);
+
+      m_prender = pvideoinputdevice->get_render();
+
+      image_source imagesource(m_prender->m_pimage);
+
+      image_drawing_options imagedrawingoptions(rectangleClient);
+
+      image_drawing imagedrawing(imagedrawingoptions, imagesource);
+
+      pgraphics->draw(imagedrawing);
+
+   }
+
+
+   void impact::handle(::topic * psubject, ::context * pcontext)
    {
 
       if(psubject->m_id == INITIAL_UPDATE)

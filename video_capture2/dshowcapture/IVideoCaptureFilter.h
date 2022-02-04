@@ -21,7 +21,7 @@
 //! @n in the Software without restriction, including without limitation the rights
 //! @n to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 //! @n copies of the Software, and to permit persons to whom the Software is
-//! @n furnished to do so, subject to the following conditions:
+//! @n furnished to do so, topic to the following conditions:
 //! @n
 //! @n The above copyright notice and this permission notice shall be included in all
 //! @n copies or substantial portions of the Software.

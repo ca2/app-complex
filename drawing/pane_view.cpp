@@ -110,7 +110,7 @@ namespace app_complex_drawing
 
          pview->m_prender->initialize_simple_drawing(atoi(strId));
 
-         pimpactdata->m_eflag.add(::user::e_flag_hide_topic_on_show);
+         pimpactdata->m_eflag.add(::user::e_flag_hidid_on_show);
 
       }
 
@@ -119,18 +119,18 @@ namespace app_complex_drawing
    }
 
 
-   void pane_view::handle(::subject * psubject, ::context * pcontext)
+   void pane_view::handle(::topic * psubject, ::context * pcontext)
    {
 
       if (psubject->user_interaction() == m_pcolorview)
       {
 
-         if (psubject->m_id == ::e_subject_after_change_cur_sel || psubject->m_id == ::e_subject_after_change_cur_hover)
+         if (psubject->m_id == ::id_after_change_cur_sel || psubject->m_id == ::id_after_change_cur_hover)
          {
 
             m_pcolorview->get_color().get_hls(m_pimpactTopic->m_prender->m_hlsText);
 
-            if (psubject->m_id == ::e_subject_after_change_cur_sel)
+            if (psubject->m_id == ::id_after_change_cur_sel)
             {
 
                string strId;
@@ -157,7 +157,7 @@ namespace app_complex_drawing
       else if (psubject->m_puserelement->m_id == impact_font_sel)
       {
 
-         if (psubject->m_id == ::e_subject_after_change_cur_sel)
+         if (psubject->m_id == ::id_after_change_cur_sel)
          {
 
             string strFont = m_pfontview->m_pimpact->get_cur_sel_face_name();
@@ -165,7 +165,7 @@ namespace app_complex_drawing
             m_pimpactTopic->m_prender->set_font(strFont);
 
          }
-         else if (psubject->m_id == ::e_subject_after_change_cur_hover)
+         else if (psubject->m_id == ::id_after_change_cur_hover)
          {
 
             string strFont = m_pfontview->m_pimpact->get_cur_hover_face_name();

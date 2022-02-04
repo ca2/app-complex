@@ -184,7 +184,7 @@ namespace simple_os_drag_and_drop
 
       }
 
-      pimpactdata->m_eflag.add(::user::e_flag_hide_topic_on_show);
+      pimpactdata->m_eflag.add(::user::e_flag_hidid_on_show);
 
       //::userex::pane_tab_view::on_create_impact(pimpactdata);
       ::user::tab_view::on_create_impact(pimpactdata);
@@ -198,12 +198,12 @@ namespace simple_os_drag_and_drop
       if(m_pdocMenu != nullptr && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0) && psubject->user_interaction() != nullptr)
       {
 
-         if(psubject->m_id == ::e_subject_after_change_text)
+         if(psubject->m_id == ::id_after_change_text)
          {
 
 
          }
-         else if (psubject->m_id == ::e_subject_set_check && psubject->user_interaction() != nullptr)
+         else if (psubject->m_id == ::id_set_check && psubject->user_interaction() != nullptr)
          {
 
             string strCheck = psubject->user_element_id();
@@ -232,7 +232,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void tab_view::handle(::subject * psubject, ::context * pcontext)
+   void tab_view::handle(::topic * psubject, ::context * pcontext)
    {
 
       ////__update(::update)
@@ -243,13 +243,13 @@ namespace simple_os_drag_and_drop
       //         && m_pviewTopic != nullptr)
       //   {
 
-      //      if(pupdate->m_pcontrolevent->m_eevent == ::e_subject_after_change_cur_sel)
+      //      if(pupdate->m_pcontrolevent->m_eevent == ::id_after_change_cur_sel)
       //      {
 
       //         string strFont = m_pfontview->m_pimpact->get_cur_sel_face_name();
 
       //      }
-      //      else if (pupdate->m_pcontrolevent->m_eevent == ::e_subject_after_change_cur_hover)
+      //      else if (pupdate->m_pcontrolevent->m_eevent == ::id_after_change_cur_hover)
       //      {
 
       //         string strFont = m_pfontview->m_pimpact->get_cur_hover_face_name();

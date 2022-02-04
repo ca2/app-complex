@@ -5,14 +5,14 @@ namespace videocapture
 {
 
 
-   enum EPaneView
+   enum EPaneImpact
    {
       impact_none,
       impact_menu,
-      PaneViewGcom,
+      PaneImpactGcom,
       MAIN_IMPACT,
-      PaneViewHelloMultiverseSwitcher,
-      PaneViewFontSel
+      PaneImpactVideoCaptureSwitcher,
+      PaneImpactFontSel
    };
 
 
@@ -26,14 +26,14 @@ namespace videocapture
       {
 
          TypeNone,
-         TypeGetView,
-         TypeSetView,
+         TypeGetImpact,
+         TypeSetImpact,
          TypeOnShowKaraoke,
-         TypeOnShowView,
+         TypeOnShowImpact,
 
       };
 
-      EPaneView m_eview;
+      EPaneImpact m_eview;
       enum_type m_etype;
 
 

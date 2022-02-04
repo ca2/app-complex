@@ -124,7 +124,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void impact::handle(::subject * psubject, ::context * pcontext)
+   void impact::handle(::topic * psubject, ::context * pcontext)
    {
 
       ::user::impact::handle(psubject, pcontext);

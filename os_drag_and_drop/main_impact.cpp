@@ -39,7 +39,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void main_impact::handle(::subject * psubject, ::context * pcontext)
+   void main_impact::handle(::topic * psubject, ::context * pcontext)
    {
 
       ::user::split_view::handle(psubject, pcontext);
@@ -122,7 +122,7 @@ namespace simple_os_drag_and_drop
    bool main_impact::BaseOnControlEvent(::user::control_event * pevent)
    {
 
-      if(psubject->m_id == ::e_subject_click)
+      if(psubject->m_id == ::id_click)
       {
 
          if(psubject->user_element_id() == "simple_drag_and_drop_toggle")

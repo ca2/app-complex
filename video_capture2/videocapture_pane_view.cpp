@@ -173,17 +173,17 @@ namespace app_complex_video_capture
    }
 
 
-   void pane_view::handle(::subject * psubject, ::context * pcontext)
+   void pane_view::handle(::topic * psubject, ::context * pcontext)
    {
 
       if(m_pdocMenu != nullptr && dynamic_cast < ::user::impact * > (psubject->get_form()) == m_pdocMenu->get_view(0) && psubject->user_interaction() != nullptr)
       {
 
-         if(psubject->m_id == ::e_subject_after_change_text)
+         if(psubject->m_id == ::id_after_change_text)
          {
 
 
-            if (psubject->m_id == ::e_subject_set_check && psubject->user_interaction() != nullptr)
+            if (psubject->m_id == ::id_set_check && psubject->user_interaction() != nullptr)
             {
 
                string strCheck = psubject->user_element_id();

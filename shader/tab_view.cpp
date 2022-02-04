@@ -182,7 +182,7 @@ namespace simple_shader
 
          pviewShader->m_prender->m_strShaderPrefix = strId;
 
-         pimpactdata->m_eflag.add(::user::e_flag_hide_topic_on_show);
+         pimpactdata->m_eflag.add(::user::e_flag_hidid_on_show);
 
       }
 
@@ -191,7 +191,7 @@ namespace simple_shader
    }
 
 
-   void tab_view::handle(::subject * psubject, ::context * pcontext)
+   void tab_view::handle(::topic * psubject, ::context * pcontext)
    {
 
 
@@ -199,7 +199,7 @@ namespace simple_shader
    }
 
 
-   void tab_view::handle(::subject * psubject, ::context * pcontext)
+   void tab_view::handle(::topic * psubject, ::context * pcontext)
    {
 
 

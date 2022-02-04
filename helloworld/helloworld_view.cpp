@@ -64,7 +64,7 @@ namespace helloworld
 
       __UNREFERENCED_PARAMETER(pSender);
       __UNREFERENCED_PARAMETER(lHint);
-      __UNREFERENCED_PARAMETER(psubject);
+      __UNREFERENCED_PARAMETER(ptopic);
 
    }
 

@@ -193,7 +193,7 @@ namespace simple_shader
    }
 
 
-   void impact::handle(::subject * psubject, ::context * pcontext)
+   void impact::handle(::topic * psubject, ::context * pcontext)
    {
 
       if (psubject->id() == id_simple_checkbox || psubject->id() == id_no_client_frame)

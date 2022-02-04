@@ -33,8 +33,8 @@ namespace app_complex_video_capture
       //m_ptoggleviewFontSel= nullptr;
       //m_peditFontSel = nullptr;
 
-      m_ptemplateHelloMultiverseMain = nullptr;
-      m_ptemplateHelloMultiverseView = nullptr;
+      m_ptemplateVideoCaptureMain = nullptr;
+      m_ptemplateVideoCaptureImpact = nullptr;
 
 
       m_strAppId = "app-complex/video_capture";
@@ -46,17 +46,6 @@ namespace app_complex_video_capture
 
       m_bLicense              = false;
 
-      m_etype                 = type_normal;
-
-      m_strHelloMultiverseDefault             = "Video Capture!!";
-      m_strAlternateHelloMultiverseDefault    = "Video Capture!!";
-
-      m_strHelloMultiverse             = m_strHelloMultiverseDefault;
-      m_strAlternateHelloMultiverse    = m_strAlternateHelloMultiverseDefault;
-
-      m_bMultiverseChat = true;
-
-      m_bMFStartup = false;
 
    }
 
@@ -85,23 +74,16 @@ namespace app_complex_video_capture
       ::aura::application::init_instance();
 
 
-      //if (!::aura::application::init_instance())
-      //{
-
-      //   return false;
-
-      //}
-
-      
+        
       auto pDocTemplate = __new(::user::single_document_template(
                           "main",
-                          __type(document),
+                          __type(::user::document),
                           __type(main_frame),
                           __type(pane_view)));
 
       add_document_template(pDocTemplate);
 
-      m_ptemplateHelloMultiverseMain = pDocTemplate;
+      m_ptemplateVideoCaptureMain = pDocTemplate;
 
       pDocTemplate = __new(::user::single_document_template(
                           "main",
@@ -110,12 +92,20 @@ namespace app_complex_video_capture
                           __type(main_impact)));
       add_document_template(pDocTemplate);
       
-      m_ptemplateHelloMultiverseView = pDocTemplate;
+      m_ptemplateVideoCaptureImpact = pDocTemplate;
 
 
-      m_bMFStartup = true;
+      auto pfactory = m_psystem->factory("video_input", "media_foundation");
 
-      //return true;
+      pfactory->merge_to_global_factory();
+
+      __construct(m_pvideoinput);
+
+      m_pvideoinput->update_device_list();
+
+      string strDevice = data_get("device").get_string();
+
+      set_current_video_input_device(strDevice);
 
    }
 
@@ -147,17 +137,17 @@ namespace app_complex_video_capture
 
 #endif
 
-      if(m_ptemplateHelloMultiverseMain->get_document_count() == 0)
+      if(m_ptemplateVideoCaptureMain->get_document_count() == 0)
       {
 
-         m_ptemplateHelloMultiverseMain->do_request(pcreate);
+         m_ptemplateVideoCaptureMain->do_request(pcreate);
 
       }
 
       if(pcreate->m_pcommandline->m_varFile.has_char())
       {
 
-         m_ptemplateHelloMultiverseView->do_request(pcreate);
+         m_ptemplateVideoCaptureImpact->do_request(pcreate);
 
       }
 
@@ -184,6 +174,49 @@ namespace app_complex_video_capture
       return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
 
    }
+
+
+   string application::prepare_impact_options_main_body()
+   {
+
+      string strMainBody;
+
+      string strBilbo;
+
+      for (auto & pdevice : m_pvideoinput->devicea())
+      {
+
+         string strName = pdevice->get_name();
+
+         string strId = "video_input_" + pdevice->get_id2();
+
+         strBilbo += "<input type=\"checkbox\" id=\"" + strId + "\" />" + strName + "<br/>";
+
+
+      }
+
+      return strBilbo;
+
+   }
+
+
+   string application::get_current_video_input_device()
+   {
+
+      return m_pvideoinputdevice ? m_pvideoinputdevice->get_id2() : string();
+      
+   }
+   
+   
+   void application::set_current_video_input_device(const ::string & strDevice)
+   {
+
+      data_set("device", strDevice);
+
+      m_pvideoinputdevice = m_pvideoinput->get_device_by_id2(strDevice);
+
+   }
+
 
 } // namespace app_complex_video_capture
 

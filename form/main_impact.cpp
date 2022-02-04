@@ -39,10 +39,10 @@ namespace app_complex_form
    }
 
 
-   void main_impact::handle(::subject * psubject, ::context * pcontext)
+   void main_impact::handle(::topic * psubject, ::context * pcontext)
    {
 
-      if (psubject->m_id == ::e_subject_click)
+      if (psubject->m_id == ::id_click)
       {
 
          if (psubject->user_interaction()->m_id == "simple_form_toggle")
@@ -155,10 +155,10 @@ namespace app_complex_form
    }
 
 
-   //bool main_impact::handle(::subject * psubject, ::context * pcontext)
+   //bool main_impact::handle(::topic * psubject, ::context * pcontext)
    //{
 
-   //   if(psubject->m_id == ::e_subject_click)
+   //   if(psubject->m_id == ::id_click)
    //   {
 
    //      if(psubject->user_element_id() == "simple_form_toggle")

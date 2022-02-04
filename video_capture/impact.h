@@ -8,7 +8,7 @@ namespace app_complex_video_capture
 
 
    class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE impact :
-      virtual public impact_base
+      virtual public application_consumer < application, ::user::impact >
    {
    public:
 
@@ -19,7 +19,7 @@ namespace app_complex_video_capture
 
 
       impact();
-      virtual ~impact();
+      ~impact() override;
 
       void assert_valid() const override;
       void dump(dump_context & dumpcontext) const override;
@@ -37,7 +37,7 @@ namespace app_complex_video_capture
       void install_message_routing(::channel * pchannel) override;
 
 
-      virtual void handle(::subject * psubject, ::context * pcontext) override;
+      virtual void handle(::topic * psubject, ::context * pcontext) override;
 
       ::user::document * get_document();
 
@@ -45,8 +45,7 @@ namespace app_complex_video_capture
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
 
-      //virtual void defer_update_bilbo();
-
+      void _001OnDraw(::draw2d::graphics_pointer & pgraphics);
       //virtual void OnCaptureEvent(wparam wparam, lparam lparam);
       
       DECLARE_MESSAGE_HANDLER(on_message_create);

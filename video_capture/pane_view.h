@@ -11,14 +11,9 @@ namespace app_complex_video_capture
    public:
 
 
-      ::user::split_view *                            m_ptopviewLast;
-      impact_base *                                   m_pviewLast;
-
-      __pointer(::user::document)                     m_pdocMenu;
-
 
       pane_view();
-      virtual ~pane_view();
+      ~pane_view() override;
 
 
       void on_create_impact(::user::impact_data * pimpactdata);
@@ -30,10 +25,9 @@ namespace app_complex_video_capture
       void dump(dump_context & dumpcontext) const override;
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
-      void handle(::subject * psubject, ::context * pcontext);
+      void handle(::topic * psubject, ::context * pcontext);
       void on_change_cur_sel();
 
-      virtual ::file::path prepare_menu_view();
 
    };
 

@@ -40,7 +40,7 @@ namespace app_complex_video_capture
    }
 
 
-   void edit_view::handle(::subject * psubject, ::context * pcontext)
+   void edit_view::handle(::topic * psubject, ::context * pcontext)
    {
 
    }
@@ -66,8 +66,6 @@ namespace app_complex_video_capture
       string strText;
 
       _001GetText(strText);
-
-      impact_base * pview = dynamic_cast < impact_base * > (m_ptopview->GetTypedParent<::user::split_view>()->get_child_by_id("videocapture_view"));
 
 
 

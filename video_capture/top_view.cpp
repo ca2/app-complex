@@ -34,7 +34,7 @@ namespace app_complex_video_capture
    }
 
 
-   void top_view::handle(::subject * psubject, ::context * pcontext)
+   void top_view::handle(::topic * psubject, ::context * pcontext)
    {
       ::user::split_view::handle(psubject, pcontext);
    }

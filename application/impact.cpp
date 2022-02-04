@@ -90,7 +90,7 @@ namespace simple_application
    }
 
 
-   void impact::handle(::subject * psubject, ::context * pcontext)
+   void impact::handle(::topic * psubject, ::context * pcontext)
    {
 
       ::user::impact::handle(psubject, pcontext);

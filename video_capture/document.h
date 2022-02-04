@@ -21,10 +21,15 @@ namespace app_complex_video_capture
       virtual bool on_new_document();
       virtual bool on_open_document(const ::payload & payloadFile) override;
 
+#ifdef _DEBUG
+
       virtual i64 increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
 
       virtual i64 decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
 
+#endif
+
+      impact * get_impact();
 
    };
 

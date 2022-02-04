@@ -27,7 +27,7 @@ namespace app_complex_form
 
       void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
 
-      void handle(::subject * psubject, ::context * pcontext) override;
+      void handle(::topic * psubject, ::context * pcontext) override;
 
       ::user::document * get_document();
 

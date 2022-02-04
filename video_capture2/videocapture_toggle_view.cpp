@@ -28,7 +28,7 @@ namespace app_complex_video_capture
    }
 
 
-   void toggle_view::handle(::subject * psubject, ::context * pcontext)
+   void toggle_view::handle(::topic * psubject, ::context * pcontext)
    {
 
       ::user::impact::handle(psubject, pcontext);
