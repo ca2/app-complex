@@ -190,7 +190,7 @@ namespace app_complex_video_capture
 
          string strId = "video_input_" + pdevice->get_id2();
 
-         strBilbo += "<input type=\"checkbox\" id=\"" + strId + "\" />" + strName + "<br/>";
+         strBilbo += "<input type=\"checkbox\" identification=\"" + strId + "\" />" + strName + "<br/>";
 
 
       }

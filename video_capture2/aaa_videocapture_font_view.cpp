@@ -25,10 +25,10 @@ namespace video_capture
    }
 
 
-   void font_view::assert_valid() const
+   void font_view::assert_ok() const
    {
 
-      ::user::split_view::assert_valid();
+      ::user::split_view::assert_ok();
 
    }
 
@@ -120,7 +120,7 @@ namespace video_capture
       else if(ptopic->m_id == ::id_after_change_cur_sel)
       {
 
-         if(m_pimpact == ptopic->user_interaction())
+         if(m_pimpact == ptopic->m_pextendedtopic->user_interaction())
          {
 
             if(GetTypedParent < pane_view >()->m_pviewLast != nullptr)

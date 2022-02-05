@@ -1,6 +1,6 @@
 #include "framework.h"
 #include <math.h>
-#include "acme/constant/id.h"
+#include "acme/constant/identification.h"
 
 
 CLASS_DECL_AURA color32_t dk_red(); // <3 tbs
@@ -38,10 +38,10 @@ namespace simple_application
    }
 
 
-   void impact::assert_valid() const
+   void impact::assert_ok() const
    {
 
-      user::box::assert_valid();
+      user::box::assert_ok();
 
    }
 

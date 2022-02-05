@@ -100,21 +100,21 @@ bool Device::GetAudioConfig(AudioConfig &config) const
 	return true;
 }
 
-bool Device::GetVideoDeviceId(DeviceId &id) const
+bool Device::GetVideoDeviceId(DeviceId &identification) const
 {
 	if (context->videoCapture == nullptr)
 		return false;
 
-	id = context->videoConfig;
+	identification = context->videoConfig;
 	return true;
 }
 
-bool Device::GetAudioDeviceId(DeviceId &id) const
+bool Device::GetAudioDeviceId(DeviceId &identification) const
 {
 	if (context->audioCapture == nullptr)
 		return false;
 
-	id = context->audioConfig;
+	identification = context->audioConfig;
 	return true;
 }
 

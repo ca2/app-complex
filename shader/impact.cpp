@@ -1,6 +1,6 @@
 #include "framework.h"
 #include <math.h>
-#include "acme/constant/id.h"
+#include "acme/constant/identification.h"
 
 
 namespace simple_shader
@@ -27,10 +27,10 @@ namespace simple_shader
    }
 
 
-   void impact::assert_valid() const
+   void impact::assert_ok() const
    {
 
-      user::box::assert_valid();
+      user::box::assert_ok();
 
    }
 
@@ -138,25 +138,25 @@ namespace simple_shader
 
       {
 
-         ::id id = id_simple_text;
+         ::identification identification = id_simple_text;
 
-         auto pproperty = papplication->fetch_property(id);
+         auto pproperty = papplication->fetch_property(identification);
 
          ::payload payload;
 
-         if (papplication->data_get(id, payload))
+         if (papplication->data_get(identification, payload))
          {
 
             pproperty->convert(payload);
 
          }
 
-         auto idRunnable = papplication->translate_property_id(id);
+         auto idRunnable = papplication->translate_property_id(identification);
 
-         papplication->m_mapRunnable[idRunnable] += [this, id]()
+         papplication->m_mapRunnable[idRunnable] += [this, identification]()
          {
 
-            auto pproperty = fetch_property(id);
+            auto pproperty = fetch_property(identification);
 
             m_prender->defer_load_fragment(pproperty->get_string());
 

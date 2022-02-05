@@ -39,14 +39,14 @@ struct DShowEncoder {
 			struct encoder_packet *packet, bool *received_packet);
 };
 
-static inline void FindDevice(DeviceId &id, const wchar_t *name)
+static inline void FindDevice(DeviceId &identification, const wchar_t *name)
 {
 	vector<DeviceId> devices;
 	DShow::VideoEncoder::EnumEncoders(devices);
 
 	for (const DeviceId &device : devices) {
 		if (device.name.find(name)>= 0) {
-			id = device;
+			identification = device;
 			break;
 		}
 	}
@@ -65,9 +65,9 @@ static const double wideAspect = 1280.0 / 720.0;
 inline bool DShowEncoder::Update(video_data *settings)
 {
 	std::wstring deviceName;
-	DeviceId id;
+	DeviceId identification;
 
-	FindDevice(id, device);
+	FindDevice(identification, device);
 
 	//video_t *video = obs_encoder_video(context);
 	//const struct video_output_info *voi = video_output_get_info(video);
@@ -99,14 +99,14 @@ inline bool DShowEncoder::Update(video_data *settings)
 	config.keyframeInterval       = keyint;
 	config.cx                     = width;
 	config.cy                     = height;
-	config.name                   = id.name;
-	config.path                   = id.path;
+	config.name                   = identification.name;
+	config.path                   = identification.path;
 
 	first = true;
 	firstPacket = (u8 *) malloc(0);
    header = (u8 *)malloc(0);
 
-	deviceName= id.name;
+	deviceName= identification.name;
 
 	std::wstring encoder_name;
 	encoder_name =  config.name;
@@ -338,14 +338,14 @@ static bool DShowEncode(void *data, struct encoder_frame *frame,
 //
 //	for (const DeviceId &device : devices) {
 //		if (!foundC985 && device.name.find(L"C985")>= 0) {
-//			info.id = "dshow_c985_h264";
+//			info.identification = "dshow_c985_h264";
 //			info.get_name = GetC985EncoderName;
 //			info.create = CreateC985Encoder;
 //			obs_register_encoder(&info);
 //			foundC985 = true;
 //
 //		} else if (device.name.find(L"C353")>= 0) {
-//			info.id = "dshow_c353_h264";
+//			info.identification = "dshow_c353_h264";
 //			info.get_name = GetC353EncoderName;
 //			info.create = CreateC353Encoder;
 //			obs_register_encoder(&info);

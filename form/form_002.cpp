@@ -19,10 +19,10 @@ namespace app_complex_form
    }
 
 
-   void form_002::assert_valid() const
+   void form_002::assert_ok() const
    {
 
-      ::app_simple_form::form_002::assert_valid();
+      ::app_simple_form::form_002::assert_ok();
 
    }
 
@@ -174,7 +174,7 @@ namespace app_complex_form
 //      if (ptopic->m_id == ::id_click)
 //      {
 //
-//         if (ptopic->m_puserelement->m_id == "send_button")
+//         if (ptopic->m_pextendedtopic->m_puserelement->m_id == "send_button")
 //         {
 //
 //            string strText1;

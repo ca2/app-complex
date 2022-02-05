@@ -88,7 +88,7 @@ static bool EnumVideoEncoder(vector<DeviceId> &encoders,
 		const wchar_t *deviceName,
 		const wchar_t *devicePath)
 {
-	DeviceId id;
+	DeviceId identification;
 	bool validDevice =
 		wcsstr(deviceName, L"C985") ||
 		wcsstr(deviceName, L"C353");
@@ -96,9 +96,9 @@ static bool EnumVideoEncoder(vector<DeviceId> &encoders,
 	if (!validDevice)
 		return true;
 
-	id.name = deviceName;
-	id.path = devicePath;
-	encoders.push_back(id);
+	identification.name = deviceName;
+	identification.path = devicePath;
+	encoders.push_back(identification);
 
 	(void)encoder;
 	return true;

@@ -221,23 +221,23 @@ namespace simple_shader
    }
 
 
-   ::id application::translate_property_id(const ::id & id)
+   ::identification application::translate_property_id(const ::identification & identification)
    {
 
-      if(id == "simple_checkbox")
+      if(identification == "simple_checkbox")
       {
 
          return id_simple_checkbox;
 
       }
-      else if(id == "simple_text")
+      else if(identification == "simple_text")
       {
 
          return id_simple_text;
 
       }
 
-      return id;
+      return identification;
 
    }
 

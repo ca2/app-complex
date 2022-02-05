@@ -19,9 +19,9 @@ namespace app_complex_video_capture
    {
    }
 
-   void impact::assert_valid() const
+   void impact::assert_ok() const
    {
-      user::box::assert_valid();
+      user::box::assert_ok();
    }
 
    void impact::dump(dump_context & dumpcontext) const

@@ -338,7 +338,7 @@ namespace simple_shader
       if (strFont.is_empty())
       {
 
-         return error_invalid_argument;
+         return error_bad_argument;
 
       }
 

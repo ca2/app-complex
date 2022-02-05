@@ -21,10 +21,10 @@ namespace app_complex_form
    }
 
 
-   void main_frame::assert_valid() const
+   void main_frame::assert_ok() const
    {
 
-      simple_frame_window::assert_valid();
+      simple_frame_window::assert_ok();
 
    }
 

@@ -305,9 +305,9 @@ struct DShowInput {
 	//	WaitForSingleObject(thread, U32_INFINITE_TIMEOUT);
 	}
 
-	void OnEncodedVideoData(enum AVCodecID id,
+	void OnEncodedVideoData(enum AVCodecID identification,
 			unsigned char *data, size_t size, long long ts);
-	void OnEncodedAudioData(enum AVCodecID id,
+	void OnEncodedAudioData(enum AVCodecID identification,
 			unsigned char *data, size_t size, long long ts);
 
 	void OnVideoData(const VideoConfig &config,
@@ -478,11 +478,11 @@ static inline audio_format ConvertAudioFormat(AudioFormat format)
 //#define LOG_ENCODED_VIDEO_TS 1
 //#define LOG_ENCODED_AUDIO_TS 1
 
-void DShowInput::OnEncodedVideoData(enum AVCodecID id,
+void DShowInput::OnEncodedVideoData(enum AVCodecID identification,
 		unsigned char *data, size_t size, long long ts)
 {
 	if (!ffmpeg_decode_valid(video_decoder)) {
-		if (ffmpeg_decode_init(video_decoder, id) < 0) {
+		if (ffmpeg_decode_init(video_decoder, identification) < 0) {
 			//blog(LOG_WARNING, "Could not initialize video decoder");
 			return;
 		}
@@ -578,11 +578,11 @@ void DShowInput::OnVideoData(const VideoConfig &config,
 	//UNUSED_PARAMETER(size);
 }
 
-void DShowInput::OnEncodedAudioData(enum AVCodecID id,
+void DShowInput::OnEncodedAudioData(enum AVCodecID identification,
 		unsigned char *data, size_t size, long long ts)
 {
 	if (!ffmpeg_decode_valid(audio_decoder)) {
-		if (ffmpeg_decode_init(audio_decoder, id) < 0) {
+		if (ffmpeg_decode_init(audio_decoder, identification) < 0) {
 //			blog(LOG_WARNING, "Could not initialize audio decoder");
 			return;
 		}
@@ -832,8 +832,8 @@ bool DShowInput::UpdateVideoConfig(aura_data *settings)
 	deactivateWhenNotShowing = obs_data_get_bool(settings, DEACTIVATE_WNS);
 	flip = obs_data_get_bool(settings, FLIP_IMAGE);
 
-	DeviceId id;
-	if (!DecodeDeviceId(id, video_device_id.c_str())) {
+	DeviceId identification;
+	if (!DecodeDeviceId(identification, video_device_id.c_str())) {
 		blog(LOG_FORMATTED_WARNING, "%s: DecodeDeviceId failed",
 			obs_source_get_name(source));
 		return false;
@@ -889,8 +889,8 @@ bool DShowInput::UpdateVideoConfig(aura_data *settings)
 		interval = best_interval;
 	}
 
-	videoConfig.name             = id.name.c_str();
-	videoConfig.path             = id.path.c_str();
+	videoConfig.name             = identification.name.c_str();
+	videoConfig.path             = identification.path.c_str();
 	videoConfig.useDefaultConfig = resType == ResType_Preferred;
 	videoConfig.cx               = cx;
 	videoConfig.cy               = cy;
@@ -961,12 +961,12 @@ bool DShowInput::UpdateAudioConfig(aura_data *settings)
 	bool   useCustomAudio  = obs_data_get_bool(settings, USE_CUSTOM_AUDIO);
 
 	if (useCustomAudio) {
-		DeviceId id;
-		if (!DecodeDeviceId(id, audio_device_id.c_str()))
+		DeviceId identification;
+		if (!DecodeDeviceId(identification, audio_device_id.c_str()))
 			return false;
 
-		audioConfig.name = id.name.c_str();
-		audioConfig.path = id.path.c_str();
+		audioConfig.name = identification.name.c_str();
+		audioConfig.path = identification.path.c_str();
 
 	} else if (!deviceHasAudio) {
 		return true;
@@ -1245,14 +1245,14 @@ static bool DeviceResolutionChanged(obs_properties_t *props, obs_property_t *p,
 	UNUSED_PARAMETER(p);
 
 	PropertiesData *data = (PropertiesData*)obs_properties_get_param(props);
-	const char *id;
+	const char *identification;
 	VideoDevice device;
 
-	id       = obs_data_get_string(settings, VIDEO_DEVICE_ID);
+	identification       = obs_data_get_string(settings, VIDEO_DEVICE_ID);
 	string res = obs_data_get_string(settings, RESOLUTION);
 	string last_res = obs_data_get_string(settings, LAST_RESOLUTION);
 
-	if (!data->GetDevice(device, id))
+	if (!data->GetDevice(device, identification))
 		return false;
 
 	if (TryResolution(device, res))
@@ -1297,23 +1297,23 @@ static const VideoFormatName videoFormatNames[] = {
 static bool ResTypeChanged(obs_properties_t *props, obs_property_t *p,
 		aura_data *settings);
 
-static size_t AddDevice(obs_property_t *device_list, const string &id)
+static size_t AddDevice(obs_property_t *device_list, const string &identification)
 {
 	DStr name, path;
-	if (!DecodeDeviceDStr(name, path, id.c_str()))
+	if (!DecodeDeviceDStr(name, path, identification.c_str()))
 		return numeric_limits<size_t>::maximum();
 
-	return obs_property_list_add_string(device_list, name, id.c_str());
+	return obs_property_list_add_string(device_list, name, identification.c_str());
 }
 
-static bool UpdateDeviceList(obs_property_t *list, const string &id)
+static bool UpdateDeviceList(obs_property_t *list, const string &identification)
 {
 	size_t size = obs_property_list_item_count(list);
 	bool found = false;
 	bool disabled_unknown_found = false;
 
 	for (size_t i = 0; i < size; i++) {
-		if (obs_property_list_item_string(list, i) == id) {
+		if (obs_property_list_item_string(list, i) == identification) {
 			found = true;
 			continue;
 		}
@@ -1322,7 +1322,7 @@ static bool UpdateDeviceList(obs_property_t *list, const string &id)
 	}
 
 	if (!found && !disabled_unknown_found) {
-		size_t idx = AddDevice(list, id);
+		size_t idx = AddDevice(list, identification);
 		obs_property_list_item_disable(list, idx, true);
 		return true;
 	}
@@ -1347,12 +1347,12 @@ static bool DeviceSelectionChanged(obs_properties_t *props, obs_property_t *p,
 	PropertiesData *data = (PropertiesData*)obs_properties_get_param(props);
 	VideoDevice device;
 
-	string id     = obs_data_get_string(settings, VIDEO_DEVICE_ID);
+	string identification     = obs_data_get_string(settings, VIDEO_DEVICE_ID);
 	string old_id = obs_data_get_string(settings, LAST_VIDEO_DEV_ID);
 
-	bool device_list_updated = UpdateDeviceList(p, id);
+	bool device_list_updated = UpdateDeviceList(p, identification);
 
-	if (!data->GetDevice(device, id.c_str()))
+	if (!data->GetDevice(device, identification.c_str()))
 		return !device_list_updated;
 
 	vector<Resolution> resolutions;
@@ -1374,10 +1374,10 @@ static bool DeviceSelectionChanged(obs_properties_t *props, obs_property_t *p,
 	}
 
 	/* only refresh properties if device legitimately changed */
-	if (!id.size() || !old_id.size() || id != old_id) {
+	if (!identification.size() || !old_id.size() || identification != old_id) {
 		p = obs_properties_get(props, RES_TYPE);
 		ResTypeChanged(props, p, settings);
-		obs_data_set_string(settings, LAST_VIDEO_DEV_ID, id.c_str());
+		obs_data_set_string(settings, LAST_VIDEO_DEV_ID, identification.c_str());
 	}
 
 	return true;
@@ -1653,10 +1653,10 @@ static bool DeviceIntervalChanged(obs_properties_t *props, obs_property_t *p,
 	long long val = obs_data_get_int(settings, FRAME_INTERVAL);
 
 	PropertiesData *data = (PropertiesData*)obs_properties_get_param(props);
-	const char *id = obs_data_get_string(settings, VIDEO_DEVICE_ID);
+	const char *identification = obs_data_get_string(settings, VIDEO_DEVICE_ID);
 	VideoDevice device;
 
-	if (!data->GetDevice(device, id))
+	if (!data->GetDevice(device, identification))
 		return UpdateFPS(val, p);
 
 	int cx = 0, cy = 0;
@@ -1744,13 +1744,13 @@ static bool VideoFormatChanged(obs_properties_t *props, obs_property_t *p,
 		aura_data *settings)
 {
 	PropertiesData *data = (PropertiesData*)obs_properties_get_param(props);
-	const char *id = obs_data_get_string(settings, VIDEO_DEVICE_ID);
+	const char *identification = obs_data_get_string(settings, VIDEO_DEVICE_ID);
 	VideoDevice device;
 
 	VideoFormat curFormat =
 		(VideoFormat)obs_data_get_int(settings, VIDEO_FORMAT);
 
-	if (!data->GetDevice(device, id))
+	if (!data->GetDevice(device, identification))
 		return UpdateVideoFormats(curFormat, p);
 
 	int cx, cy;
@@ -1945,7 +1945,7 @@ void RegisterDShowSource()
 	SetLogCallback(DShowModuleLogCallback, nullptr);
 
 	obs_source_info info = {};
-	info.id              = "dshow_input";
+	info.identification              = "dshow_input";
 	info.type            = OBS_SOURCE_TYPE_INPUT;
 	info.output_flags    = OBS_SOURCE_VIDEO |
 	                       OBS_SOURCE_AUDIO |

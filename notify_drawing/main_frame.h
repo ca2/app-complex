@@ -16,7 +16,7 @@ namespace notify_drawing
       virtual ~main_frame();
 
 
-      void assert_valid() const override;
+      void assert_ok() const override;
       void dump(dump_context & dumpcontext) const override;
 
 

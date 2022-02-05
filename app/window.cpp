@@ -29,10 +29,10 @@ namespace simple_app
    }
 
 
-   void window::assert_valid() const
+   void window::assert_ok() const
    {
 
-      ::user::interaction::assert_valid();
+      ::user::interaction::assert_ok();
 
    }
 

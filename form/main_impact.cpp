@@ -23,10 +23,10 @@ namespace app_complex_form
    }
 
 
-   void main_impact::assert_valid() const
+   void main_impact::assert_ok() const
    {
 
-      ::user::split_view::assert_valid();
+      ::user::split_view::assert_ok();
 
    }
 
@@ -45,7 +45,7 @@ namespace app_complex_form
       if (ptopic->m_id == ::id_click)
       {
 
-         if (ptopic->user_interaction()->m_id == "simple_form_toggle")
+         if (ptopic->m_pextendedtopic->user_interaction()->m_id == "simple_form_toggle")
          {
 
             m_pimpact->set_need_layout();

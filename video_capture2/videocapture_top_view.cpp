@@ -18,10 +18,10 @@ namespace app_complex_video_capture
    }
 
 
-   void top_view::assert_valid() const
+   void top_view::assert_ok() const
    {
 
-      ::user::split_view::assert_valid();
+      ::user::split_view::assert_ok();
 
    }
 

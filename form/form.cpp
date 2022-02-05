@@ -56,10 +56,10 @@ namespace app_complex_form
    }
 
 
-   void form::assert_valid() const
+   void form::assert_ok() const
    {
 
-      ::user::form_view::assert_valid();
+      ::user::form_view::assert_ok();
 
    }
 

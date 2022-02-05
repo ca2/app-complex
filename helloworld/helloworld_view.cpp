@@ -20,10 +20,10 @@ namespace helloworld
    }
 
 
-   void impact::assert_valid() const
+   void impact::assert_ok() const
    {
 
-      ::user::impact::assert_valid();
+      ::user::impact::assert_ok();
 
    }
 

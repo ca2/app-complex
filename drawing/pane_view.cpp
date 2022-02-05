@@ -19,10 +19,10 @@ namespace app_complex_drawing
    }
 
 
-   void pane_view::assert_valid() const
+   void pane_view::assert_ok() const
    {
 
-      ::user::impact::assert_valid();
+      ::user::impact::assert_ok();
 
    }
 
@@ -122,7 +122,7 @@ namespace app_complex_drawing
    void pane_view::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->user_interaction() == m_pcolorview)
+      if (ptopic->m_pextendedtopic->user_interaction() == m_pcolorview)
       {
 
          if (ptopic->m_id == ::id_after_change_cur_sel || ptopic->m_id == ::id_after_change_cur_hover)
@@ -154,7 +154,7 @@ namespace app_complex_drawing
          }
 
       }
-      else if (ptopic->m_puserelement->m_id == impact_font_sel)
+      else if (ptopic->m_pextendedtopic->m_puserelement->m_id == impact_font_sel)
       {
 
          if (ptopic->m_id == ::id_after_change_cur_sel)

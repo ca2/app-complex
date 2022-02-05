@@ -18,10 +18,10 @@ namespace app_complex_video_capture
    }
 
 
-   void pane_view::assert_valid() const
+   void pane_view::assert_ok() const
    {
 
-      ::user::impact::assert_valid();
+      ::user::impact::assert_ok();
 
    }
 
@@ -173,7 +173,7 @@ namespace app_complex_video_capture
    void pane_view::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->user_interaction() && ptopic->user_interaction()->is_ascendant(m_pdocumentMenu, true))
+      if (ptopic->m_pextendedtopic->user_interaction() && ptopic->m_pextendedtopic->user_interaction()->is_ascendant(m_pdocumentMenu, true))
       {
 
 
@@ -205,13 +205,13 @@ namespace app_complex_video_capture
 
             ptopic->m_bOk = true;
 
-            ptopic->m_bRet = true;
+            ptopic->m_pextendedtopic->m_bRet = true;
 
             return;
 
          }
 
-         if (ptopic->m_etopic == ::id_set_check && ptopic->user_interaction() != nullptr)
+         if (ptopic->m_id == ::id_set_check && ptopic->m_pextendedtopic->user_interaction() != nullptr)
          {
 
             string strCheck = ptopic->user_element_id();
@@ -236,22 +236,22 @@ namespace app_complex_video_capture
 
          //if(ptopic->user_element_id() == "clockverse")
          //   {
-         //      papplication->set_binding_clockverse_country_time_zone_set_on_hover(ptopic->user_interaction()->_001GetCheck() == ::check_checked);
+         //      papplication->set_binding_clockverse_country_time_zone_set_on_hover(ptopic->m_pextendedtopic->user_interaction()->_001GetCheck() == ::check_checked);
          //      return true;
          //   }
          //   else if(ptopic->user_element_id() == "clockverse_auto")
          //   {
-         //      papplication->set_auto_launch_clockverse_on_hover(ptopic->user_interaction()->_001GetCheck() == ::check_checked);
+         //      papplication->set_auto_launch_clockverse_on_hover(ptopic->m_pextendedtopic->user_interaction()->_001GetCheck() == ::check_checked);
          //      return true;
          //   }
          //   else if(ptopic->user_element_id() == "flag")
          //   {
-         //      papplication->set_binding_flag_country_ca2_domain_image_on_hover(ptopic->user_interaction()->_001GetCheck() == ::check_checked);
+         //      papplication->set_binding_flag_country_ca2_domain_image_on_hover(ptopic->m_pextendedtopic->user_interaction()->_001GetCheck() == ::check_checked);
          //      return true;
          //   }
          //   else if(ptopic->user_element_id() == "flag_auto")
          //   {
-         //      papplication->set_auto_launch_flag_on_hover(ptopic->user_interaction()->_001GetCheck() == ::check_checked);
+         //      papplication->set_auto_launch_flag_on_hover(ptopic->m_pextendedtopic->user_interaction()->_001GetCheck() == ::check_checked);
          //      return true;
          //   }
          }

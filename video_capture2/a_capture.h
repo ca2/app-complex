@@ -50,7 +50,7 @@ HWND    CreatePreviewWindow(HINSTANCE hInstance, HWND hParent, CaptureManager * 
 HWND    CreateMainWindow(HINSTANCE hInstance);
 void    SetMenuItemText(HMENU hMenu, ::u32 utem, _In_ PWSTR pszText);
 void    ShowError(HWND hwnd, PCWSTR szMessage, HRESULT hr);
-void    ShowError(HWND hwnd, ::u32 id, HRESULT hr);
+void    ShowError(HWND hwnd, ::u32 identification, HRESULT hr);
 HRESULT CloneVideoMediaType(IMFMediaType *pSrcMediaType, REFGUID guidSubType, IMFMediaType **ppNewMediaType);
 HRESULT CreatePhotoMediaType(IMFMediaType *pSrcMediaType, IMFMediaType **ppPhotoMediaType);
 
@@ -174,9 +174,9 @@ class CaptureManager :
       m_hpwrRequest = PowerCreateRequest(&pwrCtxt);
    }
 
-   void SetErrorID(HRESULT hr, ::u32 id)
+   void SetErrorID(HRESULT hr, ::u32 identification)
    {
-      m_errorID = SUCCEEDED(hr) ? 0 : id;
+      m_errorID = SUCCEEDED(hr) ? 0 : identification;
    }
 
    // Capture Engine Event Handlers

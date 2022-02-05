@@ -18,14 +18,14 @@
 #include "ffmpeg-decode.h"
 #include "common.h"
 
-int ffmpeg_decode_init(struct ffmpeg_decode *decode, enum AVCodecID id)
+int ffmpeg_decode_init(struct ffmpeg_decode *decode, enum AVCodecID identification)
 {
 	int ret;
 
 	avcodec_register_all();
 	__memset(decode, 0, sizeof(*decode));
 
-	decode->codec = avcodec_find_decoder(id);
+	decode->codec = avcodec_find_decoder(identification);
 	if (!decode->codec)
 		return -1;
 
@@ -176,7 +176,7 @@ int ffmpeg_decode_video(struct ffmpeg_decode *decode,
 	packet.size_i32     = (int)size_i32;
 	packet.pts      = *ts;
 
-//	if (decode->codec->id == AV_CODEC_ID_H264 &&
+//	if (decode->codec->identification == AV_CODEC_ID_H264 &&
 	//		obs_avc_keyframe(data, size))
 		//packet.flags |= AV_PKT_FLAG_KEY;
 

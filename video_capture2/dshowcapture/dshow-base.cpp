@@ -343,7 +343,7 @@ static bool GetFilterByMediumFromMoniker(IMoniker *moniker,
 	return false;
 }
 
-bool GetFilterByMedium(const CLSID &id, REGPINMEDIUM &medium,
+bool GetFilterByMedium(const CLSID &identification, REGPINMEDIUM &medium,
 		IBaseFilter **filter)
 {
 	ComPtr<ICreateDevEnum>  deviceEnum;
@@ -361,7 +361,7 @@ bool GetFilterByMedium(const CLSID &id, REGPINMEDIUM &medium,
 		return false;
 	}
 
-	hr = deviceEnum->CreateClassEnumerator(id, &enumMoniker, 0);
+	hr = deviceEnum->CreateClassEnumerator(identification, &enumMoniker, 0);
 	if (FAILED(hr)) {
 		WarningHR(L"GetFilterByMedium: Failed to create enum moniker",
 				hr);

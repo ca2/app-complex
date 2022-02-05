@@ -18,10 +18,10 @@ namespace app_complex_video_capture
    }
 
 
-   void frame::assert_valid() const
+   void frame::assert_ok() const
    {
 
-      simple_frame_window::assert_valid();
+      simple_frame_window::assert_ok();
 
    }
 

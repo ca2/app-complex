@@ -17,10 +17,10 @@ namespace app_complex_form
    }
 
 
-   void document::assert_valid() const
+   void document::assert_ok() const
    {
 
-      ::user::document::assert_valid();
+      ::user::document::assert_ok();
 
    }
 

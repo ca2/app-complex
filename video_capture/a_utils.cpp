@@ -150,11 +150,11 @@ void ShowError(HWND hwnd, PCWSTR szMessage, HRESULT hr)
 }
 
 
-void ShowError(HWND hwnd, ::u32 id, HRESULT hr)
+void ShowError(HWND hwnd, ::u32 identification, HRESULT hr)
 {
    wchar_t msg[256];
 
-   if (0 != LoadStringW(GetModuleHandle(nullptr), id, msg, ARRAYSIZE(msg)))
+   if (0 != LoadStringW(GetModuleHandle(nullptr), identification, msg, ARRAYSIZE(msg)))
    {
       ShowError(hwnd, msg, hr);
    }

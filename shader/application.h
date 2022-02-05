@@ -59,7 +59,7 @@ namespace simple_shader
       //DECLARE_MESSAGE_HANDLER(_001OnUpdateSimpleCheckbox);
 
 
-      virtual ::id translate_property_id(const ::id& id) override;
+      virtual ::identification translate_property_id(const ::identification& identification) override;
    };
 
 
