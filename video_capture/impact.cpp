@@ -105,10 +105,10 @@ namespace app_complex_video_capture
    }
 
 
-   void impact::handle(::topic * psubject, ::context * pcontext)
+   void impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if(psubject->m_id == INITIAL_UPDATE)
+      if(ptopic->m_id == INITIAL_UPDATE)
       {
 
          __pointer(::userex::pane_tab_view) ppaneview = GetTypedParent < ::userex::pane_tab_view >();
@@ -118,7 +118,7 @@ namespace app_complex_video_capture
          //}
 
       }
-      __UNREFERENCED_PARAMETER(psubject);
+      __UNREFERENCED_PARAMETER(ptopic);
    }
 
 

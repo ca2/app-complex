@@ -182,33 +182,33 @@ namespace app_complex_form
    }
 
 
-   void pane_view::handle(::topic * psubject, ::context * pcontext)
+   void pane_view::handle(::topic * ptopic, ::context * pcontext)
    {
 
       if (m_pdocMenu != nullptr
-         && psubject->get_form() == m_pdocMenu->get_view(0)
-         && ::is_set(psubject->m_puserelement))
+         && ptopic->get_form() == m_pdocMenu->get_view(0)
+         && ::is_set(ptopic->m_puserelement))
       {
 
-         if (psubject->m_id == ::id_after_change_text)
+         if (ptopic->m_id == ::id_after_change_text)
          {
 
 
          }
-         else if (psubject->m_id == ::id_set_check && ::is_set(psubject->m_puserelement))
+         else if (ptopic->m_id == ::id_set_check && ::is_set(ptopic->m_puserelement))
          {
 
-            string strCheck = psubject->m_puserelement->m_id;
+            string strCheck = ptopic->m_puserelement->m_id;
 
             if (::str::begins_eat_ci(strCheck, "bilbo"))
             {
 
-               if (::is_set(psubject->m_puserelement) && psubject->m_actioncontext.is_user_source())
+               if (::is_set(ptopic->m_puserelement) && ptopic->m_actioncontext.is_user_source())
                {
 
                   //int iCheck = atoi(strCheck);
 
-                  //__pointer(::user::check) pcheck = psubject->user_interaction();
+                  //__pointer(::user::check) pcheck = ptopic->user_interaction();
 
                }
 
@@ -218,7 +218,7 @@ namespace app_complex_form
 
       }
 
-      ::app_simple_form::tab_view::handle(psubject, pcontext);
+      ::app_simple_form::tab_view::handle(ptopic, pcontext);
 
    }
 

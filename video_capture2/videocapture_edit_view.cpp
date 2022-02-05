@@ -40,7 +40,7 @@ namespace app_complex_video_capture
    }
 
 
-   void edit_view::handle(::topic * psubject, ::context * pcontext)
+   void edit_view::handle(::topic * ptopic, ::context * pcontext)
    {
 
    }

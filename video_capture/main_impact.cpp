@@ -36,9 +36,9 @@ namespace app_complex_video_capture
    }
 
 
-   void main_impact::handle(::topic * psubject, ::context * pcontext)
+   void main_impact::handle(::topic * ptopic, ::context * pcontext)
    {
-      ::user::split_view::handle(psubject, pcontext);
+      ::user::split_view::handle(ptopic, pcontext);
    }
 
 
@@ -84,10 +84,10 @@ namespace app_complex_video_capture
    }
 
 
-   //void main_impact::handle(::topic * psubject, ::context * pcontext)
+   //void main_impact::handle(::topic * ptopic, ::context * pcontext)
    //{
 
-   //   if(psubject->m_id == ::id_click)
+   //   if(ptopic->m_id == ::id_click)
    //   {
 
    //   }

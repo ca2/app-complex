@@ -168,13 +168,13 @@ namespace app_complex_form
    }
 
 
-   void form_002::handle(::topic * psubject, ::context * pcontext)
+   void form_002::handle(::topic * ptopic, ::context * pcontext)
    {
 
-//      if (psubject->m_id == ::id_click)
+//      if (ptopic->m_id == ::id_click)
 //      {
 //
-//         if (psubject->m_puserelement->m_id == "send_button")
+//         if (ptopic->m_puserelement->m_id == "send_button")
 //         {
 //
 //            string strText1;
@@ -212,7 +212,7 @@ namespace app_complex_form
 //
 //      }
 
-      ::app_simple_form::form_002::handle(psubject, pcontext);
+      ::app_simple_form::form_002::handle(ptopic, pcontext);
 
    }
 

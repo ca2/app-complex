@@ -39,13 +39,13 @@ namespace app_complex_form
    }
 
 
-   void main_impact::handle(::topic * psubject, ::context * pcontext)
+   void main_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (psubject->m_id == ::id_click)
+      if (ptopic->m_id == ::id_click)
       {
 
-         if (psubject->user_interaction()->m_id == "simple_form_toggle")
+         if (ptopic->user_interaction()->m_id == "simple_form_toggle")
          {
 
             m_pimpact->set_need_layout();
@@ -56,7 +56,7 @@ namespace app_complex_form
 
       }
 
-      ::user::split_view::handle(psubject, pcontext);
+      ::user::split_view::handle(ptopic, pcontext);
 
 
 
@@ -155,13 +155,13 @@ namespace app_complex_form
    }
 
 
-   //bool main_impact::handle(::topic * psubject, ::context * pcontext)
+   //bool main_impact::handle(::topic * ptopic, ::context * pcontext)
    //{
 
-   //   if(psubject->m_id == ::id_click)
+   //   if(ptopic->m_id == ::id_click)
    //   {
 
-   //      if(psubject->user_element_id() == "simple_form_toggle")
+   //      if(ptopic->user_element_id() == "simple_form_toggle")
    //      {
 
    //         m_pimpact->set_need_layout();

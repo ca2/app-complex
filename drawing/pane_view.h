@@ -28,7 +28,7 @@ namespace app_complex_drawing
 
       void on_change_cur_sel() override;
 
-      virtual void handle(::topic * psubject, ::context * pcontext) override;
+      virtual void handle(::topic * ptopic, ::context * pcontext) override;
 
 
    };
