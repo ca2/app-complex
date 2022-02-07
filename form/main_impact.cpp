@@ -42,10 +42,10 @@ namespace app_complex_form
    void main_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->m_id == ::id_click)
+      if (ptopic->m_atom == ::id_click)
       {
 
-         if (ptopic->m_pextendedtopic->user_interaction()->m_id == "simple_form_toggle")
+         if (ptopic->get_extended_topic()->user_interaction()->m_atom == "simple_form_toggle")
          {
 
             m_pimpact->set_need_layout();
@@ -158,7 +158,7 @@ namespace app_complex_form
    //bool main_impact::handle(::topic * ptopic, ::context * pcontext)
    //{
 
-   //   if(ptopic->m_id == ::id_click)
+   //   if(ptopic->m_atom == ::id_click)
    //   {
 
    //      if(ptopic->user_element_id() == "simple_form_toggle")

@@ -99,14 +99,14 @@ namespace app_complex_drawing
 
       }
 
-      string strId = pimpactdata->m_id;
+      string strId = pimpactdata->m_atom;
 
       if (::str::begins_eat_ci(strId, "drawing"))
       {
 
          auto pview = m_papplication->create_simple_drawing_view(this, pimpactdata);
 
-         pview->m_id = pimpactdata->m_id;
+         pview->m_atom = pimpactdata->m_atom;
 
          pview->m_prender->initialize_simple_drawing(atoi(strId));
 
@@ -122,20 +122,20 @@ namespace app_complex_drawing
    void pane_view::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->m_pextendedtopic->user_interaction() == m_pcolorview)
+      if (ptopic->get_extended_topic()->user_interaction() == m_pcolorview)
       {
 
-         if (ptopic->m_id == ::id_after_change_cur_sel || ptopic->m_id == ::id_after_change_cur_hover)
+         if (ptopic->m_atom == ::id_after_change_cur_sel || ptopic->m_atom == ::id_after_change_cur_hover)
          {
 
             m_pcolorview->get_color().get_hls(m_pimpactTopic->m_prender->m_hlsText);
 
-            if (ptopic->m_id == ::id_after_change_cur_sel)
+            if (ptopic->m_atom == ::id_after_change_cur_sel)
             {
 
                string strId;
 
-               strId = m_pimpactTopic->m_id + ".color";
+               strId = m_pimpactTopic->m_atom + ".color";
 
                auto pdocument = m_pimpactTopic->get_document();
 
@@ -154,10 +154,10 @@ namespace app_complex_drawing
          }
 
       }
-      else if (ptopic->m_pextendedtopic->m_puserelement->m_id == impact_font_sel)
+      else if (ptopic->get_extended_topic()->m_puserelement->m_atom == impact_font_sel)
       {
 
-         if (ptopic->m_id == ::id_after_change_cur_sel)
+         if (ptopic->m_atom == ::id_after_change_cur_sel)
          {
 
             string strFont = m_pfontview->m_pimpact->get_cur_sel_face_name();
@@ -165,7 +165,7 @@ namespace app_complex_drawing
             m_pimpactTopic->m_prender->set_font(strFont);
 
          }
-         else if (ptopic->m_id == ::id_after_change_cur_hover)
+         else if (ptopic->m_atom == ::id_after_change_cur_hover)
          {
 
             string strFont = m_pfontview->m_pimpact->get_cur_hover_face_name();

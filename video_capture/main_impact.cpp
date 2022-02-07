@@ -59,7 +59,7 @@ namespace app_complex_video_capture
 
       //m_pimpact = create_view < lite_view >();
 
-      m_pimpact = create_view < impact >(nullptr, get_pane_holder(iPane), "videocapture_view");
+      m_pimpact = create_view < app_complex_video_capture::impact >(nullptr, get_pane_holder(iPane), "videocapture_view");
 
       if(m_pimpact == nullptr)
       {
@@ -87,7 +87,7 @@ namespace app_complex_video_capture
    //void main_impact::handle(::topic * ptopic, ::context * pcontext)
    //{
 
-   //   if(ptopic->m_id == ::id_click)
+   //   if(ptopic->m_atom == ::id_click)
    //   {
 
    //   }

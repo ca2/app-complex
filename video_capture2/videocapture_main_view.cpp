@@ -87,7 +87,7 @@ namespace app_complex_video_capture
    //void main_impact::handle(::topic * ptopic, ::context * pcontext)
    //{
 
-   //   if(ptopic->m_id == ::id_click)
+   //   if(ptopic->m_atom == ::id_click)
    //   {
 
    //   }

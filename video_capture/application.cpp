@@ -3,7 +3,7 @@
 //void throw_a_::exception::exception_through_one_single_function_boundary(string str)
 //{
 //
-//   __throw(::exception(str + " this is also a very artificial simple exception to test if exception can be safely thrown and caught at this environment (in this specific case: Android)... but across a single function boundary (thrown in function, should be caught in caller...) ..."));
+//   throw ::exception(::exception(str + " this is also a very artificial simple exception to test if exception can be safely thrown and caught at this environment (in this specific case: Android)... but across a single function boundary (thrown in function, should be caught in caller...) ..."));
 //
 //}
 
@@ -190,7 +190,7 @@ namespace app_complex_video_capture
 
          string strId = "video_input_" + pdevice->get_id2();
 
-         strBilbo += "<input type=\"checkbox\" identification=\"" + strId + "\" />" + strName + "<br/>";
+         strBilbo += "<input type=\"checkbox\" id=\"" + strId + "\" />" + strName + "<br/>";
 
 
       }

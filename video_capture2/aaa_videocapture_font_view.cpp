@@ -88,7 +88,7 @@ namespace video_capture
    void font_view::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if(ptopic->m_id == ::id_click)
+      if(ptopic->m_atom == ::id_click)
       {
 
          if(ptopic->user_element_id() == "switcher_toggle")
@@ -117,10 +117,10 @@ namespace video_capture
          //}
 
       }
-      else if(ptopic->m_id == ::id_after_change_cur_sel)
+      else if(ptopic->m_atom == ::id_after_change_cur_sel)
       {
 
-         if(m_pimpact == ptopic->m_pextendedtopic->user_interaction())
+         if(m_pimpact == ptopic->get_extended_topic()->user_interaction())
          {
 
             if(GetTypedParent < pane_view >()->m_pviewLast != nullptr)

@@ -56,6 +56,22 @@ namespace app_complex_video_capture
 
       }
 
+      auto pvideoinputdevice = get_application()->m_pvideoinputdevice;
+
+      if (pvideoinputdevice)
+      {
+
+         int iFormat = pvideoinputdevice->find_argb_32_format();
+
+         pvideoinputdevice->set_format(iFormat);
+
+         pvideoinputdevice->start_capturing();
+
+
+      }
+
+      get_top_level()->add_prodevian(this);
+
    }
 
 
@@ -94,6 +110,8 @@ namespace app_complex_video_capture
 
       m_prender = pvideoinputdevice->get_render();
 
+      synchronous_lock synchronouslock(m_prender->mutex());
+
       image_source imagesource(m_prender->m_pimage);
 
       image_drawing_options imagedrawingoptions(rectangleClient);
@@ -108,7 +126,7 @@ namespace app_complex_video_capture
    void impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if(ptopic->m_id == INITIAL_UPDATE)
+      if(ptopic->m_atom == INITIAL_UPDATE)
       {
 
          __pointer(::userex::pane_tab_view) ppaneview = GetTypedParent < ::userex::pane_tab_view >();

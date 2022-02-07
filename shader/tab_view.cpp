@@ -156,7 +156,7 @@ namespace simple_shader
 
       }
 
-      switch(pimpactdata->m_id)
+      switch(pimpactdata->m_atom)
       {
       case MENU_IMPACT:
       {
@@ -167,14 +167,14 @@ namespace simple_shader
       break;
       }
 
-      string strId = pimpactdata->m_id;
+      string strId = pimpactdata->m_atom;
 
       if(::str::begins_eat_ci(strId, "shader"))
       {
 
          auto pview = papplication->create_simple_shader_view(this, pimpactdata);
 
-         pview->m_id = pimpactdata->m_id;
+         pview->m_atom = pimpactdata->m_atom;
 
          pview->m_iView = atoi(strId);
 

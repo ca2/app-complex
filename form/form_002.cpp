@@ -171,10 +171,10 @@ namespace app_complex_form
    void form_002::handle(::topic * ptopic, ::context * pcontext)
    {
 
-//      if (ptopic->m_id == ::id_click)
+//      if (ptopic->m_atom == ::id_click)
 //      {
 //
-//         if (ptopic->m_pextendedtopic->m_puserelement->m_id == "send_button")
+//         if (ptopic->get_extended_topic()->m_puserelement->m_atom == "send_button")
 //         {
 //
 //            string strText1;

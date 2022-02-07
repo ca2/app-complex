@@ -160,7 +160,7 @@ namespace simple_os_drag_and_drop
 
       }
 
-      switch(pimpactdata->m_id)
+      switch(pimpactdata->m_atom)
       {
       case MENU_IMPACT:
       {
@@ -171,14 +171,14 @@ namespace simple_os_drag_and_drop
       break;
       }
 
-      string strId = pimpactdata->m_id;
+      string strId = pimpactdata->m_atom;
 
       if(::str::begins_eat_ci(strId, "drawing"))
       {
 
          auto pview = papplication->create_simple_os_drag_and_drop_view(this, pimpactdata);
 
-         pview->m_id = pimpactdata->m_id;
+         pview->m_atom = pimpactdata->m_atom;
 
          pview->m_psimpleosdraganddrop->initialize_drag_and_drop(atoi(strId));
 
@@ -195,15 +195,15 @@ namespace simple_os_drag_and_drop
    bool tab_view::BaseOnControlEvent(::user::form_window * pview,::user::control_event * pevent)
    {
 
-      if(m_pdocMenu != nullptr && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0) && ptopic->m_pextendedtopic->user_interaction() != nullptr)
+      if(m_pdocMenu != nullptr && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0) && ptopic->get_extended_topic()->user_interaction() != nullptr)
       {
 
-         if(ptopic->m_id == ::id_after_change_text)
+         if(ptopic->m_atom == ::id_after_change_text)
          {
 
 
          }
-         else if (ptopic->m_id == ::id_set_check && ptopic->m_pextendedtopic->user_interaction() != nullptr)
+         else if (ptopic->m_atom == ::id_set_check && ptopic->get_extended_topic()->user_interaction() != nullptr)
          {
 
             string strCheck = ptopic->user_element_id();
@@ -212,12 +212,12 @@ namespace simple_os_drag_and_drop
             if (::str::begins_eat_ci(strCheck, "bilbo"))
             {
 
-               if (ptopic->m_pextendedtopic->user_interaction() != nullptr && ptopic->m_pextendedtopic->m_actioncontext.is_user_source())
+               if (ptopic->get_extended_topic()->user_interaction() != nullptr && ptopic->get_extended_topic()->m_actioncontext.is_user_source())
                {
 
                   //int iCheck = atoi(strCheck);
 
-                  //__pointer(::user::check) pcheck = ptopic->m_pextendedtopic->user_interaction();
+                  //__pointer(::user::check) pcheck = ptopic->get_extended_topic()->user_interaction();
 
                }
 
@@ -238,8 +238,8 @@ namespace simple_os_drag_and_drop
       ////__update(::update)
       //{
 
-      //   if (ptopic->m_id == id_control_event
-      //         && ptopic->m_pextendedtopic->user_interaction() == m_pfontview
+      //   if (ptopic->m_atom == id_control_event
+      //         && ptopic->get_extended_topic()->user_interaction() == m_pfontview
       //         && m_pviewTopic != nullptr)
       //   {
 
