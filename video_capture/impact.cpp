@@ -61,6 +61,8 @@ namespace app_complex_video_capture
       if (pvideoinputdevice)
       {
 
+         pvideoinputdevice->initialize_device();
+
          int iFormat = pvideoinputdevice->find_argb_32_format();
 
          pvideoinputdevice->set_format(iFormat);

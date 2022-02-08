@@ -94,8 +94,15 @@ namespace app_complex_video_capture
       
       m_ptemplateVideoCaptureImpact = pDocTemplate;
 
+#ifdef LINUX
+
+      auto pfactory = m_psystem->factory("video_input", "video_for_linux");
+
+#else
 
       auto pfactory = m_psystem->factory("video_input", "media_foundation");
+
+#endif
 
       pfactory->merge_to_global_factory();
 

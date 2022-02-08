@@ -8,12 +8,26 @@ list(APPEND library_source
    _app_complex_video_capture.h
    application.cpp
    application.h
+   document.cpp
+   document.h
+   edit_view.cpp
+   edit_view.h
+   frame.cpp
+   frame.h
    framework.cpp
    framework.h
    impact.cpp
    impact.h
+   main_frame.cpp
+   main_frame.h
+   main_impact.cpp
+   main_impact.h
    pane_view.cpp
    pane_view.h
+   toggle_view.cpp
+   toggle_view.h
+   top_view.cpp
+   top_view.h
    )
 
 
@@ -26,7 +40,7 @@ list(APPEND library_references
    base
    bred
    core
-   app_simple_drawing
+   video_input
    )
 
 
@@ -137,6 +151,12 @@ add_dependencies(_app_complex_video_capture ${default_write_text})
 add_dependencies(_app_complex_video_capture ${app_common_dependencies})
 add_dependencies(_app_complex_video_capture database_sqlite3)
 
+
+if(LINUX)
+
+   add_dependencies(_app_complex_video_capture video_input_video_for_linux)
+
+endif()
 
 target_include_directories(_app_complex_video_capture PRIVATE ${library_include_directories})
 

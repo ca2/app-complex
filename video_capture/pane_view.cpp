@@ -227,6 +227,12 @@ namespace app_complex_video_capture
 
             }
 
+            ptopic->get_extended_topic()->m_bOk = true;
+
+            ptopic->get_extended_topic()->m_bRet = true;
+
+            return;
+
          }
 
 
