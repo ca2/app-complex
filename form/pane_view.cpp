@@ -186,29 +186,29 @@ namespace app_complex_form
    {
 
       if (m_pdocMenu != nullptr
-         && ptopic->get_extended_topic()->get_form() == m_pdocMenu->get_view(0)
-         && ::is_set(ptopic->get_extended_topic()->m_puserelement))
+         && ptopic->get_form() == m_pdocMenu->get_view(0)
+         && ::is_set(ptopic->m_puserelement))
       {
 
-         if (ptopic->get_extended_topic()->m_atom == ::id_after_change_text)
+         if (ptopic->m_atom == ::id_after_change_text)
          {
 
 
          }
-         else if (ptopic->m_atom == ::id_set_check && ::is_set(ptopic->get_extended_topic()->m_puserelement))
+         else if (ptopic->m_atom == ::id_set_check && ::is_set(ptopic->m_puserelement))
          {
 
-            string strCheck = ptopic->get_extended_topic()->m_puserelement->m_atom;
+            string strCheck = ptopic->m_puserelement->m_atom;
 
             if (::str::begins_eat_ci(strCheck, "bilbo"))
             {
 
-               if (::is_set(ptopic->get_extended_topic()->m_puserelement) && ptopic->get_extended_topic()->m_actioncontext.is_user_source())
+               if (::is_set(ptopic->m_puserelement) && ptopic->m_actioncontext.is_user_source())
                {
 
                   //int iCheck = atoi(strCheck);
 
-                  //__pointer(::user::check) pcheck = ptopic->get_extended_topic()->user_interaction();
+                  //__pointer(::user::check) pcheck = ptopic->user_interaction();
 
                }
 

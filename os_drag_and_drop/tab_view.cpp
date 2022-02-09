@@ -195,7 +195,7 @@ namespace simple_os_drag_and_drop
    bool tab_view::BaseOnControlEvent(::user::form_window * pview,::user::control_event * pevent)
    {
 
-      if(m_pdocMenu != nullptr && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0) && ptopic->get_extended_topic()->user_interaction() != nullptr)
+      if(m_pdocMenu != nullptr && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0) && ptopic->user_interaction() != nullptr)
       {
 
          if(ptopic->m_atom == ::id_after_change_text)
@@ -203,7 +203,7 @@ namespace simple_os_drag_and_drop
 
 
          }
-         else if (ptopic->m_atom == ::id_set_check && ptopic->get_extended_topic()->user_interaction() != nullptr)
+         else if (ptopic->m_atom == ::id_set_check && ptopic->user_interaction() != nullptr)
          {
 
             string strCheck = ptopic->user_element_id();
@@ -212,12 +212,12 @@ namespace simple_os_drag_and_drop
             if (::str::begins_eat_ci(strCheck, "bilbo"))
             {
 
-               if (ptopic->get_extended_topic()->user_interaction() != nullptr && ptopic->get_extended_topic()->m_actioncontext.is_user_source())
+               if (ptopic->user_interaction() != nullptr && ptopic->m_actioncontext.is_user_source())
                {
 
                   //int iCheck = atoi(strCheck);
 
-                  //__pointer(::user::check) pcheck = ptopic->get_extended_topic()->user_interaction();
+                  //__pointer(::user::check) pcheck = ptopic->user_interaction();
 
                }
 
@@ -239,7 +239,7 @@ namespace simple_os_drag_and_drop
       //{
 
       //   if (ptopic->m_atom == id_control_event
-      //         && ptopic->get_extended_topic()->user_interaction() == m_pfontview
+      //         && ptopic->user_interaction() == m_pfontview
       //         && m_pviewTopic != nullptr)
       //   {
 

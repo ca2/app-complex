@@ -122,7 +122,7 @@ namespace app_complex_drawing
    void pane_view::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->get_extended_topic()->user_interaction() == m_pcolorview)
+      if (ptopic->user_interaction() == m_pcolorview)
       {
 
          if (ptopic->m_atom == ::id_after_change_cur_sel || ptopic->m_atom == ::id_after_change_cur_hover)
@@ -154,7 +154,7 @@ namespace app_complex_drawing
          }
 
       }
-      else if (ptopic->get_extended_topic()->m_puserelement->m_atom == impact_font_sel)
+      else if (ptopic->m_puserelement->m_atom == impact_font_sel)
       {
 
          if (ptopic->m_atom == ::id_after_change_cur_sel)

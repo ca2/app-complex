@@ -173,7 +173,7 @@ namespace app_complex_video_capture
    void pane_view::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->get_extended_topic()->user_interaction() && ptopic->get_extended_topic()->user_interaction()->is_ascendant(m_pdocumentMenu, true))
+      if (ptopic->user_interaction() && ptopic->user_interaction()->is_ascendant(m_pdocumentMenu, true))
       {
 
 
@@ -203,18 +203,18 @@ namespace app_complex_video_capture
 
             }
 
-            ptopic->get_extended_topic()->m_bOk = true;
+            ptopic->m_bOk = true;
 
-            ptopic->get_extended_topic()->m_bRet = true;
+            ptopic->m_bRet = true;
 
             return;
 
          }
 
-         if (ptopic->m_atom == ::id_set_check && ptopic->get_extended_topic()->user_interaction() != nullptr)
+         if (ptopic->m_atom == ::id_set_check && ptopic->user_interaction() != nullptr)
          {
 
-            string strCheck = ptopic->get_extended_topic()->user_element_id();
+            string strCheck = ptopic->user_element_id();
 
             INFORMATION(strCheck);
 
@@ -227,9 +227,9 @@ namespace app_complex_video_capture
 
             }
 
-            ptopic->get_extended_topic()->m_bOk = true;
+            ptopic->m_bOk = true;
 
-            ptopic->get_extended_topic()->m_bRet = true;
+            ptopic->m_bRet = true;
 
             return;
 
@@ -242,22 +242,22 @@ namespace app_complex_video_capture
 
          //if(ptopic->user_element_id() == "clockverse")
          //   {
-         //      papplication->set_binding_clockverse_country_time_zone_set_on_hover(ptopic->get_extended_topic()->user_interaction()->_001GetCheck() == ::check_checked);
+         //      papplication->set_binding_clockverse_country_time_zone_set_on_hover(ptopic->user_interaction()->_001GetCheck() == ::check_checked);
          //      return true;
          //   }
          //   else if(ptopic->user_element_id() == "clockverse_auto")
          //   {
-         //      papplication->set_auto_launch_clockverse_on_hover(ptopic->get_extended_topic()->user_interaction()->_001GetCheck() == ::check_checked);
+         //      papplication->set_auto_launch_clockverse_on_hover(ptopic->user_interaction()->_001GetCheck() == ::check_checked);
          //      return true;
          //   }
          //   else if(ptopic->user_element_id() == "flag")
          //   {
-         //      papplication->set_binding_flag_country_ca2_domain_image_on_hover(ptopic->get_extended_topic()->user_interaction()->_001GetCheck() == ::check_checked);
+         //      papplication->set_binding_flag_country_ca2_domain_image_on_hover(ptopic->user_interaction()->_001GetCheck() == ::check_checked);
          //      return true;
          //   }
          //   else if(ptopic->user_element_id() == "flag_auto")
          //   {
-         //      papplication->set_auto_launch_flag_on_hover(ptopic->get_extended_topic()->user_interaction()->_001GetCheck() == ::check_checked);
+         //      papplication->set_auto_launch_flag_on_hover(ptopic->user_interaction()->_001GetCheck() == ::check_checked);
          //      return true;
          //   }
          }

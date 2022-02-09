@@ -120,7 +120,7 @@ namespace video_capture
       else if(ptopic->m_atom == ::id_after_change_cur_sel)
       {
 
-         if(m_pimpact == ptopic->get_extended_topic()->user_interaction())
+         if(m_pimpact == ptopic->user_interaction())
          {
 
             if(GetTypedParent < pane_view >()->m_pviewLast != nullptr)
