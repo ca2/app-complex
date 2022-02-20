@@ -499,6 +499,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="application.cpp" />
+    <ClCompile Include="device_selector.cpp" />
     <ClCompile Include="document.cpp" />
     <ClCompile Include="edit_view.cpp" />
     <ClCompile Include="frame.cpp" />
@@ -519,6 +520,7 @@
   <ItemGroup>
     <ClInclude Include="application.h" />
     <ClInclude Include="common.h" />
+    <ClInclude Include="device_selector.h" />
     <ClInclude Include="document.h" />
     <ClInclude Include="dshowcapture.hpp" />
     <ClInclude Include="edit_view.h" />

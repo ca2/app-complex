@@ -37,6 +37,9 @@
     <ClCompile Include="impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="device_selector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -91,6 +94,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="impact.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="device_selector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

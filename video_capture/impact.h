@@ -13,9 +13,7 @@ namespace app_complex_video_capture
    public:
 
 
-
       __pointer(::video_input::render)    m_prender;
-
 
 
       impact();
@@ -41,17 +39,14 @@ namespace app_complex_video_capture
 
       ::user::document * get_document();
 
-      virtual bool start_capture();
-
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
 
       void _001OnDraw(::draw2d::graphics_pointer & pgraphics);
-      //virtual void OnCaptureEvent(wparam wparam, lparam lparam);
       
       DECLARE_MESSAGE_HANDLER(on_message_create);
       DECLARE_MESSAGE_HANDLER(on_message_destroy);
 
-            virtual void defer_check_on_draw_layout();
+      virtual void defer_check_on_draw_layout();
       virtual void on_draw_image_layer(::draw2d::graphics_pointer & pgraphics);
 
       // IUnknown
@@ -65,23 +60,6 @@ namespace app_complex_video_capture
 
 
 } // namespace app_complex_video_capture
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

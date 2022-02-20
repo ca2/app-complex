@@ -1,11 +1,5 @@
 #include "framework.h"
 
-//void throw_a_::exception::exception_through_one_single_function_boundary(string str)
-//{
-//
-//   throw ::exception(::exception(str + " this is also a very artificial simple exception to test if exception can be safely thrown and caught at this environment (in this specific case: Android)... but across a single function boundary (thrown in function, should be caught in caller...) ..."));
-//
-//}
 
 namespace app_complex_video_capture
 {
@@ -14,28 +8,9 @@ namespace app_complex_video_capture
    application::application() 
    {
 
-
-      //m_ptopviewLast                          = nullptr;
-      //m_pviewLast                            = nullptr;
-
-      //m_ptopviewMain                          = nullptr;
-      //m_pviewMain                          = nullptr;
-      //m_ptoggleviewMain= nullptr;
-      //m_peditMain= nullptr;
-
-      //m_ptopviewSwitcher                          = nullptr;
-      //m_pviewSwitcher                          = nullptr;
-      //m_ptoggleviewSwitcher= nullptr;
-      //m_peditSwitcher= nullptr;
-
-      //m_ptopviewFont                          = nullptr;
-      //m_pfontlistview                          = nullptr;
-      //m_ptoggleviewFontSel= nullptr;
-      //m_peditFontSel = nullptr;
-
       m_ptemplateVideoCaptureMain = nullptr;
-      m_ptemplateVideoCaptureImpact = nullptr;
 
+      m_ptemplateVideoCaptureImpact = nullptr;
 
       m_strAppId = "app-complex/video_capture";
 
@@ -43,9 +18,7 @@ namespace app_complex_video_capture
 
       m_strBaseSupportId = "app-complex/video_capture";
 
-
-      m_bLicense              = false;
-
+      m_bLicense = false;
 
    }
 
@@ -69,11 +42,9 @@ namespace app_complex_video_capture
       ::factory::add_factory_item <::app_complex_video_capture::pane_view >();
       ::factory::add_factory_item <::app_complex_video_capture::top_view >();
       ::factory::add_factory_item <::app_complex_video_capture::toggle_view >();
-
+      ::factory::add_factory_item <::app_complex_video_capture::device_selector >();
 
       ::aura::application::init_instance();
-
-
         
       auto pDocTemplate = __new(::user::single_document_template(
                           "main",
@@ -90,6 +61,7 @@ namespace app_complex_video_capture
                           __type(document),
                           __type(frame),
                           __type(main_impact)));
+
       add_document_template(pDocTemplate);
       
       m_ptemplateVideoCaptureImpact = pDocTemplate;
@@ -116,15 +88,9 @@ namespace app_complex_video_capture
 
    }
 
-   //i32 application::exit_application()
-   //{
-
-   //   return ::aura::application::exit_application();
-   //}
 
    void application::on_request(::create * pcreate)
    {
-      //debug_filling_holding();
 
 #if 0
 
@@ -218,9 +184,64 @@ namespace app_complex_video_capture
    void application::set_current_video_input_device(const ::string & strDevice)
    {
 
-      data_set("device", strDevice);
+      auto pvideoinputdevice = m_pvideoinput->get_device_by_id2(strDevice);
 
-      m_pvideoinputdevice = m_pvideoinput->get_device_by_id2(strDevice);
+      set_current(pvideoinputdevice);
+
+   }
+
+   
+   void application::set_current(::video_input::device * pdevice)
+   {
+
+      if (::is_set(pdevice) && !m_pvideoinput->contains_device(pdevice))
+      {
+
+         throw ::exception(::error_invalid_parameter, "Device should make part of video input");
+
+      }
+
+      if (m_pvideoinputdevice)
+      {
+
+         m_pvideoinputdevice->stop_capturing();
+
+         if (m_pvideoinputdevice == pdevice)
+         {
+
+            pdevice = nullptr;
+
+         }
+
+      }
+
+      if (::is_set(pdevice))
+      {
+
+         pdevice->initialize_device();
+
+         auto iFormat = pdevice->find_argb_32_format();
+
+         pdevice->set_format(iFormat);
+
+         pdevice->start_capturing();
+
+      }
+
+      m_pvideoinputdevice = pdevice;
+
+      if (::is_set(pdevice))
+      {
+
+         data_set("device", pdevice->get_id2());
+
+      }
+      else
+      {
+
+         data_set("device", "");
+
+      }
 
    }
 

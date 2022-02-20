@@ -15,18 +15,26 @@ namespace app_complex_video_capture
 
    }
 
+
    impact::~impact()
    {
+
    }
+
 
    void impact::assert_ok() const
    {
+
       user::box::assert_ok();
+
    }
+
 
    void impact::dump(dump_context & dumpcontext) const
    {
+
       user::box::dump(dumpcontext);
+
    }
 
 
@@ -35,7 +43,6 @@ namespace app_complex_video_capture
 
       ::user::impact::install_message_routing(pchannel);
 
-      
       MESSAGE_LINK(e_message_create,pchannel,this,&impact::on_message_create);
       MESSAGE_LINK(e_message_destroy, pchannel, this, &impact::on_message_destroy);
 
@@ -56,24 +63,8 @@ namespace app_complex_video_capture
 
       }
 
-      auto pvideoinputdevice = get_application()->m_pvideoinputdevice;
-
-      if (pvideoinputdevice)
-      {
-
-         pvideoinputdevice->initialize_device();
-
-         auto iFormat = pvideoinputdevice->find_argb_32_format();
-
-         pvideoinputdevice->set_format(iFormat);
-
-         pvideoinputdevice->start_capturing();
-
-
-      }
-
       get_top_level()->add_prodevian(this);
-
+      
    }
 
 
@@ -95,10 +86,24 @@ namespace app_complex_video_capture
    void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
+      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+
+      ::rectangle_i32 rectangleClient;
+
+      get_client_rect(rectangleClient);
+
       auto pvideoinputdevice = get_application()->m_pvideoinputdevice;
+
+      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
       if (!pvideoinputdevice)
       {
+
+         pgraphics->set_font(this);
+
+         pgraphics->set_text_color(::color::white);
+
+         pgraphics->fill_inset_rectangle(rectangleClient, argb(127, 0, 0, 0));
 
          pgraphics->text_out(10, 10, "No video input device selected.");
 
@@ -106,9 +111,20 @@ namespace app_complex_video_capture
 
       }
 
-      ::rectangle_i32 rectangleClient;
+      if (pvideoinputdevice->m_edevicestate == ::video_input::e_device_state_already_in_use_by_other_client)
+      {
 
-      get_client_rect(rectangleClient);
+         pgraphics->set_font(this);
+
+         pgraphics->set_text_color(::color::white);
+
+         pgraphics->fill_inset_rectangle(rectangleClient, argb(127, 0, 0, 0));
+
+         pgraphics->text_out(10, 10, "Webcam is in use by other application.");
+
+         return;
+
+      }
 
       m_prender = pvideoinputdevice->get_render();
 
@@ -179,22 +195,6 @@ namespace app_complex_video_capture
    }
 
 
-   bool impact::start_capture()
-   {
-
-      if (!m_prender)
-      {
-
-         return false;
-
-      }
-
-      m_prender->start_capture();
-
-      return true;
-
-   }
-
 
 } // namespace app_complex_video_capture
 
@@ -211,26 +211,3 @@ namespace app_complex_video_capture
 
 
 
-
-
-
-//
-//int c_video_capture_enum_encoders(wchar_t *** pppszName, wchar_t *** pppszPath);
-//
-//
-//int video_capture_enum_encoders(string_array & straName, string_array & straPath)
-//{
-//
-//   wchar_t ** ppszName;
-//   wchar_t ** ppszPath;
-//
-//   int iCount = c_video_capture_enum_encoders(&ppszName, &ppszPath);
-//
-//   straName.c_add(ppszName, iCount);
-//
-//   straPath.c_add(ppszPath, iCount);
-//
-//   return straName.get_count();
-//
-//}
-//

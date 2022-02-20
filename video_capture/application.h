@@ -40,6 +40,7 @@ namespace app_complex_video_capture
 
       virtual string get_current_video_input_device();
       virtual void set_current_video_input_device(const ::string & strDevice);
+      virtual void set_current(::video_input::device * pdevice);
 
 
    };

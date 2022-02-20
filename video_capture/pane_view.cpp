@@ -54,7 +54,7 @@ namespace app_complex_video_capture
 
       }
 
-      set_tab("Options",OPTIONS_IMPACT);
+      set_tab("Select Device","device_selector");
       set_tab("app_complex_video_capture", MAIN_IMPACT);
       set_tab("Open", FILEMANAGER_IMPACT);
 
@@ -62,34 +62,11 @@ namespace app_complex_video_capture
 
    }
 
+
    void pane_view::on_change_cur_sel()
    {
 
       ::userex::pane_tab_view::on_change_cur_sel();
-
-      string strId = get_view_id();
-
-      if(get_view_id() == GCOM_IMPACT
-            || get_view_id() == MAIN_IMPACT
-            || get_view_id() == MAIN_SWITCHER_IMPACT)
-      {
-
-
-
-      }
-      //else if (get_view_id() == MENU_IMPACT)
-      //{
-
-      //   auto ptabpaneMenu = get_current_tab_index();
-
-      //   ::file::path path = prepare_menu_view();
-
-      //   m_pdocMenu->open_document(path);
-
-
-      //}
-   
-
 
    }
 
@@ -98,70 +75,35 @@ namespace app_complex_video_capture
    void pane_view::on_create_impact(::user::impact_data * pimpactdata)
    {
 
-      switch(pimpactdata->m_atom)
+      if (pimpactdata->m_atom == "device_selector")
       {
-//      case MENU_IMPACT:
-//      {
-//
-//         auto puser = user()->m_pcoreuser;
-//
-//         m_pdocMenu = puser->create_child_form(this, this, pimpactdata->m_pplaceholder);
-//
-//         pimpactdata->m_eflag.add(::user::e_flag_hide_on_kill_focus);
-//
-//
-//         //::file::path path = prepare_menu_view();
-//
-//         //m_pdocMenu->open_document(path);
-//
-//
-////         m_prollspf = pview->get_child_by_id("roll_spf");
-//         //try
-//         //{
-//         //   pform->get_child_by_id("clockverse_auto")->_001SetCheck(papplication->should_auto_launch_clockverse_on_hover(),::e_source_initialize);
-//         //}
-//         //catch(...)
-//         //{
-//         //}
-//
-//         //try
-//         //{
-//         //   pform->get_child_by_id("flag")->_001SetCheck(papplication->should_bind_flag_country_ca2_domain_image_on_hover(),::e_source_initialize);
-//         //}
-//         //catch(...)
-//         //{
-//         //}
-//
-//         //try
-//         //{
-//         //   pform->get_child_by_id("flag_auto")->_001SetCheck(papplication->should_auto_launch_flag_on_hover(),::e_source_initialize);
-//         //}
-//         //catch(...)
-//         //{
-//         //}
-//
-//
-//
-//      }
-//      break;
-      case MAIN_IMPACT:
-      {
-         auto pcreate = m_pusersystem->m_pcreate;
 
-         auto pcommandline = pcreate->m_pcommandline;
-
-         auto& payloadFile = pcommandline->m_varFile;
-
-         auto papplication = get_application();
-
-         papplication->m_ptemplateVideoCaptureImpact->open_document_file(papplication, payloadFile, true, pimpactdata->m_pplaceholder);
+         create_view < device_selector >(pimpactdata);
 
       }
+      else
+      {
 
-      break;
+         switch (pimpactdata->m_atom)
+         {
+         case MAIN_IMPACT:
+         {
+         
+            auto pcreate = m_pusersystem->m_pcreate;
 
+            auto pcommandline = pcreate->m_pcommandline;
 
+            auto & payloadFile = pcommandline->m_varFile;
 
+            auto papplication = get_application();
+
+            papplication->m_ptemplateVideoCaptureImpact->open_document_file(papplication, payloadFile, true, pimpactdata->m_pplaceholder);
+
+         }
+
+         break;
+
+         }
 
       }
 
@@ -214,22 +156,38 @@ namespace app_complex_video_capture
          if (ptopic->m_atom == ::id_set_check && ptopic->user_interaction() != nullptr)
          {
 
-            string strCheck = ptopic->user_element_id();
-
-            INFORMATION(strCheck);
-
-            string strId;
-
-            if (strCheck.begins_eaten_ci(strId, "video_input_"))
+            if (ptopic->m_actioncontext.is_user_source())
             {
 
-               get_application()->set_current_video_input_device(strId);
+               string strCheck = ptopic->user_element_id();
+
+               INFORMATION(strCheck);
+
+               string strId;
+
+               if (strCheck.begins_eaten_ci(strId, "video_input_"))
+               {
+
+                  if (ptopic->user_interaction()->is_checked())
+                  {
+
+                     get_application()->set_current_video_input_device(strId);
+
+                  }
+                  else
+                  {
+
+                     get_application()->set_current_video_input_device("");
+
+                  }
+
+               }
+
+               ptopic->m_bOk = true;
+
+               ptopic->m_bRet = true;
 
             }
-
-            ptopic->m_bOk = true;
-
-            ptopic->m_bRet = true;
 
             return;
 

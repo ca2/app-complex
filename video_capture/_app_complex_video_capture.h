@@ -15,6 +15,7 @@ namespace user
 
 
 #include "document.h"
+#include "device_selector.h"
 #include "edit_view.h"
 #include "toggle_view.h"
 #include "top_view.h"
