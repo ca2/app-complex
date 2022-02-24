@@ -8,7 +8,7 @@ namespace app_complex_video_capture
 
 
    class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE impact :
-      virtual public application_consumer < application, ::user::impact >
+      virtual public app_consumer < application, ::user::impact >
    {
    public:
 

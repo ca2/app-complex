@@ -6,7 +6,7 @@ namespace app_complex_form
 
 
    class CLASS_DECL_APP_COMPLEX_FORM main_impact:
-      virtual public ::application_consumer < application, ::app_simple_form::main_impact >
+      virtual public ::app_consumer < application, ::app_simple_form::main_impact >
    {
    public:
 

@@ -1,4 +1,4 @@
-// Created by camilo on 2022-02-19 12:08 <3ThomasBorregaardSørensen!!
+// Created by camilo on 2022-02-19 12:08 <3ThomasBorregaardSï¿½rensen!!
 #pragma once
 
 
@@ -7,7 +7,7 @@ namespace app_complex_video_capture
 
 
    class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE device_selector :
-      virtual public application_consumer < application, ::user::impact >
+      virtual public app_consumer < application, ::user::impact >
    {
    public:
 

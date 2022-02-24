@@ -96,9 +96,9 @@ namespace simple_shader
 
          };
 
-      papplication->m_mapRunnable[id_simple_checkbox] += predraw;
+      papp->m_mapRunnable[id_simple_checkbox] += predraw;
 
-      papplication->m_mapRunnable[id_no_client_frame] += predraw;
+      papp->m_mapRunnable[id_no_client_frame] += predraw;
 
       auto estatus = __construct_new(m_prender);
 
@@ -140,20 +140,20 @@ namespace simple_shader
 
          ::identification identification = id_simple_text;
 
-         auto pproperty = papplication->fetch_property(identification);
+         auto pproperty = papp->fetch_property(identification);
 
          ::payload payload;
 
-         if (papplication->data_get(identification, payload))
+         if (papp->data_get(identification, payload))
          {
 
             pproperty->convert(payload);
 
          }
 
-         auto idRunnable = papplication->translate_property_id(identification);
+         auto idRunnable = papp->translate_property_id(identification);
 
-         papplication->m_mapRunnable[idRunnable] += [this, identification]()
+         papp->m_mapRunnable[idRunnable] += [this, identification]()
          {
 
             auto pproperty = fetch_property(identification);

@@ -58,7 +58,7 @@ protected:
    CRITICAL_SECTION        m_critsec;
 
    HWND                    m_hwndVideo;        // Video window.
-   HWND                    m_hwndEvent;        // papplication window to receive events. 
+   HWND                    m_hwndEvent;        // papp window to receive events.
 
    IMFSourceReader         *m_pReader;
 

@@ -95,9 +95,9 @@ namespace app_complex_video_capture
 
             auto & payloadFile = pcommandline->m_varFile;
 
-            auto papplication = get_application();
+            auto papp = get_app();
 
-            papplication->m_ptemplateVideoCaptureImpact->open_document_file(papplication, payloadFile, true, pimpactdata->m_pplaceholder);
+            papp->m_ptemplateVideoCaptureImpact->open_document_file(papp, payloadFile, true, pimpactdata->m_pplaceholder);
 
          }
 
@@ -124,9 +124,9 @@ namespace app_complex_video_capture
 
             ::user::impact * pview = m_pdocumentMenu->get_view(0);
 
-            string strDevice = get_application()->get_current_video_input_device();
+            string strDevice = get_app()->get_current_video_input_device();
 
-            for (auto & pdevice : get_application()->m_pvideoinput->devicea())
+            for (auto & pdevice : get_app()->m_pvideoinput->devicea())
             {
 
                string strId = pdevice->get_id2();
@@ -171,13 +171,13 @@ namespace app_complex_video_capture
                   if (ptopic->user_interaction()->is_checked())
                   {
 
-                     get_application()->set_current_video_input_device(strId);
+                     get_app()->set_current_video_input_device(strId);
 
                   }
                   else
                   {
 
-                     get_application()->set_current_video_input_device("");
+                     get_app()->set_current_video_input_device("");
 
                   }
 
@@ -200,22 +200,22 @@ namespace app_complex_video_capture
 
          //if(ptopic->user_element_id() == "clockverse")
          //   {
-         //      papplication->set_binding_clockverse_country_time_zone_set_on_hover(ptopic->user_interaction()->_001GetCheck() == ::check_checked);
+         //      papp->set_binding_clockverse_country_time_zone_set_on_hover(ptopic->user_interaction()->_001GetCheck() == ::check_checked);
          //      return true;
          //   }
          //   else if(ptopic->user_element_id() == "clockverse_auto")
          //   {
-         //      papplication->set_auto_launch_clockverse_on_hover(ptopic->user_interaction()->_001GetCheck() == ::check_checked);
+         //      papp->set_auto_launch_clockverse_on_hover(ptopic->user_interaction()->_001GetCheck() == ::check_checked);
          //      return true;
          //   }
          //   else if(ptopic->user_element_id() == "flag")
          //   {
-         //      papplication->set_binding_flag_country_ca2_domain_image_on_hover(ptopic->user_interaction()->_001GetCheck() == ::check_checked);
+         //      papp->set_binding_flag_country_ca2_domain_image_on_hover(ptopic->user_interaction()->_001GetCheck() == ::check_checked);
          //      return true;
          //   }
          //   else if(ptopic->user_element_id() == "flag_auto")
          //   {
-         //      papplication->set_auto_launch_flag_on_hover(ptopic->user_interaction()->_001GetCheck() == ::check_checked);
+         //      papp->set_auto_launch_flag_on_hover(ptopic->user_interaction()->_001GetCheck() == ::check_checked);
          //      return true;
          //   }
          }

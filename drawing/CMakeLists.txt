@@ -70,7 +70,7 @@ target_include_directories(app_complex_drawing PRIVATE ${library_include_directo
 target_compile_definitions(app_complex_drawing PRIVATE _APP_COMPLEX_DRAWING_LIBRARY)
 
 
-add_executable(_${PROJECT_NAME} operating-system/${SLASHED_OPERATING_SYSTEM}/_${PROJECT_NAME}.cpp)
+add_executable(_${PROJECT_NAME} _main.cpp)
 
 
 list(APPEND executable_references

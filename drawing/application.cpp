@@ -61,7 +61,7 @@ namespace app_complex_drawing
 
       //}
 
-      properties().m_strMainTitle = "Simple Drawing";
+      application_properties().m_strMainTitle = "Simple Drawing";
 
       add_matter_locator("app-simple/drawing");
 

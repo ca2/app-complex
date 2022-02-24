@@ -83,7 +83,7 @@ namespace app_complex_video_capture
    {
 
 
-      for (auto & pdevice : get_application()->m_pvideoinput->devicea())
+      for (auto & pdevice : get_app()->m_pvideoinput->devicea())
       {
 
          auto & pitem = m_itemmap[pdevice];
@@ -110,7 +110,7 @@ namespace app_complex_video_capture
 
       }
 
-      for (auto & pdevice : get_application()->m_pvideoinput->devicea())
+      for (auto & pdevice : get_app()->m_pvideoinput->devicea())
       {
 
          devicea.erase(pdevice);
@@ -120,10 +120,10 @@ namespace app_complex_video_capture
       for (auto & pdevice : devicea)
       {
 
-         if (get_application()->m_pvideoinputdevice == pdevice)
+         if (get_app()->m_pvideoinputdevice == pdevice)
          {
 
-            get_application()->set_current((::video_input::device *)nullptr);
+            get_app()->set_current((::video_input::device *)nullptr);
 
          }
 
@@ -154,7 +154,7 @@ namespace app_complex_video_capture
 
          auto & pitem = pair.m_element2;
 
-         if (pair.m_element1 == get_application()->m_pvideoinputdevice)
+         if (pair.m_element1 == get_app()->m_pvideoinputdevice)
          {
 
             if (m_pitemHover == pitem)
@@ -226,7 +226,7 @@ namespace app_complex_video_capture
 
       auto pdevice = dynamic_cast <::video_input::device *>(pitem->m_pelement.m_p);
 
-      get_application()->set_current(pdevice);
+      get_app()->set_current(pdevice);
 
       return true;
 
@@ -244,7 +244,7 @@ namespace app_complex_video_capture
 
       index iItem = 0;
 
-      for (auto & pdevice : get_application()->m_pvideoinput->devicea())
+      for (auto & pdevice : get_app()->m_pvideoinput->devicea())
       {
 
          auto & pitem = m_itemmap[pdevice];

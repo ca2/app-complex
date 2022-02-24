@@ -90,9 +90,9 @@ namespace app_complex_drawing
    void pane_view::on_create_impact(::user::impact_data * pimpactdata)
    {
       
-      auto papplication = get_application();
+      auto papp = get_app();
 
-      if (papplication->has_property("notabs"))
+      if (papp->has_property("notabs"))
       {
 
          return;
@@ -104,7 +104,7 @@ namespace app_complex_drawing
       if (::str::begins_eat_ci(strId, "drawing"))
       {
 
-         auto pview = m_papplication->create_simple_drawing_view(this, pimpactdata);
+         auto pview = m_papp->create_simple_drawing_view(this, pimpactdata);
 
          pview->m_atom = pimpactdata->m_atom;
 
@@ -128,28 +128,28 @@ namespace app_complex_drawing
          if (ptopic->m_atom == ::id_after_change_cur_sel || ptopic->m_atom == ::id_after_change_cur_hover)
          {
 
-            m_pcolorview->get_color().get_hls(m_pimpactTopic->m_prender->m_hlsText);
+            m_pcolorview->get_color().get_hls(m_pimpactDrawing->m_prender->m_hlsText);
 
             if (ptopic->m_atom == ::id_after_change_cur_sel)
             {
 
                string strId;
 
-               strId = m_pimpactTopic->m_atom + ".color";
+               strId = m_pimpactDrawing->m_atom + ".color";
 
-               auto pdocument = m_pimpactTopic->get_document();
+               auto pdocument = m_pimpactDrawing->get_document();
 
-               pdocument->payload(strId) = m_pimpactTopic->m_prender->m_hlsText;
+               pdocument->payload(strId) = m_pimpactDrawing->m_prender->m_hlsText;
 
                ::output_debug_string("\n\nSIMPLE_DRAWING::PANE_VIEW::" + strId + "\n\n");
 
-               auto papplication = get_application();
+               auto papp = get_app();
 
-               papplication->data_set(strId, m_pimpactTopic->m_prender->m_hlsText);
+               papp->data_set(strId, m_pimpactDrawing->m_prender->m_hlsText);
 
             }
 
-            m_pimpactTopic->set_need_redraw();
+            m_pimpactDrawing->set_need_redraw();
 
          }
 
@@ -162,7 +162,12 @@ namespace app_complex_drawing
 
             string strFont = m_pfontview->m_pimpact->get_cur_sel_face_name();
 
-            m_pimpactTopic->m_prender->set_font(strFont);
+            if(::is_set(m_pimpactDrawing))
+            {
+
+               m_pimpactDrawing->m_prender->set_font(strFont);
+
+            }
 
          }
          else if (ptopic->m_atom == ::id_after_change_cur_hover)
@@ -170,24 +175,16 @@ namespace app_complex_drawing
 
             string strFont = m_pfontview->m_pimpact->get_cur_hover_face_name();
 
-            if (strFont.has_char())
+            if(::is_set(m_pimpactDrawing))
             {
 
-               auto papplication = get_application();
-
-               if (papplication->m_pstrHoverFontFamilyName)
-               {
-
-                  *papplication->m_pstrHoverFontFamilyName = strFont;
-
-               }
+               m_pimpactDrawing->m_prender->set_hover_font(strFont);
 
             }
 
          }
 
       }
-
 
       ::userex::pane_tab_view::handle(ptopic, pcontext);
 
@@ -204,6 +201,15 @@ namespace app_complex_drawing
       string_array stra;
 
       stra.explode("->:<-", strId);
+
+      auto pimpactOldDrawing = m_pimpactDrawing;
+
+      if(::is_set(pimpactOldDrawing))
+      {
+
+         pimpactOldDrawing->m_prender->set_hover_font("");
+
+      }
 
       if (::str::begins(get_view_id().to_string(), "drawing"))
       {
@@ -226,49 +232,35 @@ namespace app_complex_drawing
 
          }
 
-         __refer(m_pimpactTopic, m_pimpactdata->m_pplaceholder->get_hold());
-
-         m_pimpactTopic->m_prender->properties().m_strHoverFontFamilyName.Empty();
+         __refer(m_pimpactDrawing, m_pimpactdata->m_pplaceholder->get_hold());
 
       }
-      
+
       if (get_view_id() == FONTSEL_IMPACT)
       {
 
-         if (m_pimpactTopic != nullptr)
+         if (m_pimpactDrawing != nullptr)
          {
 
-            auto strFont1 = m_pimpactTopic->m_prender->m_strFont1;
+            auto strFont1 = m_pimpactDrawing->m_prender->m_strFont1;
 
             m_pfontview->set_sel_by_name(strFont1);
 
-            m_pimpactTopic->m_prender->properties().m_strHoverFontFamilyName = strFont1;
-
-            auto papplication = get_application();
-
-            papplication->m_pstrHoverFontFamilyName = &m_pimpactTopic->m_prender->properties().m_strHoverFontFamilyName;
+            m_pimpactDrawing->m_prender->set_hover_font(strFont1);
 
             m_pfontview->m_pimpact->ensure_sel_visible();
 
          }
 
       }
-      else
-      {
-
-         auto papplication = get_application();
-
-         papplication->m_pstrHoverFontFamilyName = nullptr;
-
-      }
 
       if (get_view_id() == COLORSEL_IMPACT)
       {
 
-         if (m_pimpactTopic != nullptr && m_pcolorview)
+         if (m_pimpactDrawing != nullptr && m_pcolorview)
          {
 
-            m_pcolorview->set_color(m_pimpactTopic->m_prender->m_hlsText);
+            m_pcolorview->set_color(m_pimpactDrawing->m_prender->m_hlsText);
 
          }
 

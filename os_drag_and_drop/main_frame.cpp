@@ -16,9 +16,9 @@ namespace simple_os_drag_and_drop
 
       window_enable_full_screen();
 
-      //m_bWindowFrame = !papplication->m_bExperienceMainFrame;
+      //m_bWindowFrame = !papp->m_bExperienceMainFrame;
 
-      //if (papplication->has_property("opaque"))
+      //if (papp->has_property("opaque"))
       //{
 
       //   m_bExplicitTranslucency = true;
@@ -63,7 +63,7 @@ namespace simple_os_drag_and_drop
    ::experience::frame * main_frame::frame_experience()
    {
 
-      auto pframe = papplication->experience()->frame_experience(NULL, "013", "LightBlue");
+      auto pframe = papp->experience()->frame_experience(NULL, "013", "LightBlue");
 
       return pframe;
 

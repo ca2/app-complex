@@ -6,7 +6,7 @@ namespace app_complex_video_capture
 
 
    class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE pane_view :
-      virtual public ::application_consumer < application, ::userex::pane_tab_view, ::user::form_callback >
+      virtual public ::app_consumer < application, ::userex::pane_tab_view, ::user::form_callback >
    {
    public:
 

@@ -10,12 +10,12 @@ namespace video_capture
 
       m_bBkLoaded = false;
 
-      if (papplication->m_varTopicQuery["hello_bk"].get_string().has_char())
+      if (papp->m_varTopicQuery["hello_bk"].get_string().has_char())
       {
 
          property_set payloadFile;
 
-         payloadFile["url"] = papplication->m_varTopicQuery["hello_bk"];
+         payloadFile["url"] = papp->m_varTopicQuery["hello_bk"];
          payloadFile["http_set"]["raw_http"] = true;
          payloadFile["http_set"]["disable_common_name_cert_check"] = true;
 

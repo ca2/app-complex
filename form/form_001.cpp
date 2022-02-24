@@ -116,9 +116,9 @@ namespace app_complex_form
 //
 //      string strInitialText;
 //
-//      auto papplication = get_application();
+//      auto papp = get_app();
 //
-//      strInitialText = papplication->data_get("last_text");
+//      strInitialText = papp->data_get("last_text");
 //
 //      m_pedit->_001SetText(strInitialText, ::e_source_initialize);
 //
@@ -203,7 +203,7 @@ namespace app_complex_form
 //
 //               m_pedit->_001GetText(strText);
 //
-//               auto papplication = get_application();
+//               auto papp = get_app();
 //
 //               if (strText == "This is a test. This is a test")
 //               {
@@ -212,7 +212,7 @@ namespace app_complex_form
 //
 //               }
 //
-//               papplication->data_set("last_text", strText);
+//               papp->data_set("last_text", strText);
 //
 //            }
 //

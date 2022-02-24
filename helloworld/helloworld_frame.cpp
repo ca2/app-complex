@@ -13,7 +13,7 @@ namespace helloworld
 
       window_enable_full_screen();
 
-      m_bWindowFrame = !papplication->m_bExperienceMainFrame;
+      m_bWindowFrame = !papp->m_bExperienceMainFrame;
 
    }
 
@@ -43,7 +43,7 @@ namespace helloworld
    ::experience::frame * frame::frame_experience()
    {
 
-      auto pframe = papplication->experience().frame_experience(NULL, "001");
+      auto pframe = papp->experience().frame_experience(NULL, "001");
 
       pframe->set_style("StyleLightBlue");
 

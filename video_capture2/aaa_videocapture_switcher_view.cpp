@@ -106,10 +106,10 @@ namespace video_capture
          else if(ptopic->user_element_id() == "videocapture_toggle")
          {
 
-            if(m_pimpact->m_prender->m_bLite && !papplication->m_bLoadAiFont)
+            if(m_pimpact->m_prender->m_bLite && !papp->m_bLoadAiFont)
             {
 
-               papplication->load_ai_font();
+               papp->load_ai_font();
 
             }
 

@@ -75,7 +75,7 @@ namespace app_complex_video_capture
 
          string strText;
 
-         get_application()->data_get("cur_text",strText);
+         get_app()->data_get("cur_text",strText);
 
          peditview->_001SetText(strText, ::e_source_initialize);
 

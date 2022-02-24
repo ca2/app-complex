@@ -76,7 +76,7 @@ namespace app_complex_form
 
       int iPane;
 
-      //if (papplication->m_bMultiverseChat)
+      //if (papp->m_bMultiverseChat)
       //{
 
       //   SetPaneCount(2);
@@ -128,7 +128,7 @@ namespace app_complex_form
 //
 //         string strText;
 //
-//         papplication->data_get("cur_text",strText);
+//         papp->data_get("cur_text",strText);
 //
 //         peditview->_001SetText(strText, ::e_source_initialize);
 //

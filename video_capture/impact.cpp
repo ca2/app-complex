@@ -92,7 +92,7 @@ namespace app_complex_video_capture
 
       get_client_rect(rectangleClient);
 
-      auto pvideoinputdevice = get_application()->m_pvideoinputdevice;
+      auto pvideoinputdevice = get_app()->m_pvideoinputdevice;
 
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 

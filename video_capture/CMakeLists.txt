@@ -86,7 +86,7 @@ target_include_directories(app_complex_video_capture PRIVATE ${library_include_d
 target_compile_definitions(app_complex_video_capture PRIVATE _app_complex_video_capture_LIBRARY)
 
 
-add_executable(_${PROJECT_NAME} operating-system/${SLASHED_OPERATING_SYSTEM}/_${PROJECT_NAME}.cpp)
+add_executable(_${PROJECT_NAME} _main.cpp)
 
 
 list(APPEND executable_references
