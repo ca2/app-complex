@@ -95,7 +95,7 @@ namespace simple_application
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->m_pcommandline->m_varQuery["document"].cast < document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->prodevian_prepare_window_maximize();
+         pcreate->m_pcommandline->payload("document").cast < document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->prodevian_prepare_window_maximize();
 
       }
 
