@@ -49,11 +49,11 @@ namespace simple_shader
 
       m_ppaneview = nullptr;
 
-      m_strAppId = "app-simple/shader";
+      m_strAppId = "app-complex/shader";
 
-      m_strAppName = "app-simple/shader";
+      m_strAppName = "Complex Shader";
 
-      m_strBaseSupportId = "ca2_flag";
+      m_strBaseSupportId = "app-complex/shader";
 
       m_bLicense = false;
 

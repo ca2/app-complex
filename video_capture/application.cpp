@@ -14,9 +14,9 @@ namespace app_complex_video_capture
 
       m_strAppId = "app-complex/video_capture";
 
-      m_strAppName = "app-complex/video_capture";
-
       m_strBaseSupportId = "app-complex/video_capture";
+
+      m_strAppName = "Video Capture";
 
       m_bLicense = false;
 

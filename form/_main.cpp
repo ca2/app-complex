@@ -8,8 +8,7 @@
 
 
 
-::app_complex_form
-::application g_app;
+::app_complex_form::application g_app;
 
 
 __embed_resource(g_app)

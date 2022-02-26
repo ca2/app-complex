@@ -15,7 +15,7 @@ namespace app_complex_drawing
 
       m_strAppId = "app-complex/drawing";
 
-      m_strAppName = "app-complex/drawing";
+      m_strAppName = "Complex Drawing";
 
       m_strBaseSupportId = "app-complex/drawing";
 

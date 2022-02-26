@@ -4,7 +4,10 @@
 #include "framework.h"
 
 
-::app_simple_drawing::application g_app;
+::app_complex_video_capture::application g_app;
+
+
+__embed_resource(g_app);
 
 
 

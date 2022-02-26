@@ -15,8 +15,8 @@ namespace app_complex_form
       m_ptemplateBeatMapperImpact  = NULL;
 
       m_strAppId                 = "app-complex/form";
-      m_strAppName               = "app-complex/form";
       m_strBaseSupportId         = "app-complex/form";
+      m_strAppName               = "Complex Form";
       m_bLicense                 = false;
 
       m_bMultiverseChat          = true;
