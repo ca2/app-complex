@@ -8,6 +8,8 @@ list(APPEND library_source
    _app_complex_video_capture.h
    application.cpp
    application.h
+   device_selector.cpp
+   device_selector.h
    document.cpp
    document.h
    edit_view.cpp
