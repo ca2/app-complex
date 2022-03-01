@@ -1027,7 +1027,7 @@
 				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = (
 					"$(inherited)",
 					"\"$(TARGET_BUILD_DIR)\"",
-					"$(WorkspaceDir)/archive",
+					"$(WorkspaceDir)/operating-system",
 					"$(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/storage-ios/iPhoneSimulator13.4-x86_64.sdk/lib",
 				);
 				OTHER_LDFLAGS = "-all_load";
@@ -1038,7 +1038,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SEPARATE_STRIP = YES;
 				STRIP_STYLE = debugging;
-				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/_include . ..  $(WorkspaceDir)/../.. $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/.. $(WorkspaceDir) $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/operating-system-$(PLATFORM_MODIFIER)";
+				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/_include . ..  $(WorkspaceDir)/../.. $(WorkspaceDir)/source/app $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/.. $(WorkspaceDir) $(WorkspaceDir)/source/app $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/operating-system-$(PLATFORM_MODIFIER)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1074,7 +1074,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SEPARATE_STRIP = YES;
 				STRIP_STYLE = debugging;
-				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/_include . ..  $(WorkspaceDir)/../.. $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/.. $(WorkspaceDir) $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/operating-system-$(PLATFORM_MODIFIER)";
+				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/_include . ..  $(WorkspaceDir)/../.. $(WorkspaceDir)/source/app $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/.. $(WorkspaceDir) $(WorkspaceDir)/source/app $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/operating-system-$(PLATFORM_MODIFIER)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1190,7 +1190,7 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/_include . ..  $(WorkspaceDir)/../.. $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/.. $(WorkspaceDir) $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/base aura/ $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/operating-system-macos";
+				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/_include . ..  $(WorkspaceDir)/../.. $(WorkspaceDir)/source/app $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/.. $(WorkspaceDir) $(WorkspaceDir)/source/app $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/base aura/ $(WorkspaceDir)/source/app $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/operating-system-macos";
 				WorkspaceDir = "$(SRCROOT)/../../..";
 			};
 			name = Debug;
@@ -1243,7 +1243,7 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/_include . ..  $(WorkspaceDir)/../.. $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/.. $(WorkspaceDir) $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/base aura/ $(WorkspaceDir)/source/app $(WorkspaceDir)/archive $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/operating-system-macos";
+				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/_include . ..  $(WorkspaceDir)/../.. $(WorkspaceDir)/source/app $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/.. $(WorkspaceDir) $(WorkspaceDir)/source/app $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/base aura/ $(WorkspaceDir)/source/app $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/operating-system-macos";
 				WorkspaceDir = "$(SRCROOT)/../../..";
 			};
 			name = Release;
