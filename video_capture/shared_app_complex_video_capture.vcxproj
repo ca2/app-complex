@@ -189,18 +189,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\app-core\video_input_media_foundation\aaa_raw_image.h" />
-    <ClInclude Include="..\..\app-core\video_input_media_foundation\department.h" />
-    <ClInclude Include="..\..\app-core\video_input_media_foundation\device.h" />
-    <ClInclude Include="..\..\app-core\video_input_media_foundation\format_reader.h" />
-    <ClInclude Include="..\..\app-core\video_input_media_foundation\framework.h" />
-    <ClInclude Include="..\..\app-core\video_input_media_foundation\image_grabber.h" />
-    <ClInclude Include="..\..\app-core\video_input_media_foundation\image_grabber_thread.h" />
-    <ClInclude Include="..\..\app-core\video_input_media_foundation\render.h" />
-    <ClInclude Include="..\..\app-core\video_input_media_foundation\video_input.h" />
-    <ClInclude Include="..\..\app-core\video_input_media_foundation\_.h" />
-    <ClInclude Include="..\..\app-core\video_input_media_foundation\_struct.h" />
-    <ClInclude Include="..\..\app-core\video_input_media_foundation\_video_input_media_foundation.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
@@ -211,7 +199,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="operating-system\windows\_app_complex_video_capture.cpp" />
     <ClCompile Include="_main.cpp" />
   </ItemGroup>
   <ItemGroup>
