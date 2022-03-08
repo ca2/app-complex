@@ -111,15 +111,15 @@ HRESULT CreateDX11Device(_Out_ ID3D11Device** ppDevice, _Out_ ID3D11DeviceContex
 
    if (SUCCEEDED(hr))
    {
-      ID3D10Multithread* pMultithread;
-      hr = ((*ppDevice)->QueryInterface(IID_PPV_ARGS(&pMultithread)));
+      ID3D10Multitask* pMultitask;
+      hr = ((*ppDevice)->QueryInterface(IID_PPV_ARGS(&pMultitask)));
 
       if (SUCCEEDED(hr))
       {
-         pMultithread->SetMultithreadProtected(true);
+         pMultitask->SetMultitaskProtected(true);
       }
 
-      SafeRelease(&pMultithread);
+      SafeRelease(&pMultitask);
 
    }
 
