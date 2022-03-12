@@ -1,6 +1,6 @@
 #include "framework.h"
 #include <math.h>
-#include "aura/graphics/draw2d/image_drawing.h"
+#include "aura/graphics/image/drawing.h"
 
 
 namespace app_complex_video_capture
