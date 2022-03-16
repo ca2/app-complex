@@ -6,19 +6,19 @@ namespace app_complex_video_capture
 {
 
    
-   pane_view::pane_view()
+   pane_impact::pane_impact()
    {
 
    }
 
 
-   pane_view::~pane_view()
+   pane_impact::~pane_impact()
    {
 
    }
 
 
-   void pane_view::assert_ok() const
+   void pane_impact::assert_ok() const
    {
 
       ::user::impact::assert_ok();
@@ -26,7 +26,7 @@ namespace app_complex_video_capture
    }
 
 
-   void pane_view::dump(dump_context & dumpcontext) const
+   void pane_impact::dump(dump_context & dumpcontext) const
    {
 
       ::user::impact::dump(dumpcontext);
@@ -34,17 +34,17 @@ namespace app_complex_video_capture
    }
 
 
-   void pane_view::install_message_routing(::channel * pchannel)
+   void pane_impact::install_message_routing(::channel * pchannel)
    {
 
-      ::userex::pane_tab_view::install_message_routing(pchannel);
+      ::userex::pane_tab_impact::install_message_routing(pchannel);
 
-      MESSAGE_LINK(e_message_create, pchannel, this, &pane_view::on_message_create);
+      MESSAGE_LINK(e_message_create, pchannel, this, &pane_impact::on_message_create);
 
    }
 
 
-   void pane_view::on_message_create(::message::message * pmessage)
+   void pane_impact::on_message_create(::message::message * pmessage)
    {
 
       if (pmessage->previous())
@@ -63,16 +63,16 @@ namespace app_complex_video_capture
    }
 
 
-   void pane_view::on_change_cur_sel()
+   void pane_impact::on_change_cur_sel()
    {
 
-      ::userex::pane_tab_view::on_change_cur_sel();
+      ::userex::pane_tab_impact::on_change_cur_sel();
 
    }
 
 
 
-   void pane_view::on_create_impact(::user::impact_data * pimpactdata)
+   void pane_impact::on_create_impact(::user::impact_data * pimpactdata)
    {
 
       if (pimpactdata->m_atom == "device_selector")
@@ -107,12 +107,12 @@ namespace app_complex_video_capture
 
       }
 
-      ::userex::pane_tab_view::on_create_impact(pimpactdata);
+      ::userex::pane_tab_impact::on_create_impact(pimpactdata);
 
    }
 
 
-   void pane_view::handle(::topic * ptopic, ::context * pcontext)
+   void pane_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
       if (ptopic->user_interaction() && ptopic->user_interaction()->is_ascendant(m_pdocumentMenu, true))
@@ -122,7 +122,7 @@ namespace app_complex_video_capture
          if (ptopic->m_atom == ::id_load_form_data)
          {
 
-            ::user::impact * pview = m_pdocumentMenu->get_view(0);
+            ::user::impact * pimpact = m_pdocumentMenu->get_view(0);
 
             string strDevice = get_app()->get_current_video_input_device();
 
@@ -133,7 +133,7 @@ namespace app_complex_video_capture
 
                string strCheck = "video_input_" + strId;
 
-               __pointer(::user::interaction) pcheck = pview->get_child_by_id(strCheck);
+               __pointer(::user::interaction) pcheck = pimpact->get_child_by_id(strCheck);
 
                pcheck->add_handler(this);
 

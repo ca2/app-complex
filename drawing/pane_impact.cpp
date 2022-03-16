@@ -7,19 +7,19 @@ namespace app_complex_drawing
 {
 
 
-   pane_view::pane_view()
+   pane_impact::pane_impact()
    {
 
    }
 
 
-   pane_view::~pane_view()
+   pane_impact::~pane_impact()
    {
 
    }
 
 
-   void pane_view::assert_ok() const
+   void pane_impact::assert_ok() const
    {
 
       ::user::impact::assert_ok();
@@ -27,7 +27,7 @@ namespace app_complex_drawing
    }
 
 
-   void pane_view::dump(dump_context & dumpcontext) const
+   void pane_impact::dump(dump_context & dumpcontext) const
    {
 
       ::user::impact::dump(dumpcontext);
@@ -35,17 +35,17 @@ namespace app_complex_drawing
    }
 
 
-   void pane_view::install_message_routing(::channel * pchannel)
+   void pane_impact::install_message_routing(::channel * pchannel)
    {
 
-      ::userex::pane_tab_view::install_message_routing(pchannel);
+      ::userex::pane_tab_impact::install_message_routing(pchannel);
 
-      MESSAGE_LINK(e_message_create, pchannel, this, &pane_view::on_message_create);
+      MESSAGE_LINK(e_message_create, pchannel, this, &pane_impact::on_message_create);
 
    }
 
 
-   void pane_view::on_message_create(::message::message * pmessage)
+   void pane_impact::on_message_create(::message::message * pmessage)
    {
 
       if(pmessage->previous())
@@ -71,23 +71,23 @@ namespace app_complex_drawing
    }
 
 
-//   void pane_view::_001OnNcDraw(::draw2d::graphics_pointer & pgraphics)
+//   void pane_impact::_001OnNcDraw(::draw2d::graphics_pointer & pgraphics)
 //   {
 //
-//      ::userex::pane_tab_view::_001OnNcDraw(pgraphics);
+//      ::userex::pane_tab_impact::_001OnNcDraw(pgraphics);
 //
 //   }
 
 
-//   void pane_view::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+//   void pane_impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
 //   {
 //
-//      ::userex::pane_tab_view::_001OnDraw(pgraphics);
+//      ::userex::pane_tab_impact::_001OnDraw(pgraphics);
 //
 //   }
 
    
-   void pane_view::on_create_impact(::user::impact_data * pimpactdata)
+   void pane_impact::on_create_impact(::user::impact_data * pimpactdata)
    {
       
       auto papp = get_app();
@@ -104,22 +104,22 @@ namespace app_complex_drawing
       if (::str::begins_eat_ci(strId, "drawing"))
       {
 
-         auto pview = m_papp->create_simple_drawing_view(this, pimpactdata);
+         auto pimpact = m_papp->create_simple_drawing_view(this, pimpactdata);
 
-         pview->m_atom = pimpactdata->m_atom;
+         pimpact->m_atom = pimpactdata->m_atom;
 
-         pview->m_prender->initialize_simple_drawing(atoi(strId));
+         pimpact->m_prender->initialize_simple_drawing(atoi(strId));
 
          pimpactdata->m_eflag.add(::user::e_flag_hidid_on_show);
 
       }
 
-      ::userex::pane_tab_view::on_create_impact(pimpactdata);
+      ::userex::pane_tab_impact::on_create_impact(pimpactdata);
 
    }
 
 
-   void pane_view::handle(::topic * ptopic, ::context * pcontext)
+   void pane_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
       if (ptopic->user_interaction() == m_pcolorview)
@@ -186,15 +186,15 @@ namespace app_complex_drawing
 
       }
 
-      ::userex::pane_tab_view::handle(ptopic, pcontext);
+      ::userex::pane_tab_impact::handle(ptopic, pcontext);
 
    }
 
 
-   void pane_view::on_change_cur_sel()
+   void pane_impact::on_change_cur_sel()
    {
 
-      ::userex::pane_tab_view::on_change_cur_sel();
+      ::userex::pane_tab_impact::on_change_cur_sel();
 
       string strId = get_view_id();
 

@@ -7,7 +7,7 @@ namespace app_complex_form
 {
 
 
-   pane_view::pane_view()
+   pane_impact::pane_impact()
    {
 
       m_pviewLast = NULL;
@@ -15,13 +15,13 @@ namespace app_complex_form
    }
 
 
-   pane_view::~pane_view()
+   pane_impact::~pane_impact()
    {
 
    }
 
 
-   void pane_view::assert_ok() const
+   void pane_impact::assert_ok() const
    {
 
       ::user::impact::assert_ok();
@@ -29,7 +29,7 @@ namespace app_complex_form
    }
 
 
-   void pane_view::dump(dump_context & dumpcontext) const
+   void pane_impact::dump(dump_context & dumpcontext) const
    {
 
       ::user::impact::dump(dumpcontext);
@@ -37,17 +37,17 @@ namespace app_complex_form
    }
 
 
-   void pane_view::install_message_routing(::channel * pchannel)
+   void pane_impact::install_message_routing(::channel * pchannel)
    {
 
       ::app_simple_form::tab_view::install_message_routing(pchannel);
 
-      MESSAGE_LINK(e_message_create, pchannel, this, &pane_view::on_message_create);
+      MESSAGE_LINK(e_message_create, pchannel, this, &pane_impact::on_message_create);
 
    }
 
 
-   void pane_view::on_message_create(::message::message * pmessage)
+   void pane_impact::on_message_create(::message::message * pmessage)
    {
 
       pmessage->m_iRouteIndex--;
@@ -90,7 +90,7 @@ namespace app_complex_form
    }
 
 
-   void pane_view::on_change_cur_sel()
+   void pane_impact::on_change_cur_sel()
    {
 
       //::userex::pane_pane_view::on_change_cur_sel();
@@ -131,7 +131,7 @@ namespace app_complex_form
    }
 
 
-   void pane_view::on_create_impact(::user::impact_data * pimpactdata)
+   void pane_impact::on_create_impact(::user::impact_data * pimpactdata)
    {
 
       string strId = pimpactdata->m_atom;
@@ -163,7 +163,7 @@ namespace app_complex_form
 
          }
 
-         pform->m_ptabview = this;
+         pform->m_ptabimpact = this;
 
          pform->m_iId = (int)iId;
 
@@ -175,14 +175,14 @@ namespace app_complex_form
 
       ::app_simple_form::tab_view::on_create_impact(pimpactdata);
 
-      ::userex::pane_tab_view::on_create_impact(pimpactdata);
+      ::userex::pane_tab_impact::on_create_impact(pimpactdata);
 
       pimpactdata->m_eflag.add(::user::e_flag_hide_all_others_on_show);
 
    }
 
 
-   void pane_view::handle(::topic * ptopic, ::context * pcontext)
+   void pane_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
       if (m_pdocMenu != nullptr && ptopic->is_about(m_pdocMenu->get_view(0)))

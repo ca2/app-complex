@@ -5,14 +5,14 @@ namespace app_complex_form
 {
 
 
-   class CLASS_DECL_APP_COMPLEX_FORM pane_view :
-      virtual public application_pane_tab_view < application, ::userex::pane_tab_view, ::app_simple_form::tab_view >
+   class CLASS_DECL_APP_COMPLEX_FORM pane_impact :
+      virtual public application_pane_tab_view < application, ::userex::pane_tab_impact, ::app_simple_form::tab_view >
    {
    public:
 
 
-      pane_view();
-      ~pane_view() override;
+      pane_impact();
+      ~pane_impact() override;
 
 
       void on_create_impact(::user::impact_data * pimpactdata) override;
