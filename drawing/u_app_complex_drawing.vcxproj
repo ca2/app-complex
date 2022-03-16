@@ -52,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h" />
-    <ClInclude Include="pane_view.h" />
+    <ClInclude Include="pane_impact.h" />
     <ClInclude Include="_.h" />
     <ClInclude Include="_drawing.h" />
   </ItemGroup>
@@ -72,7 +72,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='cube_stage|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="pane_view.cpp" />
+    <ClCompile Include="pane_impact.cpp" />
     <ClCompile Include="_.cpp" />
   </ItemGroup>
   <ItemGroup>

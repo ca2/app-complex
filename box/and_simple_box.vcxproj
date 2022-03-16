@@ -678,7 +678,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Android'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='static_basis|Android'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include=".\pane_view.cpp" />
+    <ClCompile Include=".\pane_impact.cpp" />
 
     <ClCompile Include="framework.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Android'">Create</PrecompiledHeader>
@@ -706,7 +706,7 @@
     <ClInclude Include="full_view.h" />
     <ClInclude Include="lite_view.h" />
     <ClInclude Include="main_impact.h" />
-    <ClInclude Include="pane_view.h" />
+    <ClInclude Include="pane_impact.h" />
 
     <ClInclude Include="framework.h" />
     <ClInclude Include="switcher_view.h" />

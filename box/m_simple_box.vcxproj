@@ -138,7 +138,7 @@
     <ClInclude Include="full_view.h" />
     <ClInclude Include="lite_view.h" />
     <ClInclude Include="main_impact.h" />
-    <ClInclude Include="pane_view.h" />
+    <ClInclude Include="pane_impact.h" />
 
     <ClInclude Include="switcher_view.h" />
     <ClInclude Include="toggle_view.h" />
@@ -159,7 +159,7 @@
     <ClCompile Include="full_view.cpp" />
     <ClCompile Include="lite_view.cpp" />
     <ClCompile Include="main_impact.cpp" />
-    <ClCompile Include="pane_view.cpp" />
+    <ClCompile Include="pane_impact.cpp" />
 
     <ClCompile Include="switcher_view.cpp" />
     <ClCompile Include="toggle_view.cpp" />

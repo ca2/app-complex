@@ -11,7 +11,7 @@ namespace simple_application
    application::application()
    {
 
-      m_ppaneview = nullptr;
+      m_ppaneimpact = nullptr;
 
       m_strAppId = "app-simple/application";
 

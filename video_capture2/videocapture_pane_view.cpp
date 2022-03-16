@@ -7,7 +7,7 @@ namespace app_complex_video_capture
 {
 
    
-   pane_view::pane_view()
+   pane_impact::pane_impact()
    {
 
       m_pviewLast = nullptr;
@@ -15,13 +15,13 @@ namespace app_complex_video_capture
    }
 
 
-   pane_view::~pane_view()
+   pane_impact::~pane_impact()
    {
 
    }
 
 
-   void pane_view::assert_ok() const
+   void pane_impact::assert_ok() const
    {
 
       ::user::impact::assert_ok();
@@ -29,7 +29,7 @@ namespace app_complex_video_capture
    }
 
 
-   void pane_view::dump(dump_context & dumpcontext) const
+   void pane_impact::dump(dump_context & dumpcontext) const
    {
 
       ::user::impact::dump(dumpcontext);
@@ -37,17 +37,17 @@ namespace app_complex_video_capture
    }
 
 
-   void pane_view::install_message_routing(::channel * pchannel)
+   void pane_impact::install_message_routing(::channel * pchannel)
    {
 
-      ::userex::pane_tab_view::install_message_routing(pchannel);
+      ::userex::pane_tab_impact::install_message_routing(pchannel);
 
-      MESSAGE_LINK(e_message_create, pchannel, this, &pane_view::on_message_create);
+      MESSAGE_LINK(e_message_create, pchannel, this, &pane_impact::on_message_create);
 
    }
 
 
-   void pane_view::on_message_create(::message::message * pmessage)
+   void pane_impact::on_message_create(::message::message * pmessage)
    {
 
       if (pmessage->previous())
@@ -65,10 +65,10 @@ namespace app_complex_video_capture
 
    }
 
-   void pane_view::on_change_cur_sel()
+   void pane_impact::on_change_cur_sel()
    {
 
-      ::userex::pane_tab_view::on_change_cur_sel();
+      ::userex::pane_tab_impact::on_change_cur_sel();
 
       string strId = get_view_id();
 
@@ -98,7 +98,7 @@ namespace app_complex_video_capture
 
 
 
-   void pane_view::on_create_impact(::user::impact_data * pimpactdata)
+   void pane_impact::on_create_impact(::user::impact_data * pimpactdata)
    {
 
       switch(pimpactdata->m_atom)
@@ -118,7 +118,7 @@ namespace app_complex_video_capture
          //m_pdocMenu->open_document(path);
 
 
-//         m_prollspf = pview->get_child_by_id("roll_spf");
+//         m_prollspf = pimpact->get_child_by_id("roll_spf");
          //try
          //{
          //   pform->get_child_by_id("clockverse_auto")->_001SetCheck(papp->should_auto_launch_clockverse_on_hover(),::e_source_initialize);
@@ -168,12 +168,12 @@ namespace app_complex_video_capture
 
       }
 
-      ::userex::pane_tab_view::on_create_impact(pimpactdata);
+      ::userex::pane_tab_impact::on_create_impact(pimpactdata);
 
    }
 
 
-   void pane_view::handle(::topic * ptopic, ::context * pcontext)
+   void pane_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
       if(m_pdocMenu != nullptr && ptopic->is_about(m_pdocMenu->get_view(0)))
@@ -217,7 +217,7 @@ namespace app_complex_video_capture
    }
 
 
-   ::file::path pane_view::prepare_menu_view()
+   ::file::path pane_impact::prepare_menu_view()
    {
 
       string str;

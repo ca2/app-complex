@@ -117,8 +117,8 @@
 			<Option compile="1" />
 			<Option weight="0" />
 		</Unit>
-		<Unit filename="pane_view.cpp" />
-		<Unit filename="pane_view.h" />
+		<Unit filename="pane_impact.cpp" />
+		<Unit filename="pane_impact.h" />
 		<Extensions>
 			<DoxyBlocks>
 				<comment_style block="0" line="0" />

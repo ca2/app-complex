@@ -11,7 +11,7 @@ namespace app_complex_drawing
       
       m_ptemplateSimpleDrawingMain = nullptr;
 
-      m_ptabview = nullptr;
+      m_ptabimpact = nullptr;
 
       m_strAppId = "app-complex/drawing";
 
@@ -35,7 +35,7 @@ namespace app_complex_drawing
    ::type application::get_pane_view_type() const
    {
 
-      return __type(pane_view);
+      return __type(pane_impact);
 
    }
 
@@ -50,7 +50,7 @@ namespace app_complex_drawing
 
       puser->will_use_view_hint(FONTSEL_IMPACT);
 
-      ::factory::add_factory_item <::app_complex_drawing::pane_view >();
+      ::factory::add_factory_item <::app_complex_drawing::pane_impact >();
 
       ::app_simple_drawing::application::init_instance();
 

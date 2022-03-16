@@ -24,7 +24,7 @@ namespace user
 #include "frame.h"
 #include "main_frame.h"
 
-#include "pane_view.h"
+#include "pane_impact.h"
 
 #include "application.h"
 

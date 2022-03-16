@@ -131,8 +131,8 @@
 		<Unit filename="main_frame.h" />
 		<Unit filename="main_impact.cpp" />
 		<Unit filename="main_impact.h" />
-		<Unit filename="pane_view.cpp" />
-		<Unit filename="pane_view.h" />
+		<Unit filename="pane_impact.cpp" />
+		<Unit filename="pane_impact.h" />
 		<Unit filename="simple_drag_and_drop.h" />
 		<Unit filename="simple_drawing_simple_drawing.h" />
 		<Unit filename="simple_os_drag_and_drop.cpp" />

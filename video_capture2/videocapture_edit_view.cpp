@@ -67,7 +67,7 @@ namespace app_complex_video_capture
 
       _001GetText(strText);
 
-      impact_base * pview = dynamic_cast < impact_base * > (m_ptopview->GetTypedParent<::user::split_view>()->get_child_by_id("videocapture_view"));
+      impact_base * pimpact = dynamic_cast < impact_base * > (m_ptopview->GetTypedParent<::user::split_view>()->get_child_by_id("videocapture_view"));
 
 
 

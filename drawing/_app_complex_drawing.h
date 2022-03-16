@@ -20,7 +20,7 @@ namespace user
 //#include "form_002.h"
 
 
-#include "pane_view.h"
+#include "pane_impact.h"
 
 
 #include "application.h"

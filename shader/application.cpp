@@ -47,7 +47,7 @@ namespace simple_shader
       
       m_ptemplateSimpleDrawingMain = nullptr;
 
-      m_ppaneview = nullptr;
+      m_ppaneimpact = nullptr;
 
       m_strAppId = "app-complex/shader";
 

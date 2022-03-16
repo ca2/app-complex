@@ -10,8 +10,8 @@ list(APPEND library_source
    application.h
    framework.cpp
    framework.h
-   pane_view.cpp
-   pane_view.h
+   pane_impact.cpp
+   pane_impact.h
    )
 
 

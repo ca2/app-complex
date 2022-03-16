@@ -77,7 +77,7 @@ namespace app_complex_video_capture
       ::factory::add_factory_item <::user::button_view >();
       ::factory::add_factory_item <::app_complex_video_capture::impact >();
       ::factory::add_factory_item <::app_complex_video_capture::main_impact >();
-      ::factory::add_factory_item <::app_complex_video_capture::pane_view >();
+      ::factory::add_factory_item <::app_complex_video_capture::pane_impact >();
       ::factory::add_factory_item <::app_complex_video_capture::top_view >();
       ::factory::add_factory_item <::app_complex_video_capture::toggle_view >();
 
@@ -97,7 +97,7 @@ namespace app_complex_video_capture
                           "main",
                           __type(document),
                           __type(main_frame),
-                          __type(pane_view)));
+                          __type(pane_impact)));
 
       add_document_template(pDocTemplate);
 

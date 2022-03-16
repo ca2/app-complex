@@ -200,7 +200,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x86'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x86'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="pane_view.cpp">
+    <ClCompile Include="pane_impact.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x86'">true</ExcludedFromBuild>
@@ -246,7 +246,7 @@
     <ClInclude Include="frame.h" />
     <ClInclude Include="gcom.h" />
     <ClInclude Include="main_impact.h" />
-    <ClInclude Include="pane_view.h" />
+    <ClInclude Include="pane_impact.h" />
 
     <ClInclude Include="render.h" />
     <ClInclude Include="switcher_view.h" />

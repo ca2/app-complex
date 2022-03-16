@@ -25,8 +25,8 @@ list(APPEND library_source
    main_frame.h
    main_impact.cpp
    main_impact.h
-   pane_view.cpp
-   pane_view.h
+   pane_impact.cpp
+   pane_impact.h
    )
 
 add_library(app_complex_form ${library_source})

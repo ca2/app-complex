@@ -170,7 +170,7 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="main_frame.h" />
     <ClInclude Include="main_impact.h" />
-    <ClInclude Include="pane_view.h" />
+    <ClInclude Include="pane_impact.h" />
     <ClInclude Include="simple_form.h" />
     <ClInclude Include="simple_form_001.h" />
     <ClInclude Include="simple_form_002.h" />

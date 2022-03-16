@@ -21,7 +21,7 @@ namespace simple_shader
       ::user::document *                     m_pdocMenu;
       ::user::plain_edit_view *              m_prollfps;
       ::user::single_document_template *     m_ptemplateSimpleDrawingMain;
-      tab_view *                             m_ppaneview;
+      tab_view *                             m_ppaneimpact;
 
       string                                 m_strMainTitle;
 

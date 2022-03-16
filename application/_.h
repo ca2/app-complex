@@ -16,7 +16,7 @@ namespace simple_application
 {
 
    class application;
-   class pane_view;
+   class pane_impact;
    class document;
    class impact;
 

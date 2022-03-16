@@ -19,9 +19,9 @@
 		9A42DA2326667AD70011645D /* libapp_simple_drawing.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42DA1E26667ABD0011645D /* libapp_simple_drawing.dylib */; };
 		9A449BBB24775E120002A827 /* _drawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A449BB024775E110002A827 /* _drawing.h */; };
 		9A449BBF24775E120002A827 /* _.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A449BB624775E110002A827 /* _.h */; };
-		9A449BC024775E120002A827 /* pane_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A449BB724775E110002A827 /* pane_view.cpp */; };
-		9A449BC224775E120002A827 /* pane_view.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A449BB924775E110002A827 /* pane_view.h */; };
-		9A449C2C24775F930002A827 /* pane_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A449BB724775E110002A827 /* pane_view.cpp */; };
+		9A449BC024775E120002A827 /* pane_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A449BB724775E110002A827 /* pane_impact.cpp */; };
+		9A449BC224775E120002A827 /* pane_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A449BB924775E110002A827 /* pane_impact.h */; };
+		9A449C2C24775F930002A827 /* pane_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A449BB724775E110002A827 /* pane_impact.cpp */; };
 		9A8F90D2240C09F10097E249 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C6240C09F00097E249 /* application.cpp */; };
 		9A8F90D6240C09F10097E249 /* application.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8F90CA240C09F10097E249 /* application.h */; };
 		9AE24EA11904CFFD001AEFFB /* libapp_complex_drawing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libapp_complex_drawing.a */; };
@@ -97,8 +97,8 @@
 		9A42DA1726667ABC0011645D /* app_simple_drawing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_drawing.xcodeproj; path = "../../app-simple/drawing/app_simple_drawing.xcodeproj"; sourceTree = "<group>"; };
 		9A449BB024775E110002A827 /* _drawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _drawing.h; sourceTree = "<group>"; };
 		9A449BB624775E110002A827 /* _.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
-		9A449BB724775E110002A827 /* pane_view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pane_view.cpp; sourceTree = "<group>"; };
-		9A449BB924775E110002A827 /* pane_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pane_view.h; sourceTree = "<group>"; };
+		9A449BB724775E110002A827 /* pane_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pane_impact.cpp; sourceTree = "<group>"; };
+		9A449BB924775E110002A827 /* pane_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pane_impact.h; sourceTree = "<group>"; };
 		9A8F90C6240C09F00097E249 /* application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
 		9A8F90CA240C09F10097E249 /* application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
 		9AE24E8A1904CFFD001AEFFB /* libapp_complex_drawing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libapp_complex_drawing.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,8 +203,8 @@
 				9A8F90C6240C09F00097E249 /* application.cpp */,
 				9A8F90CA240C09F10097E249 /* application.h */,
 				9AEB75BF16F78E600085103B /* framework.h */,
-				9A449BB724775E110002A827 /* pane_view.cpp */,
-				9A449BB924775E110002A827 /* pane_view.h */,
+				9A449BB724775E110002A827 /* pane_impact.cpp */,
+				9A449BB924775E110002A827 /* pane_impact.h */,
 			);
 			name = simple_drawing;
 			sourceTree = "<group>";
@@ -216,7 +216,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A449BC224775E120002A827 /* pane_view.h in Headers */,
+				9A449BC224775E120002A827 /* pane_impact.h in Headers */,
 				9A449BBF24775E120002A827 /* _.h in Headers */,
 				9A449BBB24775E120002A827 /* _drawing.h in Headers */,
 				9A8F90D6240C09F10097E249 /* application.h in Headers */,
@@ -393,7 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A415C29247393C100EF2BCD /* application.cpp in Sources */,
-				9A449C2C24775F930002A827 /* pane_view.cpp in Sources */,
+				9A449C2C24775F930002A827 /* pane_impact.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A449BC024775E120002A827 /* pane_view.cpp in Sources */,
+				9A449BC024775E120002A827 /* pane_impact.cpp in Sources */,
 				9A8F90D2240C09F10097E249 /* application.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

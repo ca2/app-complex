@@ -945,7 +945,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="application.cpp" />
-    <ClCompile Include="pane_view.cpp" />
+    <ClCompile Include="pane_impact.cpp" />
     <ClCompile Include="framework.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='cube_basis|Win32'">Create</PrecompiledHeader>
@@ -961,7 +961,7 @@
   <ItemGroup>
     <ClInclude Include="application.h" />
     <ClInclude Include="_.h" />
-    <ClInclude Include="pane_view.h" />
+    <ClInclude Include="pane_impact.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="_drawing.h" />
   </ItemGroup>

@@ -135,8 +135,8 @@
 		<Unit filename="main_frame.h" />
 		<Unit filename="main_impact.cpp" />
 		<Unit filename="main_impact.h" />
-		<Unit filename="pane_view.cpp" />
-		<Unit filename="pane_view.h" />
+		<Unit filename="pane_impact.cpp" />
+		<Unit filename="pane_impact.h" />
 		<Unit filename="simple_form.cpp" />
 		<Unit filename="simple_form.h" />
 		<Unit filename="simple_form_001.h" />

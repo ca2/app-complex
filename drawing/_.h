@@ -17,7 +17,7 @@ namespace app_complex_drawing
 
    
    class application;
-   class pane_view;
+   class pane_impact;
 
 
 } // namespace flag

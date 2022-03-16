@@ -32,7 +32,7 @@
     <ClInclude Include="frame.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="main_frame.h" />
-    <ClInclude Include="pane_view.h" />
+    <ClInclude Include="pane_impact.h" />
     <ClInclude Include="impact.h" />
     <ClInclude Include="_.h" />
     <ClInclude Include="_user.h" />

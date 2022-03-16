@@ -5,8 +5,8 @@ namespace app_complex_video_capture
 {
 
 
-   class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE pane_view :
-      virtual public ::app_consumer < application, ::userex::pane_tab_view, ::user::form_callback >
+   class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE pane_impact :
+      virtual public ::app_consumer < application, ::userex::pane_tab_impact, ::user::form_callback >
    {
    public:
 
@@ -17,8 +17,8 @@ namespace app_complex_video_capture
       __pointer(::user::document)                     m_pdocMenu;
 
 
-      pane_view();
-      virtual ~pane_view();
+      pane_impact();
+      virtual ~pane_impact();
 
 
       void on_create_impact(::user::impact_data * pimpactdata);

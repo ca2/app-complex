@@ -19,7 +19,7 @@
     <ClCompile Include="application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pane_view.cpp">
+    <ClCompile Include="pane_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="_.cpp">
@@ -36,7 +36,7 @@
     <ClInclude Include="_drawing.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="pane_view.h">
+    <ClInclude Include="pane_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="application.h">

@@ -94,9 +94,9 @@ namespace video_capture
          if(ptopic->user_element_id() == "switcher_toggle")
          {
 
-            __pointer(impact) pview = m_pimpact;
+            __pointer(impact) pimpact = m_pimpact;
 
-            pview->m_prender->m_bLite = !pview->m_prender->m_bLite;
+            pimpact->m_prender->m_bLite = !pimpact->m_prender->m_bLite;
 
          }
          //else if(ptopic->user_element_id() == "videocapture_toggle")
@@ -123,7 +123,7 @@ namespace video_capture
          if(m_pimpact == ptopic->user_interaction())
          {
 
-            if(GetTypedParent < pane_view >()->m_pviewLast != nullptr)
+            if(GetTypedParent < pane_impact >()->m_pviewLast != nullptr)
             {
 
                string strFont = m_pimpact->get_cur_sel_face_name();
@@ -131,9 +131,9 @@ namespace video_capture
                if(strFont.has_char())
                {
 
-                  GetTypedParent < pane_view >()->m_pviewLast->m_strNewFont = strFont;
+                  GetTypedParent < pane_impact >()->m_pviewLast->m_strNewFont = strFont;
 
-                  GetTypedParent < pane_view >()->m_pviewLast->on_layout(pgraphics);
+                  GetTypedParent < pane_impact >()->m_pviewLast->on_layout(pgraphics);
 
                }
 

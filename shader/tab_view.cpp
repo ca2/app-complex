@@ -54,7 +54,7 @@ namespace simple_shader
 
       }
 
-      papp->m_ppaneview = this;
+      papp->m_ppaneimpact = this;
 
       set_tab("Menu", MENU_IMPACT);
       set_tab("1", "shader1");
@@ -172,13 +172,13 @@ namespace simple_shader
       if(::str::begins_eat_ci(strId, "shader"))
       {
 
-         auto pview = papp->create_simple_shader_view(this, pimpactdata);
+         auto pimpact = papp->create_simple_shader_view(this, pimpactdata);
 
-         pview->m_atom = pimpactdata->m_atom;
+         pimpact->m_atom = pimpactdata->m_atom;
 
-         pview->m_iView = atoi(strId);
+         pimpact->m_iView = atoi(strId);
 
-         __pointer(impact) pviewShader = pview;
+         __pointer(impact) pviewShader = pimpact;
 
          pviewShader->m_prender->m_strShaderPrefix = strId;
 

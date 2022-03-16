@@ -78,10 +78,10 @@ namespace app_complex_video_capture
       if(ptopic->m_atom == INITIAL_UPDATE)
       {
 
-         __pointer(::userex::pane_tab_view) ppaneview = GetTypedParent < ::userex::pane_tab_view >();
-         //if(ppaneview.is_set())
+         __pointer(::userex::pane_tab_impact) ppaneimpact = GetTypedParent < ::userex::pane_tab_impact >();
+         //if(ppaneimpact.is_set())
          //{
-         //   ppaneview->m_pflagview = this;
+         //   ppaneimpact->m_pflagview = this;
          //}
 
       }

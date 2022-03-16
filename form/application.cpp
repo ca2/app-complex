@@ -66,7 +66,7 @@ namespace app_complex_form
       ::factory::add_factory_item <::user::button_view >();
       ::factory::add_factory_item <::app_complex_form::impact >();
       ::factory::add_factory_item <::app_complex_form::main_impact >();
-      ::factory::add_factory_item <::app_complex_form::pane_view >();
+      ::factory::add_factory_item <::app_complex_form::pane_impact >();
       ::factory::add_factory_item <::app_complex_form::form_001 >();
       ::factory::add_factory_item <::app_complex_form::form_002 >();
 
@@ -83,7 +83,7 @@ namespace app_complex_form
                                "main",
                                __type(document),
                                __type(main_frame),
-                               __type(pane_view)));
+                               __type(pane_impact)));
       m_ptemplateBeatMapperMain = pdoctemplate;
       add_document_template(pdoctemplate);
 

@@ -31,7 +31,7 @@
     <ClCompile Include="form_002.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pane_view.cpp">
+    <ClCompile Include="pane_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="_.cpp">
@@ -72,7 +72,7 @@
     <ClInclude Include="form_002.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="pane_view.h">
+    <ClInclude Include="pane_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
