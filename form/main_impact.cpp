@@ -112,7 +112,7 @@ namespace app_complex_form
 
       //m_pimpact = create_view < lite_view >();
 
-      m_pimpact = host_view < impact >(iPane, "complex_form_view");
+      m_pimpact = host_view < impact >(iPane);
 
       if(m_pimpact == NULL)
       {
