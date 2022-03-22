@@ -200,22 +200,22 @@ namespace app_complex_video_capture
 
          //if(ptopic->user_element_id() == "clockverse")
          //   {
-         //      papp->set_binding_clockverse_country_time_zone_set_on_hover(ptopic->user_interaction()->_001GetCheck() == ::check_checked);
+         //      papp->set_binding_clockverse_country_time_zone_set_on_hover(ptopic->user_interaction()->_001GetCheck() == ::e_check_checked);
          //      return true;
          //   }
          //   else if(ptopic->user_element_id() == "clockverse_auto")
          //   {
-         //      papp->set_auto_launch_clockverse_on_hover(ptopic->user_interaction()->_001GetCheck() == ::check_checked);
+         //      papp->set_auto_launch_clockverse_on_hover(ptopic->user_interaction()->_001GetCheck() == ::e_check_checked);
          //      return true;
          //   }
          //   else if(ptopic->user_element_id() == "flag")
          //   {
-         //      papp->set_binding_flag_country_ca2_domain_image_on_hover(ptopic->user_interaction()->_001GetCheck() == ::check_checked);
+         //      papp->set_binding_flag_country_ca2_domain_image_on_hover(ptopic->user_interaction()->_001GetCheck() == ::e_check_checked);
          //      return true;
          //   }
          //   else if(ptopic->user_element_id() == "flag_auto")
          //   {
-         //      papp->set_auto_launch_flag_on_hover(ptopic->user_interaction()->_001GetCheck() == ::check_checked);
+         //      papp->set_auto_launch_flag_on_hover(ptopic->user_interaction()->_001GetCheck() == ::e_check_checked);
          //      return true;
          //   }
          }
