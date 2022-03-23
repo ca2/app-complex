@@ -164,7 +164,7 @@ namespace app_complex_video_capture
 
       //d.save_to_file(         auto psystem = m_psystem;
 
-         //auto pacmedir = pacmedir->system() / "obs.png");
+         //auto pacmedirectory = pacmedirectory->system() / "obs.png");
 
 
    }
