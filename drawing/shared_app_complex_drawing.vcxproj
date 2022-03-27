@@ -22,7 +22,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{9737CA6C-C54C-42F3-8531-54BC38D69FE5}</ProjectGuid>
-    <RootNamespace>appcorehellomultiverse</RootNamespace>
+    <RootNamespace>app-complex</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
