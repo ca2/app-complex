@@ -63,7 +63,9 @@ namespace app_complex_video_capture
 
       }
 
-      get_top_level()->add_prodevian(this);
+      //get_top_level()->add_prodevian(this);
+
+      set_prodevian();
       
    }
 
@@ -135,6 +137,8 @@ namespace app_complex_video_capture
       image_drawing_options imagedrawingoptions(rectangleClient);
 
       image_drawing imagedrawing(imagedrawingoptions, imagesource);
+
+      pgraphics->m_bUseImageMipMapsOrResizedImages = false;
 
       pgraphics->draw(imagedrawing);
 
