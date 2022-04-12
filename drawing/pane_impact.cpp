@@ -60,8 +60,10 @@ namespace app_complex_drawing
       set_tab("text://app-simple/drawing/:001", "drawing1");
       set_tab("text://app-simple/drawing/:002", "drawing2");
       set_tab("text://app-simple/drawing/:003", "drawing3");
-      set_tab("text://app-simple/drawing/:arcs", "drawing4");
-      set_tab("text://app-simple/drawing/:arcpths", "drawing5");
+      set_tab("text://app-simple/drawing/:box gradient", "drawing4");
+      set_tab("text://app-simple/drawing/:circle path", "drawing5");
+      set_tab("text://app-simple/drawing/:arcs", "drawing6");
+      set_tab("text://app-simple/drawing/:arcpths", "drawing7");
       set_tab("Font", FONTSEL_IMPACT);
       set_tab("Color", COLORSEL_IMPACT);
       set_tab("Open", FILEMANAGER_IMPACT);
