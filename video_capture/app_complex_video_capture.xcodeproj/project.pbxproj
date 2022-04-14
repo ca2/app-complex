@@ -41,7 +41,16 @@
 		9AAF62C4280865480067E73F /* pane_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF6277280865460067E73F /* pane_impact.cpp */; };
 		9AAF62C5280865480067E73F /* device_selector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF6278280865460067E73F /* device_selector.cpp */; };
 		9AAF62C6280865480067E73F /* _.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AAF6279280865470067E73F /* _.h */; };
-		9AE24EA11904CFFD001AEFFB /* libapp_core_videocapture.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libapp_core_videocapture.dylib */; };
+		9AAF658F2808709D0067E73F /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF658E2808709D0067E73F /* libacme.dylib */; };
+		9AAF65912808709D0067E73F /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF65902808709D0067E73F /* libapex.dylib */; };
+		9AAF65932808709D0067E73F /* libaqua.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF65922808709D0067E73F /* libaqua.dylib */; };
+		9AAF65952808709D0067E73F /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF65942808709D0067E73F /* libaura.dylib */; };
+		9AAF65972808709D0067E73F /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF65962808709D0067E73F /* libaxis.dylib */; };
+		9AAF65992808709D0067E73F /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF65982808709D0067E73F /* libbase.dylib */; };
+		9AAF659B2808709D0067E73F /* libbred.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF659A2808709D0067E73F /* libbred.dylib */; };
+		9AAF659C2808709D0067E73F /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF62CC280865E60067E73F /* libcore.dylib */; };
+		9AAF659D2808709D0067E73F /* libaudio.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF62D4280866960067E73F /* libaudio.dylib */; };
+		9AE24EA11904CFFD001AEFFB /* libapp_complex_video_capture.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libapp_complex_video_capture.dylib */; };
 		9AE24EA71904CFFD001AEFFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AE24EA51904CFFD001AEFFB /* InfoPlist.strings */; };
 		9AE24EA91904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE24EA81904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m */; };
 /* End PBXBuildFile section */
@@ -67,6 +76,20 @@
 			proxyType = 2;
 			remoteGlobalIDString = 9ACA482A2453EEAE007277DD;
 			remoteInfo = ios_audio;
+		};
+		9AAF65892808706B0067E73F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AAF62C7280865E60067E73F /* core.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AE63303252A5A0300BED5B8;
+			remoteInfo = core;
+		};
+		9AAF658B280870720067E73F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AAF62CD280866960067E73F /* video_input.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9ACA44792453EAEE007277DD;
+			remoteInfo = video_input;
 		};
 		9AE24E9F1904CFFD001AEFFB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -129,12 +152,19 @@
 		9AAF6279280865470067E73F /* _.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
 		9AAF62C7280865E60067E73F /* core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = core.xcodeproj; path = ../../app/core/core.xcodeproj; sourceTree = "<group>"; };
 		9AAF62CD280866960067E73F /* video_input.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = video_input.xcodeproj; path = "../../app-core/video_input/video_input.xcodeproj"; sourceTree = "<group>"; };
-		9AE24E8A1904CFFD001AEFFB /* libapp_core_videocapture.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libapp_core_videocapture.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AAF658E2808709D0067E73F /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AAF65902808709D0067E73F /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AAF65922808709D0067E73F /* libaqua.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaqua.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AAF65942808709D0067E73F /* libaura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AAF65962808709D0067E73F /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AAF65982808709D0067E73F /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AAF659A2808709D0067E73F /* libbred.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbred.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE24E8A1904CFFD001AEFFB /* libapp_complex_video_capture.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libapp_complex_video_capture.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E991904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = app_core_hellomultiverse_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24EA41904CFFD001AEFFB /* app_core_hellomultiverse_iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "app_core_hellomultiverse_iosTests-Info.plist"; sourceTree = "<group>"; };
 		9AE24EA61904CFFD001AEFFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9AE24EA81904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = app_core_hellomultiverse_iosTests.m; sourceTree = "<group>"; };
-		9AEB75A316F78DF10085103B /* libapp_core_videocapture.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapp_core_videocapture.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AEB75A316F78DF10085103B /* libapp_complex_video_capture.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapp_complex_video_capture.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE24EA11904CFFD001AEFFB /* libapp_core_videocapture.dylib in Frameworks */,
+				9AE24EA11904CFFD001AEFFB /* libapp_complex_video_capture.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +187,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AAF658F2808709D0067E73F /* libacme.dylib in Frameworks */,
+				9AAF65912808709D0067E73F /* libapex.dylib in Frameworks */,
+				9AAF65932808709D0067E73F /* libaqua.dylib in Frameworks */,
+				9AAF65952808709D0067E73F /* libaura.dylib in Frameworks */,
+				9AAF65972808709D0067E73F /* libaxis.dylib in Frameworks */,
+				9AAF65992808709D0067E73F /* libbase.dylib in Frameworks */,
+				9AAF659B2808709D0067E73F /* libbred.dylib in Frameworks */,
+				9AAF659C2808709D0067E73F /* libcore.dylib in Frameworks */,
+				9AAF659D2808709D0067E73F /* libaudio.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +263,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9AAF658D2808709D0067E73F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AAF658E2808709D0067E73F /* libacme.dylib */,
+				9AAF65902808709D0067E73F /* libapex.dylib */,
+				9AAF65922808709D0067E73F /* libaqua.dylib */,
+				9AAF65942808709D0067E73F /* libaura.dylib */,
+				9AAF65962808709D0067E73F /* libaxis.dylib */,
+				9AAF65982808709D0067E73F /* libbase.dylib */,
+				9AAF659A2808709D0067E73F /* libbred.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9AE24EA21904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,14 +303,15 @@
 				9AAF6159280865420067E73F /* video_capture */,
 				9AE24EA21904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */,
 				9AEB75A416F78DF10085103B /* Products */,
+				9AAF658D2808709D0067E73F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		9AEB75A416F78DF10085103B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AEB75A316F78DF10085103B /* libapp_core_videocapture.dylib */,
-				9AE24E8A1904CFFD001AEFFB /* libapp_core_videocapture.dylib */,
+				9AEB75A316F78DF10085103B /* libapp_complex_video_capture.dylib */,
+				9AE24E8A1904CFFD001AEFFB /* libapp_complex_video_capture.dylib */,
 				9AE24E991904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.xctest */,
 			);
 			name = Products;
@@ -310,7 +364,7 @@
 			);
 			name = ios_app_core_hellomultiverse;
 			productName = app_core_hellomultiverse_ios;
-			productReference = 9AE24E8A1904CFFD001AEFFB /* libapp_core_videocapture.dylib */;
+			productReference = 9AE24E8A1904CFFD001AEFFB /* libapp_complex_video_capture.dylib */;
 			productType = "com.apple.product-type.library.static";
 		};
 		9AE24E981904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */ = {
@@ -342,10 +396,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				9AAF658C280870720067E73F /* PBXTargetDependency */,
+				9AAF658A2808706B0067E73F /* PBXTargetDependency */,
 			);
 			name = app_complex_video_capture;
 			productName = app_core_hellomultiverse;
-			productReference = 9AEB75A316F78DF10085103B /* libapp_core_videocapture.dylib */;
+			productReference = 9AEB75A316F78DF10085103B /* libapp_complex_video_capture.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -360,9 +416,13 @@
 					9AE24E981904CFFD001AEFFB = {
 						TestTargetID = 9AEB75A216F78DF10085103B;
 					};
+					9AEB75A216F78DF10085103B = {
+						DevelopmentTeam = L8N5V6TZE5;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
-			buildConfigurationList = 9AEB759E16F78DF10085103B /* Build configuration list for PBXProject "app_core_videocapture" */;
+			buildConfigurationList = 9AEB759E16F78DF10085103B /* Build configuration list for PBXProject "app_complex_video_capture" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -468,6 +528,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9AAF658A2808706B0067E73F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = core;
+			targetProxy = 9AAF65892808706B0067E73F /* PBXContainerItemProxy */;
+		};
+		9AAF658C280870720067E73F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = video_input;
+			targetProxy = 9AAF658B280870720067E73F /* PBXContainerItemProxy */;
+		};
 		9AE24EA01904CFFD001AEFFB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9AE24E891904CFFD001AEFFB /* ios_app_core_hellomultiverse */;
@@ -493,6 +563,7 @@
 				EXECUTABLE_EXTENSION = dylib;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = app_complex_video_capture;
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/platform/iPhoneSimulator10.1-x86_64.sdk/include $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/operating-system-macos $(WorkspaceDir)/source/app $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/_include $(WorkspaceDir)/source/third/include $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include/include $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include . .. $(WorkspaceDir)  $(WorkspaceDir)/source/app $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)    ";
 			};
@@ -504,6 +575,7 @@
 				EXECUTABLE_EXTENSION = dylib;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = app_complex_video_capture;
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/platform/iPhoneSimulator10.1-x86_64.sdk/include $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/operating-system-macos $(WorkspaceDir)/source/app $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/_include $(WorkspaceDir)/source/third/include $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include/include $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include . .. $(WorkspaceDir)  $(WorkspaceDir)/source/app $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)    ";
 			};
@@ -742,18 +814,36 @@
 		9AEB75A816F78DF10085103B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				LIBRARY_SEARCH_PATHS = "@loader_path";
+				DEVELOPMENT_TEAM = L8N5V6TZE5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/nsisExamples/Plugin/nsis",
+				);
+				PLATFORM_MODIFIER = macos;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
 		9AEB75A916F78DF10085103B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				LIBRARY_SEARCH_PATHS = "@loader_path";
+				DEVELOPMENT_TEAM = L8N5V6TZE5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/nsisExamples/Plugin/nsis",
+				);
+				PLATFORM_MODIFIER = macos;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -778,7 +868,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9AEB759E16F78DF10085103B /* Build configuration list for PBXProject "app_core_videocapture" */ = {
+		9AEB759E16F78DF10085103B /* Build configuration list for PBXProject "app_complex_video_capture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AEB75A516F78DF10085103B /* Debug */,

@@ -18,14 +18,14 @@ namespace app_complex_video_capture
 	   void assert_ok() const override;
 	   void dump(dump_context & dumpcontext) const override;
 
-      virtual bool on_new_document();
-      virtual bool on_open_document(const ::payload & payloadFile) override;
+      bool on_new_document() override;
+      bool on_open_document(const ::payload & payloadFile) override;
 
 #ifdef _DEBUG
 
-      virtual i64 increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
+      i64 increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 
-      virtual i64 decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
+      i64 decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 
 #endif
 

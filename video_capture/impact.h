@@ -23,11 +23,13 @@ namespace app_complex_video_capture
       void dump(dump_context & dumpcontext) const override;
 
 
-      virtual i64 increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
+      i64 increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override
       {
          return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
       }
-      virtual i64 decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
+      
+      
+      i64 decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override
       {
          return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
       }
@@ -39,9 +41,9 @@ namespace app_complex_video_capture
 
       ::user::document * get_document();
 
-      virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
+      void on_layout(::draw2d::graphics_pointer & pgraphics) override;
 
-      void _001OnDraw(::draw2d::graphics_pointer & pgraphics);
+      void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
       
       DECLARE_MESSAGE_HANDLER(on_message_create);
       DECLARE_MESSAGE_HANDLER(on_message_destroy);

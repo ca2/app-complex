@@ -66,7 +66,11 @@ namespace app_complex_video_capture
       
       m_ptemplateVideoCaptureImpact = pDocTemplate;
 
-#ifdef LINUX
+#if defined(MACOS)
+
+      auto pfactory = m_psystem->factory("video_input", "avfoundation");
+
+#elif defined(LINUX)
 
       auto pfactory = m_psystem->factory("video_input", "video_for_linux");
 

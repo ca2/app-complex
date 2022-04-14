@@ -29,10 +29,10 @@ namespace app_complex_video_capture
       void init_instance() override;
       //virtual void exit_instance() override;
 
-      virtual void on_request(::create * pcreate);
+      void on_request(::create * pcreate) override;
 
-      virtual i64 increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
-      virtual i64 decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
+      i64 increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
+      i64 decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 
 
       string prepare_impact_options_main_body() override;

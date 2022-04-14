@@ -28,15 +28,15 @@ namespace app_complex_video_capture
       void install_message_routing(::channel * pchannel) override;
 
 
-      virtual void handle(::topic * ptopic, ::context * pcontext) override;
+      void handle(::topic * ptopic, ::context * pcontext) override;
 
       ::user::document * get_document();
 
       bool on_click(::item * pitem) override;
 
-      virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
+      void on_layout(::draw2d::graphics_pointer & pgraphics) override;
 
-      void _001OnDraw(::draw2d::graphics_pointer & pgraphics);
+      void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
       DECLARE_MESSAGE_HANDLER(on_message_destroy);

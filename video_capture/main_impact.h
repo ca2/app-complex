@@ -23,9 +23,9 @@ namespace app_complex_video_capture
 
       void dump(dump_context & dumpcontext) const override;
 
-      void on_create_split_impact();
+      void on_create_split_impact() override;
 
-      virtual void handle(::topic * ptopic, ::context * pcontext) override;
+      void handle(::topic * ptopic, ::context * pcontext) override;
 
       //virtual void handle(::topic * ptopic, ::context * pcontext);
 

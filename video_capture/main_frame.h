@@ -26,10 +26,10 @@ namespace app_complex_video_capture
       void dump(dump_context & dumpcontext) const override;
 
 
-      virtual ::user::enum_translucency get_translucency(::user::style * pstyle) const override;
-      virtual ::experience::frame * frame_experience();
+      ::user::enum_translucency get_translucency(::user::style * pstyle) const override;
+      ::experience::frame * frame_experience() override;
 
-      virtual bool has_pending_graphical_update();
+      bool has_pending_graphical_update() override;
 
    };
 

@@ -16,7 +16,7 @@ namespace app_complex_video_capture
       ~pane_impact() override;
 
 
-      void on_create_impact(::user::impact_data * pimpactdata);
+      void on_create_impact(::user::impact_data * pimpactdata) override;
 
       void install_message_routing(::channel * pchannel) override;
 
@@ -25,8 +25,8 @@ namespace app_complex_video_capture
       void dump(dump_context & dumpcontext) const override;
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
-      void handle(::topic * ptopic, ::context * pcontext);
-      void on_change_cur_sel();
+      void handle(::topic * ptopic, ::context * pcontext) override;
+      void on_change_cur_sel() override;
 
 
    };
