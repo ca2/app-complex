@@ -130,7 +130,7 @@
       <CompileAsManaged>false</CompileAsManaged>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
       <CompileAsWinRT>false</CompileAsWinRT>
-      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
@@ -164,6 +164,10 @@
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <TargetMachine>MachineX86</TargetMachine>
       <ShowProgress>NotSet</ShowProgress>
+      <OptimizeReferences>false</OptimizeReferences>
+      <LinkTimeCodeGeneration>
+      </LinkTimeCodeGeneration>
+      <FixedBaseAddress>false</FixedBaseAddress>
     </Link>
     <Manifest>
       <AdditionalManifestFiles>
@@ -339,7 +343,7 @@
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
-      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
       <BufferSecurityCheck>true</BufferSecurityCheck>
       <EnableParallelCodeGeneration>false</EnableParallelCodeGeneration>
       <CreateHotpatchableImage>false</CreateHotpatchableImage>
@@ -367,6 +371,10 @@
       <RandomizedBaseAddress>true</RandomizedBaseAddress>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <MapFileName>$(TargetDir)$(TargetName).map</MapFileName>
+      <OptimizeReferences>false</OptimizeReferences>
+      <LinkTimeCodeGeneration>
+      </LinkTimeCodeGeneration>
+      <FixedBaseAddress>false</FixedBaseAddress>
     </Link>
     <Manifest>
       <AdditionalManifestFiles>
