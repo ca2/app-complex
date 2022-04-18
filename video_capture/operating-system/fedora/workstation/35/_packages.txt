@@ -1,4 +1,4 @@
-app-complex/app_complex_form
+app-complex/app_complex_video_capture
 app/core
 app/bred
 app/base
@@ -19,10 +19,9 @@ app/crypto_openssl
 app/folder_zip
 app/database_sqlite3
 third/sqlite
-app-simple/app_simple_form
+app-core/video_input
 app/draw2d_cairo
-app/experience_tranquillum
-app/imaging_freeimage
-operating-system-posix/write_text_pango
 app/experience_core
+app/imaging_freeimage
 operating-system-posix/windowing_x11
+operating-system-posix/write_text_pango
