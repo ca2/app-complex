@@ -12,7 +12,7 @@ namespace app_complex_video_capture
 
 
       ::user::split_view *                            m_ptopviewLast;
-      impact_base *                                   m_pviewLast;
+      impact_base *                                   m_pimpactLast;
 
       __pointer(::user::document)                     m_pdocMenu;
 

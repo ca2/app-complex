@@ -123,7 +123,7 @@ namespace video_capture
          if(m_pimpact == ptopic->user_interaction())
          {
 
-            if(GetTypedParent < pane_impact >()->m_pviewLast != nullptr)
+            if(GetTypedParent < pane_impact >()->m_pimpactLast != nullptr)
             {
 
                string strFont = m_pimpact->get_cur_sel_face_name();
@@ -131,9 +131,9 @@ namespace video_capture
                if(strFont.has_char())
                {
 
-                  GetTypedParent < pane_impact >()->m_pviewLast->m_strNewFont = strFont;
+                  GetTypedParent < pane_impact >()->m_pimpactLast->m_strNewFont = strFont;
 
-                  GetTypedParent < pane_impact >()->m_pviewLast->on_layout(pgraphics);
+                  GetTypedParent < pane_impact >()->m_pimpactLast->on_layout(pgraphics);
 
                }
 

@@ -10,7 +10,7 @@ namespace app_complex_form
    pane_impact::pane_impact()
    {
 
-      m_pviewLast = NULL;
+      m_pimpactLast = NULL;
 
    }
 
@@ -124,7 +124,7 @@ namespace app_complex_form
 
          }
 
-         m_pviewLast = nullptr;
+         m_pimpactLast = nullptr;
 
       }
 

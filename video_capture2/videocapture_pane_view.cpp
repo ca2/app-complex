@@ -10,7 +10,7 @@ namespace app_complex_video_capture
    pane_impact::pane_impact()
    {
 
-      m_pviewLast = nullptr;
+      m_pimpactLast = nullptr;
       
    }
 
