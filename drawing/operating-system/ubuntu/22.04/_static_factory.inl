@@ -3,5 +3,5 @@ do(draw2d_cairo); \
 do(experience_core); \
 do(imaging_freeimage); \
 do(node_linux); \
-do(windowing_xcb); \
+do(windowing_x11); \
 do(write_text_pango);
