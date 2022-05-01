@@ -16,7 +16,7 @@ namespace app_complex_video_capture
 
 
       //m_ptopviewLast                          = nullptr;
-      //m_pviewLast                            = nullptr;
+      //m_pimpactLast                            = nullptr;
 
       //m_ptopviewMain                          = nullptr;
       //m_pviewMain                          = nullptr;
