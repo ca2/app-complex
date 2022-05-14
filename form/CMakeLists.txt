@@ -138,7 +138,7 @@ endif ()
 add_dependencies(_app_complex_form ${default_draw2d})
 add_dependencies(_app_complex_form ${default_imaging})
 add_dependencies(_app_complex_form ${default_write_text})
-add_dependencies(_app_complex_form ${default_gpu})
+#add_dependencies(_app_complex_form ${default_gpu})
 add_dependencies(_app_complex_form ${app_common_dependencies})
 add_dependencies(_app_complex_form experience_tranquillum)
 
