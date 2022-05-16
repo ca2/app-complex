@@ -1,27 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">
-    <RemoteDebuggerCommand>C:\Users\camilo\Desktop\a\shared_app_complex_video_capture.exe</RemoteDebuggerCommand>
+    <RemoteDebuggerCommand>\\Eddie\r\basis\time-windows\x64\basis\shared_app_complex_video_capture.exe</RemoteDebuggerCommand>
     <RemoteDebuggerServerName>bilbo.camilothomas.com</RemoteDebuggerServerName>
     <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
     <DebuggerFlavor>WindowsRemoteDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">
-    <RemoteDebuggerCommand>C:\Users\camilo\Desktop\a\shared_app_complex_video_capture.exe</RemoteDebuggerCommand>
+    <RemoteDebuggerCommand>\\Eddie\r\basis\time-windows\x64\basis\shared_app_complex_video_capture.exe</RemoteDebuggerCommand>
     <RemoteDebuggerServerName>bilbo.camilothomas.com</RemoteDebuggerServerName>
     <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
     <DebuggerFlavor>WindowsRemoteDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|x64'">
-    <RemoteDebuggerCommand>C:\Users\camilo\Desktop\a\shared_app_complex_video_capture.exe</RemoteDebuggerCommand>
-    <RemoteDebuggerServerName>bilbo.camilothomas.com</RemoteDebuggerServerName>
-    <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
-    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='stage|x64'">
-    <RemoteDebuggerCommand>C:\Users\camilo\Desktop\a\shared_app_complex_video_capture.exe</RemoteDebuggerCommand>
+    <RemoteDebuggerCommand>\\Eddie\r\basis\time-windows\x64\basis\shared_app_complex_video_capture.exe</RemoteDebuggerCommand>
     <RemoteDebuggerServerName>bilbo.camilothomas.com</RemoteDebuggerServerName>
     <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
     <DebuggerFlavor>WindowsRemoteDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='stage|x64'">
+    <RemoteDebuggerCommand>\\Eddie\r\basis\time-windows\x64\basis\shared_app_complex_video_capture.exe</RemoteDebuggerCommand>
+    <RemoteDebuggerServerName>bilbo.camilothomas.com</RemoteDebuggerServerName>
+    <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
+    <DebuggerFlavor>WindowsRemoteDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ShowAllFiles>true</ShowAllFiles>
   </PropertyGroup>
 </Project>
