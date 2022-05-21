@@ -113,7 +113,7 @@ namespace app_complex_form
    {
 
 //#if 1
-      if (pcreate->m_pcommandline->has_property("m"))
+      if (pcreate->has_property("m"))
       {
 
          //output_error_message("m=1");
@@ -151,7 +151,7 @@ namespace app_complex_form
 
       }
 
-      if (pcreate->m_pcommandline->m_payloadFile.has_char())
+      if (pcreate->m_payloadFile.has_char())
       {
 
          m_ptemplateBeatMapperImpact->do_request(pcreate);
@@ -161,7 +161,7 @@ namespace app_complex_form
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->m_pcommandline->payload("document").cast < document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->design_window_maximize();
+         pcreate->payload("document").cast < document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->design_window_maximize();
 
       }
 
