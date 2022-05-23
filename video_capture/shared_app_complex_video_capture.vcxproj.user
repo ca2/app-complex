@@ -16,7 +16,7 @@
     <RemoteDebuggerCommand>\\Eddie\r\basis\time-windows\x64\basis\shared_app_complex_video_capture.exe</RemoteDebuggerCommand>
     <RemoteDebuggerServerName>bilbo.camilothomas.com</RemoteDebuggerServerName>
     <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
-    <DebuggerFlavor>WindowsRemoteDebugger</DebuggerFlavor>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='stage|x64'">
     <RemoteDebuggerCommand>\\Eddie\r\basis\time-windows\x64\basis\shared_app_complex_video_capture.exe</RemoteDebuggerCommand>

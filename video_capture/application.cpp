@@ -121,7 +121,7 @@ namespace app_complex_video_capture
 
       }
 
-      if(pcreate->m_pcommandline->m_payloadFile.has_char())
+      if(pcreate->m_payloadFile.has_char())
       {
 
          m_ptemplateVideoCaptureImpact->do_request(pcreate);

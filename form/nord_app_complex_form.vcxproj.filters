@@ -80,5 +80,8 @@
     <ClInclude Include="impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="_app_complex_form.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

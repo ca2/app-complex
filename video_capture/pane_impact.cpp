@@ -91,9 +91,7 @@ namespace app_complex_video_capture
          
             auto pcreate = m_pusersystem->m_pcreate;
 
-            auto pcommandline = pcreate->m_pcommandline;
-
-            auto & payloadFile = pcommandline->m_payloadFile;
+            auto & payloadFile = pcreate->m_payloadFile;
 
             auto papp = get_app();
 
