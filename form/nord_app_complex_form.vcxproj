@@ -234,9 +234,6 @@
     <ProjectReference Include="..\..\..\operating-system\operating-system-posix\aura_posix\nord_aura_posix.vcxproj">
       <Project>{b23268d6-75cd-4f51-b3a7-fbfce1552c7d}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\app-simple\form\nord_lib_app_simple_form.vcxproj">
-      <Project>{85dd443e-1930-4c2d-a917-200e09d871e8}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\..\app\acme\nord_acme.vcxproj">
       <Project>{ecb0620d-bfa8-4f9b-b2ad-9d9c20a44fe9}</Project>
     </ProjectReference>
@@ -269,9 +266,6 @@
     </ProjectReference>
     <ProjectReference Include="..\..\app\draw2d_cairo\nord_draw2d_cairo.vcxproj">
       <Project>{06207bc4-c08b-4a2d-b754-f3bd46ad3098}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\app\experience_tranquillum\nord_experience_tranquillum.vcxproj">
-      <Project>{33fb8539-2eb2-490c-ae30-a01880aa4093}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\app\folder_zip\nord_folder_zip.vcxproj">
       <Project>{74cd7e4f-a9f4-4c9c-b7ce-0d8765201f66}</Project>
