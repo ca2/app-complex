@@ -524,6 +524,7 @@
     <ClCompile Include="top_view.cpp" />
     <ClCompile Include="impact.cpp" />
     <ClCompile Include="_.cpp" />
+    <ClCompile Include="_factory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h" />

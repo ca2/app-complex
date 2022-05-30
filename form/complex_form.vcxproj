@@ -973,6 +973,7 @@
     <ClCompile Include="impact.cpp" />
     <ClCompile Include="pane_impact.cpp" />
     <ClCompile Include="_.cpp" />
+    <ClCompile Include="_factory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="form.h" />
