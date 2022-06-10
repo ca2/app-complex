@@ -136,7 +136,7 @@ namespace app_complex_form
 
       string strId = pimpactdata->m_atom;
 
-      if(::::str::ch().begins_eat_ci(strId, "form"))
+      if(::str().begins_eat_ci(strId, "form"))
       {
 
          __pointer(form) pform;
@@ -198,7 +198,7 @@ namespace app_complex_form
 
             string strCheck = ptopic->m_puserelement->m_atom;
 
-            if (::::str::ch().begins_eat_ci(strCheck, "bilbo"))
+            if (::str().begins_eat_ci(strCheck, "bilbo"))
             {
 
                if (::is_set(ptopic->m_puserelement) && ptopic->m_actioncontext.is_user_source())
