@@ -6,6 +6,7 @@ list(APPEND library_source
    _.cpp
    _.h
    _app_complex_video_capture.h
+   _factory.cpp
    application.cpp
    application.h
    device_selector.cpp
