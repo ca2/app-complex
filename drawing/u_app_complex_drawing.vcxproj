@@ -74,6 +74,7 @@
     </ClCompile>
     <ClCompile Include="pane_impact.cpp" />
     <ClCompile Include="_.cpp" />
+    <ClCompile Include="_factory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\app-simple\drawing\u_app_simple_drawing.vcxproj">
@@ -338,7 +339,6 @@
       </ModuleDefinitionFile>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
     </Link>
-
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_basis|Win32'">
     <ClCompile>
@@ -391,7 +391,6 @@
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
     </Link>
-
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_stage|Win32'">
     <ClCompile>
@@ -453,7 +452,6 @@
       <ModuleDefinitionFile>u_$(TargetName).def</ModuleDefinitionFile>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
     </Link>
-
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_basis|arm'">
     <ClCompile>
@@ -504,7 +502,6 @@
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
     </Link>
-
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_stage|arm'">
     <ClCompile>
@@ -556,7 +553,6 @@
       <ModuleDefinitionFile>u_$(TargetName).def</ModuleDefinitionFile>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
     </Link>
-
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_basis|x64'">
     <ClCompile>
@@ -608,7 +604,6 @@
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
     </Link>
-
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_stage|x64'">
     <ClCompile>
