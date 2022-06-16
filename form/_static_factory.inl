@@ -7,5 +7,5 @@ do(database_sqlite3); \
 do(default_node); \
 do(default_windowing); \
 do(default_write_text); \
-do(imaging_freeimage);
+do(default_imaging);
 

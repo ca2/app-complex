@@ -10,7 +10,6 @@
 		9A42DB5626667BD30011645D /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A42DA7126667BD00011645D /* framework.cpp */; };
 		9A42DB5726667BD30011645D /* application.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A42DA7326667BD00011645D /* application.h */; };
 		9A42DB6526667BD30011645D /* pane_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A42DAED26667BD00011645D /* pane_impact.h */; };
-		9A42DB6826667BD30011645D /* _drawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A42DB0626667BD10011645D /* _drawing.h */; };
 		9A42DB6926667BD30011645D /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A42DB0726667BD10011645D /* framework.h */; };
 		9A42DB6A26667BD30011645D /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A42DB0C26667BD10011645D /* application.cpp */; };
 		9A42DB6B26667BD30011645D /* pane_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A42DB3526667BD20011645D /* pane_impact.cpp */; };
@@ -24,6 +23,18 @@
 		9A42DB9B26667D7F0011645D /* libbred.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42DB9A26667D7F0011645D /* libbred.dylib */; };
 		9A42DB9D26667E510011645D /* libapp_simple_drawing.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42DB7826667CF60011645D /* libapp_simple_drawing.dylib */; };
 		9A7F401F274D777000D914CC /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7F401E274D777000D914CC /* libcore.dylib */; };
+		9AE871232858A3DE00F88364 /* application.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A42DA7326667BD00011645D /* application.h */; };
+		9AE871242858A3DE00F88364 /* _.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A42DB3D26667BD20011645D /* _.h */; };
+		9AE871262858A3DE00F88364 /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A42DB0726667BD10011645D /* framework.h */; };
+		9AE871272858A3DE00F88364 /* pane_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A42DAED26667BD00011645D /* pane_impact.h */; };
+		9AE871292858A3DE00F88364 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A42DA7126667BD00011645D /* framework.cpp */; };
+		9AE8712A2858A3DE00F88364 /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA1C652679797F006F4A68 /* _.cpp */; };
+		9AE8712B2858A3DE00F88364 /* pane_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A42DB3526667BD20011645D /* pane_impact.cpp */; };
+		9AE8712C2858A3DE00F88364 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A42DB0C26667BD10011645D /* application.cpp */; };
+		9AE8782B2858B99F00F88364 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8782A2858B99F00F88364 /* _factory.cpp */; };
+		9AE8782C2858B99F00F88364 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8782A2858B99F00F88364 /* _factory.cpp */; };
+		9AE8782E2858B9CF00F88364 /* _app_complex_drawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AE8782D2858B9CE00F88364 /* _app_complex_drawing.h */; };
+		9AE8782F2858B9CF00F88364 /* _app_complex_drawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AE8782D2858B9CE00F88364 /* _app_complex_drawing.h */; };
 		9AEA1C682679797F006F4A68 /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA1C652679797F006F4A68 /* _.cpp */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +74,27 @@
 			remoteGlobalIDString = 9AE63303252A5A0300BED5B8;
 			remoteInfo = core;
 		};
+		9AE8713D2858A3DE00F88364 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A7F4024274D80C400D914CC /* core.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE6421A284AA62D0079EBA0;
+			remoteInfo = ios_core;
+		};
+		9AE8713F2858A42700F88364 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A7F4024274D80C400D914CC /* core.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AE63FCC284AA62D0079EBA0;
+			remoteInfo = ios_core;
+		};
+		9AE871412858A42D00F88364 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A42DB7126667CF60011645D /* app_simple_drawing.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AE24E891904CFFD001AEFFB;
+			remoteInfo = ios_app_simple_drawing;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -70,7 +102,6 @@
 		9A42DA7126667BD00011645D /* framework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
 		9A42DA7326667BD00011645D /* application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
 		9A42DAED26667BD00011645D /* pane_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pane_impact.h; sourceTree = "<group>"; };
-		9A42DB0626667BD10011645D /* _drawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _drawing.h; sourceTree = "<group>"; };
 		9A42DB0726667BD10011645D /* framework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
 		9A42DB0C26667BD10011645D /* application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
 		9A42DB3526667BD20011645D /* pane_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pane_impact.cpp; sourceTree = "<group>"; };
@@ -85,6 +116,9 @@
 		9A42DB9A26667D7F0011645D /* libbred.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbred.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7F401E274D777000D914CC /* libcore.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libcore.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7F4024274D80C400D914CC /* core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = core.xcodeproj; path = ../../app/core/core.xcodeproj; sourceTree = "<group>"; };
+		9AE8713A2858A3DE00F88364 /* libios_app_complex_drawing.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libios_app_complex_drawing.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE8782A2858B99F00F88364 /* _factory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _factory.cpp; sourceTree = "<group>"; };
+		9AE8782D2858B9CE00F88364 /* _app_complex_drawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _app_complex_drawing.h; sourceTree = "<group>"; };
 		9AEA1C652679797F006F4A68 /* _.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				9A42DA3E26667B9E0011645D /* libapp_complex_drawing.dylib */,
+				9AE8713A2858A3DE00F88364 /* libios_app_complex_drawing.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,7 +167,8 @@
 			children = (
 				9AEA1C652679797F006F4A68 /* _.cpp */,
 				9A42DB3D26667BD20011645D /* _.h */,
-				9A42DB0626667BD10011645D /* _drawing.h */,
+				9AE8782D2858B9CE00F88364 /* _app_complex_drawing.h */,
+				9AE8782A2858B99F00F88364 /* _factory.cpp */,
 				9A42DB0C26667BD10011645D /* application.cpp */,
 				9A42DA7326667BD00011645D /* application.h */,
 				9A42DA7126667BD00011645D /* framework.cpp */,
@@ -171,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				9A7F4029274D80C400D914CC /* libcore.dylib */,
+				9AE8713E2858A3DE00F88364 /* libios_core.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,10 +220,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A42DB5726667BD30011645D /* application.h in Headers */,
+				9AE8782E2858B9CF00F88364 /* _app_complex_drawing.h in Headers */,
 				9A42DB6D26667BD30011645D /* _.h in Headers */,
-				9A42DB6826667BD30011645D /* _drawing.h in Headers */,
 				9A42DB6926667BD30011645D /* framework.h in Headers */,
 				9A42DB6526667BD30011645D /* pane_impact.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AE871222858A3DE00F88364 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AE871232858A3DE00F88364 /* application.h in Headers */,
+				9AE8782F2858B9CF00F88364 /* _app_complex_drawing.h in Headers */,
+				9AE871242858A3DE00F88364 /* _.h in Headers */,
+				9AE871262858A3DE00F88364 /* framework.h in Headers */,
+				9AE871272858A3DE00F88364 /* pane_impact.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +246,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A42DA4726667B9E0011645D /* Build configuration list for PBXNativeTarget "app_complex_drawing" */;
 			buildPhases = (
-				9A81F189274F44FF003F38EC /* ShellScript */,
 				9A42DA3A26667B9E0011645D /* Headers */,
 				9A42DA3B26667B9E0011645D /* Sources */,
 				9A42DA3C26667B9E0011645D /* Frameworks */,
@@ -211,6 +259,24 @@
 			name = app_complex_drawing;
 			productName = app_complex_drawing;
 			productReference = 9A42DA3E26667B9E0011645D /* libapp_complex_drawing.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		9AE8711D2858A3DE00F88364 /* ios_app_complex_drawing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AE871372858A3DE00F88364 /* Build configuration list for PBXNativeTarget "ios_app_complex_drawing" */;
+			buildPhases = (
+				9AE871222858A3DE00F88364 /* Headers */,
+				9AE871282858A3DE00F88364 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AE871422858A42D00F88364 /* PBXTargetDependency */,
+				9AE871402858A42700F88364 /* PBXTargetDependency */,
+			);
+			name = ios_app_complex_drawing;
+			productName = app_complex_drawing;
+			productReference = 9AE8713A2858A3DE00F88364 /* libios_app_complex_drawing.a */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -250,6 +316,7 @@
 			projectRoot = "";
 			targets = (
 				9A42DA3D26667B9E0011645D /* app_complex_drawing */,
+				9AE8711D2858A3DE00F88364 /* ios_app_complex_drawing */,
 			);
 		};
 /* End PBXProject section */
@@ -276,6 +343,13 @@
 			remoteRef = 9A7F4028274D80C400D914CC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		9AE8713E2858A3DE00F88364 /* libios_core.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libios_core.a;
+			remoteRef = 9AE8713D2858A3DE00F88364 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -286,7 +360,20 @@
 				9A42DB5626667BD30011645D /* framework.cpp in Sources */,
 				9AEA1C682679797F006F4A68 /* _.cpp in Sources */,
 				9A42DB6B26667BD30011645D /* pane_impact.cpp in Sources */,
+				9AE8782B2858B99F00F88364 /* _factory.cpp in Sources */,
 				9A42DB6A26667BD30011645D /* application.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AE871282858A3DE00F88364 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AE871292858A3DE00F88364 /* framework.cpp in Sources */,
+				9AE8712A2858A3DE00F88364 /* _.cpp in Sources */,
+				9AE8712B2858A3DE00F88364 /* pane_impact.cpp in Sources */,
+				9AE8782C2858B99F00F88364 /* _factory.cpp in Sources */,
+				9AE8712C2858A3DE00F88364 /* application.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +389,16 @@
 			isa = PBXTargetDependency;
 			name = core;
 			targetProxy = 9A7F402A274D80CE00D914CC /* PBXContainerItemProxy */;
+		};
+		9AE871402858A42700F88364 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_core;
+			targetProxy = 9AE8713F2858A42700F88364 /* PBXContainerItemProxy */;
+		};
+		9AE871422858A42D00F88364 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_app_simple_drawing;
+			targetProxy = 9AE871412858A42D00F88364 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -370,7 +467,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library",
-				
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -472,7 +568,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library",
-				
 					"$(WorkspaceDir)/operating-system",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
@@ -552,6 +647,50 @@
 			};
 			name = Release;
 		};
+		9AE871382858A3DE00F88364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L8N5V6TZE5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/nsisExamples/Plugin/nsis",
+				);
+				MACH_O_TYPE = staticlib;
+				PLATFORM_MODIFIER = macos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9AE871392858A3DE00F88364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L8N5V6TZE5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/nsisExamples/Plugin/nsis",
+				);
+				MACH_O_TYPE = staticlib;
+				PLATFORM_MODIFIER = macos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -569,6 +708,15 @@
 			buildConfigurations = (
 				9A42DA4826667B9E0011645D /* Debug */,
 				9A42DA4926667B9E0011645D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AE871372858A3DE00F88364 /* Build configuration list for PBXNativeTarget "ios_app_complex_drawing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AE871382858A3DE00F88364 /* Debug */,
+				9AE871392858A3DE00F88364 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

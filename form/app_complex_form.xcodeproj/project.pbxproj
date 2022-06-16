@@ -41,6 +41,33 @@
 		9AC022C42748FABC006BEBCC /* libbred.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC022C32748FABC006BEBCC /* libbred.dylib */; };
 		9AC022C52748FABC006BEBCC /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC0228C2748F1F5006BEBCC /* libcore.dylib */; };
 		9AC022C62748FAC9006BEBCC /* libapp_simple_form.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC022952748F21F006BEBCC /* libapp_simple_form.dylib */; };
+		9AE877CE2858AE3800F88364 /* impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC022AB2748F7DF006BEBCC /* impact.h */; };
+		9AE877CF2858AE3800F88364 /* frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC020C82748F1C6006BEBCC /* frame.h */; };
+		9AE877D02858AE3800F88364 /* document.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC020B52748F1C1006BEBCC /* document.h */; };
+		9AE877D12858AE3800F88364 /* form_002.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC020272748F1BB006BEBCC /* form_002.h */; };
+		9AE877D22858AE3800F88364 /* _.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC020962748F1C0006BEBCC /* _.h */; };
+		9AE877D32858AE3800F88364 /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC022AA2748F7DF006BEBCC /* framework.h */; };
+		9AE877D42858AE3800F88364 /* form.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC01F9B2748F1B8006BEBCC /* form.h */; };
+		9AE877D52858AE3800F88364 /* pane_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC020282748F1BB006BEBCC /* pane_impact.h */; };
+		9AE877D62858AE3800F88364 /* _app_complex_form.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC020292748F1BB006BEBCC /* _app_complex_form.h */; };
+		9AE877D72858AE3800F88364 /* form_001.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC020672748F1BE006BEBCC /* form_001.h */; };
+		9AE877D82858AE3800F88364 /* application.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC01FA92748F1B9006BEBCC /* application.h */; };
+		9AE877D92858AE3800F88364 /* main_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC022AC2748F7DF006BEBCC /* main_impact.h */; };
+		9AE877DA2858AE3800F88364 /* main_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC020B32748F1C1006BEBCC /* main_frame.h */; };
+		9AE877DC2858AE3800F88364 /* main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC01F912748F1B8006BEBCC /* main_frame.cpp */; };
+		9AE877DD2858AE3800F88364 /* form_001.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0205B2748F1BD006BEBCC /* form_001.cpp */; };
+		9AE877DE2858AE3800F88364 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC022A52748F7A4006BEBCC /* framework.cpp */; };
+		9AE877DF2858AE3800F88364 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC022A42748F7A4006BEBCC /* application.cpp */; };
+		9AE877E02858AE3800F88364 /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC020252748F1BB006BEBCC /* _.cpp */; };
+		9AE877E12858AE3800F88364 /* impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC020B82748F1C2006BEBCC /* impact.cpp */; };
+		9AE877E22858AE3800F88364 /* form.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC01F752748F1B7006BEBCC /* form.cpp */; };
+		9AE877E32858AE3800F88364 /* main_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC022A92748F7DF006BEBCC /* main_impact.cpp */; };
+		9AE877E42858AE3800F88364 /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC022B12748F814006BEBCC /* document.cpp */; };
+		9AE877E52858AE3800F88364 /* frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC022A32748F7A4006BEBCC /* frame.cpp */; };
+		9AE877E62858AE3800F88364 /* pane_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC020872748F1BF006BEBCC /* pane_impact.cpp */; };
+		9AE877E72858AE3800F88364 /* form_002.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC020512748F1BD006BEBCC /* form_002.cpp */; };
+		9AE878312858BA0F00F88364 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AE878302858BA0F00F88364 /* _factory.cpp */; };
+		9AE878322858BA0F00F88364 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AE878302858BA0F00F88364 /* _factory.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +113,27 @@
 			remoteGlobalIDString = 9AE63303252A5A0300BED5B8;
 			remoteInfo = core;
 		};
+		9AE877F92858AE3800F88364 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC022872748F1F5006BEBCC /* core.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE6421A284AA62D0079EBA0;
+			remoteInfo = ios_core;
+		};
+		9AE878382858BE5E00F88364 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC0228D2748F21E006BEBCC /* app_simple_form.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AE24E891904CFFD001AEFFB;
+			remoteInfo = ios_app_simple_form;
+		};
+		9AE8783A2858BE6A00F88364 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC022872748F1F5006BEBCC /* core.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AE63FCC284AA62D0079EBA0;
+			remoteInfo = ios_core;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +172,8 @@
 		9AC022BF2748FABC006BEBCC /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC022C12748FABC006BEBCC /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC022C32748FABC006BEBCC /* libbred.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbred.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE877F52858AE3800F88364 /* libios_app_complex_form.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libios_app_complex_form.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE878302858BA0F00F88364 /* _factory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _factory.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +190,13 @@
 				9AC022C22748FABC006BEBCC /* libbase.dylib in Frameworks */,
 				9AC022C42748FABC006BEBCC /* libbred.dylib in Frameworks */,
 				9AC022C52748FABC006BEBCC /* libcore.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AE877E82858AE3800F88364 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				9AC01F652748F177006BEBCC /* libapp_complex_form.dylib */,
+				9AE877F52858AE3800F88364 /* libios_app_complex_form.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,6 +229,7 @@
 				9AC020252748F1BB006BEBCC /* _.cpp */,
 				9AC020962748F1C0006BEBCC /* _.h */,
 				9AC020292748F1BB006BEBCC /* _app_complex_form.h */,
+				9AE878302858BA0F00F88364 /* _factory.cpp */,
 				9AC022A42748F7A4006BEBCC /* application.cpp */,
 				9AC01FA92748F1B9006BEBCC /* application.h */,
 				9AC022B12748F814006BEBCC /* document.cpp */,
@@ -201,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				9AC0228C2748F1F5006BEBCC /* libcore.dylib */,
+				9AE877FA2858AE3800F88364 /* libios_core.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -252,6 +312,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9AE877CD2858AE3800F88364 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AE877CE2858AE3800F88364 /* impact.h in Headers */,
+				9AE877CF2858AE3800F88364 /* frame.h in Headers */,
+				9AE877D02858AE3800F88364 /* document.h in Headers */,
+				9AE877D12858AE3800F88364 /* form_002.h in Headers */,
+				9AE877D22858AE3800F88364 /* _.h in Headers */,
+				9AE877D32858AE3800F88364 /* framework.h in Headers */,
+				9AE877D42858AE3800F88364 /* form.h in Headers */,
+				9AE877D52858AE3800F88364 /* pane_impact.h in Headers */,
+				9AE877D62858AE3800F88364 /* _app_complex_form.h in Headers */,
+				9AE877D72858AE3800F88364 /* form_001.h in Headers */,
+				9AE877D82858AE3800F88364 /* application.h in Headers */,
+				9AE877D92858AE3800F88364 /* main_impact.h in Headers */,
+				9AE877DA2858AE3800F88364 /* main_frame.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -259,7 +339,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AC01F692748F177006BEBCC /* Build configuration list for PBXNativeTarget "app_complex_form" */;
 			buildPhases = (
-				9A81F18C274F452F003F38EC /* ShellScript */,
 				9AC01F612748F177006BEBCC /* Headers */,
 				9AC01F622748F177006BEBCC /* Sources */,
 				9AC01F632748F177006BEBCC /* Frameworks */,
@@ -273,6 +352,25 @@
 			name = app_complex_form;
 			productName = app_complex_form;
 			productReference = 9AC01F652748F177006BEBCC /* libapp_complex_form.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		9AE877C82858AE3800F88364 /* ios_app_complex_form */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AE877F22858AE3800F88364 /* Build configuration list for PBXNativeTarget "ios_app_complex_form" */;
+			buildPhases = (
+				9AE877CD2858AE3800F88364 /* Headers */,
+				9AE877DB2858AE3800F88364 /* Sources */,
+				9AE877E82858AE3800F88364 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AE8783B2858BE6A00F88364 /* PBXTargetDependency */,
+				9AE878392858BE5E00F88364 /* PBXTargetDependency */,
+			);
+			name = ios_app_complex_form;
+			productName = app_complex_form;
+			productReference = 9AE877F52858AE3800F88364 /* libios_app_complex_form.a */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -313,6 +411,7 @@
 			projectRoot = "";
 			targets = (
 				9AC01F642748F177006BEBCC /* app_complex_form */,
+				9AE877C82858AE3800F88364 /* ios_app_complex_form */,
 			);
 		};
 /* End PBXProject section */
@@ -335,7 +434,8 @@
 		9AC022972748F21F006BEBCC /* libapp_simple_form.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libapp_simple_form.a;
+			name = libapp_simple_form.a;
+			path = libios_app_simple_form.a;
 			remoteRef = 9AC022962748F21F006BEBCC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -344,6 +444,13 @@
 			fileType = wrapper.cfbundle;
 			path = app_core_hellomultiverse_iosTests.xctest;
 			remoteRef = 9AC022982748F21F006BEBCC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AE877FA2858AE3800F88364 /* libios_core.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libios_core.a;
+			remoteRef = 9AE877F92858AE3800F88364 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -355,6 +462,7 @@
 			files = (
 				9AC020D12748F1C6006BEBCC /* main_frame.cpp in Sources */,
 				9AC021042748F1C6006BEBCC /* form_001.cpp in Sources */,
+				9AE878312858BA0F00F88364 /* _factory.cpp in Sources */,
 				9AC022A82748F7A4006BEBCC /* framework.cpp in Sources */,
 				9AC022A72748F7A4006BEBCC /* application.cpp in Sources */,
 				9AC020F62748F1C6006BEBCC /* _.cpp in Sources */,
@@ -365,6 +473,26 @@
 				9AC022A62748F7A4006BEBCC /* frame.cpp in Sources */,
 				9AC021092748F1C6006BEBCC /* pane_impact.cpp in Sources */,
 				9AC020FF2748F1C6006BEBCC /* form_002.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AE877DB2858AE3800F88364 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AE877DC2858AE3800F88364 /* main_frame.cpp in Sources */,
+				9AE877DD2858AE3800F88364 /* form_001.cpp in Sources */,
+				9AE878322858BA0F00F88364 /* _factory.cpp in Sources */,
+				9AE877DE2858AE3800F88364 /* framework.cpp in Sources */,
+				9AE877DF2858AE3800F88364 /* application.cpp in Sources */,
+				9AE877E02858AE3800F88364 /* _.cpp in Sources */,
+				9AE877E12858AE3800F88364 /* impact.cpp in Sources */,
+				9AE877E22858AE3800F88364 /* form.cpp in Sources */,
+				9AE877E32858AE3800F88364 /* main_impact.cpp in Sources */,
+				9AE877E42858AE3800F88364 /* document.cpp in Sources */,
+				9AE877E52858AE3800F88364 /* frame.cpp in Sources */,
+				9AE877E62858AE3800F88364 /* pane_impact.cpp in Sources */,
+				9AE877E72858AE3800F88364 /* form_002.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +508,16 @@
 			isa = PBXTargetDependency;
 			name = core;
 			targetProxy = 9AC022A12748F3B7006BEBCC /* PBXContainerItemProxy */;
+		};
+		9AE878392858BE5E00F88364 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_app_simple_form;
+			targetProxy = 9AE878382858BE5E00F88364 /* PBXContainerItemProxy */;
+		};
+		9AE8783B2858BE6A00F88364 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_core;
+			targetProxy = 9AE8783A2858BE6A00F88364 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -448,7 +586,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library",
-				
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -456,7 +593,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-all_load";
 				PLATFORM_MODIFIER = macos;
-				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -550,7 +687,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library",
-				
 					"$(WorkspaceDir)/operating-system",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
@@ -558,7 +694,7 @@
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "-all_load";
 				PLATFORM_MODIFIER = macos;
-				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SYSTEM_HEADER_SEARCH_PATHS = (
@@ -628,6 +764,48 @@
 			};
 			name = Release;
 		};
+		9AE877F32858AE3800F88364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L8N5V6TZE5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/nsisExamples/Plugin/nsis",
+				);
+				MACH_O_TYPE = staticlib;
+				PLATFORM_MODIFIER = macos;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9AE877F42858AE3800F88364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L8N5V6TZE5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/nsisExamples/Plugin/nsis",
+				);
+				MACH_O_TYPE = staticlib;
+				PLATFORM_MODIFIER = macos;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -645,6 +823,15 @@
 			buildConfigurations = (
 				9AC01F6A2748F177006BEBCC /* Debug */,
 				9AC01F6B2748F177006BEBCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AE877F22858AE3800F88364 /* Build configuration list for PBXNativeTarget "ios_app_complex_form" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AE877F32858AE3800F88364 /* Debug */,
+				9AE877F42858AE3800F88364 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		070B8F041B6E53FA00D26137 /* Hello_Multiverse__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */; };
 		9A4E96DC2785491900B74C76 /* libapp_complex_form.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AC0229C2748F22F006BEBCC /* libapp_complex_form.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A4E96E72785592F00B74C76 /* libbred.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4E96E62785592F00B74C76 /* libbred.dylib */; };
 		9A4E96E82785592F00B74C76 /* libbred.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A4E96E62785592F00B74C76 /* libbred.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -42,7 +41,7 @@
 		9AEA1B8D2679469D006F4A68 /* libaura_posix.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AEA1B6F2679469B006F4A68 /* libaura_posix.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AEA1B8F2679469D006F4A68 /* libaxis.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AEA1B702679469B006F4A68 /* libaxis.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AEA1B912679469D006F4A68 /* libbase.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AEA1B712679469B006F4A68 /* libbase.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9AEA1B932679469D006F4A68 /* libdatabase_sqlite3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AA8040926657ABF00A6B449 /* libdatabase_sqlite3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AEA1B932679469D006F4A68 /* lib.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AA8040926657ABF00A6B449 /* lib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AEA1B952679469D006F4A68 /* libdraw2d_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AA803B726657ABB00A6B449 /* libdraw2d_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AEA1B972679469D006F4A68 /* libexperience_tranquillum.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A42D7CA266597550011645D /* libexperience_tranquillum.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AEA1B992679469E006F4A68 /* libidn.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AEA1B722679469B006F4A68 /* libidn.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -221,6 +220,34 @@
 			remoteGlobalIDString = 9AC01F652748F177006BEBCC;
 			remoteInfo = app_complex_form;
 		};
+		9AE8715D2858A4A700F88364 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC01F412748EBBA006BEBCC /* crypto_openssl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AA14DBB282A17C600B1621E;
+			remoteInfo = ios_crypto_openssl;
+		};
+		9AE871602858A4A700F88364 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AA8040426657ABE00A6B449 /* database_sqlite3.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A93B4C32846E5EF005ACD11;
+			remoteInfo = ios_database_sqlite3;
+		};
+		9AE871662858A4A700F88364 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A8C837827845F0C000C8587 /* folder_zip.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AA14DDC282A17D900B1621E;
+			remoteInfo = ios_folder_zip;
+		};
+		9AE8716B2858A4A700F88364 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AA803C826657ABB00A6B449 /* write_text_quartz2d.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A882EE12844AA66004113D1;
+			remoteInfo = ios_write_text_quartz2d;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -239,7 +266,7 @@
 				9AEA1B6526794656006F4A68 /* libacme_macos.dylib in Embed Libraries */,
 				9A8D0E7526B71908000D2AD6 /* libcrypto.3.dylib in Embed Libraries */,
 				9A8D0E7626B71908000D2AD6 /* libssl.3.dylib in Embed Libraries */,
-				9AEA1B932679469D006F4A68 /* libdatabase_sqlite3.dylib in Embed Libraries */,
+				9AEA1B932679469D006F4A68 /* lib.dylib in Embed Libraries */,
 				9AEA1B752679469B006F4A68 /* libacme.dylib in Embed Libraries */,
 				9AEA1B9F2679469E006F4A68 /* libwindowing_macos.dylib in Embed Libraries */,
 				9AEA1B952679469D006F4A68 /* libdraw2d_quartz2d.dylib in Embed Libraries */,
@@ -270,8 +297,6 @@
 /* Begin PBXFileReference section */
 		070B8EEA1B6E53F900D26137 /* _app_complex_form.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _app_complex_form.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		070B8EFD1B6E53FA00D26137 /* Hello Multiverse!!Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hello Multiverse!!Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		070B8F021B6E53FA00D26137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hello_Multiverse__Tests.m; sourceTree = "<group>"; };
 		9A42D7C3266597540011645D /* experience_tranquillum.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_tranquillum.xcodeproj; path = ../../app/experience_tranquillum/experience_tranquillum.xcodeproj; sourceTree = "<group>"; };
 		9A4E96E62785592F00B74C76 /* libbred.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbred.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8C64C12783EA0D000C8587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -347,9 +372,8 @@
 				9A8C837827845F0C000C8587 /* folder_zip.xcodeproj */,
 				9AA803E626657ABC00A6B449 /* imaging_coreimage.xcodeproj */,
 				9AA8038F26657ABA00A6B449 /* node_macos.xcodeproj */,
-				9A8C61C42783E9A6000C8587 /* form */,
 				9AA803C826657ABB00A6B449 /* write_text_quartz2d.xcodeproj */,
-				070B8F001B6E53FA00D26137 /* Hello Multiverse!!Tests */,
+				9A8C61C42783E9A6000C8587 /* form */,
 				070B8EEB1B6E53F900D26137 /* Products */,
 				9ADF1D4522C16E1600456537 /* Frameworks */,
 				9A3E0BA22309FBDC00B5459B /* Library */,
@@ -364,23 +388,6 @@
 				070B8EFD1B6E53FA00D26137 /* Hello Multiverse!!Tests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		070B8F001B6E53FA00D26137 /* Hello Multiverse!!Tests */ = {
-			isa = PBXGroup;
-			children = (
-				070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */,
-				070B8F011B6E53FA00D26137 /* Supporting Files */,
-			);
-			path = "Hello Multiverse!!Tests";
-			sourceTree = "<group>";
-		};
-		070B8F011B6E53FA00D26137 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				070B8F021B6E53FA00D26137 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		9A3E0BA22309FBDC00B5459B /* Library */ = {
@@ -424,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				9A8C837D27845F0C000C8587 /* libfolder_zip.dylib */,
+				9AE871672858A4A700F88364 /* libios_folder_zip.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -449,6 +457,7 @@
 			isa = PBXGroup;
 			children = (
 				9AA803CD26657ABC00A6B449 /* libwrite_text_quartz2d.dylib */,
+				9AE8716C2858A4A700F88364 /* ios_write_text_quartz2d.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -466,7 +475,8 @@
 		9AA8040526657ABE00A6B449 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AA8040926657ABF00A6B449 /* libdatabase_sqlite3.dylib */,
+				9AA8040926657ABF00A6B449 /* lib.dylib */,
+				9AE871612858A4A700F88364 /* lib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -483,6 +493,7 @@
 			isa = PBXGroup;
 			children = (
 				9AC01F462748EBBA006BEBCC /* libcrypto_openssl.dylib */,
+				9AE8715E2858A4A700F88364 /* libios_crypto_openssl.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -728,9 +739,10 @@
 			remoteRef = 9AA803F026657ABC00A6B449 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AA8040926657ABF00A6B449 /* libdatabase_sqlite3.dylib */ = {
+		9AA8040926657ABF00A6B449 /* lib.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
+			name = lib.dylib;
 			path = libdatabase_sqlite3.dylib;
 			remoteRef = 9AA8040826657ABF00A6B449 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -747,6 +759,36 @@
 			fileType = "compiled.mach-o.dylib";
 			path = libapp_complex_form.dylib;
 			remoteRef = 9AC0229B2748F22F006BEBCC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AE8715E2858A4A700F88364 /* libios_crypto_openssl.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libios_crypto_openssl.a;
+			remoteRef = 9AE8715D2858A4A700F88364 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AE871612858A4A700F88364 /* lib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			name = lib.a;
+			path = libios_database_sqlite3.a;
+			remoteRef = 9AE871602858A4A700F88364 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AE871672858A4A700F88364 /* libios_folder_zip.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libios_folder_zip.a;
+			remoteRef = 9AE871662858A4A700F88364 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AE8716C2858A4A700F88364 /* ios_write_text_quartz2d.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			name = ios_write_text_quartz2d.a;
+			path = libios_write_text_quartz2d.a;
+			remoteRef = 9AE8716B2858A4A700F88364 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -785,7 +827,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				070B8F041B6E53FA00D26137 /* Hello_Multiverse__Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

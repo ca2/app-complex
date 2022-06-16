@@ -14,10 +14,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "070B8EE91B6E53F900D26137"
-            BuildableName = "app_simple_drawing.app"
-            BlueprintName = "app_simple_drawing"
-            ReferencedContainer = "container:drawing.xcodeproj">
+            BlueprintIdentifier = "078C352E1921758500354453"
+            BuildableName = "ios_simple_drawing_simple_drawing.app"
+            BlueprintName = "ios_simple_drawing_simple_drawing"
+            ReferencedContainer = "container:ios_simple_drawing_simple_drawing.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -37,10 +37,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "070B8EE91B6E53F900D26137"
-            BuildableName = "_app_complex_drawing.app"
-            BlueprintName = "_app_complex_drawing"
-            ReferencedContainer = "container:_app_complex_drawing.xcodeproj">
+            BlueprintIdentifier = "078C352E1921758500354453"
+            BuildableName = "_ios_complex_drawing.app"
+            BlueprintName = "_ios_complex_drawing"
+            ReferencedContainer = "container:_ios_app_complex_drawing.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -53,10 +53,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "070B8EE91B6E53F900D26137"
-            BuildableName = "_app_complex_drawing.app"
-            BlueprintName = "_app_complex_drawing"
-            ReferencedContainer = "container:_app_complex_drawing.xcodeproj">
+            BlueprintIdentifier = "078C352E1921758500354453"
+            BuildableName = "_ios_complex_drawing.app"
+            BlueprintName = "_ios_complex_drawing"
+            ReferencedContainer = "container:_ios_app_complex_drawing.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
