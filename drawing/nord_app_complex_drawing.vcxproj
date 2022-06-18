@@ -188,6 +188,7 @@
     <ClCompile Include="application.cpp" />
     <ClCompile Include="framework.cpp" />
     <ClCompile Include="pane_impact.cpp" />
+    <ClCompile Include="_factory.cpp" />
     <ClCompile Include="_main.cpp" />
   </ItemGroup>
   <ItemGroup>

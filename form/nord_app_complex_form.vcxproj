@@ -204,6 +204,7 @@
     <ClCompile Include="main_impact.cpp" />
     <ClCompile Include="impact.cpp" />
     <ClCompile Include="pane_impact.cpp" />
+    <ClCompile Include="_factory.cpp" />
     <ClCompile Include="_main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -233,6 +234,9 @@
     </ProjectReference>
     <ProjectReference Include="..\..\..\operating-system\operating-system-posix\aura_posix\nord_aura_posix.vcxproj">
       <Project>{b23268d6-75cd-4f51-b3a7-fbfce1552c7d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\app-simple\form\nord_lib_app_simple_form.vcxproj">
+      <Project>{85dd443e-1930-4c2d-a917-200e09d871e8}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\app\acme\nord_acme.vcxproj">
       <Project>{ecb0620d-bfa8-4f9b-b2ad-9d9c20a44fe9}</Project>
