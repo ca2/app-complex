@@ -186,6 +186,33 @@ _.cpp.s:
 	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-complex/video_capture/CMakeFiles/app_complex_video_capture.dir/build.make source/app-complex/video_capture/CMakeFiles/app_complex_video_capture.dir/_.cpp.s
 .PHONY : _.cpp.s
 
+_factory.o: _factory.cpp.o
+
+.PHONY : _factory.o
+
+# target to build an object file
+_factory.cpp.o:
+	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-complex/video_capture/CMakeFiles/app_complex_video_capture.dir/build.make source/app-complex/video_capture/CMakeFiles/app_complex_video_capture.dir/_factory.cpp.o
+.PHONY : _factory.cpp.o
+
+_factory.i: _factory.cpp.i
+
+.PHONY : _factory.i
+
+# target to preprocess a source file
+_factory.cpp.i:
+	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-complex/video_capture/CMakeFiles/app_complex_video_capture.dir/build.make source/app-complex/video_capture/CMakeFiles/app_complex_video_capture.dir/_factory.cpp.i
+.PHONY : _factory.cpp.i
+
+_factory.s: _factory.cpp.s
+
+.PHONY : _factory.s
+
+# target to generate assembly for a file
+_factory.cpp.s:
+	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-complex/video_capture/CMakeFiles/app_complex_video_capture.dir/build.make source/app-complex/video_capture/CMakeFiles/app_complex_video_capture.dir/_factory.cpp.s
+.PHONY : _factory.cpp.s
+
 _main.o: _main.cpp.o
 
 .PHONY : _main.o
@@ -565,6 +592,9 @@ help:
 	@echo "... _.o"
 	@echo "... _.i"
 	@echo "... _.s"
+	@echo "... _factory.o"
+	@echo "... _factory.i"
+	@echo "... _factory.s"
 	@echo "... _main.o"
 	@echo "... _main.i"
 	@echo "... _main.s"
