@@ -33,7 +33,7 @@
 		9AE877B62858ADC100F88364 /* libios_bred.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877982858ADBE00F88364 /* libios_bred.a */; };
 		9AE877B82858ADC100F88364 /* libios_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877992858ADBE00F88364 /* libios_core.a */; };
 		9AE877BA2858ADC200F88364 /* libios_crypto_openssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE871962858A4C300F88364 /* libios_crypto_openssl.a */; };
-		9AE877BC2858ADE600F88364 /* lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE871BD2858A4C400F88364 /* lib.a */; };
+		9AE877BC2858ADE600F88364 /* libios_database_sqlite3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE871BD2858A4C400F88364 /* libios_database_sqlite3.a */; };
 		9AE877BE2858ADE700F88364 /* libios_draw2d_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8719F2858A4C300F88364 /* libios_draw2d_quartz2d.a */; };
 		9AE877C22858ADFF00F88364 /* libnode_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877C02858ADFF00F88364 /* libnode_ios.a */; };
 		9AE877C42858AE0000F88364 /* libwindowing_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877C12858ADFF00F88364 /* libwindowing_ios.a */; };
@@ -41,10 +41,9 @@
 		9AE878222858B26C00F88364 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE878202858B26B00F88364 /* libssl.a */; };
 		9AE878232858B26C00F88364 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE878212858B26C00F88364 /* libcrypto.a */; };
 		9AE878342858BB9E00F88364 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE878332858BB9D00F88364 /* CoreServices.framework */; };
-		9AE878352858BCB000F88364 /* libios_app_complex_form.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8780B2858AEB600F88364 /* libios_app_complex_form.dylib */; };
-		9AE8783C2858BECF00F88364 /* libios_app_complex_form.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8780B2858AEB600F88364 /* libios_app_complex_form.dylib */; };
+		9AE8783C2858BECF00F88364 /* libios_app_complex_form.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8780B2858AEB600F88364 /* libios_app_complex_form.a */; };
 		9AE8783E2858BF0500F88364 /* libios_app_simple_form.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8783D2858BF0500F88364 /* libios_app_simple_form.a */; };
-		9AE8783F2858BF6B00F88364 /* libios_experience_tranquillum.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE871762858A4C100F88364 /* libios_experience_tranquillum.dylib */; };
+		9AE8783F2858BF6B00F88364 /* libios_experience_tranquillum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE871762858A4C100F88364 /* libios_experience_tranquillum.a */; };
 		9AE878432858C0A100F88364 /* libios_folder_zip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE871B42858A4C400F88364 /* libios_folder_zip.a */; };
 		9AE878452858C12400F88364 /* libios_imaging_coreimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE871A92858A4C300F88364 /* libios_imaging_coreimage.a */; };
 		9AE878472858C14400F88364 /* libios_idn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE878462858C14400F88364 /* libios_idn.a */; };
@@ -197,7 +196,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AE871B52858A4C400F88364 /* database_sqlite3.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 9A93B4A92846E5EF005ACD11;
+			remoteGlobalIDString = 9A0DB3D62864314500D061F7;
 			remoteInfo = ios_database_sqlite3;
 		};
 		9AE877FF2858AEB600F88364 /* PBXContainerItemProxy */ = {
@@ -454,7 +453,7 @@
 				9AE878452858C12400F88364 /* libios_imaging_coreimage.a in Frameworks */,
 				9AE877AF2858ADC000F88364 /* libaura_ios.a in Frameworks */,
 				9AE877A22858ADBF00F88364 /* libios_apex.a in Frameworks */,
-				9AE877BC2858ADE600F88364 /* lib.a in Frameworks */,
+				9AE877BC2858ADE600F88364 /* libios_database_sqlite3.a in Frameworks */,
 				9AE8779E2858ADBF00F88364 /* libacme_ios.a in Frameworks */,
 				9A41735F2000CA4C0056265A /* libcrypto.a in Frameworks */,
 				9A4173602000CA4C0056265A /* libssl.a in Frameworks */,
@@ -468,13 +467,12 @@
 				9AF7615C1F84387F00FDE7CC /* CoreGraphics.framework in Frameworks */,
 				9AF7615E1F84389000FDE7CC /* libsqlite3.tbd in Frameworks */,
 				9AF7615B1F84387700FDE7CC /* libiconv.tbd in Frameworks */,
-				9AE8783C2858BECF00F88364 /* libios_app_complex_form.dylib in Frameworks */,
+				9AE8783C2858BECF00F88364 /* libios_app_complex_form.a in Frameworks */,
 				9AE877A62858ADBF00F88364 /* libapex_ios.a in Frameworks */,
 				9AE877B12858ADC000F88364 /* libios_aura_posix.a in Frameworks */,
-				9AE878352858BCB000F88364 /* libios_app_complex_form.dylib in Frameworks */,
 				9AE878232858B26C00F88364 /* libcrypto.a in Frameworks */,
 				9AE8779C2858ADBE00F88364 /* libios_acme_apple.a in Frameworks */,
-				9AE8783F2858BF6B00F88364 /* libios_experience_tranquillum.dylib in Frameworks */,
+				9AE8783F2858BF6B00F88364 /* libios_experience_tranquillum.a in Frameworks */,
 				9AE878222858B26C00F88364 /* libssl.a in Frameworks */,
 				9AE878432858C0A100F88364 /* libios_folder_zip.a in Frameworks */,
 				9AF761551F84384500FDE7CC /* libz.tbd in Frameworks */,
@@ -714,7 +712,7 @@
 			isa = PBXGroup;
 			children = (
 				9AE871742858A4C100F88364 /* libexperience_tranquillum.dylib */,
-				9AE871762858A4C100F88364 /* libios_experience_tranquillum.dylib */,
+				9AE871762858A4C100F88364 /* libios_experience_tranquillum.a */,
 				9AE871782858A4C100F88364 /* experience_lite_iosTests.xctest */,
 			);
 			name = Products;
@@ -733,7 +731,7 @@
 			isa = PBXGroup;
 			children = (
 				9AE8718D2858A4C200F88364 /* libapp_complex_form.dylib */,
-				9AE8780B2858AEB600F88364 /* libios_app_complex_form.dylib */,
+				9AE8780B2858AEB600F88364 /* libios_app_complex_form.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -778,8 +776,8 @@
 		9AE871B62858A4C400F88364 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AE871BB2858A4C400F88364 /* lib.dylib */,
-				9AE871BD2858A4C400F88364 /* lib.a */,
+				9AE871BB2858A4C400F88364 /* libdatabase_sqlite3.dylib */,
+				9AE871BD2858A4C400F88364 /* libios_database_sqlite3.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -869,7 +867,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ca2;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1340;
 				ORGANIZATIONNAME = "Camilo Sasuke Tsumanuma";
 				TargetAttributes = {
 					078C352E1921758500354453 = {
@@ -955,10 +953,10 @@
 			remoteRef = 9AE871732858A4C100F88364 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AE871762858A4C100F88364 /* libios_experience_tranquillum.dylib */ = {
+		9AE871762858A4C100F88364 /* libios_experience_tranquillum.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_experience_tranquillum.dylib;
+			path = libios_experience_tranquillum.a;
 			remoteRef = 9AE871752858A4C100F88364 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1054,26 +1052,24 @@
 			remoteRef = 9AE871B32858A4C400F88364 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AE871BB2858A4C400F88364 /* lib.dylib */ = {
+		9AE871BB2858A4C400F88364 /* libdatabase_sqlite3.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			name = lib.dylib;
 			path = libdatabase_sqlite3.dylib;
 			remoteRef = 9AE871BA2858A4C400F88364 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AE871BD2858A4C400F88364 /* lib.a */ = {
+		9AE871BD2858A4C400F88364 /* libios_database_sqlite3.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			name = lib.a;
 			path = libios_database_sqlite3.a;
 			remoteRef = 9AE871BC2858A4C400F88364 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AE8780B2858AEB600F88364 /* libios_app_complex_form.dylib */ = {
+		9AE8780B2858AEB600F88364 /* libios_app_complex_form.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libios_app_complex_form.dylib;
+			path = libios_app_complex_form.a;
 			remoteRef = 9AE8780A2858AEB600F88364 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
