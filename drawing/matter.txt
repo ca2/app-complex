@@ -1,3 +1,2 @@
 app/main
-app-simple/drawing
 app-complex/drawing
