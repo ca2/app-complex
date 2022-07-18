@@ -1,4 +1,7 @@
 #include "framework.h"
+#if !BROAD_PRECOMPILED_HEADER
+#include "_app_complex_form.h"
+#endif
 #include "base/user/user/tab_pane.h"
 #include "aura/update.h"
 
