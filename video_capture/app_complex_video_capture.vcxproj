@@ -521,7 +521,7 @@
     <ClInclude Include="top_view.h" />
     <ClInclude Include="impact.h" />
     <ClInclude Include="_.h" />
-    <ClInclude Include="_app_complex_video_capture.h" />
+    <ClInclude Include="_library.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\source\app\aura\aura.vcxproj">

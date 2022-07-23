@@ -940,6 +940,7 @@
     <ClCompile Include="_factory.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\drawing\_library.h" />
     <ClInclude Include="form.h" />
     <ClInclude Include="form_001.h" />
     <ClInclude Include="form_002.h" />
@@ -952,6 +953,7 @@
     <ClInclude Include="pane_impact.h" />
     <ClInclude Include="_.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="_old.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\..\operating-system\operating-system-windows\version.rc" />

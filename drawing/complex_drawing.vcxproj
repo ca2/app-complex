@@ -936,7 +936,7 @@
     <ClInclude Include="_.h" />
     <ClInclude Include="pane_impact.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="_drawing.h" />
+    <ClInclude Include="_library.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\..\operating-system\operating-system-windows\version.rc" />
