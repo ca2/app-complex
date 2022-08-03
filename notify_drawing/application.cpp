@@ -49,7 +49,7 @@ namespace notify_drawing
                                "main",
                                __type(simple_drawing::document),
                                __type(main_frame),
-                               __type(simple_drawing::tab_view)));
+                               __type(simple_drawing::tab_impact)));
       m_ptemplateNotifyDrawingMain = pdoctemplate;
       add_document_template(pdoctemplate);
 
@@ -124,7 +124,7 @@ namespace notify_drawing
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->payload("document").cast < simple_drawing::document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->prodevian_prepare_window_maximize();
+         pcreate->payload("document").cast < simple_drawing::document >()->get_type_impact < ::user::tab_impact >()->top_level_frame()->prodevian_prepare_window_maximize();
 
       }
 

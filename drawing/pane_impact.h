@@ -6,7 +6,7 @@ namespace app_complex_drawing
 
 
    class CLASS_DECL_APP_COMPLEX_DRAWING pane_impact :
-      virtual public application_pane_tab_view < application, ::userex::pane_tab_impact, ::app_simple_drawing::tab_view >
+      virtual public application_pane_tab_impact < application, ::userex::pane_tab_impact, ::app_simple_drawing::tab_impact >
    {
    public:
 
