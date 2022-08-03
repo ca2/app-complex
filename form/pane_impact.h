@@ -6,7 +6,7 @@ namespace app_complex_form
 
 
    class CLASS_DECL_APP_COMPLEX_FORM pane_impact :
-      virtual public application_pane_tab_view < application, ::userex::pane_tab_impact, ::app_simple_form::tab_view >
+      virtual public application_pane_tab_impact < application, ::userex::pane_tab_impact, ::app_simple_form::tab_impact >
    {
    public:
 

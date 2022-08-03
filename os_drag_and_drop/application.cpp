@@ -40,7 +40,7 @@ namespace simple_os_drag_and_drop
       add_factory_item <::user::button_view >();
       add_factory_item <::simple_os_drag_and_drop::impact >();
       add_factory_item <::simple_os_drag_and_drop::main_impact >();
-      add_factory_item <::simple_os_drag_and_drop::tab_view >();
+      add_factory_item <::simple_os_drag_and_drop::tab_impact >();
 
       if (!::aura::application::init_instance())
       {
@@ -55,7 +55,7 @@ namespace simple_os_drag_and_drop
                                "main",
                                __type(document),
                                __type(main_frame),
-                               __type(tab_view)));
+                               __type(tab_impact)));
 
       m_ptemplateSimpleDrawingMain = pdoctemplate;
       add_document_template(pdoctemplate);
@@ -148,7 +148,7 @@ namespace simple_os_drag_and_drop
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->payload("document").cast < document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->prodevian_prepare_window_maximize();
+         pcreate->payload("document").cast < document >()->get_type_impact < ::user::tab_impact >()->top_level_frame()->prodevian_prepare_window_maximize();
 
       }
 
