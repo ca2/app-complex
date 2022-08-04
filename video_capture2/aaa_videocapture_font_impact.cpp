@@ -5,10 +5,10 @@ namespace video_capture
 {
 
 
-   font_view::font_view(::object * pobject):
+   font_impact::font_impact(::object * pobject):
       object(pobject),
       ::user::split_layout(pobject),
-      ::user::split_view(pobject),
+      ::user::split_impact(pobject),
       place_holder_container(pobject)
    {
 
@@ -19,35 +19,35 @@ namespace video_capture
    }
 
 
-   font_view::~font_view()
+   font_impact::~font_impact()
    {
 
    }
 
 
-   void font_view::assert_ok() const
+   void font_impact::assert_ok() const
    {
 
-      ::user::split_view::assert_ok();
+      ::user::split_impact::assert_ok();
 
    }
 
 
-   void font_view::dump(dump_context & dumpcontext) const
+   void font_impact::dump(dump_context & dumpcontext) const
    {
 
-      ::user::split_view::dump(dumpcontext);
+      ::user::split_impact::dump(dumpcontext);
 
    }
 
 
-   void font_view::handle(::topic * ptopic, ::context * pcontext)
+   void font_impact::handle(::topic * ptopic, ::context * pcontext)
    {
-      ::user::split_view::handle(ptopic, pcontext);
+      ::user::split_impact::handle(ptopic, pcontext);
    }
 
 
-   void font_view::on_create_split_impact()
+   void font_impact::on_create_split_impact()
    {
 
       if(get_pane_count() > 0)
@@ -61,7 +61,7 @@ namespace video_capture
 
       initialize_split_layout();
 
-      m_ptopview = create_view < top_view >(nullptr, get_pane_holder(0),"top_view");
+      m_ptopview = create_view < top_impact >(nullptr, get_pane_holder(0),"top_impact");
 
       if(m_ptopview == nullptr)
       {
@@ -72,7 +72,7 @@ namespace video_capture
 
       //SetPane(0,m_ptopview,false);
 
-      m_pimpact = create_view < ::user::font_list_view >(nullptr, get_pane_holder(1),"font_list_view");
+      m_pimpact = create_view < ::user::font_list_impact >(nullptr, get_pane_holder(1),"font_list_impact");
 
       if(m_pimpact == nullptr)
       {
@@ -85,7 +85,7 @@ namespace video_capture
    }
 
 
-   void font_view::handle(::topic * ptopic, ::context * pcontext)
+   void font_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
       if(ptopic->m_atom == ::id_click)

@@ -13,7 +13,7 @@ namespace simple_os_drag_and_drop
    public:
 
 
-      ::user::split_view *                            m_ptopviewLast;
+      ::user::split_impact *                            m_ptopviewLast;
       impact *                                          m_pviewTopic;
       string                                          m_strTopicTitle;
 

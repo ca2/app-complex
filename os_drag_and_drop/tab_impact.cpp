@@ -99,7 +99,7 @@ namespace simple_os_drag_and_drop
       if (get_view_id() == MENU_IMPACT)
       {
 
-         //__pointer(::user::menu_list_view) pmenuview = get_view_uie();
+         //__pointer(::user::menu_list_impact) pmenuview = get_view_uie();
 
          //pmenuview->destroy_menu();
 
@@ -136,7 +136,7 @@ namespace simple_os_drag_and_drop
       //else if (get_view_id() == FONTSEL_IMPACT)
       //{
 
-      //   __pointer(::user::font_list_view) pfontview = ptabpaneFontSel->m_pplaceholder->get_child_by_id("font_list_view");
+      //   __pointer(::user::font_list_impact) pfontview = ptabpaneFontSel->m_pplaceholder->get_child_by_id("font_list_impact");
 
       //   if (m_pviewTopic != nullptr && pfontview.is_set())
       //   {
@@ -165,7 +165,7 @@ namespace simple_os_drag_and_drop
       case MENU_IMPACT:
       {
 
-         ::user::impact::create_view < ::user::menu_list_view >(pimpactdata);
+         ::user::impact::create_view < ::user::menu_list_impact >(pimpactdata);
 
       }
       break;

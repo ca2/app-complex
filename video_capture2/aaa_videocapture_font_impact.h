@@ -5,18 +5,18 @@ namespace video_capture
 {
 
 
-   class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE font_view:
-      virtual public ::user::split_view
+   class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE font_impact:
+      virtual public ::user::split_impact
    {
    public:
 
 
-      top_view *                    m_ptopview;
-      ::user::font_list_view *      m_pimpact;
+      top_impact *                    m_ptopview;
+      ::user::font_list_impact *      m_pimpact;
 
 
-      font_view(::object * pobject);
-      virtual ~font_view();
+      font_impact(::object * pobject);
+      virtual ~font_impact();
 
 
       void assert_ok() const override;

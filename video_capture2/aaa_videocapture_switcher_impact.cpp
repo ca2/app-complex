@@ -24,7 +24,7 @@ namespace video_capture
    void switcher_view::assert_ok() const
    {
 
-      ::user::split_view::assert_ok();
+      ::user::split_impact::assert_ok();
 
    }
 
@@ -32,14 +32,14 @@ namespace video_capture
    void switcher_view::dump(dump_context & dumpcontext) const
    {
 
-      ::user::split_view::dump(dumpcontext);
+      ::user::split_impact::dump(dumpcontext);
 
    }
 
 
    void switcher_view::handle(::topic * ptopic, ::context * pcontext)
    {
-      ::user::split_view::handle(ptopic, pcontext);
+      ::user::split_impact::handle(ptopic, pcontext);
    }
 
 
@@ -57,7 +57,7 @@ namespace video_capture
 
       initialize_split_layout();
 
-      m_ptopview = create_view < top_view >(nullptr, get_pane_holder(0),"top_view");
+      m_ptopview = create_view < top_impact >(nullptr, get_pane_holder(0),"top_impact");
 
       if(m_ptopview == nullptr)
       {

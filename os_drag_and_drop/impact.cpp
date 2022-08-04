@@ -101,13 +101,13 @@ namespace simple_os_drag_and_drop
 
       string strText;
 
-      if(GetTypedParent<::user::split_view>() != nullptr)
+      if(GetTypedParent<::user::split_impact>() != nullptr)
       {
 
-         if(GetTypedParent<::user::split_view>()->get_child_by_id("top_edit_view") != nullptr)
+         if(GetTypedParent<::user::split_impact>()->get_child_by_id("top_edit_impact") != nullptr)
          {
 
-            auto pinteraction = GetTypedParent<::user::split_view>()->get_child_by_id("top_edit_view");
+            auto pinteraction = GetTypedParent<::user::split_impact>()->get_child_by_id("top_edit_impact");
 
             pinteraction->_001SetText(strText,::e_source_initialize);
 

@@ -5,7 +5,7 @@ namespace app_complex_video_capture
 {
 
 
-   toggle_view::toggle_view()
+   toggle_impact::toggle_impact()
    {
 
       m_ptopview = nullptr;
@@ -13,13 +13,13 @@ namespace app_complex_video_capture
    }
 
 
-   toggle_view::~toggle_view()
+   toggle_impact::~toggle_impact()
    {
 
 
    }
 
-   void toggle_view::install_message_routing(::channel * pchannel)
+   void toggle_impact::install_message_routing(::channel * pchannel)
    {
 
       ::user::impact::install_message_routing(pchannel);
@@ -28,7 +28,7 @@ namespace app_complex_video_capture
    }
 
 
-   void toggle_view::handle(::topic * ptopic, ::context * pcontext)
+   void toggle_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
       ::user::impact::handle(ptopic, pcontext);
@@ -36,7 +36,7 @@ namespace app_complex_video_capture
    }
 
 
-   bool toggle_view::keyboard_focus_is_focusable()
+   bool toggle_impact::keyboard_focus_is_focusable()
    {
 
       return ::user::button::keyboard_focus_is_focusable() ;

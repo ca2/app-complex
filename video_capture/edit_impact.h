@@ -5,17 +5,17 @@ namespace app_complex_video_capture
 {
 
 
-   class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE edit_view:
+   class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE edit_impact:
       virtual public ::user::show < ::user::plain_edit >
    {
    public:
 
 
-      top_view * m_ptopview;
+      top_impact * m_ptopview;
 
 
-      edit_view();
-      virtual ~edit_view();
+      edit_impact();
+      virtual ~edit_impact();
 
       virtual void _001OnAfterChangeText(const ::action_context & action_context);
 

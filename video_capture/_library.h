@@ -16,9 +16,9 @@ namespace user
 
 #include "document.h"
 #include "device_selector.h"
-#include "edit_view.h"
-#include "toggle_view.h"
-#include "top_view.h"
+#include "edit_impact.h"
+#include "toggle_impact.h"
+#include "top_impact.h"
 #include "impact.h"
 #include "main_impact.h"
 #include "frame.h"

@@ -5,28 +5,28 @@ namespace app_complex_video_capture
 {
 
 
-   edit_view::edit_view()
+   edit_impact::edit_impact()
    {
 
       m_ptopview = nullptr;
 
    }
 
-   edit_view::~edit_view()
+   edit_impact::~edit_impact()
    {
 
    }
-   void edit_view::install_message_routing(::channel * pchannel)
+   void edit_impact::install_message_routing(::channel * pchannel)
    {
 
       ::user::show < ::user::plain_edit >::install_message_routing(pchannel);
 
-      MESSAGE_LINK(e_message_create,pchannel,this,&edit_view::on_message_create);
+      MESSAGE_LINK(e_message_create,pchannel,this,&edit_impact::on_message_create);
 
    }
 
 
-   void edit_view::on_message_create(::message::message * pmessage)
+   void edit_impact::on_message_create(::message::message * pmessage)
    {
       __pointer(::message::create) pcreate(pmessage);
 
@@ -36,17 +36,17 @@ namespace app_complex_video_capture
          return;
 
 
-      m_ptopview = GetTypedParent < top_view >();
+      m_ptopview = GetTypedParent < top_impact >();
    }
 
 
-   void edit_view::handle(::topic * ptopic, ::context * pcontext)
+   void edit_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
    }
 
 
-   void edit_view::_001OnAfterChangeText(const ::action_context & context)
+   void edit_impact::_001OnAfterChangeText(const ::action_context & context)
    {
 
       if (context.is(::e_source_sync))
@@ -67,14 +67,14 @@ namespace app_complex_video_capture
 
       _001GetText(strText);
 
-      impact_base * pimpact = dynamic_cast < impact_base * > (m_ptopview->GetTypedParent<::user::split_view>()->get_child_by_id("videocapture_view"));
+      impact_base * pimpact = dynamic_cast < impact_base * > (m_ptopview->GetTypedParent<::user::split_impact>()->get_child_by_id("videocapture_view"));
 
 
 
    }
 
 
-   bool edit_view::keyboard_focus_is_focusable()
+   bool edit_impact::keyboard_focus_is_focusable()
    {
 
       return is_window_enabled() && is_window_visible();
