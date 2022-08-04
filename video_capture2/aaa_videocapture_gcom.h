@@ -7,7 +7,7 @@ namespace video_capture
 
    class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE gcom :
       virtual public impact_base,
-      virtual public ::backview::user_interaction
+      virtual public ::backimpact::user_interaction
    {
    public:
 

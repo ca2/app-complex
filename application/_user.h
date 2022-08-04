@@ -2,7 +2,7 @@
 
 
 #include "app-simple/application/_.h"
-#include "core/user/simple/_simple.h"
+#include "core/user/simple/_component.h"
 
 
 namespace user

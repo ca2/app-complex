@@ -235,10 +235,10 @@
 		<Unit filename="/home/camilo/solution/stage/source/app-complex/video_capture/document.h">
 			<Option target="app_complex_video_capture"/>
 		</Unit>
-		<Unit filename="/home/camilo/solution/stage/source/app-complex/video_capture/edit_view.cpp">
+		<Unit filename="/home/camilo/solution/stage/source/app-complex/video_capture/edit_impact.cpp">
 			<Option target="app_complex_video_capture"/>
 		</Unit>
-		<Unit filename="/home/camilo/solution/stage/source/app-complex/video_capture/edit_view.h">
+		<Unit filename="/home/camilo/solution/stage/source/app-complex/video_capture/edit_impact.h">
 			<Option target="app_complex_video_capture"/>
 		</Unit>
 		<Unit filename="/home/camilo/solution/stage/source/app-complex/video_capture/frame.cpp">
@@ -277,16 +277,16 @@
 		<Unit filename="/home/camilo/solution/stage/source/app-complex/video_capture/pane_impact.h">
 			<Option target="app_complex_video_capture"/>
 		</Unit>
-		<Unit filename="/home/camilo/solution/stage/source/app-complex/video_capture/toggle_view.cpp">
+		<Unit filename="/home/camilo/solution/stage/source/app-complex/video_capture/toggle_impact.cpp">
 			<Option target="app_complex_video_capture"/>
 		</Unit>
-		<Unit filename="/home/camilo/solution/stage/source/app-complex/video_capture/toggle_view.h">
+		<Unit filename="/home/camilo/solution/stage/source/app-complex/video_capture/toggle_impact.h">
 			<Option target="app_complex_video_capture"/>
 		</Unit>
-		<Unit filename="/home/camilo/solution/stage/source/app-complex/video_capture/top_view.cpp">
+		<Unit filename="/home/camilo/solution/stage/source/app-complex/video_capture/top_impact.cpp">
 			<Option target="app_complex_video_capture"/>
 		</Unit>
-		<Unit filename="/home/camilo/solution/stage/source/app-complex/video_capture/top_view.h">
+		<Unit filename="/home/camilo/solution/stage/source/app-complex/video_capture/top_impact.h">
 			<Option target="app_complex_video_capture"/>
 		</Unit>
 		<Unit filename="/home/camilo/solution/stage/CMakeLists.txt">
