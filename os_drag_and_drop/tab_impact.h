@@ -5,15 +5,15 @@ namespace simple_os_drag_and_drop
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_OS_DRAG_AND_DROP tab_view :
-      virtual public ::user::tab_view,
+   class CLASS_DECL_APP_SIMPLE_OS_DRAG_AND_DROP tab_impact :
+      virtual public ::user::tab_impact,
       virtual public ::user::form_callback,
       virtual public __application_consumer
    {
    public:
 
 
-      ::user::split_view *                            m_ptopviewLast;
+      ::user::split_impact *                            m_ptopviewLast;
       impact *                                          m_pviewTopic;
       string                                          m_strTopicTitle;
 
@@ -21,8 +21,8 @@ namespace simple_os_drag_and_drop
       __pointer(::user::document)                     m_pdocMenu;
 
 
-      tab_view();
-      virtual ~tab_view();
+      tab_impact();
+      virtual ~tab_impact();
 
 
       void on_create_impact(::user::impact_data * pimpactdata) override;

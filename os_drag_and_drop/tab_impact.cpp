@@ -6,7 +6,7 @@ namespace simple_os_drag_and_drop
 {
 
 
-   tab_view::tab_view()
+   tab_impact::tab_impact()
    {
 
       m_pviewTopic = nullptr;
@@ -14,13 +14,13 @@ namespace simple_os_drag_and_drop
    }
 
 
-   tab_view::~tab_view()
+   tab_impact::~tab_impact()
    {
 
    }
 
 
-   void tab_view::assert_ok() const
+   void tab_impact::assert_ok() const
    {
 
       ::user::impact::assert_ok();
@@ -28,7 +28,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void tab_view::dump(dump_context & dumpcontext) const
+   void tab_impact::dump(dump_context & dumpcontext) const
    {
 
       ::user::impact::dump(dumpcontext);
@@ -36,19 +36,19 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void tab_view::install_message_routing(::channel * pchannel)
+   void tab_impact::install_message_routing(::channel * pchannel)
    {
 
       //::userex::pane_tab_impact::install_message_routing(pchannel);
 
-      ::user::tab_view::install_message_routing(pchannel);
+      ::user::tab_impact::install_message_routing(pchannel);
 
-      MESSAGE_LINK(e_message_create, pchannel, this, &tab_view::on_message_create);
+      MESSAGE_LINK(e_message_create, pchannel, this, &tab_impact::on_message_create);
 
    }
 
 
-   void tab_view::on_message_create(::message::message * pmessage)
+   void tab_impact::on_message_create(::message::message * pmessage)
    {
 
       if(pmessage->previous())
@@ -68,29 +68,29 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void tab_view::_001OnNcDraw(::draw2d::graphics_pointer & pgraphics)
+   void tab_impact::_001OnNcDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
       //::userex::pane_tab_impact::_001OnNcDraw(pgraphics);
-      ::user::tab_view::_001OnNcDraw(pgraphics);
+      ::user::tab_impact::_001OnNcDraw(pgraphics);
 
    }
 
 
-   void tab_view::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void tab_impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
       //::userex::pane_tab_impact::_001OnDraw(pgraphics);
-      ::user::tab_view::_001OnDraw(pgraphics);
+      ::user::tab_impact::_001OnDraw(pgraphics);
 
    }
 
 
-   void tab_view::on_change_cur_sel()
+   void tab_impact::on_change_cur_sel()
    {
 
       //::userex::pane_tab_impact::on_change_cur_sel();
-      ::user::tab_view::on_change_cur_sel();
+      ::user::tab_impact::on_change_cur_sel();
       string strId = get_view_id();
       string_array stra;
 
@@ -99,7 +99,7 @@ namespace simple_os_drag_and_drop
       if (get_view_id() == MENU_IMPACT)
       {
 
-         //__pointer(::user::menu_list_view) pmenuview = get_view_uie();
+         //__pointer(::user::menu_list_impact) pmenuview = get_view_uie();
 
          //pmenuview->destroy_menu();
 
@@ -136,7 +136,7 @@ namespace simple_os_drag_and_drop
       //else if (get_view_id() == FONTSEL_IMPACT)
       //{
 
-      //   __pointer(::user::font_list_view) pfontview = ptabpaneFontSel->m_pplaceholder->get_child_by_id("font_list_view");
+      //   __pointer(::user::font_list_impact) pfontview = ptabpaneFontSel->m_pplaceholder->get_child_by_id("font_list_impact");
 
       //   if (m_pviewTopic != nullptr && pfontview.is_set())
       //   {
@@ -150,7 +150,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void tab_view::on_create_impact(::user::impact_data * pimpactdata)
+   void tab_impact::on_create_impact(::user::impact_data * pimpactdata)
    {
 
       if (papp->has_property("notabs"))
@@ -165,7 +165,7 @@ namespace simple_os_drag_and_drop
       case MENU_IMPACT:
       {
 
-         ::user::impact::create_view < ::user::menu_list_view >(pimpactdata);
+         ::user::impact::create_view < ::user::menu_list_impact >(pimpactdata);
 
       }
       break;
@@ -187,12 +187,12 @@ namespace simple_os_drag_and_drop
       pimpactdata->m_eflag.add(::user::e_flag_hidid_on_show);
 
       //::userex::pane_tab_impact::on_create_impact(pimpactdata);
-      ::user::tab_view::on_create_impact(pimpactdata);
+      ::user::tab_impact::on_create_impact(pimpactdata);
 
    }
 
 
-   bool tab_view::BaseOnControlEvent(::user::form_window * pimpact,::user::control_event * pevent)
+   bool tab_impact::BaseOnControlEvent(::user::form_window * pimpact,::user::control_event * pevent)
    {
 
       if(m_pdocMenu != nullptr && dynamic_cast < ::user::impact * > (pimpact) == m_pdocMenu->get_view(0) && ptopic->user_interaction() != nullptr)
@@ -232,7 +232,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void tab_view::handle(::topic * ptopic, ::context * pcontext)
+   void tab_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
       ////__update(::update)
@@ -261,7 +261,7 @@ namespace simple_os_drag_and_drop
       //}
 
 //      ::userex::pane_tab_impact::handle(ptopic, pcontext);
-      ::user::tab_view::handle(ptopic, pcontext);
+      ::user::tab_impact::handle(ptopic, pcontext);
 
    }
 

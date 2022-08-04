@@ -11,7 +11,7 @@ namespace app_complex_video_capture
    public:
 
 
-      ::user::split_view *                            m_ptopviewLast;
+      ::user::split_impact *                            m_ptopviewLast;
       impact_base *                                   m_pimpactLast;
 
       __pointer(::user::document)                     m_pdocMenu;

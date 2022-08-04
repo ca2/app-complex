@@ -5,18 +5,18 @@ namespace app_complex_video_capture
 {
 
 
-   class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE toggle_view:
+   class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE toggle_impact:
       virtual public ::user::impact,
       virtual public ::user::button
    {
    public:
 
 
-      top_view *           m_ptopview;
+      top_impact *           m_ptopview;
 
 
-      toggle_view();
-      virtual ~toggle_view();
+      toggle_impact();
+      virtual ~toggle_impact();
 
 
       void install_message_routing(::channel * pchannel) override;

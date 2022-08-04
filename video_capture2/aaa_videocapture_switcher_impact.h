@@ -6,12 +6,12 @@ namespace video_capture
 
 
    class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE switcher_view:
-      virtual public ::user::split_view
+      virtual public ::user::split_impact
    {
    public:
 
 
-      top_view *              m_ptopview;
+      top_impact *              m_ptopview;
       impact *                  m_pimpact;
 
 

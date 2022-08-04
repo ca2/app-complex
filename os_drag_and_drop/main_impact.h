@@ -6,12 +6,12 @@ namespace simple_os_drag_and_drop
 
 
    class CLASS_DECL_APP_SIMPLE_OS_DRAG_AND_DROP main_impact:
-      virtual public ::user::split_view
+      virtual public ::user::split_impact
    {
    public:
 
 
-      // ::userex::top_view* m_ptopview;
+      // ::userex::top_impact* m_ptopview;
       impact *                  m_pimpact;
 
 

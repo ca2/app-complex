@@ -5,42 +5,42 @@ namespace app_complex_video_capture
 {
 
 
-   top_view::top_view()
+   top_impact::top_impact()
    {
       m_peditview = nullptr;
       m_ptoggleview = nullptr;
    }
 
 
-   top_view::~top_view()
+   top_impact::~top_impact()
    {
 
    }
 
 
-   void top_view::assert_ok() const
+   void top_impact::assert_ok() const
    {
 
-      ::user::split_view::assert_ok();
+      ::user::split_impact::assert_ok();
 
    }
 
 
-   void top_view::dump(dump_context & dumpcontext) const
+   void top_impact::dump(dump_context & dumpcontext) const
    {
 
-      ::user::split_view::dump(dumpcontext);
+      ::user::split_impact::dump(dumpcontext);
 
    }
 
 
-   void top_view::handle(::topic * ptopic, ::context * pcontext)
+   void top_impact::handle(::topic * ptopic, ::context * pcontext)
    {
-      ::user::split_view::handle(ptopic, pcontext);
+      ::user::split_impact::handle(ptopic, pcontext);
    }
 
 
-   void top_view::on_create_split_impact()
+   void top_impact::on_create_split_impact()
    {
 
       if(get_pane_count() > 0)
@@ -54,7 +54,7 @@ namespace app_complex_video_capture
 
       initialize_split_layout();
 
-      m_peditview = create_view < edit_view >(nullptr, get_pane_holder(0),"top_edit_view");
+      m_peditview = create_view < edit_impact >(nullptr, get_pane_holder(0),"top_edit_impact");
 
       if(m_peditview == nullptr)
       {
@@ -65,7 +65,7 @@ namespace app_complex_video_capture
 
       m_peditview->m_ptopview = this;
 
-      m_ptoggleview = create_view < toggle_view >(nullptr, get_pane_holder(1),"top_toggle_view");
+      m_ptoggleview = create_view < toggle_impact >(nullptr, get_pane_holder(1),"top_toggle_impact");
 
       if(m_ptoggleview == nullptr)
       {
