@@ -7,7 +7,7 @@
     <ClCompile Include=".\videocapture_document.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="videocapture_edit_view.cpp">
+    <ClCompile Include="videocapture_edit_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include=".\videocapture_frame.cpp">
@@ -16,25 +16,25 @@
     <ClCompile Include="videocapture_main_frame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="videocapture_main_view.cpp">
+    <ClCompile Include="videocapture_main_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include=".\videocapture_pane_view.cpp">
+    <ClCompile Include=".\videocapture_pane_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="videocapture_render.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="videocapture_toggle_view.cpp">
+    <ClCompile Include="videocapture_toggle_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="videocapture_top_view.cpp">
+    <ClCompile Include="videocapture_top_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include=".\videocapture_view.cpp">
+    <ClCompile Include=".\videocapture_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="videocapture_view_base.cpp">
+    <ClCompile Include="videocapture_impact_base.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="_.cpp">
@@ -135,16 +135,16 @@
     <ClInclude Include="media-io\video-frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="videocapture_view_base.h">
+    <ClInclude Include="videocapture_impact_base.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="videocapture_view.h">
+    <ClInclude Include="videocapture_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="videocapture_top_view.h">
+    <ClInclude Include="videocapture_top_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="videocapture_toggle_view.h">
+    <ClInclude Include="videocapture_toggle_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="videocapture_render.h">
@@ -165,7 +165,7 @@
     <ClInclude Include="videocapture_document.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="videocapture_edit_view.h">
+    <ClInclude Include="videocapture_edit_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="videocapture_frame.h">
@@ -174,10 +174,10 @@
     <ClInclude Include="videocapture_main_frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="videocapture_main_view.h">
+    <ClInclude Include="videocapture_main_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="videocapture_pane_view.h">
+    <ClInclude Include="videocapture_pane_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="_app_complex_video_capture.h">

@@ -10,37 +10,37 @@
     <ClCompile Include="simple_form_document.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="simple_form_edit_view.cpp">
+    <ClCompile Include="simple_form_edit_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="simple_form_frame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="simple_form_full_view.cpp">
+    <ClCompile Include="simple_form_full_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="simple_form_lite_view.cpp">
+    <ClCompile Include="simple_form_lite_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="simple_form_main_view.cpp">
+    <ClCompile Include="simple_form_main_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="simple_form_pane_view.cpp">
+    <ClCompile Include="simple_form_pane_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="aaa_want_to_remove_simple_form_view_update_hint.cpp">
+    <ClCompile Include="aaa_want_to_remove_simple_form_impact_update_hint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="simple_form_switcher_view.cpp">
+    <ClCompile Include="simple_form_switcher_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="simple_form_toggle_view.cpp">
+    <ClCompile Include="simple_form_toggle_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="simple_form_top_view.cpp">
+    <ClCompile Include="simple_form_top_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="simple_form_view.cpp">
+    <ClCompile Include="simple_form_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -65,37 +65,37 @@
     <ClInclude Include="simple_form_document.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="simple_form_edit_view.h">
+    <ClInclude Include="simple_form_edit_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="simple_form_frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="simple_form_full_view.h">
+    <ClInclude Include="simple_form_full_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="simple_form_lite_view.h">
+    <ClInclude Include="simple_form_lite_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="simple_form_main_view.h">
+    <ClInclude Include="simple_form_main_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="simple_form_pane_view.h">
+    <ClInclude Include="simple_form_pane_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="aaa_want_to_remove_simple_form_view_update_hint.h">
+    <ClInclude Include="aaa_want_to_remove_simple_form_impact_update_hint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="simple_form_switcher_view.h">
+    <ClInclude Include="simple_form_switcher_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="simple_form_toggle_view.h">
+    <ClInclude Include="simple_form_toggle_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="simple_form_top_view.h">
+    <ClInclude Include="simple_form_top_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="simple_form_view.h">
+    <ClInclude Include="simple_form_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

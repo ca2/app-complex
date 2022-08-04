@@ -57,9 +57,9 @@ namespace app_complex_video_capture
 
          iPane = 0;
 
-      //m_pimpact = create_view < lite_view >();
+      //m_pimpact = create_impact < lite_impact >();
 
-      m_pimpact = create_view < app_complex_video_capture::impact >(nullptr, get_pane_holder(iPane), "videocapture_view");
+      m_pimpact = create_impact < app_complex_video_capture::impact >(nullptr, get_pane_holder(iPane), "videocapture_impact");
 
       if(m_pimpact == nullptr)
       {

@@ -62,12 +62,12 @@ namespace app_complex_form
 
       set_local_data();
 
-      //puser->will_use_view_hint(FONTSEL_IMPACT);
+      //puser->will_use_impact_hint(FONTSEL_IMPACT);
 
       ::factory::add_factory_item <::app_complex_form::document >();
       ::factory::add_factory_item <::app_complex_form::frame >();
       ::factory::add_factory_item <::app_complex_form::main_frame >();
-      ::factory::add_factory_item <::user::button_view >();
+      ::factory::add_factory_item <::user::button_impact >();
       ::factory::add_factory_item <::app_complex_form::impact >();
       ::factory::add_factory_item <::app_complex_form::main_impact >();
       ::factory::add_factory_item <::app_complex_form::pane_impact >();

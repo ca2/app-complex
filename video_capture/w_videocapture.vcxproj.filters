@@ -21,43 +21,43 @@
     <ClInclude Include="hellomultiverse_document.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="hellomultiverse_edit_view.h">
+    <ClInclude Include="hellomultiverse_edit_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="hellomultiverse_frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="hellomultiverse_main_view.h">
+    <ClInclude Include="hellomultiverse_main_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="hellomultiverse_pane_view.h">
+    <ClInclude Include="hellomultiverse_pane_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="aaa_want_to_erase_hellomultiverse_view_update_hint.h">
+    <ClInclude Include="aaa_want_to_erase_hellomultiverse_impact_update_hint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="hellomultiverse_switcher_view.h">
+    <ClInclude Include="hellomultiverse_switcher_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="hellomultiverse_toggle_view.h">
+    <ClInclude Include="hellomultiverse_toggle_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="hellomultiverse_top_view.h">
+    <ClInclude Include="hellomultiverse_top_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="hellomultiverse_view.h">
+    <ClInclude Include="hellomultiverse_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="hellomultiverse_render.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="hellomultiverse_font_view.h">
+    <ClInclude Include="hellomultiverse_font_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="hellomultiverse_gcom.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="hellomultiverse_view_base.h">
+    <ClInclude Include="hellomultiverse_impact_base.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="hellomultiverse_main_frame.h">
@@ -77,31 +77,31 @@
     <ClCompile Include="hellomultiverse_document.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hellomultiverse_edit_view.cpp">
+    <ClCompile Include="hellomultiverse_edit_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="hellomultiverse_frame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hellomultiverse_main_view.cpp">
+    <ClCompile Include="hellomultiverse_main_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hellomultiverse_pane_view.cpp">
+    <ClCompile Include="hellomultiverse_pane_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="aaa_want_to_erase_hellomultiverse_view_update_hint.cpp">
+    <ClCompile Include="aaa_want_to_erase_hellomultiverse_impact_update_hint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hellomultiverse_switcher_view.cpp">
+    <ClCompile Include="hellomultiverse_switcher_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hellomultiverse_toggle_view.cpp">
+    <ClCompile Include="hellomultiverse_toggle_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hellomultiverse_top_view.cpp">
+    <ClCompile Include="hellomultiverse_top_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hellomultiverse_view.cpp">
+    <ClCompile Include="hellomultiverse_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="hellomultiverse_render.cpp">
@@ -110,13 +110,13 @@
     <ClCompile Include="user_font_list.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hellomultiverse_font_view.cpp">
+    <ClCompile Include="hellomultiverse_font_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="hellomultiverse_gcom.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hellomultiverse_view_base.cpp">
+    <ClCompile Include="hellomultiverse_impact_base.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="hellomultiverse_main_frame.cpp">

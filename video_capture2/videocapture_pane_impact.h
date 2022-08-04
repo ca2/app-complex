@@ -33,7 +33,7 @@ namespace app_complex_video_capture
       void handle(::topic * ptopic, ::context * pcontext);
       void on_change_cur_sel();
 
-      virtual ::file::path prepare_menu_view();
+      virtual ::file::path prepare_menu_impact();
 
    };
 

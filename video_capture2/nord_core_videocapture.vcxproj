@@ -163,18 +163,18 @@
     <ClInclude Include="hellomultiverse.h" />
     <ClInclude Include="hellomultiverse_application.h" />
     <ClInclude Include="hellomultiverse_document.h" />
-    <ClInclude Include="hellomultiverse_edit_view.h" />
+    <ClInclude Include="hellomultiverse_edit_impact.h" />
     <ClInclude Include="hellomultiverse_frame.h" />
     <ClInclude Include="hellomultiverse_gcom.h" />
-    <ClInclude Include="hellomultiverse_main_view.h" />
-    <ClInclude Include="hellomultiverse_pane_view.h" />
+    <ClInclude Include="hellomultiverse_main_impact.h" />
+    <ClInclude Include="hellomultiverse_pane_impact.h" />
 
     <ClInclude Include="hellomultiverse_render.h" />
-    <ClInclude Include="hellomultiverse_switcher_view.h" />
-    <ClInclude Include="hellomultiverse_toggle_view.h" />
-    <ClInclude Include="hellomultiverse_top_view.h" />
-    <ClInclude Include="hellomultiverse_view.h" />
-    <ClInclude Include="hellomultiverse_view_base.h" />
+    <ClInclude Include="hellomultiverse_switcher_impact.h" />
+    <ClInclude Include="hellomultiverse_toggle_impact.h" />
+    <ClInclude Include="hellomultiverse_top_impact.h" />
+    <ClInclude Include="hellomultiverse_impact.h" />
+    <ClInclude Include="hellomultiverse_impact_base.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

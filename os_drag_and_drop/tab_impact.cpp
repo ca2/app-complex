@@ -91,15 +91,15 @@ namespace simple_os_drag_and_drop
 
       //::userex::pane_tab_impact::on_change_cur_sel();
       ::user::tab_impact::on_change_cur_sel();
-      string strId = get_view_id();
+      string strId = get_impact_id();
       string_array stra;
 
       stra.explode("->:<-",strId);
 
-      if (get_view_id() == MENU_IMPACT)
+      if (get_impact_id() == MENU_IMPACT)
       {
 
-         //__pointer(::user::menu_list_impact) pmenuview = get_view_uie();
+         //__pointer(::user::menu_list_impact) pmenuview = get_impact_uie();
 
          //pmenuview->destroy_menu();
 
@@ -109,7 +109,7 @@ namespace simple_os_drag_and_drop
 
       }
 
-      if(get_view_id() == MAIN_IMPACT)
+      if(get_impact_id() == MAIN_IMPACT)
       {
 
          auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
@@ -133,7 +133,7 @@ namespace simple_os_drag_and_drop
          m_pviewTopic = nullptr;
 
       }
-      //else if (get_view_id() == FONTSEL_IMPACT)
+      //else if (get_impact_id() == FONTSEL_IMPACT)
       //{
 
       //   __pointer(::user::font_list_impact) pfontview = ptabpaneFontSel->m_pplaceholder->get_child_by_id("font_list_impact");
@@ -165,7 +165,7 @@ namespace simple_os_drag_and_drop
       case MENU_IMPACT:
       {
 
-         ::user::impact::create_view < ::user::menu_list_impact >(pimpactdata);
+         ::user::impact::create_impact < ::user::menu_list_impact >(pimpactdata);
 
       }
       break;
@@ -176,7 +176,7 @@ namespace simple_os_drag_and_drop
       if(::str().begins_eat_ci(strId, "drawing"))
       {
 
-         auto pimpact = papp->create_simple_os_drag_and_drop_view(this, pimpactdata);
+         auto pimpact = papp->create_simple_os_drag_and_drop_impact(this, pimpactdata);
 
          pimpact->m_atom = pimpactdata->m_atom;
 
@@ -195,7 +195,7 @@ namespace simple_os_drag_and_drop
    bool tab_impact::BaseOnControlEvent(::user::form_window * pimpact,::user::control_event * pevent)
    {
 
-      if(m_pdocMenu != nullptr && dynamic_cast < ::user::impact * > (pimpact) == m_pdocMenu->get_view(0) && ptopic->user_interaction() != nullptr)
+      if(m_pdocMenu != nullptr && dynamic_cast < ::user::impact * > (pimpact) == m_pdocMenu->get_impact(0) && ptopic->user_interaction() != nullptr)
       {
 
          if(ptopic->m_atom == ::id_after_change_text)

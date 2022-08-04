@@ -70,22 +70,22 @@ namespace app_complex_video_capture
 
       ::userex::pane_tab_impact::on_change_cur_sel();
 
-      string strId = get_view_id();
+      string strId = get_impact_id();
 
-      if(get_view_id() == GCOM_IMPACT
-            || get_view_id() == MAIN_IMPACT
-            || get_view_id() == MAIN_SWITCHER_IMPACT)
+      if(get_impact_id() == GCOM_IMPACT
+            || get_impact_id() == MAIN_IMPACT
+            || get_impact_id() == MAIN_SWITCHER_IMPACT)
       {
 
 
 
       }
-      else if (get_view_id() == MENU_IMPACT)
+      else if (get_impact_id() == MENU_IMPACT)
       {
 
          auto ptabpaneMenu = get_current_tab_index();
 
-         ::file::path path = prepare_menu_view();
+         ::file::path path = prepare_menu_impact();
 
          m_pdocMenu->open_document(path);
 
@@ -113,7 +113,7 @@ namespace app_complex_video_capture
          pimpactdata->m_eflag.add(::user::e_flag_hide_on_kill_focus);
 
 
-         //::file::path path = prepare_menu_view();
+         //::file::path path = prepare_menu_impact();
 
          //m_pdocMenu->open_document(path);
 
@@ -176,7 +176,7 @@ namespace app_complex_video_capture
    void pane_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if(m_pdocMenu != nullptr && ptopic->is_about(m_pdocMenu->get_view(0)))
+      if(m_pdocMenu != nullptr && ptopic->is_about(m_pdocMenu->get_impact(0)))
       {
 
          if(ptopic->m_atom == ::id_after_change_text)
@@ -217,7 +217,7 @@ namespace app_complex_video_capture
    }
 
 
-   ::file::path pane_impact::prepare_menu_view()
+   ::file::path pane_impact::prepare_menu_impact()
    {
 
       string str;

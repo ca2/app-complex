@@ -32,7 +32,7 @@ namespace simple_os_drag_and_drop
       virtual int64_t decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 #endif
 
-      virtual __pointer(impact) create_simple_os_drag_and_drop_view(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
+      virtual __pointer(impact) create_simple_os_drag_and_drop_impact(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
 
    };
 

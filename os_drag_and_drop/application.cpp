@@ -32,12 +32,12 @@ namespace simple_os_drag_and_drop
 
       ::aura::session * pcoression = &Session;
 
-      pcoression->will_use_view_hint(FONTSEL_IMPACT);
+      pcoression->will_use_impact_hint(FONTSEL_IMPACT);
 
       add_factory_item <::simple_os_drag_and_drop::document >();
       add_factory_item <::simple_os_drag_and_drop::frame >();
       add_factory_item <::simple_os_drag_and_drop::main_frame >();
-      add_factory_item <::user::button_view >();
+      add_factory_item <::user::button_impact >();
       add_factory_item <::simple_os_drag_and_drop::impact >();
       add_factory_item <::simple_os_drag_and_drop::main_impact >();
       add_factory_item <::simple_os_drag_and_drop::tab_impact >();
@@ -181,10 +181,10 @@ namespace simple_os_drag_and_drop
    }
 
 
-   __pointer(impact) application::create_simple_os_drag_and_drop_view(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
+   __pointer(impact) application::create_simple_os_drag_and_drop_impact(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
    {
 
-      return pimpactParent->create_view < impact >(pimpactdata);
+      return pimpactParent->create_impact < impact >(pimpactdata);
 
    }
 

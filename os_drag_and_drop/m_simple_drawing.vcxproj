@@ -133,17 +133,17 @@
     <ClInclude Include="simple_drag_and_drop.h" />
     <ClInclude Include="simple_drag_and_drop_application.h" />
     <ClInclude Include="simple_drag_and_drop_document.h" />
-    <ClInclude Include="simple_drag_and_drop_edit_view.h" />
+    <ClInclude Include="simple_drag_and_drop_edit_impact.h" />
     <ClInclude Include="simple_drag_and_drop_frame.h" />
-    <ClInclude Include="simple_drag_and_drop_full_view.h" />
-    <ClInclude Include="simple_drag_and_drop_lite_view.h" />
-    <ClInclude Include="simple_drag_and_drop_main_view.h" />
-    <ClInclude Include="simple_drag_and_drop_pane_view.h" />
+    <ClInclude Include="simple_drag_and_drop_full_impact.h" />
+    <ClInclude Include="simple_drag_and_drop_lite_impact.h" />
+    <ClInclude Include="simple_drag_and_drop_main_impact.h" />
+    <ClInclude Include="simple_drag_and_drop_pane_impact.h" />
 
-    <ClInclude Include="simple_drag_and_drop_switcher_view.h" />
-    <ClInclude Include="simple_drag_and_drop_toggle_view.h" />
-    <ClInclude Include="simple_drag_and_drop_top_view.h" />
-    <ClInclude Include="simple_drag_and_drop_view.h" />
+    <ClInclude Include="simple_drag_and_drop_switcher_impact.h" />
+    <ClInclude Include="simple_drag_and_drop_toggle_impact.h" />
+    <ClInclude Include="simple_drag_and_drop_top_impact.h" />
+    <ClInclude Include="simple_drag_and_drop_impact.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="framework.cpp">
@@ -154,17 +154,17 @@
     <ClCompile Include="simple_drag_and_drop.cpp" />
     <ClCompile Include="simple_drag_and_drop_application.cpp" />
     <ClCompile Include="simple_drag_and_drop_document.cpp" />
-    <ClCompile Include="simple_drag_and_drop_edit_view.cpp" />
+    <ClCompile Include="simple_drag_and_drop_edit_impact.cpp" />
     <ClCompile Include="simple_drag_and_drop_frame.cpp" />
-    <ClCompile Include="simple_drag_and_drop_full_view.cpp" />
-    <ClCompile Include="simple_drag_and_drop_lite_view.cpp" />
-    <ClCompile Include="simple_drag_and_drop_main_view.cpp" />
-    <ClCompile Include="simple_drag_and_drop_pane_view.cpp" />
+    <ClCompile Include="simple_drag_and_drop_full_impact.cpp" />
+    <ClCompile Include="simple_drag_and_drop_lite_impact.cpp" />
+    <ClCompile Include="simple_drag_and_drop_main_impact.cpp" />
+    <ClCompile Include="simple_drag_and_drop_pane_impact.cpp" />
 
-    <ClCompile Include="simple_drag_and_drop_switcher_view.cpp" />
-    <ClCompile Include="simple_drag_and_drop_toggle_view.cpp" />
-    <ClCompile Include="simple_drag_and_drop_top_view.cpp" />
-    <ClCompile Include="simple_drag_and_drop_view.cpp" />
+    <ClCompile Include="simple_drag_and_drop_switcher_impact.cpp" />
+    <ClCompile Include="simple_drag_and_drop_toggle_impact.cpp" />
+    <ClCompile Include="simple_drag_and_drop_top_impact.cpp" />
+    <ClCompile Include="simple_drag_and_drop_impact.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\source\app\aura\m_aura.vcxproj">

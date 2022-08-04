@@ -18,19 +18,19 @@
     <ClInclude Include="simple_form_frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="simple_form_main_view.h">
+    <ClInclude Include="simple_form_main_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="simple_form_pane_view.h">
+    <ClInclude Include="simple_form_pane_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="aaa_want_to_remove_simple_form_view_update_hint.h">
+    <ClInclude Include="aaa_want_to_remove_simple_form_impact_update_hint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="simple_form_switcher_view.h">
+    <ClInclude Include="simple_form_switcher_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="simple_form_view.h">
+    <ClInclude Include="simple_form_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="simple_form_render.h">
@@ -39,7 +39,7 @@
     <ClInclude Include="simple_form_gcom.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="simple_form_view_base.h">
+    <ClInclude Include="simple_form_impact_base.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="simple_form_main_frame.h">
@@ -68,19 +68,19 @@
     <ClCompile Include="simple_form_frame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="simple_form_main_view.cpp">
+    <ClCompile Include="simple_form_main_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="simple_form_pane_view.cpp">
+    <ClCompile Include="simple_form_pane_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="aaa_want_to_remove_simple_form_view_update_hint.cpp">
+    <ClCompile Include="aaa_want_to_remove_simple_form_impact_update_hint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="simple_form_switcher_view.cpp">
+    <ClCompile Include="simple_form_switcher_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="simple_form_view.cpp">
+    <ClCompile Include="simple_form_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="simple_form_render.cpp">
@@ -89,7 +89,7 @@
     <ClCompile Include="simple_form_gcom.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="simple_form_view_base.cpp">
+    <ClCompile Include="simple_form_impact_base.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="simple_form_main_frame.cpp">

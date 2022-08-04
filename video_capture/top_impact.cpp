@@ -54,7 +54,7 @@ namespace app_complex_video_capture
 
       initialize_split_layout();
 
-      m_peditview = create_view < edit_impact >(nullptr, get_pane_holder(0),"top_edit_impact");
+      m_peditview = create_impact < edit_impact >(nullptr, get_pane_holder(0),"top_edit_impact");
 
       if(m_peditview == nullptr)
       {
@@ -65,7 +65,7 @@ namespace app_complex_video_capture
 
       m_peditview->m_ptopview = this;
 
-      m_ptoggleview = create_view < toggle_impact >(nullptr, get_pane_holder(1),"top_toggle_impact");
+      m_ptoggleview = create_impact < toggle_impact >(nullptr, get_pane_holder(1),"top_toggle_impact");
 
       if(m_ptoggleview == nullptr)
       {

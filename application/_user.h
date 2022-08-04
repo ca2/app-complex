@@ -9,7 +9,7 @@ namespace user
 {
 
 
-   typedef ::user::show < ::user::button > button_view;
+   typedef ::user::show < ::user::button > button_impact;
 
 } // namespace user
 

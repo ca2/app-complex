@@ -9,7 +9,7 @@
 namespace user
 {
 
-   typedef ::user::show < ::user::button > button_view;
+   typedef ::user::show < ::user::button > button_impact;
 
 } // namespace user
 
@@ -25,17 +25,17 @@ namespace user
 #include "videocapture_edit_impact.h"
 #include "videocapture_toggle_impact.h"
 #include "videocapture_top_impact.h"
-#include "videocapture_view_base.h"
+#include "videocapture_impact_base.h"
 //#include "videocapture_gcom.h"
-#include "videocapture_view.h"
-//#include "videocapture_lite_view.h"
-//#include "videocapture_full_view.h"
-#include "videocapture_main_view.h"
-//#include "videocapture_switcher_view.h"
+#include "videocapture_impact.h"
+//#include "videocapture_lite_impact.h"
+//#include "videocapture_full_impact.h"
+#include "videocapture_main_impact.h"
+//#include "videocapture_switcher_impact.h"
 #include "videocapture_frame.h"
 #include "videocapture_main_frame.h"
 
-#include "videocapture_pane_view.h"
+#include "videocapture_pane_impact.h"
 
 #include "videocapture_application.h"
 

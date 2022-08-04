@@ -678,7 +678,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Android'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='static_basis|Android'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include=".\notify_drawing_pane_view.cpp" />
+    <ClCompile Include=".\notify_drawing_pane_impact.cpp" />
 
     <ClCompile Include="framework.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Android'">Create</PrecompiledHeader>
@@ -688,31 +688,31 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='memdleak|Android'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='profiler|Android'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include=".\notify_drawing_view.cpp" />
-    <ClCompile Include="notify_drawing_edit_view.cpp" />
-    <ClCompile Include="notify_drawing_lite_view.cpp" />
-    <ClCompile Include="notify_drawing_main_view.cpp" />
-    <ClCompile Include="notify_drawing_switcher_view.cpp" />
-    <ClCompile Include="notify_drawing_toggle_view.cpp" />
-    <ClCompile Include="notify_drawing_top_view.cpp" />
-    <ClCompile Include="notify_drawing_full_view.cpp" />
+    <ClCompile Include=".\notify_drawing_impact.cpp" />
+    <ClCompile Include="notify_drawing_edit_impact.cpp" />
+    <ClCompile Include="notify_drawing_lite_impact.cpp" />
+    <ClCompile Include="notify_drawing_main_impact.cpp" />
+    <ClCompile Include="notify_drawing_switcher_impact.cpp" />
+    <ClCompile Include="notify_drawing_toggle_impact.cpp" />
+    <ClCompile Include="notify_drawing_top_impact.cpp" />
+    <ClCompile Include="notify_drawing_full_impact.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="notify_drawing_application.h" />
     <ClInclude Include="notify_drawing_document.h" />
-    <ClInclude Include="notify_drawing_edit_view.h" />
+    <ClInclude Include="notify_drawing_edit_impact.h" />
     <ClInclude Include="notify_drawing_frame.h" />
     <ClInclude Include="notify_drawing.h" />
-    <ClInclude Include="notify_drawing_full_view.h" />
-    <ClInclude Include="notify_drawing_lite_view.h" />
-    <ClInclude Include="notify_drawing_main_view.h" />
-    <ClInclude Include="notify_drawing_pane_view.h" />
+    <ClInclude Include="notify_drawing_full_impact.h" />
+    <ClInclude Include="notify_drawing_lite_impact.h" />
+    <ClInclude Include="notify_drawing_main_impact.h" />
+    <ClInclude Include="notify_drawing_pane_impact.h" />
 
     <ClInclude Include="framework.h" />
-    <ClInclude Include="notify_drawing_switcher_view.h" />
-    <ClInclude Include="notify_drawing_toggle_view.h" />
-    <ClInclude Include="notify_drawing_top_view.h" />
-    <ClInclude Include="notify_drawing_view.h" />
+    <ClInclude Include="notify_drawing_switcher_impact.h" />
+    <ClInclude Include="notify_drawing_toggle_impact.h" />
+    <ClInclude Include="notify_drawing_top_impact.h" />
+    <ClInclude Include="notify_drawing_impact.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".\notify_drawing_notify_drawing.def" />

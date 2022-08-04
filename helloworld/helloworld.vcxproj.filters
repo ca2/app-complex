@@ -25,7 +25,7 @@
     <ClCompile Include="helloworld_frame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="helloworld_view.cpp">
+    <ClCompile Include="helloworld_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -45,7 +45,7 @@
     <ClInclude Include="helloworld_frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="helloworld_view.h">
+    <ClInclude Include="helloworld_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

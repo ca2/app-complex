@@ -5,7 +5,7 @@ namespace video_capture
 {
 
 
-   switcher_view::switcher_view()
+   switcher_impact::switcher_impact()
    {
 
       m_pimpact = nullptr;
@@ -15,13 +15,13 @@ namespace video_capture
    }
 
 
-   switcher_view::~switcher_view()
+   switcher_impact::~switcher_impact()
    {
 
    }
 
 
-   void switcher_view::assert_ok() const
+   void switcher_impact::assert_ok() const
    {
 
       ::user::split_impact::assert_ok();
@@ -29,7 +29,7 @@ namespace video_capture
    }
 
 
-   void switcher_view::dump(dump_context & dumpcontext) const
+   void switcher_impact::dump(dump_context & dumpcontext) const
    {
 
       ::user::split_impact::dump(dumpcontext);
@@ -37,13 +37,13 @@ namespace video_capture
    }
 
 
-   void switcher_view::handle(::topic * ptopic, ::context * pcontext)
+   void switcher_impact::handle(::topic * ptopic, ::context * pcontext)
    {
       ::user::split_impact::handle(ptopic, pcontext);
    }
 
 
-   void switcher_view::on_create_split_impact()
+   void switcher_impact::on_create_split_impact()
    {
 
       if(get_pane_count() > 0)
@@ -57,7 +57,7 @@ namespace video_capture
 
       initialize_split_layout();
 
-      m_ptopview = create_view < top_impact >(nullptr, get_pane_holder(0),"top_impact");
+      m_ptopview = create_impact < top_impact >(nullptr, get_pane_holder(0),"top_impact");
 
       if(m_ptopview == nullptr)
       {
@@ -68,7 +68,7 @@ namespace video_capture
 
       //SetPane(0,m_ptopview,false);
 
-      m_pimpact = create_view < impact >(nullptr, get_pane_holder(1),"videocapture_view");
+      m_pimpact = create_impact < impact >(nullptr, get_pane_holder(1),"videocapture_impact");
 
       m_pimpact->m_prender->m_bAlternate = true;
 
@@ -89,7 +89,7 @@ namespace video_capture
 
 
 
-   void switcher_view::handle(::topic * ptopic, ::context * pcontext)
+   void switcher_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
       if(ptopic->m_atom == ::id_click)

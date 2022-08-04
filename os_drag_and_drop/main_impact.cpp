@@ -63,7 +63,7 @@ namespace simple_os_drag_and_drop
 
       initialize_split_layout();
 
-//      m_ptopview = host_view < ::userex::top_impact >(0, "top_impact");
+//      m_ptopview = host_impact < ::userex::top_impact >(0, "top_impact");
 //
 //      if (m_ptopview == NULL)
 //      {
@@ -76,7 +76,7 @@ namespace simple_os_drag_and_drop
 //
 //      iPane = 1;
 //
-//      m_pimpact = host_view < impact >(iPane, "simple_drag_and_drop_view");
+//      m_pimpact = host_impact < impact >(iPane, "simple_drag_and_drop_impact");
 //
 //      if(m_pimpact == NULL)
 //      {

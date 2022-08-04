@@ -28,7 +28,7 @@
     <ClCompile Include=".\pane_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include=".\aaa_want_to_remove_view_update_hint.cpp">
+    <ClCompile Include=".\aaa_want_to_remove_impact_update_hint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include=".\impact.cpp">
@@ -37,22 +37,22 @@
     <ClCompile Include="main_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="edit_view.cpp">
+    <ClCompile Include="edit_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="toggle_view.cpp">
+    <ClCompile Include="toggle_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="top_view.cpp">
+    <ClCompile Include="top_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="lite_view.cpp">
+    <ClCompile Include="lite_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="full_view.cpp">
+    <ClCompile Include="full_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="switcher_view.cpp">
+    <ClCompile Include="switcher_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -75,7 +75,7 @@
     <ClInclude Include="pane_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="aaa_want_to_remove_view_update_hint.h">
+    <ClInclude Include="aaa_want_to_remove_impact_update_hint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="impact.h">
@@ -84,22 +84,22 @@
     <ClInclude Include="main_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="edit_view.h">
+    <ClInclude Include="edit_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="toggle_view.h">
+    <ClInclude Include="toggle_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="top_view.h">
+    <ClInclude Include="top_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="lite_view.h">
+    <ClInclude Include="lite_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="full_view.h">
+    <ClInclude Include="full_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="switcher_view.h">
+    <ClInclude Include="switcher_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
