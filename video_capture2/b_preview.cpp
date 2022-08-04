@@ -5,13 +5,13 @@
 //-------------------------------------------------------------------
 //  CreateInstance
 //
-//  Static class method to create the CPreview object.
+//  Static class method to create the CThumbnail object.
 //-------------------------------------------------------------------
 
-HRESULT CPreview::CreateInstance(
+HRESULT CThumbnail::CreateInstance(
    HWND hVideo,        // Handle to the video window.
    HWND hEvent,        // Handle to the window to receive notifications.
-   CPreview **ppPlayer // Receives a pointer to the CPreview object.
+   CThumbnail **ppPlayer // Receives a pointer to the CThumbnail object.
 )
 {
    assert(hVideo != nullptr);
@@ -22,7 +22,7 @@ HRESULT CPreview::CreateInstance(
       return E_POINTER;
    }
 
-   CPreview *pPlayer = new  CPreview(hVideo, hEvent);
+   CThumbnail *pPlayer = new  CThumbnail(hVideo, hEvent);
 
    // The CPlayer constructor sets the ref count to 1.
 
@@ -48,7 +48,7 @@ HRESULT CPreview::CreateInstance(
 //  constructor
 //-------------------------------------------------------------------
 
-CPreview::CPreview(HWND hVideo, HWND hEvent) :
+CThumbnail::CThumbnail(HWND hVideo, HWND hEvent) :
    m_pReader(nullptr),
    m_hwndVideo(hVideo),
    m_hwndEvent(hEvent),
@@ -63,7 +63,7 @@ CPreview::CPreview(HWND hVideo, HWND hEvent) :
 //  destructor
 //-------------------------------------------------------------------
 
-CPreview::~CPreview()
+CThumbnail::~CThumbnail()
 {
    CloseDevice();
 
@@ -79,7 +79,7 @@ CPreview::~CPreview()
 //  Initializes the object.
 //-------------------------------------------------------------------
 
-HRESULT CPreview::Initialize()
+HRESULT CThumbnail::Initialize()
 {
    HRESULT hr = S_OK;
 
@@ -95,7 +95,7 @@ HRESULT CPreview::Initialize()
 //  Releases all resources held by this object.
 //-------------------------------------------------------------------
 
-HRESULT CPreview::CloseDevice()
+HRESULT CThumbnail::CloseDevice()
 {
    EnterCriticalSection(&m_critsec);
 
@@ -116,7 +116,7 @@ HRESULT CPreview::CloseDevice()
 //  AddRef
 //-------------------------------------------------------------------
 
-ULONG CPreview::AddRef()
+ULONG CThumbnail::AddRef()
 {
    return InterlockedIncrement(&m_nRefCount);
 }
@@ -126,7 +126,7 @@ ULONG CPreview::AddRef()
 //  Release
 //-------------------------------------------------------------------
 
-ULONG CPreview::Release()
+ULONG CThumbnail::Release()
 {
    ULONG uCount = InterlockedDecrement(&m_nRefCount);
    if (uCount == 0)
@@ -143,11 +143,11 @@ ULONG CPreview::Release()
 //  QueryInterface
 //-------------------------------------------------------------------
 
-HRESULT CPreview::QueryInterface(REFIID riid, void** ppv)
+HRESULT CThumbnail::QueryInterface(REFIID riid, void** ppv)
 {
    static const QITAB qit[] =
    {
-      QITABENT(CPreview, IMFSourceReaderCallback),
+      QITABENT(CThumbnail, IMFSourceReaderCallback),
       { 0 },
    };
    return QISearch(this, qit, riid, ppv);
@@ -162,7 +162,7 @@ HRESULT CPreview::QueryInterface(REFIID riid, void** ppv)
 // Called when the IMFMediaSource::ReadSample method completes.
 //-------------------------------------------------------------------
 
-HRESULT CPreview::OnReadSample(
+HRESULT CThumbnail::OnReadSample(
    HRESULT hrStatus,
    ::u32 /* dwStreamIndex */,
    ::u32 /* dwStreamFlags */,
@@ -227,7 +227,7 @@ HRESULT CPreview::OnReadSample(
 // Test a proposed video format.
 //-------------------------------------------------------------------
 
-HRESULT CPreview::TryMediaType(IMFMediaType *pType)
+HRESULT CThumbnail::TryMediaType(IMFMediaType *pType)
 {
    HRESULT hr = S_OK;
 
@@ -288,10 +288,10 @@ HRESULT CPreview::TryMediaType(IMFMediaType *pType)
 //-------------------------------------------------------------------
 // SetDevice
 //
-// Set up preview for a specified video capture device. 
+// Set up thumbnail for a specified video capture device. 
 //-------------------------------------------------------------------
 
-HRESULT CPreview::SetDevice(IMFActivate *pActivate)
+HRESULT CThumbnail::SetDevice(IMFActivate *pActivate)
 {
    HRESULT hr = S_OK;
 
@@ -426,7 +426,7 @@ HRESULT CPreview::SetDevice(IMFActivate *pActivate)
 //  window changes; e.g., when the application receives e_message_size.
 //-------------------------------------------------------------------
 
-HRESULT CPreview::ResizeVideo(::u16 /*width*/, ::u16 /*height*/)
+HRESULT CThumbnail::ResizeVideo(::u16 /*width*/, ::u16 /*height*/)
 {
    HRESULT hr = S_OK;
 
@@ -454,7 +454,7 @@ HRESULT CPreview::ResizeVideo(::u16 /*width*/, ::u16 /*height*/)
 //  device notification to receive this message.)
 //-------------------------------------------------------------------
 
-HRESULT CPreview::CheckDeviceLost(DEV_BROADCAST_HDR *pHdr, BOOL *pbDeviceLost)
+HRESULT CThumbnail::CheckDeviceLost(DEV_BROADCAST_HDR *pHdr, BOOL *pbDeviceLost)
 {
    DEV_BROADCAST_DEVICEINTERFACE *pDi = nullptr;
 

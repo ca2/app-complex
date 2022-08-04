@@ -10,9 +10,9 @@
 
 
 
-// Implements the window procedure for the video preview window.
+// Implements the window procedure for the video thumbnail window.
 
-namespace PreviewWnd
+namespace ThumbnailWnd
 {
    HBRUSH hBackgroundBrush = 0;
 
@@ -32,7 +32,7 @@ namespace PreviewWnd
       PAINTSTRUCT ps;
       HDC hdc = BeginPaint(hwnd, &ps);
       CaptureManager * p = (CaptureManager *) ::GetWindowLongPtrW(hwnd, GWLP_USERDATA);
-      if (p->IsPreviewing())
+      if (p->IsThumbnailing())
       {
          p->UpdateVideo();
       }
@@ -68,14 +68,14 @@ namespace PreviewWnd
 };
 
 
-HWND CreatePreviewWindow(HINSTANCE hInstance, HWND hParent, CaptureManager * p)
+HWND CreateThumbnailWindow(HINSTANCE hInstance, HWND hParent, CaptureManager * p)
 {
    // Register the window class.
-   const wchar_t CLASS_NAME[] = L"Capture Engine Preview Window Class";
+   const wchar_t CLASS_NAME[] = L"Capture Engine Thumbnail Window Class";
 
    WNDCLASSW wc = {};
 
-   wc.lpfnWndProc = PreviewWnd::WindowProc;
+   wc.lpfnWndProc = ThumbnailWnd::WindowProc;
    wc.hInstance = hInstance;
    wc.lpszClassName = CLASS_NAME;
 

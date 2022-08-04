@@ -2,7 +2,7 @@
 
 const ::u32 WM_APP_PREVIEW_ERROR = WM_APP + 1;    // wparam = HRESULT
 
-class CPreview : public IMFSourceReaderCallback
+class CThumbnail : public IMFSourceReaderCallback
 {
 public:
    DrawDevice              m_draw;             // Manages the Direct3D device.
@@ -10,7 +10,7 @@ public:
    static HRESULT CreateInstance(
       HWND hVideo,
       HWND hEvent,
-      CPreview **ppPlayer
+      CThumbnail **ppPlayer
    );
 
    // IUnknown methods
@@ -45,10 +45,10 @@ public:
 protected:
 
    // Constructor is private. Use static CreateInstance method to create.
-   CPreview(HWND hVideo, HWND hEvent);
+   CThumbnail(HWND hVideo, HWND hEvent);
 
    // Destructor is private. Caller should call Release.
-   virtual ~CPreview();
+   virtual ~CThumbnail();
 
    HRESULT Initialize();
    void    NotifyError(HRESULT hr) { PostMessage(m_hwndEvent, WM_APP_PREVIEW_ERROR, (WPARAM)hr, 0L); }

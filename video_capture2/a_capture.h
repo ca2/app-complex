@@ -46,7 +46,7 @@ const ::u32 WM_APP_CAPTURE_EVENT = WM_APP + 975;
 
 class CaptureManager;
 
-HWND    CreatePreviewWindow(HINSTANCE hInstance, HWND hParent, CaptureManager * p);
+HWND    CreateThumbnailWindow(HINSTANCE hInstance, HWND hParent, CaptureManager * p);
 HWND    CreateMainWindow(HINSTANCE hInstance);
 void    SetMenuItemText(HMENU hMenu, ::u32 utem, _In_ PWSTR pszText);
 void    ShowError(HWND hwnd, PCWSTR szMessage, HRESULT hr);
@@ -141,15 +141,15 @@ class CaptureManager :
    };
 
    HWND                    m_hwndEvent;
-   HWND                    m_hwndPreview;
+   HWND                    m_hwndThumbnail;
    IMFCaptureEngineOnSampleCallback * m_pcallback;
 
    IMFCaptureEngine        *m_pEngine;
-   IMFCapturePreviewSink   *m_pPreview;
+   IMFCaptureThumbnailSink   *m_pThumbnail;
 
    CaptureEngineCB         *m_pCallback;
 
-   bool                    m_bPreviewing;
+   bool                    m_bThumbnailing;
    bool                    m_bRecording;
    bool                    m_bPhotoPending;
 
@@ -160,8 +160,8 @@ class CaptureManager :
 
    CaptureManager(::object * pobject, HWND hwnd) :
       ::object(pobject),
-      m_hwndEvent(hwnd), m_hwndPreview(nullptr),m_pcallback(nullptr), m_pEngine(nullptr), m_pPreview(nullptr),
-      m_pCallback(nullptr), m_bRecording(false), m_bPreviewing(false), m_bPhotoPending(false), m_errorID(0), m_hEvent(nullptr)
+      m_hwndEvent(hwnd), m_hwndThumbnail(nullptr),m_pcallback(nullptr), m_pEngine(nullptr), m_pThumbnail(nullptr),
+      m_pCallback(nullptr), m_bRecording(false), m_bThumbnailing(false), m_bPhotoPending(false), m_errorID(0), m_hEvent(nullptr)
       , m_hpwrRequest(INVALID_HANDLE_VALUE)
       , m_fPowerRequestSet(false)
    {
@@ -181,8 +181,8 @@ class CaptureManager :
 
    // Capture Engine Event Handlers
    void OnCaptureEngineInitialized(HRESULT& hrStatus);
-   void OnPreviewStarted(HRESULT& hrStatus);
-   void OnPreviewStopped(HRESULT& hrStatus);
+   void OnThumbnailStarted(HRESULT& hrStatus);
+   void OnThumbnailStopped(HRESULT& hrStatus);
    void OnRecordStarted(HRESULT& hrStatus);
    void OnRecordStopped(HRESULT& hrStatus);
    void WaitForResult()
@@ -217,7 +217,7 @@ public:
       return hr;
    }
 
-   HRESULT InitializeCaptureManager(HWND hwndPreview, IMFCaptureEngineOnSampleCallback * pcallback, IUnknown* pUnk);
+   HRESULT InitializeCaptureManager(HWND hwndThumbnail, IMFCaptureEngineOnSampleCallback * pcallback, IUnknown* pUnk);
    void DestroyCaptureEngine()
    {
       if (nullptr != m_hEvent)
@@ -225,7 +225,7 @@ public:
          CloseHandle(m_hEvent);
          m_hEvent = nullptr;
       }
-      SafeRelease(&m_pPreview);
+      SafeRelease(&m_pThumbnail);
       SafeRelease(&m_pEngine);
       SafeRelease(&m_pCallback);
 
@@ -236,7 +236,7 @@ public:
       SafeRelease(&g_pDX11Device);
       SafeRelease(&g_pDXGIMan);
 
-      m_bPreviewing = false;
+      m_bThumbnailing = false;
       m_bRecording = false;
       m_bPhotoPending = false;
       m_errorID = 0;
@@ -244,15 +244,15 @@ public:
 
 
 
-   bool    IsPreviewing() const { return m_bPreviewing; }
+   bool    IsThumbnailing() const { return m_bThumbnailing; }
    bool    IsRecording() const { return m_bRecording; }
    bool    IsPhotoPending() const { return m_bPhotoPending; }
    ::u32    ErrorID() const { return m_errorID; }
 
    HRESULT OnCaptureEvent(WPARAM wParam, LPARAM lParam);
    HRESULT SetVideoDevice(IUnknown *pUnk);
-   HRESULT StartPreview();
-   HRESULT StopPreview();
+   HRESULT StartThumbnail();
+   HRESULT StopThumbnail();
    HRESULT StartRecord(PCWSTR pszDestinationFile);
    HRESULT StopRecord();
    HRESULT TakePhoto(PCWSTR pszFileName);
@@ -267,9 +267,9 @@ public:
 
    HRESULT UpdateVideo()
    {
-      if (m_pPreview)
+      if (m_pThumbnail)
       {
-         return m_pPreview->UpdateVideo(nullptr, nullptr, nullptr);
+         return m_pThumbnail->UpdateVideo(nullptr, nullptr, nullptr);
       }
       else
       {

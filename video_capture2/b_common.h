@@ -30,7 +30,7 @@ template <class T> void SafeRelease(T **ppT)
 #define BREAK_ON_NULL(value, newHr)     if(value == nullptr) { hr = newHr; break; }
 
 #include "b_Device.h"
-#include "b_Preview.h"
+#include "b_Thumbnail.h"
 
 
 
