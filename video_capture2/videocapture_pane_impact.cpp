@@ -157,7 +157,7 @@ namespace app_complex_video_capture
 
          auto papp = get_app();
 
-         papp->m_ptemplateHelloMultiverseView->open_document_file(papp, payloadFile, true, pimpactdata->m_pplaceholder);
+         papp->m_ptemplateHelloMultiverseImpact->open_document_file(papp, payloadFile, true, pimpactdata->m_pplaceholder);
 
       }
 

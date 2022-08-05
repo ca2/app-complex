@@ -61,7 +61,7 @@ namespace notify_drawing
 //                          __type(simple_drawing::frame),
 //                          __type(simple_drawing::main_impact)));
 //
-//      m_ptemplateNotifyDrawingView = pdoctemplate;
+//      m_ptemplateNotifyDrawingImpact = pdoctemplate;
 //
 //      add_document_template(pdoctemplate);
 

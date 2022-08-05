@@ -34,7 +34,7 @@ namespace app_complex_video_capture
       //m_peditFontSel = nullptr;
 
       m_ptemplateHelloMultiverseMain = nullptr;
-      m_ptemplateHelloMultiverseView = nullptr;
+      m_ptemplateHelloMultiverseImpact = nullptr;
 
 
       m_strAppId = "app-complex/video_capture";
@@ -110,7 +110,7 @@ namespace app_complex_video_capture
                           __type(main_impact)));
       add_document_template(pDocTemplate);
       
-      m_ptemplateHelloMultiverseView = pDocTemplate;
+      m_ptemplateHelloMultiverseImpact = pDocTemplate;
 
 
       m_bMFStartup = true;
@@ -157,7 +157,7 @@ namespace app_complex_video_capture
       if(pcreate->m_payloadFile.has_char())
       {
 
-         m_ptemplateHelloMultiverseView->do_request(pcreate);
+         m_ptemplateHelloMultiverseImpact->do_request(pcreate);
 
       }
 

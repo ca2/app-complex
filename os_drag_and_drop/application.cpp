@@ -10,7 +10,7 @@ namespace simple_os_drag_and_drop
    {
 
       m_ptemplateSimpleDrawingMain = NULL;
-      m_ptemplateSimpleDrawingView = NULL;
+      m_ptemplateSimpleDrawingImpact = NULL;
 
       m_strAppId = "app-simple/drag_and_drop";
       m_strAppName = "app-simple/drag_and_drop";
@@ -67,7 +67,7 @@ namespace simple_os_drag_and_drop
                           __type(frame),
                           __type(main_impact)));
 
-      m_ptemplateSimpleDrawingView = pdoctemplate;
+      m_ptemplateSimpleDrawingImpact = pdoctemplate;
       add_document_template(pdoctemplate);
 
 
@@ -141,7 +141,7 @@ namespace simple_os_drag_and_drop
       if (pcreate->m_payloadFile.has_char())
       {
 
-         m_ptemplateSimpleDrawingView->do_request(pcreate);
+         m_ptemplateSimpleDrawingImpact->do_request(pcreate);
 
       }
 
