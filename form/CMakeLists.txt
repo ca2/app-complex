@@ -30,7 +30,7 @@ list(APPEND library_source
    pane_impact.h
    )
 
-add_library(app_complex_form ${library_source})
+add_library(${PROJECT_NAME} ${library_source})
 
 
 list(APPEND library_references
@@ -46,20 +46,20 @@ list(APPEND library_references
    )
 
 
-target_precompile_headers(app_complex_form PRIVATE framework.h)
+target_precompile_headers(${PROJECT_NAME} PRIVATE framework.h)
 
-set_target_properties(app_complex_form PROPERTIES LINKER_LANGUAGE CXX)
+set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
 if (MSVC)
-   target_compile_options(app_complex_form PRIVATE "/MD$<$<CONFIG:Debug>:d>")
-   target_link_options(app_complex_form PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
-   target_link_options(app_complex_form PRIVATE "/SUBSYSTEM:WINDOWS")
-   target_link_libraries(app_complex_form PRIVATE ${library_references})
-   add_dependencies(app_complex_form draw2d_gdiplus imaging_wic)
+   target_compile_options(${PROJECT_NAME} PRIVATE "/MD$<$<CONFIG:Debug>:d>")
+   target_link_options(${PROJECT_NAME} PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
+   target_link_options(${PROJECT_NAME} PRIVATE "/SUBSYSTEM:WINDOWS")
+   target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references})
+   add_dependencies(${PROJECT_NAME} draw2d_gdiplus imaging_wic)
 elseif(LINUX OR FREEBSD)
-   target_compile_options(app_complex_form PRIVATE -fpermissive)
-   target_link_libraries(app_complex_form PRIVATE ${library_references})
-   target_link_options(app_complex_form PRIVATE -Wl,-z,defs)
+   target_compile_options(${PROJECT_NAME} PRIVATE -fpermissive)
+   target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references})
+   target_link_options(${PROJECT_NAME} PRIVATE -Wl,-z,defs)
 endif ()
 
 
@@ -71,14 +71,14 @@ list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR})
 target_include_directories(${PROJECT_NAME} PRIVATE ${library_include_directories})
 
 
-target_compile_definitions(app_complex_form PRIVATE _APP_COMPLEX_FORM_LIBRARY)
+target_compile_definitions(${PROJECT_NAME} PRIVATE _APP_COMPLEX_FORM_LIBRARY)
 
 
 add_executable(_${PROJECT_NAME} _main.cpp)
 
-target_include_directories(_app_complex_form PRIVATE ${library_include_directories})
+target_include_directories(_${PROJECT_NAME} PRIVATE ${library_include_directories})
 
-target_link_directories(_app_complex_form PRIVATE ${library_link_directories})
+target_link_directories(_${PROJECT_NAME} PRIVATE ${library_link_directories})
 
 
 list(APPEND executable_references
@@ -122,29 +122,29 @@ add_dependencies(_${PROJECT_NAME} folder_zip)
 
 if (MSVC)
 
-   target_compile_options(_app_complex_form PRIVATE "/MD$<$<CONFIG:Debug>:d>")
-   target_link_options(_app_complex_form PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
-   target_link_options(_app_complex_form PRIVATE "/SUBSYSTEM:WINDOWS")
-   target_link_libraries(_app_complex_form PRIVATE ${executable_references})
+   target_compile_options(_${PROJECT_NAME} PRIVATE "/MD$<$<CONFIG:Debug>:d>")
+   target_link_options(_${PROJECT_NAME} PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
+   target_link_options(_${PROJECT_NAME} PRIVATE "/SUBSYSTEM:WINDOWS")
+   target_link_libraries(_${PROJECT_NAME} PRIVATE ${executable_references})
 
 elseif(LINUX OR FREEBSD)
 
-   target_compile_options(_app_complex_form PRIVATE -fpermissive)
-   target_link_libraries(_app_complex_form PRIVATE ${executable_references})
-   target_link_options(_app_complex_form PRIVATE -Wl,-z,defs)
+   target_compile_options(_${PROJECT_NAME} PRIVATE -fpermissive)
+   target_link_libraries(_${PROJECT_NAME} PRIVATE ${executable_references})
+   target_link_options(_${PROJECT_NAME} PRIVATE -Wl,-z,defs)
 
 endif ()
 
 
-add_dependencies(_app_complex_form ${default_draw2d})
-add_dependencies(_app_complex_form ${default_imaging})
-add_dependencies(_app_complex_form ${default_write_text})
-#add_dependencies(_app_complex_form ${default_gpu})
-add_dependencies(_app_complex_form ${app_common_dependencies})
-add_dependencies(_app_complex_form experience_tranquillum)
+add_dependencies(_${PROJECT_NAME} ${default_draw2d})
+add_dependencies(_${PROJECT_NAME} ${default_imaging})
+add_dependencies(_${PROJECT_NAME} ${default_write_text})
+#add_dependencies(_${PROJECT_NAME} ${default_gpu})
+add_dependencies(_${PROJECT_NAME} ${app_common_dependencies})
+add_dependencies(_${PROJECT_NAME} experience_tranquillum)
 
 
-set_target_properties(_app_complex_form PROPERTIES LINKER_LANGUAGE CXX)
+set_target_properties(_${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
 
 
