@@ -10,7 +10,7 @@ namespace simple_os_drag_and_drop
    {
 
       m_ptemplateSimpleDrawingMain = NULL;
-      m_ptemplateSimpleDrawingView = NULL;
+      m_ptemplateSimpleDrawingImpact = NULL;
 
       m_strAppId = "app-simple/drag_and_drop";
       m_strAppName = "app-simple/drag_and_drop";
@@ -32,15 +32,15 @@ namespace simple_os_drag_and_drop
 
       ::aura::session * pcoression = &Session;
 
-      pcoression->will_use_view_hint(FONTSEL_IMPACT);
+      pcoression->will_use_impact_hint(FONTSEL_IMPACT);
 
       add_factory_item <::simple_os_drag_and_drop::document >();
       add_factory_item <::simple_os_drag_and_drop::frame >();
       add_factory_item <::simple_os_drag_and_drop::main_frame >();
-      add_factory_item <::user::button_view >();
+      add_factory_item <::user::button_impact >();
       add_factory_item <::simple_os_drag_and_drop::impact >();
       add_factory_item <::simple_os_drag_and_drop::main_impact >();
-      add_factory_item <::simple_os_drag_and_drop::tab_view >();
+      add_factory_item <::simple_os_drag_and_drop::tab_impact >();
 
       if (!::aura::application::init_instance())
       {
@@ -55,7 +55,7 @@ namespace simple_os_drag_and_drop
                                "main",
                                __type(document),
                                __type(main_frame),
-                               __type(tab_view)));
+                               __type(tab_impact)));
 
       m_ptemplateSimpleDrawingMain = pdoctemplate;
       add_document_template(pdoctemplate);
@@ -67,7 +67,7 @@ namespace simple_os_drag_and_drop
                           __type(frame),
                           __type(main_impact)));
 
-      m_ptemplateSimpleDrawingView = pdoctemplate;
+      m_ptemplateSimpleDrawingImpact = pdoctemplate;
       add_document_template(pdoctemplate);
 
 
@@ -141,14 +141,14 @@ namespace simple_os_drag_and_drop
       if (pcreate->m_payloadFile.has_char())
       {
 
-         m_ptemplateSimpleDrawingView->do_request(pcreate);
+         m_ptemplateSimpleDrawingImpact->do_request(pcreate);
 
       }
 
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->payload("document").cast < document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->prodevian_prepare_window_maximize();
+         pcreate->payload("document").cast < document >()->get_type_impact < ::user::tab_impact >()->top_level_frame()->prodevian_prepare_window_maximize();
 
       }
 
@@ -181,10 +181,10 @@ namespace simple_os_drag_and_drop
    }
 
 
-   __pointer(impact) application::create_simple_os_drag_and_drop_view(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
+   __pointer(impact) application::create_simple_os_drag_and_drop_impact(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
    {
 
-      return pimpactParent->create_view < impact >(pimpactdata);
+      return pimpactParent->create_impact < impact >(pimpactdata);
 
    }
 

@@ -43,7 +43,7 @@ namespace app_complex_form
    void pane_impact::install_message_routing(::channel * pchannel)
    {
 
-      ::app_simple_form::tab_view::install_message_routing(pchannel);
+      ::app_simple_form::tab_impact::install_message_routing(pchannel);
 
       MESSAGE_LINK(e_message_create, pchannel, this, &pane_impact::on_message_create);
 
@@ -96,15 +96,15 @@ namespace app_complex_form
    void pane_impact::on_change_cur_sel()
    {
 
-      //::userex::pane_pane_view::on_change_cur_sel();
-      ::app_simple_form::tab_view::on_change_cur_sel();
+      //::userex::pane_pane_impact::on_change_cur_sel();
+      ::app_simple_form::tab_impact::on_change_cur_sel();
 
-      string strId = get_view_id();
+      string strId = get_impact_id();
       string_array stra;
 
       stra.explode("->:<-",strId);
 
-      if(get_view_id() == ::impact_simple_form)
+      if(get_impact_id() == ::impact_simple_form)
       {
 
          auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
@@ -150,13 +150,13 @@ namespace app_complex_form
          {
          case 1:
 
-            pform = create_view < form_001 >(pimpactdata);
+            pform = create_impact < form_001 >(pimpactdata);
 
             break;
 
          case 2:
 
-            pform = create_view < form_002 >(pimpactdata);
+            pform = create_impact < form_002 >(pimpactdata);
 
             break;
 
@@ -176,7 +176,7 @@ namespace app_complex_form
 
       }
 
-      ::app_simple_form::tab_view::on_create_impact(pimpactdata);
+      ::app_simple_form::tab_impact::on_create_impact(pimpactdata);
 
       ::userex::pane_tab_impact::on_create_impact(pimpactdata);
 
@@ -188,7 +188,7 @@ namespace app_complex_form
    void pane_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (m_pdocMenu != nullptr && ptopic->is_about(m_pdocMenu->get_view(0)))
+      if (m_pdocMenu != nullptr && ptopic->is_about(m_pdocMenu->get_impact(0)))
       {
 
          if (ptopic->m_atom == ::id_after_change_text)
@@ -219,7 +219,7 @@ namespace app_complex_form
 
       }
 
-      ::app_simple_form::tab_view::handle(ptopic, pcontext);
+      ::app_simple_form::tab_impact::handle(ptopic, pcontext);
 
    }
 

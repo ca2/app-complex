@@ -13,7 +13,7 @@
     <ClCompile Include="document.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="edit_view.cpp">
+    <ClCompile Include="edit_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="frame.cpp">
@@ -28,10 +28,10 @@
     <ClCompile Include="pane_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="toggle_view.cpp">
+    <ClCompile Include="toggle_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="top_view.cpp">
+    <ClCompile Include="top_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="impact.cpp">
@@ -66,7 +66,7 @@
     <ClInclude Include="dshowcapture.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="edit_view.h">
+    <ClInclude Include="edit_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="frame.h">
@@ -81,7 +81,7 @@
     <ClInclude Include="pane_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="pane_view_update_hint.h">
+    <ClInclude Include="pane_impact_update_hint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
@@ -90,10 +90,10 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="toggle_view.h">
+    <ClInclude Include="toggle_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="top_view.h">
+    <ClInclude Include="top_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="impact.h">

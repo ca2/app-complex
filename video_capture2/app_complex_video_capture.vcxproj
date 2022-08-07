@@ -501,19 +501,19 @@
     <ClCompile Include=".\videocapture_application.cpp" />
     <ClCompile Include=".\videocapture_document.cpp" />
     <ClCompile Include=".\videocapture_frame.cpp" />
-    <ClCompile Include=".\videocapture_pane_view.cpp" />
-    <ClCompile Include=".\videocapture_view.cpp" />
+    <ClCompile Include=".\videocapture_pane_impact.cpp" />
+    <ClCompile Include=".\videocapture_impact.cpp" />
     <ClCompile Include="framework.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="videocapture_edit_view.cpp" />
+    <ClCompile Include="videocapture_edit_impact.cpp" />
     <ClCompile Include="videocapture_main_frame.cpp" />
-    <ClCompile Include="videocapture_main_view.cpp" />
+    <ClCompile Include="videocapture_main_impact.cpp" />
     <ClCompile Include="videocapture_render.cpp" />
-    <ClCompile Include="videocapture_toggle_view.cpp" />
-    <ClCompile Include="videocapture_top_view.cpp" />
-    <ClCompile Include="videocapture_view_base.cpp" />
+    <ClCompile Include="videocapture_toggle_impact.cpp" />
+    <ClCompile Include="videocapture_top_impact.cpp" />
+    <ClCompile Include="videocapture_impact_base.cpp" />
     <ClCompile Include="_.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -549,18 +549,18 @@
     <ClInclude Include="media-io\video-scaler.h" />
     <ClInclude Include="videocapture_application.h" />
     <ClInclude Include="videocapture_document.h" />
-    <ClInclude Include="videocapture_edit_view.h" />
+    <ClInclude Include="videocapture_edit_impact.h" />
     <ClInclude Include="videocapture_frame.h" />
     <ClInclude Include="_.h" />
     <ClInclude Include="videocapture_main_frame.h" />
-    <ClInclude Include="videocapture_main_view.h" />
-    <ClInclude Include="videocapture_pane_view.h" />
+    <ClInclude Include="videocapture_main_impact.h" />
+    <ClInclude Include="videocapture_pane_impact.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="videocapture_render.h" />
-    <ClInclude Include="videocapture_toggle_view.h" />
-    <ClInclude Include="videocapture_top_view.h" />
-    <ClInclude Include="videocapture_view.h" />
-    <ClInclude Include="videocapture_view_base.h" />
+    <ClInclude Include="videocapture_toggle_impact.h" />
+    <ClInclude Include="videocapture_top_impact.h" />
+    <ClInclude Include="videocapture_impact.h" />
+    <ClInclude Include="videocapture_impact_base.h" />
     <ClInclude Include="user_font_list.h" />
     <ClInclude Include="_app_complex_video_capture.h" />
   </ItemGroup>

@@ -133,17 +133,17 @@
     <ClInclude Include="simple_form.h" />
     <ClInclude Include="simple_form_application.h" />
     <ClInclude Include="simple_form_document.h" />
-    <ClInclude Include="simple_form_edit_view.h" />
+    <ClInclude Include="simple_form_edit_impact.h" />
     <ClInclude Include="simple_form_frame.h" />
-    <ClInclude Include="simple_form_full_view.h" />
-    <ClInclude Include="simple_form_lite_view.h" />
-    <ClInclude Include="simple_form_main_view.h" />
-    <ClInclude Include="simple_form_pane_view.h" />
+    <ClInclude Include="simple_form_full_impact.h" />
+    <ClInclude Include="simple_form_lite_impact.h" />
+    <ClInclude Include="simple_form_main_impact.h" />
+    <ClInclude Include="simple_form_pane_impact.h" />
 
-    <ClInclude Include="simple_form_switcher_view.h" />
-    <ClInclude Include="simple_form_toggle_view.h" />
-    <ClInclude Include="simple_form_top_view.h" />
-    <ClInclude Include="simple_form_view.h" />
+    <ClInclude Include="simple_form_switcher_impact.h" />
+    <ClInclude Include="simple_form_toggle_impact.h" />
+    <ClInclude Include="simple_form_top_impact.h" />
+    <ClInclude Include="simple_form_impact.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="framework.cpp">
@@ -154,17 +154,17 @@
     <ClCompile Include="simple_form.cpp" />
     <ClCompile Include="simple_form_application.cpp" />
     <ClCompile Include="simple_form_document.cpp" />
-    <ClCompile Include="simple_form_edit_view.cpp" />
+    <ClCompile Include="simple_form_edit_impact.cpp" />
     <ClCompile Include="simple_form_frame.cpp" />
-    <ClCompile Include="simple_form_full_view.cpp" />
-    <ClCompile Include="simple_form_lite_view.cpp" />
-    <ClCompile Include="simple_form_main_view.cpp" />
-    <ClCompile Include="simple_form_pane_view.cpp" />
+    <ClCompile Include="simple_form_full_impact.cpp" />
+    <ClCompile Include="simple_form_lite_impact.cpp" />
+    <ClCompile Include="simple_form_main_impact.cpp" />
+    <ClCompile Include="simple_form_pane_impact.cpp" />
 
-    <ClCompile Include="simple_form_switcher_view.cpp" />
-    <ClCompile Include="simple_form_toggle_view.cpp" />
-    <ClCompile Include="simple_form_top_view.cpp" />
-    <ClCompile Include="simple_form_view.cpp" />
+    <ClCompile Include="simple_form_switcher_impact.cpp" />
+    <ClCompile Include="simple_form_toggle_impact.cpp" />
+    <ClCompile Include="simple_form_top_impact.cpp" />
+    <ClCompile Include="simple_form_impact.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\source\app\aura\m_aura.vcxproj">

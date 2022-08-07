@@ -31,7 +31,7 @@ namespace notify_drawing
 
       ::aura::session * pcoression = &Session;
 
-      puser->will_use_view_hint(FONTSEL_IMPACT);
+      puser->will_use_impact_hint(FONTSEL_IMPACT);
 
       add_factory_item <::notify_drawing::main_frame >();
       add_factory_item <::notify_drawing::impact >();
@@ -49,7 +49,7 @@ namespace notify_drawing
                                "main",
                                __type(simple_drawing::document),
                                __type(main_frame),
-                               __type(simple_drawing::tab_view)));
+                               __type(simple_drawing::tab_impact)));
       m_ptemplateNotifyDrawingMain = pdoctemplate;
       add_document_template(pdoctemplate);
 
@@ -61,7 +61,7 @@ namespace notify_drawing
 //                          __type(simple_drawing::frame),
 //                          __type(simple_drawing::main_impact)));
 //
-//      m_ptemplateNotifyDrawingView = pdoctemplate;
+//      m_ptemplateNotifyDrawingImpact = pdoctemplate;
 //
 //      add_document_template(pdoctemplate);
 
@@ -124,7 +124,7 @@ namespace notify_drawing
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->payload("document").cast < simple_drawing::document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->prodevian_prepare_window_maximize();
+         pcreate->payload("document").cast < simple_drawing::document >()->get_type_impact < ::user::tab_impact >()->top_level_frame()->prodevian_prepare_window_maximize();
 
       }
 
@@ -159,10 +159,10 @@ namespace notify_drawing
    }
 
 
-   __pointer(simple_drawing::impact) application::create_simple_drawing_view(::user::impact* pimpactParent, ::user::impact_data* pimpactdata)
+   __pointer(simple_drawing::impact) application::create_simple_drawing_impact(::user::impact* pimpactParent, ::user::impact_data* pimpactdata)
    {
 
-      return pimpactParent->create_view < impact >(pimpactdata);
+      return pimpactParent->create_impact < impact >(pimpactdata);
 
    }
 

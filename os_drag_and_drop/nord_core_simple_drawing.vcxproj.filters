@@ -22,25 +22,25 @@
     <ClCompile Include="simple_drag_and_drop_main_frame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="simple_drag_and_drop_main_view.cpp">
+    <ClCompile Include="simple_drag_and_drop_main_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="simple_drag_and_drop_pane_view.cpp">
+    <ClCompile Include="simple_drag_and_drop_pane_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="aaa_want_to_remove_simple_drag_and_drop_view_update_hint.cpp">
+    <ClCompile Include="aaa_want_to_remove_simple_drag_and_drop_impact_update_hint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="simple_drag_and_drop_render.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="simple_drag_and_drop_switcher_view.cpp">
+    <ClCompile Include="simple_drag_and_drop_switcher_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="simple_drag_and_drop_view.cpp">
+    <ClCompile Include="simple_drag_and_drop_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="simple_drag_and_drop_view_base.cpp">
+    <ClCompile Include="simple_drag_and_drop_impact_base.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -60,19 +60,19 @@
     <ClInclude Include="simple_drag_and_drop_frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="simple_drag_and_drop_main_view.h">
+    <ClInclude Include="simple_drag_and_drop_main_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="simple_drag_and_drop_pane_view.h">
+    <ClInclude Include="simple_drag_and_drop_pane_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="aaa_want_to_remove_simple_drag_and_drop_view_update_hint.h">
+    <ClInclude Include="aaa_want_to_remove_simple_drag_and_drop_impact_update_hint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="simple_drag_and_drop_switcher_view.h">
+    <ClInclude Include="simple_drag_and_drop_switcher_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="simple_drag_and_drop_view.h">
+    <ClInclude Include="simple_drag_and_drop_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="simple_drag_and_drop_render.h">
@@ -81,7 +81,7 @@
     <ClInclude Include="simple_drag_and_drop_gcom.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="simple_drag_and_drop_view_base.h">
+    <ClInclude Include="simple_drag_and_drop_impact_base.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

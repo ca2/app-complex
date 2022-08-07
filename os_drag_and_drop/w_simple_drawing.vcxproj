@@ -34,13 +34,13 @@
     <ClInclude Include="simple_drag_and_drop_frame.h" />
     <ClInclude Include="simple_drag_and_drop_gcom.h" />
     <ClInclude Include="simple_drag_and_drop_main_frame.h" />
-    <ClInclude Include="simple_drag_and_drop_main_view.h" />
-    <ClInclude Include="simple_drag_and_drop_pane_view.h" />
+    <ClInclude Include="simple_drag_and_drop_main_impact.h" />
+    <ClInclude Include="simple_drag_and_drop_pane_impact.h" />
 
     <ClInclude Include="simple_drag_and_drop_render.h" />
-    <ClInclude Include="simple_drag_and_drop_switcher_view.h" />
-    <ClInclude Include="simple_drag_and_drop_view.h" />
-    <ClInclude Include="simple_drag_and_drop_view_base.h" />
+    <ClInclude Include="simple_drag_and_drop_switcher_impact.h" />
+    <ClInclude Include="simple_drag_and_drop_impact.h" />
+    <ClInclude Include="simple_drag_and_drop_impact_base.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="framework.cpp">
@@ -57,13 +57,13 @@
     <ClCompile Include="simple_drag_and_drop_frame.cpp" />
     <ClCompile Include="simple_drag_and_drop_gcom.cpp" />
     <ClCompile Include="simple_drag_and_drop_main_frame.cpp" />
-    <ClCompile Include="simple_drag_and_drop_main_view.cpp" />
-    <ClCompile Include="simple_drag_and_drop_pane_view.cpp" />
+    <ClCompile Include="simple_drag_and_drop_main_impact.cpp" />
+    <ClCompile Include="simple_drag_and_drop_pane_impact.cpp" />
 
     <ClCompile Include="simple_drag_and_drop_render.cpp" />
-    <ClCompile Include="simple_drag_and_drop_switcher_view.cpp" />
-    <ClCompile Include="simple_drag_and_drop_view.cpp" />
-    <ClCompile Include="simple_drag_and_drop_view_base.cpp" />
+    <ClCompile Include="simple_drag_and_drop_switcher_impact.cpp" />
+    <ClCompile Include="simple_drag_and_drop_impact.cpp" />
+    <ClCompile Include="simple_drag_and_drop_impact_base.cpp" />
   </ItemGroup>
   
   <ItemGroup>

@@ -23,7 +23,7 @@ namespace app_complex_video_capture
    void main_impact::assert_ok() const
    {
 
-      ::user::split_view::assert_ok();
+      ::user::split_impact::assert_ok();
 
    }
 
@@ -31,14 +31,14 @@ namespace app_complex_video_capture
    void main_impact::dump(dump_context & dumpcontext) const
    {
 
-      ::user::split_view::dump(dumpcontext);
+      ::user::split_impact::dump(dumpcontext);
 
    }
 
 
    void main_impact::handle(::topic * ptopic, ::context * pcontext)
    {
-      ::user::split_view::handle(ptopic, pcontext);
+      ::user::split_impact::handle(ptopic, pcontext);
    }
 
 
@@ -57,9 +57,9 @@ namespace app_complex_video_capture
 
          iPane = 0;
 
-      //m_pimpact = create_view < lite_view >();
+      //m_pimpact = create_impact < lite_impact >();
 
-      m_pimpact = create_view < app_complex_video_capture::impact >(nullptr, get_pane_holder(iPane), "videocapture_view");
+      m_pimpact = create_impact < app_complex_video_capture::impact >(nullptr, get_pane_holder(iPane), "videocapture_impact");
 
       if(m_pimpact == nullptr)
       {
@@ -68,7 +68,7 @@ namespace app_complex_video_capture
 
       }
 
-      __pointer(edit_view) peditview = get_child_by_id("top_edit_view");
+      __pointer(edit_impact) peditview = get_child_by_id("top_edit_impact");
 
       if(peditview.is_set())
       {

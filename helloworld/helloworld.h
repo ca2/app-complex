@@ -30,7 +30,7 @@ namespace helloworld
 
 
 #include "helloworld_document.h"
-#include "helloworld_view.h"
+#include "helloworld_impact.h"
 #include "helloworld_frame.h"
 
 

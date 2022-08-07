@@ -32,7 +32,7 @@ namespace app_complex_video_capture
 
       ::user::document *                     m_pdocMenu;
       ::user::single_document_template *     m_ptemplateHelloMultiverseMain;
-      ::user::single_document_template *     m_ptemplateHelloMultiverseView;
+      ::user::single_document_template *     m_ptemplateHelloMultiverseImpact;
 
       application();
       ~application() override;

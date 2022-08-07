@@ -89,18 +89,18 @@
 		<Unit filename="hellomultiverse_application.h" />
 		<Unit filename="hellomultiverse_document.cpp" />
 		<Unit filename="hellomultiverse_document.h" />
-		<Unit filename="hellomultiverse_edit_view.cpp" />
-		<Unit filename="hellomultiverse_edit_view.h" />
+		<Unit filename="hellomultiverse_edit_impact.cpp" />
+		<Unit filename="hellomultiverse_edit_impact.h" />
 		<Unit filename="hellomultiverse_frame.cpp" />
 		<Unit filename="hellomultiverse_frame.h" />
-		<Unit filename="hellomultiverse_main_view.cpp" />
-		<Unit filename="hellomultiverse_main_view.h" />
-		<Unit filename="hellomultiverse_pane_view.cpp" />
-		<Unit filename="hellomultiverse_pane_view.h" />
-		<Unit filename="hellomultiverse_view_update_startnt.cpp" />
-		<Unit filename="hellomultiverse_view_update_startnt.h" />
-		<Unit filename="hellomultiverse_view.cpp" />
-		<Unit filename="hellomultiverse_view.h" />
+		<Unit filename="hellomultiverse_main_impact.cpp" />
+		<Unit filename="hellomultiverse_main_impact.h" />
+		<Unit filename="hellomultiverse_pane_impact.cpp" />
+		<Unit filename="hellomultiverse_pane_impact.h" />
+		<Unit filename="hellomultiverse_impact_update_startnt.cpp" />
+		<Unit filename="hellomultiverse_impact_update_startnt.h" />
+		<Unit filename="hellomultiverse_impact.cpp" />
+		<Unit filename="hellomultiverse_impact.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

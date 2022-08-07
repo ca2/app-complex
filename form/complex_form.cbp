@@ -143,8 +143,8 @@
 		<Unit filename="simple_form.h" />
 		<Unit filename="simple_form_001.h" />
 		<Unit filename="simple_form_002.h" />
-		<Unit filename="tab_view.cpp" />
-		<Unit filename="tab_view.h" />
+		<Unit filename="tab_impact.cpp" />
+		<Unit filename="tab_impact.h" />
 		<Unit filename="impact.cpp" />
 		<Unit filename="impact.h" />
 		<Extensions>

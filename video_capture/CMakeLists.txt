@@ -13,8 +13,8 @@ list(APPEND library_source
    device_selector.h
    document.cpp
    document.h
-   edit_view.cpp
-   edit_view.h
+   edit_impact.cpp
+   edit_impact.h
    frame.cpp
    frame.h
    framework.cpp
@@ -27,10 +27,10 @@ list(APPEND library_source
    main_impact.h
    pane_impact.cpp
    pane_impact.h
-   toggle_view.cpp
-   toggle_view.h
-   top_view.cpp
-   top_view.h
+   toggle_impact.cpp
+   toggle_impact.h
+   top_impact.cpp
+   top_impact.h
    )
 
 

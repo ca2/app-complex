@@ -13,9 +13,9 @@ namespace simple_os_drag_and_drop
 
 
       ::user::document *                     m_pdocMenu;
-      ::user::plain_edit_view *              m_prollfps;
+      ::user::plain_edit_impact *              m_prollfps;
       ::user::single_document_template *     m_ptemplateSimpleDrawingMain;
-      ::user::single_document_template *     m_ptemplateSimpleDrawingView;
+      ::user::single_document_template *     m_ptemplateSimpleDrawingImpact;
 
 
       application();
@@ -32,7 +32,7 @@ namespace simple_os_drag_and_drop
       virtual int64_t decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 #endif
 
-      virtual __pointer(impact) create_simple_os_drag_and_drop_view(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
+      virtual __pointer(impact) create_simple_os_drag_and_drop_impact(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
 
    };
 

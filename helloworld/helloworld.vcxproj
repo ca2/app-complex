@@ -852,7 +852,7 @@
     <ClCompile Include="helloworld_application.cpp" />
     <ClCompile Include="helloworld_document.cpp" />
     <ClCompile Include="helloworld_frame.cpp" />
-    <ClCompile Include="helloworld_view.cpp" />
+    <ClCompile Include="helloworld_impact.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
@@ -860,7 +860,7 @@
     <ClInclude Include="helloworld_application.h" />
     <ClInclude Include="helloworld_document.h" />
     <ClInclude Include="helloworld_frame.h" />
-    <ClInclude Include="helloworld_view.h" />
+    <ClInclude Include="helloworld_impact.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\source\app\ace\ace.vcxproj">

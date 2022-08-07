@@ -702,7 +702,7 @@
     <ClCompile Include="frame.cpp" />
     <ClCompile Include="main_frame.cpp" />
     <ClCompile Include="main_impact.cpp" />
-    <ClCompile Include="tab_view.cpp" />
+    <ClCompile Include="tab_impact.cpp" />
     <ClCompile Include="framework.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">Create</PrecompiledHeader>
@@ -733,14 +733,14 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="main_frame.h" />
     <ClInclude Include="main_impact.h" />
-    <ClInclude Include="tab_view.h" />
+    <ClInclude Include="tab_impact.h" />
     <ClInclude Include="simple_os_drag_and_drop.h" />
     <ClInclude Include="impact.h" />
     <ClInclude Include="_.h" />
   </ItemGroup>
   
   <ItemGroup>
-    <ResourceCompile Include="..\..\..\operating-system\operating-system-windows\version.rc" />
+    <ResourceCompile Include="deployment.rc" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\source\app\aura\aura.vcxproj">

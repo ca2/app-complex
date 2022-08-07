@@ -78,7 +78,7 @@ namespace app_complex_video_capture
       if (pimpactdata->m_atom == "device_selector")
       {
 
-         create_view < device_selector >(pimpactdata);
+         create_impact < device_selector >(pimpactdata);
 
       }
       else
@@ -120,7 +120,7 @@ namespace app_complex_video_capture
          if (ptopic->m_atom == ::id_load_form_data)
          {
 
-            ::user::impact * pimpact = m_pdocumentMenu->get_view(0);
+            ::user::impact * pimpact = m_pdocumentMenu->get_impact(0);
 
             string strDevice = get_app()->get_current_video_input_device();
 

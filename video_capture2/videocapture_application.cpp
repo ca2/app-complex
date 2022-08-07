@@ -34,7 +34,7 @@ namespace app_complex_video_capture
       //m_peditFontSel = nullptr;
 
       m_ptemplateHelloMultiverseMain = nullptr;
-      m_ptemplateHelloMultiverseView = nullptr;
+      m_ptemplateHelloMultiverseImpact = nullptr;
 
 
       m_strAppId = "app-complex/video_capture";
@@ -73,13 +73,13 @@ namespace app_complex_video_capture
       ::factory::add_factory_item <::app_complex_video_capture::document >();
       ::factory::add_factory_item <::app_complex_video_capture::frame >();
       ::factory::add_factory_item <::app_complex_video_capture::main_frame >();
-      ::factory::add_factory_item <::app_complex_video_capture::edit_view >();
-      ::factory::add_factory_item <::user::button_view >();
+      ::factory::add_factory_item <::app_complex_video_capture::edit_impact >();
+      ::factory::add_factory_item <::user::button_impact >();
       ::factory::add_factory_item <::app_complex_video_capture::impact >();
       ::factory::add_factory_item <::app_complex_video_capture::main_impact >();
       ::factory::add_factory_item <::app_complex_video_capture::pane_impact >();
-      ::factory::add_factory_item <::app_complex_video_capture::top_view >();
-      ::factory::add_factory_item <::app_complex_video_capture::toggle_view >();
+      ::factory::add_factory_item <::app_complex_video_capture::top_impact >();
+      ::factory::add_factory_item <::app_complex_video_capture::toggle_impact >();
 
 
       ::aura::application::init_instance();
@@ -110,7 +110,7 @@ namespace app_complex_video_capture
                           __type(main_impact)));
       add_document_template(pDocTemplate);
       
-      m_ptemplateHelloMultiverseView = pDocTemplate;
+      m_ptemplateHelloMultiverseImpact = pDocTemplate;
 
 
       m_bMFStartup = true;
@@ -157,7 +157,7 @@ namespace app_complex_video_capture
       if(pcreate->m_payloadFile.has_char())
       {
 
-         m_ptemplateHelloMultiverseView->do_request(pcreate);
+         m_ptemplateHelloMultiverseImpact->do_request(pcreate);
 
       }
 

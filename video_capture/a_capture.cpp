@@ -40,7 +40,7 @@ STDMETHODIMP CaptureManager::CaptureEngineCB::OnEvent(_In_ IMFMediaEvent* pEvent
 
    if (m_fSleeping && m_pManager != nullptr)
    {
-      // We're about to fall asleep, that means we've just asked the CE to stop the preview
+      // We're about to fall asleep, that means we've just asked the CE to stop the thumbnail
       // and record.  We need to handle it here since our message pump may be gone.
       GUID    guidType;
       HRESULT hrStatus;
@@ -55,7 +55,7 @@ STDMETHODIMP CaptureManager::CaptureEngineCB::OnEvent(_In_ IMFMediaEvent* pEvent
       {
          if (guidType == MF_CAPTURE_ENGINE_PREVIEW_STOPPED)
          {
-            m_pManager->OnPreviewStopped(hrStatus);
+            m_pManager->OnThumbnailStopped(hrStatus);
             SetEvent(m_pManager->m_hEvent);
          }
          else if (guidType == MF_CAPTURE_ENGINE_RECORD_STOPPED)
@@ -150,7 +150,7 @@ HRESULT CreateD3DManager()
 }
 
 HRESULT
-CaptureManager::InitializeCaptureManager(HWND hwndPreview, IMFCaptureEngineOnSampleCallback * pcallback, IUnknown* pUnk)
+CaptureManager::InitializeCaptureManager(HWND hwndThumbnail, IMFCaptureEngineOnSampleCallback * pcallback, IUnknown* pUnk)
 {
    HRESULT                         hr = S_OK;
    IMFAttributes*                  pAttributes = nullptr;
@@ -173,7 +173,7 @@ CaptureManager::InitializeCaptureManager(HWND hwndPreview, IMFCaptureEngineOnSam
    }
 
    m_pCallback->m_pManager = this;
-   m_hwndPreview = hwndPreview;
+   m_hwndThumbnail = hwndThumbnail;
    m_pcallback = pcallback;
 
    //Create a D3D Manager
@@ -262,12 +262,12 @@ HRESULT CaptureManager::OnCaptureEvent(WPARAM wParam, LPARAM lParam)
       }
       else if (guidType == MF_CAPTURE_ENGINE_PREVIEW_STARTED)
       {
-         OnPreviewStarted(hrStatus);
+         OnThumbnailStarted(hrStatus);
          SetErrorID(hrStatus, IDS_ERR_PREVIEW);
       }
       else if (guidType == MF_CAPTURE_ENGINE_PREVIEW_STOPPED)
       {
-         OnPreviewStopped(hrStatus);
+         OnThumbnailStopped(hrStatus);
          SetErrorID(hrStatus, IDS_ERR_PREVIEW);
       }
       else if (guidType == MF_CAPTURE_ENGINE_RECORD_STARTED)
@@ -310,14 +310,14 @@ void CaptureManager::OnCaptureEngineInitialized(HRESULT& hrStatus)
    }
 }
 
-void CaptureManager::OnPreviewStarted(HRESULT& hrStatus)
+void CaptureManager::OnThumbnailStarted(HRESULT& hrStatus)
 {
-   m_bPreviewing = SUCCEEDED(hrStatus);
+   m_bThumbnailing = SUCCEEDED(hrStatus);
 }
 
-void CaptureManager::OnPreviewStopped(HRESULT& hrStatus)
+void CaptureManager::OnThumbnailStopped(HRESULT& hrStatus)
 {
-   m_bPreviewing = false;
+   m_bThumbnailing = false;
 }
 
 void CaptureManager::OnRecordStarted(HRESULT& hrStatus)
@@ -331,14 +331,14 @@ void CaptureManager::OnRecordStopped(HRESULT& hrStatus)
 }
 
 
-HRESULT CaptureManager::StartPreview()
+HRESULT CaptureManager::StartThumbnail()
 {
    if (m_pEngine == nullptr)
    {
       return MF_E_NOT_INITIALIZED;
    }
 
-   if (m_bPreviewing == true)
+   if (m_bThumbnailing == true)
    {
       return S_OK;
    }
@@ -350,8 +350,8 @@ HRESULT CaptureManager::StartPreview()
 
    HRESULT hr = S_OK;
 
-   // Get a pointer to the preview sink.
-   if (m_pPreview == nullptr)
+   // Get a pointer to the thumbnail sink.
+   if (m_pThumbnail == nullptr)
    {
       hr = m_pEngine->GetSink(MF_CAPTURE_ENGINE_SINK_TYPE_PREVIEW, &pSink);
       if (FAILED(hr))
@@ -361,14 +361,14 @@ HRESULT CaptureManager::StartPreview()
 
 
 
-      hr = pSink->QueryInterface(IID_PPV_ARGS(&m_pPreview));
+      hr = pSink->QueryInterface(IID_PPV_ARGS(&m_pThumbnail));
       if (FAILED(hr))
       {
          goto done;
       }
 
 
-      hr = m_pPreview->SetRenderHandle(m_hwndPreview);
+      hr = m_pThumbnail->SetRenderHandle(m_hwndThumbnail);
       if (FAILED(hr))
       {
          goto done;
@@ -381,7 +381,7 @@ HRESULT CaptureManager::StartPreview()
          goto done;
       }
 
-      //// Configure the video format for the preview sink.
+      //// Configure the video format for the thumbnail sink.
       hr = pSource->GetCurrentDeviceMediaType((::u32)MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_VIDEO_PREVIEW, &pMediaType);
       if (FAILED(hr))
       {
@@ -400,15 +400,15 @@ HRESULT CaptureManager::StartPreview()
          goto done;
       }
 
-      // Connect the video stream to the preview sink.
+      // Connect the video stream to the thumbnail sink.
       ::u32 dwSinkStreamIndex;
-      hr = m_pPreview->AddStream((::u32)MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_VIDEO_PREVIEW, pMediaType2, nullptr, &dwSinkStreamIndex);
+      hr = m_pThumbnail->AddStream((::u32)MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_VIDEO_PREVIEW, pMediaType2, nullptr, &dwSinkStreamIndex);
       if (FAILED(hr))
       {
          goto done;
       }
 
-      //hr = m_pPreview->SetSampleCallback(dwSinkStreamIndex, m_pcallback);
+      //hr = m_pThumbnail->SetSampleCallback(dwSinkStreamIndex, m_pcallback);
       //if (FAILED(hr))
       //{
         // goto done;
@@ -418,7 +418,7 @@ HRESULT CaptureManager::StartPreview()
    }
 
 
-   hr = m_pEngine->StartPreview();
+   hr = m_pEngine->StartThumbnail();
    if (!m_fPowerRequestSet && m_hpwrRequest != INVALID_HANDLE_VALUE)
    {
       // NOTE:  By calling this, on SOC systems (AOAC enabled), we're asking the system to not go
@@ -439,7 +439,7 @@ done:
    return hr;
 }
 
-HRESULT CaptureManager::StopPreview()
+HRESULT CaptureManager::StopThumbnail()
 {
    HRESULT hr = S_OK;
 
@@ -448,11 +448,11 @@ HRESULT CaptureManager::StopPreview()
       return MF_E_NOT_INITIALIZED;
    }
 
-   if (!m_bPreviewing)
+   if (!m_bThumbnailing)
    {
       return S_OK;
    }
-   hr = m_pEngine->StopPreview();
+   hr = m_pEngine->StopThumbnail();
    if (FAILED(hr))
    {
       goto done;

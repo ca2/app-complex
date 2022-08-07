@@ -35,13 +35,13 @@ namespace app_complex_video_capture
       ::factory::add_factory_item <::app_complex_video_capture::document >();
       ::factory::add_factory_item <::app_complex_video_capture::frame >();
       ::factory::add_factory_item <::app_complex_video_capture::main_frame >();
-      ::factory::add_factory_item <::app_complex_video_capture::edit_view >();
-      ::factory::add_factory_item <::user::button_view >();
+      ::factory::add_factory_item <::app_complex_video_capture::edit_impact >();
+      ::factory::add_factory_item <::user::button_impact >();
       ::factory::add_factory_item <::app_complex_video_capture::impact >();
       ::factory::add_factory_item <::app_complex_video_capture::main_impact >();
       ::factory::add_factory_item <::app_complex_video_capture::pane_impact >();
-      ::factory::add_factory_item <::app_complex_video_capture::top_view >();
-      ::factory::add_factory_item <::app_complex_video_capture::toggle_view >();
+      ::factory::add_factory_item <::app_complex_video_capture::top_impact >();
+      ::factory::add_factory_item <::app_complex_video_capture::toggle_impact >();
       ::factory::add_factory_item <::app_complex_video_capture::device_selector >();
 
       ::aura::application::init_instance();

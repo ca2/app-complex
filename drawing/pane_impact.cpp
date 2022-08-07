@@ -106,7 +106,7 @@ namespace app_complex_drawing
       if (::str().begins_eat_ci(strId, "drawing"))
       {
 
-         auto pimpact = m_papp->create_simple_drawing_view(this, pimpactdata);
+         auto pimpact = m_papp->create_simple_drawing_impact(this, pimpactdata);
 
          pimpact->m_atom = pimpactdata->m_atom;
 
@@ -198,7 +198,7 @@ namespace app_complex_drawing
 
       ::userex::pane_tab_impact::on_change_cur_sel();
 
-      string strId = get_view_id();
+      string strId = get_impact_id();
 
       string_array stra;
 
@@ -213,7 +213,7 @@ namespace app_complex_drawing
 
       }
 
-      if (::str().begins(get_view_id().to_string(), "drawing"))
+      if (::str().begins(get_impact_id().to_string(), "drawing"))
       {
 
          auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
@@ -238,7 +238,7 @@ namespace app_complex_drawing
 
       }
 
-      if (get_view_id() == FONTSEL_IMPACT)
+      if (get_impact_id() == FONTSEL_IMPACT)
       {
 
          if (m_pimpactDrawing != nullptr)
@@ -256,7 +256,7 @@ namespace app_complex_drawing
 
       }
 
-      if (get_view_id() == COLORSEL_IMPACT)
+      if (get_impact_id() == COLORSEL_IMPACT)
       {
 
          if (m_pimpactDrawing != nullptr && m_pcolorview)

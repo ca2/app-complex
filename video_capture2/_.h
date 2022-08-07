@@ -17,7 +17,7 @@ namespace app_complex_video_capture
 {
 
    class application;
-   class top_view;
+   class top_impact;
    class main_impact;
    class document;
    class impact;

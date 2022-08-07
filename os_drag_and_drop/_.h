@@ -2,7 +2,7 @@
 
 
 #include "aura/_.h"
-#include "core/user/simple/_simple.h"
+#include "core/user/simple/_component.h"
 
 
 
@@ -16,7 +16,7 @@
 namespace user
 {
 
-   typedef ::user::show < ::user::button > button_view;
+   typedef ::user::show < ::user::button > button_impact;
 
 } // namespace user
 
@@ -45,7 +45,7 @@ namespace simple_os_drag_and_drop
 #include "frame.h"
 #include "main_frame.h"
 
-#include "tab_view.h"
+#include "tab_impact.h"
 
 
 #include "application.h"

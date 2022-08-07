@@ -32,7 +32,7 @@ namespace app_complex_drawing
    }
 
 
-   ::type application::get_pane_view_type() const
+   ::type application::get_pane_impact_type() const
    {
 
       return __type(pane_impact);
@@ -48,7 +48,7 @@ namespace app_complex_drawing
 
       auto puser = psession->user()->m_pcoreuser;
 
-      puser->will_use_view_hint(FONTSEL_IMPACT);
+      puser->will_use_impact_hint(FONTSEL_IMPACT);
 
       ::factory::add_factory_item <::app_complex_drawing::pane_impact >();
 

@@ -16,7 +16,7 @@ namespace app_complex_form
 //      ON_WM_RBUTTONUP
 //      {
 //         //auto pmouse = pmessage->m_union.m_pmouse;
-//         //::karaoke::lyric_view_lines & lyriclines = GetLyricLines();
+//         //::karaoke::lyric_impact_lines & lyriclines = GetLyricLines();
 //         //index iLine;
 //         //index iToken;
 //         //strsize iChar;
@@ -62,7 +62,7 @@ namespace app_complex_form
    void form::assert_ok() const
    {
 
-      ::user::form_view::assert_ok();
+      ::user::form_impact::assert_ok();
 
    }
 
@@ -70,7 +70,7 @@ namespace app_complex_form
    void form::dump(dump_context & dumpcontext) const
    {
 
-      ::user::form_view::dump(dumpcontext);
+      ::user::form_impact::dump(dumpcontext);
 
    }
 
@@ -100,7 +100,7 @@ namespace app_complex_form
    void form::install_message_routing(::channel * psender)
    {
 
-      ::user::form_view::install_message_routing(psender);
+      ::user::form_impact::install_message_routing(psender);
 
       MESSAGE_LINK(e_message_create, psender, this, &form::on_message_create);
       MESSAGE_LINK(e_message_context_menu, psender, this, &form::on_message_context_menu);
@@ -152,7 +152,7 @@ namespace app_complex_form
    void form::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      ::user::form_view::on_layout(pgraphics);
+      ::user::form_impact::on_layout(pgraphics);
 
    }
 

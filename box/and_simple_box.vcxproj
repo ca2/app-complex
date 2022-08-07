@@ -689,29 +689,29 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='profiler|Android'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include=".\impact.cpp" />
-    <ClCompile Include="edit_view.cpp" />
-    <ClCompile Include="lite_view.cpp" />
+    <ClCompile Include="edit_impact.cpp" />
+    <ClCompile Include="lite_impact.cpp" />
     <ClCompile Include="main_impact.cpp" />
-    <ClCompile Include="switcher_view.cpp" />
-    <ClCompile Include="toggle_view.cpp" />
-    <ClCompile Include="top_view.cpp" />
-    <ClCompile Include="full_view.cpp" />
+    <ClCompile Include="switcher_impact.cpp" />
+    <ClCompile Include="toggle_impact.cpp" />
+    <ClCompile Include="top_impact.cpp" />
+    <ClCompile Include="full_impact.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h" />
     <ClInclude Include="document.h" />
-    <ClInclude Include="edit_view.h" />
+    <ClInclude Include="edit_impact.h" />
     <ClInclude Include="frame.h" />
     <ClInclude Include="simple_message_box.h" />
-    <ClInclude Include="full_view.h" />
-    <ClInclude Include="lite_view.h" />
+    <ClInclude Include="full_impact.h" />
+    <ClInclude Include="lite_impact.h" />
     <ClInclude Include="main_impact.h" />
     <ClInclude Include="pane_impact.h" />
 
     <ClInclude Include="framework.h" />
-    <ClInclude Include="switcher_view.h" />
-    <ClInclude Include="toggle_view.h" />
-    <ClInclude Include="top_view.h" />
+    <ClInclude Include="switcher_impact.h" />
+    <ClInclude Include="toggle_impact.h" />
+    <ClInclude Include="top_impact.h" />
     <ClInclude Include="impact.h" />
   </ItemGroup>
   <ItemGroup>

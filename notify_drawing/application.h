@@ -13,7 +13,7 @@ namespace notify_drawing
 
 
       ::user::document *                     m_pdocMenu;
-      ::user::plain_edit_view *              m_prollfps;
+      ::user::plain_edit_impact *              m_prollfps;
       ::user::single_document_template *     m_ptemplateNotifyDrawingMain;
 
 
@@ -31,7 +31,7 @@ namespace notify_drawing
       virtual int64_t decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 #endif
 
-      virtual __pointer(simple_drawing::impact) create_simple_drawing_view(::user::impact* pimpactParent, ::user::impact_data* pimpactdata) override;
+      virtual __pointer(simple_drawing::impact) create_simple_drawing_impact(::user::impact* pimpactParent, ::user::impact_data* pimpactdata) override;
 
    };
 
