@@ -18,7 +18,7 @@ platform-linux/desktop_environment_gnome
 app/crypto_openssl
 app/folder_zip
 app/database_sqlite3
-app-simple/form
+app-simple/app_simple_form
 app/draw2d_cairo
 app/experience_tranquillum
 app/imaging_freeimage
