@@ -21,7 +21,6 @@ operating-system-posix/windowing_x11
 app/crypto_openssl
 app/folder_zip
 app/database_sqlite3
-third/sqlite
 app-simple/app_simple_drawing
 app/draw2d_cairo
 app/experience_core
