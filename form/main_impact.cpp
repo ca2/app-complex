@@ -14,8 +14,8 @@ namespace app_complex_form
 
       //m_ptopview = NULL;
       m_pimpact    = NULL;
-      m_flagNonClient.add(non_client_background);
-      m_flagNonClient.add(non_client_focus_rect);
+      m_flagNonClient.add(e_non_client_background);
+      m_flagNonClient.add(e_non_client_focus_rect);
 
 
    }

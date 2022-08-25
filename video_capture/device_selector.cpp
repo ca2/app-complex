@@ -13,8 +13,8 @@ namespace app_complex_video_capture
    device_selector::device_selector()
    {
 
-      m_flagNonClient.erase(non_client_background);
-      m_flagNonClient.erase(non_client_focus_rect);
+      m_flagNonClient.erase(e_non_client_background);
+      m_flagNonClient.erase(e_non_client_focus_rect);
 
       m_bClickDefaultMouseHandling = true;
       m_bHoverDefaultMouseHandling = true;
