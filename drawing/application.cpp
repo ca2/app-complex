@@ -1,5 +1,7 @@
 #include "framework.h"
-//#include "aura/update.h"
+#include "application.h"
+
+IMPLEMENT_APPLICATION(app_complex_drawing);
 
 
 namespace app_complex_drawing

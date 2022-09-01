@@ -1,5 +1,8 @@
 #include "framework.h"
+#include "application.h"
 
+
+IMPLEMENT_APPLICATION(app_complex_video_capture);
 
 
 namespace app_complex_video_capture

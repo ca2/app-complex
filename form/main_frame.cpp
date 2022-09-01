@@ -1,6 +1,5 @@
 #include "framework.h"
-
-
+#include "main_frame.h"
 
 
 namespace app_complex_form

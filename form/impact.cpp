@@ -1,6 +1,5 @@
 #include "framework.h"
-
-#include <math.h>
+#include "impact.h"
 
 
 namespace app_complex_form

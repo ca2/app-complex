@@ -1,5 +1,5 @@
 #include "framework.h"
-
+#include "document.h"
 
 
 namespace app_complex_form

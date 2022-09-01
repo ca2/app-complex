@@ -1,6 +1,5 @@
 #include "framework.h"
-
-#include <math.h>
+#include "form_002.h"s
 
 
 namespace app_complex_form

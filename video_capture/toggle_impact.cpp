@@ -1,5 +1,5 @@
 #include "framework.h"
-
+#include "toggle_impact.h"
 
 
 namespace app_complex_video_capture
