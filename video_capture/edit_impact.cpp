@@ -1,7 +1,5 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
+
 
 
 namespace app_complex_video_capture
@@ -39,7 +37,7 @@ namespace app_complex_video_capture
          return;
 
 
-      m_ptopview = GetTypedParent < top_impact >();
+      m_ptopview = get_typed_parent < top_impact >();
    }
 
 

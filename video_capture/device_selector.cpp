@@ -1,7 +1,5 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
+
 #include <math.h>
 #include "aura/graphics/image/drawing.h"
 
@@ -205,7 +203,7 @@ namespace app_complex_video_capture
       if (ptopic->m_atom == INITIAL_UPDATE)
       {
 
-         __pointer(::userex::pane_tab_impact) ppaneimpact = GetTypedParent < ::userex::pane_tab_impact >();
+         __pointer(::userex::pane_tab_impact) ppaneimpact = get_typed_parent < ::userex::pane_tab_impact >();
          //if(ppaneimpact.is_set())
          //{
          //   ppaneimpact->m_pflagview = this;
