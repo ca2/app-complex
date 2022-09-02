@@ -1,5 +1,7 @@
 #include "framework.h"
-
+#include "edit_impact.h"
+#include "top_impact.h"
+#include "aura/message/user.h"
 
 
 namespace app_complex_video_capture

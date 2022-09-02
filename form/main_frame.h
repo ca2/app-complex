@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "app-simple/form/main_frame.h"
+
+
 namespace app_complex_form
 {
 

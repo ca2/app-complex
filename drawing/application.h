@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "app-simple/drawing/application.h"
+#include "core/platform/application.h"
+
 
 namespace app_complex_drawing
 {

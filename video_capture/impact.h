@@ -1,7 +1,8 @@
 #pragma once
 
-//#include <mfcaptureengine.h>
-//class CaptureManager;
+
+#include "base/user/user/impact.h"
+
 
 namespace app_complex_video_capture
 {

@@ -1,4 +1,8 @@
 #include "framework.h"
+#include "main_impact.h"
+#include "impact.h"
+#include "edit_impact.h"
+#include "application.h"
 
 
 
@@ -65,7 +69,9 @@ namespace app_complex_video_capture
       if(m_pimpact == nullptr)
       {
 
-         message_box(nullptr,"Could not create file list ::user::impact");
+         auto psequencer = create_message_box_sequencer(nullptr,"Could not create file list ::user::impact");
+
+         psequencer->do_asynchronously();
 
       }
 

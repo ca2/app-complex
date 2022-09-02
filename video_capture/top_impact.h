@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "base/user/user/split_impact.h"
+
+
 namespace app_complex_video_capture
 {
 
@@ -16,7 +19,7 @@ namespace app_complex_video_capture
 
 
       top_impact();
-      virtual ~top_impact();
+      ~top_impact() override;
 
 
       void assert_ok() const override;

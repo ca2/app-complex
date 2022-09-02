@@ -1,5 +1,16 @@
 #include "framework.h"
 #include "application.h"
+#include "document.h"
+#include "frame.h"
+#include "main_frame.h"
+#include "impact.h"
+#include "main_impact.h"
+#include "pane_impact.h"
+#include "form_001.h"
+#include "form_002.h"
+#include "aura/user/user/button.h"
+#include "base/user/user/single_document_template.h"
+
 
 #define new ACME_NEW
 

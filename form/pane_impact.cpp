@@ -1,5 +1,9 @@
 #include "framework.h"
 #include "pane_impact.h"
+#include "document.h"
+#include "form_001.h"
+#include "form_002.h"
+#include "acme/constant/impact.h"
 #include "base/user/user/tab_pane.h"
 
 

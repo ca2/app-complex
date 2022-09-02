@@ -1,5 +1,6 @@
 #include "framework.h"
 #include "form_001.h"
+#include "aura/message/user.h"
 
 
 namespace app_complex_form

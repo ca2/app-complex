@@ -95,14 +95,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="deployment.rc" />
-  </ItemGroup>
-  <ItemGroup>
     <Text Include="deps.txt">
       <Filter>Source Files</Filter>
     </Text>
     <Text Include="matter.txt">
       <Filter>Source Files</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="deployment.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

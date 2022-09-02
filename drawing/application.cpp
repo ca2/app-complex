@@ -1,5 +1,9 @@
 #include "framework.h"
 #include "application.h"
+#include "pane_impact.h"
+#include "core/platform/session.h"
+#include "core/user/user/user.h"
+
 
 IMPLEMENT_APPLICATION(app_complex_drawing);
 

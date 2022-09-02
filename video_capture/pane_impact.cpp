@@ -1,6 +1,13 @@
 #include "framework.h"
-
+#include "pane_impact.h"
+#include "device_selector.h"
+#include "application.h"
+#include "app-core/video_input/video_input.h"
+#include "app-core/video_input/device.h"
+#include "base/user/form/document.h"
 #include "base/user/user/tab_pane.h"
+#include "base/user/user/single_document_template.h"
+#include "aura/user/user/system.h"
 
 
 namespace app_complex_video_capture

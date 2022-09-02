@@ -1,6 +1,10 @@
 #pragma once
 
 
+#include "core/user/userex/pane_tab_impact.h"
+#include "app-simple/form/tab_impact.h"
+
+
 namespace app_complex_form
 {
 

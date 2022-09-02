@@ -1,5 +1,18 @@
 #include "framework.h"
 #include "application.h"
+#include "frame.h"
+#include "main_frame.h"
+#include "pane_impact.h"
+#include "device_selector.h"
+#include "document.h"
+#include "impact.h"
+#include "edit_impact.h"
+#include "main_impact.h"
+#include "top_impact.h"
+#include "toggle_impact.h"
+#include "app-core/video_input/video_input.h"
+#include "app-core/video_input/device.h"
+#include "base/user/user/single_document_template.h"
 
 
 IMPLEMENT_APPLICATION(app_complex_video_capture);

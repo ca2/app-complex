@@ -1,5 +1,9 @@
 #include "framework.h"
 #include "pane_impact.h"
+#include "application.h"
+#include "base/user/user/document.h"
+#include "app-simple/drawing/render.h"
+#include "app-simple/drawing/impact.h"
 #include "base/user/user/tab_pane.h"
 
 
@@ -124,13 +128,13 @@ namespace app_complex_drawing
    void pane_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->user_interaction() == m_pcolorview)
+      if (ptopic->user_interaction() == get_color_interaction())
       {
 
          if (ptopic->m_atom == ::id_after_change_cur_sel || ptopic->m_atom == ::id_after_change_cur_hover)
          {
 
-            m_pcolorview->get_color().get_hls(m_pimpactDrawing->m_prender->m_hlsText);
+            m_pimpactDrawing->m_prender->m_hlsText = get_color_interaction()->get_sel_color();
 
             if (ptopic->m_atom == ::id_after_change_cur_sel)
             {
@@ -156,13 +160,13 @@ namespace app_complex_drawing
          }
 
       }
-      else if (ptopic->m_puserelement->m_atom == impact_font_sel)
+      else if (ptopic->m_puserelement->m_atom == FONTSEL_IMPACT)
       {
 
          if (ptopic->m_atom == ::id_after_change_cur_sel)
          {
 
-            string strFont = m_pfontview->m_pimpact->get_cur_sel_face_name();
+            string strFont = get_font_interaction()->get_sel_by_name();
 
             if(::is_set(m_pimpactDrawing))
             {
@@ -175,7 +179,7 @@ namespace app_complex_drawing
          else if (ptopic->m_atom == ::id_after_change_cur_hover)
          {
 
-            string strFont = m_pfontview->m_pimpact->get_cur_hover_face_name();
+            string strFont = get_font_interaction()->get_sel_by_name();
 
             if(::is_set(m_pimpactDrawing))
             {
@@ -246,11 +250,11 @@ namespace app_complex_drawing
 
             auto strFont1 = m_pimpactDrawing->m_prender->m_strFont1;
 
-            m_pfontview->set_sel_by_name(strFont1);
+            get_font_interaction()->set_sel_by_name(strFont1);
 
             m_pimpactDrawing->m_prender->set_hover_font(strFont1);
 
-            m_pfontview->m_pimpact->ensure_sel_visible();
+            get_font_interaction()->ensure_sel_visible();
 
          }
 
@@ -259,10 +263,10 @@ namespace app_complex_drawing
       if (get_impact_id() == COLORSEL_IMPACT)
       {
 
-         if (m_pimpactDrawing != nullptr && m_pcolorview)
+         if (m_pimpactDrawing != nullptr && get_color_interaction())
          {
 
-            m_pcolorview->set_color(m_pimpactDrawing->m_prender->m_hlsText);
+            get_color_interaction()->set_sel_color(m_pimpactDrawing->m_prender->m_hlsText);
 
          }
 

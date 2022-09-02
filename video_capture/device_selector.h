@@ -2,6 +2,9 @@
 #pragma once
 
 
+#include "base/user/user/impact.h"
+
+
 namespace app_complex_video_capture
 {
 

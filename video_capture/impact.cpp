@@ -1,7 +1,11 @@
 #include "framework.h"
-
-#include <math.h>
+#include "impact.h"
+#include "application.h"
+#include "pane_impact.h"
+#include "app-core/video_input/render.h"
+#include "app-core/video_input/device.h"
 #include "aura/graphics/image/drawing.h"
+#include "aura/message/user.h"
 
 
 namespace app_complex_video_capture

@@ -1,5 +1,8 @@
 #include "framework.h"
 #include "form.h"
+#include "aura/graphics/draw2d/graphics.h"
+#include "aura/message/user.h"
+#include "base/user/user/user.h"
 
 
 namespace app_complex_form
@@ -139,7 +142,7 @@ namespace app_complex_form
 
       auto point = pcontextmenu->GetPoint();
 
-      auto puser = user();
+      auto puser = user()->m_pbaseuser;
 
       puser->track_popup_xml_menu(this, "matter://form/form.menu", 0, point);
 

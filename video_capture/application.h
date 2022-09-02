@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "core/platform/application.h"
+
+
 namespace app_complex_video_capture
 {
 

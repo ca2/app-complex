@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "core/user/userex/pane_tab_impact.h"
+
+
 namespace app_complex_video_capture
 {
 

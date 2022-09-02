@@ -3,6 +3,7 @@
 
 #include "core/_.h"
 #include "core/user/simple/_.h"
+#include "app-core/video_input/_.h"
 
 
 #ifdef _APP_COMPLEX_VIDEO_CAPTURE_LIBRARY
@@ -21,6 +22,10 @@ namespace app_complex_video_capture
    class main_impact;
    class document;
    class impact;
+
+   class edit_impact;
+   class toggle_impact;
+
 
 } // namespace app_complex_video_capture
 

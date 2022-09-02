@@ -1,6 +1,10 @@
 #pragma once
 
 
+#include "form.h"
+#include "app-simple/form/form_002.h"
+
+
 namespace app_complex_form
 {
 

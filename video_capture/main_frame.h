@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "base/user/simple/frame_window.h"
+
+
 namespace app_complex_video_capture
 {
 

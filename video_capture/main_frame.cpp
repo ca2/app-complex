@@ -1,5 +1,6 @@
 #include "framework.h"
-
+#include "main_frame.h"
+#include "aura/message/user.h"
 
 
 namespace app_complex_video_capture

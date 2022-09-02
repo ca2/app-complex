@@ -1,8 +1,8 @@
 #pragma once
 
 
-#include "app-simple/drawing/_library.h"
-#include "core/user/userex/_userex.h"
+//#include "app-simple/drawing/_library.h"
+////#include "core/user/userex/_userex.h"
 
 
 namespace user
@@ -20,10 +20,10 @@ namespace user
 //#include "form_002.h"
 
 
-#include "pane_impact.h"
-
-
-#include "application.h"
-
+//#include "pane_impact.h"
+//
+//
+//#include "application.h"
+//
 
 
