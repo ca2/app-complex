@@ -121,14 +121,14 @@ namespace app_complex_video_capture
    void pane_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->user_interaction() && ptopic->user_interaction()->is_ascendant(m_pdocumentMenu, true))
+      if (ptopic->user_interaction() && ptopic->user_interaction()->is_ascendant(m_pformdocumentMenu, true))
       {
 
 
          if (ptopic->m_atom == ::id_load_form_data)
          {
 
-            ::user::impact * pimpact = m_pdocumentMenu->get_impact(0);
+            ::user::impact * pimpact = m_pformdocumentMenu->get_impact(0);
 
             string strDevice = get_app()->get_current_video_input_device();
 
