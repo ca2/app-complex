@@ -5,7 +5,7 @@ project(app_complex_form CXX)
 list(APPEND library_source
    _.cpp
    _.h
-   _factory.cpp
+   #_factory.cpp
    application.cpp
    application.h
    document.cpp

@@ -2,7 +2,7 @@
 
 
 #include "aura/_.h"
-#include "core/user/simple/_component.h"
+//#include "core/user/simple/_component.h"
 
 
 
