@@ -97,7 +97,6 @@
       <ConformanceMode>true</ConformanceMode>
       <CompileAsManaged>false</CompileAsManaged>
       <CompileAsWinRT>false</CompileAsWinRT>
-      <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -130,7 +129,6 @@
       <OpenMPSupport>false</OpenMPSupport>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>Async</ExceptionHandling>
-      <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
       <AdditionalOptions>/bigobj</AdditionalOptions>
     </ClCompile>
@@ -182,7 +180,6 @@
       <OpenMPSupport>false</OpenMPSupport>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>Async</ExceptionHandling>
-      <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
       <AdditionalOptions>/bigobj</AdditionalOptions>
     </ClCompile>
