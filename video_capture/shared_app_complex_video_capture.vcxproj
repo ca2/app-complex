@@ -196,7 +196,7 @@
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="_main.cpp" />
+    <ClCompile Include="__implement.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="deployment.rc" />

@@ -2,6 +2,7 @@
 
 
 #include "app-simple/form/application.h"
+#include "core/platform/application.h"
 
 
 namespace app_complex_form
@@ -9,7 +10,8 @@ namespace app_complex_form
 
 
    class CLASS_DECL_APP_COMPLEX_FORM application :
-      virtual public ::app_simple_form::application
+      virtual public ::app_simple_form::application,
+      virtual public ::core::application
    {
    public:
 

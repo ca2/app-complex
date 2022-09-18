@@ -204,7 +204,6 @@
     <ClCompile Include="main_impact.cpp" />
     <ClCompile Include="impact.cpp" />
     <ClCompile Include="pane_impact.cpp" />
-    <ClCompile Include="_factory.cpp" />
     <ClCompile Include="_main.cpp" />
   </ItemGroup>
   <ItemGroup>

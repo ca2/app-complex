@@ -110,7 +110,7 @@ namespace app_complex_drawing
       if (::str().begins_eat_ci(strId, "drawing"))
       {
 
-         auto pimpact = m_papp->create_simple_drawing_impact(this, pimpactdata);
+         auto pimpact = get_app()->create_simple_drawing_impact(this, pimpactdata);
 
          pimpact->m_atom = pimpactdata->m_atom;
 

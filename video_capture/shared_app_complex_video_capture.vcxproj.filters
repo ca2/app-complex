@@ -23,7 +23,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="_main.cpp">
+    <ClCompile Include="__implement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
