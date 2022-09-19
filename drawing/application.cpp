@@ -5,7 +5,7 @@
 #include "core/user/user/user.h"
 
 
-IMPLEMENT_APPLICATION(app_complex_drawing);
+//IMPLEMENT_APPLICATION(app_complex_drawing);
 
 
 namespace app_complex_drawing

@@ -12,9 +12,9 @@
 #include "base/user/user/single_document_template.h"
 
 
-#define new ACME_NEW
+//#define new ACME_NEW
 
-IMPLEMENT_APPLICATION(app_complex_form);
+//IMPLEMENT_APPLICATION(app_complex_form);
 
 
 namespace app_complex_form

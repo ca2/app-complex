@@ -15,7 +15,7 @@
 #include "base/user/user/single_document_template.h"
 
 
-IMPLEMENT_APPLICATION(app_complex_video_capture);
+//IMPLEMENT_APPLICATION(app_complex_video_capture);
 
 
 namespace app_complex_video_capture
