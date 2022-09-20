@@ -26,13 +26,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="application.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="framework.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="pane_impact.cpp">
+    <ClCompile Include="__implement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

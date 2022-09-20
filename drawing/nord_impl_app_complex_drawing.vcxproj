@@ -19,17 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{65837533-1A58-43FE-A4A8-96F1F5D044C6}</ProjectGuid>
+    <ProjectGuid>{8B2D6E23-44DB-41BD-B314-D101F07ECD32}</ProjectGuid>
     <Keyword>Android</Keyword>
     <ApplicationType>Android</ApplicationType>
     <ApplicationTypeRevision>3.0</ApplicationTypeRevision>
-    <ProjectName>app_complex_form</ProjectName>
+    <ProjectName>impl_app_complex_drawing</ProjectName>
     <RootNamespace>app_complex</RootNamespace>
     <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>Clang_5_0</PlatformToolset>
     <UseOfStl>c++_static</UseOfStl>
@@ -37,7 +37,7 @@
     <AndroidAPILevel>android-26</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>Clang_5_0</PlatformToolset>
     <UseOfStl>c++_static</UseOfStl>
@@ -45,7 +45,7 @@
     <AndroidAPILevel>android-26</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>Clang_5_0</PlatformToolset>
     <UseOfStl>c++_static</UseOfStl>
@@ -53,7 +53,7 @@
     <AndroidAPILevel>android-26</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>Clang_5_0</PlatformToolset>
     <UseOfStl>c++_static</UseOfStl>
@@ -66,13 +66,13 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <Import Project="..\..\..\operating-system\operating-system-android\Common.props" />
   </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Import Project="..\..\..\operating-system\operating-system-android\Common.props" />
+  </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <Import Project="..\..\..\operating-system\operating-system-android\Common.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
-    <Import Project="..\..\..\operating-system\operating-system-android\Common.props" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <Import Project="..\..\..\operating-system\operating-system-android\Common.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
@@ -109,7 +109,7 @@
       <CppLanguageStandard>
       </CppLanguageStandard>
       <AdditionalOptions>-Wno-attributes -Wno-sign-compare -Wno-comment -Wno-strict-overflow -Wno-unused-local-typedefs -Wno-unknown-pragmas -Wno-unused-function -Wno-unused-variable -Wno-unused-value -Wno-reorder -Wno-overloaded-virtual -std=c++20 -Wno-char-subscripts</AdditionalOptions>
-      <PreprocessorDefinitions>_APP_COMPLEX_FORM_LIBRARY;CUBE;DEBUG</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_APP_COMPLEX_DRAWING_LIBRARY;CUBE;DEBUG</PreprocessorDefinitions>
       <CLanguageStandard>c11</CLanguageStandard>
       <ObjectFileName>$(IntDir)%(RelativeDir)%(filename).o</ObjectFileName>
     </ClCompile>
@@ -123,7 +123,7 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <PreprocessorDefinitions>_APP_COMPLEX_FORM_LIBRARY;CUBE;DEBUG</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_APP_COMPLEX_DRAWING_LIBRARY;CUBE;DEBUG</PreprocessorDefinitions>
       <ExceptionHandling>Enabled</ExceptionHandling>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <CLanguageStandard>c11</CLanguageStandard>
@@ -150,7 +150,7 @@
       </CppLanguageStandard>
       <AdditionalOptions>-Wno-attributes -Wno-sign-compare -Wno-comment -Wno-strict-overflow -Wno-unused-local-typedefs -Wno-unknown-pragmas -Wno-unused-function -Wno-unused-variable -Wno-unused-value -Wno-reorder -Wno-overloaded-virtual -std=c++20 -Wno-char-subscripts</AdditionalOptions>
       <DebugInformationFormat>FullDebug</DebugInformationFormat>
-      <PreprocessorDefinitions>_APP_COMPLEX_FORM_LIBRARY;CUBE</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_APP_COMPLEX_DRAWING_LIBRARY;CUBE</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <LibraryDependencies>freeimage;png;jpeg;_openexr;_openjpeg;_rawlite;_tiff4;_webp;sqlite;ssl;crypto;cairo;freetype;pixman;iconv;idn;zlib;jnigraphics;m;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
@@ -169,7 +169,7 @@
       </CppLanguageStandard>
       <AdditionalOptions>-Wno-attributes -Wno-sign-compare -Wno-comment -Wno-strict-overflow -Wno-unused-local-typedefs -Wno-unknown-pragmas -Wno-unused-function -Wno-unused-variable -Wno-unused-value -Wno-reorder -Wno-overloaded-virtual -std=c++20 -Wno-char-subscripts</AdditionalOptions>
       <DebugInformationFormat>FullDebug</DebugInformationFormat>
-      <PreprocessorDefinitions>_APP_COMPLEX_FORM_LIBRARY;CUBE</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_APP_COMPLEX_DRAWING_LIBRARY;CUBE</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <LibraryDependencies>freeimage;png;jpeg;_openexr;_openjpeg;_rawlite;_tiff4;_webp;sqlite;ssl;crypto;cairo;freetype;pixman;iconv;idn;zlib;jnigraphics;m;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
@@ -179,31 +179,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="application.h" />
-    <ClInclude Include="document.h" />
-    <ClInclude Include="form.h" />
-    <ClInclude Include="form_001.h" />
-    <ClInclude Include="form_002.h" />
-    <ClInclude Include="frame.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="main_frame.h" />
-    <ClInclude Include="main_impact.h" />
     <ClInclude Include="pane_impact.h" />
-    <ClInclude Include="impact.h" />
     <ClInclude Include="_.h" />
-    <ClInclude Include="_app_complex_form.h" />
+    <ClInclude Include="_app_complex_drawing.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="application.cpp" />
-    <ClCompile Include="document.cpp" />
-    <ClCompile Include="form.cpp" />
-    <ClCompile Include="form_001.cpp" />
-    <ClCompile Include="form_002.cpp" />
-    <ClCompile Include="frame.cpp" />
-    <ClCompile Include="framework.cpp" />
-    <ClCompile Include="main_frame.cpp" />
-    <ClCompile Include="main_impact.cpp" />
-    <ClCompile Include="impact.cpp" />
-    <ClCompile Include="pane_impact.cpp" />
+    <ClCompile Include="__implement.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\operating-system\operating-system-android\acme_android\nord_acme_android.vcxproj">
@@ -233,6 +215,9 @@
     <ProjectReference Include="..\..\..\operating-system\operating-system-posix\aura_posix\nord_aura_posix.vcxproj">
       <Project>{b23268d6-75cd-4f51-b3a7-fbfce1552c7d}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\app-simple\drawing\nord_app_simple_drawing.vcxproj">
+      <Project>{fecceaed-349f-4feb-890d-edbcf451f310}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\app\acme\nord_acme.vcxproj">
       <Project>{ecb0620d-bfa8-4f9b-b2ad-9d9c20a44fe9}</Project>
     </ProjectReference>
@@ -243,7 +228,7 @@
       <Project>{576b7916-147f-49f2-84b8-360d703894b5}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\app\aura\nord_aura.vcxproj">
-      <Project>{02207bc4-c08b-4a2d-b754-f3bd46ad3098}</Project>
+      <Project>{aab9136f-66db-4cd3-9d6b-2085e951739a}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\app\axis\nord_axis.vcxproj">
       <Project>{6f5c86b4-07bb-45a5-9fb9-b7921bcbbf36}</Project>
@@ -266,11 +251,17 @@
     <ProjectReference Include="..\..\app\draw2d_cairo\nord_draw2d_cairo.vcxproj">
       <Project>{06207bc4-c08b-4a2d-b754-f3bd46ad3098}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\app\experience_core\nord_experience_core.vcxproj">
+      <Project>{0365bd5f-5c57-4db4-9270-d850d2a84fbb}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\app\folder_zip\nord_folder_zip.vcxproj">
       <Project>{74cd7e4f-a9f4-4c9c-b7ce-0d8765201f66}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\app\imaging_freeimage\nord_imaging_freeimage.vcxproj">
       <Project>{3c4a93d3-9b9b-4ea9-8bcf-a53be3a0f9b5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nord_app_complex_drawing.vcxproj">
+      <Project>{37e67ae3-a9a2-47a6-a9c6-bd4795039431}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

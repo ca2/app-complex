@@ -29,7 +29,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>Clang_5_0</PlatformToolset>
     <UseOfStl>c++_static</UseOfStl>
@@ -37,7 +37,7 @@
     <AndroidAPILevel>android-26</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>Clang_5_0</PlatformToolset>
     <UseOfStl>c++_static</UseOfStl>
@@ -45,7 +45,7 @@
     <AndroidAPILevel>android-26</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>Clang_5_0</PlatformToolset>
     <UseOfStl>c++_static</UseOfStl>
@@ -53,7 +53,7 @@
     <AndroidAPILevel>android-26</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>Clang_5_0</PlatformToolset>
     <UseOfStl>c++_static</UseOfStl>
@@ -188,7 +188,6 @@
     <ClCompile Include="application.cpp" />
     <ClCompile Include="framework.cpp" />
     <ClCompile Include="pane_impact.cpp" />
-    <ClCompile Include="_main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\operating-system\operating-system-android\acme_android\nord_acme_android.vcxproj">
@@ -217,9 +216,6 @@
     </ProjectReference>
     <ProjectReference Include="..\..\..\operating-system\operating-system-posix\aura_posix\nord_aura_posix.vcxproj">
       <Project>{b23268d6-75cd-4f51-b3a7-fbfce1552c7d}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\app-simple\drawing\nord_lib_app_simple_drawing.vcxproj">
-      <Project>{fecceaed-349f-4feb-890d-edbcf451f310}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\app\acme\nord_acme.vcxproj">
       <Project>{ecb0620d-bfa8-4f9b-b2ad-9d9c20a44fe9}</Project>

@@ -19,17 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{65837533-1A58-43FE-A4A8-96F1F5D044C6}</ProjectGuid>
+    <ProjectGuid>{EFE52F45-483E-44C8-97C2-3AC8337F2ABD}</ProjectGuid>
     <Keyword>Android</Keyword>
     <ApplicationType>Android</ApplicationType>
     <ApplicationTypeRevision>3.0</ApplicationTypeRevision>
-    <ProjectName>app_complex_form</ProjectName>
-    <RootNamespace>app_complex</RootNamespace>
+    <ProjectName>impl_app_complex_form</ProjectName>
+    <RootNamespace>impl_app_complex_form</RootNamespace>
     <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>Clang_5_0</PlatformToolset>
     <UseOfStl>c++_static</UseOfStl>
@@ -37,7 +37,7 @@
     <AndroidAPILevel>android-26</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>Clang_5_0</PlatformToolset>
     <UseOfStl>c++_static</UseOfStl>
@@ -45,7 +45,7 @@
     <AndroidAPILevel>android-26</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>Clang_5_0</PlatformToolset>
     <UseOfStl>c++_static</UseOfStl>
@@ -53,7 +53,7 @@
     <AndroidAPILevel>android-26</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>Clang_5_0</PlatformToolset>
     <UseOfStl>c++_static</UseOfStl>
@@ -193,17 +193,7 @@
     <ClInclude Include="_app_complex_form.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="application.cpp" />
-    <ClCompile Include="document.cpp" />
-    <ClCompile Include="form.cpp" />
-    <ClCompile Include="form_001.cpp" />
-    <ClCompile Include="form_002.cpp" />
-    <ClCompile Include="frame.cpp" />
-    <ClCompile Include="framework.cpp" />
-    <ClCompile Include="main_frame.cpp" />
-    <ClCompile Include="main_impact.cpp" />
-    <ClCompile Include="impact.cpp" />
-    <ClCompile Include="pane_impact.cpp" />
+    <ClCompile Include="__implement.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\operating-system\operating-system-android\acme_android\nord_acme_android.vcxproj">
@@ -232,6 +222,9 @@
     </ProjectReference>
     <ProjectReference Include="..\..\..\operating-system\operating-system-posix\aura_posix\nord_aura_posix.vcxproj">
       <Project>{b23268d6-75cd-4f51-b3a7-fbfce1552c7d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\app-simple\form\nord_app_simple_form.vcxproj">
+      <Project>{85dd443e-1930-4c2d-a917-200e09d871e8}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\app\acme\nord_acme.vcxproj">
       <Project>{ecb0620d-bfa8-4f9b-b2ad-9d9c20a44fe9}</Project>
@@ -266,11 +259,17 @@
     <ProjectReference Include="..\..\app\draw2d_cairo\nord_draw2d_cairo.vcxproj">
       <Project>{06207bc4-c08b-4a2d-b754-f3bd46ad3098}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\app\experience_tranquillum\nord_experience_tranquillum.vcxproj">
+      <Project>{33fb8539-2eb2-490c-ae30-a01880aa4093}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\app\folder_zip\nord_folder_zip.vcxproj">
       <Project>{74cd7e4f-a9f4-4c9c-b7ce-0d8765201f66}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\app\imaging_freeimage\nord_imaging_freeimage.vcxproj">
       <Project>{3c4a93d3-9b9b-4ea9-8bcf-a53be3a0f9b5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nord_app_complex_form.vcxproj">
+      <Project>{65837533-1a58-43fe-a4a8-96f1f5d044c6}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
