@@ -59,19 +59,19 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\operating-system\operating-system-windows\Common.props" />
+    <Import Project="..\..\..\..\operating-system\operating-system-windows\Common.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\operating-system\operating-system-windows\Common.props" />
+    <Import Project="..\..\..\..\operating-system\operating-system-windows\Common.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='basis|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\operating-system\operating-system-windows\Common.props" />
+    <Import Project="..\..\..\..\operating-system\operating-system-windows\Common.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='stage|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\operating-system\operating-system-windows\Common.props" />
+    <Import Project="..\..\..\..\operating-system\operating-system-windows\Common.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">
@@ -218,34 +218,34 @@
     <Image Include="icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\app-simple\drawing\simple_drawing.vcxproj">
+    <ProjectReference Include="..\..\..\app-simple\drawing\simple_drawing.vcxproj">
       <Project>{bfe8a4c4-1614-4ab7-b311-721c8daf1f6c}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\app\acme\acme.vcxproj">
+    <ProjectReference Include="..\..\..\app\acme\acme.vcxproj">
       <Project>{638b242f-0f21-41c3-9f66-724660046133}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\app\apex\apex.vcxproj">
+    <ProjectReference Include="..\..\..\app\apex\apex.vcxproj">
       <Project>{e000ffaf-392f-4e32-bf51-777ca238991f}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\app\aqua\aqua.vcxproj">
+    <ProjectReference Include="..\..\..\app\aqua\aqua.vcxproj">
       <Project>{1b06fe5f-f783-41a1-ac68-0e02880dbbac}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\app\aura\aura.vcxproj">
+    <ProjectReference Include="..\..\..\app\aura\aura.vcxproj">
       <Project>{e000ffaf-392f-4e32-bf51-fd7ed638991f}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\app\axis\axis.vcxproj">
+    <ProjectReference Include="..\..\..\app\axis\axis.vcxproj">
       <Project>{a2cbd4ed-ed0f-482b-9b16-f48f21c32835}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\app\base\base.vcxproj">
+    <ProjectReference Include="..\..\..\app\base\base.vcxproj">
       <Project>{a216abd4-26c4-4746-96b3-9d30ed28cf92}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\app\bred\bred.vcxproj">
+    <ProjectReference Include="..\..\..\app\bred\bred.vcxproj">
       <Project>{dfbf067f-aff9-4bd6-a5e1-72af984d1476}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\app\core\core.vcxproj">
+    <ProjectReference Include="..\..\..\app\core\core.vcxproj">
       <Project>{29c1eb5b-060e-4021-ae12-d1bcfb1b1359}</Project>
     </ProjectReference>
-    <ProjectReference Include="complex_drawing.vcxproj">
+    <ProjectReference Include="..\complex_drawing.vcxproj">
       <Project>{5b6ae0cb-c46e-40de-9b94-78e160d068a4}</Project>
     </ProjectReference>
   </ItemGroup>

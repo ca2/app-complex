@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{DB0DB48E-D598-4534-AC03-7177603F0937}</ProjectGuid>
+    <ProjectGuid>{E64AD1B5-1FE0-4236-9F93-30F6CBA088A2}</ProjectGuid>
     <RootNamespace>app-complex</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -59,19 +59,19 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\operating-system\operating-system-windows\Common.props" />
+    <Import Project="..\..\..\..\operating-system\operating-system-windows\Common.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\operating-system\operating-system-windows\Common.props" />
+    <Import Project="..\..\..\..\operating-system\operating-system-windows\Common.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='basis|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\operating-system\operating-system-windows\Common.props" />
+    <Import Project="..\..\..\..\operating-system\operating-system-windows\Common.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='stage|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\operating-system\operating-system-windows\Common.props" />
+    <Import Project="..\..\..\..\operating-system\operating-system-windows\Common.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">
@@ -111,9 +111,6 @@
       </LinkTimeCodeGeneration>
       <FixedBaseAddress>false</FixedBaseAddress>
     </Link>
-    <PreBuildEvent>
-      <Command>$(SolutionDir)..\..\..\operating-system\tool-windows\bin\application_build_helper $(ProjectDir) $(ProjectName)</Command>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">
     <ClCompile>
@@ -142,9 +139,6 @@
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)..\..\..\..\operating-system\storage-windows\$(PlatformName)\$(Configuration)\third\library\;$(SolutionDir)..\..\..\..\operating-system\storage-windows\$(PlatformName)\$(Configuration)\library\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
-    <PreBuildEvent>
-      <Command>$(SolutionDir)..\..\..\operating-system\tool-windows\bin\application_build_helper $(ProjectDir) $(ProjectName)</Command>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='basis|x64'">
     <ClCompile>
@@ -168,9 +162,6 @@
       </LinkTimeCodeGeneration>
       <FixedBaseAddress>false</FixedBaseAddress>
     </Link>
-    <PreBuildEvent>
-      <Command>$(SolutionDir)..\..\..\operating-system\tool-windows\bin\application_build_helper $(ProjectDir) $(ProjectName)</Command>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='stage|x64'">
     <ClCompile>
@@ -199,9 +190,6 @@
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)..\..\..\..\operating-system\storage-windows\$(PlatformName)\$(Configuration)\third\library\;$(SolutionDir)..\..\..\..\operating-system\storage-windows\$(PlatformName)\$(Configuration)\library\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
-    <PreBuildEvent>
-      <Command>$(SolutionDir)..\..\..\operating-system\tool-windows\bin\application_build_helper $(ProjectDir) $(ProjectName)</Command>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
@@ -218,35 +206,32 @@
     <Image Include="icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\app-simple\form\simple_form.vcxproj">
-      <Project>{b5c52981-89be-4faf-937b-764cb2c4cdb7}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\app\acme\acme.vcxproj">
+    <ProjectReference Include="..\..\..\app\acme\acme.vcxproj">
       <Project>{638b242f-0f21-41c3-9f66-724660046133}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\app\apex\apex.vcxproj">
+    <ProjectReference Include="..\..\..\app\apex\apex.vcxproj">
       <Project>{e000ffaf-392f-4e32-bf51-777ca238991f}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\app\aqua\aqua.vcxproj">
+    <ProjectReference Include="..\..\..\app\aqua\aqua.vcxproj">
       <Project>{1b06fe5f-f783-41a1-ac68-0e02880dbbac}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\app\aura\aura.vcxproj">
+    <ProjectReference Include="..\..\..\app\aura\aura.vcxproj">
       <Project>{e000ffaf-392f-4e32-bf51-fd7ed638991f}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\app\axis\axis.vcxproj">
+    <ProjectReference Include="..\..\..\app\axis\axis.vcxproj">
       <Project>{a2cbd4ed-ed0f-482b-9b16-f48f21c32835}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\app\base\base.vcxproj">
+    <ProjectReference Include="..\..\..\app\base\base.vcxproj">
       <Project>{a216abd4-26c4-4746-96b3-9d30ed28cf92}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\app\bred\bred.vcxproj">
+    <ProjectReference Include="..\..\..\app\bred\bred.vcxproj">
       <Project>{dfbf067f-aff9-4bd6-a5e1-72af984d1476}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\app\core\core.vcxproj">
+    <ProjectReference Include="..\..\..\app\core\core.vcxproj">
       <Project>{29c1eb5b-060e-4021-ae12-d1bcfb1b1359}</Project>
     </ProjectReference>
-    <ProjectReference Include="complex_form.vcxproj">
-      <Project>{9a40d3d5-9296-45d8-9842-de7f6eb46842}</Project>
+    <ProjectReference Include="..\app_complex_video_capture.vcxproj">
+      <Project>{dfecda74-728a-4c86-9f91-dc4272e8a116}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

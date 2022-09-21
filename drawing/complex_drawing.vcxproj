@@ -931,7 +931,6 @@
     <ClCompile Include="_.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="application.h" />
     <ClInclude Include="_.h" />
     <ClInclude Include="pane_impact.h" />
     <ClInclude Include="framework.h" />
