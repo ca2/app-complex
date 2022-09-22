@@ -124,10 +124,7 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="framework.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="_app_complex_drawing.cpp">
+    <ClCompile Include="__implement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
