@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "base/user/simple/frame_window.h"
+#include "base/user/simple/main_frame.h"
 
 
 namespace app_complex_video_capture
@@ -9,7 +9,7 @@ namespace app_complex_video_capture
 
 
    class CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE main_frame :
-      virtual public simple_frame_window
+      virtual public main_frame
    {
    public:
 
