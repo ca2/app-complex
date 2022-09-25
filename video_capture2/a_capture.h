@@ -200,7 +200,7 @@ public:
       HRESULT hr = S_OK;
       *ppEngine = nullptr;
 
-      CaptureManager *pEngine = new CaptureManager(papp, hwndEvent);
+      CaptureManager *pEngine = memory_new CaptureManager(papp, hwndEvent);
       if (pEngine == nullptr)
       {
          hr = E_OUTOFMEMORY;

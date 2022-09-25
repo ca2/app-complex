@@ -222,7 +222,7 @@ bool HDevice::SetupEncodedVideoCapture(IBaseFilter *filter,
 	pci.expectedMajorType = mtVideo->majortype;
 	pci.expectedSubType   = mtVideo->subtype;
 
-	videoCapture = new CaptureFilter(pci);
+	videoCapture = memory_new CaptureFilter(pci);
 	videoFilter  = demuxer;
 
 	if (!!encoder && config.name.find(L"IT9910") != std::string::npos) {

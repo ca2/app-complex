@@ -180,7 +180,7 @@ namespace notify_drawing
 //::acme::library * app_simple_notify_drawing_get_new_library()
 //{
 //
-//   return new ::apex::single_application_library < ::notify_drawing::application >("app-simple/notify_drawing");
+//   return memory_new ::apex::single_application_library < ::notify_drawing::application >("app-simple/notify_drawing");
 //
 //}
 //

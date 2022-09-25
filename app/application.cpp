@@ -109,7 +109,7 @@ namespace simple_app
 //::acme::library * app_simple_drawing_get_new_library()
 //{
 //
-//   return new ::apex::single_application_library < ::simple_app::application >("app-simple/drawing");
+//   return memory_new ::apex::single_application_library < ::simple_app::application >("app-simple/drawing");
 //
 //}
 //

@@ -1102,7 +1102,7 @@ static void *CreateDShowInput(aura_data *settings, video_enc *source)
 	DShowInput *dshow = nullptr;
 
 	try {
-		dshow = new DShowInput(source, settings);
+		dshow = memory_new DShowInput(source, settings);
 	} catch (const ::string &error) {
 		blog(LOG_FORMATTED_ERROR, "Could not create device '%s': %s",
 				obs_source_get_name(source), error);
@@ -1796,7 +1796,7 @@ static obs_properties_t *GetDShowProperties(void *obj)
 {
 	DShowInput *input = reinterpret_cast<DShowInput*>(obj);
 	obs_properties_t *ppts = obs_properties_create();
-	PropertiesData *data = new PropertiesData;
+	PropertiesData *data = memory_new PropertiesData;
 
 	data->input = input;
 

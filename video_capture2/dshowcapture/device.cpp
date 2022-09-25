@@ -326,7 +326,7 @@ bool HDevice::SetupVideoCapture(IBaseFilter *filter, VideoConfig &config)
 	else
 		info.expectedSubType = videoMediaType->subtype;
 
-	videoCapture = new CaptureFilter(info);
+	videoCapture = memory_new CaptureFilter(info);
 	videoFilter  = filter;
 
 	graph->AddFilter(videoCapture, L"Video Capture Filter");
@@ -454,7 +454,7 @@ bool HDevice::SetupAudioCapture(IBaseFilter *filter, AudioConfig &config)
 	info.expectedMajorType = audioMediaType->majortype;
 	info.expectedSubType   = audioMediaType->subtype;
 
-	audioCapture = new CaptureFilter(info);
+	audioCapture = memory_new CaptureFilter(info);
 	audioFilter  = filter;
 	audioConfig  = config;
 

@@ -141,7 +141,7 @@ static inline void *CreateDShowEncoder(video_data *settings,
 	DShowEncoder *encoder = nullptr;
 
 	try {
-		encoder = new DShowEncoder(context, device);
+		encoder = memory_new DShowEncoder(context, device);
 		UpdateDShowEncoder(encoder, settings);
 
 	} catch (const ::string &error) {

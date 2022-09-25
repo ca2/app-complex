@@ -22,7 +22,7 @@ HRESULT CThumbnail::CreateInstance(
       return E_POINTER;
    }
 
-   CThumbnail *pPlayer = new  CThumbnail(hVideo, hEvent);
+   CThumbnail *pPlayer = memory_new  CThumbnail(hVideo, hEvent);
 
    // The CPlayer constructor sets the ref count to 1.
 

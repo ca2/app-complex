@@ -6,7 +6,7 @@
 int __implement()
 {
 
-   auto papp = new app_complex_video_capture::application();
+   auto papp = memory_new app_complex_video_capture::application();
 
    int iExitCode = papp->__implement();
 

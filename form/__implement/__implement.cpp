@@ -6,7 +6,7 @@
 int __implement()
 {
 
-   auto papp = new app_complex_form::application();
+   auto papp = memory_new app_complex_form::application();
 
    int iExitCode = papp->__implement();
 

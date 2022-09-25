@@ -202,7 +202,7 @@ namespace simple_os_drag_and_drop
 //::acme::library * app_simple_drag_and_drop_get_new_library()
 //{
 //
-//   return new ::apex::single_application_library < ::simple_os_drag_and_drop::application >("app-simple/drag_and_drop");
+//   return memory_new ::apex::single_application_library < ::simple_os_drag_and_drop::application >("app-simple/drag_and_drop");
 //
 //}
 //

@@ -165,7 +165,7 @@ CaptureManager::InitializeCaptureManager(HWND hwndThumbnail, IMFCaptureEngineOnS
       goto Exit;
    }
 
-   m_pCallback = new CaptureEngineCB(get_app(), m_hwndEvent);
+   m_pCallback = memory_new CaptureEngineCB(get_app(), m_hwndEvent);
    if (m_pCallback == nullptr)
    {
       hr = E_OUTOFMEMORY;

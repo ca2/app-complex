@@ -215,7 +215,7 @@ STDMETHODIMP CapturePin::EnumMediaTypes(IEnumMediaTypes **ppEnum)
 {
 	PrintFunc(L"CapturePin::EnumMediaTypes");
 
-	*ppEnum = new CaptureEnumMediaTypes(this);
+	*ppEnum = memory_new CaptureEnumMediaTypes(this);
 	if (!*ppEnum)
 		return E_OUTOFMEMORY;
 
@@ -387,8 +387,8 @@ public:
 CaptureFilter::CaptureFilter(const PinCaptureInfo &info)
 	: refCount (0),
 	  state    (State_Stopped),
-	  pin      (new CapturePin(this, info)),
-	  misc     (new MiscFlagsHandler)
+	  pin      (memory_new CapturePin(this, info)),
+	  misc     (memory_new MiscFlagsHandler)
 {
 }
 
@@ -497,7 +497,7 @@ STDMETHODIMP CaptureFilter::EnumPins(IEnumPins **ppEnum)
 {
 	PrintFunc(L"CaptureFilter::EnumPins");
 
-	*ppEnum = new CaptureEnumPins(this, nullptr);
+	*ppEnum = memory_new CaptureEnumPins(this, nullptr);
 	return (*ppEnum == nullptr) ? E_OUTOFMEMORY : NOERROR;
 }
 
@@ -611,7 +611,7 @@ STDMETHODIMP CaptureEnumPins::Reset()
 
 STDMETHODIMP CaptureEnumPins::Clone(IEnumPins **ppEnum)
 {
-	*ppEnum = new CaptureEnumPins(filter, this);
+	*ppEnum = memory_new CaptureEnumPins(filter, this);
 	return (*ppEnum == nullptr) ? E_OUTOFMEMORY : NOERROR;
 }
 
@@ -690,7 +690,7 @@ STDMETHODIMP CaptureEnumMediaTypes::Reset()
 
 STDMETHODIMP CaptureEnumMediaTypes::Clone(IEnumMediaTypes **ppEnum)
 {
-	*ppEnum = new CaptureEnumMediaTypes(pin);
+	*ppEnum = memory_new CaptureEnumMediaTypes(pin);
 	return (*ppEnum == nullptr) ? E_OUTOFMEMORY : NOERROR;
 }
 

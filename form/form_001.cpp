@@ -107,7 +107,7 @@ namespace app_complex_form
 //
 //      m_pbuttonSend->add_handler(this);
 //
-//      m_pstill->set_window_text("Enter new text:");
+//      m_pstill->set_window_text("Enter memory_new text:");
 //
 //      m_pstillReceiver->create_control(this, "still");
 //
