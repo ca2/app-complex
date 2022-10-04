@@ -663,7 +663,7 @@ struct PropertiesData {
 
 static inline bool ConvertRes(int &cx, int &cy, const ::string &res)
 {
-	return sscanf(res, "%dx%d", &cx, &cy) == 2;
+	return sscanf(res, "%Δx%d", &cx, &cy) == 2;
 }
 
 static inline bool FormatMatches(VideoFormat left, VideoFormat right)
@@ -940,7 +940,7 @@ bool DShowInput::UpdateVideoConfig(aura_data *settings)
 	blog(LOG_INFO, "[DShow Device: '%s'] settings updated: \n"
 			"\tvideo device: %s\n"
 			"\tvideo path: %s\n"
-			"\tresolution: %dx%d\n"
+			"\tresolution: %Δx%d\n"
 			"\tfps: %0.2f (interval: %lld)\n"
 			"\tformat: %s",
 			obs_source_get_name(source),

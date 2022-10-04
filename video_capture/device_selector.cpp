@@ -134,7 +134,7 @@ namespace app_complex_video_capture
 
          auto & pitem = m_itemmap[pdevice];
 
-         m_useritema.erase(pitem);
+         m_pitema->erase(pitem);
 
          m_itemmap.erase_key(pdevice);
 
