@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "document.h"
 #include "impact.h"
 
@@ -77,8 +77,7 @@ namespace app_complex_form
 
       }
 
-      string strPath = payloadFile.get_file_path();
-
+      string strPath = payloadFile.file_path();
 
       return true;
 

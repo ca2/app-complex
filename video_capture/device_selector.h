@@ -1,4 +1,4 @@
-// Created by camilo on 2022-02-19 12:08 <3ThomasBorregaardSørensen!!
+﻿// Created by camilo on 2022-02-19 12:08 <3ThomasBorregaardSørensen!!
 #pragma once
 
 
@@ -14,7 +14,7 @@ namespace app_complex_video_capture
    {
    public:
 
-      map < ::pointer<::video_input::device> ::pointer<::item>>_itemmap;
+      map < ::pointer<::video_input::device>, ::pointer<::item>> m_itemmap;
 
 
       device_selector();

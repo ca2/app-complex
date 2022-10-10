@@ -239,7 +239,7 @@ namespace app_complex_drawing
 
          }
 
-         __refer(m_pimpactDrawing, m_pimpactdata->m_pplaceholder->get_hold());
+         m_pimpactDrawing = m_pimpactdata->m_pplaceholder->get_hold();
 
       }
 
