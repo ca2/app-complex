@@ -14,7 +14,7 @@ namespace app_complex_video_capture
 
 
 
-      __pointer(::video_input::render)    m_prender;
+      ::pointer<::video_input::render>   m_prender;
 
 
 

@@ -28,7 +28,7 @@ namespace app_complex_video_capture
 
    void edit_impact::on_message_create(::message::message * pmessage)
    {
-      __pointer(::message::create) pcreate(pmessage);
+      ::pointer<::message::create>pcreate(pmessage);
 
       pcreate->previous();
 

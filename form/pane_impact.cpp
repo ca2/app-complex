@@ -145,7 +145,7 @@ namespace app_complex_form
       if(::str().begins_eat_ci(strId, "form"))
       {
 
-         __pointer(form) pform;
+         ::pointer<form>pform;
 
          index iId = atoi(strId);
 
@@ -212,7 +212,7 @@ namespace app_complex_form
 
                   //int iCheck = atoi(strCheck);
 
-                  //__pointer(::user::check) pcheck = ptopic->user_interaction();
+                  //::pointer<::user::check>pcheck = ptopic->user_interaction();
 
                }
 

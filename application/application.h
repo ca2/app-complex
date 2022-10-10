@@ -14,7 +14,7 @@ namespace simple_application
 
 
       ::user::document *                              m_pdocMenu;
-      __composite(::user::single_document_template)   m_ptemplateSimpleDrawingMain;
+      ::pointer<::user::single_document_template>  m_ptemplateSimpleDrawingMain;
       pane_impact *                                     m_ppaneimpact;
 
       application();

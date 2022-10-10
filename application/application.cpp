@@ -52,7 +52,7 @@ namespace simple_application
                                __type(main_frame),
                                __type(impact)));
 
-      __compose(m_ptemplateSimpleDrawingMain, pdoctemplate);
+      __construct(m_ptemplateSimpleDrawingMain, pdoctemplate);
 
       add_document_template(pdoctemplate);
 

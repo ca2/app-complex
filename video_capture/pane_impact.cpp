@@ -139,7 +139,7 @@ namespace app_complex_video_capture
 
                string strCheck = "video_input_" + strId;
 
-               __pointer(::user::interaction) pcheck = pimpact->get_child_by_id(strCheck);
+               ::pointer<::user::interaction>pcheck = pimpact->get_child_by_id(strCheck);
 
                pcheck->add_handler(this);
 

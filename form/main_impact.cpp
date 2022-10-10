@@ -124,7 +124,7 @@ namespace app_complex_form
 
       }
 
-//      __pointer(::userex::top_edit_impact) peditview = get_child_by_id("top_edit_impact");
+//      ::pointer<::userex::top_edit_impact>peditview = get_child_by_id("top_edit_impact");
 //
 //      if(peditview.is_set())
 //      {

@@ -36,7 +36,7 @@ namespace app_complex_form
 //            //            get_task()->m_bTemporary = true;
 //            string strMatter = pcontext->m_papexcontext->dir().matter("popup_lyricview.xml");
 //            ::file::path path = pcontext->m_papexcontext->defer_process_path(strMatter);
-//            //__pointer(::message::mouse) p=pmouse->
+//            //::pointer<::message::mouse>p=pmouse->
 //            //main_async([this,p]()
 //            //{
 //
@@ -121,7 +121,7 @@ namespace app_complex_form
    void form::on_message_create(::message::message * pmessage)
    {
 
-      __pointer(::message::create) pcreate(pmessage);
+      ::pointer<::message::create>pcreate(pmessage);
 
       pcreate->previous();
 

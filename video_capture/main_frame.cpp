@@ -36,7 +36,7 @@ namespace app_complex_video_capture
    void main_frame::_001OnCaptureEvent(::message::message * pmessage)
    {
 
-      __pointer(::user::message) pusermessage(pmessage);
+      ::pointer<::user::message>pusermessage(pmessage);
 
       //if (m_pimpact != nullptr)
       //{

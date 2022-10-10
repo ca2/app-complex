@@ -31,7 +31,7 @@ namespace notify_drawing
       virtual int64_t decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 #endif
 
-      virtual __pointer(simple_drawing::impact) create_simple_drawing_impact(::user::impact* pimpactParent, ::user::impact_data* pimpactdata) override;
+      virtual ::pointer<simple_drawing::impact>create_simple_drawing_impact(::user::impact* pimpactParent, ::user::impact_data* pimpactdata) override;
 
    };
 

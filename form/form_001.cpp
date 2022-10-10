@@ -72,7 +72,7 @@ namespace app_complex_form
    void form_001::on_message_create(::message::message * pmessage)
    {
 
-      __pointer(::message::create) pcreate(pmessage);
+      ::pointer<::message::create>pcreate(pmessage);
 
       pcreate->previous();
 
@@ -83,15 +83,15 @@ namespace app_complex_form
 
       }
 
-//      __compose_new(m_pstill);
+//      __construct_new(m_pstill);
 //
-//      __compose_new(m_pedit);
+//      __construct_new(m_pedit);
 //
-//      __compose_new(m_pbuttonClear);
+//      __construct_new(m_pbuttonClear);
 //
-//      __compose_new(m_pbuttonSend);
+//      __construct_new(m_pbuttonSend);
 //
-//      __compose_new(m_pstillReceiver);
+//      __construct_new(m_pstillReceiver);
 //
 //      m_pstill->create_control(this, "still");
 //

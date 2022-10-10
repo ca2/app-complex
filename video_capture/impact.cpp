@@ -57,7 +57,7 @@ namespace app_complex_video_capture
    void impact::on_message_create(::message::message * pmessage)
    {
 
-      __pointer(::message::create) pcreate(pmessage);
+      ::pointer<::message::create>pcreate(pmessage);
 
       pcreate->previous();
 
@@ -156,7 +156,7 @@ namespace app_complex_video_capture
       if(ptopic->m_atom == INITIAL_UPDATE)
       {
 
-         __pointer(::userex::pane_tab_impact) ppaneimpact = get_typed_parent < ::userex::pane_tab_impact >();
+         ::pointer<::userex::pane_tab_impact>ppaneimpact = get_typed_parent < ::userex::pane_tab_impact >();
          //if(ppaneimpact.is_set())
          //{
          //   ppaneimpact->m_pflagview = this;

@@ -15,8 +15,8 @@ namespace app_complex_video_capture
    public:
 
       
-      __pointer(video_input::video_input)    m_pvideoinput;
-      __pointer(video_input::device)         m_pvideoinputdevice;
+      ::pointer<video_input::video_input>   m_pvideoinput;
+      ::pointer<video_input::device>        m_pvideoinputdevice;
 
 
 

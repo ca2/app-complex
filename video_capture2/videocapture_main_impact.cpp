@@ -68,7 +68,7 @@ namespace app_complex_video_capture
 
       }
 
-      __pointer(edit_impact) peditview = get_child_by_id("top_edit_impact");
+      ::pointer<edit_impact>peditview = get_child_by_id("top_edit_impact");
 
       if(peditview.is_set())
       {

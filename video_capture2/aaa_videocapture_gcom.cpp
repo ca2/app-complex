@@ -61,7 +61,7 @@ namespace video_capture
    void gcom::on_message_create(::message::message * pmessage)
    {
 
-      __pointer(::message::create) pcreate(pmessage);
+      ::pointer<::message::create>pcreate(pmessage);
 
       m_atom = "videocapture_gcom";
 

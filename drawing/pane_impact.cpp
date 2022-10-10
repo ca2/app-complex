@@ -1,10 +1,11 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "pane_impact.h"
 #include "application.h"
 #include "base/user/user/document.h"
 #include "app-simple/drawing/render.h"
 #include "app-simple/drawing/impact.h"
 #include "base/user/user/tab_pane.h"
+#include "acme/graphics/draw2d/_binary_stream.h"
 
 
 namespace app_complex_drawing
@@ -217,7 +218,7 @@ namespace app_complex_drawing
 
       }
 
-      if (::str().begins(get_impact_id().to_string(), "drawing"))
+      if (::str().begins(get_impact_id(), "drawing"))
       {
 
          auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);

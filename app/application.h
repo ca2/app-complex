@@ -12,7 +12,7 @@ namespace simple_app
    public:
 
 
-      __reference(window)                             m_pwindow;
+      ::pointer<window>                            m_pwindow;
 
 
       application();

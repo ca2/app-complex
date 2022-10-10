@@ -11,7 +11,7 @@ namespace simple_os_drag_and_drop
    public:
 
 
-      __pointer(simple_os_drag_and_drop)       m_psimpleosdraganddrop;
+      ::pointer<simple_os_drag_and_drop>      m_psimpleosdraganddrop;
 
 
       impact();

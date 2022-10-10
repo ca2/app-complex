@@ -61,7 +61,7 @@ namespace app_complex_video_capture
    void device_selector::on_message_create(::message::message * pmessage)
    {
 
-      __pointer(::message::create) pcreate(pmessage);
+      ::pointer<::message::create>pcreate(pmessage);
 
       pcreate->previous();
 
@@ -106,7 +106,7 @@ namespace app_complex_video_capture
 
       }
 
-      __pointer_array(::video_input::device) devicea;
+      pointer_array < ::video_input::device > devicea;
 
       for (auto & pair : m_itemmap)
       {
@@ -207,7 +207,7 @@ namespace app_complex_video_capture
       if (ptopic->m_atom == INITIAL_UPDATE)
       {
 
-         __pointer(::userex::pane_tab_impact) ppaneimpact = get_typed_parent < ::userex::pane_tab_impact >();
+         ::pointer<::userex::pane_tab_impact>ppaneimpact = get_typed_parent < ::userex::pane_tab_impact >();
          //if(ppaneimpact.is_set())
          //{
          //   ppaneimpact->m_pflagview = this;
