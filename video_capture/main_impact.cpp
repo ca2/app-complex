@@ -1,9 +1,9 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "main_impact.h"
 #include "impact.h"
 #include "edit_impact.h"
 #include "application.h"
-
+#include "apex/database/_binary_stream.h"
 
 
 namespace app_complex_video_capture
@@ -82,7 +82,7 @@ namespace app_complex_video_capture
 
          string strText;
 
-         get_app()->data_get("cur_text",strText);
+         get_app()->datastream()->get("cur_text",strText);
 
          peditview->_001SetText(strText, ::e_source_initialize);
 

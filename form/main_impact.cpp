@@ -131,7 +131,7 @@ namespace app_complex_form
 //
 //         string strText;
 //
-//         papp->data_get("cur_text",strText);
+//         papp->datastream()->get("cur_text",strText);
 //
 //         peditview->_001SetText(strText, ::e_source_initialize);
 //

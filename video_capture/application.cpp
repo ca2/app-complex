@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "application.h"
 #include "frame.h"
 #include "main_frame.h"
@@ -10,6 +10,7 @@
 #include "main_impact.h"
 #include "top_impact.h"
 #include "toggle_impact.h"
+#include "apex/database/_binary_stream.h"
 #include "app-core/video_input/video_input.h"
 #include "app-core/video_input/device.h"
 #include "base/user/user/single_document_template.h"
@@ -103,7 +104,9 @@ namespace app_complex_video_capture
 
       m_pvideoinput->update_device_list();
 
-      string strDevice = data_get("device").get_string();
+      string strDevice;
+      
+      datastream()->get("device", strDevice);
 
       set_current_video_input_device(strDevice);
 
@@ -254,13 +257,13 @@ namespace app_complex_video_capture
       if (::is_set(pdevice))
       {
 
-         data_set("device", pdevice->get_id2());
+         datastream()->set("device", pdevice->get_id2());
 
       }
       else
       {
 
-         data_set("device", "");
+         datastream()->set("device", "");
 
       }
 

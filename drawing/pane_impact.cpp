@@ -1,11 +1,12 @@
 ﻿#include "framework.h"
 #include "pane_impact.h"
 #include "application.h"
+#include "acme/graphics/draw2d/_binary_stream.h"
+#include "apex/database/_binary_stream.h"
 #include "base/user/user/document.h"
 #include "app-simple/drawing/render.h"
 #include "app-simple/drawing/impact.h"
 #include "base/user/user/tab_pane.h"
-#include "acme/graphics/draw2d/_binary_stream.h"
 
 
 namespace app_complex_drawing
@@ -152,7 +153,7 @@ namespace app_complex_drawing
 
                auto papp = get_app();
 
-               papp->data_set(strId, m_pimpactDrawing->m_prender->m_hlsText);
+               papp->datastream()->set(strId, m_pimpactDrawing->m_prender->m_hlsText);
 
             }
 

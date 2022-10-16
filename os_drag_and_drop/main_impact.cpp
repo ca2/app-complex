@@ -92,7 +92,7 @@ namespace simple_os_drag_and_drop
 //
 //         string strText;
 //
-//         papp->data_get("cur_text",strText);
+//         papp->datastream()->get("cur_text",strText);
 //
 //         peditview->_001SetText(strText, ::e_source_initialize);
 //

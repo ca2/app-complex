@@ -119,7 +119,7 @@ namespace app_complex_form
 //
 //      auto papp = get_app();
 //
-//      strInitialText = papp->data_get("last_text");
+//      strInitialText = papp->datastream()->get("last_text");
 //
 //      m_pedit->_001SetText(strInitialText, ::e_source_initialize);
 //
@@ -213,7 +213,7 @@ namespace app_complex_form
 //
 //               }
 //
-//               papp->data_set("last_text", strText);
+//               papp->datastream()->set("last_text", strText);
 //
 //            }
 //
