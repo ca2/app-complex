@@ -40,17 +40,17 @@ void TransformImage_NV12(
 );
 
 
-RECTANGLE_I32    LetterBoxRect(const RECTANGLE_I32& rcSrc, const RECTANGLE_I32& rcDst);
-RECTANGLE_I32    CorrectAspectRatio(const RECTANGLE_I32& src, const MFRatio& srcPAR);
+RECTANGLE_I32    LetterBoxRect(const ::rectangle_i32 &rcSrc, const ::rectangle_i32 &rcDst);
+RECTANGLE_I32    CorrectAspectRatio(const ::rectangle_i32 &src, const MFRatio& srcPAR);
 HRESULT GetDefaultStride(IMFMediaType *pType, ::i32 *plStride);
 
 
-inline ::i32 Width(const RECTANGLE_I32& r)
+inline ::i32 Width(const ::rectangle_i32 &r)
 {
    return rectangle.right - rectangle.left;
 }
 
-inline ::i32 Height(const RECTANGLE_I32& r)
+inline ::i32 Height(const ::rectangle_i32 &r)
 {
    return rectangle.bottom - rectangle.top;
 }
@@ -905,7 +905,7 @@ void TransformImage_NV12(
 //
 //-------------------------------------------------------------------
 
-RECTANGLE_I32    LetterBoxRect(const RECTANGLE_I32& rcSrc, const RECTANGLE_I32& rcDst)
+RECTANGLE_I32    LetterBoxRect(const ::rectangle_i32 &rcSrc, const ::rectangle_i32 &rcDst)
 {
    // figure out src/dest scale ratios
    int iSrcWidth = Width(rcSrc);
@@ -956,7 +956,7 @@ RECTANGLE_I32    LetterBoxRect(const RECTANGLE_I32& rcSrc, const RECTANGLE_I32& 
 // is stretched to 720 x 540. 
 //-----------------------------------------------------------------------------
 
-RECTANGLE_I32 CorrectAspectRatio(const RECTANGLE_I32& src, const MFRatio& srcPAR)
+RECTANGLE_I32 CorrectAspectRatio(const ::rectangle_i32 &src, const MFRatio& srcPAR)
 {
    // Start with a rectangle_i32 the same size_i32 as src, but offset to the origin (0,0).
    RECTANGLE_I32 rc = { 0, 0, src.right - src.left, src.bottom - src.top };
