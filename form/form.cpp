@@ -1,5 +1,6 @@
 ﻿#include "framework.h"
 #include "form.h"
+#include "apex/filesystem/filesystem/file_context.h"
 #include "aura/graphics/draw2d/graphics.h"
 #include "aura/message/user.h"
 #include "aura/platform/context.h"
