@@ -5,11 +5,11 @@ namespace video_capture
 {
 
 
-   font_impact::font_impact(::object * pobject):
-      object(pobject),
-      ::user::split_layout(pobject),
-      ::user::split_impact(pobject),
-      place_holder_container(pobject)
+   font_impact::font_impact(::particle * pparticle):
+      object(pparticle),
+      ::user::split_layout(pparticle),
+      ::user::split_impact(pparticle),
+      place_holder_container(pparticle)
    {
 
       m_pimpact = nullptr;

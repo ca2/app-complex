@@ -86,15 +86,15 @@ namespace app_complex_video_capture
 
 #if defined(MACOS)
 
-      auto pfactory = m_psystem->factory("video_input", "avfoundation");
+      auto pfactory = acmesystem()->factory("video_input", "avfoundation");
 
 #elif defined(LINUX)
 
-      auto pfactory = m_psystem->factory("video_input", "video_for_linux");
+      auto pfactory = acmesystem()->factory("video_input", "video_for_linux");
 
 #else
 
-      auto pfactory = m_psystem->factory("video_input", "media_foundation");
+      auto pfactory = acmesystem()->factory("video_input", "media_foundation");
 
 #endif
 

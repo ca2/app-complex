@@ -74,7 +74,7 @@ namespace helloworld
 
 
 extern "C"
-::acme::library * app_simple_helloworld_get_new_library(::object * pobject)
+::acme::library * app_simple_helloworld_get_new_library(::particle * pparticle)
 {
 
    return memory_new ::apex::single_application_library < ::helloworld::application >(papp, "app-simple/helloworld");

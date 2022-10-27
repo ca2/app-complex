@@ -15,7 +15,7 @@ namespace video_capture
       ::user::font_list_impact *      m_pimpact;
 
 
-      font_impact(::object * pobject);
+      font_impact(::particle * pparticle);
       virtual ~font_impact();
 
 

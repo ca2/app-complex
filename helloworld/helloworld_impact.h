@@ -14,16 +14,16 @@ namespace helloworld
    public:
 
 
-      impact(::object * pobject);
+      impact(::particle * pparticle);
       virtual ~impact();
 
-      void assert_ok() const override;
-      void dump(dump_context & dumpcontext) const override;
+//      void assert_ok() const override;
+//      void dump(dump_context & dumpcontext) const override;
 
 
       virtual void install_message_handling(::message::dispatch * pdispatch);
 
-      virtual void on_update(::user::impact * pimpact, ::user::e_update eupdate, ::object * pobject) override;
+      virtual void on_update(::user::impact * pimpact, ::user::e_update eupdate, ::particle * pparticle) override;
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
 

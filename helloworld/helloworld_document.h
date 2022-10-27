@@ -9,7 +9,7 @@ namespace helloworld
    public:
 
 
-      document(::object * pobject);
+      document(::particle * pparticle);
 	   virtual ~document();
 
       

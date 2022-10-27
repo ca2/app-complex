@@ -126,7 +126,7 @@ class CaptureManager :
       HWND m_hwnd;
 
    public:
-      CaptureEngineCB(::object * pobject, HWND hwnd) : ::object(pobject), m_hwnd(hwnd), m_fSleeping(false), m_pManager(nullptr) {}
+      CaptureEngineCB(::particle * pparticle, HWND hwnd) : ::object(pparticle), m_hwnd(hwnd), m_fSleeping(false), m_pManager(nullptr) {}
 
       // IUnknown
       STDMETHODIMP QueryInterface(REFIID riid, void** ppv);
@@ -158,8 +158,8 @@ class CaptureManager :
    HANDLE                  m_hpwrRequest;
    bool                    m_fPowerRequestSet;
 
-   CaptureManager(::object * pobject, HWND hwnd) :
-      ::object(pobject),
+   CaptureManager(::particle * pparticle, HWND hwnd) :
+      ::object(pparticle),
       m_hwndEvent(hwnd), m_hwndThumbnail(nullptr),m_pcallback(nullptr), m_pEngine(nullptr), m_pThumbnail(nullptr),
       m_pCallback(nullptr), m_bRecording(false), m_bThumbnailing(false), m_bPhotoPending(false), m_errorID(0), m_hEvent(nullptr)
       , m_hpwrRequest(INVALID_HANDLE_VALUE)
@@ -195,7 +195,7 @@ public:
       DestroyCaptureEngine();
    }
 
-   static HRESULT CreateInstance(::object * pobject, HWND hwndEvent, CaptureManager **ppEngine)
+   static HRESULT CreateInstance(::particle * pparticle, HWND hwndEvent, CaptureManager **ppEngine)
    {
       HRESULT hr = S_OK;
       *ppEngine = nullptr;

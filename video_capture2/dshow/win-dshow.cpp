@@ -198,30 +198,30 @@ public:
 };
 
 class CriticalSection {
-	CRITICAL_SECTION ::mutex;
+	CRITICAL_SECTION ::pointer < ::mutex >;
 
 public:
-	inline CriticalSection()  {InitializeCriticalSection(&::mutex);}
-	inline ~CriticalSection() {DeleteCriticalSection(&::mutex);}
+	inline CriticalSection()  {InitializeCriticalSection(&::pointer < ::mutex >);}
+	inline ~CriticalSection() {DeleteCriticalSection(&::pointer < ::mutex >);}
 
-	inline operator CRITICAL_SECTION*() {return &::mutex;}
+	inline operator CRITICAL_SECTION*() {return &::pointer < ::mutex >;}
 };
 
 class CriticalScope {
-	CriticalSection &::mutex;
+	CriticalSection &::pointer < ::mutex >;
 
 	CriticalScope() = delete;
 	CriticalScope& operator=(CriticalScope &cs) = delete;
 
 public:
-	inline CriticalScope(CriticalSection &mutex_) : ::mutex(mutex_)
+	inline CriticalScope(CriticalSection &mutex_) : ::pointer < ::mutex >(mutex_)
 	{
-		EnterCriticalSection(::mutex);
+		EnterCriticalSection(::pointer < ::mutex >);
 	}
 
 	inline ~CriticalScope()
 	{
-		LeaveCriticalSection(::mutex);
+		LeaveCriticalSection(::pointer < ::mutex >);
 	}
 };
 
@@ -257,12 +257,12 @@ struct DShowInput {
 
 //	WinHandle semaphore;
 //	WinHandle thread;
-	CriticalSection ::mutex;
+	CriticalSection ::pointer < ::mutex >;
 	vector<Action> actions;
 
 	inline void QueueAction(Action action)
 	{
-		CriticalScope scope(::mutex);
+		CriticalScope scope(::pointer < ::mutex >);
 		actions.push_back(action);
 //		ReleaseSemaphore(semaphore, 1, nullptr);
 	}
@@ -295,7 +295,7 @@ struct DShowInput {
 	inline ~DShowInput()
 	{
 		{
-			CriticalScope scope(::mutex);
+			CriticalScope scope(::pointer < ::mutex >);
 			actions.resize(1);
 			actions[0] = Action::Shutdown;
 		}
@@ -366,7 +366,7 @@ void DShowInput::DShowLoop()
 
 		Action action = Action::None;
 		{
-			CriticalScope scope(::mutex);
+			CriticalScope scope(::pointer < ::mutex >);
 			if (actions.size()) {
 				action = actions.front();
 				actions.erase(actions.begin());
