@@ -226,15 +226,15 @@ namespace app_complex_video_capture
 
       auto pcontext = m_pcontext;
 
-      str = pcontext->m_papexcontext->file().as_string("matter://menu.html");
+      str = pcontext->m_papexcontext->file()->as_string("matter://menu.html");
 
       str.find_replace("***bilbo***", strBilbo);
 
       ::file::path path;
 
-      path = pcontext->m_papexcontext->dir().appdata() / "videocapture_menu.html";
+      path = pcontext->m_papexcontext->dir()->appdata() / "videocapture_menu.html";
 
-      pcontext->m_papexcontext->file().put_text(path, str);
+      pcontext->m_papexcontext->file()->put_text(path, str);
 
       return path;
 

@@ -20,7 +20,7 @@ namespace video_capture
       virtual ~gcom();
 
 
-//      void assert_ok() const override;
+//      // void assert_ok() const override;
 //      void dump(dump_context & dumpcontext) const override;
 
       ::e_status initialize(::particle * pparticle) override;

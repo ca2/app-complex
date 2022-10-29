@@ -36,7 +36,7 @@ namespace app_complex_form
 //         {
 //            //            bool bTemporary =get_task()->m_bTemporary;
 //            //            get_task()->m_bTemporary = true;
-//            string strMatter = pcontext->m_papexcontext->dir().matter("popup_lyricview.xml");
+//            string strMatter = pcontext->m_papexcontext->dir()->matter("popup_lyricview.xml");
 //            ::file::path path = pcontext->m_papexcontext->defer_process_path(strMatter);
 //            //::pointer<::message::mouse>p=pmouse->
 //            //main_async([this,p]()
@@ -146,7 +146,7 @@ namespace app_complex_form
 
       auto puser = user()->m_pbaseuser;
 
-      auto strXml = context()->file().as_string("matter://form/form.menu");
+      auto strXml = context()->file()->as_string("matter://form/form.menu");
 
       puser->track_popup_xml_menu(this, strXml, 0, point);
 
