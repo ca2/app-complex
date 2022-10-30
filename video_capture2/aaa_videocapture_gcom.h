@@ -21,7 +21,7 @@ namespace video_capture
 
 
 //      // void assert_ok() const override;
-//      void dump(dump_context & dumpcontext) const override;
+//      // void dump(dump_context & dumpcontext) const override;
 
       ::e_status initialize(::particle * pparticle) override;
 

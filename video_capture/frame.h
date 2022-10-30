@@ -19,7 +19,7 @@ namespace app_complex_video_capture
 
 
 	   // void assert_ok() const override;
-	   void dump(dump_context & dumpcontext) const override;
+	   // void dump(dump_context & dumpcontext) const override;
 
 
       ::user::enum_translucency get_translucency(::user::style * pstyle) const override;

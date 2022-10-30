@@ -22,7 +22,7 @@ namespace app_complex_video_capture
 
 
 //      // void assert_ok() const override;
-//      void dump(dump_context & dumpcontext) const override;
+//      // void dump(dump_context & dumpcontext) const override;
 
 
       virtual void update_item_map();

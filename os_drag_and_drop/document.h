@@ -16,7 +16,7 @@ namespace simple_os_drag_and_drop
 
 
 	   // void assert_ok() const override;
-	   void dump(dump_context & dumpcontext) const override;
+	   // void dump(dump_context & dumpcontext) const override;
 
       bool on_new_document() override;
       virtual bool on_open_document(const ::payload & payloadFile) override;
