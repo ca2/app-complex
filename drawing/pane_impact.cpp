@@ -1,6 +1,8 @@
 ﻿#include "framework.h"
 #include "pane_impact.h"
 #include "application.h"
+#include "acme/constant/id.h"
+#include "acme/constant/message.h"
 #include "acme/graphics/draw2d/_binary_stream.h"
 #include "apex/database/_binary_stream.h"
 #include "base/user/user/document.h"
@@ -25,20 +27,20 @@ namespace app_complex_drawing
    }
 
 
-   void pane_impact::assert_ok() const
-   {
-
-      ::user::impact::assert_ok();
-
-   }
-
-
-   void pane_impact::dump(dump_context & dumpcontext) const
-   {
-
-      ::user::impact::dump(dumpcontext);
-
-   }
+//   void pane_impact::assert_ok() const
+//   {
+//
+//      ::user::impact::assert_ok();
+//
+//   }
+//
+//
+//   void pane_impact::dump(dump_context & dumpcontext) const
+//   {
+//
+//      ::user::impact::dump(dumpcontext);
+//
+//   }
 
 
    void pane_impact::install_message_routing(::channel * pchannel)
