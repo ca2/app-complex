@@ -111,7 +111,7 @@ namespace app_complex_drawing
 
       string strId = pimpactdata->m_atom;
 
-      if (::str().begins_eat_ci(strId, "drawing"))
+      if (strId.begins_eat_ci("drawing"))
       {
 
          auto pimpact = get_app()->create_simple_drawing_impact(this, pimpactdata);
@@ -221,7 +221,7 @@ namespace app_complex_drawing
 
       }
 
-      if (::str().begins(get_impact_id(), "drawing"))
+      if (string_begins(get_impact_id(), "drawing"))
       {
 
          auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
