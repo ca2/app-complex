@@ -53,8 +53,8 @@ namespace app_complex_video_capture
       ::user::impact::install_message_routing(pchannel);
 
 
-      MESSAGE_LINK(e_message_create, pchannel, this, &device_selector::on_message_create);
-      MESSAGE_LINK(e_message_destroy, pchannel, this, &device_selector::on_message_destroy);
+      MESSAGE_LINK(MESSAGE_CREATE, pchannel, this, &device_selector::on_message_create);
+      MESSAGE_LINK(MESSAGE_DESTROY, pchannel, this, &device_selector::on_message_destroy);
 
    }
 
@@ -205,7 +205,7 @@ namespace app_complex_video_capture
    void device_selector::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->m_atom == INITIAL_UPDATE)
+      if (ptopic->m_atom == ID_INITIAL_UPDATE)
       {
 
          ::pointer<::userex::pane_tab_impact>ppaneimpact = get_typed_parent < ::userex::pane_tab_impact >();

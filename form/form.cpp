@@ -104,7 +104,7 @@ namespace app_complex_form
 
       ::user::form_impact::install_message_routing(psender);
 
-      MESSAGE_LINK(e_message_create, psender, this, &form::on_message_create);
+      MESSAGE_LINK(MESSAGE_CREATE, psender, this, &form::on_message_create);
       MESSAGE_LINK(e_message_context_menu, psender, this, &form::on_message_context_menu);
 
    }
