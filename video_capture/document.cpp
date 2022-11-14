@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "document.h"
 #include "impact.h"
 #include "application.h"
@@ -20,20 +20,20 @@ namespace app_complex_video_capture
    }
 
 
-   void document::assert_ok() const
-   {
+   //void document::assert_ok() const
+   //{
 
-      ::user::document::assert_ok();
+   //   ::user::document::assert_ok();
 
-   }
+   //}
 
 
-   void document::dump(dump_context & dumpcontext) const
-   {
+   //void document::dump(dump_context & dumpcontext) const
+   //{
 
-      ::user::document::dump(dumpcontext);
+   //   ::user::document::dump(dumpcontext);
 
-   }
+   //}
 
 
    bool document::on_new_document()

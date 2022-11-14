@@ -1,7 +1,8 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "top_impact.h"
 #include "edit_impact.h"
 #include "toggle_impact.h"
+#include "acme/platform/sequencer.h"
 
 
 namespace app_complex_video_capture
@@ -21,20 +22,20 @@ namespace app_complex_video_capture
    }
 
 
-   void top_impact::assert_ok() const
-   {
+   //void top_impact::assert_ok() const
+   //{
 
-      ::user::split_impact::assert_ok();
+   //   ::user::split_impact::assert_ok();
 
-   }
+   //}
 
 
-   void top_impact::dump(dump_context & dumpcontext) const
-   {
+   //void top_impact::dump(dump_context & dumpcontext) const
+   //{
 
-      ::user::split_impact::dump(dumpcontext);
+   //   ::user::split_impact::dump(dumpcontext);
 
-   }
+   //}
 
 
    void top_impact::handle(::topic * ptopic, ::context * pcontext)

@@ -19,20 +19,20 @@ namespace app_complex_form
    }
 
 
-   void document::assert_ok() const
-   {
+   //void document::assert_ok() const
+   //{
 
-      ::user::document::assert_ok();
+   //   ::user::document::assert_ok();
 
-   }
+   //}
 
 
-   void document::dump(dump_context & dumpcontext) const
-   {
+   //void document::dump(dump_context & dumpcontext) const
+   //{
 
-      ::user::document::dump(dumpcontext);
+   //   ::user::document::dump(dumpcontext);
 
-   }
+   //}
 
 
 #ifdef _DEBUG

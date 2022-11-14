@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "frame.h"
 
 
@@ -20,20 +20,20 @@ namespace app_complex_form
    }
 
 
-   void frame::assert_ok() const
-   {
+   //void frame::assert_ok() const
+   //{
 
-      simple_frame_window::assert_ok();
+   //   simple_frame_window::assert_ok();
 
-   }
+   //}
 
 
-   void frame::dump(dump_context & dumpcontext) const
-   {
+   //void frame::dump(dump_context & dumpcontext) const
+   //{
 
-      simple_frame_window::dump(dumpcontext);
+   //   simple_frame_window::dump(dumpcontext);
 
-   }
+   //}
 
 
    /*bool frame::get_translucency(::user::enum_translucency & etranslucency, ::enum_element eelement, ::user::style_context * pinteraction)

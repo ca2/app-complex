@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "impact.h"
 #include "application.h"
 #include "pane_impact.h"
@@ -27,20 +27,20 @@ namespace app_complex_video_capture
    }
 
 
-   void impact::assert_ok() const
-   {
+   //void impact::assert_ok() const
+   //{
 
-      user::box::assert_ok();
+   //   user::box::assert_ok();
 
-   }
+   //}
 
 
-   void impact::dump(dump_context & dumpcontext) const
-   {
+   //void impact::dump(dump_context & dumpcontext) const
+   //{
 
-      user::box::dump(dumpcontext);
+   //   user::box::dump(dumpcontext);
 
-   }
+   //}
 
 
    void impact::install_message_routing(::channel * pchannel)

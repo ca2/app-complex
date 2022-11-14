@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "main_frame.h"
 #include "aura/message/user.h"
 
@@ -48,20 +48,20 @@ namespace app_complex_video_capture
    }
 
 
-   void main_frame::assert_ok() const
-   {
+   //void main_frame::assert_ok() const
+   //{
 
-      simple_frame_window::assert_ok();
+   //   simple_frame_window::assert_ok();
 
-   }
+   //}
 
 
-   void main_frame::dump(dump_context & dumpcontext) const
-   {
+   //void main_frame::dump(dump_context & dumpcontext) const
+   //{
 
-      simple_frame_window::dump(dumpcontext);
+   //   simple_frame_window::dump(dumpcontext);
 
-   }
+   //}
 
 
    ::experience::frame * main_frame::frame_experience()
@@ -82,7 +82,7 @@ namespace app_complex_video_capture
    }
 
 
-   ::user::enum_translucency main_frame::get_translucency(::user::style * pstyle) const
+   ::user::enum_translucency main_frame::get_translucency(::user::style * pstyle)
    {
 
 

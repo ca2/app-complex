@@ -1,5 +1,6 @@
 ﻿#include "framework.h"
 #include "form.h"
+#include "acme/constant/message.h"
 #include "apex/filesystem/filesystem/file_context.h"
 #include "aura/graphics/draw2d/graphics.h"
 #include "aura/message/user.h"
@@ -61,20 +62,20 @@ namespace app_complex_form
    }
 
 
-   void form::assert_ok() const
-   {
+   //void form::assert_ok() const
+   //{
 
-      ::user::form_impact::assert_ok();
+   //   ::user::form_impact::assert_ok();
 
-   }
+   //}
 
 
-   void form::dump(dump_context & dumpcontext) const
-   {
+   //void form::dump(dump_context & dumpcontext) const
+   //{
 
-      ::user::form_impact::dump(dumpcontext);
+   //   ::user::form_impact::dump(dumpcontext);
 
-   }
+   //}
 
 
 #ifdef _DEBUG

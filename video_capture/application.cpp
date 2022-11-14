@@ -10,13 +10,12 @@
 #include "main_impact.h"
 #include "top_impact.h"
 #include "toggle_impact.h"
+#include "acme/platform/system.h"
+#include "apex/platform/create.h"
 #include "apex/database/_binary_stream.h"
+#include "base/user/user/single_document_template.h"
 #include "app-core/video_input/video_input.h"
 #include "app-core/video_input/device.h"
-#include "base/user/user/single_document_template.h"
-
-
-//IMPLEMENT_APPLICATION(app_complex_video_capture);
 
 
 namespace app_complex_video_capture
@@ -37,6 +36,8 @@ namespace app_complex_video_capture
       m_strAppName = "Video Capture";
 
       m_bLicense = false;
+
+      m_bNetworking = false;
 
    }
 

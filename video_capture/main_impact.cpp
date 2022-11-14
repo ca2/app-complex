@@ -3,6 +3,7 @@
 #include "impact.h"
 #include "edit_impact.h"
 #include "application.h"
+#include "acme/platform/sequencer.h"
 #include "apex/database/_binary_stream.h"
 
 
@@ -25,20 +26,20 @@ namespace app_complex_video_capture
    }
 
 
-   void main_impact::assert_ok() const
-   {
+   //void main_impact::assert_ok() const
+   //{
 
-      ::user::split_impact::assert_ok();
+   //   ::user::split_impact::assert_ok();
 
-   }
+   //}
 
 
-   void main_impact::dump(dump_context & dumpcontext) const
-   {
+   //void main_impact::dump(dump_context & dumpcontext) const
+   //{
 
-      ::user::split_impact::dump(dumpcontext);
+   //   ::user::split_impact::dump(dumpcontext);
 
-   }
+   //}
 
 
    void main_impact::handle(::topic * ptopic, ::context * pcontext)

@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "form_001.h"
 #include "aura/message/user.h"
 
@@ -19,20 +19,20 @@ namespace app_complex_form
    }
 
 
-   void form_001::assert_ok() const
-   {
+   //void form_001::assert_ok() const
+   //{
 
-      ::app_simple_form::form_001::assert_ok();
+   //   ::app_simple_form::form_001::assert_ok();
 
-   }
+   //}
 
 
-   void form_001::dump(dump_context & dumpcontext) const
-   {
+   //void form_001::dump(dump_context & dumpcontext) const
+   //{
 
-      ::app_simple_form::form_001::dump(dumpcontext);
+   //   ::app_simple_form::form_001::dump(dumpcontext);
 
-   }
+   //}
 
 
 #ifdef _DEBUG

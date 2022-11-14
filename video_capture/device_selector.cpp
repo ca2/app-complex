@@ -31,20 +31,20 @@ namespace app_complex_video_capture
    }
 
 
-   void device_selector::assert_ok() const
-   {
+   //void device_selector::assert_ok() const
+   //{
 
-      user::box::assert_ok();
+   //   user::box::assert_ok();
 
-   }
+   //}
 
 
-   void device_selector::dump(dump_context & dumpcontext) const
-   {
+   //void device_selector::dump(dump_context & dumpcontext) const
+   //{
 
-      user::box::dump(dumpcontext);
+   //   user::box::dump(dumpcontext);
 
-   }
+   //}
 
 
    void device_selector::install_message_routing(::channel * pchannel)
@@ -84,28 +84,51 @@ namespace app_complex_video_capture
 
    }
 
+   item* device_selector::get_user_item(::video_input::device* pdevice)
+   {
+
+      auto& pitem = m_itemmap[pdevice];
+
+      if (::is_null(pitem))
+      {
+
+         pitem = __new(::item);
+
+         pitem->m_pparticle = pdevice;
+
+         pitem->m_eelement = e_element_item;
+
+         add_user_item(pitem);
+
+      }
+
+      return pitem;
+
+   }
+
+
 
    void device_selector::update_item_map()
    {
 
 
-      for (auto & pdevice : get_app()->m_pvideoinput->devicea())
-      {
+      //for (auto & pdevice : get_app()->m_pvideoinput->devicea())
+      //{
 
-         auto & pitem = m_itemmap[pdevice];
+      //   auto & pitem = m_itemmap[pdevice];
 
-         if (::is_null(pitem))
-         {
+      //   if (::is_null(pitem))
+      //   {
 
-            pitem = __new(::item);
+      //      pitem = __new(::item);
 
-            pitem->m_pelement = pdevice;
+      //      pitem->m_pparticle = pdevice;
 
-            add_user_item(pitem);
+      //      add_user_item(pitem);
 
-         }
+      //   }
 
-      }
+      //}
 
       pointer_array < ::video_input::device > devicea;
 
@@ -149,8 +172,6 @@ namespace app_complex_video_capture
    void device_selector::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      update_item_map();
-
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
       ::rectangle_i32 rectItem;
@@ -160,42 +181,47 @@ namespace app_complex_video_capture
 
          auto & pitem = pair.m_element2;
 
-         if (pair.m_element1 == get_app()->m_pvideoinputdevice)
+         if (::is_set(pitem))
          {
 
-            if (m_pitemHover == pitem)
+            if (pair.m_element1 == get_app()->m_pvideoinputdevice)
             {
 
-               pgraphics->fill_inset_rectangle(pitem->m_rectangle, argb(127, 80, 180, 230));
+               if (m_pitemHover == pitem)
+               {
+
+                  pgraphics->fill_inset_rectangle(pitem->m_rectangle, argb(127, 80, 180, 230));
+
+               }
+               else
+               {
+
+                  pgraphics->fill_inset_rectangle(pitem->m_rectangle, argb(127, 50, 150, 200));
+
+               }
 
             }
             else
             {
 
-               pgraphics->fill_inset_rectangle(pitem->m_rectangle, argb(127, 50, 150, 200));
+               if (m_pitemHover == pitem)
+               {
+
+                  pgraphics->fill_inset_rectangle(pitem->m_rectangle, argb(127, 100, 200, 255));
+
+               }
+               else
+               {
+
+                  pgraphics->fill_inset_rectangle(pitem->m_rectangle, argb(127, 0, 0, 0));
+
+               }
 
             }
+
+            pgraphics->draw_text(pair.m_element1->m_strName, pitem->m_rectangle, e_align_left_center);
 
          }
-         else
-         {
-
-            if (m_pitemHover == pitem)
-            {
-
-               pgraphics->fill_inset_rectangle(pitem->m_rectangle, argb(127, 100, 200, 255));
-
-            }
-            else
-            {
-
-               pgraphics->fill_inset_rectangle(pitem->m_rectangle, argb(127, 0, 0, 0));
-
-            }
-
-         }
-
-         pgraphics->draw_text(pair.m_element1->m_strName, pitem->m_rectangle, e_align_left_center);
 
       }
 
@@ -230,7 +256,7 @@ namespace app_complex_video_capture
    bool device_selector::on_click(::item * pitem)
    {
 
-      auto pdevice = dynamic_cast <::video_input::device *>(pitem->m_pelement.m_p);
+      auto pdevice = dynamic_cast <::video_input::device *>(pitem->m_pparticle.m_p);
 
       get_app()->set_current(pdevice);
 
@@ -253,7 +279,7 @@ namespace app_complex_video_capture
       for (auto & pdevice : get_app()->m_pvideoinput->devicea())
       {
 
-         auto & pitem = m_itemmap[pdevice];
+         auto pitem = get_user_item(pdevice);
 
          if (::is_set(pitem))
          {

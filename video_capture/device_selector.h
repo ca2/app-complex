@@ -2,6 +2,7 @@
 #pragma once
 
 
+#include "apex/platform/app_consumer.h"
 #include "base/user/user/impact.h"
 
 
@@ -26,6 +27,9 @@ namespace app_complex_video_capture
 
 
       virtual void update_item_map();
+
+
+      item* get_user_item(::video_input::device * pdevice);
 
 
       void install_message_routing(::channel * pchannel) override;

@@ -1,13 +1,15 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "pane_impact.h"
 #include "device_selector.h"
 #include "application.h"
-#include "app-core/video_input/video_input.h"
-#include "app-core/video_input/device.h"
+#include "acme/constant/id.h"
+#include "apex/platform/create.h"
 #include "base/user/form/document.h"
 #include "base/user/user/tab_pane.h"
 #include "base/user/user/single_document_template.h"
 #include "aura/user/user/system.h"
+#include "app-core/video_input/video_input.h"
+#include "app-core/video_input/device.h"
 
 
 namespace app_complex_video_capture
@@ -26,20 +28,20 @@ namespace app_complex_video_capture
    }
 
 
-   void pane_impact::assert_ok() const
-   {
+   //void pane_impact::assert_ok() const
+   //{
 
-      ::user::impact::assert_ok();
+   //   ::user::impact::assert_ok();
 
-   }
+   //}
 
 
-   void pane_impact::dump(dump_context & dumpcontext) const
-   {
+   //void pane_impact::dump(dump_context & dumpcontext) const
+   //{
 
-      ::user::impact::dump(dumpcontext);
+   //   ::user::impact::dump(dumpcontext);
 
-   }
+   //}
 
 
    void pane_impact::install_message_routing(::channel * pchannel)

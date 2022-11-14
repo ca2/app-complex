@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 
 #include "base/user/simple/frame_window.h"
@@ -22,7 +22,7 @@ namespace app_complex_video_capture
 	   // void dump(dump_context & dumpcontext) const override;
 
 
-      ::user::enum_translucency get_translucency(::user::style * pstyle) const override;
+      ::user::enum_translucency get_translucency(::user::style * pstyle) override;
 
 
    };
