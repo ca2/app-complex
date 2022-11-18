@@ -19,7 +19,7 @@ namespace app_complex_video_capture
 
       virtual void _001OnAfterChangeText(const ::action_context & action_context);
 
-      virtual void handle(::topic * ptopic, ::context * pcontext) override;
+      void handle(::topic * ptopic, ::context * pcontext) override;
 
       void install_message_routing(::channel * pchannel) override;
 
