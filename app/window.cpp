@@ -23,7 +23,7 @@ namespace simple_app
 
       ::user::interaction::install_message_routing(pchannel);
 
-      MESSAGE_LINK(e_message_close, pchannel, this, &window::on_message_close);
+      MESSAGE_LINK(MESSAGE_CLOSE, pchannel, this, &window::on_message_close);
       MESSAGE_LINK(e_message_display_change, pchannel, this, &window::on_message_display_change);
 
    }
