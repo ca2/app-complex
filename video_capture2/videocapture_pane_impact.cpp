@@ -232,7 +232,7 @@ namespace app_complex_video_capture
 
       ::file::path path;
 
-      path = pcontext->m_papexcontext->dir()->appdata() / "videocapture_menu.html";
+      path = dir()->appdata() / "videocapture_menu.html";
 
       pcontext->m_papexcontext->file()->put_text(path, str);
 

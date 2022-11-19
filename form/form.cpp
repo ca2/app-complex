@@ -37,7 +37,7 @@ namespace app_complex_form
 //         {
 //            //            bool bTemporary =get_task()->m_bTemporary;
 //            //            get_task()->m_bTemporary = true;
-//            string strMatter = pcontext->m_papexcontext->dir()->matter("popup_lyricview.xml");
+//            string strMatter = dir()->matter("popup_lyricview.xml");
 //            ::file::path path = pcontext->m_papexcontext->defer_process_path(strMatter);
 //            //::pointer<::message::mouse>p=pmouse->
 //            //main_async([this,p]()
