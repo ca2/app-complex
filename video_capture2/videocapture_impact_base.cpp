@@ -133,7 +133,7 @@ namespace app_complex_video_capture
 
         pdcParam->set_font(f);
 
-        pdcParam->TextOutA(0, 0, __string(m_dwaFrame.get_size()));*/
+        pdcParam->TextOutA(0, 0, as_string(m_dwaFrame.get_size()));*/
 
 
       //size_i32 s = m_pimageTime->get_size();
