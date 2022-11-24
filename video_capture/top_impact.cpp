@@ -3,6 +3,7 @@
 #include "edit_impact.h"
 #include "toggle_impact.h"
 #include "acme/platform/sequencer.h"
+#include "acme/user/nano/nano.h"
 
 
 namespace app_complex_video_capture

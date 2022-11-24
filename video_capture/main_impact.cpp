@@ -4,6 +4,7 @@
 #include "edit_impact.h"
 #include "application.h"
 #include "acme/platform/sequencer.h"
+#include "acme/user/nano/nano.h"
 #include "apex/database/_binary_stream.h"
 
 
