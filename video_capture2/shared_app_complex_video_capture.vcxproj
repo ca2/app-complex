@@ -202,7 +202,7 @@
     <ClCompile Include="operating-system\windows\_app_complex_video_capture.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="deployment.rc" />
+    <ResourceCompile Include="..\deployment.rc" />
     <ResourceCompile Include="main.rc" />
   </ItemGroup>
   <ItemGroup>
