@@ -74,15 +74,15 @@ namespace app_complex_form
 
       //puser->will_use_impact_hint(FONTSEL_IMPACT);
 
-      ::factory::add_factory_item <::app_complex_form::document >();
-      ::factory::add_factory_item <::app_complex_form::frame >();
-      ::factory::add_factory_item <::app_complex_form::main_frame >();
-      ::factory::add_factory_item <::user::button_impact >();
-      ::factory::add_factory_item <::app_complex_form::impact >();
-      ::factory::add_factory_item <::app_complex_form::main_impact >();
-      ::factory::add_factory_item <::app_complex_form::pane_impact >();
-      ::factory::add_factory_item <::app_complex_form::form_001 >();
-      ::factory::add_factory_item <::app_complex_form::form_002 >();
+      factory()->add_factory_item <::app_complex_form::document >();
+      factory()->add_factory_item <::app_complex_form::frame >();
+      factory()->add_factory_item <::app_complex_form::main_frame >();
+      factory()->add_factory_item <::user::button_impact >();
+      factory()->add_factory_item <::app_complex_form::impact >();
+      factory()->add_factory_item <::app_complex_form::main_impact >();
+      factory()->add_factory_item <::app_complex_form::pane_impact >();
+      factory()->add_factory_item <::app_complex_form::form_001 >();
+      factory()->add_factory_item <::app_complex_form::form_002 >();
 
       ::base::application::init_instance();
 

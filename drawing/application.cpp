@@ -56,7 +56,7 @@ namespace app_complex_drawing
 
       puser->will_use_impact_hint(FONTSEL_IMPACT);
 
-      ::factory::add_factory_item <::app_complex_drawing::pane_impact >();
+      factory()->add_factory_item <::app_complex_drawing::pane_impact >();
 
       ::app_simple_drawing::application::init_instance();
 

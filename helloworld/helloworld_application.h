@@ -21,7 +21,7 @@ namespace helloworld
       virtual bool initialize_application();
       virtual int32_t exit_application() override;
 
-      virtual void on_request(::create * pcreate);
+      virtual void on_request(::request * prequest) override;
 
 
    };

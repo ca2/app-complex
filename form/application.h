@@ -23,7 +23,7 @@ namespace app_complex_form
       void init_instance() override;
       void term_application() override;
 
-      void on_request(::create * pcreate) override;
+      void on_request(::request * prequest) override;
 
 
 #ifdef _DEBUG
