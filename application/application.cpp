@@ -69,7 +69,7 @@ namespace simple_application
    }
 
 
-   void application::on_request(::create * pcreate)
+   void application::on_request(::request * prequest)
    {
 
       if (m_ptemplateSimpleDrawingMain->get_document_count() == 0)

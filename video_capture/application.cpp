@@ -11,7 +11,7 @@
 #include "top_impact.h"
 #include "toggle_impact.h"
 #include "acme/platform/system.h"
-#include "apex/platform/create.h"
+#include "acme/platform/request.h"
 #include "apex/database/_binary_stream.h"
 #include "base/user/user/single_document_template.h"
 #include "app-core/video_input/video_input.h"
@@ -114,7 +114,7 @@ namespace app_complex_video_capture
    }
 
 
-   void application::on_request(::create * pcreate)
+   void application::on_request(::request * prequest)
    {
 
 #if 0

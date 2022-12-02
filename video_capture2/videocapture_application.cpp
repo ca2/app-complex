@@ -125,7 +125,7 @@ namespace app_complex_video_capture
    //   return ::aura::application::exit_application();
    //}
 
-   void application::on_request(::create * pcreate)
+   void application::on_request(::request * prequest)
    {
       //debug_filling_holding();
 

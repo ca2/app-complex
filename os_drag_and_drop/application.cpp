@@ -86,7 +86,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void application::on_request(::create * pcreate)
+   void application::on_request(::request * prequest)
    {
 
 //      {
