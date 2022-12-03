@@ -99,7 +99,7 @@ namespace app_complex_video_capture
          case MAIN_IMPACT:
          {
          
-            auto pcreate = m_pusersystem->m_pcreate;
+            auto pcreate = m_pusersystem->m_prequest;
 
             auto & payloadFile = pcreate->m_payloadFile;
 

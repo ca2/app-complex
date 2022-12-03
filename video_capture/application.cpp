@@ -138,14 +138,14 @@ namespace app_complex_video_capture
       if(m_ptemplateVideoCaptureMain->get_document_count() == 0)
       {
 
-         m_ptemplateVideoCaptureMain->do_request(pcreate);
+         m_ptemplateVideoCaptureMain->request(prequest);
 
       }
 
-      if(pcreate->m_payloadFile.has_char())
+      if(prequest->m_payloadFile.has_char())
       {
 
-         m_ptemplateVideoCaptureImpact->do_request(pcreate);
+         m_ptemplateVideoCaptureImpact->request(prequest);
 
       }
 
