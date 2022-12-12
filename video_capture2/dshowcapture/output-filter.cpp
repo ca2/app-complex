@@ -540,7 +540,7 @@ STDMETHODIMP OutputFilter::EnumPins(IEnumPins **ppEnum)
 	return (*ppEnum == nullptr) ? E_OUTOFMEMORY : NOERROR;
 }
 
-STDMETHODIMP OutputFilter::FindPin(const widechar * Id, IPin **ppPin)
+STDMETHODIMP OutputFilter::FindPin(const ::wide_character * Id, IPin **ppPin)
 {
 	PrintFunc(L"OutputFilter::FindPin");
 
@@ -563,7 +563,7 @@ STDMETHODIMP OutputFilter::QueryFilterInfo(FILTER_INFO *pInfo)
 	return NOERROR;
 }
 
-STDMETHODIMP OutputFilter::JoinFilterGraph(IFilterGraph *pGraph, const widechar * pName)
+STDMETHODIMP OutputFilter::JoinFilterGraph(IFilterGraph *pGraph, const ::wide_character * pName)
 {
 	DSHOW_UNUSED(pName);
 
