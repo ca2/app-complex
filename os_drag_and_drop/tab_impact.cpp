@@ -173,7 +173,7 @@ namespace simple_os_drag_and_drop
 
       string strId = pimpactdata->m_atom;
 
-      if(strId.begins_eat_ci("drawing"))
+      if(strId.case_insensitive_begins_eat("drawing"))
       {
 
          auto pimpact = papp->create_simple_os_drag_and_drop_impact(this, pimpactdata);
@@ -209,7 +209,7 @@ namespace simple_os_drag_and_drop
             string strCheck = ptopic->user_element_id();
 
 
-            if (strCheck.begins_eat_ci("bilbo"))
+            if (strCheck.case_insensitive_begins_eat("bilbo"))
             {
 
                if (ptopic->user_interaction() != nullptr && ptopic->m_actioncontext.is_user_source())
