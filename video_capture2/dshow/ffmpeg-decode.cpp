@@ -23,7 +23,7 @@ int ffmpeg_decode_init(struct ffmpeg_decode *decode, enum AVCodecID identificati
 	int ret;
 
 	avcodec_register_all();
-	__memset(decode, 0, sizeof(*decode));
+	memory_set(decode, 0, sizeof(*decode));
 
 	decode->codec = avcodec_find_decoder(identification);
 	if (!decode->codec)
@@ -56,7 +56,7 @@ void ffmpeg_decode_free(struct ffmpeg_decode *decode)
 	if (decode->packet_buffer)
 		free(decode->packet_buffer);
 
-	__memset(decode, 0, sizeof(*decode));
+	memory_set(decode, 0, sizeof(*decode));
 }
 
 static inline enum video_format convert_pixel_format(int f)
@@ -103,7 +103,7 @@ static inline void copy_data(struct ffmpeg_decode *decode, u8 *data,
 				new_size);
 	}
 
-	__memset(decode->packet_buffer + size, 0, FF_INPUT_BUFFER_PADDING_SIZE);
+	memory_set(decode->packet_buffer + size, 0, FF_INPUT_BUFFER_PADDING_SIZE);
 	::memcpy_dup(decode->packet_buffer, data, size);
 }
 

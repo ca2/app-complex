@@ -32,7 +32,7 @@ static inline void video_frame_free(struct video_frame *frame)
 {
 	if (frame) {
 		bfree(frame->data[0]);
-		__memset(frame, 0, sizeof(struct video_frame));
+		memory_set(frame, 0, sizeof(struct video_frame));
 	}
 }
 

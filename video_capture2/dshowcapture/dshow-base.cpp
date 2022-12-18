@@ -398,7 +398,7 @@ bool GetPinMedium(IPin *pin, REGPINMEDIUM &medium)
 		}
 	}
 
-	__memset(&medium, 0, sizeof(medium));
+	memory_set(&medium, 0, sizeof(medium));
 	return false;
 }
 

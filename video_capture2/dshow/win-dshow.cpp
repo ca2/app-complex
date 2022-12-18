@@ -191,7 +191,7 @@ class Decoder {
 	struct ffmpeg_decode decode;
 
 public:
-	inline Decoder()  {__memset(&decode, 0, sizeof(decode));}
+	inline Decoder()  {memory_set(&decode, 0, sizeof(decode));}
 	inline ~Decoder() {ffmpeg_decode_free(&decode);}
 
 	inline operator ffmpeg_decode*() {return &decode;}
@@ -271,8 +271,8 @@ struct DShowInput {
 		: source         (source_),
 		  device         (InitGraph::False)
 	{
-		__memset(&audio, 0, sizeof(audio));
-		__memset(&frame, 0, sizeof(frame));
+		memory_set(&audio, 0, sizeof(audio));
+		memory_set(&frame, 0, sizeof(frame));
 
 		av_log_set_level(AV_LOG_WARNING);
       //		av_log_set_callback(ffmpeg_log);
