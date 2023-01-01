@@ -434,7 +434,7 @@ bool HVideoEncoder::Encode(unsigned char *data[DSHOW_MAX_PLANES],
 
 	packetMutex.lock();
 	if (packets.size() > 0) {
-		curPacket = move(packets.front());
+		curPacket = transfer(packets.front());
 		long long ptsOut = ptsVals[0];
 		packets.pop_front();
 		ptsVals.pop_front();
