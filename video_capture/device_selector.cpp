@@ -160,7 +160,7 @@ namespace app_complex_video_capture
 
          m_pitema->erase(pitem);
 
-         m_itemmap.erase_key(pdevice);
+         m_itemmap.erase_item(pdevice);
 
       }
 

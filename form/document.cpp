@@ -77,7 +77,7 @@ namespace app_complex_form
 
       }
 
-      string strPath = payloadFile.file_path();
+      //string strPath = payloadFile.file_path();
 
       return true;
 

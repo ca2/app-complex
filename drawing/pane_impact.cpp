@@ -221,7 +221,7 @@ namespace app_complex_drawing
 
       }
 
-      if (string_begins(get_impact_id(), "drawing"))
+      if (get_impact_id().begins("drawing"))
       {
 
          auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
