@@ -15,7 +15,7 @@ static inline double media_frames_per_second_to_frame_interval(
 	return (double)fps.denominator / fps.numerator;
 }
 
-static inline double media_frames_per_second_to_fps(
+static inline double media_frames_per_second_to_per_second(
 		struct media_frames_per_second fps)
 {
 	return (double)fps.numerator / fps.denominator;
