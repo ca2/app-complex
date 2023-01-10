@@ -624,6 +624,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/nsisExamples/Plugin/nsis",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PLATFORM_MODIFIER = macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -643,6 +644,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/nsisExamples/Plugin/nsis",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PLATFORM_MODIFIER = macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
