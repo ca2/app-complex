@@ -11,7 +11,7 @@ namespace helloworld
       m_strAppName                     = "app-simple/helloworld";
       m_strBaseSupportId               = "app-simple/helloworld";
       m_bLicense                       = false;
-      m_pdocumenttemplate    = NULL;
+      m_pimpactsystem    = NULL;
 
    }
 
@@ -45,7 +45,7 @@ namespace helloworld
 
       add_document_template(pdocumenttemplate);
 
-      m_pdocumenttemplate = pdocumenttemplate;
+      m_pimpactsystem = pdocumenttemplate;
 
       return true;
 
@@ -63,7 +63,7 @@ namespace helloworld
    void application::on_request(::request * prequest)
    {
 
-      m_pdocumenttemplate->request_create(pcreate);
+      m_pimpactsystem->request_create(pcreate);
 
    }
 

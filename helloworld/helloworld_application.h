@@ -11,7 +11,7 @@ namespace helloworld
    public:
       
       
-      ::user::impact_system *       m_pdocumenttemplate;
+      ::user::impact_system *       m_pimpactsystem;
 
 
       application();
