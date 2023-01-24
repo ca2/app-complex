@@ -103,7 +103,7 @@ namespace video_capture
 
       ::rectangle_i32 rectangleClient;
 
-      get_client_rect(rectangleClient);
+      client_rectangle(rectangleClient);
 
 /*      if (m_bBkLoaded && m_pimage->is_set() && m_pimage->area() > 0)
       {

@@ -52,7 +52,7 @@ namespace simple_app
 
       ::rectangle_i32 rectangleClient;
 
-      get_client_rect(rectangleClient);
+      client_rectangle(rectangleClient);
 
       auto pstyle = get_style(pgraphics);
 

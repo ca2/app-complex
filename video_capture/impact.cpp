@@ -97,7 +97,7 @@ namespace app_complex_video_capture
 
       ::rectangle_i32 rectangleClient;
 
-      get_client_rect(rectangleClient);
+      client_rectangle(rectangleClient);
 
       auto pvideoinputdevice = get_app()->m_pvideoinputdevice;
 

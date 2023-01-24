@@ -358,7 +358,7 @@ void DrawDevice::UpdateDestinationRect()
    RECTANGLE_I32 rcClient;
    RECTANGLE_I32 rcSrc = { 0, 0, m_width, m_height };
 
-   get_client_rect(m_hwnd, &rcClient);
+   client_rectangle(m_hwnd, &rcClient);
 
    rcSrc = CorrectAspectRatio(rcSrc, m_PixelAR);
 
