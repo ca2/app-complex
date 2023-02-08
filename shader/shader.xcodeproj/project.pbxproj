@@ -385,7 +385,7 @@
 					"$(TARGET_BUILD_DIR)",
 					"$(SRCROOT)/../../time-$(PLATFORM_MODIFIER)/library/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PLATFORM_MODIFIER = macos;
@@ -441,7 +441,7 @@
 					"$(TARGET_BUILD_DIR)",
 					"$(SRCROOT)/../../time-$(PLATFORM_MODIFIER)/library/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PLATFORM_MODIFIER = macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -466,7 +466,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/nsisExamples/Plugin/nsis",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "cc.ca2.app-simple.shader";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -487,7 +487,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/nsisExamples/Plugin/nsis",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "cc.ca2.app-simple.shader";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};

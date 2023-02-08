@@ -1472,7 +1472,7 @@
 					"$(inherited)",
 					"$(TARGET_BUILD_DIR)",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -1516,7 +1516,7 @@
 					"$(inherited)",
 					"$(TARGET_BUILD_DIR)",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/source/app $(WorkspaceDir)/source/app/include $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/include $(WorkspaceDir)/source/port/include $(WorkspaceDir)/source/port $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include/include $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include . .. $(WorkspaceDir) $(WorkspaceDir)/source/app $(WorkspaceDir)/source/app/include $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)  /base/include   ";
@@ -1531,7 +1531,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ca2.app-core-hellomultiverse";
 				PRODUCT_NAME = "Hello Multiverse!!";
 			};
@@ -1544,7 +1544,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ca2.app-core-hellomultiverse";
 				PRODUCT_NAME = "Hello Multiverse!!";
 			};
