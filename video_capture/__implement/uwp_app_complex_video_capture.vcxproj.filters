@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\_matter.zip" />
+    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\Win32\Debug\binary\libcrypto-3.dll">
+      <Filter>Library\Win32\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\Win32\Debug\binary\libssl-3.dll">
+      <Filter>Library\Win32\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\Win32\Debug\third\binary\pcre.dll">
+      <Filter>Library\Win32\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\Win32\Debug\third\binary\sqlite.dll">
+      <Filter>Library\Win32\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\Win32\Debug\third\binary\zlib.dll">
+      <Filter>Library\Win32\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\x64\Debug\binary\libcrypto-3-x64.dll">
+      <Filter>Library\x64\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\x64\Debug\binary\libssl-3-x64.dll">
+      <Filter>Library\x64\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\x64\Debug\third\binary\bzip2.dll">
+      <Filter>Library\x64\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\x64\Debug\third\binary\pcre.dll">
+      <Filter>Library\x64\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\x64\Debug\third\binary\sqlite.dll">
+      <Filter>Library\x64\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\x64\Debug\third\binary\zlib.dll">
+      <Filter>Library\x64\basis</Filter>
+    </None>
+    <None Include="uwp_app_complex_videocapture_TemporaryKey.pfx">
+      <Filter>UWP</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\x64\debug\binary\swscale-6.dll">
+      <Filter>Library\x64\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\x64\debug\binary\avutil-57.dll">
+      <Filter>Library\x64\basis</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{41aed0f6-4196-4410-8ab3-2b4ec11310c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library">
+      <UniqueIdentifier>{624cb0d2-6b04-482a-a215-9329f0fcf23e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{6910b6b9-acac-4f39-ae1a-736361469a43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Win32">
+      <UniqueIdentifier>{212f8ea6-4f80-4a88-b5fa-bca3648b4a60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Win32\basis">
+      <UniqueIdentifier>{68b9b9f6-713a-4fca-b167-dfbd4476b3b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\x64">
+      <UniqueIdentifier>{a7a36f4a-6942-4614-9626-9ae6b3b6f052}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\x64\basis">
+      <UniqueIdentifier>{dfc143de-3082-43e3-bf1d-afc187085817}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UWP">
+      <UniqueIdentifier>{505be0c3-4167-4a15-8ec8-dcd1ca3afcb5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\Square24.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square50.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square71.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square310.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide620x300.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide620x300.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square24.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square50.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square71.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square310.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\framework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package10.appxmanifest">
+      <Filter>UWP</Filter>
+    </AppxManifest>
+  </ItemGroup>
+</Project>

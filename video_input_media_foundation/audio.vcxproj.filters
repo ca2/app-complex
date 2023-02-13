@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimedia\windows\tts_speaker.h">
+      <Filter>Header Files\audio\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\_.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="iaudio\_.h">
+      <Filter>Header Files\iaudio</Filter>
+    </ClInclude>
+    <ClInclude Include="iaudio\wave_stream_effect.h">
+      <Filter>Header Files\iaudio</Filter>
+    </ClInclude>
+    <ClInclude Include="iaudio\wave_stream_effect_chain.h">
+      <Filter>Header Files\iaudio</Filter>
+    </ClInclude>
+    <ClInclude Include="iaudio\wave_stream_effect_event_listener.h">
+      <Filter>Header Files\iaudio</Filter>
+    </ClInclude>
+    <ClInclude Include="iaudio\wave_stream_effect_order.h">
+      <Filter>Header Files\iaudio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\_.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\id3.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\ipi.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\library.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\ms_translator_speaker.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\sound_track_player.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\_.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\base.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\bbb_want_to_move_effect_devocalizer.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\buffer.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\command.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\effect_crescendo.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\file.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\format.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\global.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\in.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\in_listener.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\in_listener_set.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\out.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\player_command.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\pre_buffer.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\recorder.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\recorder_command.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\recorder_container.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\wave.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\sound_track_player_container.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\_.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="decode\_.h">
+      <Filter>Header Files\decode</Filter>
+    </ClInclude>
+    <ClInclude Include="decode\decoder.h">
+      <Filter>Header Files\decode</Filter>
+    </ClInclude>
+    <ClInclude Include="decode\decoder_plugin.h">
+      <Filter>Header Files\decode</Filter>
+    </ClInclude>
+    <ClInclude Include="decode\decoder_plugin_set.h">
+      <Filter>Header Files\decode</Filter>
+    </ClInclude>
+    <ClInclude Include="decode\encoder.h">
+      <Filter>Header Files\decode</Filter>
+    </ClInclude>
+    <ClInclude Include="decode\encoder_plugin.h">
+      <Filter>Header Files\decode</Filter>
+    </ClInclude>
+    <ClInclude Include="decode\encoder_plugin_set.h">
+      <Filter>Header Files\decode</Filter>
+    </ClInclude>
+    <ClInclude Include="plugin\_.h">
+      <Filter>Header Files\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="plugin\mixer.h">
+      <Filter>Header Files\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="plugin\playground.h">
+      <Filter>Header Files\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="plugin\plugin.h">
+      <Filter>Header Files\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="plugin\resampler.h">
+      <Filter>Header Files\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="plugin\sampler.h">
+      <Filter>Header Files\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="plugin\source.h">
+      <Filter>Header Files\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="plugin\track.h">
+      <Filter>Header Files\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\logical_player.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\device_player.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\player.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\player_container.h">
+      <Filter>Header Files\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="_.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\_.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\interprocess_communication.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{ed054474-7c70-438b-89ad-4cc9b175132a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\audio">
+      <UniqueIdentifier>{1d9c47ce-3168-4987-b56d-13aef2edb8bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\iaudio">
+      <UniqueIdentifier>{9b00c9be-4e7d-41b3-9a06-1af1271a535d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\imedia">
+      <UniqueIdentifier>{24d46d37-0e9f-45c4-a126-3ea78c0f00d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{ca2b3e32-ec54-499e-af43-9981739cba38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\audio">
+      <UniqueIdentifier>{bb27a54d-57c9-4477-a908-ffbf44947ad5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\iaudio">
+      <UniqueIdentifier>{af1ab593-692f-45b2-a2d8-c88661c1154a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\audio">
+      <UniqueIdentifier>{650a7fc9-1fd0-4b4d-b8b1-e02e5d9ddfcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\audio">
+      <UniqueIdentifier>{0d17b12f-887d-4697-b677-69da329f1e28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{975579cf-a588-4cbb-b01f-b19ccbf51474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\wave">
+      <UniqueIdentifier>{171df1ac-ab94-41cc-81da-296c496368a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\audio">
+      <UniqueIdentifier>{d3fc9cf9-61d8-4d84-b4f5-bb528b6c2f6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\audio\windows">
+      <UniqueIdentifier>{eb461218-2e13-4e84-beb4-6c2da797daff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\wave">
+      <UniqueIdentifier>{219b4356-d44f-4fc9-8b6d-2a03c76abb7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\audio">
+      <UniqueIdentifier>{b7bd3c50-66da-4559-9da9-4abe3cd22d92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\audio\windows">
+      <UniqueIdentifier>{47ae7349-55ac-44cc-abcd-b9765f18f4e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\plugin">
+      <UniqueIdentifier>{dc19adfd-1591-49e8-816e-8c40d76003f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\decode">
+      <UniqueIdentifier>{5fece48d-8038-4ac9-8f84-9b075fc90452}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\decode">
+      <UniqueIdentifier>{d7a51752-f5f0-47df-b868-73c1dd4d7bb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\plugin">
+      <UniqueIdentifier>{9403103a-5538-421b-9337-2e5fc45fd433}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="framework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iaudio\wave_stream_effect.cpp">
+      <Filter>Source Files\iaudio</Filter>
+    </ClCompile>
+    <ClCompile Include="iaudio\wave_stream_effect_chain.cpp">
+      <Filter>Source Files\iaudio</Filter>
+    </ClCompile>
+    <ClCompile Include="iaudio\wave_stream_effect_listener.cpp">
+      <Filter>Source Files\iaudio</Filter>
+    </ClCompile>
+    <ClCompile Include="iaudio\wave_stream_effect_order.cpp">
+      <Filter>Source Files\iaudio</Filter>
+    </ClCompile>
+    <ClCompile Include="imedia\position.cpp">
+      <Filter>Source Files\imedia</Filter>
+    </ClCompile>
+    <ClCompile Include="imedia\position_array.cpp">
+      <Filter>Source Files\imedia</Filter>
+    </ClCompile>
+    <ClCompile Include="imedia\time.cpp">
+      <Filter>Source Files\imedia</Filter>
+    </ClCompile>
+    <ClCompile Include="imedia\time_array.cpp">
+      <Filter>Source Files\imedia</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\library.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\ms_translator_speaker.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\sound_track_player.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="wave\base.cpp">
+      <Filter>Source Files\wave</Filter>
+    </ClCompile>
+    <ClCompile Include="wave\buffer.cpp">
+      <Filter>Source Files\wave</Filter>
+    </ClCompile>
+    <ClCompile Include="wave\effect_crescendo.cpp">
+      <Filter>Source Files\wave</Filter>
+    </ClCompile>
+    <ClCompile Include="wave\file.cpp">
+      <Filter>Source Files\wave</Filter>
+    </ClCompile>
+    <ClCompile Include="wave\in.cpp">
+      <Filter>Source Files\wave</Filter>
+    </ClCompile>
+    <ClCompile Include="wave\in_listener.cpp">
+      <Filter>Source Files\wave</Filter>
+    </ClCompile>
+    <ClCompile Include="wave\in_listener_set.cpp">
+      <Filter>Source Files\wave</Filter>
+    </ClCompile>
+    <ClCompile Include="wave\out.cpp">
+      <Filter>Source Files\wave</Filter>
+    </ClCompile>
+    <ClCompile Include="wave\player_command.cpp">
+      <Filter>Source Files\wave</Filter>
+    </ClCompile>
+    <ClCompile Include="wave\pre_buffer.cpp">
+      <Filter>Source Files\wave</Filter>
+    </ClCompile>
+    <ClCompile Include="wave\recorder.cpp">
+      <Filter>Source Files\wave</Filter>
+    </ClCompile>
+    <ClCompile Include="wave\recorder_container.cpp">
+      <Filter>Source Files\wave</Filter>
+    </ClCompile>
+    <ClCompile Include="wave\wave.cpp">
+      <Filter>Source Files\wave</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\windows\tts_speaker.cpp">
+      <Filter>Source Files\audio\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\sound_track_player_container.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="decode\decoder.cpp">
+      <Filter>Source Files\decode</Filter>
+    </ClCompile>
+    <ClCompile Include="decode\decoder_plugin.cpp">
+      <Filter>Source Files\decode</Filter>
+    </ClCompile>
+    <ClCompile Include="decode\decoder_plugin_set.cpp">
+      <Filter>Source Files\decode</Filter>
+    </ClCompile>
+    <ClCompile Include="decode\encoder.cpp">
+      <Filter>Source Files\decode</Filter>
+    </ClCompile>
+    <ClCompile Include="decode\encoder_plugin.cpp">
+      <Filter>Source Files\decode</Filter>
+    </ClCompile>
+    <ClCompile Include="decode\encoder_plugin_set.cpp">
+      <Filter>Source Files\decode</Filter>
+    </ClCompile>
+    <ClCompile Include="plugin\mixer.cpp">
+      <Filter>Source Files\plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="plugin\playground.cpp">
+      <Filter>Source Files\plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="plugin\plugin.cpp">
+      <Filter>Source Files\plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="plugin\resampler.cpp">
+      <Filter>Source Files\plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="plugin\sampler.cpp">
+      <Filter>Source Files\plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="plugin\source.cpp">
+      <Filter>Source Files\plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="plugin\track.cpp">
+      <Filter>Source Files\plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="wave\device_player.cpp">
+      <Filter>Source Files\wave</Filter>
+    </ClCompile>
+    <ClCompile Include="wave\player.cpp">
+      <Filter>Source Files\wave</Filter>
+    </ClCompile>
+    <ClCompile Include="wave\logical_player.cpp">
+      <Filter>Source Files\wave</Filter>
+    </ClCompile>
+    <ClCompile Include="wave\player_container.cpp">
+      <Filter>Source Files\wave</Filter>
+    </ClCompile>
+    <ClCompile Include="_.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wave\format.cpp">
+      <Filter>Source Files\wave</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\interprocess_communication.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="deployment.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -2,8 +2,8 @@
 #include "impact.h"
 #include "application.h"
 #include "pane_impact.h"
-#include "app-core/video_input/render.h"
-#include "app-core/video_input/device.h"
+#include "app-complex/video_input/render.h"
+#include "app-complex/video_input/device.h"
 #include "aura/graphics/image/drawing.h"
 #include "aura/message/user.h"
 
@@ -136,6 +136,8 @@ namespace app_complex_video_capture
       m_prender = pvideoinputdevice->get_render();
 
       synchronous_lock synchronouslock(m_prender->synchronization());
+
+      m_prender->prepare_image();
 
       image_source imagesource(m_prender->m_pimage);
 

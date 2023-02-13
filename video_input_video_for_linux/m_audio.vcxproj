@@ -1,0 +1,606 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="memdleak|ARM">
+      <Configuration>memdleak</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="memdleak|Win32">
+      <Configuration>memdleak</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="memdleak|x64">
+      <Configuration>memdleak</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2C8B3100-192E-423F-A651-66EE6CCB6604}</ProjectGuid>
+    <RootNamespace>multimedia</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <AppContainerApplication>true</AppContainerApplication>
+    <ProjectName>multimedia</ProjectName>
+    <ApplicationType>Windows Store</ApplicationType>
+    <ApplicationTypeRevision>8.1</ApplicationTypeRevision>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='memdleak|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='memdleak|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\operating-system\operating-system-universal_windows\Common.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\operating-system\operating-system-universal_windows\Common.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\operating-system\operating-system-universal_windows\Common.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='memdleak|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\operating-system\operating-system-universal_windows\Common.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\operating-system\operating-system-universal_windows\Common.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='memdleak|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\operating-system\operating-system-universal_windows\Common.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <IncludePath>$(VCInstallDir)include;$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PackageCertificateKeyFile>Direct3DApp2_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)..\..\..\Release\x86\</OutDir>
+    <IntDir>$(TimeDir)intermediate\x86\$(ProjectName)\</IntDir>
+    <ReferencePath>$(VCInstallDir)lib</ReferencePath>
+    <LibraryPath>$(VCInstallDir)lib;$(WindowsSDK_LibraryPath_x86);</LibraryPath>
+    <SourcePath>$(VCInstallDir)crt\src;</SourcePath>
+    <ExcludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);$(MSBuildToolsPath32);$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\include</ExcludePath>
+    <LinkIncremental>false</LinkIncremental>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">
+    <OutDir>$(SolutionDir)..\..\..\Release\x86\</OutDir>
+    <IntDir>$(TimeDir)intermediate\x86\$(ProjectName)\</IntDir>
+    <ReferencePath>$(VCInstallDir)lib</ReferencePath>
+    <LibraryPath>$(VCInstallDir)lib;$(WindowsSDK_LibraryPath_x86);</LibraryPath>
+    <SourcePath>$(VCInstallDir)crt\src;</SourcePath>
+    <ExcludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);$(MSBuildToolsPath32);$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\include</ExcludePath>
+    <LinkIncremental>false</LinkIncremental>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <SubSystem Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Windows</SubSystem>
+      <SubSystem Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">Windows</SubSystem>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)../../time/library/x86/$(ConfigurationName);$(__operating_system)third-universal_windows/thirdparty/library;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">$(SolutionDir)../../time/library/x86/$(ConfigurationName);$(__operating_system)third-universal_windows/thirdparty/library;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      
+      
+      <ImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)../../time/library/x86/$(Configuration)/$(TargetName).lib</ImportLibrary>
+      <ImportLibrary Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">$(SolutionDir)../../time/library/x86/$(Configuration)/$(TargetName).lib</ImportLibrary>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(__operating_system)third-universal_windows/thirdparty;$(SolutionDir)../../../source;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_APP_CORE_MULTIMEDIA_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">_APP_CORE_MULTIMEDIA_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Async</ExceptionHandling>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">Async</ExceptionHandling>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ProgramDatabase</DebugInformationFormat>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">ProgramDatabase</DebugInformationFormat>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">false</CompileAsManaged>
+      <RuntimeTypeInfo Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</RuntimeTypeInfo>
+      <RuntimeTypeInfo Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</RuntimeTypeInfo>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\source\app\aqua\m_aqua.vcxproj">
+      <Project>{19518477-75c4-4df7-acc2-325fa81a640c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\source\app\aura\m_aura.vcxproj">
+      <Project>{55f3f6b8-8baf-4f22-9e77-bcf9d5a23960}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\source\app\axis\m_axis.vcxproj">
+      <Project>{3bae8362-f135-4513-9163-58532baba44a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\source\app\base\m_base.vcxproj">
+      <Project>{5487686f-8a2f-401a-a38e-fda8900e1984}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\source\app\aura\m_core.vcxproj">
+      <Project>{420d7aeb-cfca-45de-bb6e-95055df21987}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\source\app\math\m_math.vcxproj">
+      <Project>{106e3938-fa19-4d4d-83d5-a36692c93e86}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\gcom\m_gcom.vcxproj">
+      <Project>{31080054-5440-4c1f-9755-a45820e472e4}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="audio\audio.h" />
+    <ClInclude Include="audio\audio_command.h" />
+    <ClInclude Include="audio\audio_global.h" />
+    <ClInclude Include="audio\audio_wave.h" />
+    <ClInclude Include="audio\audio_wave_base.h" />
+    <ClInclude Include="audio\audio_wave_buffer.h" />
+    <ClInclude Include="audio\audio_wave_effect_crescendo.h" />
+    <ClInclude Include="audio\audio_wave_effect_devocalizer.h" />
+    <ClInclude Include="audio\audio_wave_file.h" />
+    <ClInclude Include="audio\audio_wave_format.h" />
+    <ClInclude Include="audio\audio_wave_in.h" />
+    <ClInclude Include="audio\audio_wave_in_listener.h" />
+    <ClInclude Include="audio\audio_wave_in_listener_set.h" />
+    <ClInclude Include="audio\audio_wave_out.h" />
+    <ClInclude Include="audio\audio_wave_player.h" />
+    <ClInclude Include="audio\audio_wave_player_command.h" />
+    <ClInclude Include="audio\audio_wave_player_container.h" />
+    <ClInclude Include="audio\audio_wave_pre_buffer.h" />
+    <ClInclude Include="audio\audio_wave_recorder.h" />
+    <ClInclude Include="audio\audio_wave_recorder_command.h" />
+    <ClInclude Include="audio\audio_wave_recorder_container.h" />
+    <ClInclude Include="audio_decode\audio_decode.h" />
+    <ClInclude Include="audio_decode\audio_decode_decoder.h" />
+    <ClInclude Include="audio_decode\audio_decode_decoder_plugin.h" />
+    <ClInclude Include="audio_decode\audio_decode_decoder_plugin_set.h" />
+    <ClInclude Include="audio_decode\audio_decode_encoder.h" />
+    <ClInclude Include="audio_decode\audio_decode_encoder_plugin.h" />
+    <ClInclude Include="audio_decode\audio_decode_encoder_plugin_set.h" />
+    <ClInclude Include="audio_mixer\audio_mixer.h" />
+    <ClInclude Include="audio_mixer\audio_mixer_callback.h" />
+    <ClInclude Include="audio_mixer\audio_mixer_control.h" />
+    <ClInclude Include="audio_mixer\audio_mixer_control_data.h" />
+    <ClInclude Include="audio_mixer\audio_mixer_control_data_switch.h" />
+    <ClInclude Include="audio_mixer\audio_mixer_control_data_volume.h" />
+    <ClInclude Include="audio_mixer\audio_mixer_destination.h" />
+    <ClInclude Include="audio_mixer\audio_mixer_device.h" />
+    <ClInclude Include="audio_mixer\audio_mixer_line_info.h" />
+    <ClInclude Include="audio_mixer\audio_mixer_mixer.h" />
+    <ClInclude Include="audio_mixer\audio_mixer_section.h" />
+    <ClInclude Include="audio_mixer\audio_mixer_source.h" />
+    <ClInclude Include="audio_mixer\audio_mixer_thread.h" />
+    <ClInclude Include="audio_mixer\audio_mixer_user_control.h" />
+    <ClInclude Include="audio_mixer\audio_mixer_user_label.h" />
+    <ClInclude Include="audio_mixer\audio_mixer_user_level_control.h" />
+    <ClInclude Include="audio_mixer\audio_mixer_user_toggle_control.h" />
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase.h" />
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_control_data.h" />
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_control_impact.h" />
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_document.h" />
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_frame_window.h" />
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_label.h" />
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_main_impact.h" />
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_mute_control.h" />
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_section.h" />
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_slider.h" />
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_thread.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="iaudio\iaudio.h" />
+    <ClInclude Include="iaudio\iaudio_wave_stream_effect.h" />
+    <ClInclude Include="iaudio\iaudio_wave_stream_effect_chain.h" />
+    <ClInclude Include="iaudio\iaudio_wave_stream_effect_event_listener.h" />
+    <ClInclude Include="iaudio\iaudio_wave_stream_effect_order.h" />
+    <ClInclude Include="imediamanager\imediamanager.h" />
+    <ClInclude Include="imediamanager\PlayerInterface.h" />
+    <ClInclude Include="imediamanager\PlaylistInterface.h" />
+    <ClInclude Include="imedia\imedia.h" />
+    <ClInclude Include="imedia\imedia_position.h" />
+    <ClInclude Include="imedia\imedia_position_array.h" />
+    <ClInclude Include="imedia\imedia_time.h" />
+    <ClInclude Include="imedia\imedia_time_array.h" />
+    <ClInclude Include="mediamanager\mediamanager.h" />
+    <ClInclude Include="mediamanager\mediamanager_album_build.h" />
+    <ClInclude Include="mediamanager\mediamanager_album_build_thread.h" />
+    <ClInclude Include="mediamanager\mediamanager_album_build_window.h" />
+    <ClInclude Include="mediamanager\mediamanager_album_record.h" />
+    <ClInclude Include="mediamanager\mediamanager_media_manager.h" />
+    <ClInclude Include="mediaplaylist\mediaplaylist.h" />
+    <ClInclude Include="mediaplaylist\mediaplaylist_document.h" />
+    <ClInclude Include="mediaplaylist\mediaplaylist_enum.h" />
+    <ClInclude Include="mediaplaylist\mediaplaylist_frame.h" />
+    <ClInclude Include="mediaplaylist\mediaplaylist_item.h" />
+    <ClInclude Include="mediaplaylist\mediaplaylist_listener.h" />
+    <ClInclude Include="mediaplaylist\mediaplaylist_list_impact.h" />
+    <ClInclude Include="mediaplaylist\mediaplaylist_media_playlist.h" />
+    <ClInclude Include="mediaplaylist\mediaplaylist_player.h" />
+    <ClInclude Include="mediaplaylist\mediaplaylist_tree.h" />
+    <ClInclude Include="mediaplaylist\mediaplaylist_impact.h" />
+
+    <ClInclude Include="mediaplay\mediaplay.h" />
+    <ClInclude Include="mediaplay\mediaplay_data.h" />
+    <ClInclude Include="mediaplay\mediaplay_document.h" />
+    <ClInclude Include="mediaplay\mediaplay_record_notify_impact.h" />
+    <ClInclude Include="mediaplay\mediaplay_impact.h" />
+    <ClInclude Include="mediaplay\mediaplay_impact_interface.h" />
+
+    <ClInclude Include="multimedia\multimedia.h" />
+    <ClInclude Include="multimedia\multimedia_application.h" />
+    <ClInclude Include="multimedia\multimedia_decoder.h" />
+    <ClInclude Include="multimedia\multimedia_enum.h" />
+    <ClInclude Include="multimedia\multimedia_exception.h" />
+    <ClInclude Include="multimedia\multimedia_file_application.h" />
+    <ClInclude Include="multimedia\multimedia_library.h" />
+    <ClInclude Include="ortp\b64.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\event.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\jitterctl.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\ortp-config-linux.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\ortp-config-win32.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\ortp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\ortp_file.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\payloadtype.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\port.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\rtcp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\rtp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\rtpsession.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\rtpsession_priv.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\rtpsignaltable.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\rtptimer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\scheduler.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\sessionset.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\srtp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\str_utils.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\stun.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\stun_udp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\telephonyevents.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ortp\utils.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="srtp\config.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="srtp\config2.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="srtp\config_in.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="srtp\getopt_s.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="srtp\rtp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="srtp\rtp_priv.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="srtp\srtp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="srtp\srtp_priv.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="audio\audio_wave.cpp" />
+    <ClCompile Include="audio\audio_wave_base.cpp" />
+    <ClCompile Include="audio\audio_wave_buffer.cpp" />
+    <ClCompile Include="audio\audio_wave_effect_crescendo.cpp" />
+    <ClCompile Include="audio\audio_wave_effect_devocalizer.cpp" />
+    <ClCompile Include="audio\audio_wave_file.cpp" />
+    <ClCompile Include="audio\audio_wave_in.cpp" />
+    <ClCompile Include="audio\audio_wave_in_listener.cpp" />
+    <ClCompile Include="audio\audio_wave_in_listener_set.cpp" />
+    <ClCompile Include="audio\audio_wave_out.cpp" />
+    <ClCompile Include="audio\audio_wave_player.cpp" />
+    <ClCompile Include="audio\audio_wave_player_container.cpp" />
+    <ClCompile Include="audio\audio_wave_pre_buffer.cpp" />
+    <ClCompile Include="audio\audio_wave_pre_buffer_callback.cpp" />
+    <ClCompile Include="audio\audio_wave_recorder.cpp" />
+    <ClCompile Include="audio\audio_wave_recorder_container.cpp" />
+    <ClCompile Include="audio_decode\audio_decode_decoder.cpp" />
+    <ClCompile Include="audio_decode\audio_decode_decoder_plugin.cpp" />
+    <ClCompile Include="audio_decode\audio_decode_decoder_plugin_set.cpp" />
+    <ClCompile Include="audio_decode\audio_decode_encoder.cpp" />
+    <ClCompile Include="audio_decode\audio_decode_encoder_plugin.cpp" />
+    <ClCompile Include="audio_decode\audio_decode_encoder_plugin_set.cpp" />
+    <ClCompile Include="audio_mixer\audio_mixer_callback.cpp" />
+    <ClCompile Include="audio_mixer\audio_mixer_control.cpp" />
+    <ClCompile Include="audio_mixer\audio_mixer_control_data.cpp" />
+    <ClCompile Include="audio_mixer\audio_mixer_control_data_switch.cpp" />
+    <ClCompile Include="audio_mixer\audio_mixer_control_data_volume.cpp" />
+    <ClCompile Include="audio_mixer\audio_mixer_destination.cpp" />
+    <ClCompile Include="audio_mixer\audio_mixer_device.cpp" />
+    <ClCompile Include="audio_mixer\audio_mixer_line_info.cpp" />
+    <ClCompile Include="audio_mixer\audio_mixer_mixer.cpp" />
+    <ClCompile Include="audio_mixer\audio_mixer_section.cpp" />
+    <ClCompile Include="audio_mixer\audio_mixer_source.cpp" />
+    <ClCompile Include="audio_mixer\audio_mixer_thread.cpp" />
+    <ClCompile Include="audio_mixer\audio_mixer_user label.cpp" />
+    <ClCompile Include="audio_mixer\audio_mixer_user_control.cpp" />
+    <ClCompile Include="audio_mixer\audio_mixer_user_level_control.cpp" />
+    <ClCompile Include="audio_mixer\audio_mixer_user_toggle_control.cpp" />
+    <ClCompile Include="audio_mixer_userbase\audio_mixer_userbase_control_data.cpp" />
+    <ClCompile Include="audio_mixer_userbase\audio_mixer_userbase_control_impact.cpp" />
+    <ClCompile Include="audio_mixer_userbase\audio_mixer_userbase_document.cpp" />
+    <ClCompile Include="audio_mixer_userbase\audio_mixer_userbase_frame_window.cpp" />
+    <ClCompile Include="audio_mixer_userbase\audio_mixer_userbase_label.cpp" />
+    <ClCompile Include="audio_mixer_userbase\audio_mixer_userbase_main_impact.cpp" />
+    <ClCompile Include="audio_mixer_userbase\audio_mixer_userbase_mute_control.cpp" />
+    <ClCompile Include="audio_mixer_userbase\audio_mixer_userbase_section.cpp" />
+    <ClCompile Include="audio_mixer_userbase\audio_mixer_userbase_slider.cpp" />
+    <ClCompile Include="audio_mixer_userbase\audio_mixer_userbase_thread.cpp" />
+    <ClCompile Include="framework.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="iaudio\iaudio_wave_stream_effect.cpp" />
+    <ClCompile Include="iaudio\iaudio_wave_stream_effect_chain.cpp" />
+    <ClCompile Include="iaudio\iaudio_wave_stream_effect_listener.cpp" />
+    <ClCompile Include="iaudio\iaudio_wave_stream_effect_order.cpp" />
+    <ClCompile Include="imediamanager\PlayerInterface.cpp" />
+    <ClCompile Include="imediamanager\PlaylistInterface.cpp" />
+    <ClCompile Include="imedia\imedia_position.cpp" />
+    <ClCompile Include="imedia\imedia_position_array.cpp" />
+    <ClCompile Include="imedia\imedia_time.cpp" />
+    <ClCompile Include="imedia\imedia_time_array.cpp" />
+    <ClCompile Include="mediamanager\mediamanager_album_build.cpp" />
+    <ClCompile Include="mediamanager\mediamanager_album_build_thread.cpp" />
+    <ClCompile Include="mediamanager\mediamanager_album_build_window.cpp" />
+    <ClCompile Include="mediamanager\mediamanager_mediamanager.cpp" />
+    <ClCompile Include="mediaplaylist\mediaplaylist_document.cpp" />
+    <ClCompile Include="mediaplaylist\mediaplaylist_frame.cpp" />
+    <ClCompile Include="mediaplaylist\mediaplaylist_item.cpp" />
+    <ClCompile Include="mediaplaylist\mediaplaylist_listener.cpp" />
+    <ClCompile Include="mediaplaylist\mediaplaylist_list_impact.cpp" />
+    <ClCompile Include="mediaplaylist\mediaplaylist_media_playlist.cpp" />
+    <ClCompile Include="mediaplaylist\mediaplaylist_player.cpp" />
+    <ClCompile Include="mediaplaylist\mediaplaylist_tree.cpp" />
+    <ClCompile Include="mediaplaylist\mediaplaylist_impact.cpp" />
+
+    <ClCompile Include="mediaplay\mediaplay_data.cpp" />
+    <ClCompile Include="mediaplay\mediaplay_document.cpp" />
+    <ClCompile Include="mediaplay\mediaplay_record_notify_impact.cpp" />
+    <ClCompile Include="mediaplay\mediaplay_impact.cpp" />
+    <ClCompile Include="mediaplay\mediaplay_impact_interface.cpp" />
+
+    <ClCompile Include="multimedia\multimedia_application.cpp" />
+    <ClCompile Include="multimedia\multimedia_decoder.cpp" />
+    <ClCompile Include="multimedia\multimedia_definition.cpp" />
+    <ClCompile Include="multimedia\multimedia_exception.cpp" />
+    <ClCompile Include="multimedia\multimedia_file_application.cpp" />
+    <ClCompile Include="multimedia\multimedia_library.cpp" />
+    <ClCompile Include="ortp\ortp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_avprofile.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_b64.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_event.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_file.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_jitterctl.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_payloadtype.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_port.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_posixtimer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_rtcp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_rtcpparse.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_rtpparse.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_rtpsession.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_rtpsession_inet.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_rtpsignaltable.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_rtptimer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_scheduler.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_sessionset.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_srtp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_str_utils.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_stun.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_stun_udp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_telephonyevents.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_utils.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="srtp\srtp_aes_tables.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="srtp\srtp_srtp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memdleak|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

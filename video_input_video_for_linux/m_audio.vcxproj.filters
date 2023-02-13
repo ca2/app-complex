@@ -1,0 +1,830 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{b81df7ec-7c41-4a61-b9e9-b8f9c45f411b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\multimedia">
+      <UniqueIdentifier>{dc09b66b-1234-483c-9543-202c232d3c57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\audio">
+      <UniqueIdentifier>{db8c2f69-8c1d-49d1-a8df-055de598b802}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\audio_decode">
+      <UniqueIdentifier>{3ff628d9-83da-4fab-9db6-a378a8f17b0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\iaudio">
+      <UniqueIdentifier>{36e29e80-3ebb-469a-bd39-6ce06802ef2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\imedia">
+      <UniqueIdentifier>{e61e12d2-8e8e-46ab-b091-7db9b2c9558a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\mediaplay">
+      <UniqueIdentifier>{d8f6c4a0-3447-4490-b48d-0dc5863b1c8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\mediaplaylist">
+      <UniqueIdentifier>{8ddb6f06-ddfe-4328-8bfe-1e0b7808d15f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ortp">
+      <UniqueIdentifier>{fdbce449-ea82-42bd-a103-ef6dd825d39c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\srtp">
+      <UniqueIdentifier>{84044555-92ee-4ef0-bca9-166e6245da9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\audio_mixer">
+      <UniqueIdentifier>{2aaef459-e1fb-4d68-8251-56360c220e11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\audio_mixer_userbase">
+      <UniqueIdentifier>{a000e26f-a376-4b5b-a0f3-1733034e192e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\imediamanager">
+      <UniqueIdentifier>{01269a07-8668-4350-8344-993aae6f3f74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\mediamanager">
+      <UniqueIdentifier>{c9976642-1a45-4516-b496-3e9a61359784}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{37b41c01-ab94-4ca4-9978-3a85d2984f2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\audio">
+      <UniqueIdentifier>{a950a19c-29a0-4661-8c01-e6bdda4f2657}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\multimedia">
+      <UniqueIdentifier>{698c60e3-32d5-4f80-aed5-35d7ebc6dcdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\audio_decode">
+      <UniqueIdentifier>{c044bfa8-6279-4f4a-b646-c43b79197090}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\iaudio">
+      <UniqueIdentifier>{620e124d-9e3b-415d-8e9a-a6f7f091ffdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\imedia">
+      <UniqueIdentifier>{3a315e79-ab63-44d7-a451-38cf3be23f97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\imediamanager">
+      <UniqueIdentifier>{b03e44fe-e417-46dc-85cc-864a8045e965}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mediamanager">
+      <UniqueIdentifier>{605fc89b-78c6-4661-b47c-e82bbcbf41c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mediaplay">
+      <UniqueIdentifier>{7aa442b1-22a1-4217-aad7-5438382117c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mediaplaylist">
+      <UniqueIdentifier>{e3a81956-6d05-4dd6-8ec3-8bbc0a36bfea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ortp">
+      <UniqueIdentifier>{5f070c6d-fe89-40b6-97a2-40ad20f500cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\srtp">
+      <UniqueIdentifier>{5f2073ed-5104-4620-8255-aa8c72170042}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\audio_mixer_userbase">
+      <UniqueIdentifier>{37926481-9901-4d68-83a5-a285670e3214}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\audio_mixer">
+      <UniqueIdentifier>{c6f5f9af-8a25-418c-9716-13e39fe06c35}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multimedia\multimedia.h">
+      <Filter>Header Files\multimedia</Filter>
+    </ClInclude>
+    <ClInclude Include="multimedia\multimedia_application.h">
+      <Filter>Header Files\multimedia</Filter>
+    </ClInclude>
+    <ClInclude Include="multimedia\multimedia_decoder.h">
+      <Filter>Header Files\multimedia</Filter>
+    </ClInclude>
+    <ClInclude Include="multimedia\multimedia_enum.h">
+      <Filter>Header Files\multimedia</Filter>
+    </ClInclude>
+    <ClInclude Include="multimedia\multimedia_exception.h">
+      <Filter>Header Files\multimedia</Filter>
+    </ClInclude>
+    <ClInclude Include="multimedia\multimedia_file_application.h">
+      <Filter>Header Files\multimedia</Filter>
+    </ClInclude>
+    <ClInclude Include="multimedia\multimedia_library.h">
+      <Filter>Header Files\multimedia</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio_global.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio_command.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio_wave_base.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio_wave_buffer.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio_wave.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio_wave_effect_crescendo.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio_wave_effect_devocalizer.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio_wave_file.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio_wave_format.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio_wave_in.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio_wave_in_listener.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio_wave_in_listener_set.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio_wave_out.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio_wave_player.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio_wave_player_command.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio_wave_player_container.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio_wave_pre_buffer.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio_wave_recorder.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio_wave_recorder_command.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\audio_wave_recorder_container.h">
+      <Filter>Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_decode\audio_decode.h">
+      <Filter>Header Files\audio_decode</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_decode\audio_decode_decoder.h">
+      <Filter>Header Files\audio_decode</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_decode\audio_decode_decoder_plugin.h">
+      <Filter>Header Files\audio_decode</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_decode\audio_decode_decoder_plugin_set.h">
+      <Filter>Header Files\audio_decode</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_decode\audio_decode_encoder.h">
+      <Filter>Header Files\audio_decode</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_decode\audio_decode_encoder_plugin.h">
+      <Filter>Header Files\audio_decode</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_decode\audio_decode_encoder_plugin_set.h">
+      <Filter>Header Files\audio_decode</Filter>
+    </ClInclude>
+    <ClInclude Include="iaudio\iaudio.h">
+      <Filter>Header Files\iaudio</Filter>
+    </ClInclude>
+    <ClInclude Include="iaudio\iaudio_wave_stream_effect.h">
+      <Filter>Header Files\iaudio</Filter>
+    </ClInclude>
+    <ClInclude Include="iaudio\iaudio_wave_stream_effect_chain.h">
+      <Filter>Header Files\iaudio</Filter>
+    </ClInclude>
+    <ClInclude Include="iaudio\iaudio_wave_stream_effect_event_listener.h">
+      <Filter>Header Files\iaudio</Filter>
+    </ClInclude>
+    <ClInclude Include="iaudio\iaudio_wave_stream_effect_order.h">
+      <Filter>Header Files\iaudio</Filter>
+    </ClInclude>
+    <ClInclude Include="imedia\imedia.h">
+      <Filter>Header Files\imedia</Filter>
+    </ClInclude>
+    <ClInclude Include="imedia\imedia_position.h">
+      <Filter>Header Files\imedia</Filter>
+    </ClInclude>
+    <ClInclude Include="imedia\imedia_position_array.h">
+      <Filter>Header Files\imedia</Filter>
+    </ClInclude>
+    <ClInclude Include="imedia\imedia_time.h">
+      <Filter>Header Files\imedia</Filter>
+    </ClInclude>
+    <ClInclude Include="imedia\imedia_time_array.h">
+      <Filter>Header Files\imedia</Filter>
+    </ClInclude>
+    <ClInclude Include="mediaplay\mediaplay.h">
+      <Filter>Header Files\mediaplay</Filter>
+    </ClInclude>
+    <ClInclude Include="mediaplay\mediaplay_data.h">
+      <Filter>Header Files\mediaplay</Filter>
+    </ClInclude>
+    <ClInclude Include="mediaplay\mediaplay_document.h">
+      <Filter>Header Files\mediaplay</Filter>
+    </ClInclude>
+    <ClInclude Include="mediaplay\mediaplay_record_notify_impact.h">
+      <Filter>Header Files\mediaplay</Filter>
+    </ClInclude>
+    <ClInclude Include="mediaplay\mediaplay_impact.h">
+      <Filter>Header Files\mediaplay</Filter>
+    </ClInclude>
+    <ClInclude Include="mediaplay\mediaplay_impact_interface.h">
+      <Filter>Header Files\mediaplay</Filter>
+    </ClInclude>
+    <ClInclude Include="mediaplay\aaa_want_to_erase_mediaplay_impact_update_hint.h">
+      <Filter>Header Files\mediaplay</Filter>
+    </ClInclude>
+    <ClInclude Include="mediaplaylist\mediaplaylist.h">
+      <Filter>Header Files\mediaplaylist</Filter>
+    </ClInclude>
+    <ClInclude Include="mediaplaylist\mediaplaylist_player.h">
+      <Filter>Header Files\mediaplaylist</Filter>
+    </ClInclude>
+    <ClInclude Include="mediaplaylist\mediaplaylist_media_playlist.h">
+      <Filter>Header Files\mediaplaylist</Filter>
+    </ClInclude>
+    <ClInclude Include="mediaplaylist\mediaplaylist_listener.h">
+      <Filter>Header Files\mediaplaylist</Filter>
+    </ClInclude>
+    <ClInclude Include="mediaplaylist\mediaplaylist_document.h">
+      <Filter>Header Files\mediaplaylist</Filter>
+    </ClInclude>
+    <ClInclude Include="mediaplaylist\mediaplaylist_enum.h">
+      <Filter>Header Files\mediaplaylist</Filter>
+    </ClInclude>
+    <ClInclude Include="mediaplaylist\mediaplaylist_frame.h">
+      <Filter>Header Files\mediaplaylist</Filter>
+    </ClInclude>
+    <ClInclude Include="mediaplaylist\mediaplaylist_list_impact.h">
+      <Filter>Header Files\mediaplaylist</Filter>
+    </ClInclude>
+    <ClInclude Include="mediaplaylist\mediaplaylist_item.h">
+      <Filter>Header Files\mediaplaylist</Filter>
+    </ClInclude>
+    <ClInclude Include="mediaplaylist\mediaplaylist_tree.h">
+      <Filter>Header Files\mediaplaylist</Filter>
+    </ClInclude>
+    <ClInclude Include="mediaplaylist\mediaplaylist_impact.h">
+      <Filter>Header Files\mediaplaylist</Filter>
+    </ClInclude>
+    <ClInclude Include="mediaplaylist\aaa_want_to_erase_mediaplaylist_impact_update_hint.h">
+      <Filter>Header Files\mediaplaylist</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\b64.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\event.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\ortp_file.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\jitterctl.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\ortp-config-linux.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\ortp-config-win32.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\ortp.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\payloadtype.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\port.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\rtcp.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\rtp.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\rtpsession.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\rtpsession_priv.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\rtpsignaltable.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\rtptimer.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\scheduler.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\sessionset.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\srtp.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\str_utils.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\stun.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\stun_udp.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\telephonyevents.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="ortp\utils.h">
+      <Filter>Header Files\ortp</Filter>
+    </ClInclude>
+    <ClInclude Include="srtp\config.h">
+      <Filter>Header Files\srtp</Filter>
+    </ClInclude>
+    <ClInclude Include="srtp\config2.h">
+      <Filter>Header Files\srtp</Filter>
+    </ClInclude>
+    <ClInclude Include="srtp\config_in.h">
+      <Filter>Header Files\srtp</Filter>
+    </ClInclude>
+    <ClInclude Include="srtp\getopt_s.h">
+      <Filter>Header Files\srtp</Filter>
+    </ClInclude>
+    <ClInclude Include="srtp\rtp.h">
+      <Filter>Header Files\srtp</Filter>
+    </ClInclude>
+    <ClInclude Include="srtp\rtp_priv.h">
+      <Filter>Header Files\srtp</Filter>
+    </ClInclude>
+    <ClInclude Include="srtp\srtp.h">
+      <Filter>Header Files\srtp</Filter>
+    </ClInclude>
+    <ClInclude Include="srtp\srtp_priv.h">
+      <Filter>Header Files\srtp</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer\audio_mixer.h">
+      <Filter>Header Files\audio_mixer</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer\audio_mixer_callback.h">
+      <Filter>Header Files\audio_mixer</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer\audio_mixer_control.h">
+      <Filter>Header Files\audio_mixer</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer\audio_mixer_control_data.h">
+      <Filter>Header Files\audio_mixer</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer\audio_mixer_control_data_switch.h">
+      <Filter>Header Files\audio_mixer</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer\audio_mixer_control_data_volume.h">
+      <Filter>Header Files\audio_mixer</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer\audio_mixer_destination.h">
+      <Filter>Header Files\audio_mixer</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer\audio_mixer_device.h">
+      <Filter>Header Files\audio_mixer</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer\audio_mixer_line_info.h">
+      <Filter>Header Files\audio_mixer</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer\audio_mixer_mixer.h">
+      <Filter>Header Files\audio_mixer</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer\audio_mixer_section.h">
+      <Filter>Header Files\audio_mixer</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer\audio_mixer_source.h">
+      <Filter>Header Files\audio_mixer</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer\audio_mixer_thread.h">
+      <Filter>Header Files\audio_mixer</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer\audio_mixer_user_control.h">
+      <Filter>Header Files\audio_mixer</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer\audio_mixer_user_label.h">
+      <Filter>Header Files\audio_mixer</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer\audio_mixer_user_level_control.h">
+      <Filter>Header Files\audio_mixer</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer\audio_mixer_user_toggle_control.h">
+      <Filter>Header Files\audio_mixer</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase.h">
+      <Filter>Header Files\audio_mixer_userbase</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_control_data.h">
+      <Filter>Header Files\audio_mixer_userbase</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_control_impact.h">
+      <Filter>Header Files\audio_mixer_userbase</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_document.h">
+      <Filter>Header Files\audio_mixer_userbase</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_frame_window.h">
+      <Filter>Header Files\audio_mixer_userbase</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_label.h">
+      <Filter>Header Files\audio_mixer_userbase</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_main_impact.h">
+      <Filter>Header Files\audio_mixer_userbase</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_mute_control.h">
+      <Filter>Header Files\audio_mixer_userbase</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_section.h">
+      <Filter>Header Files\audio_mixer_userbase</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_slider.h">
+      <Filter>Header Files\audio_mixer_userbase</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_thread.h">
+      <Filter>Header Files\audio_mixer_userbase</Filter>
+    </ClInclude>
+    <ClInclude Include="imediamanager\imediamanager.h">
+      <Filter>Header Files\imediamanager</Filter>
+    </ClInclude>
+    <ClInclude Include="imediamanager\PlayerInterface.h">
+      <Filter>Header Files\imediamanager</Filter>
+    </ClInclude>
+    <ClInclude Include="imediamanager\PlaylistInterface.h">
+      <Filter>Header Files\imediamanager</Filter>
+    </ClInclude>
+    <ClInclude Include="mediamanager\mediamanager.h">
+      <Filter>Header Files\mediamanager</Filter>
+    </ClInclude>
+    <ClInclude Include="mediamanager\mediamanager_album_build.h">
+      <Filter>Header Files\mediamanager</Filter>
+    </ClInclude>
+    <ClInclude Include="mediamanager\mediamanager_album_build_thread.h">
+      <Filter>Header Files\mediamanager</Filter>
+    </ClInclude>
+    <ClInclude Include="mediamanager\mediamanager_album_build_window.h">
+      <Filter>Header Files\mediamanager</Filter>
+    </ClInclude>
+    <ClInclude Include="mediamanager\mediamanager_album_record.h">
+      <Filter>Header Files\mediamanager</Filter>
+    </ClInclude>
+    <ClInclude Include="mediamanager\mediamanager_media_manager.h">
+      <Filter>Header Files\mediamanager</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="framework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_wave_base.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_wave_buffer.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_wave.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_wave_effect_crescendo.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_wave_effect_devocalizer.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_wave_file.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_wave_in.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_wave_in_listener.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_wave_in_listener_set.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_wave_out.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_wave_player.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_wave_player_container.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_wave_pre_buffer.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_wave_pre_buffer_callback.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_wave_recorder.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_wave_recorder_container.cpp">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="multimedia\multimedia_application.cpp">
+      <Filter>Source Files\multimedia</Filter>
+    </ClCompile>
+    <ClCompile Include="multimedia\multimedia_decoder.cpp">
+      <Filter>Source Files\multimedia</Filter>
+    </ClCompile>
+    <ClCompile Include="multimedia\multimedia_definition.cpp">
+      <Filter>Source Files\multimedia</Filter>
+    </ClCompile>
+    <ClCompile Include="multimedia\multimedia_exception.cpp">
+      <Filter>Source Files\multimedia</Filter>
+    </ClCompile>
+    <ClCompile Include="multimedia\multimedia_file_application.cpp">
+      <Filter>Source Files\multimedia</Filter>
+    </ClCompile>
+    <ClCompile Include="multimedia\multimedia_library.cpp">
+      <Filter>Source Files\multimedia</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_decode\audio_decode_decoder.cpp">
+      <Filter>Source Files\audio_decode</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_decode\audio_decode_decoder_plugin.cpp">
+      <Filter>Source Files\audio_decode</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_decode\audio_decode_decoder_plugin_set.cpp">
+      <Filter>Source Files\audio_decode</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_decode\audio_decode_encoder.cpp">
+      <Filter>Source Files\audio_decode</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_decode\audio_decode_encoder_plugin.cpp">
+      <Filter>Source Files\audio_decode</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_decode\audio_decode_encoder_plugin_set.cpp">
+      <Filter>Source Files\audio_decode</Filter>
+    </ClCompile>
+    <ClCompile Include="iaudio\iaudio_wave_stream_effect.cpp">
+      <Filter>Source Files\iaudio</Filter>
+    </ClCompile>
+    <ClCompile Include="iaudio\iaudio_wave_stream_effect_chain.cpp">
+      <Filter>Source Files\iaudio</Filter>
+    </ClCompile>
+    <ClCompile Include="iaudio\iaudio_wave_stream_effect_listener.cpp">
+      <Filter>Source Files\iaudio</Filter>
+    </ClCompile>
+    <ClCompile Include="iaudio\iaudio_wave_stream_effect_order.cpp">
+      <Filter>Source Files\iaudio</Filter>
+    </ClCompile>
+    <ClCompile Include="imedia\imedia_position.cpp">
+      <Filter>Source Files\imedia</Filter>
+    </ClCompile>
+    <ClCompile Include="imedia\imedia_position_array.cpp">
+      <Filter>Source Files\imedia</Filter>
+    </ClCompile>
+    <ClCompile Include="imedia\imedia_time.cpp">
+      <Filter>Source Files\imedia</Filter>
+    </ClCompile>
+    <ClCompile Include="imedia\imedia_time_array.cpp">
+      <Filter>Source Files\imedia</Filter>
+    </ClCompile>
+    <ClCompile Include="imediamanager\PlayerInterface.cpp">
+      <Filter>Source Files\imediamanager</Filter>
+    </ClCompile>
+    <ClCompile Include="imediamanager\PlaylistInterface.cpp">
+      <Filter>Source Files\imediamanager</Filter>
+    </ClCompile>
+    <ClCompile Include="mediamanager\mediamanager_album_build.cpp">
+      <Filter>Source Files\mediamanager</Filter>
+    </ClCompile>
+    <ClCompile Include="mediamanager\mediamanager_album_build_thread.cpp">
+      <Filter>Source Files\mediamanager</Filter>
+    </ClCompile>
+    <ClCompile Include="mediamanager\mediamanager_album_build_window.cpp">
+      <Filter>Source Files\mediamanager</Filter>
+    </ClCompile>
+    <ClCompile Include="mediamanager\mediamanager_mediamanager.cpp">
+      <Filter>Source Files\mediamanager</Filter>
+    </ClCompile>
+    <ClCompile Include="mediaplay\mediaplay_data.cpp">
+      <Filter>Source Files\mediaplay</Filter>
+    </ClCompile>
+    <ClCompile Include="mediaplay\mediaplay_document.cpp">
+      <Filter>Source Files\mediaplay</Filter>
+    </ClCompile>
+    <ClCompile Include="mediaplay\mediaplay_record_notify_impact.cpp">
+      <Filter>Source Files\mediaplay</Filter>
+    </ClCompile>
+    <ClCompile Include="mediaplay\mediaplay_impact.cpp">
+      <Filter>Source Files\mediaplay</Filter>
+    </ClCompile>
+    <ClCompile Include="mediaplay\mediaplay_impact_interface.cpp">
+      <Filter>Source Files\mediaplay</Filter>
+    </ClCompile>
+    <ClCompile Include="mediaplay\aaa_want_to_erase_mediaplay_impact_update_hint.cpp">
+      <Filter>Source Files\mediaplay</Filter>
+    </ClCompile>
+    <ClCompile Include="mediaplaylist\mediaplaylist_player.cpp">
+      <Filter>Source Files\mediaplaylist</Filter>
+    </ClCompile>
+    <ClCompile Include="mediaplaylist\mediaplaylist_media_playlist.cpp">
+      <Filter>Source Files\mediaplaylist</Filter>
+    </ClCompile>
+    <ClCompile Include="mediaplaylist\mediaplaylist_listener.cpp">
+      <Filter>Source Files\mediaplaylist</Filter>
+    </ClCompile>
+    <ClCompile Include="mediaplaylist\mediaplaylist_document.cpp">
+      <Filter>Source Files\mediaplaylist</Filter>
+    </ClCompile>
+    <ClCompile Include="mediaplaylist\mediaplaylist_frame.cpp">
+      <Filter>Source Files\mediaplaylist</Filter>
+    </ClCompile>
+    <ClCompile Include="mediaplaylist\mediaplaylist_list_impact.cpp">
+      <Filter>Source Files\mediaplaylist</Filter>
+    </ClCompile>
+    <ClCompile Include="mediaplaylist\mediaplaylist_item.cpp">
+      <Filter>Source Files\mediaplaylist</Filter>
+    </ClCompile>
+    <ClCompile Include="mediaplaylist\mediaplaylist_tree.cpp">
+      <Filter>Source Files\mediaplaylist</Filter>
+    </ClCompile>
+    <ClCompile Include="mediaplaylist\mediaplaylist_impact.cpp">
+      <Filter>Source Files\mediaplaylist</Filter>
+    </ClCompile>
+    <ClCompile Include="mediaplaylist\aaa_want_to_erase_mediaplaylist_impact_update_hint.cpp">
+      <Filter>Source Files\mediaplaylist</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_avprofile.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_b64.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_event.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_jitterctl.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_file.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_payloadtype.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_port.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_posixtimer.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_rtcp.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_rtcpparse.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_rtpparse.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_rtpsession.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_rtpsession_inet.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_rtpsignaltable.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_rtptimer.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_scheduler.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_sessionset.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_srtp.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_str_utils.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_stun.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_stun_udp.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_telephonyevents.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="ortp\ortp_utils.cpp">
+      <Filter>Source Files\ortp</Filter>
+    </ClCompile>
+    <ClCompile Include="srtp\srtp_aes_tables.cpp">
+      <Filter>Source Files\srtp</Filter>
+    </ClCompile>
+    <ClCompile Include="srtp\srtp_srtp.cpp">
+      <Filter>Source Files\srtp</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer_userbase\audio_mixer_userbase_section.cpp">
+      <Filter>Source Files\audio_mixer_userbase</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer_userbase\audio_mixer_userbase_control_data.cpp">
+      <Filter>Source Files\audio_mixer_userbase</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer_userbase\audio_mixer_userbase_control_impact.cpp">
+      <Filter>Source Files\audio_mixer_userbase</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer_userbase\audio_mixer_userbase_document.cpp">
+      <Filter>Source Files\audio_mixer_userbase</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer_userbase\audio_mixer_userbase_frame_window.cpp">
+      <Filter>Source Files\audio_mixer_userbase</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer_userbase\audio_mixer_userbase_label.cpp">
+      <Filter>Source Files\audio_mixer_userbase</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer_userbase\audio_mixer_userbase_main_impact.cpp">
+      <Filter>Source Files\audio_mixer_userbase</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer_userbase\audio_mixer_userbase_mute_control.cpp">
+      <Filter>Source Files\audio_mixer_userbase</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer_userbase\audio_mixer_userbase_slider.cpp">
+      <Filter>Source Files\audio_mixer_userbase</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer_userbase\audio_mixer_userbase_thread.cpp">
+      <Filter>Source Files\audio_mixer_userbase</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer\audio_mixer_control_data_switch.cpp">
+      <Filter>Source Files\audio_mixer</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer\audio_mixer_control_data_volume.cpp">
+      <Filter>Source Files\audio_mixer</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer\audio_mixer_section.cpp">
+      <Filter>Source Files\audio_mixer</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer\audio_mixer_callback.cpp">
+      <Filter>Source Files\audio_mixer</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer\audio_mixer_control.cpp">
+      <Filter>Source Files\audio_mixer</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer\audio_mixer_control_data.cpp">
+      <Filter>Source Files\audio_mixer</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer\audio_mixer_destination.cpp">
+      <Filter>Source Files\audio_mixer</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer\audio_mixer_device.cpp">
+      <Filter>Source Files\audio_mixer</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer\audio_mixer_line_info.cpp">
+      <Filter>Source Files\audio_mixer</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer\audio_mixer_mixer.cpp">
+      <Filter>Source Files\audio_mixer</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer\audio_mixer_source.cpp">
+      <Filter>Source Files\audio_mixer</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer\audio_mixer_thread.cpp">
+      <Filter>Source Files\audio_mixer</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer\audio_mixer_user label.cpp">
+      <Filter>Source Files\audio_mixer</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer\audio_mixer_user_control.cpp">
+      <Filter>Source Files\audio_mixer</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer\audio_mixer_user_level_control.cpp">
+      <Filter>Source Files\audio_mixer</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_mixer\audio_mixer_user_toggle_control.cpp">
+      <Filter>Source Files\audio_mixer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="multimedia.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

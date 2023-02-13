@@ -8,8 +8,8 @@
 #include "base/user/user/tab_pane.h"
 #include "base/user/user/single_document_template.h"
 #include "aura/user/user/system.h"
-#include "app-core/video_input/video_input.h"
-#include "app-core/video_input/device.h"
+#include "app-complex/video_input/video_input.h"
+#include "app-complex/video_input/device.h"
 
 
 namespace app_complex_video_capture

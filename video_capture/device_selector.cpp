@@ -3,8 +3,8 @@
 #include "application.h"
 #include "pane_impact.h"
 #include "acme/handler/item.h"
-#include "app-core/video_input/video_input.h"
-#include "app-core/video_input/device.h"
+#include "app-complex/video_input/video_input.h"
+#include "app-complex/video_input/device.h"
 #include "aura/graphics/image/drawing.h"
 #include "aura/message/user.h"
 

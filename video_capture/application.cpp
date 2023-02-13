@@ -14,8 +14,8 @@
 #include "acme/handler/request.h"
 #include "apex/database/_binary_stream.h"
 #include "base/user/user/single_document_template.h"
-#include "app-core/video_input/video_input.h"
-#include "app-core/video_input/device.h"
+#include "app-complex/video_input/video_input.h"
+#include "app-complex/video_input/device.h"
 
 
 namespace app_complex_video_capture
@@ -93,6 +93,10 @@ namespace app_complex_video_capture
 
       auto pfactory = acmesystem()->factory("video_input", "video_for_linux");
 
+#elif defined(_UWP)
+
+      auto pfactory = acmesystem()->factory("video_input", "media_capture");
+
 #else
 
       auto pfactory = acmesystem()->factory("video_input", "media_foundation");
@@ -105,11 +109,6 @@ namespace app_complex_video_capture
 
       m_pvideoinput->update_device_list();
 
-      string strDevice;
-      
-      datastream()->get("device", strDevice);
-
-      set_current_video_input_device(strDevice);
 
    }
 
@@ -148,6 +147,14 @@ namespace app_complex_video_capture
          m_ptemplateVideoCaptureImpact->request(prequest);
 
       }
+
+
+      //string strDevice;
+
+      //datastream()->get("device", strDevice);
+
+      //set_current_video_input_device(strDevice);
+
 
       //rectangle_i32 r(20, 20, 20, 20);
 

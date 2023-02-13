@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="audio" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="basis">
+				<Option output="$(WORKSPACEDIR)/../../../time-$(#platform_modifier)/x64/$(TARGET_NAME)/lib$(PROJECT_NAME).so" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="$(WORKSPACEDIR)/../../../time-$(#platform_modifier)/x64/$(TARGET_NAME)/" />
+				<Option object_output="$(WORKSPACEDIR)/../../../time-$(#platform_modifier)/intermediate/$(TARGET_NAME)/$(PROJECT_NAME)" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option parameters='&quot;https://ca2.cc/image/domain/symbol/cc.png&quot; : app=app-core/flag build_number=basis locale=_std schema=_std' />
+				<Option host_application="$(WORKSPACEDIR)/../../../time-$(#platform_modifier)/x64/$(TARGET_NAME)/$(PROJECT_NAME)" />
+				<Option run_host_application_in_terminal="0" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-std=c++17" />
+					<Add option="-fPIC" />
+					<Add option="-g" />
+					<Add option="-D_DEBUG" />
+				</Compiler>
+			</Target>
+			<Target title="stage">
+				<Option output="$(WORKSPACEDIR)/../../../time-$(#platform_modifier)/x64/$(TARGET_NAME)/lib$(PROJECT_NAME).so" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="$(WORKSPACEDIR)/../../../time-$(#platform_modifier)/x64/$(TARGET_NAME)/" />
+				<Option object_output="$(WORKSPACEDIR)/../../../time-$(#platform_modifier)/intermediate/$(TARGET_NAME)/$(PROJECT_NAME)" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option parameters='&quot;https://ca2.cc/image/domain/symbol/cc.png&quot; : app=app-core/flag build_number=basis locale=_std schema=_std' />
+				<Option host_application="$(WORKSPACEDIR)/../../../time-$(#platform_modifier)/x64/$(TARGET_NAME)/$(PROJECT_NAME)" />
+				<Option run_host_application_in_terminal="0" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O0" />
+					<Add option="-std=c++17" />
+					<Add option="-pg" />
+					<Add option="-fPIC" />
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg" />
+				</Linker>
+			</Target>
+			<Target title="memdleak">
+				<Option output="$(WORKSPACEDIR)/../../../time-$(#platform_modifier)/x64/$(TARGET_NAME)/lib$(PROJECT_NAME).so" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="$(WORKSPACEDIR)/../../../time-$(#platform_modifier)/x64/$(TARGET_NAME)/" />
+				<Option object_output="$(WORKSPACEDIR)/../../../time-$(#platform_modifier)/intermediate/$(TARGET_NAME)/$(PROJECT_NAME)" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option parameters='&quot;https://ca2.cc/image/_std/domain/symbol/cc.png&quot; : app=app-core/flag build_number=basis locale=_std schema=_std' />
+				<Option host_application="$(WORKSPACEDIR)/../../../time-$(#platform_modifier)/x64/$(TARGET_NAME)/$(PROJECT_NAME)" />
+				<Option run_host_application_in_terminal="0" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DMEMDLEAK" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-std=c++17" />
+			<Add option="-fPIC" />
+			<Add option="-fexceptions" />
+			<Add option="-fnon-call-exceptions" />
+			<Add option="-fno-pie" />
+			<Add option="-fno-stack-protector" />
+			<Add option="-Wno-pointer-arith" />
+			<Add option="-Wno-attributes" />
+			<Add option="-Winvalid-pch" />
+			<Add option="-Wno-conversion-null" />
+			<Add directory="." />
+			<Add directory="$(PROJECT_DIR)" />
+			<Add directory="$(#archive)" />
+			<Add directory="$(#config)" />
+			<Add directory="$(WORKSPACE_DIR)/../../../source" />
+			<Add directory="$(WORKSPACE_DIR)/../../../source/inc" />
+			<Add directory="$(WORKSPACE_DIR)/../../../source/include" />
+			<Add directory="$(WORKSPACE_DIR)/../../../source/app/_include" />
+			<Add directory="$(WORKSPACE_DIR)/../../../source/app/" />
+			<Add directory="$(WORKSPACE_DIR)/../../../operating-system/operating-system-$(#platform_modifier)" />
+			<Add directory="$(WORKSPACE_DIR)/../../../operating-system/operating-system-$(#platform_modifier)/_include" />
+			<Add directory="$(#archive)/third-$(#platform_modifier)/third/include" />
+			<Add directory="$(WORKSPACE_DIR)/../../../source/app" />
+			<Add directory="$(#sensitive)/sensitive/include" />
+		</Compiler>
+		<Linker>
+			<Add option="-Wl,-rpath=\\$$$ORIGIN" />
+			<Add option="-lpthread" />
+			<Add option="-lacme" />
+			<Add option="-lapex" />
+			<Add option="-laqua" />
+			<Add option="-Wl,-z,defs" />
+			<Add directory="$(WORKSPACEDIR)/../../../time-$(#platform_modifier)/x64/$(TARGET_NAME)" />
+		</Linker>
+		<Unit filename="audio/_.h" />
+		<Unit filename="audio/_const.h" />
+		<Unit filename="audio/aaa_want_to_erase_application.h" />
+		<Unit filename="audio/aaa_want_to_erase_decoder_plugin.h" />
+		<Unit filename="audio/aaa_want_to_erase_department.h" />
+		<Unit filename="audio/aaa_want_to_erase_exception.h" />
+		<Unit filename="audio/aaa_want_to_erase_multimedia.h" />
+		<Unit filename="audio/audio.cpp" />
+		<Unit filename="audio/audio.h" />
+		<Unit filename="audio/id3.h" />
+		<Unit filename="audio/ipi.cpp" />
+		<Unit filename="audio/ipi.h" />
+		<Unit filename="audio/library.cpp" />
+		<Unit filename="audio/library.h" />
+		<Unit filename="audio/ms_translator_speaker.cpp" />
+		<Unit filename="audio/ms_translator_speaker.h" />
+		<Unit filename="audio/sound_track_player.cpp" />
+		<Unit filename="audio/sound_track_player.h" />
+		<Unit filename="audio/sound_track_player_container.cpp" />
+		<Unit filename="audio/sound_track_player_container.h" />
+		<Unit filename="audio/windows/tts_speaker.h" />
+		<Unit filename="decode/_.h" />
+		<Unit filename="decode/decoder.cpp" />
+		<Unit filename="decode/decoder.h" />
+		<Unit filename="decode/decoder_plugin.cpp" />
+		<Unit filename="decode/decoder_plugin.h" />
+		<Unit filename="decode/decoder_plugin_set.cpp" />
+		<Unit filename="decode/decoder_plugin_set.h" />
+		<Unit filename="decode/encoder.cpp" />
+		<Unit filename="decode/encoder.h" />
+		<Unit filename="decode/encoder_plugin.cpp" />
+		<Unit filename="decode/encoder_plugin.h" />
+		<Unit filename="decode/encoder_plugin_set.cpp" />
+		<Unit filename="decode/encoder_plugin_set.h" />
+		<Unit filename="framework.cpp" />
+		<Unit filename="framework.h" />
+		<Unit filename="iaudio/_.h" />
+		<Unit filename="iaudio/wave_stream_effect.cpp" />
+		<Unit filename="iaudio/wave_stream_effect.h" />
+		<Unit filename="iaudio/wave_stream_effect_chain.cpp" />
+		<Unit filename="iaudio/wave_stream_effect_chain.h" />
+		<Unit filename="iaudio/wave_stream_effect_event_listener.h" />
+		<Unit filename="iaudio/wave_stream_effect_listener.cpp" />
+		<Unit filename="iaudio/wave_stream_effect_order.cpp" />
+		<Unit filename="iaudio/wave_stream_effect_order.h" />
+		<Unit filename="imedia/_.h" />
+		<Unit filename="imedia/position.cpp" />
+		<Unit filename="imedia/position.h" />
+		<Unit filename="imedia/position_array.cpp" />
+		<Unit filename="imedia/position_array.h" />
+		<Unit filename="imedia/time.cpp" />
+		<Unit filename="imedia/time.h" />
+		<Unit filename="imedia/time_array.cpp" />
+		<Unit filename="imedia/time_array.h" />
+		<Unit filename="ortp/avprofile.cpp" />
+		<Unit filename="ortp/b64.cpp" />
+		<Unit filename="ortp/b64.h" />
+		<Unit filename="ortp/event.cpp" />
+		<Unit filename="ortp/event.h" />
+		<Unit filename="ortp/file.h" />
+		<Unit filename="ortp/jitterctl.cpp" />
+		<Unit filename="ortp/jitterctl.h" />
+		<Unit filename="ortp/ortp-config-linux.h" />
+		<Unit filename="ortp/ortp-config-win32.h" />
+		<Unit filename="ortp/ortp.cpp" />
+		<Unit filename="ortp/ortp.h" />
+		<Unit filename="ortp/ortp_utils.h" />
+		<Unit filename="ortp/payloadtype.cpp" />
+		<Unit filename="ortp/payloadtype.h" />
+		<Unit filename="ortp/port.cpp" />
+		<Unit filename="ortp/port.h" />
+		<Unit filename="ortp/posixtimer.cpp" />
+		<Unit filename="ortp/rtcp.cpp" />
+		<Unit filename="ortp/rtcp.h" />
+		<Unit filename="ortp/rtcpparse.cpp" />
+		<Unit filename="ortp/rtp.h" />
+		<Unit filename="ortp/rtpfile.cpp" />
+		<Unit filename="ortp/rtpparse.cpp" />
+		<Unit filename="ortp/rtpsession.cpp" />
+		<Unit filename="ortp/rtpsession.h" />
+		<Unit filename="ortp/rtpsession_inet.cpp" />
+		<Unit filename="ortp/rtpsession_priv.h" />
+		<Unit filename="ortp/rtpsignaltable.cpp" />
+		<Unit filename="ortp/rtpsignaltable.h" />
+		<Unit filename="ortp/rtptimer.cpp" />
+		<Unit filename="ortp/rtptimer.h" />
+		<Unit filename="ortp/scheduler.cpp" />
+		<Unit filename="ortp/scheduler.h" />
+		<Unit filename="ortp/sessionset.cpp" />
+		<Unit filename="ortp/sessionset.h" />
+		<Unit filename="ortp/srtp.cpp" />
+		<Unit filename="ortp/srtp.h" />
+		<Unit filename="ortp/str_utils.cpp" />
+		<Unit filename="ortp/str_utils.h" />
+		<Unit filename="ortp/stun.cpp" />
+		<Unit filename="ortp/stun.h" />
+		<Unit filename="ortp/stun_udp.cpp" />
+		<Unit filename="ortp/stun_udp.h" />
+		<Unit filename="ortp/telephonyevents.cpp" />
+		<Unit filename="ortp/telephonyevents.h" />
+		<Unit filename="ortp/utils.cpp" />
+		<Unit filename="ortp/utils.h" />
+		<Unit filename="plugin/_.h" />
+		<Unit filename="plugin/mixer.cpp" />
+		<Unit filename="plugin/mixer.h" />
+		<Unit filename="plugin/playground.cpp" />
+		<Unit filename="plugin/playground.h" />
+		<Unit filename="plugin/plugin.cpp" />
+		<Unit filename="plugin/plugin.h" />
+		<Unit filename="plugin/resampler.cpp" />
+		<Unit filename="plugin/resampler.h" />
+		<Unit filename="plugin/sampler.cpp" />
+		<Unit filename="plugin/sampler.h" />
+		<Unit filename="plugin/source.cpp" />
+		<Unit filename="plugin/source.h" />
+		<Unit filename="plugin/track.cpp" />
+		<Unit filename="plugin/track.h" />
+		<Unit filename="srtp/aes_tables.cpp" />
+		<Unit filename="srtp/config.h" />
+		<Unit filename="srtp/config2.h" />
+		<Unit filename="srtp/config_in.h" />
+		<Unit filename="srtp/getopt_s.h" />
+		<Unit filename="srtp/rtp.h" />
+		<Unit filename="srtp/rtp_priv.h" />
+		<Unit filename="srtp/srtp.cpp" />
+		<Unit filename="srtp/srtp.h" />
+		<Unit filename="srtp/srtp_priv.h" />
+		<Unit filename="wave/_.h" />
+		<Unit filename="wave/base.cpp" />
+		<Unit filename="wave/base.h" />
+		<Unit filename="wave/bbb_want_to_move_effect_devocalizer.h" />
+		<Unit filename="wave/buffer.cpp" />
+		<Unit filename="wave/buffer.h" />
+		<Unit filename="wave/command.h" />
+		<Unit filename="wave/device_player.cpp" />
+		<Unit filename="wave/device_player.h" />
+		<Unit filename="wave/effect_crescendo.cpp" />
+		<Unit filename="wave/effect_crescendo.h" />
+		<Unit filename="wave/file.cpp" />
+		<Unit filename="wave/file.h" />
+		<Unit filename="wave/format.h" />
+		<Unit filename="wave/global.h" />
+		<Unit filename="wave/in.cpp" />
+		<Unit filename="wave/in.h" />
+		<Unit filename="wave/in_listener.cpp" />
+		<Unit filename="wave/in_listener.h" />
+		<Unit filename="wave/in_listener_set.cpp" />
+		<Unit filename="wave/in_listener_set.h" />
+		<Unit filename="wave/logical_player.cpp" />
+		<Unit filename="wave/logical_player.h" />
+		<Unit filename="wave/out.cpp" />
+		<Unit filename="wave/out.h" />
+		<Unit filename="wave/player.cpp" />
+		<Unit filename="wave/player.h" />
+		<Unit filename="wave/player_command.cpp" />
+		<Unit filename="wave/player_command.h" />
+		<Unit filename="wave/player_container.cpp" />
+		<Unit filename="wave/player_container.h" />
+		<Unit filename="wave/pre_buffer.cpp" />
+		<Unit filename="wave/pre_buffer.h" />
+		<Unit filename="wave/recorder.cpp" />
+		<Unit filename="wave/recorder.h" />
+		<Unit filename="wave/recorder_command.h" />
+		<Unit filename="wave/recorder_container.cpp" />
+		<Unit filename="wave/recorder_container.h" />
+		<Unit filename="wave/wave.cpp" />
+		<Unit filename="wave/wave.h" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
