@@ -39,7 +39,7 @@ namespace audio
       listing.add("audio_decode_spotify");
 
       ::file::path_array straPreferred;
-      straPreferred.add(libfilename("audio_decode_mpg123"));
+      straPreferred.add(library_file_name("audio_decode_mpg123"));
       listing.preferred_name(straPreferred);
 
 #elif defined(_UWP)
@@ -49,7 +49,7 @@ namespace audio
       listing.add("audio_decode_spotify.dll");
 
       ::file::path_array straPreferred;
-      straPreferred.add(libfilename("audio_decode_mpg123"));
+      straPreferred.add(library_file_name("audio_decode_mpg123"));
       listing.preferred_name(straPreferred);
 
 #elif defined(ANDROID)
@@ -57,22 +57,22 @@ namespace audio
       listing.add("audio_decode_libmpg123.so");
 
       ::file::path_array straPreferred;
-      straPreferred.add(libfilename("audio_decode_mpg123"));
+      straPreferred.add(library_file_name("audio_decode_mpg123"));
       listing.preferred_name(straPreferred);
 
 #else
 
       ::file::path pathModule = dir()->ca2module();
 
-      string strPattern = libfilename("audio_decode_*");
+      string strPattern = library_file_name("audio_decode_*");
 
       dir()->ls_file_pattern(listing, pathModule, { strPattern });
 
       ::file::path_array straPreferred;
 
-      straPreferred.add(libfilename("audio_decode_wave"));
+      straPreferred.add(library_file_name("audio_decode_wave"));
 
-      straPreferred.add(libfilename("audio_decode_libmpg123"));
+      straPreferred.add(library_file_name("audio_decode_libmpg123"));
 
       listing.preferred_name(straPreferred);
 

@@ -131,13 +131,13 @@ namespace wave
             break;
          case command_open_file_cda:
          {
-            strDecoder = libfilename("audio_cd");
+            strDecoder = library_file_name("audio_cd");
          }
          break;
          case command_open_file_mp3:
          case command_open_file_rtp:
          {
-            strDecoder = libfilename("audio_libmpg123");
+            strDecoder = library_file_name("audio_libmpg123");
          }
          break;
          case command_open_file_vqf:
@@ -146,12 +146,12 @@ namespace wave
             break;
          case command_open_file_wm:
          {
-            strDecoder = libfilename("audio_window_media");
+            strDecoder = library_file_name("audio_window_media");
          }
          break;
          case command_open_file_wav:
          {
-            strDecoder = libfilename("audio_wave");
+            strDecoder = library_file_name("audio_wave");
          }
          break;
          default:
