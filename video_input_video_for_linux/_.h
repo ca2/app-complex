@@ -2,11 +2,8 @@
 
 
 
-#include "app-core/video_input/_.h"
+#include "app-complex/video_input/_.h"
 #include "helpers.h"
-
-
-
 
 
 #ifdef _VIDEO_INPUT_MEDIA_FOUNDATION_LIBRARY

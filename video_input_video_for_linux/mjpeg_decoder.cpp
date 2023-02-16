@@ -15,7 +15,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "mjpeg_decoder.h"
 #include "acme/exception/resource.h"
 #include "aura/graphics/image/image.h"
-#include "app-core/video_input/frame.h"
+#include "app-complex/video_input/frame.h"
 
 
 extern "C"

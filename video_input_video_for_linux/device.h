@@ -2,7 +2,7 @@
 
 
 #include "acme/parallelization/manual_reset_event.h"
-#include "app-core/video_input/device.h"
+#include "app-complex/video_input/device.h"
 
 
 namespace video_input_video_for_linux

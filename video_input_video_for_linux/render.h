@@ -3,7 +3,7 @@
 
 
 //#include <mfcaptureengine.h>
-#include "app-core/video_input/render.h"
+#include "app-complex/video_input/render.h"
 
 
 namespace video_input_video_for_linux

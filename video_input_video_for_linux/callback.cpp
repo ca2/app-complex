@@ -5,7 +5,7 @@
 #include "_functionh_ffmpeg.h"
 #include "acme/parallelization/synchronous_lock.h"
 #include "aura/graphics/image/image.h"
-#include "app-core/video_input/frame.h"
+#include "app-complex/video_input/frame.h"
 
 
 bool ffmpeg_init_frame(AVFrame **framep, int width, int height);

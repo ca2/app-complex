@@ -4,7 +4,7 @@
 #include "thread.h"
 #include "mjpeg_decoder.h"
 #include "callback.h"
-#include "app-core/video_input/media_format.h"
+#include "app-complex/video_input/media_format.h"
 #include "acme/include/_c_swap.h"
 #include "acme/primitive/primitive/memory.h"
 #include "apex/crypto/crypto.h"

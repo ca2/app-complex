@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "app-core/video_input/video_input.h"
+#include "app-complex/video_input/video_input.h"
 
 
 namespace video_input_video_for_linux
