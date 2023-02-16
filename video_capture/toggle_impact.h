@@ -29,7 +29,7 @@ namespace app_complex_video_capture
       void handle(::topic * ptopic, ::context * pcontext) override;
 
 
-      virtual bool keyboard_focus_is_focusable();
+      virtual bool keyboard_focus_is_focusable() override;
 
 
    };

@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "apex/parallelization/thread.h"
+
+
 namespace video_input_video_avfoundation
 {
 

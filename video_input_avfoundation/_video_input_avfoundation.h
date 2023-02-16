@@ -1,8 +1,8 @@
 #pragma once
 
 
-#include "app-core/video_input/_video_input.h"
-#include "acme/operating_system.h"
+#include "app-complex/video_input/_.h"
+#include "acme/_operating_system.h"
 //#include "acme_windows_common/_acme_windows_common.h"
 //#include "acme/operating_system/windows_common/prop_variant.h"
 //#include <Strsafe.h>

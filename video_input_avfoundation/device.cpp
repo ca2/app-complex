@@ -1,8 +1,9 @@
-// https://www.codeproject.com/Tips/559437/Capturing-Video-from-Web-camera_parameters-on-Windows-and-by
 #include "framework.h"
-
+#include "acme/parallelization/synchronous_lock.h"
 #include "acme/include/_c_swap.h"
-//#include "aura/graphics/image/_image.h"
+#include "apex/platform/system.h"
+#include "aura/graphics/image/image.h"
+#include "app-complex/video_input/media_format.h"
 
 void avcapture_stop(CFTypeRef typerefCapture);
 bool avcapture_device_set_best_format_001(CFTypeRef typerefCapture, int * w, int * h);
@@ -449,9 +450,9 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 			if (size == pmemory->size())
 			{
 
-				::video_input::processPixels((color32_t *)pmemory->get_data(), dstBuffer, width, height, bytes, flipRedAndBlue, flipImage);
+				::video_input::processPixels((color32_t *)pmemory->data(), dstBuffer, width, height, bytes, flipRedAndBlue, flipImage);
 
-				pmemory->clear(e_flag_changed);
+				pmemory->clear_flag(e_flag_changed);
 
 				success = true;
 

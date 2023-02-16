@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9A1CED2A285FB2C4001ED6E1 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A1CED25285FB2C4001ED6E1 /* _factory.cpp */; };
+		9A4389B1299E974800D2EE15 /* libvideo_input.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4389AC299E8BD100D2EE15 /* libvideo_input.dylib */; };
 		9AAF6286280865480067E73F /* pane_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AAF617A280865420067E73F /* pane_impact.h */; };
 		9AAF6288280865480067E73F /* frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF6186280865430067E73F /* frame.cpp */; };
 		9AAF6289280865480067E73F /* edit_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AAF618B280865430067E73F /* edit_impact.h */; };
@@ -19,13 +20,11 @@
 		9AAF6295280865480067E73F /* application.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AAF61A6280865430067E73F /* application.h */; };
 		9AAF6296280865480067E73F /* top_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AAF61A7280865430067E73F /* top_impact.h */; };
 		9AAF6297280865480067E73F /* frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AAF61A9280865430067E73F /* frame.h */; };
-		9AAF6298280865480067E73F /* _app_complex_video_capture.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AAF61AB280865440067E73F /* _app_complex_video_capture.h */; };
 		9AAF6299280865480067E73F /* pane_impact_update_hint.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AAF61AD280865440067E73F /* pane_impact_update_hint.h */; };
 		9AAF629B280865480067E73F /* device_selector.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AAF61B5280865440067E73F /* device_selector.h */; };
 		9AAF629C280865480067E73F /* main_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF61BA280865440067E73F /* main_impact.cpp */; };
 		9AAF629E280865480067E73F /* impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AAF61C4280865440067E73F /* impact.h */; };
 		9AAF629F280865480067E73F /* aaa_render.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AAF61C5280865440067E73F /* aaa_render.h */; };
-		9AAF62A0280865480067E73F /* _main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF61C6280865440067E73F /* _main.cpp */; };
 		9AAF62A1280865480067E73F /* impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF61C9280865440067E73F /* impact.cpp */; };
 		9AAF62A2280865480067E73F /* targetver.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AAF61CA280865440067E73F /* targetver.h */; };
 		9AAF62A3280865480067E73F /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF61CF280865450067E73F /* _.cpp */; };
@@ -50,7 +49,6 @@
 		9AAF65992808709D0067E73F /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF65982808709D0067E73F /* libbase.dylib */; };
 		9AAF659B2808709D0067E73F /* libbred.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF659A2808709D0067E73F /* libbred.dylib */; };
 		9AAF659C2808709D0067E73F /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF62CC280865E60067E73F /* libcore.dylib */; };
-		9AAF659D2808709D0067E73F /* libvideo_input.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF62D4280866960067E73F /* libvideo_input.dylib */; };
 		9AE24EA11904CFFD001AEFFB /* libapp_complex_video_capture.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libapp_complex_video_capture.dylib */; };
 		9AE24EA71904CFFD001AEFFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AE24EA51904CFFD001AEFFB /* InfoPlist.strings */; };
 		9AE24EA91904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE24EA81904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m */; };
@@ -64,6 +62,27 @@
 			remoteGlobalIDString = 9AE6421A284AA62D0079EBA0;
 			remoteInfo = ios_core;
 		};
+		9A4389AB299E8BD100D2EE15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A4389A6299E8BD100D2EE15 /* video_input.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9ACA447A2453EAEE007277DD;
+			remoteInfo = video_input;
+		};
+		9A4389AD299E8BD100D2EE15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A4389A6299E8BD100D2EE15 /* video_input.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9ACA482A2453EEAE007277DD;
+			remoteInfo = ios_audio;
+		};
+		9A4389AF299E8BE200D2EE15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A4389A6299E8BD100D2EE15 /* video_input.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9ACA44792453EAEE007277DD;
+			remoteInfo = video_input;
+		};
 		9AAF62CB280865E60067E73F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AAF62C7280865E60067E73F /* core.xcodeproj */;
@@ -71,33 +90,12 @@
 			remoteGlobalIDString = 9AE63304252A5A0300BED5B8;
 			remoteInfo = core;
 		};
-		9AAF62D3280866960067E73F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AAF62CD280866960067E73F /* video_input.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9ACA447A2453EAEE007277DD;
-			remoteInfo = audio;
-		};
-		9AAF62D5280866960067E73F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AAF62CD280866960067E73F /* video_input.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9ACA482A2453EEAE007277DD;
-			remoteInfo = ios_audio;
-		};
 		9AAF65892808706B0067E73F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AAF62C7280865E60067E73F /* core.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 9AE63303252A5A0300BED5B8;
 			remoteInfo = core;
-		};
-		9AAF658B280870720067E73F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AAF62CD280866960067E73F /* video_input.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9ACA44792453EAEE007277DD;
-			remoteInfo = video_input;
 		};
 		9AE24E9F1904CFFD001AEFFB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -122,6 +120,7 @@
 
 /* Begin PBXFileReference section */
 		9A1CED25285FB2C4001ED6E1 /* _factory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _factory.cpp; sourceTree = "<group>"; };
+		9A4389A6299E8BD100D2EE15 /* video_input.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = video_input.xcodeproj; path = ../video_input/video_input.xcodeproj; sourceTree = "<group>"; };
 		9AAF617A280865420067E73F /* pane_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pane_impact.h; sourceTree = "<group>"; };
 		9AAF6186280865430067E73F /* frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = frame.cpp; sourceTree = "<group>"; };
 		9AAF618B280865430067E73F /* edit_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = edit_impact.h; sourceTree = "<group>"; };
@@ -134,13 +133,11 @@
 		9AAF61A6280865430067E73F /* application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
 		9AAF61A7280865430067E73F /* top_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = top_impact.h; sourceTree = "<group>"; };
 		9AAF61A9280865430067E73F /* frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = frame.h; sourceTree = "<group>"; };
-		9AAF61AB280865440067E73F /* _app_complex_video_capture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _app_complex_video_capture.h; sourceTree = "<group>"; };
 		9AAF61AD280865440067E73F /* pane_impact_update_hint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pane_impact_update_hint.h; sourceTree = "<group>"; };
 		9AAF61B5280865440067E73F /* device_selector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = device_selector.h; sourceTree = "<group>"; };
 		9AAF61BA280865440067E73F /* main_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main_impact.cpp; sourceTree = "<group>"; };
 		9AAF61C4280865440067E73F /* impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = impact.h; sourceTree = "<group>"; };
 		9AAF61C5280865440067E73F /* aaa_render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aaa_render.h; sourceTree = "<group>"; };
-		9AAF61C6280865440067E73F /* _main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _main.cpp; sourceTree = "<group>"; };
 		9AAF61C9280865440067E73F /* impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = impact.cpp; sourceTree = "<group>"; };
 		9AAF61CA280865440067E73F /* targetver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = targetver.h; sourceTree = "<group>"; };
 		9AAF61CF280865450067E73F /* _.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _.cpp; sourceTree = "<group>"; };
@@ -160,7 +157,6 @@
 		9AAF6278280865460067E73F /* device_selector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = device_selector.cpp; sourceTree = "<group>"; };
 		9AAF6279280865470067E73F /* _.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
 		9AAF62C7280865E60067E73F /* core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = core.xcodeproj; path = ../../app/core/core.xcodeproj; sourceTree = "<group>"; };
-		9AAF62CD280866960067E73F /* video_input.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = video_input.xcodeproj; path = "../../app-core/video_input/video_input.xcodeproj"; sourceTree = "<group>"; };
 		9AAF658E2808709D0067E73F /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAF65902808709D0067E73F /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAF65922808709D0067E73F /* libaqua.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaqua.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +192,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A4389B1299E974800D2EE15 /* libvideo_input.dylib in Frameworks */,
 				9AAF658F2808709D0067E73F /* libacme.dylib in Frameworks */,
 				9AAF65912808709D0067E73F /* libapex.dylib in Frameworks */,
 				9AAF65932808709D0067E73F /* libaqua.dylib in Frameworks */,
@@ -204,21 +201,27 @@
 				9AAF65992808709D0067E73F /* libbase.dylib in Frameworks */,
 				9AAF659B2808709D0067E73F /* libbred.dylib in Frameworks */,
 				9AAF659C2808709D0067E73F /* libcore.dylib in Frameworks */,
-				9AAF659D2808709D0067E73F /* libvideo_input.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A4389A7299E8BD100D2EE15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A4389AC299E8BD100D2EE15 /* libvideo_input.dylib */,
+				9A4389AE299E8BD100D2EE15 /* aios_audio.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9AAF6159280865420067E73F /* video_capture */ = {
 			isa = PBXGroup;
 			children = (
 				9AAF61CF280865450067E73F /* _.cpp */,
 				9AAF6279280865470067E73F /* _.h */,
-				9AAF61AB280865440067E73F /* _app_complex_video_capture.h */,
 				9A1CED25285FB2C4001ED6E1 /* _factory.cpp */,
-				9AAF61C6280865440067E73F /* _main.cpp */,
 				9AAF619D280865430067E73F /* _main.inl */,
 				9AAF61E2280865450067E73F /* _static_factory_exchange.inl */,
 				9AAF61E0280865450067E73F /* _static_factory.inl */,
@@ -265,15 +268,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9AAF62CE280866960067E73F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9AAF62D4280866960067E73F /* libvideo_input.dylib */,
-				9AAF62D6280866960067E73F /* aios_audio.dylib */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		9AAF658D2808709D0067E73F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,7 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				9AAF62C7280865E60067E73F /* core.xcodeproj */,
-				9AAF62CD280866960067E73F /* video_input.xcodeproj */,
+				9A4389A6299E8BD100D2EE15 /* video_input.xcodeproj */,
 				9AAF6159280865420067E73F /* video_capture */,
 				9AE24EA21904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */,
 				9AEB75A416F78DF10085103B /* Products */,
@@ -337,7 +331,6 @@
 			files = (
 				9AAF6297280865480067E73F /* frame.h in Headers */,
 				9AAF6295280865480067E73F /* application.h in Headers */,
-				9AAF6298280865480067E73F /* _app_complex_video_capture.h in Headers */,
 				9AAF62AC280865480067E73F /* framework.h in Headers */,
 				9AAF62C6280865480067E73F /* _.h in Headers */,
 				9AAF62A8280865480067E73F /* resource.h in Headers */,
@@ -407,7 +400,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				9AAF658C280870720067E73F /* PBXTargetDependency */,
+				9A4389B0299E8BE200D2EE15 /* PBXTargetDependency */,
 				9AAF658A2808706B0067E73F /* PBXTargetDependency */,
 			);
 			name = app_complex_video_capture;
@@ -451,8 +444,8 @@
 					ProjectRef = 9AAF62C7280865E60067E73F /* core.xcodeproj */;
 				},
 				{
-					ProductGroup = 9AAF62CE280866960067E73F /* Products */;
-					ProjectRef = 9AAF62CD280866960067E73F /* video_input.xcodeproj */;
+					ProductGroup = 9A4389A7299E8BD100D2EE15 /* Products */;
+					ProjectRef = 9A4389A6299E8BD100D2EE15 /* video_input.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -472,25 +465,25 @@
 			remoteRef = 9A1CED27285FB2C4001ED6E1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		9A4389AC299E8BD100D2EE15 /* libvideo_input.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libvideo_input.dylib;
+			remoteRef = 9A4389AB299E8BD100D2EE15 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A4389AE299E8BD100D2EE15 /* aios_audio.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = aios_audio.dylib;
+			remoteRef = 9A4389AD299E8BD100D2EE15 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		9AAF62CC280865E60067E73F /* libcore.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
 			path = libcore.dylib;
 			remoteRef = 9AAF62CB280865E60067E73F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9AAF62D4280866960067E73F /* libvideo_input.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = libvideo_input.dylib;
-			remoteRef = 9AAF62D3280866960067E73F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9AAF62D6280866960067E73F /* aios_audio.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = aios_audio.dylib;
-			remoteRef = 9AAF62D5280866960067E73F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -537,7 +530,6 @@
 				9AAF6288280865480067E73F /* frame.cpp in Sources */,
 				9AAF62C4280865480067E73F /* pane_impact.cpp in Sources */,
 				9AAF62AF280865480067E73F /* document.cpp in Sources */,
-				9AAF62A0280865480067E73F /* _main.cpp in Sources */,
 				9AAF6294280865480067E73F /* framework.cpp in Sources */,
 				9AAF62A1280865480067E73F /* impact.cpp in Sources */,
 				9AAF62C5280865480067E73F /* device_selector.cpp in Sources */,
@@ -547,15 +539,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9A4389B0299E8BE200D2EE15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = video_input;
+			targetProxy = 9A4389AF299E8BE200D2EE15 /* PBXContainerItemProxy */;
+		};
 		9AAF658A2808706B0067E73F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = core;
 			targetProxy = 9AAF65892808706B0067E73F /* PBXContainerItemProxy */;
-		};
-		9AAF658C280870720067E73F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = video_input;
-			targetProxy = 9AAF658B280870720067E73F /* PBXContainerItemProxy */;
 		};
 		9AE24EA01904CFFD001AEFFB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

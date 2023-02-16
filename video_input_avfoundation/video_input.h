@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "app-complex/video_input/video_input.h"
+
+
 namespace video_input_video_avfoundation
 {
 

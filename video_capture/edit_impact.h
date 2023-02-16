@@ -29,7 +29,7 @@ namespace app_complex_video_capture
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
 
-      bool keyboard_focus_is_focusable();
+      bool keyboard_focus_is_focusable() override;
 
       //virtual i64 increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
 

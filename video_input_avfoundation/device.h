@@ -1,7 +1,10 @@
 #pragma once
 
 
-
+#include "app-complex/video_input/device.h"
+#include "acme/parallelization/manual_reset_event.h"
+#include "acme/primitive/collection/string_map.h"
+#include "acme/primitive/geometry2d/_geometry2d.h"
 #include "avcapture_device_callback.h"
 
 //struct IMFActivate;
@@ -28,7 +31,7 @@ namespace video_input_video_avfoundation
    class pixel_format;
 
    class frame_rate :
-      virtual public ::element
+      virtual public ::particle
    {
    public:
 
@@ -45,7 +48,7 @@ namespace video_input_video_avfoundation
 
 
    class resolution:
-      virtual public ::element
+      virtual public ::particle
    {
    public:
 
@@ -62,7 +65,7 @@ namespace video_input_video_avfoundation
 
 
    class pixel_format :
-      virtual public ::element
+      virtual public ::particle
    {
    public:
 
@@ -79,7 +82,7 @@ namespace video_input_video_avfoundation
    };
 
    class input :
-      virtual public ::element
+      virtual public ::particle
    {
    public:
 
@@ -90,7 +93,7 @@ namespace video_input_video_avfoundation
    };
 
    class standard :
-      virtual public ::element
+      virtual public ::particle
    {
    public:
 

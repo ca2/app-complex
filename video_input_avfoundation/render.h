@@ -1,9 +1,8 @@
 // Created on 2021-07-07 by camilo 14:11 BRT <3ThomasBorregaardSørensen!!
 #pragma once
 
-
+#include "app-complex/video_input/render.h"
 //#include <mfcaptureengine.h>
-
 
 
 namespace video_input_video_avfoundation
@@ -27,7 +26,7 @@ namespace video_input_video_avfoundation
       void initialize_video_input_render(::video_input::device * pdevice) override;
 
       // void assert_ok() const override;
-      void dump(dump_context& dumpcontext) const override;
+//      void dump(dump_context& dumpcontext) const override;
 
 #ifdef _DEBUG
 

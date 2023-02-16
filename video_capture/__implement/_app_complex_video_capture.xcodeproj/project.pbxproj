@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		070B8F041B6E53FA00D26137 /* Hello_Multiverse__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */; };
-		9AAF6588280870520067E73F /* applicati.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF6096280864240067E73F /* applicati.cpp */; };
+		9A4389B2299E979700D2EE15 /* libapp_complex_video_capture.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A43899C299E8B8C00D2EE15 /* libapp_complex_video_capture.dylib */; };
+		9A4389B3299E97F500D2EE15 /* libvideo_input_avfoundation.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A43898F299E8B3800D2EE15 /* libvideo_input_avfoundation.dylib */; };
+		9A4389B4299E97F500D2EE15 /* libvideo_input_avfoundation.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A43898F299E8B3800D2EE15 /* libvideo_input_avfoundation.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A4389B5299E97FC00D2EE15 /* libapp_complex_video_capture.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A43899C299E8B8C00D2EE15 /* libapp_complex_video_capture.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AAF6588280870520067E73F /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF6096280864240067E73F /* application.cpp */; };
 		9AAF65AA280871EA0067E73F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AAF6060280864230067E73F /* Images.xcassets */; };
 		9AAF65B02808724D0067E73F /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF65AF2808724D0067E73F /* libapex.dylib */; };
 		9AAF65B22808724D0067E73F /* libaqua.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF65B12808724D0067E73F /* libaqua.dylib */; };
@@ -22,7 +26,6 @@
 		9AF2F4152808848B007F7B7D /* libbase.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAF65B72808724D0067E73F /* libbase.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AF2F4162808848D007F7B7D /* libaxis.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAF65B52808724D0067E73F /* libaxis.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AF2F4172808848E007F7B7D /* libaura.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAF65B32808724D0067E73F /* libaura.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9AF2F41828088491007F7B7D /* libapp_complex_video_capture.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAF657128086FA70067E73F /* libapp_complex_video_capture.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AF2F41928088493007F7B7D /* libaqua.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAF65B12808724D0067E73F /* libaqua.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AF2F41A28088496007F7B7D /* libapex.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAF65AF2808724D0067E73F /* libapex.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AF2F41B28088497007F7B7D /* libacme.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAF65AD2808724D0067E73F /* libacme.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -46,12 +49,10 @@
 		9AF2F446280884D9007F7B7D /* libimaging_coreimage.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAF600D280863D90067E73F /* libimaging_coreimage.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AF2F44A280884FA007F7B7D /* libnode_macos.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAF5FF9280863D80067E73F /* libnode_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AF2F44C280884FA007F7B7D /* libvideo_input.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AF2F447280884FA007F7B7D /* libvideo_input.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9AF2F44E280884FA007F7B7D /* libvideo_input_avfoundation.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAF63DA280868300067E73F /* libvideo_input_avfoundation.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AF2F450280884FA007F7B7D /* libwindowing_macos.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AF2F448280884FA007F7B7D /* libwindowing_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AF2F452280884FA007F7B7D /* libwrite_text_quartz2d.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAF5FFF280863D90067E73F /* libwrite_text_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AF2F4552808855B007F7B7D /* libssl.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AF2F4532808855B007F7B7D /* libssl.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AF2F4562808855B007F7B7D /* libcrypto.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AF2F4542808855B007F7B7D /* libcrypto.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9AF2F457280885EE007F7B7D /* libapp_complex_video_capture.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF657128086FA70067E73F /* libapp_complex_video_capture.dylib */; };
 		9AF2F45A2808BFA1007F7B7D /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9AF2F4592808BFA1007F7B7D /* _matter.zip */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,55 @@
 			proxyType = 2;
 			remoteGlobalIDString = 9A882EE12844AA66004113D1;
 			remoteInfo = ios_write_text_quartz2d;
+		};
+		9A43898E299E8B3800D2EE15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A438980299E8B3700D2EE15 /* video_input_avfoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
+			remoteInfo = video_input_avfoundation;
+		};
+		9A438990299E8B3800D2EE15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A438980299E8B3700D2EE15 /* video_input_avfoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE24E8A1904CFFD001AEFFB;
+			remoteInfo = ios_youtube;
+		};
+		9A43899B299E8B8C00D2EE15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A438993299E8B8B00D2EE15 /* app_complex_video_capture.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
+			remoteInfo = app_complex_video_capture;
+		};
+		9A43899D299E8B8C00D2EE15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A438993299E8B8B00D2EE15 /* app_complex_video_capture.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE24E8A1904CFFD001AEFFB;
+			remoteInfo = ios_app_core_hellomultiverse;
+		};
+		9A43899F299E8B8C00D2EE15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A438993299E8B8B00D2EE15 /* app_complex_video_capture.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE24E991904CFFD001AEFFB;
+			remoteInfo = app_core_hellomultiverse_iosTests;
+		};
+		9A4389A1299E8BB500D2EE15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A438993299E8B8B00D2EE15 /* app_complex_video_capture.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
+			remoteInfo = app_complex_video_capture;
+		};
+		9A4389A3299E8BB500D2EE15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A438980299E8B3700D2EE15 /* video_input_avfoundation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
+			remoteInfo = video_input_avfoundation;
 		};
 		9AAF5FF2280863D80067E73F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -175,48 +225,6 @@
 			remoteGlobalIDString = 9AE12E782661E97E009F476A;
 			remoteInfo = database_sqlite3;
 		};
-		9AAF63D9280868300067E73F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AAF63D32808682F0067E73F /* video_input_avfoundation.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
-			remoteInfo = youtube;
-		};
-		9AAF63DB280868300067E73F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AAF63D32808682F0067E73F /* video_input_avfoundation.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AE24E8A1904CFFD001AEFFB;
-			remoteInfo = ios_youtube;
-		};
-		9AAF656B28086FA70067E73F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AAF656828086FA60067E73F /* app_complex_video_capture.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
-			remoteInfo = app_complex_video_capture;
-		};
-		9AAF657028086FA70067E73F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AAF656828086FA60067E73F /* app_complex_video_capture.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
-			remoteInfo = app_complex_video_capture;
-		};
-		9AAF657228086FA70067E73F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AAF656828086FA60067E73F /* app_complex_video_capture.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AE24E8A1904CFFD001AEFFB;
-			remoteInfo = ios_app_core_hellomultiverse;
-		};
-		9AAF657428086FA70067E73F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AAF656828086FA60067E73F /* app_complex_video_capture.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AE24E991904CFFD001AEFFB;
-			remoteInfo = app_core_hellomultiverse_iosTests;
-		};
 		9AAF657628086FC90067E73F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AAF5FEE280863D80067E73F /* crypto_openssl.xcodeproj */;
@@ -266,13 +274,6 @@
 			remoteGlobalIDString = 9AC2D16E26542E1000CC8096;
 			remoteInfo = node_macos;
 		};
-		9AAF65842808701D0067E73F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AAF63D32808682F0067E73F /* video_input_avfoundation.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
-			remoteInfo = video_input_avfoundation;
-		};
 		9AAF65862808702A0067E73F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AAF5FFA280863D90067E73F /* write_text_quartz2d.xcodeproj */;
@@ -295,13 +296,13 @@
 				9AF2F4552808855B007F7B7D /* libssl.3.dylib in CopyFiles */,
 				9AF2F428280884D8007F7B7D /* libacme_apple.dylib in CopyFiles */,
 				9AF2F4562808855B007F7B7D /* libcrypto.3.dylib in CopyFiles */,
-				9AF2F41828088491007F7B7D /* libapp_complex_video_capture.dylib in CopyFiles */,
 				9AF2F452280884FA007F7B7D /* libwrite_text_quartz2d.dylib in CopyFiles */,
 				9AF2F43C280884D9007F7B7D /* libdatabase_sqlite3.dylib in CopyFiles */,
 				9AF2F430280884D8007F7B7D /* libapex_macos.dylib in CopyFiles */,
-				9AF2F44E280884FA007F7B7D /* libvideo_input_avfoundation.dylib in CopyFiles */,
+				9A4389B4299E97F500D2EE15 /* libvideo_input_avfoundation.dylib in CopyFiles */,
 				9AF2F446280884D9007F7B7D /* libimaging_coreimage.dylib in CopyFiles */,
 				9AF2F42C280884D8007F7B7D /* libacme_posix.dylib in CopyFiles */,
+				9A4389B5299E97FC00D2EE15 /* libapp_complex_video_capture.dylib in CopyFiles */,
 				9AF2F43E280884D9007F7B7D /* libdraw2d_quartz2d.dylib in CopyFiles */,
 				9AF2F44A280884FA007F7B7D /* libnode_macos.dylib in CopyFiles */,
 				9AF2F440280884D9007F7B7D /* libexperience_core.dylib in CopyFiles */,
@@ -331,6 +332,8 @@
 		070B8EFD1B6E53FA00D26137 /* Hello Multiverse!!Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hello Multiverse!!Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		070B8F021B6E53FA00D26137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hello_Multiverse__Tests.m; sourceTree = "<group>"; };
+		9A438980299E8B3700D2EE15 /* video_input_avfoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = video_input_avfoundation.xcodeproj; path = ../../video_input_avfoundation/video_input_avfoundation.xcodeproj; sourceTree = "<group>"; };
+		9A438993299E8B8B00D2EE15 /* app_complex_video_capture.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_complex_video_capture.xcodeproj; path = ../app_complex_video_capture.xcodeproj; sourceTree = "<group>"; };
 		9AAF5FEE280863D80067E73F /* crypto_openssl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = crypto_openssl.xcodeproj; path = ../../../app/crypto_openssl/crypto_openssl.xcodeproj; sourceTree = "<group>"; };
 		9AAF5FF4280863D80067E73F /* node_macos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = node_macos.xcodeproj; path = "../../../../operating-system/operating-system-macos/node_macos/node_macos.xcodeproj"; sourceTree = "<group>"; };
 		9AAF5FFA280863D90067E73F /* write_text_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = write_text_quartz2d.xcodeproj; path = "../../../../operating-system/operating-system-apple/write_text_quartz2d/write_text_quartz2d.xcodeproj"; sourceTree = "<group>"; };
@@ -342,10 +345,8 @@
 		9AAF605F280864230067E73F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9AAF6060280864230067E73F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9AAF6062280864230067E73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9AAF6096280864240067E73F /* applicati.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = applicati.cpp; sourceTree = "<group>"; };
+		9AAF6096280864240067E73F /* application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
 		9AAF60B7280864250067E73F /* framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
-		9AAF63D32808682F0067E73F /* video_input_avfoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = video_input_avfoundation.xcodeproj; path = "../../../app-core/video_input_avfoundation/video_input_avfoundation.xcodeproj"; sourceTree = "<group>"; };
-		9AAF656828086FA60067E73F /* app_complex_video_capture.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_complex_video_capture.xcodeproj; path = "..//Users/camilo/solution/basis/source/app-complex/video_capture/app_complex_video_capture.xcodeproj"; sourceTree = "<absolute>"; };
 		9AAF65AD2808724D0067E73F /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAF65AF2808724D0067E73F /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAF65B12808724D0067E73F /* libaqua.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaqua.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -368,7 +369,6 @@
 		9AF2F448280884FA007F7B7D /* libwindowing_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwindowing_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF2F4532808855B007F7B7D /* libssl.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.3.dylib; path = "../../../../operating-system/storage-macos/library/libssl.3.dylib"; sourceTree = "<group>"; };
 		9AF2F4542808855B007F7B7D /* libcrypto.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.3.dylib; path = "../../../../operating-system/storage-macos/library/libcrypto.3.dylib"; sourceTree = "<group>"; };
-		9AF2F45828089E69007F7B7D /* _app_complex_video_capture.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = _app_complex_video_capture.entitlements; sourceTree = "<group>"; };
 		9AF2F4592808BFA1007F7B7D /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = ../_matter.zip; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -377,13 +377,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AF2F457280885EE007F7B7D /* libapp_complex_video_capture.dylib in Frameworks */,
+				9A4389B2299E979700D2EE15 /* libapp_complex_video_capture.dylib in Frameworks */,
 				9AF2F41C2808849C007F7B7D /* libacme.dylib in Frameworks */,
 				9AAF65B02808724D0067E73F /* libapex.dylib in Frameworks */,
 				9AAF65B22808724D0067E73F /* libaqua.dylib in Frameworks */,
 				9AF2F443280884D9007F7B7D /* libidn.dylib in Frameworks */,
 				9AAF65B42808724D0067E73F /* libaura.dylib in Frameworks */,
 				9AAF65B62808724D0067E73F /* libaxis.dylib in Frameworks */,
+				9A4389B3299E97F500D2EE15 /* libvideo_input_avfoundation.dylib in Frameworks */,
 				9AAF65B82808724D0067E73F /* libbase.dylib in Frameworks */,
 				9AAF65BA2808724D0067E73F /* libbred.dylib in Frameworks */,
 				9AAF65BC2808724D0067E73F /* libcore.dylib in Frameworks */,
@@ -403,8 +404,7 @@
 		070B8EE11B6E53F900D26137 = {
 			isa = PBXGroup;
 			children = (
-				9AF2F45828089E69007F7B7D /* _app_complex_video_capture.entitlements */,
-				9AAF656828086FA60067E73F /* app_complex_video_capture.xcodeproj */,
+				9A438993299E8B8B00D2EE15 /* app_complex_video_capture.xcodeproj */,
 				9AAF5FEE280863D80067E73F /* crypto_openssl.xcodeproj */,
 				9AAF6021280863D90067E73F /* database_sqlite3.xcodeproj */,
 				9AAF6018280863D90067E73F /* draw2d_quartz2d.xcodeproj */,
@@ -412,7 +412,7 @@
 				9AAF6012280863D90067E73F /* folder_zip.xcodeproj */,
 				9AAF6006280863D90067E73F /* imaging_coreimage.xcodeproj */,
 				9AAF5FF4280863D80067E73F /* node_macos.xcodeproj */,
-				9AAF63D32808682F0067E73F /* video_input_avfoundation.xcodeproj */,
+				9A438980299E8B3700D2EE15 /* video_input_avfoundation.xcodeproj */,
 				9AAF5FFA280863D90067E73F /* write_text_quartz2d.xcodeproj */,
 				9AAF6027280864220067E73F /* video_capture */,
 				070B8F001B6E53FA00D26137 /* Hello Multiverse!!Tests */,
@@ -445,6 +445,25 @@
 				070B8F021B6E53FA00D26137 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9A438981299E8B3700D2EE15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A43898F299E8B3800D2EE15 /* libvideo_input_avfoundation.dylib */,
+				9A438991299E8B3800D2EE15 /* libios_youtube.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A438994299E8B8B00D2EE15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A43899C299E8B8C00D2EE15 /* libapp_complex_video_capture.dylib */,
+				9A43899E299E8B8C00D2EE15 /* libapp_complex_video_capture.dylib */,
+				9A4389A0299E8B8C00D2EE15 /* app_core_hellomultiverse_iosTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		9AAF5FEF280863D80067E73F /* Products */ = {
@@ -523,7 +542,7 @@
 			isa = PBXGroup;
 			children = (
 				9AF2F4592808BFA1007F7B7D /* _matter.zip */,
-				9AAF6096280864240067E73F /* applicati.cpp */,
+				9AAF6096280864240067E73F /* application.cpp */,
 				9AAF60B7280864250067E73F /* framework.h */,
 				9AAF605B280864230067E73F /* macos */,
 			);
@@ -538,25 +557,6 @@
 				9AAF6062280864230067E73F /* Info.plist */,
 			);
 			path = macos;
-			sourceTree = "<group>";
-		};
-		9AAF63D42808682F0067E73F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9AAF63DA280868300067E73F /* libvideo_input_avfoundation.dylib */,
-				9AAF63DC280868300067E73F /* libios_youtube.dylib */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		9AAF656928086FA60067E73F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9AAF657128086FA70067E73F /* libapp_complex_video_capture.dylib */,
-				9AAF657328086FA70067E73F /* libapp_complex_video_capture.dylib */,
-				9AAF657528086FA70067E73F /* app_core_hellomultiverse_iosTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		9AAF65AB280872360067E73F /* Frameworks */ = {
@@ -603,8 +603,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				9A4389A2299E8BB500D2EE15 /* PBXTargetDependency */,
+				9A4389A4299E8BB500D2EE15 /* PBXTargetDependency */,
 				9AAF65872808702A0067E73F /* PBXTargetDependency */,
-				9AAF65852808701D0067E73F /* PBXTargetDependency */,
 				9AAF6583280870110067E73F /* PBXTargetDependency */,
 				9AAF657F280870040067E73F /* PBXTargetDependency */,
 				9AAF6581280870040067E73F /* PBXTargetDependency */,
@@ -612,7 +613,6 @@
 				9AAF657B28086FD80067E73F /* PBXTargetDependency */,
 				9AAF657928086FD10067E73F /* PBXTargetDependency */,
 				9AAF657728086FC90067E73F /* PBXTargetDependency */,
-				9AAF656C28086FA70067E73F /* PBXTargetDependency */,
 			);
 			name = _app_complex_video_capture;
 			productName = "Hello Multiverse!!";
@@ -670,8 +670,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9AAF656928086FA60067E73F /* Products */;
-					ProjectRef = 9AAF656828086FA60067E73F /* app_complex_video_capture.xcodeproj */;
+					ProductGroup = 9A438994299E8B8B00D2EE15 /* Products */;
+					ProjectRef = 9A438993299E8B8B00D2EE15 /* app_complex_video_capture.xcodeproj */;
 				},
 				{
 					ProductGroup = 9AAF5FEF280863D80067E73F /* Products */;
@@ -702,8 +702,8 @@
 					ProjectRef = 9AAF5FF4280863D80067E73F /* node_macos.xcodeproj */;
 				},
 				{
-					ProductGroup = 9AAF63D42808682F0067E73F /* Products */;
-					ProjectRef = 9AAF63D32808682F0067E73F /* video_input_avfoundation.xcodeproj */;
+					ProductGroup = 9A438981299E8B3700D2EE15 /* Products */;
+					ProjectRef = 9A438980299E8B3700D2EE15 /* video_input_avfoundation.xcodeproj */;
 				},
 				{
 					ProductGroup = 9AAF5FFB280863D90067E73F /* Products */;
@@ -752,6 +752,41 @@
 			fileType = "compiled.mach-o.dylib";
 			path = libios_write_text_quartz2d.a;
 			remoteRef = 9A1CED17285FAD92001ED6E1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A43898F299E8B3800D2EE15 /* libvideo_input_avfoundation.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libvideo_input_avfoundation.dylib;
+			remoteRef = 9A43898E299E8B3800D2EE15 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A438991299E8B3800D2EE15 /* libios_youtube.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libios_youtube.dylib;
+			remoteRef = 9A438990299E8B3800D2EE15 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A43899C299E8B8C00D2EE15 /* libapp_complex_video_capture.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libapp_complex_video_capture.dylib;
+			remoteRef = 9A43899B299E8B8C00D2EE15 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A43899E299E8B8C00D2EE15 /* libapp_complex_video_capture.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libapp_complex_video_capture.dylib;
+			remoteRef = 9A43899D299E8B8C00D2EE15 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A4389A0299E8B8C00D2EE15 /* app_core_hellomultiverse_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = app_core_hellomultiverse_iosTests.xctest;
+			remoteRef = 9A43899F299E8B8C00D2EE15 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		9AAF5FF3280863D80067E73F /* libcrypto_openssl.dylib */ = {
@@ -831,41 +866,6 @@
 			remoteRef = 9AAF6025280863DA0067E73F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AAF63DA280868300067E73F /* libvideo_input_avfoundation.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = libvideo_input_avfoundation.dylib;
-			remoteRef = 9AAF63D9280868300067E73F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9AAF63DC280868300067E73F /* libios_youtube.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libios_youtube.dylib;
-			remoteRef = 9AAF63DB280868300067E73F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9AAF657128086FA70067E73F /* libapp_complex_video_capture.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = libapp_complex_video_capture.dylib;
-			remoteRef = 9AAF657028086FA70067E73F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9AAF657328086FA70067E73F /* libapp_complex_video_capture.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libapp_complex_video_capture.dylib;
-			remoteRef = 9AAF657228086FA70067E73F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9AAF657528086FA70067E73F /* app_core_hellomultiverse_iosTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = app_core_hellomultiverse_iosTests.xctest;
-			remoteRef = 9AAF657428086FA70067E73F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -892,7 +892,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AAF6588280870520067E73F /* applicati.cpp in Sources */,
+				9AAF6588280870520067E73F /* application.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -912,10 +912,15 @@
 			target = 070B8EE91B6E53F900D26137 /* _app_complex_video_capture */;
 			targetProxy = 070B8EFE1B6E53FA00D26137 /* PBXContainerItemProxy */;
 		};
-		9AAF656C28086FA70067E73F /* PBXTargetDependency */ = {
+		9A4389A2299E8BB500D2EE15 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = app_complex_video_capture;
-			targetProxy = 9AAF656B28086FA70067E73F /* PBXContainerItemProxy */;
+			targetProxy = 9A4389A1299E8BB500D2EE15 /* PBXContainerItemProxy */;
+		};
+		9A4389A4299E8BB500D2EE15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = video_input_avfoundation;
+			targetProxy = 9A4389A3299E8BB500D2EE15 /* PBXContainerItemProxy */;
 		};
 		9AAF657728086FC90067E73F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -951,11 +956,6 @@
 			isa = PBXTargetDependency;
 			name = node_macos;
 			targetProxy = 9AAF6582280870110067E73F /* PBXContainerItemProxy */;
-		};
-		9AAF65852808701D0067E73F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = video_input_avfoundation;
-			targetProxy = 9AAF65842808701D0067E73F /* PBXContainerItemProxy */;
 		};
 		9AAF65872808702A0067E73F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

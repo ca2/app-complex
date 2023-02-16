@@ -103,20 +103,20 @@ namespace video_input_video_avfoundation
    }
 
 
-   void render::assert_ok() const
-   {
-      
-      object::assert_ok();
-
-   }
-
-
-   void render::dump(dump_context& dumpcontext) const
-   {
-      
-      object::dump(dumpcontext);
-
-   }
+//   void render::assert_ok() const
+//   {
+//      
+//      object::assert_ok();
+//
+//   }
+//
+//
+//   void render::dump(dump_context& dumpcontext) const
+//   {
+//      
+//      object::dump(dumpcontext);
+//
+//   }
 
 
    void render::on_create()

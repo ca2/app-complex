@@ -1,5 +1,6 @@
 // https://www.codeproject.com/Tips/559437/Capturing-Video-from-Web-camera_parameters-on-Windows-and-by
 #include "framework.h"
+#include "acme/parallelization/synchronous_lock.h"
 
 int avfoundation_enumerate_webcams(CFTypeRef ** pptyperef);
 
