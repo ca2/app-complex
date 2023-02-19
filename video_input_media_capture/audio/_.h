@@ -3,7 +3,7 @@
 #include "aqua/_.h"
 
 
-#if defined(_APP_CORE_AUDIO_LIBRARY)
+#if defined(_app_core_audio_project)
 #define CLASS_DECL_APP_CORE_AUDIO  CLASS_DECL_EXPORT
 #else
 #define CLASS_DECL_APP_CORE_AUDIO  CLASS_DECL_IMPORT

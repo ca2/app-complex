@@ -47,9 +47,6 @@
     <ClInclude Include="_.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="_library.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="device.h">
       <Filter>Header Files</Filter>
     </ClInclude>

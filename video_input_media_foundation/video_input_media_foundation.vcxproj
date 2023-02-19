@@ -722,7 +722,6 @@
     <ClInclude Include="render.h" />
     <ClInclude Include="video_input.h" />
     <ClInclude Include="_.h" />
-    <ClInclude Include="_library.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

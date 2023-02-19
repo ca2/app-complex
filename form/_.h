@@ -5,7 +5,7 @@
 #include "core/_.h"
 
 
-#ifdef _APP_COMPLEX_FORM_LIBRARY
+#if defined(_app_complex_form_project)
 #define CLASS_DECL_APP_COMPLEX_FORM  CLASS_DECL_EXPORT
 #else
 #define CLASS_DECL_APP_COMPLEX_FORM  CLASS_DECL_IMPORT

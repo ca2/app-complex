@@ -5,7 +5,7 @@
 #include "core/user/simple/_.h"
 
 
-#ifdef _APP_COMPLEX_VIDEO_CAPTURE_LIBRARY
+#if defined(_app_complex_video_capture_project)
    #define CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE  CLASS_DECL_EXPORT
 #else
    #define CLASS_DECL_APP_COMPLEX_VIDEO_CAPTURE  CLASS_DECL_IMPORT

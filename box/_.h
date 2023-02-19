@@ -5,7 +5,7 @@
 //#include "core/user/userex/_userex.h"
 
 
-#ifdef _APP_SIMPLE_BOX_LIBRARY
+#if defined(_app_simple_box_project)
 #define CLASS_DECL_APP_SIMPLE_BOX  CLASS_DECL_EXPORT
 #else
 #define CLASS_DECL_APP_SIMPLE_BOX  CLASS_DECL_IMPORT
