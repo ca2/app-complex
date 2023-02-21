@@ -3,6 +3,7 @@
 
 
 #include "app-complex/video_input/_.h"
+#undef USUAL_OPERATING_SYSTEM_SUPPRESSIONS
 #include "acme_windows_common/_.h"
 //#include "windowing_win32/_.h"
 #include "acme_windows_common/_.h"

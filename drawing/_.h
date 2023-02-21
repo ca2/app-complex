@@ -5,7 +5,7 @@
 #include "core/_.h"
 
 
-#ifdef _APP_COMPLEX_DRAWING_LIBRARY
+#if defined(_app_complex_drawing_project)
 #define CLASS_DECL_APP_COMPLEX_DRAWING  CLASS_DECL_EXPORT
 #else
 #define CLASS_DECL_APP_COMPLEX_DRAWING  CLASS_DECL_IMPORT

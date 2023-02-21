@@ -6,7 +6,7 @@
 #include "helpers.h"
 
 
-#ifdef _VIDEO_INPUT_MEDIA_FOUNDATION_LIBRARY
+#if defined(_video_input_media_foundation_project)
 #define CLASS_DECL_VIDEO_INPUT_MEDIA_FOUNDATION  CLASS_DECL_EXPORT
 #else
 #define CLASS_DECL_VIDEO_INPUT_MEDIA_FOUNDATION  CLASS_DECL_IMPORT

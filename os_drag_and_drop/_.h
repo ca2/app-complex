@@ -6,7 +6,7 @@
 
 
 
-#ifdef _APP_SIMPLE_OS_DRAG_AND_DROP_LIBRARY
+#if defined(_app_simple_os_drag_and_drop_project)
 #define CLASS_DECL_APP_SIMPLE_OS_DRAG_AND_DROP  CLASS_DECL_EXPORT
 #else
 #define CLASS_DECL_APP_SIMPLE_OS_DRAG_AND_DROP  CLASS_DECL_IMPORT
