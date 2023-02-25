@@ -367,8 +367,8 @@
 		9AF2F426280884D8007F7B7D /* libidn.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libidn.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF2F447280884FA007F7B7D /* libvideo_input.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libvideo_input.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF2F448280884FA007F7B7D /* libwindowing_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwindowing_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AF2F4532808855B007F7B7D /* libssl.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.3.dylib; path = "../../../../operating-system/storage-macos/library/libssl.3.dylib"; sourceTree = "<group>"; };
-		9AF2F4542808855B007F7B7D /* libcrypto.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.3.dylib; path = "../../../../operating-system/storage-macos/library/libcrypto.3.dylib"; sourceTree = "<group>"; };
+		9AF2F4532808855B007F7B7D /* libssl.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.3.dylib; path = "../../../../../operating-system/storage-macos/library/libssl.3.dylib"; sourceTree = "<group>"; };
+		9AF2F4542808855B007F7B7D /* libcrypto.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.3.dylib; path = "../../../../../operating-system/storage-macos/library/libcrypto.3.dylib"; sourceTree = "<group>"; };
 		9AF2F4592808BFA1007F7B7D /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = ../_matter.zip; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
