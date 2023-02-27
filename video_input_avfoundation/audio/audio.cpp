@@ -1,6 +1,6 @@
 #include "framework.h"
 
-#include "app-core/audio/plugin/track.h"
+#include "audio/audio/plugin/track.h"
 
 
 

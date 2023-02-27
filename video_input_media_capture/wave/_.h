@@ -1,15 +1,15 @@
 #pragma once
 
 
-#include "app-core/audio/iaudio/_.h"
-#include "app-core/audio/plugin/_.h"
-#include "app-core/audio/decode/_.h"
+#include "audio/audio/iaudio/_.h"
+#include "audio/audio/plugin/_.h"
+#include "audio/audio/decode/_.h"
 
 
 
 //#ifndef _UWP
-//#include "app-core/audio/ortp/_.h"
-//#include "app-core/audio/srtp/srtp.h"
+//#include "audio/audio/ortp/_.h"
+//#include "audio/audio/srtp/srtp.h"
 //#endif
 
 

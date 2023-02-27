@@ -78,10 +78,10 @@ extern "C" \
 
 #include "_const.h"
 
-#include "app-core/audio/imedia/_.h"
+#include "audio/audio/imedia/_.h"
 
 
-#include "app-core/audio/wave/_.h"
+#include "audio/audio/wave/_.h"
 
 
 #include "sound_track_player.h"
