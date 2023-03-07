@@ -603,7 +603,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(WorkspaceDir)/../operating-system/storage-$(PLATFORM_MODIFIER)/library",
+					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/library",
 				
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
@@ -673,7 +673,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(WorkspaceDir)/../operating-system/storage-$(PLATFORM_MODIFIER)/library",
+					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/library",
 				
 					"$(WorkspaceDir)/operating-system",
 				);
