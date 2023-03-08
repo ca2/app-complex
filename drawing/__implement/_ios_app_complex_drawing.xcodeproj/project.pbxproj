@@ -404,8 +404,8 @@
 		9AE8774F2858ACFB00F88364 /* libios_core.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_core.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE877732858AD5B00F88364 /* libios_idn.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_idn.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE877742858AD5B00F88364 /* libwindowing_ios.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwindowing_ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AE878242858B5A400F88364 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../../../../operating-system/storage-ios/library/x86_64/libssl.a"; sourceTree = "<group>"; };
-		9AE878252858B5A800F88364 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../../../operating-system/storage-ios/library/x86_64/libcrypto.a"; sourceTree = "<group>"; };
+		9AE878242858B5A400F88364 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../../../../operating_system/storage-ios/library/x86_64/libssl.a"; sourceTree = "<group>"; };
+		9AE878252858B5A800F88364 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../../../operating_system/storage-ios/library/x86_64/libcrypto.a"; sourceTree = "<group>"; };
 		9AE878282858B8B600F88364 /* libios_app_simple_drawing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libios_app_simple_drawing.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEB6A0B1F81DD0400F40B32 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
