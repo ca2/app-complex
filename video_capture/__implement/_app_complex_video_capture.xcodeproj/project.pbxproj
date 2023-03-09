@@ -294,7 +294,7 @@
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
 			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstSubfolderSpec = 6;
 			files = (
 				9AF2F42A280884D8007F7B7D /* libacme_macos.dylib in CopyFiles */,
 				9AF2F432280884D8007F7B7D /* libapex_posix.dylib in CopyFiles */,
