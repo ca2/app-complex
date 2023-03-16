@@ -104,7 +104,6 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <CompileAsManaged>false</CompileAsManaged>
       <CompileAsWinRT>false</CompileAsWinRT>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-windows/include;$(__operating_system)third-windows/third/include;$(__operating_system)third-windows/third/include/include;$(SolutionDir)../../../operating_system/operating_system-windows/_include;$(SolutionDir)../../../operating_system/operating_system-windows;$(SolutionDir)../../../operating_system/operating_system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -132,7 +131,6 @@
       <ExceptionHandling>Async</ExceptionHandling>
       <CompileAsManaged>false</CompileAsManaged>
       <CompileAsWinRT>false</CompileAsWinRT>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-windows/include;$(__operating_system)third-windows/third/include;$(__operating_system)third-windows/third/include/include;$(SolutionDir)../../../operating_system/operating_system-windows/_include;$(SolutionDir)../../../operating_system/operating_system-windows;$(SolutionDir)../../../operating_system/operating_system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -157,7 +155,6 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <CompileAsManaged>false</CompileAsManaged>
       <CompileAsWinRT>false</CompileAsWinRT>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-windows/include;$(__operating_system)third-windows/third/include;$(__operating_system)third-windows/third/include/include;$(SolutionDir)../../../operating_system/operating_system-windows/_include;$(SolutionDir)../../../operating_system/operating_system-windows;$(SolutionDir)../../../operating_system/operating_system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -185,7 +182,6 @@
       <ExceptionHandling>Async</ExceptionHandling>
       <CompileAsManaged>false</CompileAsManaged>
       <CompileAsWinRT>false</CompileAsWinRT>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-windows/include;$(__operating_system)third-windows/third/include;$(__operating_system)third-windows/third/include/include;$(SolutionDir)../../../operating_system/operating_system-windows/_include;$(SolutionDir)../../../operating_system/operating_system-windows;$(SolutionDir)../../../operating_system/operating_system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
