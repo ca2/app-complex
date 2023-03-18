@@ -1,48 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <None Include="..\_matter.zip" />
-    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\Win32\Debug\binary\libcrypto-3.dll">
-      <Filter>Library\Win32\basis</Filter>
-    </None>
-    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\Win32\Debug\binary\libssl-3.dll">
-      <Filter>Library\Win32\basis</Filter>
-    </None>
-    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\Win32\Debug\third\binary\pcre.dll">
-      <Filter>Library\Win32\basis</Filter>
-    </None>
-    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\Win32\Debug\third\binary\sqlite.dll">
-      <Filter>Library\Win32\basis</Filter>
-    </None>
-    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\Win32\Debug\third\binary\zlib.dll">
-      <Filter>Library\Win32\basis</Filter>
-    </None>
-    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\x64\Debug\binary\libcrypto-3-x64.dll">
-      <Filter>Library\x64\basis</Filter>
-    </None>
-    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\x64\Debug\binary\libssl-3-x64.dll">
-      <Filter>Library\x64\basis</Filter>
-    </None>
-    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\x64\Debug\third\binary\bzip2.dll">
-      <Filter>Library\x64\basis</Filter>
-    </None>
-    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\x64\Debug\third\binary\pcre.dll">
-      <Filter>Library\x64\basis</Filter>
-    </None>
-    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\x64\Debug\third\binary\sqlite.dll">
-      <Filter>Library\x64\basis</Filter>
-    </None>
-    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\x64\Debug\third\binary\zlib.dll">
-      <Filter>Library\x64\basis</Filter>
-    </None>
     <None Include="uwp_app_complex_videocapture_TemporaryKey.pfx">
       <Filter>UWP</Filter>
     </None>
-    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\x64\debug\binary\swscale-6.dll">
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\third\binary\bzip2.dll">
       <Filter>Library\x64\basis</Filter>
     </None>
-    <None Include="..\..\..\..\..\operating-system\storage-universal_windows\x64\debug\binary\avutil-57.dll">
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\binary\libcrypto-3-x64.dll">
       <Filter>Library\x64\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\binary\libssl-3-x64.dll">
+      <Filter>Library\x64\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\third\binary\pcre.dll">
+      <Filter>Library\x64\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\third\binary\sqlite.dll">
+      <Filter>Library\x64\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\third\binary\zlib.dll">
+      <Filter>Library\x64\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\Win32\Debug\binary\libcrypto-3.dll">
+      <Filter>Library\Win32\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\Win32\Debug\binary\libssl-3.dll">
+      <Filter>Library\Win32\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\Win32\Debug\third\binary\pcre.dll">
+      <Filter>Library\Win32\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\Win32\Debug\third\binary\sqlite.dll">
+      <Filter>Library\Win32\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\Win32\Debug\third\binary\zlib.dll">
+      <Filter>Library\Win32\basis</Filter>
+    </None>
+    <None Include="..\_matter.zip">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\debug\binary\avutil-57.dll">
+      <Filter>Library\x64\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\debug\binary\swscale-6.dll">
+      <Filter>Library\x64\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\Win32\Debug\binary\avutil-57.dll">
+      <Filter>Library\Win32\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\Win32\Debug\binary\swscale-6.dll">
+      <Filter>Library\Win32\basis</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

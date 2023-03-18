@@ -65,7 +65,11 @@
     <ClCompile Include="video_input.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="media_format.cpp" />
-    <ClCompile Include="_factory.cpp" />
+    <ClCompile Include="_factory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="media_format.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
