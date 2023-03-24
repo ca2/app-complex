@@ -27,6 +27,7 @@
 		9AAF65B82808724D0067E73F /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF65B72808724D0067E73F /* libbase.dylib */; };
 		9AAF65BA2808724D0067E73F /* libbred.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF65B92808724D0067E73F /* libbred.dylib */; };
 		9AAF65BC2808724D0067E73F /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF65BB2808724D0067E73F /* libcore.dylib */; };
+		9AEFFC5529CDFE0400E9C17D /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9AEFFC5429CDFE0400E9C17D /* en.lproj */; };
 		9AF2F40D28088489007F7B7D /* libcore.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAF65BB2808724D0067E73F /* libcore.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AF2F4142808848A007F7B7D /* libbred.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAF65B92808724D0067E73F /* libbred.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AF2F4152808848B007F7B7D /* libbase.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAF65B72808724D0067E73F /* libbase.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -358,7 +359,6 @@
 		9AAF6060280864230067E73F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9AAF6062280864230067E73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AAF6096280864240067E73F /* application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
-		9AAF60B7280864250067E73F /* framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
 		9AAF65AD2808724D0067E73F /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAF65AF2808724D0067E73F /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAF65B12808724D0067E73F /* libaqua.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaqua.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -367,6 +367,7 @@
 		9AAF65B72808724D0067E73F /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAF65B92808724D0067E73F /* libbred.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbred.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAF65BB2808724D0067E73F /* libcore.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libcore.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AEFFC5429CDFE0400E9C17D /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 		9AF2F41D280884D8007F7B7D /* libacme_apple.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_apple.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF2F41E280884D8007F7B7D /* libacme_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF2F41F280884D8007F7B7D /* libacme_posix.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_posix.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -558,7 +559,6 @@
 			children = (
 				9AF2F4592808BFA1007F7B7D /* _matter.zip */,
 				9AAF6096280864240067E73F /* application.cpp */,
-				9AAF60B7280864250067E73F /* framework.h */,
 				9AAF605B280864230067E73F /* macos */,
 			);
 			name = video_capture;
@@ -567,6 +567,7 @@
 		9AAF605B280864230067E73F /* macos */ = {
 			isa = PBXGroup;
 			children = (
+				9AEFFC5429CDFE0400E9C17D /* en.lproj */,
 				9AAF605E280864230067E73F /* MainMenu.xib */,
 				9AAF6060280864230067E73F /* Images.xcassets */,
 				9AAF6062280864230067E73F /* Info.plist */,
@@ -892,6 +893,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AF2F45A2808BFA1007F7B7D /* _matter.zip in Resources */,
+				9AEFFC5529CDFE0400E9C17D /* en.lproj in Resources */,
 				9AAF65AA280871EA0067E73F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1134,6 +1136,7 @@
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Video Capture!!";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/nsisExamples/Plugin/nsis",
@@ -1158,6 +1161,7 @@
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Video Capture!!";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/nsisExamples/Plugin/nsis",
