@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A273CFA29CF1AC800CBEB97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A273CF629CF1AC800CBEB97 /* InfoPlist.strings */; };
+		9A273CFB29CF1AC800CBEB97 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A273CF829CF1AC800CBEB97 /* MainMenu.xib */; };
 		9A4E96DC2785491900B74C76 /* libapp_complex_form.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AC0229C2748F22F006BEBCC /* libapp_complex_form.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A4E96E72785592F00B74C76 /* libbred.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4E96E62785592F00B74C76 /* libbred.dylib */; };
 		9A4E96E82785592F00B74C76 /* libbred.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A4E96E62785592F00B74C76 /* libbred.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A8C64C52783EA0D000C8587 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C64C02783EA0D000C8587 /* MainMenu.xib */; };
 		9A8C64C62783EA0D000C8587 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C64C22783EA0D000C8587 /* Images.xcassets */; };
 		9A8C7EEA2783F7D9000C8587 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C7EE92783F7D9000C8587 /* _matter.zip */; };
 		9A8C836C27845E93000C8587 /* libfolder_zip.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8C836A27845E92000C8587 /* libfolder_zip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -54,7 +55,6 @@
 		9AEA1B9D2679469E006F4A68 /* libnode_macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AA8039426657ABA00A6B449 /* libnode_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AEA1B9F2679469E006F4A68 /* libwindowing_macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AEA1B732679469B006F4A68 /* libwindowing_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AEA1BA12679469E006F4A68 /* libwrite_text_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AA803CD26657ABC00A6B449 /* libwrite_text_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9AEFF8B629CDD59C00E9C17D /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9AEFF8AB29CDD59C00E9C17D /* en.lproj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -313,9 +313,10 @@
 /* Begin PBXFileReference section */
 		070B8EEA1B6E53F900D26137 /* _app_complex_form.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _app_complex_form.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		070B8EFD1B6E53FA00D26137 /* Hello Multiverse!!Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hello Multiverse!!Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A273CF729CF1AC800CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		9A273CF929CF1AC800CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = MainMenu.xib; sourceTree = "<group>"; };
 		9A42D7C3266597540011645D /* experience_tranquillum.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_tranquillum.xcodeproj; path = ../../../app/experience_tranquillum/experience_tranquillum.xcodeproj; sourceTree = "<group>"; };
 		9A4E96E62785592F00B74C76 /* libbred.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbred.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A8C64C12783EA0D000C8587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9A8C64C22783EA0D000C8587 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9A8C64C42783EA0D000C8587 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A8C7EE92783F7D9000C8587 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = ../_matter.zip; sourceTree = "<group>"; };
@@ -354,7 +355,6 @@
 		9AEA1B712679469B006F4A68 /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEA1B722679469B006F4A68 /* libidn.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libidn.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEA1B732679469B006F4A68 /* libwindowing_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwindowing_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AEFF8AB29CDD59C00E9C17D /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -413,6 +413,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9A273CF529CF1AC700CBEB97 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				9A273CF629CF1AC800CBEB97 /* InfoPlist.strings */,
+				9A273CF829CF1AC800CBEB97 /* MainMenu.xib */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
 		9A3E0BA22309FBDC00B5459B /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,8 +452,7 @@
 		9A8C64BF2783EA0D000C8587 /* macos */ = {
 			isa = PBXGroup;
 			children = (
-				9AEFF8AB29CDD59C00E9C17D /* en.lproj */,
-				9A8C64C02783EA0D000C8587 /* MainMenu.xib */,
+				9A273CF529CF1AC700CBEB97 /* en.lproj */,
 				9A8C64C22783EA0D000C8587 /* Images.xcassets */,
 				9A8C64C42783EA0D000C8587 /* Info.plist */,
 			);
@@ -831,9 +839,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A8C64C62783EA0D000C8587 /* Images.xcassets in Resources */,
+				9A273CFA29CF1AC800CBEB97 /* InfoPlist.strings in Resources */,
 				9A8C7EEA2783F7D9000C8587 /* _matter.zip in Resources */,
-				9AEFF8B629CDD59C00E9C17D /* en.lproj in Resources */,
-				9A8C64C52783EA0D000C8587 /* MainMenu.xib in Resources */,
+				9A273CFB29CF1AC800CBEB97 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -918,10 +926,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9A8C64C02783EA0D000C8587 /* MainMenu.xib */ = {
+		9A273CF629CF1AC800CBEB97 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9A8C64C12783EA0D000C8587 /* Base */,
+				9A273CF729CF1AC800CBEB97 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9A273CF829CF1AC800CBEB97 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A273CF929CF1AC800CBEB97 /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
