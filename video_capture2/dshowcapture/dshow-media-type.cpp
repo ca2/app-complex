@@ -36,7 +36,7 @@ HRESULT CopyMediaType(AM_MEDIA_TYPE *pmtTarget, const AM_MEDIA_TYPE *pmtSource)
 			pmtTarget->cbFormat = 0;
 			return E_OUTOFMEMORY;
 		} else {
-			::memcpy_dup(pmtTarget->pbFormat, pmtSource->pbFormat,
+			::memory_copy(pmtTarget->pbFormat, pmtSource->pbFormat,
 					pmtTarget->cbFormat);
 		}
 	}

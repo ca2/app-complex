@@ -98,7 +98,7 @@ namespace wave
    {
       if(!m_bEnable)
       {
-         ::memcpy_dup(pshOut, pshIn, m_iSampleCount * 2 * 2);
+         ::memory_copy(pshOut, pshIn, m_iSampleCount * 2 * 2);
          return true;
       }
 
@@ -458,7 +458,7 @@ namespace wave
          return false;
       }
 
-      ::memcpy_dup(psh, m_chunkaOut[m_iFirstOutput].m_sha.get_data(), m_iSampleCount * sizeof(i16) * m_iChannelCount);
+      ::memory_copy(psh, m_chunkaOut[m_iFirstOutput].m_sha.get_data(), m_iSampleCount * sizeof(i16) * m_iChannelCount);
 
       m_iFirstOutput++;
       if(m_iFirstOutput >= m_chunkaOut.get_size())
@@ -471,7 +471,7 @@ namespace wave
 
    bool effect_devocalizer::Chunk::Input(i16 * pshStream)
    {
-      ::memcpy_dup(m_sha.get_data(), pshStream, m_pparent->m_iSampleCount * 2 * m_pparent->m_iChannelCount);
+      ::memory_copy(m_sha.get_data(), pshStream, m_pparent->m_iSampleCount * 2 * m_pparent->m_iChannelCount);
       return true;
    }
 
@@ -896,14 +896,14 @@ namespace wave
 
       i = s * iLDivision / m_iDivisionCount;
       n = s - i;
-      ::memcpy_dup(m_chunk.m_sha.get_data(), &m_chunka[iLChunk].m_sha[i], n * 2);
+      ::memory_copy(m_chunk.m_sha.get_data(), &m_chunka[iLChunk].m_sha[i], n * 2);
 
       i32 j = n;
 
       if(iUChunk != iLChunk)
       {
          n = s * (iUDivision + 1) / m_iDivisionCount;
-         ::memcpy_dup(&m_chunk.m_sha[j], m_chunka[iUChunk].m_sha.get_data(), n * 2);
+         ::memory_copy(&m_chunk.m_sha[j], m_chunka[iUChunk].m_sha.get_data(), n * 2);
       }
    }
 

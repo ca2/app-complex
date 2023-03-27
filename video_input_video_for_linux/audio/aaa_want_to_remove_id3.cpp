@@ -82,7 +82,7 @@ string id3_field_text(ID3_Field * pfield)
 
       mem.set_size(iLenBytes);
 
-      ::memcpy_dup(mem.get_data(), pfield->GetRawUnicodeText(), iLenBytes);
+      ::memory_copy(mem.get_data(), pfield->GetRawUnicodeText(), iLenBytes);
 
       unichar * pwsz = (unichar * )mem.get_data();
 
