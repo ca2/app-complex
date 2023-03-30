@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		070B8F041B6E53FA00D26137 /* Hello_Multiverse__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */; };
 		9A273D0129CF1AF100CBEB97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A273CFD29CF1AF100CBEB97 /* InfoPlist.strings */; };
-		9A273D0229CF1AF200CBEB97 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A273CFF29CF1AF100CBEB97 /* MainMenu.xib */; };
 		9A4389B2299E979700D2EE15 /* libapp_complex_video_capture.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A43899C299E8B8C00D2EE15 /* libapp_complex_video_capture.dylib */; };
 		9A4389B3299E97F500D2EE15 /* libvideo_input_avfoundation.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A43898F299E8B3800D2EE15 /* libvideo_input_avfoundation.dylib */; };
 		9A4389B4299E97F500D2EE15 /* libvideo_input_avfoundation.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A43898F299E8B3800D2EE15 /* libvideo_input_avfoundation.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -344,7 +343,6 @@
 		070B8F021B6E53FA00D26137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hello_Multiverse__Tests.m; sourceTree = "<group>"; };
 		9A273CFE29CF1AF100CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
-		9A273D0029CF1AF100CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = MainMenu.xib; sourceTree = "<group>"; };
 		9A438980299E8B3700D2EE15 /* video_input_avfoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = video_input_avfoundation.xcodeproj; path = ../../video_input_avfoundation/video_input_avfoundation.xcodeproj; sourceTree = "<group>"; };
 		9A438993299E8B8B00D2EE15 /* app_complex_video_capture.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_complex_video_capture.xcodeproj; path = ../app_complex_video_capture.xcodeproj; sourceTree = "<group>"; };
 		9A98A67229B938F40057E3F4 /* libacme_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -468,7 +466,6 @@
 			isa = PBXGroup;
 			children = (
 				9A273CFD29CF1AF100CBEB97 /* InfoPlist.strings */,
-				9A273CFF29CF1AF100CBEB97 /* MainMenu.xib */,
 			);
 			path = en.lproj;
 			sourceTree = "<group>";
@@ -904,7 +901,6 @@
 				9AF2F45A2808BFA1007F7B7D /* _matter.zip in Resources */,
 				9A273D0129CF1AF100CBEB97 /* InfoPlist.strings in Resources */,
 				9AAF65AA280871EA0067E73F /* Images.xcassets in Resources */,
-				9A273D0229CF1AF200CBEB97 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1001,14 +997,6 @@
 				9A273CFE29CF1AF100CBEB97 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		9A273CFF29CF1AF100CBEB97 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9A273D0029CF1AF100CBEB97 /* en */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
