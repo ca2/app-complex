@@ -956,7 +956,7 @@ namespace wave
 
                      auto iByteCount = m_pprebuffer->get_buffer_count();
 
-                     ::memcpy_dup(pshTarget, pshSource, iByteCount);
+                     ::memory_copy(pshTarget, pshSource, iByteCount);
 
                   }
 

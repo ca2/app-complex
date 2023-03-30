@@ -563,7 +563,7 @@ namespace video_input_media_capture
 
    //      }
 
-   //      ::memcpy_dup(m_pimage->m_pcolorref1, p, minimum(m_pimage->area() * 4, dwLen));
+   //      ::memory_copy(m_pimage->m_pcolorref1, p, minimum(m_pimage->area() * 4, dwLen));
 
    //   }
 

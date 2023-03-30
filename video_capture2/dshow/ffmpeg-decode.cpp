@@ -104,7 +104,7 @@ static inline void copy_data(struct ffmpeg_decode *decode, u8 *data,
 	}
 
 	memory_set(decode->packet_buffer + size, 0, FF_INPUT_BUFFER_PADDING_SIZE);
-	::memcpy_dup(decode->packet_buffer, data, size);
+	::memory_copy(decode->packet_buffer, data, size);
 }
 
 int ffmpeg_decode_audio(struct ffmpeg_decode *decode,

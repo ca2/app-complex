@@ -218,9 +218,9 @@ STDMETHODIMP OutputPin::QueryPinInfo(PIN_INFO *pInfo)
 	}
 
 	if (outputInfo.expectedMajorType == MEDIATYPE_Video)
-		::memcpy_dup(pInfo->achName, VIDEO_PIN_NAME, sizeof(VIDEO_PIN_NAME));
+		::memory_copy(pInfo->achName, VIDEO_PIN_NAME, sizeof(VIDEO_PIN_NAME));
 	else
-		::memcpy_dup(pInfo->achName, AUDIO_PIN_NAME, sizeof(AUDIO_PIN_NAME));
+		::memory_copy(pInfo->achName, AUDIO_PIN_NAME, sizeof(AUDIO_PIN_NAME));
 
 	pInfo->dir = PINDIR_OUTPUT;
 
@@ -238,7 +238,7 @@ STDMETHODIMP OutputPin::QueryDirection(PIN_DIRECTION *pPinDir)
 STDMETHODIMP OutputPin::QueryId(LPWSTR *lpId)
 {
 	wchar_t *str = (wchar_t*)CoTaskMemAlloc(sizeof(OUTPUT_PIN_NAME));
-	::memcpy_dup(str, OUTPUT_PIN_NAME, sizeof(OUTPUT_PIN_NAME));
+	::memory_copy(str, OUTPUT_PIN_NAME, sizeof(OUTPUT_PIN_NAME));
 	*lpId = str;
 	return S_OK;
 }
@@ -358,7 +358,7 @@ void OutputPin::Send(unsigned char *data[DSHOW_MAX_PLANES],
 		if (!linesize[i])
 			break;
 
-		::memcpy_dup(ptr + total, data[i], linesize[i]);
+		::memory_copy(ptr + total, data[i], linesize[i]);
 		total += linesize[i];
 	}
 
@@ -553,7 +553,7 @@ STDMETHODIMP OutputFilter::QueryFilterInfo(FILTER_INFO *pInfo)
 {
 	PrintFunc(L"OutputFilter::QueryFilterInfo");
 
-	::memcpy_dup(pInfo->achName, FILTER_NAME, sizeof(FILTER_NAME));
+	::memory_copy(pInfo->achName, FILTER_NAME, sizeof(FILTER_NAME));
 
 	pInfo->pGraph = graph;
 	if (graph) {

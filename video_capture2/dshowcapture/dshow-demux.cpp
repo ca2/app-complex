@@ -73,7 +73,7 @@ bool CreateDemuxVideoPin(IBaseFilter *demuxFilter, MediaType &mt,
 	mt->bTemporalCompression = true;
 
 	wchar_t *name = (wchar_t*)CoTaskMemAlloc(sizeof(DEMUX_VIDEO_PIN));
-	::memcpy_dup(name, DEMUX_VIDEO_PIN, sizeof(DEMUX_VIDEO_PIN));
+	::memory_copy(name, DEMUX_VIDEO_PIN, sizeof(DEMUX_VIDEO_PIN));
 
 	hr = demuxer->CreateOutputPin(mt, name, &pin);
 	if (FAILED(hr)) {
@@ -140,7 +140,7 @@ bool CreateDemuxAudioPin(IBaseFilter *demuxFilter, MediaType &mt,
 	mt->bTemporalCompression = true;
 
 	wchar_t *name = (wchar_t*)CoTaskMemAlloc(sizeof(DEMUX_AUDIO_PIN));
-	::memcpy_dup(name, DEMUX_AUDIO_PIN, sizeof(DEMUX_AUDIO_PIN));
+	::memory_copy(name, DEMUX_AUDIO_PIN, sizeof(DEMUX_AUDIO_PIN));
 
 	hr = demuxer->CreateOutputPin(mt, name, &pin);
 	if (FAILED(hr)) {
