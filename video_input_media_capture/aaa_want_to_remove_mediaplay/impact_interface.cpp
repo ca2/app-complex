@@ -1010,7 +1010,7 @@ namespace mediaplay
               // lock the handle and copy the text to the buffer.
 
               char * lptstrCopy = (char *) GlobalLock(hglbCopy);
-              ::memcpy_dup(lptstrCopy, (const ::string &) str,
+              ::memory_copy(lptstrCopy, (const ::string &) str,
                   str.length() * sizeof(char));
               lptstrCopy[str.length()] = (char) 0;    // nullptr character
               GlobalUnlock(hglbCopy);

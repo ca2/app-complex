@@ -171,9 +171,9 @@ STDMETHODIMP CapturePin::QueryPinInfo(PIN_INFO *pInfo)
 	}
 
 	if (captureInfo.expectedMajorType == MEDIATYPE_Video)
-		::memcpy_dup(pInfo->achName, VIDEO_PIN_NAME, sizeof(VIDEO_PIN_NAME));
+		::memory_copy(pInfo->achName, VIDEO_PIN_NAME, sizeof(VIDEO_PIN_NAME));
 	else
-		::memcpy_dup(pInfo->achName, AUDIO_PIN_NAME, sizeof(AUDIO_PIN_NAME));
+		::memory_copy(pInfo->achName, AUDIO_PIN_NAME, sizeof(AUDIO_PIN_NAME));
 
 	pInfo->dir = PINDIR_INPUT;
 
@@ -191,7 +191,7 @@ STDMETHODIMP CapturePin::QueryDirection(PIN_DIRECTION *pPinDir)
 STDMETHODIMP CapturePin::QueryId(LPWSTR *lpId)
 {
 	wchar_t *str = (wchar_t*)CoTaskMemAlloc(sizeof(CAPTURE_PIN_NAME));
-	::memcpy_dup(str, CAPTURE_PIN_NAME, sizeof(CAPTURE_PIN_NAME));
+	::memory_copy(str, CAPTURE_PIN_NAME, sizeof(CAPTURE_PIN_NAME));
 	*lpId = str;
 	return S_OK;
 }
@@ -514,7 +514,7 @@ STDMETHODIMP CaptureFilter::QueryFilterInfo(FILTER_INFO *pInfo)
 {
 	PrintFunc(L"CaptureFilter::QueryFilterInfo");
 
-	::memcpy_dup(pInfo->achName, FILTER_NAME, sizeof(FILTER_NAME));
+	::memory_copy(pInfo->achName, FILTER_NAME, sizeof(FILTER_NAME));
 
 	pInfo->pGraph = graph;
 	if (graph) {

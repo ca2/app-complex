@@ -513,7 +513,7 @@ namespace wave
 
       critical_section_lock slRead1(&m_csProcLevel2);
 
-      ::memcpy_dup(PCMOutGetBuffer(iBuffer), PCMOutGetInBuffer(), PCMOutGetInBufferSize());
+      ::memory_copy(PCMOutGetBuffer(iBuffer), PCMOutGetInBuffer(), PCMOutGetInBufferSize());
 
    }
 
