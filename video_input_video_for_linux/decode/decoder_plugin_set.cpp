@@ -42,7 +42,7 @@ namespace audio
       straPreferred.add(library_file_name("audio_decode_mpg123"));
       listing.preferred_name(straPreferred);
 
-#elif defined(_UWP)
+#elif defined(UNIVERSAL_WINDOWS)
 
       listing.add("audio_decode_libmpg123.dll");
       listing.add("audio_decode_wave.dll");

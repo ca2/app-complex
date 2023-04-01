@@ -343,7 +343,7 @@ namespace video_input_video_for_linux
 
             int iFlags = SWS_FAST_BILINEAR;
 
-            //#if !defined(ANDROID) && !defined(_UWP)
+            //#if !defined(ANDROID) && !defined(UNIVERSAL_WINDOWS)
 
             //iFlags |= SWS_C | SWS_CPU_CAPS_MMX2;
 

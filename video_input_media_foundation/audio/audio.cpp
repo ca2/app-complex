@@ -943,7 +943,7 @@ pacmedirectory->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".mp
    ::file_pointer audio::get_rtp_file(const ::payload & payloadFile)
    {
 
-#ifdef _UWP
+#ifdef UNIVERSAL_WINDOWS
 
       return nullptr;
 

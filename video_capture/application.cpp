@@ -93,7 +93,7 @@ namespace app_complex_video_capture
 
       auto pfactory = acmesystem()->factory("video_input", "video_for_linux");
 
-#elif defined(_UWP)
+#elif defined(UNIVERSAL_WINDOWS)
 
       auto pfactory = acmesystem()->factory("video_input", "media_capture");
 

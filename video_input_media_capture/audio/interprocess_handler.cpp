@@ -37,7 +37,7 @@ namespace audio
    void interprocess_handler::on_media_playback_start(::file::path pathOrigin, string strTitle,string_array straArtist, string strAlbum, memory & memoryImage, string strUrl)
    {
 
-#ifdef _UWP
+#ifdef UNIVERSAL_WINDOWS
 
       return;
 
@@ -74,7 +74,7 @@ namespace audio
    void interprocess_handler::on_media_playback_end(::file::path pathOrigin, string strTitle,string_array straArtist, string strAlbum)
    {
 
-#ifdef _UWP
+#ifdef UNIVERSAL_WINDOWS
 
       return;
 

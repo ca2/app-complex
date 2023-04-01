@@ -4,7 +4,7 @@
 #ifndef CUBE
 
 
-#ifdef _UWP
+#ifdef UNIVERSAL_WINDOWS
 [Session::MTAThread]
 #endif
 BOOL WINAPI DllMain(HINSTANCE hInstance, ::u32 dwReason, LPVOID lpReserved)

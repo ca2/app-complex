@@ -7,7 +7,7 @@
 
 
 
-//#ifndef _UWP
+//#ifndef UNIVERSAL_WINDOWS
 //#include "audio/audio/ortp/_.h"
 //#include "audio/audio/srtp/srtp.h"
 //#endif

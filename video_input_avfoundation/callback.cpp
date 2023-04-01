@@ -338,7 +338,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////
 ////            int iFlags = SWS_FAST_BILINEAR;
 ////
-////            //#if !defined(ANDROID) && !defined(_UWP)
+////            //#if !defined(ANDROID) && !defined(UNIVERSAL_WINDOWS)
 ////
 ////            //iFlags |= SWS_C | SWS_CPU_CAPS_MMX2;
 ////
