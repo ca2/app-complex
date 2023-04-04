@@ -29,7 +29,7 @@ list(APPEND library_source
         region.h
         text.cpp)
 
-add_library(${PROJECT_NAME} SHARED ${library_source})
+add_library(static_${PROJECT_NAME} STATIC ${library_source})
 
 target_precompile_headers(draw2d_gdiplus PRIVATE framework.h)
 

@@ -47,7 +47,7 @@ list(APPEND library_references
    )
 
 
-add_library(${PROJECT_NAME} SHARED ${library_source})
+add_library(static_${PROJECT_NAME} STATIC ${library_source})
 
 target_precompile_headers(app_complex_video_capture PRIVATE framework.h)
 
