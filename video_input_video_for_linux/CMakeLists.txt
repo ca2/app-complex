@@ -42,7 +42,8 @@ add_library(${PROJECT_NAME} SHARED ${library_source})
 add_library(static_${PROJECT_NAME} STATIC ${library_source})
 
 
-target_precompile_headers(video_input_video_for_linux PRIVATE framework.h)
+target_precompile_headers(${PROJECT_NAME} PRIVATE framework.h)
+target_precompile_headers(static_${PROJECT_NAME} PRIVATE framework.h)
 
 set_target_properties(video_input_video_for_linux PROPERTIES LINKER_LANGUAGE CXX)
 
@@ -57,8 +58,10 @@ elseif(LINUX)
    if(NOT DONT_USE_PKG_CONFIG)
       pkg_check_modules(PKGCONFIG libavcodec libswscale libavformat libavutil libv4l2 libudev)
    endif()
-   target_compile_options(video_input_video_for_linux PRIVATE ${PKGCONFIG_CFLAGS})
-   target_link_options(video_input_video_for_linux PRIVATE ${PKGCONFIG_LDFLAGS})
+   target_compile_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
+target_compile_options(static_${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
+   target_link_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_LDFLAGS})
+   target_link_options(static_${PROJECT_NAME} PRIVATE ${PKGCONFIG_LDFLAGS})
    #target_link_options(video_input_video_for_linux PRIVATE -Wl,-rpath=$ORIGIN)
    target_link_libraries(video_input_video_for_linux PRIVATE ${library_references} ${PKGCONFIG_LIBRARIES})
    target_link_options(video_input_video_for_linux PRIVATE -Wl,-z,defs)
