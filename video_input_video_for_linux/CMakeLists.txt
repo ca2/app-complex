@@ -36,7 +36,11 @@ list(APPEND library_source
    )
 
 
-add_library(video_input_video_for_linux SHARED ${library_source} )
+add_library(${PROJECT_NAME} SHARED ${library_source})
+
+
+add_library(static_${PROJECT_NAME} STATIC ${library_source})
+
 
 target_precompile_headers(video_input_video_for_linux PRIVATE framework.h)
 
@@ -67,8 +71,9 @@ list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR})
 list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/..)
 list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/../..)
 
-target_include_directories(${PROJECT_NAME} PRIVATE ${library_include_directories})
 
+target_include_directories(${PROJECT_NAME} PRIVATE ${library_include_directories})
+target_include_directories(static_${PROJECT_NAME} PRIVATE ${library_include_directories})
 
 
 target_compile_definitions(video_input_video_for_linux PRIVATE _VIDEO_INPUT_VIDEO_FOR_LINUX_LIBRARY)
