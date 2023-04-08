@@ -471,7 +471,7 @@ namespace multimedia
 
       void slider::_001OnTimer(::timer * ptimer)
       {
-         ::audio_mixer::user::level_control::_001OnTimer(ptimer);
+         ::audio_mixer_user::level_control::_001OnTimer(ptimer);
          ::point_i32 point;
          ::rectangle rectangle;
          ::rectangle rectangleTrack;

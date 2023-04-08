@@ -37,9 +37,9 @@ namespace multimedia
          ::audio_mixer::destination * get_destination();
          ::audio_mixer::audio_mixer * get_mixer();
 
-         ::audio_mixer::user::level_control * allocate_level_control();
-         ::audio_mixer::user::toggle_control * allocate_toggle_control();
-         ::audio_mixer::user::label * allocate_label();
+         ::audio_mixer_user::level_control * allocate_level_control();
+         ::audio_mixer_user::toggle_control * allocate_toggle_control();
+         ::audio_mixer_user::label * allocate_label();
 
       };
 

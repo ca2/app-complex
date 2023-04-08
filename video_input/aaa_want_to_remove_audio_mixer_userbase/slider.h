@@ -10,7 +10,7 @@ namespace multimedia
 
 
       class CLASS_DECL_APP_CORE_AUDIO slider :
-         virtual public ::audio_mixer::user::level_control
+         virtual public ::audio_mixer_user::level_control
       {
       public:
 
@@ -43,7 +43,7 @@ namespace multimedia
          void install_message_routing(::channel * pchannel) override;
 
 
-         using ::audio_mixer::user::level_control::create_window;
+         using ::audio_mixer_user::level_control::create_window;
          virtual bool create_window(::user::interaction * puiParent, const ::atom & atom) override;
 
 

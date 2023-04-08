@@ -11,7 +11,7 @@ namespace multimedia
 
       class CLASS_DECL_APP_CORE_AUDIO label : 
          virtual public ::simple_static,
-         virtual public ::audio_mixer::user::label
+         virtual public ::audio_mixer_user::label
       {
       public:
 

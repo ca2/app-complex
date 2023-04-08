@@ -13,7 +13,7 @@ namespace multimedia
 
 
       class CLASS_DECL_APP_CORE_AUDIO control :
-         public ::audio_mixer::user::control_ptr_array
+         public ::audio_mixer_user::control_ptr_array
       {
       public:
 
@@ -32,7 +32,7 @@ namespace multimedia
          virtual ~control();
 
 
-         using ::audio_mixer::user::control_ptr_array::add;
+         using ::audio_mixer_user::control_ptr_array::add;
          virtual iptr add(::audio_mixer::user_control * pinteraction);
 
          virtual bool control_type(e_control econtrol) const;

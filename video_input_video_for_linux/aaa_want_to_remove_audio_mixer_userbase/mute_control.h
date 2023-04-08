@@ -11,7 +11,7 @@ namespace multimedia
 
       class CLASS_DECL_APP_CORE_AUDIO mute_control :
          virtual public ::user::button,
-         virtual public ::audio_mixer::user::toggle_control
+         virtual public ::audio_mixer_user::toggle_control
       {
       public:
 
