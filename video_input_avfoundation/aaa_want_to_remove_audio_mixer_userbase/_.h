@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "app-core/multimedia/audio_mixer/_.h"
+#include "audio-system/audio_mixer/_.h"
 
 
 #include "control_data.h"

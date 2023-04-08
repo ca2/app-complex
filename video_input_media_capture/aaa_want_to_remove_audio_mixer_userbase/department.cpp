@@ -6,7 +6,7 @@
 namespace multimedia
 {
 
-   namespace audio_mixer_userbase
+   namespace audio_mixer_user_base
    {
 
 
@@ -90,7 +90,7 @@ namespace multimedia
          {
 
             m_pimpactsystem = __new(::user::multiple_document_template(
-                                  "audio_mixer_userbase/audio_mixer",
+                                  "audio_mixer_user_base/audio_mixer",
                                   __type(document),
                                   __type(frame_window),
                                   __type(main_impact)));
@@ -169,7 +169,7 @@ namespace multimedia
       }
 
 
-   } // namespace audio_mixer_userbase
+   } // namespace audio_mixer_user_base
 
 
 } // namespace multimedia

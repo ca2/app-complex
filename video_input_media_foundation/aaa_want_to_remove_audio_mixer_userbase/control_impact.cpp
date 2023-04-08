@@ -13,7 +13,7 @@
 namespace multimedia
 {
 
-   namespace audio_mixer_userbase
+   namespace audio_mixer_user_base
    {
 
 
@@ -510,7 +510,7 @@ namespace multimedia
       {
          ::audio_mixer::control_array & controla = pSource->m_mixercontrola;
          ::audio_mixer::control * pinteraction;
-         ::audio_mixer::user::control * pusercontrol;
+         ::audio_mixer::user_control * pusercontrol;
          bool bHasAtLeastOneControl = false;
          i32 y = iStartY;
          i32 y2;
@@ -718,7 +718,7 @@ namespace multimedia
       }
 
 
-   } // namespace audio_mixer_userbase
+   } // namespace audio_mixer_user_base
 
 
 } // namespace multimedia

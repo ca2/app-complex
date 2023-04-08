@@ -6,7 +6,7 @@ namespace multimedia
 {
 
 
-   namespace audio_mixer_userbase
+   namespace audio_mixer_user_base
    {
 
 
@@ -55,7 +55,7 @@ namespace multimedia
 
 
 
-   } // namespace audio_mixer_userbase
+   } // namespace audio_mixer_user_base
 
 
 } // namespace multimedia

@@ -379,10 +379,10 @@
 //       add_factory_item <::wave::player_command >();
 //       add_factory_item <::audio::wave_recorder_command >();
 
-//       //add_factory_item <::multimedia::audio_mixer_userbase::document >();
-//       //add_factory_item <::multimedia::audio_mixer_userbase::frame_window >();
-//       //add_factory_item <::multimedia::audio_mixer_userbase::main_impact >();
-//       //add_factory_item <::multimedia::audio_mixer_userbase::control_impact >();
+//       //add_factory_item <::multimedia::audio_mixer_user_base::document >();
+//       //add_factory_item <::multimedia::audio_mixer_user_base::frame_window >();
+//       //add_factory_item <::multimedia::audio_mixer_user_base::main_impact >();
+//       //add_factory_item <::multimedia::audio_mixer_user_base::control_impact >();
 
 //       //      add_factory_item <::duration_array > ();
 //       // add_factory_item <duration_array >();

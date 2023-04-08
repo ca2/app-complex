@@ -8,7 +8,7 @@ namespace multimedia
 {
 
 
-   namespace audio_mixer_userbase
+   namespace audio_mixer_user_base
    {
 
 
@@ -128,7 +128,7 @@ namespace multimedia
       ::audio_mixer::user::level_control * control_data::allocate_level_control()
       {
 
-         auto pinteraction  = __new(::audio_mixer_userbase::slider);
+         auto pinteraction  = __new(::audio_mixer_user_base::slider);
 
          return pinteraction;
 
@@ -138,7 +138,7 @@ namespace multimedia
       ::audio_mixer::user::toggle_control * control_data::allocate_toggle_control()
       {
 
-         auto pinteraction  = __new(::audio_mixer_userbase::mute_control);
+         auto pinteraction  = __new(::audio_mixer_user_base::mute_control);
 
          return pinteraction;
 
@@ -148,7 +148,7 @@ namespace multimedia
       ::audio_mixer::user::label * control_data::allocate_label()
       {
 
-         auto pinteraction  = __new(::audio_mixer_userbase::label);
+         auto pinteraction  = __new(::audio_mixer_user_base::label);
 
          return pinteraction;
 
@@ -166,7 +166,7 @@ namespace multimedia
       }
 
 
-   } // namespace audio_mixer_userbase
+   } // namespace audio_mixer_user_base
 
 
 } // namespace multimedia

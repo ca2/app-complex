@@ -22,7 +22,7 @@
 
 //       //::pointer<::multimedia::department>                         m_pmultimedia;
 //       //::pointer<::audio_mixer::department>            m_paudiomixer;
-//       //::pointer<::audio_mixer_userbase::department>   m_paudiomixeruserbase;
+//       //::pointer<::audio_mixer_user_base::department>   m_paudiomixeruserbase;
 //       ::pointer<::multimedia::file_application>                   m_pmultimediafile;
 //       ::pointer<::audio::wave>                        m_paudiowave;
 //       //::pointer<::mediaplaylist::media_playlist>                  m_pmediaplaylist;
@@ -56,7 +56,7 @@
 //       //{
 //       //   return m_paudiomixer;
 //       //}
-//       //inline ::audio_mixer_userbase::department * audiomixeruserbase()
+//       //inline ::audio_mixer_user_base::department * audiomixeruserbase()
 //       //{
 //       //   return m_paudiomixeruserbase;
 //       //}

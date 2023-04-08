@@ -2,8 +2,8 @@
 
 #include "app-core/multimedia/mediaplaylist/_.h"
 #include "app-core/multimedia/audio/_.h"
-#include "app-core/multimedia/audio_mixer/_.h"
-#include "app-core/multimedia/audio_mixer_userbase/_.h"
+#include "audio-system/audio_mixer/_.h"
+#include "app-core/multimedia/audio_mixer_user_base/_.h"
 #include "app-core/multimedia/mediamanager/_.h"
 
 

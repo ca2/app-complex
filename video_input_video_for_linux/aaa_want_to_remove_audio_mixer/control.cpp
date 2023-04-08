@@ -20,7 +20,7 @@ namespace multimedia
       control::~control()
       {
 
-         ::audio_mixer::user::control * pinteraction;
+         ::audio_mixer::user_control * pinteraction;
 
          for(i32 i = 0; i < this->get_size(); i++)
          {
@@ -66,10 +66,10 @@ namespace multimedia
       }
 
 
-      ::pointer<::audio_mixer::user::control>control::GetControl(i32 iType)
+      ::pointer<::audio_mixer::user_control>control::GetControl(i32 iType)
       {
 
-         ::pointer<::audio_mixer::user::control>pusercontrol;
+         ::pointer<::audio_mixer::user_control>pusercontrol;
 
          for(i32 i = 0; i < this->get_size(); i++)
          {
@@ -97,7 +97,7 @@ namespace multimedia
       }
 
 
-      ::pointer<::audio_mixer::user::control>control::GetControlByIndex(::index iIndex)
+      ::pointer<::audio_mixer::user_control>control::GetControlByIndex(::index iIndex)
       {
 
          return this->element_at(iIndex);
@@ -159,7 +159,7 @@ namespace multimedia
       ::pointer<::audio_mixer::control_data>control::GetWindowData(i32 iType)
       {
 
-         ::pointer<::audio_mixer::user::control>pusercontrol;
+         ::pointer<::audio_mixer::user_control>pusercontrol;
 
          for(i32 i = 0; i < this->get_size(); i++)
          {
@@ -187,10 +187,10 @@ namespace multimedia
       }
 
 
-      ::pointer<::audio_mixer::user::control>ontrol::GetControlByDlgCtrlID(u32 nID)
+      ::pointer<::audio_mixer::user_control>ontrol::GetControlByDlgCtrlID(u32 nID)
       {
 
-         ::pointer<::audio_mixer::user::control>pusercontrol;
+         ::pointer<::audio_mixer::user_control>pusercontrol;
 
          for(i32 i = 0; i < this->get_size(); i++)
          {
@@ -221,7 +221,7 @@ namespace multimedia
       ::pointer<::audio_mixer::control_data>control::GetWindowDataByDlgCtrlID(u32 nID)
       {
 
-         ::pointer<::audio_mixer::user::control>pusercontrol;
+         ::pointer<::audio_mixer::user_control>pusercontrol;
 
          for(i32 i = 0; i < this->get_size(); i++)
          {
@@ -270,7 +270,7 @@ namespace multimedia
       }
 
 
-      iptr control::add(::audio_mixer::user::control * pinteraction)
+      iptr control::add(::audio_mixer::user_control * pinteraction)
       {
 
          pinteraction->get_data()->m_iIndex = this->get_size();

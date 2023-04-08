@@ -148,7 +148,7 @@ namespace multimedia
             for(i32 l = 0; l < control.get_size(); l++)
             {
 
-               ::audio_mixer::user::control * pinteraction = control[l];
+               ::audio_mixer::user_control * pinteraction = control[l];
 
                m_mapDlgItemIDToControl.set_at(pinteraction->GetDlgCtrlId(), &control);
 

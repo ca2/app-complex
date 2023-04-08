@@ -28,7 +28,7 @@ namespace audio
    //      cc->m_puserinteractionParent = pimpactdata->m_pplaceholder;
    //      papp->audiomixeruserbase()->Initialize();
 
-   //      ::pointer<audio_mixer_userbase::document>pdocument = ::user::__document(cc);
+   //      ::pointer<audio_mixer_user_base::document>pdocument = ::user::__document(cc);
 
    //      if(pdocument != nullptr)
    //      {
