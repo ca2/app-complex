@@ -65,7 +65,7 @@ target_compile_options(static_${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
    #target_link_options(video_input_video_for_linux PRIVATE -Wl,-rpath=$ORIGIN)
    target_link_libraries(video_input_video_for_linux PRIVATE ${library_references} ${PKGCONFIG_LIBRARIES})
    target_link_options(video_input_video_for_linux PRIVATE -Wl,-z,defs)
-   message("PKGCONFIG_LIBRARIES is " ${PKGCONFIG_LIBRARIES})
+   message(STATUS "PKGCONFIG_LIBRARIES is " ${PKGCONFIG_LIBRARIES})
    
 endif()
 
