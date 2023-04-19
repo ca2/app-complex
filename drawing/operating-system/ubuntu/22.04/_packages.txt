@@ -49,7 +49,7 @@ app-core/api_twitch
 app-core/irc
 app-core/api_ca2
 app/networking_bsd
-app-veriwell/audio_decode_libmpg123
+audio-generation1/audio_decode_libmpg123
 app-core/text_to_speech_azure
 app-core/api_azure
 app-core/text_to_speech_google
