@@ -41,7 +41,7 @@ namespace multimedia
 
          }
 
-         string strLibrary = papp->multimedia_audio_mixer_get_default_library_name();
+         string strLibrary = papp->multimedia_audio_mixer_get_default_implementation_name();
 
          if (strLibrary.is_empty())
          {
