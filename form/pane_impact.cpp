@@ -28,22 +28,6 @@ namespace app_complex_form
    }
 
 
-   //void pane_impact::assert_ok() const
-   //{
-
-   //   ::user::impact::assert_ok();
-
-   //}
-
-
-   //void pane_impact::dump(dump_context & dumpcontext) const
-   //{
-
-   //   ::user::impact::dump(dumpcontext);
-
-   //}
-
-
    void pane_impact::install_message_routing(::channel * pchannel)
    {
 

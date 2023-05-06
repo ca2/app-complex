@@ -19,22 +19,6 @@ namespace app_complex_form
    }
 
 
-   //void form_001::assert_ok() const
-   //{
-
-   //   ::app_simple_form::form_001::assert_ok();
-
-   //}
-
-
-   //void form_001::dump(dump_context & dumpcontext) const
-   //{
-
-   //   ::app_simple_form::form_001::dump(dumpcontext);
-
-   //}
-
-
 #ifdef _DEBUG
 
 

@@ -16,42 +16,6 @@ namespace app_complex_form
    {
 
 
-//      ON_WM_RBUTTONUP
-//      {
-//         //auto pmouse = pmessage->m_union.m_pmouse;
-//         //::karaoke::lyric_impact_lines & lyriclines = GetLyricLines();
-//         //index iLine;
-//         //index iToken;
-//         //strsize iChar;
-//         //class point_i32 ptCursor;
-//         //ptCursor = pmouse->m_pt;
-//         //if (m_lyrictemplatelines.hit_test(ptCursor, iLine, iToken, iChar)
-//         //   == ::user::e_line_hit_link)
-//         //{
-//         //   string str;
-//         //   lyriclines.GetLink(str, iLine, iToken, iChar);
-//         //   m_strCurrentLink = str;
-//         //   //::user::menu menu(this);
-//         //}
-//         //else
-//         {
-//            //            bool bTemporary =get_task()->m_bTemporary;
-//            //            get_task()->m_bTemporary = true;
-//            string strMatter = dir()->matter("popup_lyricview.xml");
-//            ::file::path path = pcontext->m_papexcontext->defer_process_path(strMatter);
-//            //::pointer<::message::mouse>p=pmouse->
-//            //main_async([this,p]()
-//            //{
-//
-//            // g_track_popup_lyricview(this, pmouse);
-//
-//            // });
-////               get_task()->m_bTemporary = bTemporary;
-//         }
-//
-//         pmouse->m_bRet = true;
-//
-//      };
 
    }
 
@@ -60,22 +24,6 @@ namespace app_complex_form
    {
 
    }
-
-
-   //void form::assert_ok() const
-   //{
-
-   //   ::user::form_impact::assert_ok();
-
-   //}
-
-
-   //void form::dump(dump_context & dumpcontext) const
-   //{
-
-   //   ::user::form_impact::dump(dumpcontext);
-
-   //}
 
 
 #ifdef _DEBUG
