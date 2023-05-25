@@ -430,7 +430,7 @@ namespace multimedia
          // trans   ::user::interaction::OnLButtonUp(pmouse->m_nFlags, point);
       }
 
-      bool slider::GetPageARect(RECTANGLE_I32 * lpRectClient,RECTANGLE_I32 * lpRectTrack, RECTANGLE_I32 * lpRect)
+      bool slider::GetPageARect(::rectangle_i32 * lpRectClient,::rectangle_i32 * lpRectTrack, ::rectangle_i32 * lpRect)
       {
          if(m_eorientation == e_orientation_horizontal)
          {
@@ -449,7 +449,7 @@ namespace multimedia
          return true;
       }
 
-      bool slider::GetPageBRect(RECTANGLE_I32 * lpRectClient,RECTANGLE_I32 * lpRectTrack, RECTANGLE_I32 * lpRect)
+      bool slider::GetPageBRect(::rectangle_i32 * lpRectClient,::rectangle_i32 * lpRectTrack, ::rectangle_i32 * lpRect)
       {
          if(m_eorientation == e_orientation_horizontal)
          {
@@ -555,7 +555,7 @@ namespace multimedia
          // trans   ::user::interaction::OnTimer(ptimer->m_uEvent);
       }
 
-      bool slider::GetThumbRect(RECTANGLE_I32 * lpRect)
+      bool slider::GetThumbRect(::rectangle_i32 * lpRect)
       {
          ::rectangle rectangleClient;
          client_rectangle(rectangleClient);

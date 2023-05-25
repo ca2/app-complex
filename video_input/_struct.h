@@ -94,7 +94,7 @@ struct video_output_info
    enum_video_format m_eformat;
    u32 m_uFpsNumerator;
    u32 m_uFpsDenominator;
-	SIZE_I32 m_size;
+	::size_i32 m_size;
    memsize m_memsizeCache;
 
    enum_video_colorspace m_ecolorspace;
@@ -106,7 +106,7 @@ struct video_output_info
 
 struct e_video_scale_info {
    enum_video_format m_eformat;
-   SIZE_I32 m_size;
+   ::size_i32 m_size;
    enum_video_range_type m_erangetype;
    enum_video_colorspace m_ecolorspace;
 };

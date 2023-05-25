@@ -64,7 +64,7 @@ namespace mediaplaylist
       virtual void _001OnButtonAction(::pointer<user::interaction>pinteraction) override;
       virtual void _001OnInitializeControl(::pointer<user::interaction>pinteraction) override;
       virtual void _001InsertColumns() override;
-      virtual void _001DrawBackground(::draw2d::graphics *pdc, RECTANGLE_I32 * lprect);
+      virtual void _001DrawBackground(::draw2d::graphics *pdc, ::rectangle_i32 * lprect);
       virtual bool _001OnRemoveItem(index iItem) override;
       void update_drawing_objects();
       virtual void _001GetItemImage(::user::mesh_item * pitem) override;

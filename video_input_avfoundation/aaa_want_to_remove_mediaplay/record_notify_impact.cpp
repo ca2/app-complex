@@ -80,7 +80,7 @@ namespace mediaplay
       //MESSAGE_LINK(e_message_timer, pchannel, this, &record_notify_impact::_001OnTimer);
    }
 
-   void record_notify_impact::GetParentClientRect(RECTANGLE_I32 * lprect)
+   void record_notify_impact::GetParentClientRect(::rectangle_i32 * lprect)
    {
       m_puserinteractionParent->client_rectangle(lprect);
    }

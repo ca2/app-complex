@@ -48,9 +48,9 @@ namespace multimedia
 
 
          void update_drawing_objects();
-         bool GetPageARect(RECTANGLE_I32 * lpRectClient, RECTANGLE_I32 * lpRectTrack,  RECTANGLE_I32 * lpRect);
-         bool GetPageBRect(RECTANGLE_I32 * lpRectClient, RECTANGLE_I32 * lpRectTrack,  RECTANGLE_I32 * lpRect);
-         bool GetThumbRect(RECTANGLE_I32 * lpRect);
+         bool GetPageARect(::rectangle_i32 * lpRectClient, ::rectangle_i32 * lpRectTrack,  ::rectangle_i32 * lpRect);
+         bool GetPageBRect(::rectangle_i32 * lpRectClient, ::rectangle_i32 * lpRectTrack,  ::rectangle_i32 * lpRect);
+         bool GetThumbRect(::rectangle_i32 * lpRect);
 
          bool IsHover();
          void DoHoverSmartUpdate();

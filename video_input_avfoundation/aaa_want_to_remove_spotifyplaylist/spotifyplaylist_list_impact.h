@@ -47,7 +47,7 @@ namespace mediaplaylist
       virtual void _001OnButtonAction(::pointer<user::interaction>pinteraction);
       virtual void _001OnInitializeForm(::pointer<user::interaction>pinteraction);
       virtual void _001InsertColumns();
-      virtual void _001DrawBackground(::draw2d::graphics *pdc, RECTANGLE_I32 * lprect);
+      virtual void _001DrawBackground(::draw2d::graphics *pdc, ::rectangle_i32 * lprect);
       virtual bool _001OnRemoveItem(iptr iItem);
       void _001OnDraw(::draw2d::graphics_pointer & pgraphics);
       void update_drawing_objects();

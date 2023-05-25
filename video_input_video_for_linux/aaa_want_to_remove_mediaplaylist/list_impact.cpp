@@ -619,7 +619,7 @@ namespace mediaplaylist
    /* return nullptr;
    }*/
 
-   void list_impact::_001DrawBackground(::draw2d::graphics *graphics, RECTANGLE_I32 * lprect)
+   void list_impact::_001DrawBackground(::draw2d::graphics *graphics, ::rectangle_i32 * lprect)
    {
       ::rectangle rectangleThis;
       client_rectangle(rectangleThis);

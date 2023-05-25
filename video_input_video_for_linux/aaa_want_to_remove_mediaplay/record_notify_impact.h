@@ -23,7 +23,7 @@ namespace mediaplay
       using ::user::interaction::create_window;
       bool create_window(::pointer<::user::interaction>pinterface,atom atom);
 
-      virtual void GetParentClientRect(RECTANGLE_I32 * lprect);
+      virtual void GetParentClientRect(::rectangle_i32 * lprect);
    
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics);
       virtual void _001OnTimer(::timer * ptimer);

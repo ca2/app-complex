@@ -40,8 +40,8 @@ void TransformImage_NV12(
 );
 
 
-RECTANGLE_I32    LetterBoxRect(const ::rectangle_i32 &rcSrc, const ::rectangle_i32 &rcDst);
-RECTANGLE_I32    CorrectAspectRatio(const ::rectangle_i32 &src, const MFRatio& srcPAR);
+::rectangle_i32    LetterBoxRect(const ::rectangle_i32 &rcSrc, const ::rectangle_i32 &rcDst);
+::rectangle_i32    CorrectAspectRatio(const ::rectangle_i32 &src, const MFRatio& srcPAR);
 HRESULT GetDefaultStride(IMFMediaType *pType, ::i32 *plStride);
 
 
@@ -355,8 +355,8 @@ HRESULT DrawDevice::SetVideoType(IMFMediaType *pType)
 
 void DrawDevice::UpdateDestinationRect()
 {
-   RECTANGLE_I32 rcClient;
-   RECTANGLE_I32 rcSrc = { 0, 0, m_width, m_height };
+   ::rectangle_i32 rcClient;
+   ::rectangle_i32 rcSrc = { 0, 0, m_width, m_height };
 
    client_rectangle(m_hwnd, &rcClient);
 
@@ -522,7 +522,7 @@ HRESULT DrawDevice::DrawFrame(IMFMediaBuffer *pBuffer)
    m_pDevice->CreateOffscreenPlainSurface(1040, 690, D3DFMT_A8R8G8B8, D3DPOOL_SYSTEMMEM, &pRenderTarget, 0);
 
 
-   RECTANGLE_I32 rectangle_i32;
+   ::rectangle_i32 rectangle_i32;
    rectangle.bottom = 1040;
    rectangle.left = 0;
    rectangle.right = 690;
@@ -544,7 +544,7 @@ HRESULT DrawDevice::DrawFrame(IMFMediaBuffer *pBuffer)
    textSprite->End();
 
    m_pDevice->SetRenderTarget(0, pSurf);
-   POINT_I32 p;
+   ::point_i32 p;
    p.x = 0;
    p.y = 0;
    // then use UpdateSurface to copy the drawn text surface to the texture's surface
@@ -905,7 +905,7 @@ void TransformImage_NV12(
 //
 //-------------------------------------------------------------------
 
-RECTANGLE_I32    LetterBoxRect(const ::rectangle_i32 &rcSrc, const ::rectangle_i32 &rcDst)
+::rectangle_i32    LetterBoxRect(const ::rectangle_i32 &rcSrc, const ::rectangle_i32 &rcDst)
 {
    // figure out src/dest scale ratios
    int iSrcWidth = Width(rcSrc);
@@ -935,7 +935,7 @@ RECTANGLE_I32    LetterBoxRect(const ::rectangle_i32 &rcSrc, const ::rectangle_i
 
    // Create a centered rectangle_i32 within the current destination rectangle_i32
 
-   RECTANGLE_I32 rc;
+   ::rectangle_i32 rc;
 
    ::i32 left = rcDst.left + ((iDstWidth - iDstLBWidth) / 2);
    ::i32 top = rcDst.top + ((iDstHeight - iDstLBHeight) / 2);
@@ -956,10 +956,10 @@ RECTANGLE_I32    LetterBoxRect(const ::rectangle_i32 &rcSrc, const ::rectangle_i
 // is stretched to 720 x 540. 
 //-----------------------------------------------------------------------------
 
-RECTANGLE_I32 CorrectAspectRatio(const ::rectangle_i32 &src, const MFRatio& srcPAR)
+::rectangle_i32 CorrectAspectRatio(const ::rectangle_i32 &src, const MFRatio& srcPAR)
 {
    // Start with a rectangle_i32 the same size_i32 as src, but offset to the origin (0,0).
-   RECTANGLE_I32 rc = { 0, 0, src.right - src.left, src.bottom - src.top };
+   ::rectangle_i32 rc = { 0, 0, src.right - src.left, src.bottom - src.top };
 
    if ((srcPAR.Numerator != 1) || (srcPAR.Denominator != 1))
    {
