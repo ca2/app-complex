@@ -228,7 +228,7 @@ namespace mediaplaylist
          {
             ::pointer<::simple_frame_window>pframewnd =  (::user::list::get_parent_frame());
             OnActivateFrame(WA_INACTIVE, pframewnd);
-            pframewnd->ActivateFrame(e_display_restored);
+            pframewnd->ActivateFrame(e_display_normal);
             OnActivateImpact(true, this, this);
             set_need_redraw();
          }

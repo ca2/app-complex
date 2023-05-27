@@ -50,7 +50,7 @@ namespace mediaplaylist
       {
       if(pdocument->m_pholderMailList->m_uiptraHold.get_size() > 0)
       {
-      pdocument->m_pholderMailList->m_uiptraHold[0]->ShowWindow(SW_HIDE);
+      pdocument->m_pholderMailList->m_uiptraHold[0]->show_window(SW_HIDE);
       }
       pdocument->m_pholderMailList->hold(papp->mediaplaylist::application::m_prightview);
       pdocument->m_pholderMailList->on_layout(pgraphics);
@@ -61,7 +61,7 @@ namespace mediaplaylist
       }
       else
       {
-      papp->mediaplaylist::application::m_pmainimpact->get_pane_window(1)->ShowWindow(SW_HIDE);
+      papp->mediaplaylist::application::m_pmainimpact->get_pane_window(1)->show_window(SW_HIDE);
       papp->mediaplaylist::application::m_pmainimpact->SetPane(1, papp->mediaplaylist::application::m_prightview, false);
       papp->mediaplaylist::application::m_pmainimpact->on_layout(pgraphics);
       }
@@ -80,7 +80,7 @@ namespace mediaplaylist
 
       if(pitem->m_iIdentation == 0)
       {
-      papp->mediaplaylist::application::m_pmainimpact->get_pane_window(1)->ShowWindow(SW_HIDE);
+      papp->mediaplaylist::application::m_pmainimpact->get_pane_window(1)->show_window(SW_HIDE);
       papp->mediaplaylist::application::m_pmainimpact->SetPane(1, papp->mediaplaylist::application::m_prightpaneimpact, false);
       papp->mediaplaylist::application::m_pmainimpact->on_layout(pgraphics);
       }*/

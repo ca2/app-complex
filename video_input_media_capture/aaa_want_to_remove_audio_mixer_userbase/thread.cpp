@@ -92,11 +92,11 @@ namespace multimedia
                      if(puserinteraction != nullptr)
                      {
 
-                        //puserinteraction->SetFocus();
-                        //puserinteraction->SetForegroundWindow();
+                        //puserinteraction->set_keyboard_focus();
+                        //puserinteraction->set_foreground_window();
                         //puserinteraction->BringWindowToTop();
                         //puserinteraction->display(e_display_restore);
-                        puserinteraction->display(e_display_restore, e_activation_set_foreground);
+                        puserinteraction->display(e_display_restore, XXXe_activation_set_foreground);
 
                      }
 
@@ -164,7 +164,7 @@ namespace multimedia
          //    m_pMixerDocTemplate->open_new_document();
          //  if(GetMainWnd() != nullptr)
          //{
-         //  GetMainWnd()->SetForegroundWindow();
+         //  GetMainWnd()->set_foreground_window();
          //}
          //}
 

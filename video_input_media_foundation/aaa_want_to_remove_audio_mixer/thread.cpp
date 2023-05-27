@@ -127,7 +127,7 @@ namespace multimedia
          //    m_pMixerDocTemplate->open_new_document();
          //  if(GetMainWnd() != nullptr)
          //{
-         //  GetMainWnd()->SetForegroundWindow();
+         //  GetMainWnd()->set_foreground_window();
          //}
          //}
       }
