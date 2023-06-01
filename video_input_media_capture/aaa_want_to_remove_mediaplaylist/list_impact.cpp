@@ -621,14 +621,14 @@ namespace mediaplaylist
 
    void list_impact::_001DrawBackground(::draw2d::graphics *graphics, ::rectangle_i32 * lprect)
    {
-      ::rectangle rectangleThis;
+      ::rectangle_f64 rectangleThis;
       client_rectangle(rectangleThis);
 
 //      ::user::list::_001DrawBackground(pgraphics, lprect);
 
       /*   if(m_enhmetafile != nullptr)
          {
-            ::rectangle rectangleUpdate;
+            ::rectangle_f64 rectangleUpdate;
             pgraphics->get_clip_box(rectangleUpdate);
             CBaseRect rectangleMeta;
 
@@ -699,7 +699,7 @@ namespace mediaplaylist
          if (pplImpact != nullptr)
          {
 
-            pplImpact->m_iCurrentVScroll = get_context_offset().y;
+            pplImpact->m_iCurrentVScroll = get_context_offset().y();
 
          }
 
@@ -993,7 +993,7 @@ namespace mediaplaylist
 
       //      _001OnClip(pgraphics);
 
-      //      ::rectangle rectangleTest1(100, 100, 200, 200);
+      //      ::rectangle_f64 rectangleTest1(100, 100, 200, 200);
 
       //      pgraphics->fill_rectangle(rectangleTest1, argb(255, 255, 255, 0));
 
@@ -1083,7 +1083,7 @@ namespace mediaplaylist
 
                _001EnsureVisible(get_document()->impact_playlist()->m_iCurrentSong);
 
-               get_document()->impact_playlist()->m_iCurrentVScroll = get_context_offset().y;
+               get_document()->impact_playlist()->m_iCurrentVScroll = get_context_offset().y();
 
             }
             else

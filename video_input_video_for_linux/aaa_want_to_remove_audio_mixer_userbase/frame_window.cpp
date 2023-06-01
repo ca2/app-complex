@@ -60,7 +60,7 @@ namespace multimedia
 
 
 
-         ::rectangle rectangleWnd;
+         ::rectangle_f64 rectangleWnd;
          m_wndToolBar.window_rectangle(rectangleWnd);
          ::size size;
          m_wndToolBar.set_window_position(zorder_none, 0, 0, size.cx, size.cy, SWP_NOMOVE | SWP_NOZORDER);
@@ -201,7 +201,7 @@ namespace multimedia
          bool bResult = true;
 
          string str;
-         ::rectangle rectangleWnd;
+         ::rectangle_f64 rectangleWnd;
          m_wndToolBar.window_rectangle(rectangleWnd);
          ::size size;
 

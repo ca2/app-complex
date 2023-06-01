@@ -253,7 +253,7 @@ namespace mediaplaylist
          ASSERT(pPopup != nullptr);
          frame_window * pframe = get_parent_frame();
          pPopup->TrackPopupMenu(
-         point.x, point.y,
+         point.x(), point.y(),
          (::user::interaction_impl *) pframe);
          }*/
       }
@@ -266,7 +266,7 @@ namespace mediaplaylist
          ASSERT(pPopup != nullptr);
          frame_window * pframe = get_parent_frame();
          pPopup->TrackPopupMenu(
-         point.x, point.y,
+         point.x(), point.y(),
          (::user::interaction_impl *) pframe);
          }*/
       }

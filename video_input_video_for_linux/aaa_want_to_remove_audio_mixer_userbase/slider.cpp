@@ -165,7 +165,7 @@ namespace multimedia
 
          auto pgraphics = create_memory_graphics();
 
-         ::rectangle rectangleClient;
+         ::rectangle_f64 rectangleClient;
 
          client_rectangle(rectangleClient);
 
@@ -286,7 +286,7 @@ namespace multimedia
                SetCapture();
             }
 
-            ::rectangle rectangleThumb;
+            ::rectangle_f64 rectangleThumb;
             GetThumbRect(rectangleThumb);
 
             if(rectangleThumb.contains(point))
@@ -306,7 +306,7 @@ namespace multimedia
                }
             }
 
-            ::rectangle rectangleClient;
+            ::rectangle_f64 rectangleClient;
             client_rectangle(rectangleClient);
             if(!rectangleClient.contains(point))
             {
@@ -325,13 +325,13 @@ namespace multimedia
          auto pmouse = pmessage->m_union.m_pmouse;
          ::point_i32 point = pmouse->m_point;
          screen_to_client()(point);
-         ::rectangle rectangleTrack;
+         ::rectangle_f64 rectangleTrack;
          GetThumbRect(rectangleTrack);
-         ::rectangle rectanglePageA;
-         ::rectangle rectangleClient;
+         ::rectangle_f64 rectanglePageA;
+         ::rectangle_f64 rectangleClient;
          client_rectangle(rectangleClient);
          GetPageARect(rectangleClient, rectangleTrack, rectanglePageA);
-         ::rectangle rectanglePageB;
+         ::rectangle_f64 rectanglePageB;
          GetPageBRect(rectangleClient, rectangleTrack, rectanglePageB);
          if(rectangleTrack.contains(point))
          {
@@ -473,9 +473,9 @@ namespace multimedia
       {
          ::audio_mixer_user::level_control::_001OnTimer(ptimer);
          ::point_i32 point;
-         ::rectangle rectangle;
-         ::rectangle rectangleTrack;
-         ::rectangle rectangleClient;
+         ::rectangle_f64 rectangle;
+         ::rectangle_f64 rectangleTrack;
+         ::rectangle_f64 rectangleClient;
          switch(ptimer->m_uEvent)
          {
          case 1317:
@@ -557,7 +557,7 @@ namespace multimedia
 
       bool slider::GetThumbRect(::rectangle_i32 * lpRect)
       {
-         ::rectangle rectangleClient;
+         ::rectangle_f64 rectangleClient;
          client_rectangle(rectangleClient);
          double dInc;
          double dPos;
@@ -579,7 +579,7 @@ namespace multimedia
          {
             dPos += dInc * (m_iPos - m_iRangeMin);
          }
-         ::rectangle rectangleThumb;
+         ::rectangle_f64 rectangleThumb;
          if(m_eorientation == e_orientation_horizontal)
          {
             lpRect->left = ((i32) dPos) - 4;
@@ -614,14 +614,14 @@ namespace multimedia
          ::size sizeTrack;
 
          //    GetThumbSize(sizeTrack);
-         ::rectangle rectangleClient;
+         ::rectangle_f64 rectangleClient;
          client_rectangle(rectangleClient);
          sizeTrack.cx = 10;
          sizeTrack.cy = rectangleClient.height();
          if(m_eorientation == e_orientation_horizontal)
          {
             i32 iWidth = rectangleClient.width() - m_iMargin * 2;
-            nPos = point.x - m_sizeTrackOffset.x;
+            nPos = point.x() - m_sizeTrackOffset.x();
             nPos -= m_iMargin - 4;
             nPos *= m_iRangeMax - m_iRangeMin;
             nPos /= iWidth;
@@ -631,7 +631,7 @@ namespace multimedia
          else if(m_eorientation == e_orientation_vertical)
          {
             i32 iHeight = rectangleClient.height() -  m_iMargin * 2;
-            nPos = point.y - m_sizeTrackOffset.y;
+            nPos = point.y() - m_sizeTrackOffset.y();
             nPos -= m_iMargin - 4;
             nPos *= (m_iRangeMax - m_iRangeMin);
             nPos /= iHeight;
@@ -797,12 +797,12 @@ namespace multimedia
 
          ::aura::savings & savings = psession->savings();
 
-         ::rectangle rectangleClient;
+         ::rectangle_f64 rectangleClient;
          client_rectangle(rectangleClient);
 
-         ::rectangle rectangleClip = rectangleClient;
+         ::rectangle_f64 rectangleClip = rectangleClient;
 
-         ::rectangle rectangleDraw;
+         ::rectangle_f64 rectangleDraw;
          rectangleDraw.intersect(rectangleClip, rectangleClient);
 
          TRACE("slider:OnPaint\n");
@@ -811,7 +811,7 @@ namespace multimedia
          FORMATTED_TRACE("rectangle.right : %d, ", rectangleDraw.right);
          FORMATTED_TRACE("rectangle.bottom: %d\n", rectangleDraw.bottom);
 
-//         ::rectangle rectangleSrcClipBox = rectangleDraw;
+//         ::rectangle_f64 rectangleSrcClipBox = rectangleDraw;
 
          if(savings.is_trying_to_save(::e_resource_processing))
          {
@@ -822,10 +822,10 @@ namespace multimedia
             pgraphics->fill_rectangle(rectangleDraw, argb(127, 255,255,255));
          }
 
-//         ::rectangle rectangleD = rectangleClient;
+//         ::rectangle_f64 rectangleD = rectangleClient;
 
 
-         ::rectangle rectangleThumb;
+         ::rectangle_f64 rectangleThumb;
          GetThumbRect(rectangleThumb);
 
          pgraphics->set(m_pbrush);
@@ -882,7 +882,7 @@ namespace multimedia
          psession->get_cursor_position(&point);
          screen_to_client(&point);
 
-         ::rectangle rectangleClient;
+         ::rectangle_f64 rectangleClient;
          client_rectangle(rectangleClient);
          return rectangleClient.contains(point) != 0;
 

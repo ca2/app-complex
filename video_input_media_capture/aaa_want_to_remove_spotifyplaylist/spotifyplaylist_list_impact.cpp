@@ -356,7 +356,7 @@ namespace mediaplaylist
                   ASSERT(pPopup != nullptr);
                   frame_window * pframe = get_parent_frame();
                   pPopup->TrackPopupMenu(
-                     point.x, point.y,
+                     point.x(), point.y(),
                      (::user::interaction_impl *) pframe);
                }*/
       }
@@ -369,7 +369,7 @@ namespace mediaplaylist
                   ASSERT(pPopup != nullptr);
                   frame_window * pframe = get_parent_frame();
                   pPopup->TrackPopupMenu(
-                     point.x, point.y,
+                     point.x(), point.y(),
                      (::user::interaction_impl *) pframe);
                }*/
       }
@@ -440,14 +440,14 @@ namespace mediaplaylist
 
    void list_impact::_001DrawBackground(::draw2d::graphics *graphics, ::rectangle_i32 * lprect)
    {
-      ::rectangle rectangleThis;
+      ::rectangle_f64 rectangleThis;
       client_rectangle(rectangleThis);
 
 //      ::user::list::_001DrawBackground(pgraphics, lprect);
 
       /*   if(m_enhmetafile != nullptr)
          {
-            ::rectangle rectangleUpdate;
+            ::rectangle_f64 rectangleUpdate;
             pgraphics->get_clip_box(rectangleUpdate);
             CBaseRect rectangleMeta;
 

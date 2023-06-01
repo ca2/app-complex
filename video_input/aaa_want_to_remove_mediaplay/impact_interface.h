@@ -64,7 +64,7 @@ namespace mediaplay
       ::pointer<::mediaplay::record_notify_impact>      m_precordnotifyview;
       atom                                        m_atomPopup;
       atom                                        m_atomPopupLink;
-      ::rectangle                                    m_rectangleKaraokeImpact;
+      ::rectangle_f64                                    m_rectangleKaraokeImpact;
       file_pointer                           m_spfileRecord;
       ::mediaplay::document *                   m_pdocument;
       xfplayer_impact_linea                       m_impactlineaStatus;

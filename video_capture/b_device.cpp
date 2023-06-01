@@ -537,16 +537,16 @@ HRESULT DrawDevice::DrawFrame(IMFMediaBuffer *pBuffer)
    textSprite->Begin(D3DXSPRITE_ALPHABLEND);
 
 
-   imagepos.x = 0.0f; //coord x of our sprite
-   imagepos.y = 18.0f; //coord y of out sprite
+   imagepos.x() = 0.0f; //coord x of our sprite
+   imagepos.y() = 18.0f; //coord y of out sprite
    imagepos.z = 0.0f; //coord z of out sprite	
    textSprite->Draw(imagetex, nullptr, nullptr, &imagepos, 0xFFFFFFFF);
    textSprite->End();
 
    m_pDevice->SetRenderTarget(0, pSurf);
    ::point_i32 p;
-   p.x = 0;
-   p.y = 0;
+   p.x() = 0;
+   p.y() = 0;
    // then use UpdateSurface to copy the drawn text surface to the texture's surface
 
 

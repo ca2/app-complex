@@ -357,7 +357,7 @@ namespace multimedia
          if(bHasControls)
          {
             
-            ::rectangle rectangle(0, 0, 0, 0);
+            ::rectangle_f64 rectangle(0, 0, 0, 0);
             
             auto pst = __new(simple_static);
 
@@ -473,11 +473,11 @@ namespace multimedia
 
          }
 
-         //::rectangle rectangle(0, 0, iEndX, iEndY);
+         //::rectangle_f64 rectangle(0, 0, iEndX, iEndY);
          //::AdjustWindowRectEx(&rectangle, GetStyle(), false,
          //      GetExStyle());
          //set_window_position(0, 0, 0, rectangle.width(), rectangle.height(), SWP_NOMOVE | SWP_NOACTIVATE);
-         //::rectangle rectangleClient;
+         //::rectangle_f64 rectangleClient;
          //client_rectangle(rectangleClient);
 
          set_need_redraw();

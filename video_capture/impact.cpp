@@ -4,6 +4,8 @@
 #include "pane_impact.h"
 #include "app-complex/video_input/render.h"
 #include "app-complex/video_input/device.h"
+#include "aura/graphics/draw2d/graphics.h"
+#include "aura/graphics/image/image.h"
 #include "aura/graphics/image/drawing.h"
 #include "aura/message/user.h"
 

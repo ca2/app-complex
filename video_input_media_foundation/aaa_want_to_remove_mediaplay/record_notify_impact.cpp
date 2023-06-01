@@ -58,7 +58,7 @@ namespace mediaplay
 //      pgraphics->SetBkMode(TRANSPARENT);
       pgraphics->set_text_color(rgb(0, 0, 0));
       //   pgraphics->set(m_pfont);
-      ::rectangle rectangle;
+      ::rectangle_f64 rectangle;
       client_rectangle(rectangle);
       pgraphics->color_blend(rectangle,
       rgb(255, 0, 0),

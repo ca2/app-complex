@@ -252,9 +252,9 @@ namespace mediaplay
       client_rectangle(m_rectangleKaraokeImpact);
 
 
-      ::rectangle rectangleClient;
+      ::rectangle_f64 rectangleClient;
       client_rectangle(rectangleClient);
-      ::rectangle rectangle = rectangleClient;
+      ::rectangle_f64 rectangle = rectangleClient;
 
       rectangle.top = rectangle.bottom - 24;
       m_impactlineaStatus.m_pinteraction = this;
@@ -328,7 +328,7 @@ namespace mediaplay
                ASSERT(pPopup != nullptr);
                frame_window * pframe = get_parent_frame();
                pPopup->TrackPopupMenu(
-                  point.x, point.y,
+                  point.x(), point.y(),
                   (::user::interaction_impl *) pframe);
             }
          }
@@ -341,7 +341,7 @@ namespace mediaplay
                ASSERT(pPopup != nullptr);
                frame_window * pframe = get_parent_frame();
                pPopup->TrackPopupMenu(
-                  point.x, point.y,
+                  point.x(), point.y(),
                   (::user::interaction_impl *) pframe);
             }
          }*/
