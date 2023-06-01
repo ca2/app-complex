@@ -231,9 +231,9 @@ HRESULT SpecialCaseAttributeValueNew(GUID guid, const prop_variant& var, ::video
 
 		LogUINT32AsUINT64New(var, uHigh, uLow);
 		
-		pmediaformat->m_size.cx = uHigh;
+		pmediaformat->m_size.cx() = uHigh;
 		
-      pmediaformat->m_size.cy = uLow;
+      pmediaformat->m_size.cy() = uLow;
 
       pmediaformat->m_uFrameSize = pmediaformat->m_size.area();
 	}

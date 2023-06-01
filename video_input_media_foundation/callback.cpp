@@ -26,7 +26,7 @@ namespace video_input_media_foundation
 
    callback::callback(device * pdevice) : m_cRef(1), m_iMemory(0), m_bClose(false)
    {
-      
+
       m_pdevice = pdevice;
       m_bLoop = false;
       m_bStopCapturing = true;
@@ -49,7 +49,7 @@ namespace video_input_media_foundation
 
    void callback::_initialize_callback(GUID VideoFormat)
    {
-      
+
       comptr < IMFMediaType > pmediatype;
 
       comptr < IMFPresentationDescriptor > ppresentationdescriptor;
@@ -63,7 +63,7 @@ namespace video_input_media_foundation
 
       if (m_pmediasession)
       {
-         
+
          m_pmediasession->Shutdown();
 
       }
@@ -78,9 +78,9 @@ namespace video_input_media_foundation
       }
 
       BOOL fSelected;
-      
+
       hr = ppresentationdescriptor->GetStreamDescriptorByIndex(0, &fSelected, &pstreamdescriptor);
-      
+
       if (FAILED(hr))
       {
 
@@ -259,10 +259,10 @@ namespace video_input_media_foundation
 
    }
 
-   
+
    void callback::_stop_capturing()
    {
-      
+
       m_bStopCapturing = true;
 
    }
@@ -333,7 +333,7 @@ namespace video_input_media_foundation
 
          hr = pEvent->GetStatus(&hrStatus);
 
-         if(hrStatus == HRESULT_ERROR_MSCRAP_HARDWARE_LOCK)
+         if (hrStatus == HRESULT_ERROR_MSCRAP_HARDWARE_LOCK)
          {
 
             m_pdevice->m_edevicestate = ::video_input::e_device_state_already_in_use_by_other_client;
@@ -504,13 +504,13 @@ namespace video_input_media_foundation
 
          if (FAILED(hr))
          {
-            
+
             throw ::hresult_exception(hr);
 
          }
 
          hr = pmediatypehandler->GetMajorType(&majorType);
-         
+
          if (FAILED(hr))
          {
 
@@ -520,16 +520,16 @@ namespace video_input_media_foundation
 
          if (majorType == MFMediaType_Video && fSelected)
          {
-            
+
             _add_source_node(ppresentationdescriptor, pstreamdescriptor, pNode1);
-            
+
             _add_output_node(0, pNode2);
 
             hr = pNode1->ConnectOutput(0, pNode2, 0);
 
             if (FAILED(hr))
             {
-               
+
                throw ::hresult_exception(hr);
 
             }
@@ -568,7 +568,7 @@ namespace video_input_media_foundation
 
       if (FAILED(hr))
       {
-         
+
          throw ::hresult_exception(hr);
 
       }
@@ -586,7 +586,7 @@ namespace video_input_media_foundation
 
       if (FAILED(hr))
       {
-         
+
          throw ::hresult_exception(hr);
 
       }
@@ -595,7 +595,7 @@ namespace video_input_media_foundation
 
       if (FAILED(hr))
       {
-         
+
          throw ::hresult_exception(hr);
 
       }
@@ -604,7 +604,7 @@ namespace video_input_media_foundation
 
       if (FAILED(hr))
       {
-         
+
          throw ::hresult_exception(hr);
 
       }
@@ -623,16 +623,16 @@ namespace video_input_media_foundation
 
       if (FAILED(hr))
       {
-         
+
          throw ::hresult_exception(hr);
 
       }
 
       hr = pnode->SetObject(m_pdevice->m_pactivate);
-      
+
       if (FAILED(hr))
       {
-         
+
          throw ::hresult_exception(hr);
 
       }
@@ -641,7 +641,7 @@ namespace video_input_media_foundation
 
       if (FAILED(hr))
       {
-         
+
          throw ::hresult_exception(hr);
 
       }
@@ -650,7 +650,7 @@ namespace video_input_media_foundation
 
       if (FAILED(hr))
       {
-         
+
          throw ::hresult_exception(hr);
 
       }
@@ -659,7 +659,7 @@ namespace video_input_media_foundation
 
       if (FAILED(hr))
       {
-         
+
          throw ::hresult_exception(hr);
 
       }
@@ -744,7 +744,7 @@ namespace video_input_media_foundation
    {
 
       return OnProcessSample(guidMajorMediaType, dwSampleFlags,
-         llSampleTime, llSampleDuration, 
+         llSampleTime, llSampleDuration,
          pSampleBuffer,
          dwSampleSize);
    }
@@ -754,7 +754,7 @@ namespace video_input_media_foundation
       LONGLONG llSampleTime, LONGLONG llSampleDuration, const BYTE * pSampleBuffer,
       DWORD dwSampleSize)
    {
-      
+
       m_memorya[m_iMemory].copy_from(pSampleBuffer, dwSampleSize);
 
       m_memorya[m_iMemory].set_flag(e_flag_changed);
@@ -776,37 +776,37 @@ namespace video_input_media_foundation
 
       pixmap p;
 
-      p.init(m_pdevice->m_size, (color32_t*) pSampleBuffer, m_pdevice->m_size.cx * 4);
+      p.init(m_pdevice->m_size, (color32_t *)pSampleBuffer, m_pdevice->m_size.cx() * 4);
 
-         if (!m_pdevice->get_render()->m_pimage)
+      if (!m_pdevice->get_render()->m_pimage)
+      {
+
+         m_pdevice->get_render()->m_pimage.create(m_pdevice.m_p);
+
+         m_pdevice->get_render()->m_pimage->create(m_pdevice->m_size);
+
+      }
+
+      for (int iLine = 0; iLine < m_pdevice->m_size.cy(); iLine++)
+      {
+
+         auto pline = ((byte *)pSampleBuffer) + m_pdevice->m_size.cx() * 4 * iLine;
+
+         pline += 3;
+
+         for (int x = 0; x < m_pdevice->m_size.cx(); x++)
          {
-            m_pdevice->get_render()->m_pimage.create(m_pdevice.m_p);
 
+            *pline = 255;
 
-            m_pdevice->get_render()->m_pimage->create(m_pdevice->m_size);
+            pline += 4;
 
          }
 
-         for (int iLine = 0; iLine < m_pdevice->m_size.cy; iLine++)
-         {
+      }
 
-            auto pline = ((byte *)pSampleBuffer) + m_pdevice->m_size.cx * 4 * iLine;
+      synchronous_lock synchronouslock(m_pdevice->get_render()->synchronization());
 
-            pline += 3;
-
-            for (int x = 0; x < m_pdevice->m_size.cx; x++)
-            {
-
-               *pline = 255;
-
-               pline += 4;
-
-            }
-
-         }
-
-         synchronous_lock synchronouslock(m_pdevice->get_render()->synchronization());
-      
       ::copy_colorref(m_pdevice->get_render()->m_pimage, &p);
       return S_OK;
 
@@ -818,10 +818,10 @@ namespace video_input_media_foundation
       return S_OK;
    }
 
-   
+
    ::memory * callback::get_memory()
    {
-      
+
       return m_pmemoryOut;
 
    }
