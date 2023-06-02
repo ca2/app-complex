@@ -128,7 +128,7 @@ namespace video_input_video_for_linux
 		if (m_bSetup)
 		{
 
-			return m_size.cx;
+			return m_size.cx();
 
 		}
 		else
@@ -147,7 +147,7 @@ namespace video_input_video_for_linux
 		if (m_bSetup)
 		{
 
-			return m_size.cy;
+			return m_size.cy();
 
 		}
 		else
@@ -542,8 +542,8 @@ namespace video_input_video_for_linux
 
          }
 
-         m_size.cx  = -1;
-         m_size.cy  = -1;
+         m_size.cx()  = -1;
+         m_size.cy()  = -1;
          m_iFrameRateDenominator = -1;
          m_iFrameRateNumerator = -1;
 
@@ -562,15 +562,15 @@ namespace video_input_video_for_linux
 
          }
 
-         m_size.cx  = -1;
-         m_size.cy  = -1;
+         m_size.cx()  = -1;
+         m_size.cy()  = -1;
          m_iFrameRateDenominator = -1;
          m_iFrameRateNumerator = -1;
 
       }
 
       /* set pixel format and resolution */
-      if (v4l2_set_format(m_iDevice, &m_size.cx, &m_size.cy, &m_iPixFmt, &m_iLineSize) < 0)
+      if (v4l2_set_format(m_iDevice, &m_size.cx(), &m_size.cy(), &m_iPixFmt, &m_iLineSize) < 0)
       {
 
          int iErrNo = errno;
@@ -590,7 +590,7 @@ namespace video_input_video_for_linux
 
       }
 
-      FORMATTED_INFORMATION("Resolution: %Δx%d", m_size.cx, m_size.cy);
+      FORMATTED_INFORMATION("Resolution: %Δx%d", m_size.cx(), m_size.cy());
       FORMATTED_INFORMATION("Pixelformat: %s", ::string((const char *) &m_iPixFmt, 5).c_str());
       FORMATTED_INFORMATION("Linesize: %d Bytes", m_iLineSize);
 
@@ -766,11 +766,11 @@ namespace video_input_video_for_linux
 
             auto presolution = __new(resolution);
 
-            presolution->m_size.cx = frmsize.discrete.width;
+            presolution->m_size.cx() = frmsize.discrete.width;
 
-            presolution->m_size.cy = frmsize.discrete.height;
+            presolution->m_size.cy() = frmsize.discrete.height;
 
-            presolution->m_strDescription.format("%Δx%d", presolution->m_size.cx, presolution->m_size.cy);
+            presolution->m_strDescription.format("%Δx%d", presolution->m_size.cx(), presolution->m_size.cy());
 
             m_resolutiona.add(presolution);
 
@@ -789,11 +789,11 @@ namespace video_input_video_for_linux
 
             auto presolution = __new(resolution);
 
-            presolution->m_size.cx = second_u16(*packed);
+            presolution->m_size.cx() = second_u16(*packed);
 
-            presolution->m_size.cy = first_u16(*packed);
+            presolution->m_size.cy() = first_u16(*packed);
 
-            presolution->m_strDescription.format("%Δx%d", presolution->m_size.cx, presolution->m_size.cy);
+            presolution->m_strDescription.format("%Δx%d", presolution->m_size.cx(), presolution->m_size.cy());
 
             m_resolutiona.add(presolution);
 
@@ -886,9 +886,9 @@ namespace video_input_video_for_linux
 
       frmival.pixel_format = ppixelformat->m_iPixFmt;
 
-      frmival.width = m_size.cx;
+      frmival.width = m_size.cx();
 
-      frmival.height = m_size.cy;
+      frmival.height = m_size.cy();
 
       frmival.index = 0;
 

@@ -485,9 +485,9 @@ namespace video_input
 
 			int iSampleSize = pmediaformat->m_uSampleSize;
 
-			//int cx = pmediaformat->m_size.cx;
+			//int cx = pmediaformat->m_size.cx();
 
-			//int cy = pmediaformat->m_size.cy;
+			//int cy = pmediaformat->m_size.cy();
 
 			//int iFrameRate = pmediaformat->m_uFrameRate;
 

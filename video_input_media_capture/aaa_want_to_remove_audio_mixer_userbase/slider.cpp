@@ -593,14 +593,14 @@ namespace multimedia
             lpRect->right = rectangleClient.right + 1 ;
             lpRect->top = ((i32) dPos) - 4;
             lpRect->bottom = lpRect->top + 10;
-            //        i32 iHeight = rectangleClient.height() - GetSystemMetrics(SM_CYVSCROLL) * 2 - sizeTrack.cy - 1;
+            //        i32 iHeight = rectangleClient.height() - GetSystemMetrics(SM_CYVSCROLL) * 2 - sizeTrack.cy() - 1;
             //      if(m_iRangeMax - m_iRangeMin - m_iPageSize == 0)
             //        lpRect->top = 0;
             //  else
             //    lpRect->top = GetSystemMetrics(SM_CYVSCROLL) + 1 + (iPos - m_iRangeMin) * iHeight / (m_iRangeMax - m_iRangeMin - m_iPageSize);
-            //        lpRect->bottom = lpRect->top + sizeTrack.cy;
+            //        lpRect->bottom = lpRect->top + sizeTrack.cy();
             //      lpRect->left = rectangleClient.left + 1;
-            //    lpRect->right = lpRect->left + sizeTrack.cx;
+            //    lpRect->right = lpRect->left + sizeTrack.cx();
          }
          return true;
       }
@@ -616,8 +616,8 @@ namespace multimedia
          //    GetThumbSize(sizeTrack);
          ::rectangle_f64 rectangleClient;
          client_rectangle(rectangleClient);
-         sizeTrack.cx = 10;
-         sizeTrack.cy = rectangleClient.height();
+         sizeTrack.cx() = 10;
+         sizeTrack.cy() = rectangleClient.height();
          if(m_eorientation == e_orientation_horizontal)
          {
             i32 iWidth = rectangleClient.width() - m_iMargin * 2;

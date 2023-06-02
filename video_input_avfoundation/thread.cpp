@@ -30,7 +30,7 @@ namespace video_input_video_avfoundation
 	{
 
       m_ptyperefCapture = avdevice_capture_create(m_pdevice->m_ptyperefAVCaptureDevice,
-                            m_pdevice->m_size.cx, m_pdevice->m_size.cy, m_pdevice);
+                            m_pdevice->m_size.cx(), m_pdevice->m_size.cy(), m_pdevice);
       
 
       avdevice_capture_run(m_ptyperefCapture);

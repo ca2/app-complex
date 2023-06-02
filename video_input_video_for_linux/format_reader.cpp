@@ -229,9 +229,9 @@ HRESULT SpecialCaseAttributeValueNew(GUID guid, const prop_variant& var, video_i
 
 		LogUINT32AsUINT64New(var, uHigh, uLow);
 		
-		out.m_size.cx = uHigh;
+		out.m_size.cx() = uHigh;
 		
-		out.m_size.cy = uLow;
+		out.m_size.cy() = uLow;
 
 		out.m_uFrameSize = out.m_size.area();
 	}

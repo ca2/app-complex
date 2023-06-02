@@ -60,11 +60,11 @@ namespace video_input_media_capture
       }
 
          m_pswscontext = sws_getContext(
-       m_pdevice->m_size.cx,
-       m_pdevice->m_size.cy,
+       m_pdevice->m_size.cx(),
+       m_pdevice->m_size.cy(),
        AV_PIX_FMT_YUYV422,
-       m_pdevice->m_size.cx,
-       m_pdevice->m_size.cy,
+       m_pdevice->m_size.cx(),
+       m_pdevice->m_size.cy(),
        AV_PIX_FMT_BGRA,
        SWS_BICUBIC, NULL, NULL, NULL);
 

@@ -39,9 +39,9 @@ namespace video_input_media_foundation
 
 	//	m_uFrameSize = 0;
 
-	//	m_size.cx = 0;
+	//	m_size.cx() = 0;
 
-	//	m_size.cy = 0;
+	//	m_size.cy() = 0;
 
 	//	m_uYuvMatrix = 0;
 

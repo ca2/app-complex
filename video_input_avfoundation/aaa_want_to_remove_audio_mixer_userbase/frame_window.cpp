@@ -63,7 +63,7 @@ namespace multimedia
          ::rectangle_f64 rectangleWnd;
          m_wndToolBar.window_rectangle(rectangleWnd);
          ::size size;
-         m_wndToolBar.set_window_position(zorder_none, 0, 0, size.cx, size.cy, SWP_NOMOVE | SWP_NOZORDER);
+         m_wndToolBar.set_window_position(zorder_none, 0, 0, size.cx(), size.cy(), SWP_NOMOVE | SWP_NOZORDER);
          m_wndToolBar.window_rectangle(rectangleWnd);
          m_wndToolBar.ModifyStyle(0, WS_VISIBLE);
 
@@ -220,7 +220,7 @@ namespace multimedia
          m_wndToolBar);*/
 
          //      CMenuBarV033::CalcSize(m_wndToolBar.GetToolBarCtrl(), size);
-         /*      m_wndToolBar.set_window_position(0, 0, 0, size.cx, size.cy, SWP_NOMOVE | SWP_NOZORDER);
+         /*      m_wndToolBar.set_window_position(0, 0, 0, size.cx(), size.cy(), SWP_NOMOVE | SWP_NOZORDER);
          //m_wndToolBar.GetToolBarCtrl().AutoSize();
          m_wndToolBar.window_rectangle(rectangleWnd);
          m_wndToolBar.ModifyStyle(0, WS_VISIBLE);

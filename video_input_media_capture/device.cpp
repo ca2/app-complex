@@ -453,7 +453,7 @@ namespace video_input_media_capture
       if (m_bSetup)
       {
 
-         return m_size.cx;
+         return m_size.cx();
       }
       else
       {
@@ -471,7 +471,7 @@ namespace video_input_media_capture
       if (m_bSetup)
       {
 
-         return m_size.cy;
+         return m_size.cy();
 
       }
       else
@@ -1012,9 +1012,9 @@ namespace video_input_media_capture
 
          pmediaformat->m_mediaframeformat = formata.GetAt(uFormat);
 
-         pmediaformat->m_size.cx = pmediaformat->m_mediaframeformat.VideoFormat().Width();
+         pmediaformat->m_size.cx() = pmediaformat->m_mediaframeformat.VideoFormat().Width();
 
-         pmediaformat->m_size.cy = pmediaformat->m_mediaframeformat.VideoFormat().Height();
+         pmediaformat->m_size.cy() = pmediaformat->m_mediaframeformat.VideoFormat().Height();
 
          ::winrt::Windows::Media::MediaProperties::MediaRatio mediaratio = nullptr;
          
