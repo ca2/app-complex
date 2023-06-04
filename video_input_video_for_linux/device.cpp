@@ -590,7 +590,7 @@ namespace video_input_video_for_linux
 
       }
 
-      FORMATTED_INFORMATION("Resolution: %Δx%d", m_size.cx(), m_size.cy());
+      FORMATTED_INFORMATION("Resolution: %greekdeltax%d", m_size.cx(), m_size.cy());
       FORMATTED_INFORMATION("Pixelformat: %s", ::string((const char *) &m_iPixFmt, 5).c_str());
       FORMATTED_INFORMATION("Linesize: %d Bytes", m_iLineSize);
 
@@ -770,7 +770,7 @@ namespace video_input_video_for_linux
 
             presolution->m_size.cy() = frmsize.discrete.height;
 
-            presolution->m_strDescription.format("%Δx%d", presolution->m_size.cx(), presolution->m_size.cy());
+            presolution->m_strDescription.format("%greekdeltax%d", presolution->m_size.cx(), presolution->m_size.cy());
 
             m_resolutiona.add(presolution);
 
@@ -793,7 +793,7 @@ namespace video_input_video_for_linux
 
             presolution->m_size.cy() = first_u16(*packed);
 
-            presolution->m_strDescription.format("%Δx%d", presolution->m_size.cx(), presolution->m_size.cy());
+            presolution->m_strDescription.format("%greekdeltax%d", presolution->m_size.cx(), presolution->m_size.cy());
 
             m_resolutiona.add(presolution);
 

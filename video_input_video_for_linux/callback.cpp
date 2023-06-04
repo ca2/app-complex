@@ -97,7 +97,7 @@ namespace video_input_video_for_linux
          /* Timeout set to 5 frame periods. */
          timeout_usec = (1000000 * m_pdevice->m_iTimeoutFrames) / ffps;
       FORMATTED_INFORMATION(
-              "%s: select timeout set to %" PRIu64 " (%Δx frame periods)",
+              "%s: select timeout set to %" PRIu64 " (%greekdeltax frame periods)",
               m_pdevice->m_strDevice.c_str(), timeout_usec, m_pdevice->m_iTimeoutFrames);
 
          //if (v4l2_start_capture(m_pdevice->m_iDevice, &data->buffers) < 0)
