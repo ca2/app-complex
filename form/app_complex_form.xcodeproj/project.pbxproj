@@ -137,6 +137,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A5498862A2D4D040052BAB6 /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "_____release.xcconfig"; sourceTree = "<group>"; };
+		9A5498882A2D4D040052BAB6 /* _____debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "_____debug.xcconfig"; sourceTree = "<group>"; };
 		9AC01F652748F177006BEBCC /* libapp_complex_form.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapp_complex_form.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC01F752748F1B7006BEBCC /* form.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = form.cpp; sourceTree = "<group>"; };
 		9AC01F912748F1B8006BEBCC /* main_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main_frame.cpp; sourceTree = "<group>"; };
@@ -226,6 +228,8 @@
 		9AC01F6C2748F1B7006BEBCC /* form */ = {
 			isa = PBXGroup;
 			children = (
+				9A5498882A2D4D040052BAB6 /* _____debug.xcconfig */,
+				9A5498862A2D4D040052BAB6 /* _____release.xcconfig */,
 				9AC020252748F1BB006BEBCC /* _.cpp */,
 				9AC020962748F1C0006BEBCC /* _.h */,
 				9AC020292748F1BB006BEBCC /* _app_complex_form.h */,
@@ -269,7 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				9AC022952748F21F006BEBCC /* libapp_simple_form.dylib */,
-				9AC022972748F21F006BEBCC /* libapp_simple_form.a */,
+				9AC022972748F21F006BEBCC /* libios_app_simple_form.a */,
 				9AC022992748F21F006BEBCC /* app_core_hellomultiverse_iosTests.xctest */,
 			);
 			name = Products;
@@ -431,10 +435,9 @@
 			remoteRef = 9AC022942748F21F006BEBCC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AC022972748F21F006BEBCC /* libapp_simple_form.a */ = {
+		9AC022972748F21F006BEBCC /* libios_app_simple_form.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			name = libapp_simple_form.a;
 			path = libios_app_simple_form.a;
 			remoteRef = 9AC022962748F21F006BEBCC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -524,6 +527,7 @@
 /* Begin XCBuildConfiguration section */
 		9AC01F672748F177006BEBCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A5498882A2D4D040052BAB6 /* _____debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -626,6 +630,7 @@
 		};
 		9AC01F682748F177006BEBCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A5498862A2D4D040052BAB6 /* _____release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
