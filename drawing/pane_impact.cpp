@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 #include "pane_impact.h"
 #include "application.h"
 #include "acme/constant/id.h"
@@ -164,7 +164,8 @@ namespace app_complex_drawing
          }
 
       }
-      else if (ptopic->m_puserelement->m_atom == FONTSEL_IMPACT)
+      else if (ptopic->m_puserelement
+               && ptopic->m_puserelement->m_atom == FONTSEL_IMPACT)
       {
 
          if (ptopic->m_atom == ::id_after_change_cur_sel)
