@@ -75,7 +75,7 @@ namespace video_input
 	bool video_input::are_devices_accessible()
 	{
 
-		return m_estatusAccessToDevices;
+		return m_estatusAccessToDevices.ok();
 
 	}
 

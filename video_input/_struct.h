@@ -1,6 +1,10 @@
 // Global structs from video.h by camilo on 2022-09-08 22:10 <3ThomasBorregaardSorensen!!
 #pragma once
 
+
+#include "acme/primitive/geometry2d/size.h"
+
+
 //#ifndef GUID_DEFINED
 //#define GUID_DEFINED
 //#if defined(__midl)
