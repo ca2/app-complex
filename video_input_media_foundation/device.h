@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 
 #include "app-complex/video_input/device.h"

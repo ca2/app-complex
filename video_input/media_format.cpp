@@ -1,4 +1,4 @@
-// Created from _struct.cpp by camilo on 2022-03-12 14:27 BRT <3ThomasBorregaardS�rensen!!
+// Created from _struct.cpp by camilo on 2022-03-12 14:27 BRT <3ThomasBorregaardSorensen!!
 #include "framework.h"
 #include "media_format.h"
 

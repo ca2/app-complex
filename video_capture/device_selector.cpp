@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 #include "device_selector.h"
 #include "application.h"
 #include "pane_impact.h"

@@ -1,6 +1,6 @@
-// Created by camilo on 2022-09-01 05:12 <3ThomasBorregaardSørensen!!
-// Global enums from video.h by camilo on 2022-09-08 22:10 <3ThomasBorregaardSørensen!!
-// Graphics Enums From graphics.h by camilo on 2022-09-08 22:35 <3ThomasBorregaardSørensen!!
+// Created by camilo on 2022-09-01 05:12 <3ThomasBorregaardSorensen!!
+// Global enums from video.h by camilo on 2022-09-08 22:10 <3ThomasBorregaardSorensen!!
+// Graphics Enums From graphics.h by camilo on 2022-09-08 22:35 <3ThomasBorregaardSorensen!!
 #pragma once
 
 
@@ -126,7 +126,7 @@ enum enum_video_scale_type {
 
 
 
-// Graphics Enums From graphics.h by camilo on 2022-09-08 22:35 <3ThomasBorregaardSørensen!!
+// Graphics Enums From graphics.h by camilo on 2022-09-08 22:35 <3ThomasBorregaardSorensen!!
 //
 // Created by camilo on 07/02/2022.
 //
@@ -270,4 +270,4 @@ enum gs_texture_type {
 
 
 
-/// End Graphics Enums From graphics.h by camilo on 2022-09-08 22:35 <3ThomasBorregaardSørensen!!
+/// End Graphics Enums From graphics.h by camilo on 2022-09-08 22:35 <3ThomasBorregaardSorensen!!

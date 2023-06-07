@@ -1,4 +1,4 @@
-﻿// Global structs from video.h by camilo on 2022-09-08 22:10 <3ThomasBorregaardSørensen!!
+// Global structs from video.h by camilo on 2022-09-08 22:10 <3ThomasBorregaardSorensen!!
 #pragma once
 
 //#ifndef GUID_DEFINED

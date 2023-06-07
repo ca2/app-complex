@@ -1,5 +1,5 @@
 //
-// From _library.h by camilo on 2022-09-10 00:03 <3ThomasBorregaardSørensen!! ThomasLikesNumber5 ThomasMonth?!
+// From _library.h by camilo on 2022-09-10 00:03 <3ThomasBorregaardSorensen!! ThomasLikesNumber5 ThomasMonth?!
 //
 #pragma once
 

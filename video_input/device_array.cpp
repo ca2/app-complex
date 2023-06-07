@@ -1,4 +1,4 @@
-﻿// https://www.codeproject.com/Tips/559437/Capturing-Video-from-Web-camera_parameters-on-Windows-and-by
+// https://www.codeproject.com/Tips/559437/Capturing-Video-from-Web-camera_parameters-on-Windows-and-by
 #include "framework.h"
 #include "device_array.h"
 #include "device.h"

@@ -1,4 +1,4 @@
-// Created on 2022-03-12 by camilo 14:11 BRT <3ThomasBorregaardSørensen!!
+// Created on 2022-03-12 by camilo 14:11 BRT <3ThomasBorregaardSorensen!!
 #include "framework.h"
 #include "media_format.h"
 

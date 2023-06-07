@@ -1,4 +1,4 @@
-﻿//https://winplatform.wordpress.com/2015/01/20/winrt-mediacapture-tips/
+//https://winplatform.wordpress.com/2015/01/20/winrt-mediacapture-tips/
 //https://learn.microsoft.com/en-us/windows/uwp/audio-video-camera/process-media-frames-with-mediaframereader
 #include "framework.h"
 #include "device.h"
