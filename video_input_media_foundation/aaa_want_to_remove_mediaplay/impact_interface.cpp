@@ -2070,7 +2070,7 @@ retry4:
 
          ::file::path strTitle = strPath.name();
 
-         ::file::path strFolder = pcontext->m_papexcontext->dir()->appdata() /unitext("Gravações de Karaokê");
+         ::file::path strFolder = pcontext->m_papexcontext->dir()->appdata() /unitext("Gravacões de Karaokê");
          pcontext->m_papexcontext->dir()->create(strFolder);
 
 

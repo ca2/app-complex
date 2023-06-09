@@ -151,7 +151,7 @@ namespace multimedia
 
       m_pdbcentral->get_db_long_set()->LoadWindowCoordinates(
       "Janelas",
-      "Álbum",
+      "Album",
       this);
       return true;
       }*/

@@ -387,7 +387,7 @@ namespace wave
 
          m_uiAnalysisSize = uiAnalysisSize;
          // soma-se 0.5 para ter certeza que o arredondamento
-         // aconte軋 correatamente
+         // acontecera correatamente
          m_uiAnalysisSizeOrder = (u32) (log((double) m_uiAnalysisSize) / log(2.0) + 0.5);
 
 
