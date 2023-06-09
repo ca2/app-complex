@@ -2,8 +2,8 @@
 //  mediaplaylist.cpp
 //  multimedia
 //
-//  Created by Camilo Sasuke Thomas Borregaard Sørensen on 03/06/19.
-//  Copyright © 2019 Camilo Sasuke Thomas Borregaard Sørensen. All rights reserved.
+//  Created by Camilo Sasuke Thomas Borregaard Soerensen on 03/06/19.
+//  Copyright (c) 2019 Camilo Sasuke Thomas Borregaard Soerensen. All rights reserved.
 //
 
 
