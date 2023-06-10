@@ -49,7 +49,7 @@ namespace audio
       i64_array                              m_iaLowerPos;
       i64_array                              m_iaUpperPos;
 
-      byte                                   m_chCountDown;
+      ::u8                                   m_chCountDown;
 
       ::u32                                  m_dwTargetSamplesPerSecond;
       int                                    m_iTargetChannelCount;

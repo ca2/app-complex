@@ -166,7 +166,7 @@ namespace mediaplay
    void impact_interface::_ExecutePlay(bool bMakeVisible, ::duration time, bool bFadeIn)
    {
 
-      __UNREFERENCED_PARAMETER(bMakeVisible);
+      UNREFERENCED_PARAMETER(bMakeVisible);
 
       if(!OnExecuteBeforePlay())
       {
@@ -835,7 +835,7 @@ namespace mediaplay
    bool impact_interface::UpdateScreen(rectangle_i32_array & recta, u32 uiRedraw)
    {
 
-      __UNREFERENCED_PARAMETER(uiRedraw);
+      UNREFERENCED_PARAMETER(uiRedraw);
 
       m_rectangleaUpdate.add(recta);
 
@@ -901,12 +901,12 @@ namespace mediaplay
 
    void impact_interface::backimpact_Feedback(::image * pimage)
    {
-      __UNREFERENCED_PARAMETER(pimage);
+      UNREFERENCED_PARAMETER(pimage);
    }
 
    void impact_interface::_001OnTopDraw(::image * pimage)
    {
-      __UNREFERENCED_PARAMETER(pimage);
+      UNREFERENCED_PARAMETER(pimage);
    }
 
    void impact_interface::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
@@ -944,7 +944,7 @@ namespace mediaplay
    u32 impact_interface::GetKaraokeCodePage(const ::string & lpsz)
    {
 
-      __UNREFERENCED_PARAMETER(lpsz);
+      UNREFERENCED_PARAMETER(lpsz);
       //return KaraokeGetCodePage(lpsz);
       return 0;
 
@@ -952,7 +952,7 @@ namespace mediaplay
 
    u32 impact_interface::IdToCodePage(const ::string & psz)
    {
-      __UNREFERENCED_PARAMETER(psz);
+      UNREFERENCED_PARAMETER(psz);
       ASSERT(false);
       //u32_array dwa;
       return 0xffffffff;
@@ -960,7 +960,7 @@ namespace mediaplay
 
    void impact_interface::SetKaraokeCodePage(u32 dw)
    {
-      __UNREFERENCED_PARAMETER(dw);
+      UNREFERENCED_PARAMETER(dw);
       /*     CVmsDataServerInterface & db = ((CVmpLightApp *) System)->GetVmsDataServerInterface();
 
          COleVariant ::payload;
@@ -2175,25 +2175,25 @@ retry4:
 
    void impact_interface::on_set_scalar(e_scalar i,double d,int iFlags)
    {
-      __UNREFERENCED_PARAMETER(i);
-      __UNREFERENCED_PARAMETER(d);
+      UNREFERENCED_PARAMETER(i);
+      UNREFERENCED_PARAMETER(d);
    }
 
    void impact_interface::get_scalar_minimum(e_scalar i, double & d)
    {
-      __UNREFERENCED_PARAMETER(i);
+      UNREFERENCED_PARAMETER(i);
       d = 0.0;
    }
 
    void impact_interface::get_scalar(e_scalar i, double & d)
    {
-      __UNREFERENCED_PARAMETER(i);
+      UNREFERENCED_PARAMETER(i);
       d = 0.0;
    }
 
    void impact_interface::get_scalar_maximum(e_scalar i, double & d)
    {
-      __UNREFERENCED_PARAMETER(i);
+      UNREFERENCED_PARAMETER(i);
       d = 0.0;
    }
 
@@ -2201,32 +2201,32 @@ retry4:
    void impact_interface::on_set_scalar(e_scalar i,i64 iValue,int iFlags)
    {
 
-      __UNREFERENCED_PARAMETER(i);
-      __UNREFERENCED_PARAMETER(iValue);
+      UNREFERENCED_PARAMETER(i);
+      UNREFERENCED_PARAMETER(iValue);
 
    }
 
    void impact_interface::get_scalar_minimum(e_scalar i, i64 & iValue)
    {
 
-      __UNREFERENCED_PARAMETER(i);
-      __UNREFERENCED_PARAMETER(iValue);
+      UNREFERENCED_PARAMETER(i);
+      UNREFERENCED_PARAMETER(iValue);
 
    }
 
    void impact_interface::get_scalar(e_scalar i, i64 & iValue)
    {
 
-      __UNREFERENCED_PARAMETER(i);
-      __UNREFERENCED_PARAMETER(iValue);
+      UNREFERENCED_PARAMETER(i);
+      UNREFERENCED_PARAMETER(iValue);
 
    }
 
    void impact_interface::get_scalar_maximum(e_scalar i, i64 & iValue)
    {
 
-      __UNREFERENCED_PARAMETER(i);
-      __UNREFERENCED_PARAMETER(iValue);
+      UNREFERENCED_PARAMETER(i);
+      UNREFERENCED_PARAMETER(iValue);
 
    }
 

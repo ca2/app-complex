@@ -141,7 +141,7 @@ namespace multimedia
 
       void frame_window::_001OnMeasureItem(::message::message * pmessage)
       {
-         __UNREFERENCED_PARAMETER(pmessage);
+         UNREFERENCED_PARAMETER(pmessage);
          //::pointer<::message::measure_item>pmeasureitem(pmessage);
       }
 
@@ -174,7 +174,7 @@ namespace multimedia
 
       void frame_window::_001OnAppLanguage(::message::message * pmessage)
       {
-         //__UNREFERENCED_PARAMETER(lParam);
+         //UNREFERENCED_PARAMETER(lParam);
          //if(wParam == ::aura::application::WPARAM_LANGUAGE_UPDATE)
          {
             //      TransparentFrameWndUpdateBars();
@@ -278,14 +278,14 @@ namespace multimedia
 
       void frame_window::UpdateToolBarText(simple_toolbar & toolbar)
       {
-         __UNREFERENCED_PARAMETER(toolbar);
+         UNREFERENCED_PARAMETER(toolbar);
 
       }
 
       bool frame_window::GetToolButtonText(string & str, u32 uiCmd)
       {
-         __UNREFERENCED_PARAMETER(str);
-         __UNREFERENCED_PARAMETER(uiCmd);
+         UNREFERENCED_PARAMETER(str);
+         UNREFERENCED_PARAMETER(uiCmd);
 
          return false;
 

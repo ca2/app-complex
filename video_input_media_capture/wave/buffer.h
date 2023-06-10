@@ -56,8 +56,8 @@ namespace wave
       index                         m_iCurrentBuffer;
       buffer_data_array        m_bdaData;
       buffer_data_array        m_bdaBuffer;
-      array < byte >                m_baData;
-      array < byte >                m_baBuffer;
+      array < ::u8 >                m_baData;
+      array < ::u8 >                m_baBuffer;
 
       array < double >              m_daSetA;
       array < double >              m_daSetB;
@@ -96,7 +96,7 @@ namespace wave
       void FFTProcess(index iBuffer);
       //       void PCMOutProcessWAVEHDR(LPWAVEHDR lpwavehdr);
       void PCMOutProcess(index iBuffer);
-      byte * PCMOutGetBuffer(index iIndex);
+      ::u8 * PCMOutGetBuffer(index iIndex);
       void InterestCopyModuleToResult(double * lpdMax);
       void InterestCalcDoubleSetBModule();
       void InterestCalcSetBModule();

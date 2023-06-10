@@ -22,7 +22,7 @@ namespace mediaplaylist
 
 /*   void tree::OnDraw(::image * pimage)
    {
-      __UNREFERENCED_PARAMETER(pgraphics);
+      UNREFERENCED_PARAMETER(pgraphics);
    }
 
 
@@ -34,7 +34,7 @@ namespace mediaplaylist
 
    void tree::_001OnOpenItem(::pointer<::data::tree_item>pitem, const ::action_context & context)
    {
-      __UNREFERENCED_PARAMETER(pitem);
+      UNREFERENCED_PARAMETER(pitem);
       /*::pointer<::mediaplaylist::tree_item>pitemdata = (::pointer<::mediaplaylist::tree_item>pitem->m_pitemdata;
       if(papp->mediaplaylist::application::m_pmaillist == NULL)
       {
@@ -75,7 +75,7 @@ namespace mediaplaylist
 
    void tree::_001OnItemExpand(::data::tree_item * pdataitem, const ::action_context & context)
    {
-      __UNREFERENCED_PARAMETER(pdataitem);
+      UNREFERENCED_PARAMETER(pdataitem);
       /*::pointer<::mediaplaylist::tree_item>pitem = (::pointer<::mediaplaylist::tree_item>pdataitem;
 
       if(pitem->m_iIdentation == 0)
@@ -91,9 +91,9 @@ namespace mediaplaylist
    void tree::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      __UNREFERENCED_PARAMETER(pimpact);
-      __UNREFERENCED_PARAMETER(eupdate);
-      __UNREFERENCED_PARAMETER(pHint);
+      UNREFERENCED_PARAMETER(pimpact);
+      UNREFERENCED_PARAMETER(eupdate);
+      UNREFERENCED_PARAMETER(pHint);
 
 //      ::data::lock lock(m_spdata);
 

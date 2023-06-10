@@ -230,7 +230,7 @@ namespace audio
    bool decoder::audio_set_seekable(bool bSet)
    {
 
-      __UNREFERENCED_PARAMETER(bSet);
+      UNREFERENCED_PARAMETER(bSet);
 
       return true;
 
@@ -272,7 +272,7 @@ namespace audio
    bool decoder::audio_set_non_stop_on_eof(bool bSet)
    {
 
-      __UNREFERENCED_PARAMETER(bSet);
+      UNREFERENCED_PARAMETER(bSet);
 
       return false;
 
@@ -568,10 +568,10 @@ namespace audio
    bool decoder::audio_set_expected_parameters(u32 uiSamplesPerSec,u32 uiChannelCount,u32 uiBitCount,u32 uiEncodedAvgBitRate)
    {
 
-      __UNREFERENCED_PARAMETER(uiSamplesPerSec);
-      __UNREFERENCED_PARAMETER(uiChannelCount);
-      __UNREFERENCED_PARAMETER(uiBitCount);
-      __UNREFERENCED_PARAMETER(uiEncodedAvgBitRate);
+      UNREFERENCED_PARAMETER(uiSamplesPerSec);
+      UNREFERENCED_PARAMETER(uiChannelCount);
+      UNREFERENCED_PARAMETER(uiBitCount);
+      UNREFERENCED_PARAMETER(uiEncodedAvgBitRate);
 
       return false;
 

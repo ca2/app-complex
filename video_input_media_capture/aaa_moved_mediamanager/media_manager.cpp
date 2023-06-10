@@ -67,7 +67,7 @@ namespace mediamanager
 
    void media_manager::OnOpenDocumentFile(const ::file::path & lpcsz)
    {
-      __UNREFERENCED_PARAMETER(lpcsz);
+      UNREFERENCED_PARAMETER(lpcsz);
       //if(album_build() == nullptr)
       // return;
       //if(!album_build().HasFile(lpcsz))

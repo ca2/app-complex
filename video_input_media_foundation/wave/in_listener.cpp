@@ -28,9 +28,9 @@ namespace wave
    void in_listener::in_data_proc(in *pwavein, u32 dwSampleTime, int iBuffer)
    {
 
-      __UNREFERENCED_PARAMETER(pwavein);
-      __UNREFERENCED_PARAMETER(dwSampleTime);
-      __UNREFERENCED_PARAMETER(iBuffer);
+      UNREFERENCED_PARAMETER(pwavein);
+      UNREFERENCED_PARAMETER(dwSampleTime);
+      UNREFERENCED_PARAMETER(iBuffer);
 
    }
 

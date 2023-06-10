@@ -33,7 +33,7 @@ namespace audio
       bool                          m_bExtraOn;
 
 
-      byte                          m_chCountDown;
+      ::u8                          m_chCountDown;
 
       int                           m_iDecoder;
       ::pointer<plugin>            m_pplugin;

@@ -217,7 +217,7 @@ namespace wave
       if (cLeft > 0)
       {
 
-         memset(&((byte*)pbuffer)[s - cLeft], 0, cLeft);
+         memset(&((::u8*)pbuffer)[s - cLeft], 0, cLeft);
 
       }
 
@@ -285,7 +285,7 @@ namespace wave
       if(iRemain > 0)
       {
 
-         byte * pdata = (byte *) buffer.m_memory.get_data();
+         ::u8 * pdata = (::u8 *) buffer.m_memory.get_data();
 
          int iFormat = 1; // short
 
@@ -414,7 +414,7 @@ namespace wave
 
          synchronous_lock synchronouslock(this->synchronization());
 
-         byte * lpb = ppos;
+         ::u8 * lpb = ppos;
 
          int iFormat = 1; // short
 

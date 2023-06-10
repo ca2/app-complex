@@ -253,7 +253,7 @@ namespace wave
    void logical_player::audio_initialize(::pointer<::file::file>ayloadFile)
    {
 
-      __UNREFERENCED_PARAMETER(payloadFile);
+      UNREFERENCED_PARAMETER(payloadFile);
 
    }
 
@@ -800,7 +800,7 @@ namespace wave
 
       memsize uRead = 0;
 
-      byte* poutput = (byte*)lpvoidBuffer;
+      ::u8* poutput = (::u8*)lpvoidBuffer;
 
       auto uBufferSize = uiBufferSize;
 
@@ -818,7 +818,7 @@ namespace wave
 
          memsize uPos = 0;
 
-         byte* pdst = &poutput[uPos];
+         ::u8* pdst = &poutput[uPos];
 
          memsize uToRead = uBufferSize;
 

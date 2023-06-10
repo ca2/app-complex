@@ -33,7 +33,7 @@ namespace DShow {
 using namespace std;
 
 typedef bool (*EnumCapsCallback)(void *param, const AM_MEDIA_TYPE &mt,
-		const byte *data);
+		const ::u8 *data);
 
 static void EnumElgatoCaps(IPin *pin, EnumCapsCallback callback, void *param)
 {
@@ -61,7 +61,7 @@ static bool EnumPinCaps(IPin *pin, EnumCapsCallback callback, void *param)
 
 	hr = config->GetNumberOfCapabilities(&count, &size);
 	if (SUCCEEDED(hr)) {
-		vector<byte> caps;
+		vector<::u8> caps;
 		caps.resize(size);
 
 		for (int i = 0; i < count; i++) {
@@ -82,7 +82,7 @@ static bool EnumPinCaps(IPin *pin, EnumCapsCallback callback, void *param)
 
 /* Note:  DEVICE_VideoInfo is not to be confused with Device::VideoInfo */
 static bool Get_FORMAT_VideoInfo_Data(VideoInfo &info,
-		const AM_MEDIA_TYPE &mt, const byte *data)
+		const AM_MEDIA_TYPE &mt, const ::u8 *data)
 {
 	const VIDEO_STREAM_CONFIG_CAPS *vscc;
 	const VIDEOINFOHEADER          *viHeader;
@@ -126,7 +126,7 @@ static bool Get_FORMAT_VideoInfo_Data(VideoInfo &info,
 }
 
 static bool Get_FORMAT_WaveFormatEx_Data(AudioInfo &info,
-		const AM_MEDIA_TYPE &mt, const byte *data)
+		const AM_MEDIA_TYPE &mt, const ::u8 *data)
 {
 	const AUDIO_STREAM_CONFIG_CAPS *ascc;
 	const WAVEFORMATEX             *wfex;
@@ -186,7 +186,7 @@ static inline int GetFormatRating(VideoFormat format)
 }
 
 static bool ClosestVideoMTCallback(ClosestVideoData &data,
-		const AM_MEDIA_TYPE &mt, const byte *capData)
+		const AM_MEDIA_TYPE &mt, const ::u8 *capData)
 {
 	VideoInfo info;
 
@@ -298,7 +298,7 @@ struct ClosestAudioData {
 };
 
 static bool ClosestAudioMTCallback(ClosestAudioData &data,
-		const AM_MEDIA_TYPE &mt, const byte *capData)
+		const AM_MEDIA_TYPE &mt, const ::u8 *capData)
 {
 	AudioInfo info = {};
 
@@ -388,7 +388,7 @@ bool GetClosestAudioMediaType(IBaseFilter *filter, AudioConfig &config,
 }
 
 static bool EnumVideoCap(vector<VideoInfo> &caps,
-		const AM_MEDIA_TYPE &mt, const byte *data)
+		const AM_MEDIA_TYPE &mt, const ::u8 *data)
 {
 	VideoInfo info;
 
@@ -405,7 +405,7 @@ bool EnumVideoCaps(IPin *pin, vector<VideoInfo> &caps)
 }
 
 static bool EnumAudioCap(vector<AudioInfo> &caps,
-		const AM_MEDIA_TYPE &mt, const byte *data)
+		const AM_MEDIA_TYPE &mt, const ::u8 *data)
 {
 	AudioInfo info;
 

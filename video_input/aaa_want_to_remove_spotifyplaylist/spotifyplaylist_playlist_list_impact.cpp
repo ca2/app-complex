@@ -127,7 +127,7 @@ namespace mediaplaylist
 
    void playlist_list_impact::handle(::topic * ptopic, ::context * pcontext)
    {
-      __UNREFERENCED_PARAMETER(pimpact);
+      UNREFERENCED_PARAMETER(pimpact);
 
       if(eupdate == 0)
       {
@@ -253,7 +253,7 @@ namespace mediaplaylist
 
    void playlist_list_impact::_001OnEditRemove(::message::message * pmessage)
    {
-      __UNREFERENCED_PARAMETER(pmessage);
+      UNREFERENCED_PARAMETER(pmessage);
       _001RemoveSelection();
    }
 
@@ -282,7 +282,7 @@ namespace mediaplaylist
 
    void playlist_list_impact::_001OnPlaylistExecutePlay(::message::message * pmessage)
    {
-      __UNREFERENCED_PARAMETER(pmessage);
+      UNREFERENCED_PARAMETER(pmessage);
       ::user::range range;
       _001GetSelection(range);
       if(range.get_item_count() > 0)
@@ -346,7 +346,7 @@ namespace mediaplaylist
 
    void playlist_list_impact::on_message_create(::message::message * pmessage)
    {
-      __UNREFERENCED_PARAMETER(pmessage);
+      UNREFERENCED_PARAMETER(pmessage);
 
       pmessage->previous();
 

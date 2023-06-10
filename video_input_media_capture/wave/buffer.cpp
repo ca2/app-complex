@@ -647,7 +647,7 @@ namespace wave
    void buffer::PeakValueFrequencies(double_array & daFreq, double_array & daAmp, ::count iCount)
    {
 
-      __UNREFERENCED_PARAMETER(daAmp);
+      UNREFERENCED_PARAMETER(daAmp);
 
       index user;
 
@@ -689,14 +689,14 @@ namespace wave
    };
 
 
-   byte * buffer::PCMOutGetBuffer(index iIndex)
+   ::u8 * buffer::PCMOutGetBuffer(index iIndex)
    {
 
       ASSERT(iIndex >= 0);
 
       ASSERT((iIndex * m_uiBufferSize) < m_uiAllocationSize);
 
-      return (byte *) m_buffera[iIndex]->m_pData;
+      return (::u8 *) m_buffera[iIndex]->m_pData;
 
    }
 

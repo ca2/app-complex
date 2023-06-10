@@ -30,7 +30,7 @@ namespace multimedia
          void level_control::SetOrientation(enum_orientation eorientation)
          {
 
-            __UNREFERENCED_PARAMETER(eorientation);
+            UNREFERENCED_PARAMETER(eorientation);
 
             throw ::interface_only();
 
@@ -40,8 +40,8 @@ namespace multimedia
          void level_control::SetRange(i32 iMin, i32 iMax)
          {
 
-            __UNREFERENCED_PARAMETER(iMin);
-            __UNREFERENCED_PARAMETER(iMax);
+            UNREFERENCED_PARAMETER(iMin);
+            UNREFERENCED_PARAMETER(iMax);
 
             throw ::interface_only();
 
@@ -51,7 +51,7 @@ namespace multimedia
          void level_control::SetLineSize(i32 iSize)
          {
 
-            __UNREFERENCED_PARAMETER(iSize);
+            UNREFERENCED_PARAMETER(iSize);
 
             throw ::interface_only();
 
@@ -61,7 +61,7 @@ namespace multimedia
          void level_control::SetPageSize(i32 iPage)
          {
 
-            __UNREFERENCED_PARAMETER(iPage);
+            UNREFERENCED_PARAMETER(iPage);
 
             throw ::interface_only();
 
@@ -79,7 +79,7 @@ namespace multimedia
          void level_control::SetPos(i32 iPos)
          {
 
-            __UNREFERENCED_PARAMETER(iPos);
+            UNREFERENCED_PARAMETER(iPos);
 
             throw ::interface_only();
 

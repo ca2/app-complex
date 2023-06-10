@@ -745,7 +745,7 @@ namespace wave
    void out::on_close(::message::message * pmessage)
    {
 
-      __UNREFERENCED_PARAMETER(pmessage);
+      UNREFERENCED_PARAMETER(pmessage);
 
       out_close();
 
@@ -840,7 +840,7 @@ namespace wave
    void out::out_on_pre_buffer(index iBuffer)
    {
 
-      __UNREFERENCED_PARAMETER(iBuffer);
+      UNREFERENCED_PARAMETER(iBuffer);
 
    }
 

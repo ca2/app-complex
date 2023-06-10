@@ -16,7 +16,7 @@ namespace mediaplaylist
 
    string item::data_item_get_text(object * pparticle)
    {
-      __UNREFERENCED_PARAMETER(pparticle);
+      UNREFERENCED_PARAMETER(pparticle);
       return m_strName;
    }
 

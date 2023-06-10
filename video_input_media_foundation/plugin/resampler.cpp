@@ -1806,7 +1806,7 @@ end4:
 
       }
 
-      byte * pdata = m_memSource.get_data();
+      ::u8 * pdata = m_memSource.get_data();
 
       memsize s = m_memSource.get_size();
 

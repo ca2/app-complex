@@ -130,7 +130,7 @@ namespace video_input
 
 				memcpy(dst, src, numBytes);
 
-				byte* pbyteDst = (byte*)dst;
+				::u8* pbyteDst = (::u8*)dst;
 
 				pbyteDst += 3;
 

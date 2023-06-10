@@ -13,7 +13,7 @@ namespace multimedia
       void pre_buffer_callback::OnPreBufferDone(index iId)
       {
 
-         __UNREFERENCED_PARAMETER(iId);
+         UNREFERENCED_PARAMETER(iId);
 
 
       }

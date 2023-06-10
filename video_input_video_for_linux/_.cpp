@@ -46,7 +46,7 @@ namespace video_input_video_for_linux
 
 				memcpy(dst, src, numBytes);
 
-				byte* pbyteDst = (byte*)dst;
+				::u8* pbyteDst = (::u8*)dst;
 
 				pbyteDst += 3;
 

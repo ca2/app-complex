@@ -76,7 +76,7 @@ namespace video_input_media_capture
 
       m_pimage->map();
 
-      ::copy_colorref(m_pimage->data(), m_pimage->width(),
+      ::copy_image32(m_pimage->data(), m_pimage->width(),
          m_pimage->height(), m_pimage->scan_size(),(::color32_t *) m_memory.data(),
          m_pimage->width() * 4);
 
@@ -190,7 +190,7 @@ namespace video_input_media_capture
       //   //}
 
       //}
-      //__UNREFERENCED_PARAMETER(ptopic);
+      //UNREFERENCED_PARAMETER(ptopic);
    }
 
    //bool render::in_anime()
@@ -537,7 +537,7 @@ namespace video_input_media_capture
 
    //   }
    //
-   //   byte * p = nullptr;
+   //   ::u8 * p = nullptr;
    //
    //   hr = pBuffer->Lock(&p, nullptr, nullptr);
    //
@@ -563,7 +563,7 @@ namespace video_input_media_capture
 
    //      }
 
-   //      ::memory_copy(m_pimage->m_pcolorref1, p, minimum(m_pimage->area() * 4, dwLen));
+   //      ::memory_copy(m_pimage->m_pimage32, p, minimum(m_pimage->area() * 4, dwLen));
 
    //   }
 
@@ -729,7 +729,7 @@ namespace video_input_media_capture
                         //if (SUCCEEDED(hresult) && uSize >= sizeBytes)
                         //{
 
-                        //   //::copy_colorref((::color32_t *)m_memory.data(), w, h, w * 4,
+                        //   //::copy_image32((::color32_t *)m_memory.data(), w, h, w * 4,
                         //     // (::color32_t *) pdata, description.Stride);
 
                         //}

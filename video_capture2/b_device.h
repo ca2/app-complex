@@ -3,9 +3,9 @@
 // Function pointer for the function that transforms the pimage->
 
 typedef void(*IMAGE_TRANSFORM_FN)(
-   byte*       pDest,
+   ::u8*       pDest,
    ::i32        lDestStride,
-   const byte* pSrc,
+   const ::u8* pSrc,
    ::i32        lSrcStride,
    ::u32       dwWidthInPixels,
    ::u32       dwHeightInPixels

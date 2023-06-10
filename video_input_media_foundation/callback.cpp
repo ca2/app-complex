@@ -790,7 +790,7 @@ namespace video_input_media_foundation
       for (int iLine = 0; iLine < m_pdevice->m_size.cy(); iLine++)
       {
 
-         auto pline = ((byte *)pSampleBuffer) + m_pdevice->m_size.cx() * 4 * iLine;
+         auto pline = ((::u8 *)pSampleBuffer) + m_pdevice->m_size.cx() * 4 * iLine;
 
          pline += 3;
 
@@ -807,7 +807,7 @@ namespace video_input_media_foundation
 
       synchronous_lock synchronouslock(m_pdevice->get_render()->synchronization());
 
-      ::copy_colorref(m_pdevice->get_render()->m_pimage, &p);
+      ::copy_image32(m_pdevice->get_render()->m_pimage, &p);
       return S_OK;
 
    }

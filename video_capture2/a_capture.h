@@ -7,8 +7,8 @@
 
 #pragma once
 
-#undef GET_X_LPARAM
-#undef GET_Y_LPARAM
+#undef i32_x
+#undef i32_y
 
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.

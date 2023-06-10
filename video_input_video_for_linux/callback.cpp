@@ -405,17 +405,17 @@ namespace video_input_video_for_linux
 
 #if defined(MACOS)
 
-            ::vertical_swap_copy_colorref(pref,m_pdecoder->m_sizeSwsDest.cx(), m_pdecoder->m_sizeSwsDest.cy(),
+            ::vertical_swap_copy_image32(pref,m_pdecoder->m_sizeSwsDest.cx(), m_pdecoder->m_sizeSwsDest.cy(),
                                                    pimage->scan_size(), (color32_t *)m_ppic->data[0], m_ppic->linesize[0]);
 
 #elif defined(APPLE_IOS)
 
-            ::draw2d::vertical_swap_copy_colorref_swap_red_blue(m_pdecoder->m_sizeSwsDest.cx(), m_pdecoder.m_sizeSwsDest.cy(),
+            ::draw2d::vertical_swap_copy_image32_swap_red_blue(m_pdecoder->m_sizeSwsDest.cx(), m_pdecoder.m_sizeSwsDest.cy(),
                   pref, pimage->m_iScan, (color32_t *)m_ppic->data[0], m_ppic->linesize[0]);
 
 #else
 
-            ::copy_colorref(pref, m_sizeSwsDest.cx(), m_sizeSwsDest.cy(),
+            ::copy_image32(pref, m_sizeSwsDest.cx(), m_sizeSwsDest.cy(),
                             pimage->scan_size(), (color32_t *) m_pframePicture->data[0],
                             m_pframePicture->linesize[0]);
 
