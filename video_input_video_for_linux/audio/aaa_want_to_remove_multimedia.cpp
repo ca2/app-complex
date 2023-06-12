@@ -286,7 +286,7 @@
 //       //if (!::acme::department::init_instance())
 //       //{
 
-//       //   ERROR(".1");
+//       //   error() <<".1";
 
 //       //   return false;
 
@@ -307,7 +307,7 @@
 //    void department::init3()
 //    {
 
-//       INFORMATION("start");
+//       information() << "start";
 
 //       //if (m_pmultimedia.is_null())
 //       //{
@@ -390,7 +390,7 @@
 //       //if (!::acme::department::init3())
 //       //{
 
-//       //   ERROR(".1");
+//       //   error() <<".1";
 
 //       //   return false;
 
@@ -398,7 +398,7 @@
 
 //       //add_matter_locator("app-core/multimedia");
 
-//       //INFORMATION(".1");
+//       //information() << ".1";
 
 //       //if (!m_paudiomixer)
 //       //{
@@ -408,7 +408,7 @@
 //       //   if (!estatus)
 //       //   {
 
-//       //      WARNING("Could not initialize Audio Mixer (1)");
+//       //      warning() <<"Could not initialize Audio Mixer (1)";
 
 //       //   }
 //       //   else
@@ -417,7 +417,7 @@
 //       //      if (!m_paudiomixer->init1())
 //       //      {
 
-//       //         WARNING("Could not initialize Audio Mixer (2)");
+//       //         warning() <<"Could not initialize Audio Mixer (2)";
 
 //       //      }
 //       //      else
@@ -426,7 +426,7 @@
 //       //         if (!m_paudiomixer->init())
 //       //         {
 
-//       //            WARNING("Could not initialize Audio Mixer (3)");
+//       //            warning() <<"Could not initialize Audio Mixer (3)";
 
 //       //         }
 
@@ -444,7 +444,7 @@
 //       //   if (!estatus)
 //       //   {
 
-//       //      WARNING("Could not initialize Audio Mixer User Base (1)");
+//       //      warning() <<"Could not initialize Audio Mixer User Base (1)";
 
 //       //   }
 //       //   else
@@ -455,7 +455,7 @@
 //       //      if (!m_paudiomixeruserbase->init1())
 //       //      {
 
-//       //         WARNING("Could not initialize Audio Mixer User Base (2)");
+//       //         warning() <<"Could not initialize Audio Mixer User Base (2)";
 
 //       //      }
 //       //      else
@@ -464,7 +464,7 @@
 //       //         if (!m_paudiomixeruserbase->init())
 //       //         {
 
-//       //            WARNING("Could not initialize Audio Mixer User Base (3)");
+//       //            warning() <<"Could not initialize Audio Mixer User Base (3)";
 
 //       //         }
 
@@ -482,7 +482,7 @@
 //          if (!estatus)
 //          {
 
-//             WARNING("Could not initialize Audio Wave (1)");
+//             warning() <<"Could not initialize Audio Wave (1)";
 
 //          }
 
@@ -496,7 +496,7 @@
 //       //   if (!estatus)
 //       //   {
 
-//       //      FATAL("Could not create Multimedia Media Manager (5)");
+//       //      fatal() <<"Could not create Multimedia Media Manager (5)";
 
 //       //      return false;
 
@@ -519,7 +519,7 @@
 //       //if (m_pmediaplaylist.is_null())
 //       //{
 
-//       //   FATAL("Could not create Multimedia Media Playlist");
+//       //   fatal() <<"Could not create Multimedia Media Playlist";
 
 //       //   return false;
 
@@ -534,7 +534,7 @@
 //       if (!init_multimedia())
 //       {
 
-//          FATAL("Could not initialize Multimedia department");
+//          fatal() <<"Could not initialize Multimedia department";
 
 //          return false;
 

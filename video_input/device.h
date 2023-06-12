@@ -2,7 +2,7 @@
 
 
 #include "_struct.h"
-#include "acme/primitive/geometry2d/_geometry2d.h"
+//#include "acme/primitive/geometry2d/_geometry2d.h"
 #include "acme/primitive/collection/string_map.h"
 
 

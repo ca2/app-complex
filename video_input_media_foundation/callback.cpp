@@ -370,7 +370,7 @@ namespace video_input_media_foundation
          case MESessionEnded:
          {
 
-            _FORMATTED_INFORMATION(m_pdevice, "IMAGEGRABBER VIDEODEVICE %s: MESessionEnded", m_pdevice->m_strName.c_str());
+            information(m_pdevice, "IMAGEGRABBER VIDEODEVICE %s: MESessionEnded", m_pdevice->m_strName.c_str());
 
             m_pmediasession->Stop();
 
@@ -380,7 +380,7 @@ namespace video_input_media_foundation
          case MESessionStopped:
          {
 
-            _FORMATTED_INFORMATION(m_pdevice, "IMAGEGRABBER VIDEODEVICE %s: MESessionStopped", m_pdevice->m_strName.c_str());
+            information(m_pdevice, "IMAGEGRABBER VIDEODEVICE %s: MESessionStopped", m_pdevice->m_strName.c_str());
 
          }
          break;
@@ -388,7 +388,7 @@ namespace video_input_media_foundation
          case MEVideoCaptureDeviceRemoved:
          {
 
-            _FORMATTED_INFORMATION(m_pdevice, "IMAGEGRABBER VIDEODEVICE %s: MEVideoCaptureDeviceRemoved", m_pdevice->m_strName.c_str());
+            information(m_pdevice, "IMAGEGRABBER VIDEODEVICE %s: MEVideoCaptureDeviceRemoved", m_pdevice->m_strName.c_str());
 
             m_pdevice->m_edevicestate = ::video_input::e_device_state_device_removed;
 
@@ -404,7 +404,7 @@ namespace video_input_media_foundation
             if (SUCCEEDED(hr))
             {
 
-               _FORMATTED_INFORMATION(m_pdevice, "IMAGEGRABBER VIDEODEVICE %s: MESessionTopologyStatus %d", m_pdevice->m_strName.c_str(), status);
+               information(m_pdevice, "IMAGEGRABBER VIDEODEVICE %s: MESessionTopologyStatus %d", m_pdevice->m_strName.c_str(), status);
 
                if (status == MF_TOPOSTATUS_READY)
                {
@@ -776,7 +776,7 @@ namespace video_input_media_foundation
 
       pixmap p;
 
-      p.init(m_pdevice->m_size, (color32_t *)pSampleBuffer, m_pdevice->m_size.cx() * 4);
+      p.init(m_pdevice->m_size, (image32_t *)pSampleBuffer, m_pdevice->m_size.cx() * 4);
 
       if (!m_pdevice->get_render()->m_pimage)
       {

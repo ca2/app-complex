@@ -46,7 +46,7 @@ namespace video_input_video_for_linux
 
       }
 
-      FORMATTED_INFORMATION("Initialize video capture device from %s", m_strDevice.c_str());
+      information("Initialize video capture device from %s", m_strDevice.c_str());
 
       m_iDevice = v4l2_open(m_strDevice, O_RDWR | O_NONBLOCK);
 
@@ -57,7 +57,7 @@ namespace video_input_video_for_linux
 
          auto estatus = errno_status(iErrNo);
 
-         FORMATTED_ERROR("Unable to open device");
+         error("Unable to open device");
 
          throw ::exception(estatus, "Unable to open device");
 
@@ -402,7 +402,7 @@ namespace video_input_video_for_linux
 		{
 
 			
-			//pdebugprintout->print_out(L"FORMATTED_ERROR: GetPixels() - Unable to grab frame for device %s\n", m_strName.c_str());
+			//pdebugprintout->print_out(L"error: GetPixels() - Unable to grab frame for device %s\n", m_strName.c_str());
 
 			return false;
 
@@ -512,18 +512,18 @@ namespace video_input_video_for_linux
       if (v4l2_set_input(m_iDevice, &m_iInput) < 0)
       {
 
-         FORMATTED_ERROR("Unable to set input %d", m_iInput);
+         error("Unable to set input %d", m_iInput);
 
          goto fail;
 
       }
 
-      FORMATTED_INFORMATION("Input: %d", m_iInput);
+      information("Input: %d", m_iInput);
 
       if (v4l2_get_input_caps(m_iDevice, -1, &input_caps) < 0)
       {
 
-         FORMATTED_ERROR("Unable to get input capabilities");
+         error("Unable to get input capabilities");
 
          goto fail;
 
@@ -536,7 +536,7 @@ namespace video_input_video_for_linux
          if (v4l2_set_standard(m_iDevice, &m_iStandard) < 0)
          {
 
-            FORMATTED_ERROR("Unable to set video standard");
+            error("Unable to set video standard");
 
             goto fail;
 
@@ -556,7 +556,7 @@ namespace video_input_video_for_linux
          if (v4l2_set_dv_timing(m_iDevice, &m_iDvTiming) < 0)
          {
 
-            FORMATTED_ERROR("Unable to set dv timing");
+            error("Unable to set dv timing");
 
             goto fail;
 
@@ -575,7 +575,7 @@ namespace video_input_video_for_linux
 
          int iErrNo = errno;
 
-         FORMATTED_ERROR("Unable to set format");
+         error("Unable to set format");
 
          goto fail;
 
@@ -584,27 +584,27 @@ namespace video_input_video_for_linux
       if (v4l2_pix_fmt_to_video_format(m_iPixFmt) == e_video_format_none)
       {
 
-         FORMATTED_ERROR("Selected video format not supported");
+         error("Selected video format not supported");
 
          goto fail;
 
       }
 
-      FORMATTED_INFORMATION("Resolution: %greekdeltax%d", m_size.cx(), m_size.cy());
-      FORMATTED_INFORMATION("Pixelformat: %s", ::string((const char *) &m_iPixFmt, 5).c_str());
-      FORMATTED_INFORMATION("Linesize: %d Bytes", m_iLineSize);
+      information("Resolution: %greekdeltax%d", m_size.cx(), m_size.cy());
+      information("Pixelformat: %s", ::string((const char *) &m_iPixFmt, 5).c_str());
+      information("Linesize: %d Bytes", m_iLineSize);
 
       /* set framerate */
       if (v4l2_set_framerate(m_iDevice, &m_iFrameRateDenominator, &m_iFrameRateNumerator) < 0)
       {
 
-         FORMATTED_ERROR("Unable to set framerate");
+         error("Unable to set framerate");
 
          goto fail;
 
       }
 
-      FORMATTED_INFORMATION("Framerate: %.2f fps", (float)m_iFrameRateDenominator / m_iFrameRateNumerator);
+      information("Framerate: %.2f fps", (float)m_iFrameRateDenominator / m_iFrameRateNumerator);
 
       m_pmemorymap = __new(memory_map(m_iDevice));
 
@@ -614,7 +614,7 @@ namespace video_input_video_for_linux
 
       fail:
 
-      FORMATTED_ERROR("Initialization failed");
+      error("Initialization failed");
 
       close();
 
@@ -647,7 +647,7 @@ namespace video_input_video_for_linux
 
          m_inputa.add(pinput);
 
-         FORMATTED_INFORMATION("Found input '%s' (Index %d)", in.name, in.index);
+         information("Found input '%s' (Index %d)", in.name, in.index);
 
          in.index++;
 
@@ -715,13 +715,13 @@ namespace video_input_video_for_linux
 
             m_pixelformata.add(ppixelformat);
 
-            FORMATTED_INFORMATION("Pixelformat: %s (available)", ppixelformat->m_strDescription.c_str());
+            information("Pixelformat: %s (available)", ppixelformat->m_strDescription.c_str());
 
          }
          else
          {
 
-            FORMATTED_INFORMATION("Pixelformat: %s (unavailable)", ppixelformat->m_strDescription.c_str());
+            information("Pixelformat: %s (unavailable)", ppixelformat->m_strDescription.c_str());
 
          }
 
@@ -782,7 +782,7 @@ namespace video_input_video_for_linux
       else
       {
 
-         FORMATTED_INFORMATION("Stepwise and Continuous framesizes are currently hardcoded");
+         information("Stepwise and Continuous framesizes are currently hardcoded");
 
          for (const int *packed = v4l2_framesizes; *packed; ++packed)
          {
@@ -920,7 +920,7 @@ namespace video_input_video_for_linux
       else
       {
 
-         FORMATTED_INFORMATION("Stepwise and Continuous framerates are currently hardcoded");
+         information("Stepwise and Continuous framerates are currently hardcoded");
 
          for (const int *packed = v4l2_framerates; *packed; ++packed)
          {
@@ -1063,7 +1063,7 @@ namespace video_input_video_for_linux
    void device::_reset_capture()
    {
 
-      INFORMATION("attempting to reset capture");
+      information() << "attempting to reset capture";
 
       _stop_capture();
 
@@ -1080,7 +1080,7 @@ namespace video_input_video_for_linux
 
       struct v4l2_buffer buf;
 
-      FORMATTED_INFORMATION("attempting to read buffer data for %ld buffers", m_pmemorymap->m_itema.get_count());
+      information("attempting to read buffer data for %ld buffers", m_pmemorymap->m_itema.get_count());
 
       for (uint_fast32_t i = 0; i < m_pmemorymap->m_itema.get_count(); i++)
       {

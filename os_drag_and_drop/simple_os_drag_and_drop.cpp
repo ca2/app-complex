@@ -54,7 +54,7 @@ namespace simple_os_drag_and_drop
    void simple_os_drag_and_drop::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      //FORMATTED_INFORMATION("simple_os_drag_and_drop::_001OnDraw (%d, %d)", m_rectangle.width(), m_rectangle.height());
+      //information("simple_os_drag_and_drop::_001OnDraw (%d, %d)", m_rectangle.width(), m_rectangle.height());
 
       if(m_iDragAndDrop <= 3)
       {
