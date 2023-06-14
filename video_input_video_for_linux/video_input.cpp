@@ -105,7 +105,7 @@ namespace video_input_video_for_linux
          if ((fd = v4l2_open(strDevice, O_RDWR | O_NONBLOCK)) == -1)
          {
 
-            FORMATTED_INFORMATION("Unable to open %s", strDevice.c_str());
+            information("Unable to open %s", strDevice.c_str());
 
             continue;
 
@@ -114,7 +114,7 @@ namespace video_input_video_for_linux
          if (v4l2_ioctl(fd, VIDIOC_QUERYCAP, &video_cap) == -1)
          {
 
-            FORMATTED_INFORMATION("Failed to query capabilities for %s", strDevice.c_str());
+            information("Failed to query capabilities for %s", strDevice.c_str());
 
             v4l2_close(fd);
 
@@ -138,7 +138,7 @@ namespace video_input_video_for_linux
          if (!(caps & V4L2_CAP_VIDEO_CAPTURE))
          {
 
-            FORMATTED_INFORMATION("%s seems to not support video capture", strDevice.c_str());
+            information("%s seems to not support video capture", strDevice.c_str());
 
             v4l2_close(fd);
 
@@ -175,7 +175,7 @@ namespace video_input_video_for_linux
 
          }
 
-         FORMATTED_INFORMATION("Found device '%s' at %s", video_cap.card, strDevice.c_str());
+         information("Found device '%s' at %s", video_cap.card, strDevice.c_str());
 
          v4l2_close(fd);
 

@@ -121,12 +121,12 @@ namespace multimedia
 
       void control_impact::on_message_destroy(::message::message * pmessage)
       {
-         __UNREFERENCED_PARAMETER(pmessage);
+         UNREFERENCED_PARAMETER(pmessage);
       }
 
       void control_impact::_001OnColumnclickList(::message::message * pmessage)
       {
-         __UNREFERENCED_PARAMETER(pmessage);
+         UNREFERENCED_PARAMETER(pmessage);
       }
 
 
@@ -144,7 +144,7 @@ namespace multimedia
 
       void control_impact::_001OnButtonReserve(::message::message * pmessage)
       {
-         __UNREFERENCED_PARAMETER(pmessage);
+         UNREFERENCED_PARAMETER(pmessage);
          // TODO: add your control notification handler code here
       }
 
@@ -313,7 +313,7 @@ namespace multimedia
       void control_impact::OnDraw(::image * pimage)
       {
 
-         __UNREFERENCED_PARAMETER(pimage);
+         UNREFERENCED_PARAMETER(pimage);
 
       }
 
@@ -637,7 +637,7 @@ namespace multimedia
 
       void control_impact::_001OnCtlColor(::message::message * pmessage)
       {
-         __UNREFERENCED_PARAMETER(pmessage);
+         UNREFERENCED_PARAMETER(pmessage);
          //   ::pointer<::message::ctl_color>pctlcolor(pmessage);
          throw ::not_implemented();
          //   HBRUSH hbr = ::user::impact::OnCtlColor(pgraphics, pusercontrol, nCtlColor);
@@ -673,7 +673,7 @@ namespace multimedia
 
       void control_impact::_001OnHScroll(::message::message * pmessage)
       {
-         __UNREFERENCED_PARAMETER(pmessage);
+         UNREFERENCED_PARAMETER(pmessage);
          //::pointer<::message::scroll>pscroll(pmessage);
       }
 
@@ -692,7 +692,7 @@ namespace multimedia
       bool control_impact::OnNotify(::user::message * pusermessage)
       {
 
-         __UNREFERENCED_PARAMETER(pusermessage);
+         UNREFERENCED_PARAMETER(pusermessage);
 
          return false;
 

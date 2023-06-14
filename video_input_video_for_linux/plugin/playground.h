@@ -35,7 +35,7 @@ namespace audio
 
       bool                          m_bExtraOn;
 
-      byte                          m_chCountDown;
+      ::u8                          m_chCountDown;
 
       pointer_array < plugin >       m_plugina;
 

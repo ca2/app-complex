@@ -628,7 +628,7 @@ pacmedirectory->system() / "config\\spotify\\pas.txt");
       if(a == NULL)
          return;
 
-      const byte * imageid = sp_album_cover(a,SP_IMAGE_SIZE_LARGE);
+      const ::u8 * imageid = sp_album_cover(a,SP_IMAGE_SIZE_LARGE);
 
       if(imageid == NULL)
          return;

@@ -109,7 +109,7 @@ namespace audio
    encoder * encoder_plugin_set::GetNewEncoder(const ::string & lpcszFileName, file_pointer * pfile)
    {
 
-      __UNREFERENCED_PARAMETER(pfile);
+      UNREFERENCED_PARAMETER(pfile);
 
       strsize len = strlen(lpcszFileName);
 

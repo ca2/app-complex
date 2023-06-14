@@ -370,7 +370,7 @@ namespace video_input_media_foundation
          case MESessionEnded:
          {
 
-            _FORMATTED_INFORMATION(m_pdevice, "IMAGEGRABBER VIDEODEVICE %s: MESessionEnded", m_pdevice->m_strName.c_str());
+            m_pdevice->information("IMAGEGRABBER VIDEODEVICE %s: MESessionEnded", m_pdevice->m_strName.c_str());
 
             m_pmediasession->Stop();
 
@@ -380,7 +380,7 @@ namespace video_input_media_foundation
          case MESessionStopped:
          {
 
-            _FORMATTED_INFORMATION(m_pdevice, "IMAGEGRABBER VIDEODEVICE %s: MESessionStopped", m_pdevice->m_strName.c_str());
+            m_pdevice->information("IMAGEGRABBER VIDEODEVICE %s: MESessionStopped", m_pdevice->m_strName.c_str());
 
          }
          break;
@@ -388,7 +388,7 @@ namespace video_input_media_foundation
          case MEVideoCaptureDeviceRemoved:
          {
 
-            _FORMATTED_INFORMATION(m_pdevice, "IMAGEGRABBER VIDEODEVICE %s: MEVideoCaptureDeviceRemoved", m_pdevice->m_strName.c_str());
+            m_pdevice->information("IMAGEGRABBER VIDEODEVICE %s: MEVideoCaptureDeviceRemoved", m_pdevice->m_strName.c_str());
 
             m_pdevice->m_edevicestate = ::video_input::e_device_state_device_removed;
 
@@ -404,7 +404,7 @@ namespace video_input_media_foundation
             if (SUCCEEDED(hr))
             {
 
-               _FORMATTED_INFORMATION(m_pdevice, "IMAGEGRABBER VIDEODEVICE %s: MESessionTopologyStatus %d", m_pdevice->m_strName.c_str(), status);
+               m_pdevice->information("IMAGEGRABBER VIDEODEVICE %s: MESessionTopologyStatus %d", m_pdevice->m_strName.c_str(), status);
 
                if (status == MF_TOPOSTATUS_READY)
                {
@@ -776,7 +776,7 @@ namespace video_input_media_foundation
 
       pixmap p;
 
-      p.init(m_pdevice->m_size, (color32_t *)pSampleBuffer, m_pdevice->m_size.cx() * 4);
+      p.init(m_pdevice->m_size, (image32_t *)pSampleBuffer, m_pdevice->m_size.cx() * 4);
 
       if (!m_pdevice->get_render()->m_pimage)
       {
@@ -790,7 +790,7 @@ namespace video_input_media_foundation
       for (int iLine = 0; iLine < m_pdevice->m_size.cy(); iLine++)
       {
 
-         auto pline = ((byte *)pSampleBuffer) + m_pdevice->m_size.cx() * 4 * iLine;
+         auto pline = ((::u8 *)pSampleBuffer) + m_pdevice->m_size.cx() * 4 * iLine;
 
          pline += 3;
 
@@ -807,7 +807,7 @@ namespace video_input_media_foundation
 
       synchronous_lock synchronouslock(m_pdevice->get_render()->synchronization());
 
-      ::copy_colorref(m_pdevice->get_render()->m_pimage, &p);
+      ::copy_image32(m_pdevice->get_render()->m_pimage, &p);
       return S_OK;
 
    }

@@ -43,7 +43,7 @@ namespace mediaplaylist
    void impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      __UNREFERENCED_PARAMETER(ptopic);
+      UNREFERENCED_PARAMETER(ptopic);
 
    }
 

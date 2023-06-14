@@ -855,7 +855,7 @@ namespace video_input_media_capture
       {
 
 
-         //pdebugprintout->print_out(L"FORMATTED_ERROR: GetPixels() - Unable to grab frame for device %s\n", m_strName.c_str());
+         //pdebugprintout->print_out(L"error: GetPixels() - Unable to grab frame for device %s\n", m_strName.c_str());
 
          return false;
 

@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2020 by Morten Bøgeskov <source@kosmisk.dk>
+Copyright (C) 2020 by Morten Boegeskov <source@kosmisk.dk>
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 2 of the License, or
@@ -96,7 +96,7 @@ namespace video_input_video_for_linux
 
    mjpeg_decoder::~mjpeg_decoder()
    {
-      INFORMATION("destroying avcodec");
+      information() << "destroying avcodec";
       if (m_pframe)
       {
          av_frame_free(&m_pframe);
@@ -168,7 +168,7 @@ namespace video_input_video_for_linux
 
       }
 
-      INFORMATION("initialized avcodec");
+      information() << "initialized avcodec";
 
    }
 
@@ -183,7 +183,7 @@ namespace video_input_video_for_linux
       if (avcodec_send_packet(m_pcontext, m_ppacket) < 0)
       {
 
-         ERROR("failed to send jpeg to codec");
+         error() <<"failed to send jpeg to codec";
 
          throw ::exception(error_failed, "failed to send jpeg to codec");
 
@@ -192,7 +192,7 @@ namespace video_input_video_for_linux
       if (avcodec_receive_frame(m_pcontext, m_pframe) < 0)
       {
 
-         ERROR("failed to recieve frame from codec");
+         error() <<"failed to recieve frame from codec";
 
          throw ::exception(error_failed, "failed to recieve frame from codec");
 

@@ -891,7 +891,7 @@ namespace video_input
 		  if (m_prender->m_pimage.ok())
 		  {
 
-			 m_prender->m_pimage->fill(0);
+			 m_prender->m_pimage->clear(::color::transparent);
 
 		  }
 

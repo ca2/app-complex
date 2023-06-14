@@ -176,7 +176,7 @@ BOOL fCreateCategoryIfNotExist)
       strLang = "409";
 
    }
-   else if (str == "pt" || str == "br" || str == "portugues" || str == unitext("português"))
+   else if (str == "pt" || str == "br" || str == "portugues" || str == unitext("portugues"))
    {
 
       strLang = "416";

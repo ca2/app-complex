@@ -475,7 +475,7 @@ namespace mediaplaylist
 
    bool document::AddSong(::payload payloadFile, EAddSong eaddsong, bool bMakeVisible, bool bUpdateAllImpacts)
    {
-      __UNREFERENCED_PARAMETER(bUpdateAllImpacts);
+      UNREFERENCED_PARAMETER(bUpdateAllImpacts);
       string strPathName;
       if(payloadFile.get_type() == ::e_type_property_set && payloadFile.propset()["url"].get_string().has_char())
       {
@@ -541,10 +541,10 @@ namespace mediaplaylist
    bool document::AddSong(::index nSong, bool bDoPlay, bool bMakeVisible, bool bUpdateAllImpacts)
    {
 
-      __UNREFERENCED_PARAMETER(nSong);
-      __UNREFERENCED_PARAMETER(bDoPlay);
-      __UNREFERENCED_PARAMETER(bMakeVisible);
-      __UNREFERENCED_PARAMETER(bUpdateAllImpacts);
+      UNREFERENCED_PARAMETER(nSong);
+      UNREFERENCED_PARAMETER(bDoPlay);
+      UNREFERENCED_PARAMETER(bMakeVisible);
+      UNREFERENCED_PARAMETER(bUpdateAllImpacts);
 
       return false;
 
@@ -862,7 +862,7 @@ namespace mediaplaylist
 
    void document::OnChangeSongs(::pointer<::user::impact>pimpact)
    {
-      __UNREFERENCED_PARAMETER(pimpact);
+      UNREFERENCED_PARAMETER(pimpact);
       if(IsDefaultPlaylist())
       {
          DoDefaultPlaylistSave();

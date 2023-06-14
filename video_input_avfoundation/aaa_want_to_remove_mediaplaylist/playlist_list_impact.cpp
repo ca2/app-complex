@@ -275,7 +275,7 @@ namespace mediaplaylist
 
    void playlist_list_impact::_001OnEditRemove(::message::message * pmessage)
    {
-      __UNREFERENCED_PARAMETER(pmessage);
+      UNREFERENCED_PARAMETER(pmessage);
       _001RemoveSelection();
    }
 
@@ -305,7 +305,7 @@ namespace mediaplaylist
    void playlist_list_impact::_001OnPlaylistExecutePlay(::message::message * pmessage)
    {
 
-      __UNREFERENCED_PARAMETER(pmessage);
+      UNREFERENCED_PARAMETER(pmessage);
 
       ::user::range range;
 
@@ -395,7 +395,7 @@ namespace mediaplaylist
    void playlist_list_impact::on_message_create(::message::message * pmessage)
    {
 
-      __UNREFERENCED_PARAMETER(pmessage);
+      UNREFERENCED_PARAMETER(pmessage);
 
       pmessage->previous();
 

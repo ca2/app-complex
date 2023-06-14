@@ -130,7 +130,7 @@ namespace wave
 
    memsize effect_devocalizer::Process16bits(i16 * pshStream, ::count iCount)
    {
-      __UNREFERENCED_PARAMETER(pshStream);
+      UNREFERENCED_PARAMETER(pshStream);
       /* bool bDiff     = false;
       bool bFilter   = true;
 

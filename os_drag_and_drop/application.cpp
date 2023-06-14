@@ -124,13 +124,13 @@ namespace simple_os_drag_and_drop
          if(pcreate->m_bMakeVisible)
          {
 
-            INFORMATION("pcreate->m_bMakeVisible");
+            information() << "pcreate->m_bMakeVisible";
 
          }
          else
          {
 
-            INFORMATION("NOT pcreate->m_bMakeVisible");
+            information() << "NOT pcreate->m_bMakeVisible";
 
          }
 

@@ -21,8 +21,8 @@
 
 #define WIN32_MEAN_AND_LEAN
 #define __STREAMS__
-#undef GET_X_LPARAM
-#undef GET_Y_LPARAM
+#undef i32_x
+#undef i32_y
 #include <dshow.h>
 #include <ks.h>
 #include <ksmedia.h>

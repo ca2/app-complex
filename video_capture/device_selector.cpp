@@ -242,7 +242,7 @@ namespace app_complex_video_capture
          //}
 
       }
-      __UNREFERENCED_PARAMETER(ptopic);
+      UNREFERENCED_PARAMETER(ptopic);
    }
 
 

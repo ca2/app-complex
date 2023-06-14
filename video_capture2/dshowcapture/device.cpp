@@ -104,7 +104,7 @@ inline void HDevice::SendToCallback(bool video,
 
 void HDevice::Receive(bool isVideo, IMediaSample *sample)
 {
-	byte *ptr;
+	::u8 *ptr;
 	MediaTypePtr mt;
 	bool encoded = isVideo ?
 		((int)videoConfig.format >= 400) :

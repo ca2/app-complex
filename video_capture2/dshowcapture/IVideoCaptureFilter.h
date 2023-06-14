@@ -225,7 +225,7 @@ struct VIDEO_CAPTURE_FILTER_SETTINGS_EX
 {
 	VIDEO_CAPTURE_FILTER_SETTINGS		Settings;
 	BOOL								enableFullFrameRate;				//!< Enable full frame rate (50/60 fps)
-	byte								reserved[20 * 1024];
+	::u8								reserved[20 * 1024];
 };
 
 DECLARE_INTERFACE_(IElgatoVideoCaptureFilter5, IElgatoVideoCaptureFilter4)

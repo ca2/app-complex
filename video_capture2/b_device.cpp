@@ -4,36 +4,36 @@
 const ::u32 NUM_BACK_BUFFERS = 2;
 
 void TransformImage_RGB24(
-   byte*       pDest,
+   ::u8*       pDest,
    ::i32        lDestStride,
-   const byte* pSrc,
+   const ::u8* pSrc,
    ::i32        lSrcStride,
    ::u32       dwWidthInPixels,
    ::u32       dwHeightInPixels
 );
 
 void TransformImage_RGB32(
-   byte*       pDest,
+   ::u8*       pDest,
    ::i32        lDestStride,
-   const byte* pSrc,
+   const ::u8* pSrc,
    ::i32        lSrcStride,
    ::u32       dwWidthInPixels,
    ::u32       dwHeightInPixels
 );
 
 void TransformImage_YUY2(
-   byte*       pDest,
+   ::u8*       pDest,
    ::i32        lDestStride,
-   const byte* pSrc,
+   const ::u8* pSrc,
    ::i32        lSrcStride,
    ::u32       dwWidthInPixels,
    ::u32       dwHeightInPixels
 );
 
 void TransformImage_NV12(
-   byte* pDst,
+   ::u8* pDst,
    ::i32 dstStride,
-   const byte* pSrc,
+   const ::u8* pSrc,
    ::i32 srcStride,
    ::u32 dwWidthInPixels,
    ::u32 dwHeightInPixels
@@ -416,7 +416,7 @@ HRESULT DrawDevice::DrawFrame(IMFMediaBuffer *pBuffer)
    }
 
    HRESULT hr = S_OK;
-   byte *pbScanline0 = nullptr;
+   ::u8 *pbScanline0 = nullptr;
    ::i32 lStride = 0;
    D3DLOCKED_RECT lr;
 
@@ -475,7 +475,7 @@ HRESULT DrawDevice::DrawFrame(IMFMediaBuffer *pBuffer)
    // Convert the frame. This also copies it to the Direct3D surface.
 
    m_convertFn(
-      (byte*)lr.pBits,
+      (::u8*)lr.pBits,
       lr.Pitch,
       pbScanline0,
       lStride,
@@ -694,9 +694,9 @@ void DrawDevice::DestroyDevice()
 //
 //-------------------------------------------------------------------
 
-__forceinline byte Clip(int clr)
+__forceinline ::u8 Clip(int clr)
 {
-   return (byte)(clr < 0 ? 0 : (clr > 255 ? 255 : clr));
+   return (::u8)(clr < 0 ? 0 : (clr > 255 ? 255 : clr));
 }
 
 __forceinline RGBQUAD ConvertYCrCbToRGB(
@@ -726,9 +726,9 @@ __forceinline RGBQUAD ConvertYCrCbToRGB(
 //-------------------------------------------------------------------
 
 void TransformImage_RGB24(
-   byte*       pDest,
+   ::u8*       pDest,
    ::i32        lDestStride,
-   const byte* pSrc,
+   const ::u8* pSrc,
    ::i32        lSrcStride,
    ::u32       dwWidthInPixels,
    ::u32       dwHeightInPixels
@@ -763,9 +763,9 @@ void TransformImage_RGB24(
 //-------------------------------------------------------------------
 
 void TransformImage_RGB32(
-   byte*       pDest,
+   ::u8*       pDest,
    ::i32        lDestStride,
-   const byte* pSrc,
+   const ::u8* pSrc,
    ::i32        lSrcStride,
    ::u32       dwWidthInPixels,
    ::u32       dwHeightInPixels
@@ -781,9 +781,9 @@ void TransformImage_RGB32(
 //-------------------------------------------------------------------
 
 void TransformImage_YUY2(
-   byte*       pDest,
+   ::u8*       pDest,
    ::i32        lDestStride,
-   const byte* pSrc,
+   const ::u8* pSrc,
    ::i32        lSrcStride,
    ::u32       dwWidthInPixels,
    ::u32       dwHeightInPixels
@@ -798,9 +798,9 @@ void TransformImage_YUY2(
       {
          // Byte order is U0 Y0 V0 Y1
 
-         int y0 = (int)__LOBYTE(pSrcPel[x]);
+         int y0 = (int)lower_u8(pSrcPel[x]);
          int u0 = (int)HIBYTE(pSrcPel[x]);
-         int y1 = (int)__LOBYTE(pSrcPel[x + 1]);
+         int y1 = (int)lower_u8(pSrcPel[x + 1]);
          int v0 = (int)HIBYTE(pSrcPel[x + 1]);
 
          pDestPel[x] = ConvertYCrCbToRGB(y0, v0, u0);
@@ -821,24 +821,24 @@ void TransformImage_YUY2(
 //-------------------------------------------------------------------
 
 void TransformImage_NV12(
-   byte* pDst,
+   ::u8* pDst,
    ::i32 dstStride,
-   const byte* pSrc,
+   const ::u8* pSrc,
    ::i32 srcStride,
    ::u32 dwWidthInPixels,
    ::u32 dwHeightInPixels
 )
 {
-   const byte* lpBitsY = pSrc;
-   const byte* lpBitsCb = lpBitsY + (dwHeightInPixels * srcStride);;
-   const byte* lpBitsCr = lpBitsCb + 1;
+   const ::u8* lpBitsY = pSrc;
+   const ::u8* lpBitsCb = lpBitsY + (dwHeightInPixels * srcStride);;
+   const ::u8* lpBitsCr = lpBitsCb + 1;
 
    for (::u32 y = 0; y < dwHeightInPixels; y += 2)
    {
-      const byte* lpLineY1 = lpBitsY;
-      const byte* lpLineY2 = lpBitsY + srcStride;
-      const byte* lpLineCr = lpBitsCr;
-      const byte* lpLineCb = lpBitsCb;
+      const ::u8* lpLineY1 = lpBitsY;
+      const ::u8* lpLineY2 = lpBitsY + srcStride;
+      const ::u8* lpLineCr = lpBitsCr;
+      const ::u8* lpLineCb = lpBitsCb;
 
       LPBYTE lpDibLine1 = pDst;
       LPBYTE lpDibLine2 = pDst + dstStride;

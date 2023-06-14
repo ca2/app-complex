@@ -40,7 +40,7 @@ namespace mediaplaylist
    void main_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      __UNREFERENCED_PARAMETER(ptopic);
+      UNREFERENCED_PARAMETER(ptopic);
 
    }
 
@@ -116,7 +116,7 @@ namespace mediaplaylist
    void body_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      __UNREFERENCED_PARAMETER(ptopic);
+      UNREFERENCED_PARAMETER(ptopic);
 
    }
 
@@ -192,7 +192,7 @@ namespace mediaplaylist
    void right_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      __UNREFERENCED_PARAMETER(ptopic);
+      UNREFERENCED_PARAMETER(ptopic);
 
    }
 

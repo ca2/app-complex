@@ -275,7 +275,7 @@ namespace audio
       //if (!::aura::audio::init_instance())
       //{
 
-      //   ERROR(".1");
+      //   error() <<".1";
 
       //   return false;
 
@@ -289,7 +289,7 @@ namespace audio
    void audio::init3()
    {
 
-      INFORMATION("start");
+      information() << "start";
 
 #ifdef CUBE
 
@@ -360,7 +360,7 @@ namespace audio
          if (!estatus)
          {
 
-            warning("Could not initialize Audio Wave (1)");
+            warning() <<"Could not initialize Audio Wave (1)";
 
          }
 
@@ -369,7 +369,7 @@ namespace audio
       if (!init_multimedia())
       {
 
-         FATAL("Could not initialize Multimedia audio");
+         fatal() <<"Could not initialize Multimedia audio";
 
          return false;
 

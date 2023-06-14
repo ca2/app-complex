@@ -169,7 +169,7 @@ namespace app_complex_video_capture
 
                string strCheck = ptopic->user_element_id();
 
-               INFORMATION(strCheck);
+               information() << strCheck;
 
                string strId;
 

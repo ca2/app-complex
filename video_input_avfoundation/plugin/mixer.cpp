@@ -106,7 +106,7 @@ namespace audio
 
       bool bFirst = true;
 
-      byte * pdata = (byte *) lpvoidBuffer;
+      ::u8 * pdata = (::u8 *) lpvoidBuffer;
 
       auto uBufferSize = uiBufferSize;
 
@@ -174,7 +174,7 @@ namespace audio
 
             bAllEOF = false;
 
-            byte * pdst = &pdata[uPos];
+            ::u8 * pdst = &pdata[uPos];
 
             memsize uToRead = uBufferSize - uPos;
 
@@ -207,7 +207,7 @@ namespace audio
 
                m_memory.set_size(uToRead);
 
-               byte * psrc = m_memory.get_data();
+               ::u8 * psrc = m_memory.get_data();
 
                memsize uRead = pplugin->audio_read(psrc, m_memory.get_size());
 

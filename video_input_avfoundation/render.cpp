@@ -210,7 +210,7 @@ namespace video_input_video_avfoundation
       //   //}
 
       //}
-      //__UNREFERENCED_PARAMETER(ptopic);
+      //UNREFERENCED_PARAMETER(ptopic);
    }
 
    //bool render::in_anime()
@@ -557,7 +557,7 @@ namespace video_input_video_avfoundation
 //
 //      }
 //
-//      byte * p = nullptr;
+//      ::u8 * p = nullptr;
 //
 //      hr = pBuffer->Lock(&p, nullptr, nullptr);
 //
@@ -583,7 +583,7 @@ namespace video_input_video_avfoundation
 //
 //         }
 //
-//         ::memory_copy(m_pimage->m_pcolorref1, p, minimum(m_pimage->area() * 4, dwLen));
+//         ::memory_copy(m_pimage->m_pimage32, p, minimum(m_pimage->area() * 4, dwLen));
 //
 //      }
 //
