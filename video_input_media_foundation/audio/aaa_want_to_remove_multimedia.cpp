@@ -408,7 +408,7 @@
 //       //   if (!estatus)
 //       //   {
 
-//       //      WARNING("Could not initialize Audio Mixer (1)");
+//       //      warning("Could not initialize Audio Mixer (1)");
 
 //       //   }
 //       //   else
@@ -417,7 +417,7 @@
 //       //      if (!m_paudiomixer->init1())
 //       //      {
 
-//       //         WARNING("Could not initialize Audio Mixer (2)");
+//       //         warning("Could not initialize Audio Mixer (2)");
 
 //       //      }
 //       //      else
@@ -426,7 +426,7 @@
 //       //         if (!m_paudiomixer->init())
 //       //         {
 
-//       //            WARNING("Could not initialize Audio Mixer (3)");
+//       //            warning("Could not initialize Audio Mixer (3)");
 
 //       //         }
 
@@ -444,7 +444,7 @@
 //       //   if (!estatus)
 //       //   {
 
-//       //      WARNING("Could not initialize Audio Mixer User Base (1)");
+//       //      warning("Could not initialize Audio Mixer User Base (1)");
 
 //       //   }
 //       //   else
@@ -455,7 +455,7 @@
 //       //      if (!m_paudiomixeruserbase->init1())
 //       //      {
 
-//       //         WARNING("Could not initialize Audio Mixer User Base (2)");
+//       //         warning("Could not initialize Audio Mixer User Base (2)");
 
 //       //      }
 //       //      else
@@ -464,7 +464,7 @@
 //       //         if (!m_paudiomixeruserbase->init())
 //       //         {
 
-//       //            WARNING("Could not initialize Audio Mixer User Base (3)");
+//       //            warning("Could not initialize Audio Mixer User Base (3)");
 
 //       //         }
 
@@ -482,7 +482,7 @@
 //          if (!estatus)
 //          {
 
-//             WARNING("Could not initialize Audio Wave (1)");
+//             warning("Could not initialize Audio Wave (1)");
 
 //          }
 
@@ -527,7 +527,7 @@
 
 //       /*if(!m_pmediaplaylist->initialize())
 //       {
-//          TRACE("Could not initialize Multimedia Media Playlist");
+//          information("Could not initialize Multimedia Media Playlist");
 //          return false;
 //       }*/
 

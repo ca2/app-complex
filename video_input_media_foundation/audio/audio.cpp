@@ -360,7 +360,7 @@ namespace audio
          if (!estatus)
          {
 
-            WARNING("Could not initialize Audio Wave (1)");
+            warning("Could not initialize Audio Wave (1)");
 
          }
 

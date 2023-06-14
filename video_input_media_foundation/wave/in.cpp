@@ -30,7 +30,7 @@ namespace wave
    void in::init_thread()
    {
 
-      TRACE("in::init_instance %X\n", get_itask());
+      information("in::init_instance %X\n", get_itask());
 
       //SetMainWnd(nullptr);
 

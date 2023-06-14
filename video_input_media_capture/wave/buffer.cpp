@@ -99,7 +99,7 @@ namespace wave
 
 
       //   u32 dwTimeIn = papp->multimedia_get_time();
-      //   FORMATTED_TRACE("FFT time In: %d ", dwTimeIn);
+      //   information("FFT time In: %d ", dwTimeIn);
       critical_section_lock synchronouslock(&m_csProcLevel1);
       /*   m_fft.fft_double(
       m_uiAnalysisSize,
@@ -113,8 +113,8 @@ namespace wave
 
 
       //   ::time tickTimeout = papp->multimedia_get_time();
-      //   FORMATTED_TRACE(" FFT time Out: %d ", tickTimeout);
-      //   FORMATTED_TRACE(" FFT time delta: %d \n", tickTimeout - dwTimeIn);
+      //   information(" FFT time Out: %d ", tickTimeout);
+      //   information(" FFT time delta: %d \n", tickTimeout - dwTimeIn);
       return;
 
       //   u32 uiNumBits;    /* Number of bits needed to store indices */
@@ -230,8 +230,8 @@ namespace wave
 //            }
 //         }
 //         //   ::time tickTimeout = papp->multimedia_get_time();
-//         //   FORMATTED_TRACE(" FFT time Out: %d ", tickTimeout);
-//         //   FORMATTED_TRACE(" FFT time delta: %d \n", tickTimeout - dwTimeIn);
+//         //   information(" FFT time Out: %d ", tickTimeout);
+//         //   information(" FFT time delta: %d \n", tickTimeout - dwTimeIn);
    }
 
 
@@ -354,7 +354,7 @@ namespace wave
 
       /*
       u32 dwTimeIn = papp->multimedia_get_time();
-      FORMATTED_TRACE("zeroproc a In: %d ", dwTimeIn);
+      information("zeroproc a In: %d ", dwTimeIn);
       u32 user;
       critical_section_lock synchronouslock(&m_csProcLevel1);
       for(user = 0; user < m_uiAnalysisSize; user++)
@@ -362,8 +362,8 @@ namespace wave
          //      m_pdProcImagA[user] = 0.0;
       }
       ::time tickTimeout = papp->multimedia_get_time();
-      FORMATTED_TRACE(" zeroproc a Out: %d ", tickTimeout);
-      FORMATTED_TRACE(" zeroproc atime delta: %d \n", tickTimeout - dwTimeIn);
+      information(" zeroproc a Out: %d ", tickTimeout);
+      information(" zeroproc atime delta: %d \n", tickTimeout - dwTimeIn);
       */
    }
 
@@ -537,10 +537,10 @@ namespace wave
       //HighPassFilterData(); // Needed in 16 bits data samples
       //CopyDataToDoubleSetA(iBuffer);
       CopyDataToSetA(iBuffer);
-      //    FORMATTED_TRACE("buffer::Process FFT In %d\n", papp->multimedia_get_time());
+      //    information("buffer::Process FFT In %d\n", papp->multimedia_get_time());
       //FFTDoubleSetADoubleSetB(false);
       FFTSetASetB();
-      //   FORMATTED_TRACE("buffer::Process FFT Out %d\n", papp->multimedia_get_time());
+      //   information("buffer::Process FFT Out %d\n", papp->multimedia_get_time());
       //InterestCalcDoubleSetBModule();
       InterestCalcSetBModule();
       //InterestCompressModuleSet();
@@ -557,7 +557,7 @@ namespace wave
 
       //u32 dwTimeIn = papp->multimedia_get_time();
       WAVEBUFFERDATA wbdLast, wbdNew;
-      //FORMATTED_TRACE("data to real A In: %d ", dwTimeIn);
+      //information("data to real A In: %d ", dwTimeIn);
       index user;
       critical_section_lock synchronouslock(&m_csProcLevel1);
       wbdLast = 0;
@@ -568,8 +568,8 @@ namespace wave
          wbdLast = wbdNew;
       }
       //::time tickTimeout = papp->multimedia_get_time();
-      //FORMATTED_TRACE(" data to real a Out: %d ", tickTimeout);
-      //FORMATTED_TRACE(" data to real a delta: %d \n", tickTimeout - dwTimeIn);
+      //information(" data to real a Out: %d ", tickTimeout);
+      //information(" data to real a delta: %d \n", tickTimeout - dwTimeIn);
 
    }
 
@@ -737,7 +737,7 @@ namespace wave
    void buffer::InterestCompressModuleSet()
    {
       //u32 dwTimeIn = papp->multimedia_get_time();
-      //FORMATTED_TRACE("compress module In: %d ", dwTimeIn);
+      //information("compress module In: %d ", dwTimeIn);
 
       index user;
       critical_section_lock synchronouslock(&m_csProcLevel1);
@@ -747,8 +747,8 @@ namespace wave
          m_daModuleSet[user] = log(m_daModuleSet[user]) * dr;
       }
       //::time tickTimeout = papp->multimedia_get_time();
-      //FORMATTED_TRACE(" compress module Out: %d ", tickTimeout);
-      //FORMATTED_TRACE(" compress module delta: %d \n", tickTimeout - dwTimeIn);
+      //information(" compress module Out: %d ", tickTimeout);
+      //information(" compress module delta: %d \n", tickTimeout - dwTimeIn);
 
    }
 
@@ -798,7 +798,7 @@ namespace wave
       //}
 
 
-      //TRACE("FFT Peak Value: %f\n", dPeakValue);
+      //information("FFT Peak Value: %f\n", dPeakValue);
 
    }
 

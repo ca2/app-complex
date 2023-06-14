@@ -308,7 +308,7 @@ pacmedirectory->system() / "translators/missing2.txt", str);
 
 play:
 
-   FORMATTED_TRACE("speak: %s", pathMp3.c_str());
+   information("speak: %s", pathMp3.c_str());
 
    paudio->play_audio(pathMp3, bSynch);
 

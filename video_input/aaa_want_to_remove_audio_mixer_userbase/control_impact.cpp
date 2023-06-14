@@ -44,7 +44,7 @@ namespace multimedia
 
 
          m_dwUpdateTime = 0;
-         TRACE("AlbumFormImpact this = %x \n", this);
+         information("AlbumFormImpact this = %x \n", this);
       }
 
       

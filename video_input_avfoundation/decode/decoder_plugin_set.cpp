@@ -233,21 +233,21 @@ namespace audio
       try
       {
 
-         TRACE("AudioDecoderPlugin Loading Plugin: " + string(pszModule));
+         information("AudioDecoderPlugin Loading Plugin: " + string(pszModule));
 
          decoder_plugin * pplugin = LoadPlugin(pszModule);
 
          if(pplugin != nullptr)
          {
 
-            TRACE("AudioDecoderPlugin Plugin Loaded: " + string(pszModule));
+            information("AudioDecoderPlugin Plugin Loaded: " + string(pszModule));
 
             ::pointer<::multimedia::decoder>pdecoderBase = pplugin->NewDecoder();
 
             if(pdecoderBase.is_null())
             {
 
-               TRACE("AudioDecoderPlugin NewDecoder Failed: " + string(pszModule));
+               information("AudioDecoderPlugin NewDecoder Failed: " + string(pszModule));
 
                return nullptr;
 
@@ -274,13 +274,13 @@ namespace audio
             if(::succeeded(pdecoder->multimedia_open(pfile)))
             {
 
-               TRACE("AudioDecoderPlugin multimedia_open Succeeded: " + string(pszModule) + " (" + pfile->get_file_path() + ")");
+               information("AudioDecoderPlugin multimedia_open Succeeded: " + string(pszModule) + " (" + pfile->get_file_path() + ")");
 
                return pdecoder;
 
             }
 
-            TRACE("AudioDecoderPlugin multimedia_open Failed: " + string(pszModule) + " (" + pfile->get_file_path() + ")");
+            information("AudioDecoderPlugin multimedia_open Failed: " + string(pszModule) + " (" + pfile->get_file_path() + ")");
 
          }
 

@@ -9,7 +9,7 @@ namespace mediamanager
    media_manager::media_manager()
    {
 
-      FORMATTED_TRACE("media_manager::media_manager(%d)", this);
+      information("media_manager::media_manager(%d)", this);
 
    }
 
@@ -37,7 +37,7 @@ namespace mediamanager
       if(!estatus)
       {
 
-         TRACE("Could not create Multimedia Media Manager Album Build");
+         information("Could not create Multimedia Media Manager Album Build");
 
          return ::error_failed;
 
@@ -46,13 +46,13 @@ namespace mediamanager
       if(!album_build()->initialize())
       {
          
-         TRACE("Could not create Multimedia Media Manager Album Build");
+         information("Could not create Multimedia Media Manager Album Build");
          
          return ::error_failed;
 
       }
 
-      FORMATTED_TRACE("media_manager::media_manager(%d)", this);
+      information("media_manager::media_manager(%d)", this);
 
       return ::success;
 

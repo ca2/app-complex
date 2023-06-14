@@ -936,7 +936,7 @@ namespace audio
          //if (m_den % m_num == 0)
          {
 
-            //TRACE("perfect match of m_den and m_num");
+            //information("perfect match of m_den and m_num");
 
          }
 

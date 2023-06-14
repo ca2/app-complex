@@ -257,18 +257,18 @@ namespace audio
          if (pplugin && pplugin->audio_eof())
          {
 
-            TRACE("mixer plugin:EOF");
+            information("mixer plugin:EOF");
 
             if (pplugin->m_bLoop)
             {
 
-               TRACE("mixer plugin:seek_begin (Loop=1) (RESTART)");
+               information("mixer plugin:seek_begin (Loop=1) (RESTART)");
 
             }
             else if (pplugin->m_ppluginNext != nullptr)
             {
 
-               TRACE("mixer plugin:set (NextPlugin) NEXTA");
+               information("mixer plugin:set (NextPlugin) NEXTA");
 
                m_plugina.set_at(i, pplugin->m_ppluginNext);
 
@@ -276,7 +276,7 @@ namespace audio
             else
             {
 
-               TRACE("mixer plugin:REMOVE");
+               information("mixer plugin:REMOVE");
 
                m_plugina.erase_at(i);
 

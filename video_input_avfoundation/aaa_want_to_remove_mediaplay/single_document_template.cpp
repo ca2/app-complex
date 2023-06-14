@@ -21,7 +21,7 @@ namespace mediaplay
    {
 #ifdef _DEBUG
       if(m_pdocument != nullptr)
-         TRACE("Warning: destroying single_document_template with live document.");
+         information("Warning: destroying single_document_template with live document.");
 #endif
    }
 
@@ -158,7 +158,7 @@ namespace mediaplay
          {
 
             // user has been alerted to what failed in on_new_document
-            TRACE("::user::document::on_new_document returned false.");
+            information("::user::document::on_new_document returned false.");
 
             if (bCreated)
             {
@@ -187,7 +187,7 @@ namespace mediaplay
          {
 
             // user has been alerted to what failed in on_open_document
-            TRACE("::user::document::on_open_document returned false.");
+            information("::user::document::on_open_document returned false.");
 
             if (bCreated)
             {
@@ -211,7 +211,7 @@ namespace mediaplay
                if (!pdocument->on_new_document())
                {
 
-                  TRACE("Error: on_new_document failed after trying to open a document - trying to continue.");
+                  information("Error: on_new_document failed after trying to open a document - trying to continue.");
                   // assume we can continue
 
                }

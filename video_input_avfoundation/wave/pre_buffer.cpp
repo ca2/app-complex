@@ -245,7 +245,7 @@ namespace wave
 
          //throw ::exception("invalid state");
 
-         TRACE("pre_buffer::fill_buffer Buffer ALREADY Filled : invalid state");
+         information("pre_buffer::fill_buffer Buffer ALREADY Filled : invalid state");
 
          return false;
 

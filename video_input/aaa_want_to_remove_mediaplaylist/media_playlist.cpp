@@ -609,7 +609,7 @@ namespace mediaplaylist
          if (m_psessionVeriwell == nullptr)
          {
 
-            TRACE("failed to allocated veriwell multimedia playlist session");
+            information("failed to allocated veriwell multimedia playlist session");
 
          }
 
@@ -635,7 +635,7 @@ pacmedirectory->config() / "system/spotify.txt"))
             if (!m_plibrarySpotify->is_opened() || !m_plibrarySpotify->open_ca2_library())
             {
 
-               TRACE("spotify multimedia playlist library could not be loaded or is not present");
+               information("spotify multimedia playlist library could not be loaded or is not present");
 
             }
             else
@@ -649,7 +649,7 @@ pacmedirectory->config() / "system/spotify.txt"))
                   if (m_psessionSpotify == nullptr)
                   {
 
-                     TRACE("failed to allocated spotify multimedia playlist session");
+                     information("failed to allocated spotify multimedia playlist session");
 
                   }
 
@@ -663,7 +663,7 @@ pacmedirectory->config() / "system/spotify.txt"))
                   if (m_pspotifywebapi == nullptr)
                   {
 
-                     TRACE("failed to allocated spotify multimedia playlist session");
+                     information("failed to allocated spotify multimedia playlist session");
 
                   }
 

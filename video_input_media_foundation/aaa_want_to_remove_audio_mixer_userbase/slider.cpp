@@ -805,11 +805,11 @@ namespace multimedia
          ::rectangle_f64 rectangleDraw;
          rectangleDraw.intersect(rectangleClip, rectangleClient);
 
-         TRACE("slider:OnPaint\n");
-         FORMATTED_TRACE("rectangle.left  : %d, ", rectangleDraw.left);
-         FORMATTED_TRACE("rectangle.top   : %d, ", rectangleDraw.top);
-         FORMATTED_TRACE("rectangle.right : %d, ", rectangleDraw.right);
-         FORMATTED_TRACE("rectangle.bottom: %d\n", rectangleDraw.bottom);
+         information("slider:OnPaint\n");
+         information("rectangle.left  : %d, ", rectangleDraw.left);
+         information("rectangle.top   : %d, ", rectangleDraw.top);
+         information("rectangle.right : %d, ", rectangleDraw.right);
+         information("rectangle.bottom: %d\n", rectangleDraw.bottom);
 
 //         ::rectangle_f64 rectangleSrcClipBox = rectangleDraw;
 

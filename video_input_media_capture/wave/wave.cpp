@@ -146,14 +146,14 @@ namespace wave
 
          output_error_message("Failed to open specified audio library : \"" + strLibrary + "\". Going to use fallback audio library.");
 
-         TRACE("Failed to do multimedia audio factory_exchange. Could not load library(1)");
+         information("Failed to do multimedia audio factory_exchange. Could not load library(1)");
 
          strLibrary = "audio_directsound";
 
          if(!library.open(strLibrary, false))
          {
 
-            TRACE("Failed to do multimedia audio factory_exchange. Could not load library(2)");
+            information("Failed to do multimedia audio factory_exchange. Could not load library(2)");
 
             strLibrary = "audio_mmsystem";
 
@@ -162,7 +162,7 @@ namespace wave
 
                output_error_message("Failed to open specified audio library : \"" + strLibrary + "\" and fallbacks (\"audio_mmsystem\"\"audio_directsound\". No audio library available. No audio.");
 
-               TRACE("Failed to do multimedia audio factory_exchange. Could not load library(3)");
+               information("Failed to do multimedia audio factory_exchange. Could not load library(3)");
 
                return false;
 
@@ -196,7 +196,7 @@ cont1:
 
          if(([a-z0-9_]+)_factory == nullptr)
          {
-            TRACE("failed to do multimedia audio factory_exchange. Could not ca2 factory_item exchange entry point_i32 function");
+            information("failed to do multimedia audio factory_exchange. Could not ca2 factory_item exchange entry point_i32 function");
 
             return false;
 

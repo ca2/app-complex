@@ -56,7 +56,7 @@ namespace mediaplaylist
 
       on_open_document(m_pathFile);
 
-      FORMATTED_TRACE("file path is %s", m_path.c_str());
+      information("file path is %s", m_path.c_str());
 
       update_all_impacts(id_playlists_changed);
 
@@ -2042,7 +2042,7 @@ retry0:
 //         //   }
 //         //   catch(const ::exception & e)
 //         //   {
-//         //      TRACE(trace_category_appmsg, 0, "Warning: failed to delete file after failed SaveAs.\n");
+//         //      information(trace_category_appmsg, 0, "Warning: failed to delete file after failed SaveAs.\n");
 //         //      ::exception_pointer esp(pe);
 //         //   }
 //
