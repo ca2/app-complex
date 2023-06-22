@@ -12,8 +12,8 @@ namespace app_complex_video_capture
 
    top_impact::top_impact()
    {
-      m_peditview = nullptr;
-      m_ptoggleview = nullptr;
+      m_peditimpact = nullptr;
+      m_ptoggleimpact = nullptr;
    }
 
 
@@ -59,9 +59,9 @@ namespace app_complex_video_capture
 
       initialize_split_layout();
 
-      m_peditview = create_impact < edit_impact >(nullptr, get_pane_holder(0),"top_edit_impact");
+      m_peditimpact = create_impact < edit_impact >(nullptr, get_pane_holder(0),"top_edit_impact");
 
-      if(m_peditview == nullptr)
+      if(m_peditimpact == nullptr)
       {
 
          auto psequencer = nano()->message_box(nullptr,"Could not create folder edit impact");
@@ -70,11 +70,11 @@ namespace app_complex_video_capture
 
       }
 
-      m_peditview->m_ptopview = this;
+      m_peditimpact->m_ptopview = this;
 
-      m_ptoggleview = create_impact < toggle_impact >(nullptr, get_pane_holder(1),"top_toggle_impact");
+      m_ptoggleimpact = create_impact < toggle_impact >(nullptr, get_pane_holder(1),"top_toggle_impact");
 
-      if(m_ptoggleview == nullptr)
+      if(m_ptoggleimpact == nullptr)
       {
 
          auto psequencer = nano()->message_box(nullptr,"Could not create file list ::user::impact");
@@ -83,7 +83,7 @@ namespace app_complex_video_capture
 
       }
 
-      m_ptoggleview->m_ptopview = this;
+      m_ptoggleimpact->m_ptopview = this;
 
 
 

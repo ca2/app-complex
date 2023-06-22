@@ -20,17 +20,17 @@ namespace app_complex_video_capture
 
       //m_ptopviewMain                          = nullptr;
       //m_pviewMain                          = nullptr;
-      //m_ptoggleviewMain= nullptr;
+      //m_ptoggleimpactMain= nullptr;
       //m_peditMain= nullptr;
 
       //m_ptopviewSwitcher                          = nullptr;
       //m_pviewSwitcher                          = nullptr;
-      //m_ptoggleviewSwitcher= nullptr;
+      //m_ptoggleimpactSwitcher= nullptr;
       //m_peditSwitcher= nullptr;
 
       //m_ptopviewFont                          = nullptr;
       //m_pfontlistview                          = nullptr;
-      //m_ptoggleviewFontSel= nullptr;
+      //m_ptoggleimpactFontSel= nullptr;
       //m_peditFontSel = nullptr;
 
       m_ptemplateHelloMultiverseMain = nullptr;
