@@ -13,13 +13,9 @@
 		9A4389B3299E97F500D2EE15 /* libvideo_input_avfoundation.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A43898F299E8B3800D2EE15 /* libvideo_input_avfoundation.dylib */; };
 		9A4389B4299E97F500D2EE15 /* libvideo_input_avfoundation.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A43898F299E8B3800D2EE15 /* libvideo_input_avfoundation.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A4389B5299E97FC00D2EE15 /* libapp_complex_video_capture.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A43899C299E8B8C00D2EE15 /* libapp_complex_video_capture.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A71B89C2A469FEC00F9FC3D /* libunac.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A71B89B2A469FEC00F9FC3D /* libunac.dylib */; };
 		9A71B89D2A469FEC00F9FC3D /* libunac.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A71B89B2A469FEC00F9FC3D /* libunac.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A98A67329B938F40057E3F4 /* libacme_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A98A67229B938F40057E3F4 /* libacme_darwin.dylib */; };
 		9A98A67429B938F40057E3F4 /* libacme_darwin.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A98A67229B938F40057E3F4 /* libacme_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A98A67629B9390F0057E3F4 /* libapex_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A98A67529B9390F0057E3F4 /* libapex_darwin.dylib */; };
 		9A98A67729B939100057E3F4 /* libapex_darwin.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A98A67529B9390F0057E3F4 /* libapex_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A98A67929B939380057E3F4 /* libaura_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A98A67829B939380057E3F4 /* libaura_darwin.dylib */; };
 		9A98A67A29B939390057E3F4 /* libaura_darwin.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A98A67829B939380057E3F4 /* libaura_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AAF6588280870520067E73F /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF6096280864240067E73F /* application.cpp */; };
 		9AAF65AA280871EA0067E73F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AAF6060280864230067E73F /* Images.xcassets */; };
@@ -402,7 +398,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A98A67629B9390F0057E3F4 /* libapex_darwin.dylib in Frameworks */,
 				9A4389B2299E979700D2EE15 /* libapp_complex_video_capture.dylib in Frameworks */,
 				9AF2F41C2808849C007F7B7D /* libacme.dylib in Frameworks */,
 				9AAF65B02808724D0067E73F /* libapex.dylib in Frameworks */,
@@ -410,13 +405,10 @@
 				9AF2F443280884D9007F7B7D /* libidn.dylib in Frameworks */,
 				9AAF65B42808724D0067E73F /* libaura.dylib in Frameworks */,
 				9AAF65B62808724D0067E73F /* libaxis.dylib in Frameworks */,
-				9A98A67929B939380057E3F4 /* libaura_darwin.dylib in Frameworks */,
 				9A4389B3299E97F500D2EE15 /* libvideo_input_avfoundation.dylib in Frameworks */,
-				9A71B89C2A469FEC00F9FC3D /* libunac.dylib in Frameworks */,
 				9AAF65B82808724D0067E73F /* libbase.dylib in Frameworks */,
 				9AAF65BA2808724D0067E73F /* libbred.dylib in Frameworks */,
 				9AAF65BC2808724D0067E73F /* libcore.dylib in Frameworks */,
-				9A98A67329B938F40057E3F4 /* libacme_darwin.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
