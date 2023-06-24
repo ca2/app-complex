@@ -10,6 +10,8 @@
 		9A4E96DC2785491900B74C76 /* libapp_complex_form.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AC0229C2748F22F006BEBCC /* libapp_complex_form.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A4E96E72785592F00B74C76 /* libbred.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4E96E62785592F00B74C76 /* libbred.dylib */; };
 		9A4E96E82785592F00B74C76 /* libbred.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A4E96E62785592F00B74C76 /* libbred.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A71B88D2A469FBE00F9FC3D /* libunac.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A71B88C2A469FBE00F9FC3D /* libunac.dylib */; };
+		9A71B88E2A469FBE00F9FC3D /* libunac.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A71B88C2A469FBE00F9FC3D /* libunac.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8C64C62783EA0D000C8587 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C64C22783EA0D000C8587 /* Images.xcassets */; };
 		9A8C7EEA2783F7D9000C8587 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C7EE92783F7D9000C8587 /* _matter.zip */; };
 		9A8C836C27845E93000C8587 /* libfolder_zip.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8C836A27845E92000C8587 /* libfolder_zip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -315,6 +317,7 @@
 				9AC022CC27491258006BEBCC /* libapp_simple_form.dylib in Embed Libraries */,
 				9AEA1B812679469C006F4A68 /* libapex_posix.dylib in Embed Libraries */,
 				9AEA1B892679469C006F4A68 /* libaura_apple.dylib in Embed Libraries */,
+				9A71B88E2A469FBE00F9FC3D /* libunac.dylib in Embed Libraries */,
 				9A4E96DC2785491900B74C76 /* libapp_complex_form.dylib in Embed Libraries */,
 				9AEA1B9D2679469E006F4A68 /* libnode_macos.dylib in Embed Libraries */,
 				9AEA1B7F2679469C006F4A68 /* libapex_macos.dylib in Embed Libraries */,
@@ -336,6 +339,7 @@
 		9A273CF729CF1AC800CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		9A42D7C3266597540011645D /* experience_tranquillum.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_tranquillum.xcodeproj; path = ../../../app/experience_tranquillum/experience_tranquillum.xcodeproj; sourceTree = "<group>"; };
 		9A4E96E62785592F00B74C76 /* libbred.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbred.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A71B88C2A469FBE00F9FC3D /* libunac.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libunac.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8C64C22783EA0D000C8587 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9A8C64C42783EA0D000C8587 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A8C7EE92783F7D9000C8587 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = ../_matter.zip; sourceTree = "<group>"; };
@@ -438,6 +442,7 @@
 				9AB15CA129A87DD600DFDF90 /* libacme_darwin.dylib in Frameworks */,
 				9A4E96E72785592F00B74C76 /* libbred.dylib in Frameworks */,
 				9AC022CB27491258006BEBCC /* libapp_simple_form.dylib in Frameworks */,
+				9A71B88D2A469FBE00F9FC3D /* libunac.dylib in Frameworks */,
 				9AC022B32748F8BB006BEBCC /* libapp_complex_form.dylib in Frameworks */,
 				9AEA1B5D26794642006F4A68 /* libacme.dylib in Frameworks */,
 				9AEA1B5F26794642006F4A68 /* libapex.dylib in Frameworks */,
@@ -703,6 +708,7 @@
 		9ADF1D4522C16E1600456537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A71B88C2A469FBE00F9FC3D /* libunac.dylib */,
 				9AB15C9E29A87DD600DFDF90 /* libacme_darwin.dylib */,
 				9AB15C9F29A87DD600DFDF90 /* libapex_darwin.dylib */,
 				9AB15CA029A87DD600DFDF90 /* libaura_darwin.dylib */,

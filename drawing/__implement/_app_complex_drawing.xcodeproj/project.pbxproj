@@ -12,6 +12,8 @@
 		9A23A83B26CF407900F98012 /* libcrypto.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A23A83926CF407900F98012 /* libcrypto.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A23A83C26CF407900F98012 /* libssl.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A23A83A26CF407900F98012 /* libssl.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A273CE929CF1A9400CBEB97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A273CE529CF1A9400CBEB97 /* InfoPlist.strings */; };
+		9A71B87D2A469F7F00F9FC3D /* libunac.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A71B87C2A469F7F00F9FC3D /* libunac.dylib */; };
+		9A71B87E2A469F7F00F9FC3D /* libunac.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A71B87C2A469F7F00F9FC3D /* libunac.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8C61C12783E981000C8587 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C61BD2783E981000C8587 /* Images.xcassets */; };
 		9A8C7EEC2783F7EC000C8587 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C7EEB2783F7EB000C8587 /* _matter.zip */; };
 		9A8C836927845E4F000C8587 /* libfolder_zip.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8C836727845E4F000C8587 /* libfolder_zip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -293,6 +295,7 @@
 				9AEA1C5726796DAD006F4A68 /* libwindowing_macos.dylib in Embed Libraries */,
 				9AEA1C3D26796DAA006F4A68 /* libaura_apple.dylib in Embed Libraries */,
 				9AEA1C3526796DA9006F4A68 /* libapex_posix.dylib in Embed Libraries */,
+				9A71B87E2A469F7F00F9FC3D /* libunac.dylib in Embed Libraries */,
 				9AEA1C4F26796DAC006F4A68 /* libexperience_core.dylib in Embed Libraries */,
 				9AEA1C5926796DAD006F4A68 /* libwrite_text_quartz2d.dylib in Embed Libraries */,
 				9AEA1C4B26796DAC006F4A68 /* libdatabase_sqlite3.dylib in Embed Libraries */,
@@ -328,6 +331,7 @@
 		9A42D8F2266669E60011645D /* write_text_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = write_text_quartz2d.xcodeproj; path = "../../../../operating_system/operating_system-apple/write_text_quartz2d/write_text_quartz2d.xcodeproj"; sourceTree = "<group>"; };
 		9A42D949266669E80011645D /* node_macos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = node_macos.xcodeproj; path = "../../../../operating_system/operating_system-macos/node_macos/node_macos.xcodeproj"; sourceTree = "<group>"; };
 		9A42D985266669F30011645D /* app_complex_drawing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_complex_drawing.xcodeproj; path = ../app_complex_drawing.xcodeproj; sourceTree = "<group>"; };
+		9A71B87C2A469F7F00F9FC3D /* libunac.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libunac.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8B639124CBD77800A93185 /* libimaging_coreimage.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libimaging_coreimage.dylib; path = "../../time-macos/library/Debug/libimaging_coreimage.dylib"; sourceTree = "<group>"; };
 		9A8C61BD2783E981000C8587 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9A8C61BF2783E981000C8587 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -369,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AB15C9029A87D3000DFDF90 /* libapex_darwin.dylib in Frameworks */,
+				9A71B87D2A469F7F00F9FC3D /* libunac.dylib in Frameworks */,
 				9AC01F322748EB1C006BEBCC /* libcore.dylib in Frameworks */,
 				9AB15C9229A87D3000DFDF90 /* libaura_darwin.dylib in Frameworks */,
 				9AEA1C2E26796DA9006F4A68 /* libapex.dylib in Frameworks */,
@@ -547,6 +552,7 @@
 		9ADF1D2922C16DBB00456537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A71B87C2A469F7F00F9FC3D /* libunac.dylib */,
 				9AB15C8B29A87D3000DFDF90 /* libacme_darwin.dylib */,
 				9AB15C8C29A87D3000DFDF90 /* libapex_darwin.dylib */,
 				9AB15C8D29A87D3000DFDF90 /* libaura_darwin.dylib */,
