@@ -401,7 +401,7 @@ namespace video_input_video_for_linux
 
             pimage->map();
 
-            color32_t * pref = pimage->get_data();
+            auto pref = pimage->get_data();
 
 #if defined(MACOS)
 
@@ -416,7 +416,7 @@ namespace video_input_video_for_linux
 #else
 
             ::copy_image32(pref, m_sizeSwsDest.cx(), m_sizeSwsDest.cy(),
-                            pimage->scan_size(), (color32_t *) m_pframePicture->data[0],
+                            pimage->scan_size(), (image32_t *) m_pframePicture->data[0],
                             m_pframePicture->linesize[0]);
 
 #endif

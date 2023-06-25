@@ -7,7 +7,8 @@
 #include "acme/parallelization/manual_reset_event.h"
 
 
-#include "acme/primitive/geometry2d/_geometry2d.h"
+//#include "acme/primitive/geometry2d/_geometry2d.h"
+
 
 extern "C"
 {

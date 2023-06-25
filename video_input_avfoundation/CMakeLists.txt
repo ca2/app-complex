@@ -51,7 +51,7 @@ if (MSVC)
     target_link_libraries(video_input_video_avfoundation PRIVATE acme apex aqua aura Gdiplus)
 elseif(LINUX)
 
-   if(NOT DONT_USE_PKG_CONFIG)
+   if(USE_PKGCONFIG)
       pkg_check_modules(PKGCONFIG libavcodec libswscale libavformat libavutil libv4l2 libudev)
    endif()
    target_compile_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
