@@ -193,7 +193,7 @@ namespace app_complex_form
 //               if (strText == "This is a test. This is a test")
 //               {
 //
-//                  output_debug_string("");
+//                  infomration("");
 //
 //               }
 //

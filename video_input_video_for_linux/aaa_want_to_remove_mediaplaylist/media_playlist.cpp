@@ -90,21 +90,21 @@ namespace mediaplaylist
       if (IS_ID_USED(songs_changed))
       {
 
-         output_debug_string("id_songs_changed used");
+         infomration("id_songs_changed used");
 
       }
 
       if (IS_ID_USED(invalid))
       {
 
-         output_debug_string("id_invalid used");
+         infomration("id_invalid used");
 
       }
 
       if (IS_ID_USED(filter))
       {
 
-         output_debug_string("id_filter used");
+         infomration("id_filter used");
 
       }
 

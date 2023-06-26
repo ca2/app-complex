@@ -372,7 +372,7 @@ namespace wave
 
       if (iRead < 8820)
       {
-         output_debug_string("1");
+         infomration("1");
 
       }
       ppos += iRead;
@@ -454,7 +454,7 @@ namespace wave
 //         if(iBytesRecorded < pbuffer->m_memory.get_size())
 //         {
 //
-//            output_debug_string("end of data or starving or ?");
+//            infomration("end of data or starving or ?");
 //
 //         }
 

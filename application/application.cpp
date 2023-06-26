@@ -99,7 +99,7 @@ namespace simple_application
 
       }
 
-      output_debug_string("\nfinished simple_application::on_request");
+      infomration("\nfinished simple_application::on_request");
 
    }
 

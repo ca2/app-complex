@@ -139,7 +139,7 @@ namespace audio
 
             auto elapsed = ::time.elapsed();
 
-            output_debug_string("elapsedd " + as_string(elapsed.m_i));
+            infomration("elapsedd " + as_string(elapsed.m_i));
 
          }
 

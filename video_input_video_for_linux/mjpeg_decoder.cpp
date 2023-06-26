@@ -61,7 +61,7 @@ bool ffmpeg_init_frame(AVFrame **framep, int width, int height)
    frame = av_frame_alloc();
    if (!frame)
    {
-      output_debug_string( "Could not allocate video frame\n");
+      infomration( "Could not allocate video frame\n");
       return false;
    }
 
@@ -71,7 +71,7 @@ bool ffmpeg_init_frame(AVFrame **framep, int width, int height)
    ret = av_image_alloc(frame->data, frame->linesize, width, height, FFMPEG_DST_PIXEL_FORMAT, 32);
    if (ret < 0)
    {
-      output_debug_string("Could not allocate raw picture buffer\n");
+      infomration("Could not allocate raw picture buffer\n");
       return false;
    }
    *framep = frame;

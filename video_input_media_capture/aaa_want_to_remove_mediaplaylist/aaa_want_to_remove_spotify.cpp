@@ -687,7 +687,7 @@ pacmedirectory->system() / "config\\spotify\\pas.txt");
          if(!m_pimagea[0]->load_image(&m))
          {
 
-            ::output_debug_string("image_loaded_failed");
+            ::infomration("image_loaded_failed");
 
          }
 

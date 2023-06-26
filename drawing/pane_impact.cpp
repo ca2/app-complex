@@ -151,7 +151,7 @@ namespace app_complex_drawing
 
                pdocument->payload(strId) = m_pimpactDrawing->m_prender->m_hlsText;
 
-               ::output_debug_string("\n\nSIMPLE_DRAWING::PANE_VIEW::" + strId + "\n\n");
+               ::infomration("\n\nSIMPLE_DRAWING::PANE_VIEW::" + strId + "\n\n");
 
                auto papp = get_app();
 

@@ -66,9 +66,7 @@ namespace app_complex_video_capture
 
       defer_check_on_draw_layout();
 
-      ::rectangle_i32 rectangleClient;
-
-      client_rectangle(rectangleClient);
+      auto rectangleClient = client_rectangle();
 
       if (rectangleClient.area() <= 0)
          return;
@@ -151,10 +149,10 @@ namespace app_complex_video_capture
 
       //char sz[512];
 
-      //::output_debug_string("impact:");
+      //::infomration("impact:");
       //::ansi_from_u64(sz, microsecond, 10);
-      //::output_debug_string(sz);
-      //::output_debug_string(", ");
+      //::infomration(sz);
+      //::infomration(", ");
 
       //image d(e_create);
 
