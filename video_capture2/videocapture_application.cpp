@@ -133,13 +133,13 @@ namespace app_complex_video_capture
 
 #ifdef _DEBUG
 
-      infomration("_DEBUG build? (basis)");
+      information("_DEBUG build? (basis)");
 
       ASSERT(false);
 
 #else
 
-      infomration("RELEASE build? (stage)");
+      information("RELEASE build? (stage)");
 
       ASSERT(false);
 

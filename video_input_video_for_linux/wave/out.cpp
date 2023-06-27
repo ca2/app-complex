@@ -856,7 +856,7 @@ namespace wave
 
             information(trace_category_appmsg, e_trace_level_information, "OUT thread::raw_pump_message - Received e_message_quit.\n");
 
-            ::infomration("OUT thread::raw_pump_message - Received e_message_quit.\n");
+            ::information("OUT thread::raw_pump_message - Received e_message_quit.\n");
 
             m_nDisablePumpCount++; // application must die
             // Note: prevents calling message loop things in 'exit_thread'

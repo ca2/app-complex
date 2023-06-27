@@ -87,7 +87,7 @@ namespace notify_drawing
          auto pthread = fork([this]()
             {
 
-               infomration("test");
+               information("test");
 
             });
 
@@ -98,13 +98,13 @@ namespace notify_drawing
 
 #ifdef _DEBUG
 
-      infomration("_DEBUG build? (basis)");
+      information("_DEBUG build? (basis)");
 
       ASSERT(false);
 
 #else
 
-      infomration("RELEASE build? (stage)");
+      information("RELEASE build? (stage)");
 
       ASSERT(false);
 
@@ -128,7 +128,7 @@ namespace notify_drawing
 
       }
 
-      infomration("\nfinished notify_drawing::on_request");
+      information("\nfinished notify_drawing::on_request");
 
    }
 

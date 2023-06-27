@@ -94,7 +94,7 @@ namespace simple_os_drag_and_drop
 //         auto pthread = fork([this]()
 //            {
 //
-//               infomration("test");
+//               information("test");
 //
 //            });
 //
@@ -104,13 +104,13 @@ namespace simple_os_drag_and_drop
 
 #ifdef _DEBUG
 
-      infomration("_DEBUG build? (basis)");
+      information("_DEBUG build? (basis)");
 
       ASSERT(false);
 
 #else
 
-      infomration("RELEASE build? (stage)");
+      information("RELEASE build? (stage)");
 
       ASSERT(false);
 
@@ -152,7 +152,7 @@ namespace simple_os_drag_and_drop
 
       }
 
-      infomration("\nfinished simple_os_drag_and_drop::on_request");
+      information("\nfinished simple_os_drag_and_drop::on_request");
 
    }
 

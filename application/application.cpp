@@ -99,7 +99,7 @@ namespace simple_application
 
       }
 
-      infomration("\nfinished simple_application::on_request");
+      information("\nfinished simple_application::on_request");
 
    }
 

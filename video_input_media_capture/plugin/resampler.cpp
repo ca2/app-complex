@@ -1039,13 +1039,13 @@ namespace audio
                if (dInterpolation > 32768.0)
                {
 
-                  ::infomration("iInterpolation >= 32768\n");
+                  ::information("iInterpolation >= 32768\n");
 
                }
                else if (dInterpolation < -32767.0)
                {
 
-                  ::infomration("iInterpolation <= -32769\n");
+                  ::information("iInterpolation <= -32769\n");
 
                }
 
@@ -1093,7 +1093,7 @@ namespace audio
                         if (consumed == 1)
                         {
 
-                           infomration("OMG");
+                           information("OMG");
 
                         }
 
@@ -1125,7 +1125,7 @@ namespace audio
                   //      if (consumed == 1)
                   //      {
 
-                  //         infomration("OMG");
+                  //         information("OMG");
 
                   //      }
 
@@ -1200,13 +1200,13 @@ namespace audio
                                  if (dInterpolation >= 32768.0f)
                                  {
 
-                                    ::infomration("iInterpolation >= 32768\n");
+                                    ::information("iInterpolation >= 32768\n");
 
                                  }
                                  else if (dInterpolation <= -32769.0f)
                                  {
 
-                                    ::infomration("iInterpolation <= -32769\n");
+                                    ::information("iInterpolation <= -32769\n");
 
                                  }
 
@@ -1332,13 +1332,13 @@ namespace audio
                            if (dInterpolation >= 32768.0)
                            {
 
-                              ::infomration("iInterpolation >= 32768\n");
+                              ::information("iInterpolation >= 32768\n");
 
                            }
                            else if (dInterpolation <= -32769.0)
                            {
 
-                              ::infomration("iInterpolation <= -32769\n");
+                              ::information("iInterpolation <= -32769\n");
 
                            }
 
@@ -1606,13 +1606,13 @@ end4:
                            if (dInterpolation >= 32768.0)
                            {
 
-                              ::infomration("iInterpolation >= 32768\n");
+                              ::information("iInterpolation >= 32768\n");
 
                            }
                            else if (dInterpolation <= -32769.0)
                            {
 
-                              ::infomration("iInterpolation <= -32769\n");
+                              ::information("iInterpolation <= -32769\n");
 
                            }
 
@@ -1730,13 +1730,13 @@ end4:
          //            if (dInterpolation >= 32768.0)
          //            {
 
-         //               ::infomration("iInterpolation >= 32768\n");
+         //               ::information("iInterpolation >= 32768\n");
 
          //            }
          //            else if (dInterpolation <= -32769.0)
          //            {
 
-         //               ::infomration("iInterpolation <= -32769\n");
+         //               ::information("iInterpolation <= -32769\n");
 
          //            }
 

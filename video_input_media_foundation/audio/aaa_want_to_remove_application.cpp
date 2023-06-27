@@ -892,7 +892,7 @@ pacmedirectory->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".mp
 ////         if (!pspeaker->speak(text))
 ////         {
 ////
-////            infomration("test");
+////            information("test");
 ////
 ////         }
 ////
@@ -928,7 +928,7 @@ pacmedirectory->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".mp
 ////
 ////               }
 ////
-////               infomration("not playing or timeout");
+////               information("not playing or timeout");
 ////
 ////            }
 ////

@@ -182,7 +182,7 @@ VOID DbgPrint(PCTSTR format, ...)
 
    if (SUCCEEDED(StringCbVPrintf(string, sizeof(string), format, args)))
    {
-      infomration(string);
+      information(string);
    }
    else
    {

@@ -915,7 +915,7 @@ processed_new:
          if(strId.is_empty())
          {
 
-            infomration("The song was not added (1) ::mediaplaylist::document::AddSong .\n\n");
+            information("The song was not added (1) ::mediaplaylist::document::AddSong .\n\n");
 
             return "";
 

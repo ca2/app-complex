@@ -102,7 +102,7 @@ namespace multimedia_playlist
             if (mutex() == nullptr)
             {
 
-               infomration("no ::pointer < ::mutex > for spotify session!!\n");
+               information("no ::pointer < ::mutex > for spotify session!!\n");
 
             }
 
