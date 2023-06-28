@@ -789,9 +789,9 @@ namespace video_input_video_for_linux
 
             auto presolution = __new(resolution);
 
-            presolution->m_size.cx() = second_u16(*packed);
+            presolution->m_size.cx() = upper_u16(*packed);
 
-            presolution->m_size.cy() = first_u16(*packed);
+            presolution->m_size.cy() = lower_u16(*packed);
 
             presolution->m_strDescription.format("%greekdeltax%d", presolution->m_size.cx(), presolution->m_size.cy());
 
@@ -927,9 +927,9 @@ namespace video_input_video_for_linux
 
             auto pframerate = __new(frame_rate);
 
-            pframerate->m_iDenominator = first_u16(*packed);
+            pframerate->m_iDenominator = lower_u16(*packed);
 
-            pframerate->m_iNumerator = second_u16(*packed);
+            pframerate->m_iNumerator = upper_u16(*packed);
 
             pframerate->m_fFps = (float) pframerate->m_iDenominator / (float) pframerate->m_iNumerator;
 
