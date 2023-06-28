@@ -225,20 +225,20 @@ int avfoundation_enumerate_webcams(CFTypeRef ** pptyperef)
 {
    
    NSArray<AVCaptureDevice *> * pdevices = nullptr;
-   if (@available(macOS 10.15, *)) {
+   //if (@available(macOS 10.15, *)) {
       auto types = @[AVCaptureDeviceTypeExternalUnknown];
       AVCaptureDeviceDiscoverySession * psession =
       [ AVCaptureDeviceDiscoverySession
         discoverySessionWithDeviceTypes:types
         mediaType: AVMediaTypeVideo position: AVCaptureDevicePositionUnspecified ];
       pdevices = [psession devices];
-   }
-   else
-   {
-      
-      pdevices = [AVCaptureDevice devices];
-      
-   }
+//   }
+//   else
+//   {
+//
+//      pdevices = [AVCaptureDevice devices];
+//
+//   }
     
    auto count = [ pdevices count ];
    if(count <= 0)

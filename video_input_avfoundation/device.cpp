@@ -130,7 +130,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
                            minimum(width,m_prender->m_pimage->width()),
                            minimum(height,m_prender->m_pimage->height()),
                            m_prender->m_pimage->m_iScan,
-                           (color32_t *) pdata,
+                           (image32_t *) pdata,
                            scan);
                            
                            

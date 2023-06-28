@@ -80,7 +80,7 @@ namespace video_input_video_avfoundation
 	bool video_input::are_devices_accessible()
 	{
 		
-		return m_estatusAccessToDevices;
+		return m_estatusAccessToDevices.ok();
 
 	}
 

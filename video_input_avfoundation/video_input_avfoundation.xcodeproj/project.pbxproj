@@ -89,6 +89,8 @@
 		9AAF65A6280870D30067E73F /* libaura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAF65C92808759A0067E73F /* avfoundation.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = avfoundation.mm; sourceTree = "<group>"; };
 		9AAF65CC2808797E0067E73F /* _video_input_avfoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _video_input_avfoundation.h; sourceTree = "<group>"; };
+		9AB522942A4C0A7E001EB2F0 /* _____debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "_____debug.xcconfig"; sourceTree = "<group>"; };
+		9AB522962A4C0A7E001EB2F0 /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "_____release.xcconfig"; sourceTree = "<group>"; };
 		9AE24E8A1904CFFD001AEFFB /* libios_youtube.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios_youtube.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEB75A316F78DF10085103B /* libvideo_input_avfoundation.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libvideo_input_avfoundation.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF2F3F828088315007F7B7D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -160,6 +162,8 @@
 		9AAF63E62808686B0067E73F /* video_input_avfoundation */ = {
 			isa = PBXGroup;
 			children = (
+				9AB522942A4C0A7E001EB2F0 /* _____debug.xcconfig */,
+				9AB522962A4C0A7E001EB2F0 /* _____release.xcconfig */,
 				9AAF64CE2808686D0067E73F /* _.cpp */,
 				9AAF65532808686D0067E73F /* _.h */,
 				9AAF65CC2808797E0067E73F /* _video_input_avfoundation.h */,
@@ -362,6 +366,7 @@
 		};
 		9AEB75A516F78DF10085103B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AB522942A4C0A7E001EB2F0 /* _____debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -419,7 +424,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
 				INSTALL_PATH = "@executable_path";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -440,6 +444,7 @@
 		};
 		9AEB75A616F78DF10085103B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AB522962A4C0A7E001EB2F0 /* _____release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -490,7 +495,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
 				INSTALL_PATH = "@executable_path";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

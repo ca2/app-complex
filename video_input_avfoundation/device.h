@@ -4,7 +4,7 @@
 #include "app-complex/video_input/device.h"
 #include "acme/parallelization/manual_reset_event.h"
 #include "acme/primitive/collection/string_map.h"
-#include "acme/primitive/geometry2d/_geometry2d.h"
+//#include "acme/primitive/geometry2d/_geometry2d.h"
 #include "avcapture_device_callback.h"
 
 //struct IMFActivate;
