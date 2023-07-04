@@ -112,7 +112,7 @@ namespace mediamanager
       i32  AddEmptyFile(const ::file::path & path);
 
       bool Update(::file::listing & straFile,time_array & array);
-      bool Update(const ::file::path & lpcszFile,::earth::time & time,i32 iId = 0x80000000);
+      bool Update(const ::file::path & lpcszFile,::earth::time & time,i32 iId = I32_MINIMUM);
       bool Update(::mediamanager::album_record & record);
       bool UpdateAlbumRecord(i32 iId, bool bUpdateFilePath, bool bUpdateFileName);
       bool UpdateInvalidFile(const ::file::path & path);
