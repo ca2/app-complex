@@ -120,7 +120,7 @@ namespace video_input
 
 					srcInt = (int*)(src + ((height - y - 1) * widthInBytes));
 
-					memcpy(dstInt, srcInt, widthInBytes);
+					memory_copy(dstInt, srcInt, widthInBytes);
 
 				}
 
@@ -128,7 +128,7 @@ namespace video_input
 			else
 			{
 
-				memcpy(dst, src, numBytes);
+				memory_copy(dst, src, numBytes);
 
 				::u8* pbyteDst = (::u8*)dst;
 

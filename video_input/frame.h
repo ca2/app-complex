@@ -48,7 +48,7 @@ namespace video
       bool m_prev_frame;
 
 
-      frame() {memset(this, 0, sizeof(*this));}
+      frame() {memory_set(this, 0, sizeof(*this));}
       frame(enum_video_format format, uint32_t width, uint32_t height);
 
       ~frame();
@@ -333,7 +333,7 @@ namespace video
                        ? m_linesize[asynchronous_cache]
                        : src->m_linesize[asynchronous_cache];
 
-      memcpy(m_data[asynchronous_cache] + pos_dst, src->m_data[asynchronous_cache] + pos_src, bytes);
+      memory_copy(m_data[asynchronous_cache] + pos_dst, src->m_data[asynchronous_cache] + pos_src, bytes);
 
    }
 
@@ -355,7 +355,7 @@ namespace video
       else
       {
 
-         memcpy(m_data[asynchronous_cache], src->m_data[asynchronous_cache], (size_t) m_linesize[asynchronous_cache] * (size_t) lines);
+         memory_copy(m_data[asynchronous_cache], src->m_data[asynchronous_cache], (size_t) m_linesize[asynchronous_cache] * (size_t) lines);
 
       }
 

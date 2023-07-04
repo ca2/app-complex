@@ -92,8 +92,8 @@ frame::~frame()
       auto pframe = this;
 
 
-      memset(pframe, 0, sizeof(frame));
-      memset(offsets, 0, sizeof(offsets));
+      memory_set(pframe, 0, sizeof(frame));
+      memory_set(offsets, 0, sizeof(offsets));
 
       switch (eformat) {
          case e_video_format_none:
@@ -283,14 +283,14 @@ frame::~frame()
             return;
 
          case e_video_format_i420:
-            memcpy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
-            memcpy(m_data[1], src->m_data[1], src->m_linesize[1] * cy / 2);
-            memcpy(m_data[2], src->m_data[2], src->m_linesize[2] * cy / 2);
+            memory_copy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
+            memory_copy(m_data[1], src->m_data[1], src->m_linesize[1] * cy / 2);
+            memory_copy(m_data[2], src->m_data[2], src->m_linesize[2] * cy / 2);
             break;
 
          case e_video_format_nv12:
-            memcpy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
-            memcpy(m_data[1], src->m_data[1], src->m_linesize[1] * cy / 2);
+            memory_copy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
+            memory_copy(m_data[1], src->m_data[1], src->m_linesize[1] * cy / 2);
             break;
 
          case e_video_format_y800:
@@ -302,29 +302,29 @@ frame::~frame()
          case e_video_format_bgrx:
          case e_video_format_bgr3:
          case e_video_format_ayuv:
-            memcpy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
+            memory_copy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
             break;
 
          case e_video_format_i444:
          case e_video_format_i422:
-            memcpy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
-            memcpy(m_data[1], src->m_data[1], src->m_linesize[1] * cy);
-            memcpy(m_data[2], src->m_data[2], src->m_linesize[2] * cy);
+            memory_copy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
+            memory_copy(m_data[1], src->m_data[1], src->m_linesize[1] * cy);
+            memory_copy(m_data[2], src->m_data[2], src->m_linesize[2] * cy);
             break;
 
          case e_video_format_i40a:
-            memcpy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
-            memcpy(m_data[1], src->m_data[1], src->m_linesize[1] * cy / 2);
-            memcpy(m_data[2], src->m_data[2], src->m_linesize[2] * cy / 2);
-            memcpy(m_data[3], src->m_data[3], src->m_linesize[3] * cy);
+            memory_copy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
+            memory_copy(m_data[1], src->m_data[1], src->m_linesize[1] * cy / 2);
+            memory_copy(m_data[2], src->m_data[2], src->m_linesize[2] * cy / 2);
+            memory_copy(m_data[3], src->m_data[3], src->m_linesize[3] * cy);
             break;
 
          case e_video_format_i42a:
          case e_video_format_yuva:
-            memcpy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
-            memcpy(m_data[1], src->m_data[1], src->m_linesize[1] * cy);
-            memcpy(m_data[2], src->m_data[2], src->m_linesize[2] * cy);
-            memcpy(m_data[3], src->m_data[3], src->m_linesize[3] * cy);
+            memory_copy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
+            memory_copy(m_data[1], src->m_data[1], src->m_linesize[1] * cy);
+            memory_copy(m_data[2], src->m_data[2], src->m_linesize[2] * cy);
+            memory_copy(m_data[3], src->m_data[3], src->m_linesize[3] * cy);
             break;
       }
    }
@@ -336,14 +336,14 @@ frame::~frame()
 //            return;
 //
 //         case e_video_format_i420:
-//            memcpy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
-//            memcpy(m_data[1], src->m_data[1], src->m_linesize[1] * cy / 2);
-//            memcpy(m_data[2], src->m_data[2], src->m_linesize[2] * cy / 2);
+//            memory_copy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
+//            memory_copy(m_data[1], src->m_data[1], src->m_linesize[1] * cy / 2);
+//            memory_copy(m_data[2], src->m_data[2], src->m_linesize[2] * cy / 2);
 //            break;
 //
 //         case e_video_format_nv12:
-//            memcpy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
-//            memcpy(m_data[1], src->m_data[1], src->m_linesize[1] * cy / 2);
+//            memory_copy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
+//            memory_copy(m_data[1], src->m_data[1], src->m_linesize[1] * cy / 2);
 //            break;
 //
 //         case e_video_format_y800:
@@ -355,29 +355,29 @@ frame::~frame()
 //         case e_video_format_bgrx:
 //         case e_video_format_bgr3:
 //         case e_video_format_ayuv:
-//            memcpy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
+//            memory_copy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
 //            break;
 //
 //         case e_video_format_i444:
 //         case e_video_format_i422:
-//            memcpy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
-//            memcpy(m_data[1], src->m_data[1], src->m_linesize[1] * cy);
-//            memcpy(m_data[2], src->m_data[2], src->m_linesize[2] * cy);
+//            memory_copy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
+//            memory_copy(m_data[1], src->m_data[1], src->m_linesize[1] * cy);
+//            memory_copy(m_data[2], src->m_data[2], src->m_linesize[2] * cy);
 //            break;
 //
 //         case e_video_format_i40a:
-//            memcpy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
-//            memcpy(m_data[1], src->m_data[1], src->m_linesize[1] * cy / 2);
-//            memcpy(m_data[2], src->m_data[2], src->m_linesize[2] * cy / 2);
-//            memcpy(m_data[3], src->m_data[3], src->m_linesize[3] * cy);
+//            memory_copy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
+//            memory_copy(m_data[1], src->m_data[1], src->m_linesize[1] * cy / 2);
+//            memory_copy(m_data[2], src->m_data[2], src->m_linesize[2] * cy / 2);
+//            memory_copy(m_data[3], src->m_data[3], src->m_linesize[3] * cy);
 //            break;
 //
 //         case e_video_format_i42a:
 //         case e_video_format_yuva:
-//            memcpy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
-//            memcpy(m_data[1], src->m_data[1], src->m_linesize[1] * cy);
-//            memcpy(m_data[2], src->m_data[2], src->m_linesize[2] * cy);
-//            memcpy(m_data[3], src->m_data[3], src->m_linesize[3] * cy);
+//            memory_copy(m_data[0], src->m_data[0], src->m_linesize[0] * cy);
+//            memory_copy(m_data[1], src->m_data[1], src->m_linesize[1] * cy);
+//            memory_copy(m_data[2], src->m_data[2], src->m_linesize[2] * cy);
+//            memory_copy(m_data[3], src->m_data[3], src->m_linesize[3] * cy);
 //            break;
 //      }
 //   }
@@ -1419,12 +1419,12 @@ void frame::copy_frame_data(const frame * src)
    m_flags = src->m_flags;
    m_full_range = src->m_full_range;
    m_timestamp = src->m_timestamp;
-   memcpy(m_color_matrix, src->m_color_matrix, sizeof(float) * 16);
+   memory_copy(m_color_matrix, src->m_color_matrix, sizeof(float) * 16);
    if (!m_full_range)
    {
       size_t const size = sizeof(float) * 3;
-      memcpy(m_color_range_min, src->m_color_range_min, size);
-      memcpy(m_color_range_max, src->m_color_range_max, size);
+      memory_copy(m_color_range_min, src->m_color_range_min, size);
+      memory_copy(m_color_range_max, src->m_color_range_max, size);
    }
 
    switch (src->m_eformat)
@@ -1642,13 +1642,13 @@ void frame::copy_from(const frame * src)
 //new_frame.
 //flags = m_flags;
 //
-//memcpy(& new_frame
+//memory_copy(& new_frame
 //.color_matrix, &m_color_matrix,
 //sizeof(m_color_matrix));
-//memcpy(& new_frame
+//memory_copy(& new_frame
 //.color_range_min, &m_color_range_min,
 //sizeof(m_color_range_min));
-//memcpy(& new_frame
+//memory_copy(& new_frame
 //.color_range_max, &m_color_range_max,
 //sizeof(m_color_range_max));
 //
@@ -1845,13 +1845,13 @@ void frame::copy_from(const frame * src)
 //new_frame.
 //flags = m_flags;
 //
-//memcpy(& new_frame
+//memory_copy(& new_frame
 //.color_matrix, &m_color_matrix,
 //sizeof(m_color_matrix));
-//memcpy(& new_frame
+//memory_copy(& new_frame
 //.color_range_min, &m_color_range_min,
 //sizeof(m_color_range_min));
-//memcpy(& new_frame
+//memory_copy(& new_frame
 //.color_range_max, &m_color_range_max,
 //sizeof(m_color_range_max));
 //
@@ -1991,13 +1991,13 @@ void frame::copy_from(const frame * src)
 //new_frame.
 //flags = m_flags;
 //
-//memcpy(& new_frame
+//memory_copy(& new_frame
 //.color_matrix, &m_color_matrix,
 //sizeof(m_color_matrix));
-//memcpy(& new_frame
+//memory_copy(& new_frame
 //.color_range_min, &m_color_range_min,
 //sizeof(m_color_range_min));
-//memcpy(& new_frame
+//memory_copy(& new_frame
 //.color_range_max, &m_color_range_max,
 //sizeof(m_color_range_max));
 //
@@ -2116,7 +2116,7 @@ void frame::copy_from(const frame * src)
 //::secondary_memory_allocate_heap::aligned_memory_allocate(size, alignment);
 //}
 //
-//memcpy(source
+//memory_copy(source
 //->audio_m_data.m_data[i], m_data[i], size);
 //}
 //
@@ -2203,7 +2203,7 @@ void frame::copy_from(const frame * src)
 //if (source->resampler) {
 //uint8_t * output[MAX_AV_PLANES];
 //
-//memset(output,
+//memory_set(output,
 //0, sizeof(output));
 //
 //audio_resampler_resample(source
@@ -3965,7 +3965,7 @@ void frame::copy_from(const frame * src)
 //return;
 //
 //if (vol == 0.0f || mixers == 0) {
-//memset(source
+//memory_set(source
 //->audio_output_buf[0][0], 0,
 //AUDIO_OUTPUT_FRAMES * sizeof(float) *
 //MAX_AUDIO_CHANNELS * MAX_AUDIO_MIXES
@@ -4013,7 +4013,7 @@ void frame::copy_from(const frame * src)
 //if ((source->
 //audio_mixers & mixers
 //& (1 << mix)) != 0) {
-//memset(source
+//memory_set(source
 //->audio_output_buf[mix][0], 0,
 //sizeof(float) *
 //AUDIO_OUTPUT_FRAMES * channels
@@ -4046,7 +4046,7 @@ void frame::copy_from(const frame * src)
 //if ((source->
 //audio_mixers & mix_bit
 //) == 0) {
-//memset(source
+//memory_set(source
 //->audio_output_buf[mix][0], 0,
 //sizeof(float) *
 //AUDIO_OUTPUT_FRAMES * channels
@@ -4075,7 +4075,7 @@ void frame::copy_from(const frame * src)
 //audio_m_data.m_data[ch] = source->audio_mix_buf[ch];
 //}
 //
-//memset(source
+//memory_set(source
 //->audio_mix_buf[0], 0,
 //sizeof(float) *
 //AUDIO_OUTPUT_FRAMES * channels
@@ -4161,7 +4161,7 @@ void frame::copy_from(const frame * src)
 //(
 //mixers & mix_and_val
 //) == 0) {
-//memset(source
+//memory_set(source
 //->audio_output_buf[mix][0], 0,
 //size * channels
 //);
@@ -4172,7 +4172,7 @@ void frame::copy_from(const frame * src)
 //size_t ch = 0;
 //ch<channels;
 //ch++)
-//memcpy(source
+//memory_copy(source
 //->audio_output_buf[mix][ch],
 //source->audio_output_buf[0][ch], size);
 //}
@@ -4184,7 +4184,7 @@ void frame::copy_from(const frame * src)
 //}
 //
 //if ((source->audio_mixers & 1) == 0 || (mixers & 1) == 0)
-//memset(source
+//memory_set(source
 //->audio_output_buf[0][0], 0,
 //size * channels
 //);
