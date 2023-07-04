@@ -29,7 +29,7 @@ template < typename TYPE >
 void move_insert(TYPE* p, ::index i, const TYPE & t, ::count c)
 {
 
-   memmove(p + i + 1,  p + i,  ((c - i) - 1) * sizeof(TYPE));
+   memory_transfer(p + i + 1,  p + i,  ((c - i) - 1) * sizeof(TYPE));
    p[i] = t;
 
 }
