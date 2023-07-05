@@ -308,7 +308,6 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
     </Link>
@@ -319,7 +318,6 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
     </Link>
@@ -330,7 +328,6 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
     </Link>
@@ -341,7 +338,6 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
     </Link>
@@ -352,7 +348,6 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
     </Link>
   </ItemDefinitionGroup>
@@ -362,7 +357,6 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
     </Link>
   </ItemDefinitionGroup>
@@ -372,7 +366,6 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
     </Link>
   </ItemDefinitionGroup>
@@ -382,7 +375,6 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
     </Link>
   </ItemDefinitionGroup>
@@ -392,7 +384,6 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
@@ -405,7 +396,6 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
@@ -418,7 +408,6 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
     </Link>
   </ItemDefinitionGroup>
@@ -428,7 +417,6 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
     </Link>
   </ItemDefinitionGroup>
@@ -438,7 +426,6 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
     </Link>
@@ -449,7 +436,6 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
     </Link>
@@ -460,7 +446,6 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
     </Link>
   </ItemDefinitionGroup>
@@ -470,7 +455,6 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
     </Link>
   </ItemDefinitionGroup>
