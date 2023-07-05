@@ -19,7 +19,7 @@ list(APPEND executable_references
    ${PARENT_PROJECT_NAME})
 
 
-if(LINUX OR FREEBSD)
+if(${LINUX} OR ${FREEBSD})
 
 #   add_custom_command(
 #      COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
@@ -51,7 +51,7 @@ if (MSVC)
    target_link_libraries(${PROJECT_NAME} PRIVATE ${executable_references})
 
 
-elseif(LINUX OR FREEBSD)
+elseif(${LINUX} OR ${FREEBSD})
 
 
    target_compile_options(${PROJECT_NAME} PRIVATE -fpermissive)
@@ -70,7 +70,7 @@ add_dependencies(${PROJECT_NAME} ${app_common_dependencies})
 add_dependencies(${PROJECT_NAME} database_sqlite3)
 
 
-if(LINUX)
+if(${LINUX})
 
    add_dependencies(${PROJECT_NAME} video_input_video_for_linux)
 

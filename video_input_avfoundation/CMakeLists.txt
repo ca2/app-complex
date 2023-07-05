@@ -49,7 +49,7 @@ if (MSVC)
     target_link_options(video_input_video_avfoundation PRIVATE "/IMPLIB:${LIBRARY_OUTPUT_PATH}/video_input_video_avfoundation.lib")
     target_link_options(video_input_video_avfoundation PRIVATE "/DEF:${CMAKE_CURRENT_SOURCE_DIR}/video_input_video_avfoundation.def")
     target_link_libraries(video_input_video_avfoundation PRIVATE acme apex aqua aura Gdiplus)
-elseif(LINUX)
+elseif(${LINUX})
 
    if(USE_PKGCONFIG)
       pkg_check_modules(PKGCONFIG libavcodec libswscale libavformat libavutil libv4l2 libudev)
