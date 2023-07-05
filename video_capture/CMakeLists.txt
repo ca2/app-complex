@@ -63,7 +63,7 @@ if (MSVC)
    target_link_options(app_complex_video_capture PRIVATE "/SUBSYSTEM:WINDOWS")
    target_link_libraries(app_complex_video_capture PRIVATE ${library_references})
 
-elseif(LINUX OR FREEBSD)
+elseif(${LINUX} OR ${FREEBSD})
 
    target_compile_options(app_complex_video_capture PRIVATE -fpermissive)
    #target_link_options(app_complex_video_capture PRIVATE -Wl,-rpath=$ORIGIN)
