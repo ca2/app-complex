@@ -53,9 +53,9 @@ namespace video_input_video_for_linux
       if (m_iDevice == -1)
       {
 
-         int iErrNo = errno;
+         auto cerrornumber = c_error_number();
 
-         auto estatus = errno_status(iErrNo);
+         auto estatus = cerrornumber.estatus();
 
          error("Unable to open device");
 
@@ -573,7 +573,7 @@ namespace video_input_video_for_linux
       if (v4l2_set_format(m_iDevice, &m_size.cx(), &m_size.cy(), &m_iPixFmt, &m_iLineSize) < 0)
       {
 
-         int iErrNo = errno;
+         auto cerrornumber = c_error_number();
 
          error("Unable to set format");
 
@@ -1019,11 +1019,11 @@ namespace video_input_video_for_linux
       if (v4l2_ioctl(m_iDevice, VIDIOC_STREAMON, &type) < 0)
       {
 
-         int iErrNo = errno;
+         auto cerrornumber = c_error_number();
 
          //blog(LOG_ERROR, "unable to start stream");
 
-         auto estatus = errno_status(iErrNo);
+         auto estatus = cerrornumber.estatus();
 
          throw ::exception(estatus, "unable to start stream");
 
@@ -1043,12 +1043,12 @@ namespace video_input_video_for_linux
       if (v4l2_ioctl(m_iDevice, VIDIOC_STREAMOFF, &type) < 0)
       {
 
-         int iErrNo = errno;
+         auto cerrornumber = c_error_number();
 
          if(iErrNo != ENODEV)
          {
 
-            auto estatus = errno_status(iErrNo);
+            auto estatus = cerrornumber.estatus();
 
             throw ::exception(error_failed, "unable to stop stream");
 
