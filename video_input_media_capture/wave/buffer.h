@@ -91,7 +91,7 @@ namespace wave
       double PeakValueFrequency(double dSampleFrequency, double * dAmplitude);
       double PeakValueFrequency(double * dAmplitude);
       void HighPassFilterData();
-      void PeakValueFrequencies(double_array & daFreq, double_array & daAmp, ::count iCount);
+      void PeakValueFrequencies(f64_array & daFreq, f64_array & daAmp, ::count iCount);
 //         void FFTProcess(LPWAVEHDR lpwavehdr);
       void FFTProcess(index iBuffer);
       //       void PCMOutProcessWAVEHDR(LPWAVEHDR lpwavehdr);

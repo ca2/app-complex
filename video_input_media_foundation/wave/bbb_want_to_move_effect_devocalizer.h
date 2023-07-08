@@ -44,9 +44,9 @@ namespace wave
 
             Group *                          m_pgroup;
 
-            double_array                     m_da1;
-            double_array                     m_da2;
-            double_array                     m_da3;
+            f64_array                     m_da1;
+            f64_array                     m_da2;
+            f64_array                     m_da3;
             complexd_array                   m_complexa;
             sort_array < double >            m_faMax;
             int_array                        m_iaMax;
@@ -63,7 +63,7 @@ namespace wave
          effect_devocalizer *                 m_pparent;
          pointer_array < Channel >                              m_channela;
          complexd_array                            m_complexa;
-         double_array                              m_daMod;
+         f64_array                              m_daMod;
          double                                    m_dDivisor;
 
          Group();

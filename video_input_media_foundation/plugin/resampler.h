@@ -58,12 +58,12 @@ namespace audio
       ::pointer<plugin>                     m_pplugin; // Source plugin
       int                                    m_acc[16];
       ::memory_file                          m_src;
-      float_array                            m_daLastSample;
-      array<float_array>                     m_da;
-      array<float_array>                     m_xa1;
-      array<float_array>                     m_ya1;
-      array<float_array>                     m_xa2;
-      array<float_array>                     m_ya2;
+      f32_array                            m_daLastSample;
+      array<f32_array>                     m_da;
+      array<f32_array>                     m_xa1;
+      array<f32_array>                     m_ya1;
+      array<f32_array>                     m_xa2;
+      array<f32_array>                     m_ya2;
       bool                                   m_bExtra;
 
 

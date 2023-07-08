@@ -644,7 +644,7 @@ namespace wave
    }
 
 
-   void buffer::PeakValueFrequencies(double_array & daFreq, double_array & daAmp, ::count iCount)
+   void buffer::PeakValueFrequencies(f64_array & daFreq, f64_array & daAmp, ::count iCount)
    {
 
       UNREFERENCED_PARAMETER(daAmp);

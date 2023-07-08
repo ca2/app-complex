@@ -200,7 +200,7 @@ float the_filter(float * y, float * x)
 
 }
 
-float filter1(float_array & y, float_array&x)
+float filter1(f32_array & y, f32_array&x)
 {
 
    //y.set_size(8);
@@ -255,7 +255,7 @@ float g_d8a[] =
    6.3725982336
 };
 
-float chebyshev_2rd_0025_0100__6(float_array& y, float_array&x)
+float chebyshev_2rd_0025_0100__6(f32_array& y, f32_array&x)
 {
 
    y.set_size(8);
@@ -288,7 +288,7 @@ float g_d8[] =
    3.6656070924
 };
 
-float chebyshev_2rd_002_0084__6(float_array& y, float_array&x)
+float chebyshev_2rd_002_0084__6(f32_array& y, f32_array&x)
 {
 
    y.set_size(4);
@@ -353,7 +353,7 @@ int total_sum(int * pi, int c)
 }
 
 
-float butterworth_3_1_8_fs_lo_pass(float_array& ya, float_array&xa)
+float butterworth_3_1_8_fs_lo_pass(f32_array& ya, f32_array&xa)
 {
 
    ya.set_size(3);
@@ -367,7 +367,7 @@ float butterworth_3_1_8_fs_lo_pass(float_array& ya, float_array&xa)
 
 
 //(7.4749284307 * y[n - 1])
-float butterworth_3_001_fs_hi_pass(float_array & ya, float_array &xa)
+float butterworth_3_001_fs_hi_pass(f32_array & ya, f32_array &xa)
 {
 
    ya.set_size(3);
@@ -380,7 +380,7 @@ float butterworth_3_001_fs_hi_pass(float_array & ya, float_array &xa)
 }
 
 
-float butterworth_3rd_bp_001_125(float_array & ya, float_array &xa)
+float butterworth_3rd_bp_001_125(f32_array & ya, f32_array &xa)
 {
 
    ya.set_size(7);
@@ -415,7 +415,7 @@ float butterworth_3rd_bp_001_125(float_array & ya, float_array &xa)
 //(50.5963730152 * y[n - 3])
 //(-25.2004868800 * y[n - 2])
 //(7.4749284307 * y[n - 1])
-float butterworth_5rd_bp_001_125(float_array & ya, float_array &xa)
+float butterworth_5rd_bp_001_125(f32_array & ya, f32_array &xa)
 {
 
    ya.set_size(10);
@@ -460,7 +460,7 @@ float g_d1[] =
 };
 
 
-float butterworth_4rd_bp_001_125(float_array & y, float_array &xa)
+float butterworth_4rd_bp_001_125(f32_array & y, f32_array &xa)
 {
 
    y.set_size(8);
@@ -507,7 +507,7 @@ float g_d3[] =
 };
 
 
-float chebyshevy_4rd_bs_025_05__05(float_array & y, float_array &x)
+float chebyshevy_4rd_bs_025_05__05(f32_array & y, f32_array &x)
 {
 
    y.set_size(8);
@@ -543,7 +543,7 @@ float g_d4[] =
 };
 
 
-float butterworth_1rd_0005_0125(float_array & y, float_array &x)
+float butterworth_1rd_0005_0125(f32_array & y, f32_array &x)
 {
 
    y.set_size(2);
@@ -568,7 +568,7 @@ float g_d5[] =
 };
 
 
-float butterworth_2rd_0005_0125(float_array & y, float_array &x)
+float butterworth_2rd_0005_0125(f32_array & y, f32_array &x)
 {
 
    y.set_size(4);
@@ -594,7 +594,7 @@ float g_d6[] =
    3.4258173530
 };
 
-float chebyshev_2rd_0005_0125__6(float_array & y, float_array &x)
+float chebyshev_2rd_0005_0125__6(f32_array & y, f32_array &x)
 {
 
    y.set_size(4);
@@ -620,7 +620,7 @@ float g_d7[] =
    3.5784575898f
 };
 
-float chebyshev_2rd_0005_0100__6(float_array & y, float_array &x)
+float chebyshev_2rd_0005_0100__6(f32_array & y, f32_array &x)
 {
 
    y.set_size(4);
