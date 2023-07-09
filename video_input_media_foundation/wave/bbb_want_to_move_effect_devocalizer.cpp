@@ -679,7 +679,7 @@ namespace wave
 
    void effect_devocalizer::Group::Channel::Output(
       sort_array < double > & faMax,
-      int_array & iaMax)
+      ::i32_array & iaMax)
    {
 
       //   double * pfL = m_pf1;
@@ -702,7 +702,7 @@ namespace wave
 //         double fDiv;
 //         double fTonic;
       i32 iCount = m_pgroup->m_pparent->m_iSampleCount / 2 + 1;
-      int_array ia;
+      ::i32_array ia;
       ia.set_size(iCount);
 //         if(false)
 //         {

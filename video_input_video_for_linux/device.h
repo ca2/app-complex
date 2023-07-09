@@ -12,7 +12,7 @@ namespace video_input_video_for_linux
 
 	//class ::image;
 
-	using subtype_map = string_map < int_array >;
+	using subtype_map = string_map < ::i32_array >;
 
 	using frame_rate_map = map < ::u64, subtype_map >;
 

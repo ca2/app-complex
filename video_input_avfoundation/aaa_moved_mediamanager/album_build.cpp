@@ -492,7 +492,7 @@ namespace mediamanager
    }
 
 
-   bool album_build::AddEmpty(int_array & ia, ::file::listing & stra)
+   bool album_build::AddEmpty(::i32_array & ia, ::file::listing & stra)
    {
 
       ::pointer<::sqlite::database>pdb   = m_pdatabase;
@@ -639,7 +639,7 @@ namespace mediamanager
    }
 
 
-   bool album_build::erase(int_array & ia)
+   bool album_build::erase(::i32_array & ia)
    {
 
       i32 iGroup = 30;
@@ -1180,7 +1180,7 @@ namespace mediamanager
    }
 
 
-   void album_build::GetExistingFiles(int_array & ia,  ::file::listing & straFile,   time_array & timea)
+   void album_build::GetExistingFiles(::i32_array & ia,  ::file::listing & straFile,   time_array & timea)
    {
 
       //::pointer<::sqlite::dataset>pdataset = m_pdatasetGetExRead;
@@ -1200,7 +1200,7 @@ namespace mediamanager
    }
 
 
-   void album_build::GetExistingFiles(::pointer<::database::result_set>pset,  int_array & ia, ::file::listing & wstraFile, time_array & timea)
+   void album_build::GetExistingFiles(::pointer<::database::result_set>pset,  ::i32_array & ia, ::file::listing & wstraFile, time_array & timea)
    {
 
       //::count iRowCount = pset->m_rowa.get_count();
@@ -1286,9 +1286,9 @@ namespace mediamanager
 
    void album_build::CalcFiles(file_info & fileinfo, bool bRestart)
    {
-      int_array & iaOld    = fileinfo.m_iaOld;
-      int_array & iaUpdate = fileinfo.m_iaUpdate;
-      int_array & iaRemove = fileinfo.m_iaRemove;
+      ::i32_array & iaOld    = fileinfo.m_iaOld;
+      ::i32_array & iaUpdate = fileinfo.m_iaUpdate;
+      ::i32_array & iaRemove = fileinfo.m_iaRemove;
       ::file::listing & straNew = fileinfo.m_wstraNew; // [in]  the files that must be in the album
       time_array & timeaNew = fileinfo.m_timeaNew; // [in]  the files last write time
       ::file::listing & straOld = fileinfo.m_wstraOld; // [in]  the files that are already in the album
@@ -1398,7 +1398,7 @@ namespace mediamanager
    }
 
 
-   int_array & album_build::GetPriorityArray()
+   ::i32_array & album_build::GetPriorityArray()
    {
       return m_iaPriority;
    }

@@ -53,7 +53,7 @@ namespace wave
       class ::time                                     m_time;
       class ::time                                     m_timeStart;
       i64                                             m_iBytes;
-      int_array                                       m_iaFree;
+      ::i32_array                                       m_iaFree;
       manual_reset_event                              m_evRead;
       manual_reset_event                              m_evWritten;
       bool                                            m_bPluginEverSet;

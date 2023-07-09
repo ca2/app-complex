@@ -49,14 +49,14 @@ namespace wave
             f64_array                     m_da3;
             complexd_array                   m_complexa;
             sort_array < double >            m_faMax;
-            int_array                        m_iaMax;
+            ::i32_array                        m_iaMax;
 
 
             Channel();
 
             void Initialize(Group * pgroup);
             void Input(bool bFilter);
-            void Output(sort_array < double > & faMax, int_array & iaMax);
+            void Output(sort_array < double > & faMax, ::i32_array & iaMax);
 
          };
 
