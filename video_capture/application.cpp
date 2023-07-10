@@ -89,7 +89,7 @@ namespace app_complex_video_capture
 
       auto pfactory = acmesystem()->factory("video_input", "avfoundation");
 
-#elif defined(LINUX)
+#elif defined(LINUX) || defined(FREEBSD)
 
       auto pfactory = acmesystem()->factory("video_input", "video_for_linux");
 

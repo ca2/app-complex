@@ -70,7 +70,7 @@ add_dependencies(${PROJECT_NAME} ${app_common_dependencies})
 add_dependencies(${PROJECT_NAME} database_sqlite3)
 
 
-if(${LINUX})
+if(${LINUX} OR ${FREEBSD})
 
    add_dependencies(${PROJECT_NAME} video_input_video_for_linux)
 

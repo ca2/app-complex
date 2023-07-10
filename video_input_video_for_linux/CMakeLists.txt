@@ -53,18 +53,18 @@ if (MSVC)
     target_link_options(video_input_video_for_linux PRIVATE "/IMPLIB:${LIBRARY_OUTPUT_PATH}/video_input_video_for_linux.lib")
     target_link_options(video_input_video_for_linux PRIVATE "/DEF:${CMAKE_CURRENT_SOURCE_DIR}/video_input_video_for_linux.def")
     target_link_libraries(video_input_video_for_linux PRIVATE acme apex aqua aura Gdiplus)
-elseif(${LINUX})
+elseif(${LINUX} OR ${FREEBSD})
 
    if(USE_PKGCONFIG)
       pkg_check_modules(PKGCONFIG libavcodec libswscale libavformat libavutil libv4l2 libudev)
    endif()
    target_compile_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
-target_compile_options(static_${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
+   target_compile_options(static_${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
    target_link_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_LDFLAGS})
    target_link_options(static_${PROJECT_NAME} PRIVATE ${PKGCONFIG_LDFLAGS})
    #target_link_options(video_input_video_for_linux PRIVATE -Wl,-rpath=$ORIGIN)
-   target_link_libraries(video_input_video_for_linux PRIVATE ${library_references} ${PKGCONFIG_LIBRARIES})
-   target_link_options(video_input_video_for_linux PRIVATE -Wl,-z,defs)
+   target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references} ${PKGCONFIG_LIBRARIES})
+   target_link_options(${PROJECT_NAME} PRIVATE -Wl,-z,defs)
    message(STATUS "PKGCONFIG_LIBRARIES is " ${PKGCONFIG_LIBRARIES})
    
 endif()
@@ -79,4 +79,4 @@ target_include_directories(${PROJECT_NAME} PRIVATE ${library_include_directories
 target_include_directories(static_${PROJECT_NAME} PRIVATE ${library_include_directories})
 
 
-target_compile_definitions(video_input_video_for_linux PRIVATE _VIDEO_INPUT_VIDEO_FOR_LINUX_LIBRARY)
+target_compile_definitions(${PROJECT_NAME} PRIVATE _VIDEO_INPUT_VIDEO_FOR_LINUX_LIBRARY)

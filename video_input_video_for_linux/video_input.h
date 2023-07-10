@@ -37,11 +37,11 @@ namespace video_input_video_for_linux
 
 		void close_all_devices();
 
-		bool are_devices_accessible();
+		bool are_devices_accessible() override;
 
 		void set_verbose(bool state);
 
-		virtual void _update_device_list();
+		void _update_device_list() override;
 
 		//void initDevices(IMFAttributes * pAttributes);
 

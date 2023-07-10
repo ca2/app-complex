@@ -3,6 +3,9 @@
 #include "video_input.h"
 #include "device.h"
 #include "acme/parallelization/synchronous_lock.h"
+#if defined(FREEBSD)
+#define __BSD_VISIBLE 1
+#endif
 #include <dirent.h>
 #include <fcntl.h>
 
@@ -105,7 +108,11 @@ namespace video_input_video_for_linux
          if ((fd = v4l2_open(strDevice, O_RDWR | O_NONBLOCK)) == -1)
          {
 
-            information("Unable to open %s", strDevice.c_str());
+            auto cerrornumber = c_error_number();
+
+            auto strErrorDescription = cerrornumber.get_error_description();
+
+            information("Unable to open %s - %s", strDevice.c_str(), strErrorDescription.c_str());
 
             continue;
 

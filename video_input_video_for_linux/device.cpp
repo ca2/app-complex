@@ -1045,7 +1045,7 @@ namespace video_input_video_for_linux
 
          auto cerrornumber = c_error_number();
 
-         if(iErrNo != ENODEV)
+         if(cerrornumber != ENODEV)
          {
 
             auto estatus = cerrornumber.estatus();
