@@ -51,7 +51,7 @@ namespace mediaplaylist
 
       virtual void _001OnButtonAction(::pointer<user::interaction>pinteraction) override;
       virtual void _001OnInitializeControl(::pointer<user::interaction>pinteraction) override;
-      virtual void _001InsertColumns() override;
+      virtual void on_insert_columns() override;
       virtual void _001GetItemImage(::user::mesh_item * pitem) override;
       e_mode GetMode();
 
@@ -86,7 +86,7 @@ namespace mediaplaylist
       virtual bool playlist_erase(index iItem);
 
       virtual bool on_click(::item * pitem) override;
-      //void _001OnSelectionChange() override;
+      //void on_selection_change() override;
 
       index playlist_index(const ::file::path & pathName);
       void update_playlist_hilite(const ::file::path & pathPlaylist);

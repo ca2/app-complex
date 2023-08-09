@@ -122,7 +122,7 @@ namespace mediaplaylist
    }
 
 
-   void list_impact::_001InsertColumns()
+   void list_impact::on_insert_columns()
    {
 
       {
@@ -463,7 +463,7 @@ namespace mediaplaylist
 
       ::user::range range;
 
-      _001GetSelection(range);
+      get_selection(range);
 
       string_array stra;
 
@@ -549,7 +549,7 @@ namespace mediaplaylist
 
       ::user::range range;
 
-      _001GetSelection(range);
+      get_selection(range);
 
       index_array ia;
 
@@ -597,7 +597,7 @@ namespace mediaplaylist
 
       ::user::range range;
 
-      _001GetSelection(range);
+      get_selection(range);
 
       pcommand->enable(range.get_item_count() > 0);
       pcommand->m_bRet = true;
@@ -659,7 +659,7 @@ namespace mediaplaylist
    {
       UNREFERENCED_PARAMETER(pmessage);
       ::user::range range;
-      _001GetSelection(range);
+      get_selection(range);
       if(range.get_item_count() > 0)
       {
          index iItem = range.ItemAt(0).get_lower_bound();
@@ -681,7 +681,7 @@ namespace mediaplaylist
    {
       ::pointer<::message::command>pcommand(pmessage);
       ::user::range range;
-      _001GetSelection(range);
+      get_selection(range);
       pcommand->enable(range.get_item_count() > 0);
       pcommand->m_bRet = true;
    }

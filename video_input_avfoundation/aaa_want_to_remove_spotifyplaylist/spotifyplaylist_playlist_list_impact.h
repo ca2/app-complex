@@ -43,7 +43,7 @@ namespace mediaplaylist
 
       virtual void _001OnButtonAction(::pointer<user::interaction>pinteraction);
       virtual void _001OnInitializeForm(::pointer<user::interaction>pinteraction);
-      virtual void _001InsertColumns();
+      virtual void on_insert_columns();
       virtual void _001GetItemImage(::user::mesh_item * pitem);
       e_mode GetMode();
 
@@ -70,7 +70,7 @@ namespace mediaplaylist
       virtual bool playlist_select(int iItem);
       virtual bool playlist_erase(int iItem);
 
-      void _001OnSelectionChange();
+      void on_selection_change();
 
    };
 
