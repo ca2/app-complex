@@ -15,7 +15,7 @@ namespace app_complex_video_capture
    {
    public:
 
-      map < ::pointer<::video_input::device>, ::pointer<::item>> m_itemmap;
+      //map < ::pointer<::video_input::device>, ::pointer<::item>> m_itemmap;
 
 
       device_selector();
@@ -26,10 +26,10 @@ namespace app_complex_video_capture
 //      // void dump(dump_context & dumpcontext) const override;
 
 
-      virtual void update_item_map();
+      bool on_impact_update() override;
 
 
-      item* get_user_item(::video_input::device * pdevice);
+      //item* get_user_item(::video_input::device * pdevice);
 
 
       void install_message_routing(::channel * pchannel) override;

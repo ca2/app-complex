@@ -2,7 +2,7 @@
 
 
 #include "_struct.h"
-//#include "acme/primitive/geometry2d/_geometry2d.h"
+#include "acme/handler/item.h"
 #include "acme/primitive/collection/string_map.h"
 
 
@@ -28,7 +28,7 @@ namespace video_input
 
 
 	class CLASS_DECL_VIDEO_INPUT device :
-		virtual public ::object
+		virtual public ::item
 	{
 
 	public:

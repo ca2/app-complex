@@ -19,6 +19,7 @@ namespace video_input
 		m_emergencystopcallback(NULL)
 	{
 
+      m_eelement = e_element_item;
 	   m_edevicestate = e_device_state_initial;
 
 	}
