@@ -134,8 +134,10 @@ namespace app_complex_video_capture
 
             string strDevice = get_app()->get_current_video_input_device();
 
-            for (auto & pdevice : get_app()->m_pvideoinput->devicea())
+            for (auto & pitem : get_app()->m_pvideoinput->itema())
             {
+
+               ::pointer < ::video_input::device > pdevice = pitem;
 
                string strId = pdevice->get_id2();
 

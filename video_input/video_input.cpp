@@ -32,6 +32,7 @@ namespace video_input
 
 		::object::initialize(pparticle);
 
+      __defer_construct_new(m_pitemaDevice);
 
 	}
 
@@ -62,8 +63,10 @@ namespace video_input
 	void video_input::close_all_devices()
 	{
 		
-		for (auto & pdevice : devicea())
+		for (auto & pitem : itema())
 		{
+
+         ::pointer < ::video_input::device > pdevice = pitem;
 
 			pdevice->close();
 
@@ -233,8 +236,17 @@ namespace video_input
 	device * video_input::find_device_with_hardware_id(const ::string & strHardwareId) const
 	{
 
-		for (auto & pdevice : m_devicea)
+      if (!m_pitemaDevice)
+      {
+
+         return nullptr;
+
+      }
+
+		for (auto & pitem : itema())
 		{
+
+         ::pointer < ::video_input::device > pdevice = pitem;
 
 			if (pdevice->m_strHardwareId == strHardwareId)
 			{

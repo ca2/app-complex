@@ -430,7 +430,7 @@ namespace video_input_media_foundation
          if (m_pdevice->m_edevicestate == ::video_input::e_device_state_device_removed)
          {
 
-            m_pdevice->m_pvideoinput->erase_device(m_pdevice);
+            m_pdevice->m_pvideoinput->itema().erase(m_pdevice);
 
             break;
 

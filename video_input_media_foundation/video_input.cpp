@@ -47,7 +47,7 @@ namespace video_input_media_foundation
    void video_input::initialize(::particle * pparticle)
    {
 
-      ::object::initialize(pparticle);
+      ::video_input::video_input::initialize(pparticle);
 
       register_device_listener(::hardware::e_device_video_input);
 
@@ -89,8 +89,10 @@ namespace video_input_media_foundation
    void video_input::close_all_devices()
    {
 
-      for (auto & pdevice : devicea())
+      for (auto & pitem : itema())
       {
+
+         ::pointer < ::video_input::device > pdevice = pitem;
 
          pdevice->close();
 
@@ -172,16 +174,18 @@ namespace video_input_media_foundation
 
          pdevice->m_pvideoinput = this;
 
-         add_device(pdevice);
+         itema().add(pdevice);
 
       }
 
       m_estatusAccessToDevices = ::success;
 
-      for (index i = 0; i < m_devicea.get_count();)
+      for (index i = 0; i < m_pitemaDevice->get_count();)
       {
 
-         auto pdevice = m_devicea[i];
+         auto pitem = m_pitemaDevice->element_at(i);
+
+         ::pointer < ::video_input::device > pdevice = pitem;
 
          if (straHardwareId.contains(pdevice->m_strHardwareId))
          {
@@ -192,7 +196,7 @@ namespace video_input_media_foundation
          else
          {
 
-            m_devicea.erase_at(i);
+            m_pitemaDevice->erase_at(i);
 
          }
 

@@ -137,42 +137,44 @@ namespace app_complex_video_capture
 
       //}
 
-      pointer_array < ::item > itema;
+      m_pitema = get_app()->m_pvideoinput->m_pitemaDevice;
 
-      for (auto & pitem : m_itema)
-      {
+      //pointer_array < ::item > itema;
 
-         itema.add(pitem);
+      //for (auto & pitem : m_itema)
+      //{
 
-      }
+      //   itema.add(pitem);
 
-      for (auto & pitem : itema)
-      {
+      //}
 
-         ::pointer < ::video_input::device > pdevice = pitem;
+      //for (auto & pitem : itema)
+      //{
 
-         if (!get_app()->m_pvideoinput->devicea().contains(pdevice))
-         {
+      //   ::pointer < ::video_input::device > pdevice = pitem;
 
-            itema.erase(pdevice);
+      //   if (!get_app()->m_pvideoinput->devicea().contains(pdevice))
+      //   {
 
-         }
+      //      itema.erase(pdevice);
 
-      }
+      //   }
 
-      for (auto & pdevice : get_app()->m_pvideoinput->devicea())
-      {
+      //}
 
-         if (!itema.contains(pdevice))
-         {
+      //for (auto & pdevice : get_app()->m_pvideoinput->devicea())
+      //{
 
-            itema.add(pdevice);
+      //   if (!itema.contains(pdevice))
+      //   {
 
-         }
+      //      itema.add(pdevice);
 
-      }
+      //   }
 
-      if (!get_app()->m_pvideoinput->devicea().contains(get_app()->m_pvideoinputdevice))
+      //}
+
+      if (!get_app()->m_pvideoinput->itema().contains(get_app()->m_pvideoinputdevice))
       {
 
          get_app()->set_current((::video_input::device *)nullptr);
@@ -193,7 +195,7 @@ namespace app_complex_video_capture
 
       //}
 
-      m_itema = itema;
+      //m_itema = itema;
 
       set_need_layout();
 
@@ -209,7 +211,7 @@ namespace app_complex_video_capture
 
       ::rectangle_i32 rectItem;
 
-      for (auto & pitem : m_itema)
+      for (auto & pitem : *m_pitema)
       {
 
          auto puseritem = user_item(pitem);
@@ -313,8 +315,10 @@ namespace app_complex_video_capture
 
       index iItem = 0;
 
-      for (auto & pdevice : get_app()->m_pvideoinput->devicea())
+      for (auto & pitem : get_app()->m_pvideoinput->itema())
       {
+
+         ::pointer < ::video_input::device > pdevice = pitem;
 
          auto puseritem = user_item(pdevice);
 

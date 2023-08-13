@@ -188,8 +188,10 @@ namespace app_complex_video_capture
 
       string strBilbo;
 
-      for (auto & pdevice : m_pvideoinput->devicea())
+      for (auto & pitem : m_pvideoinput->itema())
       {
+
+         ::pointer < ::video_input::device > pdevice = pitem;
 
          string strName = pdevice->get_name();
 
@@ -226,7 +228,7 @@ namespace app_complex_video_capture
    void application::set_current(::video_input::device * pdevice)
    {
 
-      if (::is_set(pdevice) && !m_pvideoinput->contains_device(pdevice))
+      if (::is_set(pdevice) && !m_pvideoinput->itema().contains(pdevice))
       {
 
          throw ::exception(::error_invalid_parameter, "Device should make part of video input");

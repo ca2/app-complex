@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "acme/handler/item.h"
+
+
 namespace video_input
 {
 
@@ -14,7 +17,9 @@ namespace video_input
 	public:
 
 
-		DECLARE_ARRAY_OF(device_array, device, ::video_input::device);
+      /// item : ::video_input::device
+      ::pointer < ::item_array >       m_pitemaDevice;
+		//DECLARE_ARRAY_OF(device_array, device, ::video_input::device);
 
 		device_array();
 
@@ -24,6 +29,9 @@ namespace video_input
 		virtual device * get_device_by_id2(const ::string & pszMd5);
 		virtual device * get_device_by_name(const ::string & pszMd5);
 
+
+      virtual ::item_array & itema();
+      virtual const ::item_array & itema() const;
 
 	};
 

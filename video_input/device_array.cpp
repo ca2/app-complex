@@ -112,8 +112,10 @@ namespace video_input
 
 		synchronous_lock synchronouslock(this->synchronization());
 
-		for (auto & pdevice : devicea())
+		for (auto & pitem : itema())
 		{
+
+         ::pointer < ::video_input::device > pdevice = pitem;
 
 			if (pdevice->get_id2().case_insensitive_order(pszMd5) == 0)
 			{
@@ -135,8 +137,10 @@ namespace video_input
 		synchronous_lock synchronouslock(this->synchronization());
 
 
-		for (auto & pdevice : devicea())
+		for (auto & pitem : itema())
 		{
+
+         ::pointer < ::video_input::device > pdevice = pitem;
 
 			if (pdevice->get_name().case_insensitive_order(pszName) == 0)
 			{
@@ -169,6 +173,22 @@ namespace video_input
 	//	return instance;
 
 	//}
+
+
+   ::item_array & device_array::itema()
+   {
+
+      return *m_pitemaDevice;
+
+   }
+
+
+   const ::item_array & device_array::itema() const
+   {
+
+      return *m_pitemaDevice;
+
+   }
 
 
 } // namespace video_input
