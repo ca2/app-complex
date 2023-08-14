@@ -176,7 +176,7 @@ namespace video_input_video_for_linux
 
             pdev->initialize(this);
 
-            m_devicea.add(pdev);
+            m_pitemaDevice->add(pdev);
 
             pdevice = pdev;
 
@@ -190,15 +190,15 @@ namespace video_input_video_for_linux
 
       closedir(dirp);
 
-      for(::index i = 0; i < m_devicea.get_size();)
+      for(::index i = 0; i < m_pitemaDevice->get_size();)
       {
 
-         auto pdev = m_devicea[i].cast < device >();
+         auto pdev = m_pitemaDevice->element_at(i).cast < device >();
 
          if(!straDevice.case_insensitive_contains(pdev->m_strDevice))
          {
 
-            m_devicea.erase_at(i);
+            m_pitemaDevice->erase_at(i);
 
          }
          else
@@ -218,8 +218,10 @@ namespace video_input_video_for_linux
 	void video_input::close_all_devices()
 	{
 		
-		for (auto & pdevice : devicea())
+		for (auto & pitem : *m_pitemaDevice)
 		{
+
+         ::pointer < ::video_input_video_for_linux::device >pdevice = pitem;
 
 			pdevice->close();
 
