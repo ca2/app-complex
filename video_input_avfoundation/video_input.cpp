@@ -55,7 +55,7 @@ namespace video_input_video_avfoundation
          pdevice->m_ptyperefAVCaptureDevice = typerefAVCaptureDevice;
                                                      
                                                      pdevice->initialize(this);
-         m_devicea.add(pdevice);
+         m_pitemaDevice->add(pdevice);
          
       }
       
@@ -67,8 +67,10 @@ namespace video_input_video_avfoundation
 	void video_input::close_all_devices()
 	{
 		
-		for (auto & pdevice : devicea())
+		for (auto & pitem : *m_pitemaDevice)
 		{
+         
+         ::pointer < ::video_input::device > pdevice = pitem;
 
 			pdevice->close();
 
