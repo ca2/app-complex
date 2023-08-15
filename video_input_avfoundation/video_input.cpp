@@ -18,7 +18,7 @@ namespace video_input_video_avfoundation
 
 	video_input::~video_input(void)
 	{
-
+      uninstall_avcapture_video_input_callback(this);
 
 	}
 
@@ -27,8 +27,34 @@ namespace video_input_video_avfoundation
 	{
 
 		::object::initialize(pparticle);
+      
+      install_avcapture_video_input_callback(this);
 
 	}
+
+   void video_input::on_device_connected()
+   {
+   
+      fork([this]()
+           {
+         
+         update_device_list();
+         
+      });
+      
+   }
+
+   void video_input::on_device_disconnected()
+   {
+      
+      fork([this]()
+           {
+         
+         update_device_list();
+      });
+      
+      
+   }
 
 
 	void video_input::_update_device_list()
@@ -37,6 +63,8 @@ namespace video_input_video_avfoundation
 		synchronous_lock synchronouslock(this->synchronization());
 
       CFTypeRef * ptyperef = nullptr;
+      
+      auto pitemaDevice = __new(::item_array);
       
       auto count =  avfoundation_enumerate_webcams(&ptyperef);
       
@@ -55,9 +83,11 @@ namespace video_input_video_avfoundation
          
          pdevice->initialize(this);
          
-         m_pitemaDevice->add(pdevice);
+         pitemaDevice->add(pdevice);
          
       }
+      
+      m_pitemaDevice = pitemaDevice;
       
       m_estatusAccessToDevices = ::success;
       

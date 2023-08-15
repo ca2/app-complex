@@ -2,6 +2,7 @@
 
 
 #include "device_array.h"
+#include "apex/handler/source.h"
 
 
 namespace video_input
@@ -10,7 +11,8 @@ namespace video_input
 
    class CLASS_DECL_VIDEO_INPUT video_input :
       virtual public ::object,
-      virtual public ::video_input::device_array
+      virtual public ::video_input::device_array,
+      virtual public ::source
    {
    public:
 

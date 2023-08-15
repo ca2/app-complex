@@ -32,22 +32,6 @@ namespace app_complex_video_capture
    }
 
 
-   //void device_selector::assert_ok() const
-   //{
-
-   //   user::box::assert_ok();
-
-   //}
-
-
-   //void device_selector::dump(dump_context & dumpcontext) const
-   //{
-
-   //   user::box::dump(dumpcontext);
-
-   //}
-
-
    void device_selector::install_message_routing(::channel * pchannel)
    {
 
@@ -75,6 +59,8 @@ namespace app_complex_video_capture
       }
 
       top_level()->add_prodevian(this);
+      
+      get_app()->m_pvideoinput->add_handler(this);
 
    }
 
@@ -274,8 +260,17 @@ namespace app_complex_video_capture
    {
 
       ::user::impact::handle(ptopic, pcontext);
-
-      if (ptopic->m_atom == ID_INITIAL_UPDATE)
+      
+      if(ptopic->m_pparticle == get_app()->m_pvideoinput)
+      {
+         if(ptopic->m_atom == ID_UPDATE)
+         {
+            
+            update_impact();
+         }
+         
+      }
+      else if (ptopic->m_atom == ID_INITIAL_UPDATE)
       {
 
          ::pointer<::userex::pane_tab_impact>ppaneimpact = get_typed_parent < ::userex::pane_tab_impact >();

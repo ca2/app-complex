@@ -11,6 +11,7 @@
 #include <dispatch/dispatch.h>
 
 #include "avcapture_device_callback.h"
+#include "avcapture_video_input_callback.h"
 
 @interface Capture : NSObject <AVCaptureVideoDataOutputSampleBufferDelegate>
 - (void) captureOutput: (AVCaptureOutput*) poutput
@@ -421,5 +422,71 @@ bool avcapture_device_set_best_format_001(CFTypeRef ptyperef, int * w, int * h)
    *h = dimensions.height;
    
    return true;
+   
+}
+#include <map>
+std::map < avcapture_video_input_callback*, id> g_mapDeviceWatcherAddedObserver;
+std::map < avcapture_video_input_callback*, id> g_mapDeviceWatcherRemovedObserver;
+void install_avcapture_video_input_callback(avcapture_video_input_callback * pcallback)
+{
+   
+   NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+   if(!g_mapDeviceWatcherAddedObserver.contains(pcallback))
+         {
+      g_mapDeviceWatcherAddedObserver[pcallback] = [center addObserverForName:AVCaptureDeviceWasConnectedNotification
+                                                                       object:nil
+                                                                        queue:[NSOperationQueue mainQueue]
+                                                                   usingBlock:^(NSNotification * _Nonnull note) {
+         
+         pcallback->on_device_connected();
+         //         AVCaptureDevice *device = [note object];
+         //         if ([device hasMediaType:AVMediaTypeVideo]) {
+         //             CMIODeviceID deviceId = device.connectionID;
+         //             dispatch_async(dispatch_get_main_queue(), ^{
+         //                 deviceWatcherDoCallback(deviceId, @"Added");
+         //             });
+         //         }
+      }];
+   }
+         
+         if(!g_mapDeviceWatcherRemovedObserver.contains(pcallback))
+         {
+      g_mapDeviceWatcherRemovedObserver[pcallback] = [center addObserverForName:AVCaptureDeviceWasDisconnectedNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+         //on_video_input_device_disconnected(p);
+         pcallback->on_device_disconnected();
+         //         AVCaptureDevice *device = [note object];
+         //         if ([device hasMediaType:AVMediaTypeVideo]) {
+         //             CMIODeviceID deviceId = device.connectionID;
+         //             dispatch_async(dispatch_get_main_queue(), ^{
+         //                 deviceWatcherDoCallback(deviceId, @"Removed");
+         //                 [cameraManager deviceRemoved:deviceId];
+         //             });
+      //}
+   }];
+      }
+   
+}
+
+void uninstall_avcapture_video_input_callback(avcapture_video_input_callback * pcallback)
+{
+   NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+
+   if(g_mapDeviceWatcherAddedObserver.contains(pcallback))
+   {
+      NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+      [center removeObserver:g_mapDeviceWatcherAddedObserver[pcallback]
+                        name:AVCaptureDeviceWasConnectedNotification
+                      object:nil];
+    
+      g_mapDeviceWatcherAddedObserver.erase(pcallback);
+   }
+   if(g_mapDeviceWatcherRemovedObserver.contains(pcallback))
+   {
+      [center removeObserver:g_mapDeviceWatcherRemovedObserver[pcallback]
+                        name:AVCaptureDeviceWasDisconnectedNotification
+                      object:nil];
+      g_mapDeviceWatcherRemovedObserver.erase(pcallback);
+   }
+   
    
 }

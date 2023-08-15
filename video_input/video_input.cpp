@@ -56,6 +56,8 @@ namespace video_input
 			throw ::exception(error_failed);
 
 		}
+      
+      notify_topic(ID_UPDATE);
 
 	}
 

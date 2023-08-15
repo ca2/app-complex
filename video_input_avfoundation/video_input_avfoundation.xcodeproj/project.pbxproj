@@ -66,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9A08BBDA2A8C26D90044537B /* avcapture_video_input_callback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avcapture_video_input_callback.h; sourceTree = "<group>"; };
 		9AAF63DD280868520067E73F /* video_input.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = video_input.xcodeproj; path = ../video_input/video_input.xcodeproj; sourceTree = "<group>"; };
 		9AAF63E82808686B0067E73F /* render.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = render.cpp; sourceTree = "<group>"; };
 		9AAF63E92808686B0067E73F /* thread.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = thread.cpp; sourceTree = "<group>"; };
@@ -166,11 +167,13 @@
 				9AB522962A4C0A7E001EB2F0 /* _____release.xcconfig */,
 				9AAF64CE2808686D0067E73F /* _.cpp */,
 				9AAF65532808686D0067E73F /* _.h */,
-				9AAF65CC2808797E0067E73F /* _video_input_avfoundation.h */,
 				9AAF652F2808686D0067E73F /* _factory.cpp */,
 				9AAF63EB2808686B0067E73F /* _struct.cpp */,
-				9AAF63F82808686B0067E73F /* callback.cpp */,
+				9AAF65CC2808797E0067E73F /* _video_input_avfoundation.h */,
 				9AAF652D2808686D0067E73F /* avcapture_device_callback.h */,
+				9A08BBDA2A8C26D90044537B /* avcapture_video_input_callback.h */,
+				9AAF65C92808759A0067E73F /* avfoundation.mm */,
+				9AAF63F82808686B0067E73F /* callback.cpp */,
 				9AAF643B2808686C0067E73F /* device.cpp */,
 				9AAF63F42808686B0067E73F /* device.h */,
 				9AAF64052808686B0067E73F /* framework.cpp */,
@@ -181,7 +184,6 @@
 				9AAF64AE2808686C0067E73F /* thread.h */,
 				9AAF64952808686C0067E73F /* video_input.cpp */,
 				9AAF644F2808686C0067E73F /* video_input.h */,
-				9AAF65C92808759A0067E73F /* avfoundation.mm */,
 			);
 			name = video_input_avfoundation;
 			sourceTree = "<group>";
