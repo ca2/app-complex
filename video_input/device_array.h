@@ -32,6 +32,11 @@ namespace video_input
 
       virtual ::item_array & itema();
       virtual const ::item_array & itema() const;
+      
+      virtual bool contains_item(::item * pitem) const;
+      
+      virtual bool has_item() const;
+      
 
 	};
 

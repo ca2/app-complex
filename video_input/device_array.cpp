@@ -190,6 +190,36 @@ namespace video_input
 
    }
 
+   
+   bool device_array::contains_item(::item * pitem) const
+   {
+   
+      if(!m_pitemaDevice)
+      {
+         
+         return false;
+         
+      }
+      
+      return m_pitemaDevice->contains(pitem);
+   
+   }
+
+
+   bool device_array::has_item() const
+   {
+   
+      if(!m_pitemaDevice)
+      {
+       
+         return 0;
+         
+      }
+   
+      return m_pitemaDevice->has_element();
+   
+   }
+
 
 } // namespace video_input
 

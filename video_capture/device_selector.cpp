@@ -174,7 +174,7 @@ namespace app_complex_video_capture
 
       //}
 
-      if (!get_app()->m_pvideoinput->itema().contains(get_app()->m_pvideoinputdevice))
+      if (!get_app()->m_pvideoinput->contains_item(get_app()->m_pvideoinputdevice))
       {
 
          get_app()->set_current((::video_input::device *)nullptr);
@@ -210,54 +210,59 @@ namespace app_complex_video_capture
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
       ::rectangle_i32 rectItem;
-
-      for (auto & pitem : *m_pitema)
+      
+      if(m_pitema)
       {
 
-         auto puseritem = user_item(pitem);
-
-         ::pointer < ::video_input::device > pdevice = pitem;
-
-         if (::is_set(pdevice))
+         for (auto & pitem : *m_pitema)
          {
-
-            if (pdevice == get_app()->m_pvideoinputdevice)
+            
+            auto puseritem = user_item(pitem);
+            
+            ::pointer < ::video_input::device > pdevice = pitem;
+            
+            if (::is_set(pdevice))
             {
-
-               if (m_pitemHover == pdevice)
+               
+               if (pdevice == get_app()->m_pvideoinputdevice)
                {
-
-                  pgraphics->fill_inset_rectangle(puseritem->m_rectangle, argb(127, 80, 180, 230));
-
+                  
+                  if (m_pitemHover == pdevice)
+                  {
+                     
+                     pgraphics->fill_inset_rectangle(puseritem->m_rectangle, argb(127, 80, 180, 230));
+                     
+                  }
+                  else
+                  {
+                     
+                     pgraphics->fill_inset_rectangle(puseritem->m_rectangle, argb(127, 50, 150, 200));
+                     
+                  }
+                  
                }
                else
                {
-
-                  pgraphics->fill_inset_rectangle(puseritem->m_rectangle, argb(127, 50, 150, 200));
-
+                  
+                  if (m_pitemHover == pdevice)
+                  {
+                     
+                     pgraphics->fill_inset_rectangle(puseritem->m_rectangle, argb(127, 100, 200, 255));
+                     
+                  }
+                  else
+                  {
+                     
+                     pgraphics->fill_inset_rectangle(puseritem->m_rectangle, argb(127, 0, 0, 0));
+                     
+                  }
+                  
                }
-
+               
+               pgraphics->draw_text(pdevice->m_strName, puseritem->m_rectangle, e_align_left_center);
+               
             }
-            else
-            {
-
-               if (m_pitemHover == pdevice)
-               {
-
-                  pgraphics->fill_inset_rectangle(puseritem->m_rectangle, argb(127, 100, 200, 255));
-
-               }
-               else
-               {
-
-                  pgraphics->fill_inset_rectangle(puseritem->m_rectangle, argb(127, 0, 0, 0));
-
-               }
-
-            }
-
-            pgraphics->draw_text(pdevice->m_strName, puseritem->m_rectangle, e_align_left_center);
-
+            
          }
 
       }
@@ -314,35 +319,36 @@ namespace app_complex_video_capture
       int h = 50;
 
       index iItem = 0;
-
-      for (auto & pitem : get_app()->m_pvideoinput->itema())
+      
+      if(get_app()->m_pvideoinput->has_item())
       {
 
-         ::pointer < ::video_input::device > pdevice = pitem;
-
-         auto puseritem = user_item(pdevice);
-
-         if (::is_set(puseritem))
+         for (auto & pitem : get_app()->m_pvideoinput->itema())
          {
-
-            puseritem->m_rectangle.left = rectangleClient.left;
-            puseritem->m_rectangle.right = rectangleClient.right;
-            puseritem->m_rectangle.top = y;
-            puseritem->m_rectangle.bottom = y + h;
-            y += h;
-
-            pdevice->m_iItem = iItem;
-            pdevice->m_eelement = e_element_item;
-
-            iItem++;
-
+            
+            ::pointer < ::video_input::device > pdevice = pitem;
+            
+            auto puseritem = user_item(pdevice);
+            
+            if (::is_set(puseritem))
+            {
+               
+               puseritem->m_rectangle.left = rectangleClient.left;
+               puseritem->m_rectangle.right = rectangleClient.right;
+               puseritem->m_rectangle.top = y;
+               puseritem->m_rectangle.bottom = y + h;
+               y += h;
+               
+               pdevice->m_iItem = iItem;
+               pdevice->m_eelement = e_element_item;
+               
+               iItem++;
+               
+            }
+         
          }
 
-
-
       }
-
-
 
    }
 

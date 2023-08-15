@@ -62,7 +62,6 @@
 		9AAF62DB280866B30067E73F /* media_format.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = media_format.h; sourceTree = "<group>"; };
 		9AAF62DC280866B30067E73F /* render.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = render.cpp; sourceTree = "<group>"; };
 		9AAF62DD280866B30067E73F /* _struct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _struct.h; sourceTree = "<group>"; };
-		9AAF62DE280866B30067E73F /* _video_input.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _video_input.h; sourceTree = "<group>"; };
 		9AAF62E0280866B30067E73F /* _struct.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _struct.cpp; sourceTree = "<group>"; };
 		9AAF62E8280866B30067E73F /* frame.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = frame.cpp; sourceTree = "<group>"; };
 		9AAF62EA280866B30067E73F /* device.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = device.h; sourceTree = "<group>"; };
@@ -79,9 +78,7 @@
 		9AAF637E280866B30067E73F /* _.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _.cpp; sourceTree = "<group>"; };
 		9AAF6385280866B30067E73F /* department.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = department.h; sourceTree = "<group>"; };
 		9AAF6386280866B30067E73F /* debug_print_out.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = debug_print_out.h; sourceTree = "<group>"; };
-		9AAF6387280866B30067E73F /* video.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = video.h; sourceTree = "<group>"; };
 		9AAF6389280866B30067E73F /* framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
-		9AAF638A280866B30067E73F /* graphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = graphics.h; sourceTree = "<group>"; };
 		9AAF63AA280866B40067E73F /* render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = render.h; sourceTree = "<group>"; };
 		9AAF63CA280866B40067E73F /* device_array.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = device_array.cpp; sourceTree = "<group>"; };
 		9AAF63CB280866B40067E73F /* _.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
@@ -124,7 +121,6 @@
 				9AAF63CB280866B40067E73F /* _.h */,
 				9AAF62E0280866B30067E73F /* _struct.cpp */,
 				9AAF62DD280866B30067E73F /* _struct.h */,
-				9AAF62DE280866B30067E73F /* _video_input.h */,
 				9AAF635E280866B30067E73F /* asynchronous_cache.h */,
 				9AAF6386280866B30067E73F /* debug_print_out.h */,
 				9AAF6336280866B30067E73F /* department.cpp */,
@@ -139,14 +135,12 @@
 				9AAF631A280866B30067E73F /* frame.h */,
 				9AAF62FB280866B30067E73F /* framework.cpp */,
 				9AAF6389280866B30067E73F /* framework.h */,
-				9AAF638A280866B30067E73F /* graphics.h */,
 				9AAF63D2280866B40067E73F /* media_format.cpp */,
 				9AAF62DB280866B30067E73F /* media_format.h */,
 				9AAF62DC280866B30067E73F /* render.cpp */,
 				9AAF63AA280866B40067E73F /* render.h */,
 				9AAF637A280866B30067E73F /* video_input.cpp */,
 				9AAF6335280866B30067E73F /* video_input.h */,
-				9AAF6387280866B30067E73F /* video.h */,
 			);
 			name = video_input;
 			sourceTree = "<group>";

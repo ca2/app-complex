@@ -12,7 +12,7 @@ Makefile
 **/.svn
 **/.link_object
 **/CVS
-*.xcuserdata
+**/xcuserdata
 .DS_Store
 ._.DS_Store
 *.suo

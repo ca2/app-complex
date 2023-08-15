@@ -49,12 +49,12 @@ namespace video_input_video_avfoundation
          
          string strHardwareId = ::string_from_strdup(avcapture_device_unique_id(typerefAVCaptureDevice));
          
-         auto pdevice = memory_new device(iDevice, strName,"", strHardwareId);
-         
-                                                     
+         auto pdevice = __new(device(iDevice, strName,"", strHardwareId));
+  
          pdevice->m_ptyperefAVCaptureDevice = typerefAVCaptureDevice;
-                                                     
-                                                     pdevice->initialize(this);
+         
+         pdevice->initialize(this);
+         
          m_pitemaDevice->add(pdevice);
          
       }
