@@ -83,7 +83,7 @@ namespace app_complex_video_capture
 
    //      pitem->m_pparticle = pdevice;
 
-   //      pitem->m_eelement = e_element_item;
+   //      pitem->m_item.m_eelement = e_element_item;
 
    //      add_user_item(pitem);
 

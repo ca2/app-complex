@@ -221,7 +221,7 @@ namespace mediaplaylist
 
    void playlist_list_impact::_001GetItemImage(::user::mesh_item * pitem)
    {
-      if(pitem->m_iSubItem == 0 || pitem->m_iSubItem == 1)
+      if(pitem->m_item.m_iSubItem == 0 || pitem->m_item.m_iSubItem == 1)
       {
          pitem->m_iImage = 0;
          pitem->m_bOk = true;
@@ -537,7 +537,7 @@ namespace mediaplaylist
       if(pitem->m_bOk)
          return;
 
-      if(pitem->m_iItem < 0)
+      if(pitem->m_item.m_iItem < 0)
       {
          pitem->m_bOk = false;
          return;
@@ -559,13 +559,13 @@ namespace mediaplaylist
       }
 
 
-      if(pitem->m_iItem >= m_plisting->get_size()
+      if(pitem->m_item.m_iItem >= m_plisting->get_size()
          && ::is_set(papp->mediaplaylist()->spotify()))
       {
 
          synchronous_lock synchronouslock(&papp->mediaplaylist()->spotify()->m_pmutex2);
 
-         if(pitem->m_iItem < m_plisting->get_size() + papp->mediaplaylist()->spotify()->m_pla.get_count())
+         if(pitem->m_item.m_iItem < m_plisting->get_size() + papp->mediaplaylist()->spotify()->m_pla.get_count())
          {
             pitem->m_colorText = argb(255, 80, 184, 123);
 
@@ -601,7 +601,7 @@ namespace mediaplaylist
 
       }
 
-      if(pitem->m_iItem < 0)
+      if(pitem->m_item.m_iItem < 0)
       {
 
          pitem->m_bOk = false;
@@ -610,15 +610,15 @@ namespace mediaplaylist
 
       }
 
-      if(pitem->m_iItem >= m_plisting->get_size())
+      if(pitem->m_item.m_iItem >= m_plisting->get_size())
       {
 
          synchronous_lock synchronouslock(&papp->mediaplaylist()->spotify()->m_pmutex2);
 
-         if(pitem->m_iItem < m_plisting->get_size() + papp->mediaplaylist()->spotify()->m_pla.get_count())
+         if(pitem->m_item.m_iItem < m_plisting->get_size() + papp->mediaplaylist()->spotify()->m_pla.get_count())
          {
 
-            auto iItem = pitem->m_iItem - m_plisting->get_size();
+            auto iItem = pitem->m_item.m_iItem - m_plisting->get_size();
 
             auto pl = papp->mediaplaylist()->spotify()->m_pla[iItem];
 
@@ -631,31 +631,31 @@ namespace mediaplaylist
 
             }
 
-            if(pitem->m_iSubItem == 0)
+            if(pitem->m_item.m_iSubItem == 0)
             {
 
                pitem->m_strText =  "spotify://" + strName;
 
             }
-            else if(pitem->m_iSubItem == 1)
+            else if(pitem->m_item.m_iSubItem == 1)
             {
 
                pitem->m_strText ="spotify://" + strName;
 
             }
-            else if(pitem->m_iSubItem == 2)
+            else if(pitem->m_item.m_iSubItem == 2)
             {
 
                pitem->m_strText = strName;
 
             }
-            else if(pitem->m_iSubItem == 3)
+            else if(pitem->m_item.m_iSubItem == 3)
             {
 
                pitem->m_strText = "spotify://" + strName;
 
             }
-            else if (pitem->m_iSubItem == 5)
+            else if (pitem->m_item.m_iSubItem == 5)
             {
 
                pitem->m_strText = pl->m_strUrl;
@@ -678,28 +678,28 @@ namespace mediaplaylist
       ASSERT_VALID(this);
       //::pointer<::mediaplaylist::document>pdocument = get_document();
       //::file::path wstrSongPath;
-      if(pitem->m_iSubItem == 0)
+      if(pitem->m_item.m_iSubItem == 0)
       {
 
-         pitem->m_strText = (*m_plisting)[pitem->m_iItem];
+         pitem->m_strText = (*m_plisting)[pitem->m_item.m_iItem];
 
       }
-      else if(pitem->m_iSubItem == 1)
+      else if(pitem->m_item.m_iSubItem == 1)
       {
 
-         pitem->m_strText = (*m_plisting)[pitem->m_iItem];
+         pitem->m_strText = (*m_plisting)[pitem->m_item.m_iItem];
 
       }
-      else if(pitem->m_iSubItem == 2)
+      else if(pitem->m_item.m_iSubItem == 2)
       {
 
-         pitem->m_strText = (*m_plisting)[pitem->m_iItem].title();
+         pitem->m_strText = (*m_plisting)[pitem->m_item.m_iItem].title();
 
       }
-      else if(pitem->m_iSubItem == 3)
+      else if(pitem->m_item.m_iSubItem == 3)
       {
 
-         pitem->m_strText = (*m_plisting)[pitem->m_iItem];
+         pitem->m_strText = (*m_plisting)[pitem->m_item.m_iItem];
 
       }
 

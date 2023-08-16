@@ -328,7 +328,7 @@ namespace mediaplaylist
 
    void list_impact::_001GetItemImage(::user::mesh_item * pitem)
    {
-      if(pitem->m_iSubItem == 0 || pitem->m_iSubItem == 1)
+      if(pitem->m_item.m_iSubItem == 0 || pitem->m_item.m_iSubItem == 1)
       {
          pitem->m_iImage = 0;
          pitem->m_bOk = true;
@@ -642,21 +642,21 @@ namespace mediaplaylist
       ::pointer<::mediaplaylist::document>pdocument = get_document();
       ::file::path wstrSongPath;
 
-      if(pdocument->get_song_at(wstrSongPath, pitem->m_iItem, true))
+      if(pdocument->get_song_at(wstrSongPath, pitem->m_item.m_iItem, true))
       {
-         if(pitem->m_iSubItem == 0)
+         if(pitem->m_item.m_iSubItem == 0)
          {
             pitem->m_strText = wstrSongPath;
          }
-         else if(pitem->m_iSubItem == 1)
+         else if(pitem->m_item.m_iSubItem == 1)
          {
             pitem->m_strText = wstrSongPath;
          }
-         else if(pitem->m_iSubItem == 2)
+         else if(pitem->m_item.m_iSubItem == 2)
          {
             pitem->m_strText = wstrSongPath.name();
          }
-         else if(pitem->m_iSubItem == 3)
+         else if(pitem->m_item.m_iSubItem == 3)
          {
             pitem->m_strText = wstrSongPath;
          }

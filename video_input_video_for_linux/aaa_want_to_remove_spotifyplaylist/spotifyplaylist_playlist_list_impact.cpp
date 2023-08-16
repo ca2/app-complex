@@ -203,7 +203,7 @@ namespace mediaplaylist
 
    void playlist_list_impact::_001GetItemImage(::user::mesh_item * pitem)
    {
-      if(pitem->m_iSubItem == 0 || pitem->m_iSubItem == 1)
+      if(pitem->m_item.m_iSubItem == 0 || pitem->m_item.m_iSubItem == 1)
       {
          pitem->m_iImage = 0;
          pitem->m_bOk = true;
@@ -434,13 +434,13 @@ namespace mediaplaylist
       if(pitem->m_bOk)
          return;
 
-      if(pitem->m_iItem < 0)
+      if(pitem->m_item.m_iItem < 0)
       {
          pitem->m_bOk = false;
          return;
       }
 
-      if(pitem->m_iItem >= m_listing.get_size())
+      if(pitem->m_item.m_iItem >= m_listing.get_size())
       {
          pitem->m_bOk = false;
          return;
@@ -449,21 +449,21 @@ namespace mediaplaylist
       ASSERT_VALID(this);
       //::pointer<::mediaplaylist::document>pdocument = get_document();
       //::file::path wstrSongPath;
-      if(pitem->m_iSubItem == 0)
+      if(pitem->m_item.m_iSubItem == 0)
       {
-         pitem->m_strText = m_listing[pitem->m_iItem];
+         pitem->m_strText = m_listing[pitem->m_item.m_iItem];
       }
-      else if(pitem->m_iSubItem == 1)
+      else if(pitem->m_item.m_iSubItem == 1)
       {
-         pitem->m_strText = m_listing[pitem->m_iItem];
+         pitem->m_strText = m_listing[pitem->m_item.m_iItem];
       }
-      else if(pitem->m_iSubItem == 2)
+      else if(pitem->m_item.m_iSubItem == 2)
       {
-         pitem->m_strText = m_listing[pitem->m_iItem].title();
+         pitem->m_strText = m_listing[pitem->m_item.m_iItem].title();
       }
-      else if(pitem->m_iSubItem == 3)
+      else if(pitem->m_item.m_iSubItem == 3)
       {
-         pitem->m_strText = m_listing[pitem->m_iItem];
+         pitem->m_strText = m_listing[pitem->m_item.m_iItem];
       }
 
       pitem->m_bOk = true;

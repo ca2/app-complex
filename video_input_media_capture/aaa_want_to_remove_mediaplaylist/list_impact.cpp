@@ -445,7 +445,7 @@ namespace mediaplaylist
 
    void list_impact::_001GetItemImage(::user::mesh_item * pitem)
    {
-      if(pitem->m_iSubItem == subitem_play || pitem->m_iSubItem == 1)
+      if(pitem->m_item.m_iSubItem == subitem_play || pitem->m_item.m_iSubItem == 1)
       {
          pitem->m_iImage = 0;
          pitem->m_bOk = true;
@@ -811,30 +811,30 @@ namespace mediaplaylist
 
       synchronous_lock synchronouslock(pl->m_psession->mutex());
 
-      if (pl.is_set() && pitem->m_iItem < pl->m_tracka.get_size())
+      if (pl.is_set() && pitem->m_item.m_iItem < pl->m_tracka.get_size())
       {
 
-         ::pointer<::multimedia_playlist::track>ptr = pl->m_tracka[pitem->m_iItem];
+         ::pointer<::multimedia_playlist::track>ptr = pl->m_tracka[pitem->m_item.m_iItem];
 
-         if (pitem->m_iSubItem == subitem_name)
+         if (pitem->m_item.m_iSubItem == subitem_name)
          {
 
             pitem->m_strText = ptr->get_name();
 
          }
-         else if (pitem->m_iSubItem == subitem_artist)
+         else if (pitem->m_item.m_iSubItem == subitem_artist)
          {
 
             pitem->m_strText = ptr->get_artist();
 
          }
-         else if (pitem->m_iSubItem == subitem_album)
+         else if (pitem->m_item.m_iSubItem == subitem_album)
          {
 
             pitem->m_strText = ptr->get_album();
 
          }
-         else if (pitem->m_iSubItem == subitem_path)
+         else if (pitem->m_item.m_iSubItem == subitem_path)
          {
 
             pitem->m_strText = ptr->get_id();
