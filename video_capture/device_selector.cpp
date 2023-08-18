@@ -334,8 +334,8 @@ namespace app_complex_video_capture
                puseritem->m_rectangle.bottom = y + h;
                y += h;
                
-               pdevice->m_iItem = iItem;
-               pdevice->m_eelement = e_element_item;
+               pdevice->m_item.m_iItem = iItem;
+               pdevice->m_item.m_eelement = e_element_item;
                
                iItem++;
                
