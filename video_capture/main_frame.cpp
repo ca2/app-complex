@@ -67,7 +67,7 @@ namespace app_complex_video_capture
    ::experience::frame * main_frame::frame_experience()
    {
 
-      auto pframe = ::simple_frame_window::frame_experience(nullptr, "013", "LightBlue");
+      auto pframe = ::simple_frame_window::frame_experience(nullptr, "022", "LightBlue");
 
       return pframe;
 
