@@ -20,8 +20,8 @@ namespace app_complex_video_capture
       m_flagNonClient.erase(e_non_client_background);
       m_flagNonClient.erase(e_non_client_focus_rect);
 
-      m_bClickDefaultMouseHandling = true;
-      m_bHoverDefaultMouseHandling = true;
+      m_bDefaultClickHandling = true;
+      m_bDefaultMouseHoverHandling = true;
 
    }
 
