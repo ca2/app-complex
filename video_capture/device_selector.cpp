@@ -58,7 +58,7 @@ namespace app_complex_video_capture
 
       }
 
-      top_level()->add_prodevian(this);
+      top_level()->add_auto_refresh(this);
       
       get_app()->m_pvideoinput->add_handler(this);
 
