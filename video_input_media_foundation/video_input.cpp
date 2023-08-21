@@ -202,8 +202,22 @@ namespace video_input_media_foundation
 
       }
 
+      for (index i = 0; i < m_pitemaDevice->get_count(); i++)
+      {
+
+         m_pitemaDevice->element_at(i)->m_item.m_iItem = i;
+
+      }
+
    }
 
+
+   void video_input::on_device_nodes_changed()
+   {
+
+      _update_device_list();
+
+   }
 
 
    void video_input::on_device_plugged(::hardware::enum_device edevice)
