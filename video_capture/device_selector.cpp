@@ -3,6 +3,7 @@
 #include "application.h"
 #include "pane_impact.h"
 #include "acme/handler/item.h"
+#include "acme/user/user/content.h"
 #include "app-complex/video_input/video_input.h"
 #include "app-complex/video_input/device.h"
 #include "aura/graphics/draw2d/graphics.h"
@@ -123,7 +124,7 @@ namespace app_complex_video_capture
 
       //}
 
-      m_pitema = get_app()->m_pvideoinput->m_pitemaDevice;
+      main_content().m_pitema = get_app()->m_pvideoinput->m_pitemaDevice;
 
       //pointer_array < ::item > itema;
 
@@ -197,10 +198,10 @@ namespace app_complex_video_capture
 
       ::rectangle_i32 rectItem;
       
-      if(m_pitema)
+      if(main_content().m_pitema)
       {
 
-         for (auto & pitem : *m_pitema)
+         for (auto & pitem : *main_content().m_pitema)
          {
             
             auto puseritem = user_item(pitem);
