@@ -70,7 +70,7 @@ namespace app_complex_video_capture
 
       }
 
-      //get_top_level()->add_prodevian(this);
+      //get_top_level()->add_auto_refresh(this);
 
       set_auto_refresh();
       
