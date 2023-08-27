@@ -67,11 +67,11 @@ namespace mediaplaylist
    void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      ::rectangle_f64 rectangleClient;
+      ::rectangle_f64 rectangleX;
 
-      client_rectangle(rectangleClient);
+      this->rectangle(rectangleX);
 
-      pgraphics->fill_rectangle(rectangleClient, _001GetColor(::user::color_impact_background));
+      pgraphics->fill_rectangle(rectangleX, _001GetColor(::user::color_impact_background));
 
       pgraphics->selectFont(m_pfont);
 

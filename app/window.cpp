@@ -50,15 +50,15 @@ namespace simple_app
 
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
       auto pstyle = get_style(pgraphics);
 
       auto colorBackground = get_color(pstyle, ::e_element_background);
 
-      pgraphics->fill_rectangle(rectangleClient, argb(127, 255, 255, 255));
+      pgraphics->fill_rectangle(rectangleX, argb(127, 255, 255, 255));
       
-      double dBase = (double) rectangleClient.minimum_signed_absolute_dimension() / 17.0;
+      double dBase = (double) rectangleX.minimum_signed_absolute_dimension() / 17.0;
 
       double x = dBase * 3;
 
@@ -70,14 +70,14 @@ namespace simple_app
 
       pgraphics->fill_solid_rect_dim(x, y + dBase * 6.0, dBase * 11.0, dBase * 5.0, argb(127, 255, 110, 150));
 
-      rectangleClient.deflate(dBase);
+      rectangleX.deflate(dBase);
 
       for (int i = 0; i < dBase; i++)
       {
 
-         pgraphics->draw_inset_3d_rectangle(rectangleClient, argb(255, 127, 127, 127));
+         pgraphics->draw_inset_3d_rectangle(rectangleX, argb(255, 127, 127, 127));
 
-         rectangleClient.deflate(1, 1);
+         rectangleX.deflate(1, 1);
 
       }
 

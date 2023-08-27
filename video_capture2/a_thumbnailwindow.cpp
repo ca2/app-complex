@@ -82,7 +82,7 @@ HWND CreateThumbnailWindow(HINSTANCE hInstance, HWND hParent, CaptureManager * p
    RegisterClassW(&wc);
 
    ::rectangle_i32 rc;
-   client_rectangle(hParent, &rc);
+   this->rectangle(hParent, &rc);
 
    // Create the window.
    HWND hwnd = CreateWindowExW(0, CLASS_NAME, nullptr,

@@ -101,29 +101,29 @@ namespace video_capture
    {
 
 
-      ::rectangle_i32 rectangleClient;
+      ::rectangle_i32 rectangleX;
 
-      client_rectangle(rectangleClient);
+      this->rectangle(rectangleX);
 
 /*      if (m_bBkLoaded && m_pimage->is_set() && m_pimage->area() > 0)
       {
 
          m_pimagePost->get_graphics()->BitBlt(
-/*         0, 0, minimum(rectangleClient.width(), m_pimage->width()),
-/*         minimum(rectangleClient.height(), m_pimage->height()),
+/*         0, 0, minimum(rectangleX.width(), m_pimage->width()),
+/*         minimum(rectangleX.height(), m_pimage->height()),
 /*         m_pimage->get_graphics());
          return;
 
       }
 
-      if (rectangleClient.area() <= 0)
+      if (rectangleX.area() <= 0)
       {
 
          return;
 
       }
 
-      backimpact::user::impact::backimpact_Render(pgraphics, rectangleClient);
+      backimpact::user::impact::backimpact_Render(pgraphics, rectangleX);
 
    }
 

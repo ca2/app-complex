@@ -59,7 +59,7 @@ namespace mediaplay
       pgraphics->set_text_color(rgb(0, 0, 0));
       //   pgraphics->set(m_pfont);
       ::rectangle_f64 rectangle;
-      client_rectangle(rectangle);
+      this->rectangle(rectangle);
       pgraphics->color_blend(rectangle,
       rgb(255, 0, 0),
       127);
@@ -82,7 +82,7 @@ namespace mediaplay
 
    void record_notify_impact::GetParentClientRect(::rectangle_i32 * lprect)
    {
-      m_puserinteractionParent->client_rectangle(lprect);
+      m_puserinteractionParent->rectangle(lprect);
    }
 
 } // namespace mediaplay

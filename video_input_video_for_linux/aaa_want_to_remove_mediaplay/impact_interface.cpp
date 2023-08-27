@@ -883,16 +883,16 @@ namespace mediaplay
    void impact_interface::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      ::rectangle_f64 rectangleClient;
+      ::rectangle_f64 rectangleX;
 
-      client_rectangle(rectangleClient);
+      this->rectangle(rectangleX);
 
       if (m_precordnotifyview != nullptr)
       {
 
          m_precordnotifyview->set_window_position(zorder_none,
-                                           maximum(0, rectangleClient.width() - 20),
-                                           maximum(0, rectangleClient.height() - 100), 20, 100, SWP_NOZORDER);
+                                           maximum(0, rectangleX.width() - 20),
+                                           maximum(0, rectangleX.height() - 100), 20, 100, SWP_NOZORDER);
 
       }
 

@@ -150,16 +150,16 @@ namespace simple_os_drag_and_drop
    void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
-      if(rectangleClient.is_empty())
+      if(rectangleX.is_empty())
       {
 
          return;
 
       }
 
-      m_psimpleosdraganddrop->m_rectangle = rectangleClient;
+      m_psimpleosdraganddrop->m_rectangle = rectangleX;
 
    }
 

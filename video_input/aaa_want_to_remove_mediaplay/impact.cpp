@@ -249,12 +249,12 @@ namespace mediaplay
       //pmessage->previous();
 
 
-      client_rectangle(m_rectangleKaraokeImpact);
+      this->rectangle(m_rectangleKaraokeImpact);
 
 
-      ::rectangle_f64 rectangleClient;
-      client_rectangle(rectangleClient);
-      ::rectangle_f64 rectangle = rectangleClient;
+      ::rectangle_f64 rectangleX;
+      this->rectangle(rectangleX);
+      ::rectangle_f64 rectangle = rectangleX;
 
       rectangle.top = rectangle.bottom - 24;
       m_impactlineaStatus.m_pinteraction = this;

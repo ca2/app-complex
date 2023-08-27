@@ -50,16 +50,16 @@ namespace notify_drawing
    void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
-      if(rectangleClient.is_empty())
+      if(rectangleX.is_empty())
       {
 
          return;
 
       }
 
-      m_prender->m_rectangle = rectangleClient * (351.0 / 1024.0);
+      m_prender->m_rectangle = rectangleX * (351.0 / 1024.0);
 
    }
 

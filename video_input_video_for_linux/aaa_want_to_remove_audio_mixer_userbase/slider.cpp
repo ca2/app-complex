@@ -165,12 +165,12 @@ namespace multimedia
 
          auto pgraphics = create_memory_graphics();
 
-         ::rectangle_f64 rectangleClient;
+         ::rectangle_f64 rectangleX;
 
-         client_rectangle(rectangleClient);
+         this->rectangle(rectangleX);
 
-         //      i32 cx = rectangleClient.width();
-         //      i32 cy = rectangleClient.height();
+         //      i32 cx = rectangleX.width();
+         //      i32 cy = rectangleX.height();
 
          /*if(iEconoMode == Savings::SaveNoSave)
          {
@@ -306,9 +306,9 @@ namespace multimedia
                }
             }
 
-            ::rectangle_f64 rectangleClient;
-            client_rectangle(rectangleClient);
-            if(!rectangleClient.contains(point))
+            ::rectangle_f64 rectangleX;
+            this->rectangle(rectangleX);
+            if(!rectangleX.contains(point))
             {
                psession->ReleaseCapture();
             }
@@ -328,11 +328,11 @@ namespace multimedia
          ::rectangle_f64 rectangleTrack;
          GetThumbRect(rectangleTrack);
          ::rectangle_f64 rectanglePageA;
-         ::rectangle_f64 rectangleClient;
-         client_rectangle(rectangleClient);
-         GetPageARect(rectangleClient, rectangleTrack, rectanglePageA);
+         ::rectangle_f64 rectangleX;
+         this->rectangle(rectangleX);
+         GetPageARect(rectangleX, rectangleTrack, rectanglePageA);
          ::rectangle_f64 rectanglePageB;
-         GetPageBRect(rectangleClient, rectangleTrack, rectanglePageB);
+         GetPageBRect(rectangleX, rectangleTrack, rectanglePageB);
          if(rectangleTrack.contains(point))
          {
             SetCapture();
@@ -475,7 +475,7 @@ namespace multimedia
          ::point_i32 point;
          ::rectangle_f64 rectangle;
          ::rectangle_f64 rectangleTrack;
-         ::rectangle_f64 rectangleClient;
+         ::rectangle_f64 rectangleX;
          switch(ptimer->m_uEvent)
          {
          case 1317:
@@ -512,9 +512,9 @@ namespace multimedia
          case 310:
             GetCursorPos(&point);
             screen_to_client(&point);
-            client_rectangle(rectangleClient);
+            this->rectangle(rectangleX);
             GetThumbRect(rectangleTrack);
-            GetPageARect(rectangleClient, rectangleTrack, rectangle);
+            GetPageARect(rectangleX, rectangleTrack, rectangle);
             if(!rectangle.contains(point))
             {
                KillTimer(310);
@@ -533,9 +533,9 @@ namespace multimedia
          case 410:
             GetCursorPos(&point);
             screen_to_client(&point);
-            client_rectangle(rectangleClient);
+            this->rectangle(rectangleX);
             GetThumbRect(rectangleTrack);
-            GetPageBRect(rectangleClient, rectangleTrack, rectangle);
+            GetPageBRect(rectangleX, rectangleTrack, rectangle);
             if(!rectangle.contains(point))
             {
                KillTimer(410);
@@ -557,18 +557,18 @@ namespace multimedia
 
       bool slider::GetThumbRect(::rectangle_i32 * lpRect)
       {
-         ::rectangle_f64 rectangleClient;
-         client_rectangle(rectangleClient);
+         ::rectangle_f64 rectangleX;
+         this->rectangle(rectangleX);
          double dInc;
          double dPos;
          if(m_eorientation == e_orientation_horizontal)
          {
-            dInc = ((double) rectangleClient.width() - (m_iMargin * 2)) / (m_iRangeMax - m_iRangeMin);
+            dInc = ((double) rectangleX.width() - (m_iMargin * 2)) / (m_iRangeMax - m_iRangeMin);
             dPos = m_iMargin;
          }
          else if(m_eorientation == e_orientation_vertical)
          {
-            dInc = ((double) rectangleClient.height() - (m_iMargin * 2)) / (m_iRangeMax - m_iRangeMin);
+            dInc = ((double) rectangleX.height() - (m_iMargin * 2)) / (m_iRangeMax - m_iRangeMin);
             dPos = m_iMargin;
          }
          if(m_bTracking)
@@ -584,22 +584,22 @@ namespace multimedia
          {
             lpRect->left = ((i32) dPos) - 4;
             lpRect->right = lpRect->left + 10;
-            lpRect->top = rectangleClient.top;
-            lpRect->bottom = rectangleClient.bottom + 1;;
+            lpRect->top = rectangleX.top;
+            lpRect->bottom = rectangleX.bottom + 1;;
          }
          else if(m_eorientation == e_orientation_vertical)
          {
-            lpRect->left = rectangleClient.left;
-            lpRect->right = rectangleClient.right + 1 ;
+            lpRect->left = rectangleX.left;
+            lpRect->right = rectangleX.right + 1 ;
             lpRect->top = ((i32) dPos) - 4;
             lpRect->bottom = lpRect->top + 10;
-            //        i32 iHeight = rectangleClient.height() - GetSystemMetrics(SM_CYVSCROLL) * 2 - sizeTrack.cy() - 1;
+            //        i32 iHeight = rectangleX.height() - GetSystemMetrics(SM_CYVSCROLL) * 2 - sizeTrack.cy() - 1;
             //      if(m_iRangeMax - m_iRangeMin - m_iPageSize == 0)
             //        lpRect->top = 0;
             //  else
             //    lpRect->top = GetSystemMetrics(SM_CYVSCROLL) + 1 + (iPos - m_iRangeMin) * iHeight / (m_iRangeMax - m_iRangeMin - m_iPageSize);
             //        lpRect->bottom = lpRect->top + sizeTrack.cy();
-            //      lpRect->left = rectangleClient.left + 1;
+            //      lpRect->left = rectangleX.left + 1;
             //    lpRect->right = lpRect->left + sizeTrack.cx();
          }
          return true;
@@ -614,13 +614,13 @@ namespace multimedia
          ::size sizeTrack;
 
          //    GetThumbSize(sizeTrack);
-         ::rectangle_f64 rectangleClient;
-         client_rectangle(rectangleClient);
+         ::rectangle_f64 rectangleX;
+         this->rectangle(rectangleX);
          sizeTrack.cx() = 10;
-         sizeTrack.cy() = rectangleClient.height();
+         sizeTrack.cy() = rectangleX.height();
          if(m_eorientation == e_orientation_horizontal)
          {
-            i32 iWidth = rectangleClient.width() - m_iMargin * 2;
+            i32 iWidth = rectangleX.width() - m_iMargin * 2;
             nPos = point.x() - m_sizeTrackOffset.x();
             nPos -= m_iMargin - 4;
             nPos *= m_iRangeMax - m_iRangeMin;
@@ -630,7 +630,7 @@ namespace multimedia
          }
          else if(m_eorientation == e_orientation_vertical)
          {
-            i32 iHeight = rectangleClient.height() -  m_iMargin * 2;
+            i32 iHeight = rectangleX.height() -  m_iMargin * 2;
             nPos = point.y() - m_sizeTrackOffset.y();
             nPos -= m_iMargin - 4;
             nPos *= (m_iRangeMax - m_iRangeMin);
@@ -797,13 +797,13 @@ namespace multimedia
 
          ::aura::savings & savings = psession->savings();
 
-         ::rectangle_f64 rectangleClient;
-         client_rectangle(rectangleClient);
+         ::rectangle_f64 rectangleX;
+         this->rectangle(rectangleX);
 
-         ::rectangle_f64 rectangleClip = rectangleClient;
+         ::rectangle_f64 rectangleClip = rectangleX;
 
          ::rectangle_f64 rectangleDraw;
-         rectangleDraw.intersect(rectangleClip, rectangleClient);
+         rectangleDraw.intersect(rectangleClip, rectangleX);
 
          information("slider:OnPaint\n");
          information("rectangle.left  : %d, ", rectangleDraw.left);
@@ -822,7 +822,7 @@ namespace multimedia
             pgraphics->fill_rectangle(rectangleDraw, argb(127, 255,255,255));
          }
 
-//         ::rectangle_f64 rectangleD = rectangleClient;
+//         ::rectangle_f64 rectangleD = rectangleX;
 
 
          ::rectangle_f64 rectangleThumb;
@@ -882,9 +882,9 @@ namespace multimedia
          psession->get_cursor_position(&point);
          screen_to_client(&point);
 
-         ::rectangle_f64 rectangleClient;
-         client_rectangle(rectangleClient);
-         return rectangleClient.contains(point) != 0;
+         ::rectangle_f64 rectangleX;
+         this->rectangle(rectangleX);
+         return rectangleX.contains(point) != 0;
 
       }
 

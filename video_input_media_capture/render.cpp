@@ -215,19 +215,19 @@ namespace video_input_media_capture
    //void render::on_layout(::draw2d::graphics_pointer& pgraphics)
    //{
 
-   //   ::rectangle_i32 rectangleClient;
+   //   ::rectangle_i32 rectangleX;
 
-   //   client_rectangle(rectangleClient);
+   //   this->rectangle(rectangleX);
 
-   //   if (rectangleClient.area() <= 0)
+   //   if (rectangleX.area() <= 0)
    //      return;
 
-   //         m_pimage = create_image(rectangleClient->size());
+   //         m_pimage = create_image(rectangleX->size());
 
    //         start_capture();
 
-   //         if(m_prender->m_cx == rectangleClient.width()
-   //               && m_prender->m_cy == rectangleClient.height()
+   //         if(m_prender->m_cx == rectangleX.width()
+   //               && m_prender->m_cy == rectangleX.height()
    //               && m_strNewFont == m_strFont)
    //            return;
 
@@ -240,11 +240,11 @@ namespace video_input_media_capture
 
    //         }
 
-   //         m_prender->m_cx = rectangleClient.width();
+   //         m_prender->m_cx = rectangleX.width();
 
-   //         m_prender->m_cy = rectangleClient.height();
+   //         m_prender->m_cy = rectangleX.height();
 
-   //         m_prender->m_rectangleClient = rectangleClient;
+   //         m_prender->m_rectangleX = rectangleX;
 
    //         m_prender->m_bNewLayout = true;
 

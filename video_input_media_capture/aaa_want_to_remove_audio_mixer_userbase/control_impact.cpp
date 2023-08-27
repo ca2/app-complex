@@ -477,8 +477,8 @@ namespace multimedia
          //::AdjustWindowRectEx(&rectangle, GetStyle(), false,
          //      GetExStyle());
          //set_window_position(0, 0, 0, rectangle.width(), rectangle.height(), SWP_NOMOVE | SWP_NOACTIVATE);
-         //::rectangle_f64 rectangleClient;
-         //client_rectangle(rectangleClient);
+         //::rectangle_f64 rectangleX;
+         //this->rectangle(rectangleX);
 
          set_need_redraw();
 

@@ -66,12 +66,12 @@ namespace app_complex_video_capture
 
       defer_check_on_draw_layout();
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
-      if (rectangleClient.area() <= 0)
+      if (rectangleX.area() <= 0)
          return;
 
-/*      m_pimagePost = create_image(rectangleClient->size());
+/*      m_pimagePost = create_image(rectangleX->size());
 
       m_pimagePost->Fill(00, 00, 00, 00);
 
@@ -156,9 +156,9 @@ namespace app_complex_video_capture
 
       //image d(e_create);
 
-      //d->create(rectangleClient.size());
+      //d->create(rectangleX.size());
 
-      //d->get_graphics()->BitBlt(rectangleClient, pimage->g());
+      //d->get_graphics()->BitBlt(rectangleX, pimage->g());
 
       //d.save_to_file(         auto psystem = acmesystem();
 

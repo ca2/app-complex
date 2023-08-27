@@ -441,7 +441,7 @@ namespace mediaplaylist
    void list_impact::_001DrawBackground(::draw2d::graphics *graphics, ::rectangle_i32 * lprect)
    {
       ::rectangle_f64 rectangleThis;
-      client_rectangle(rectangleThis);
+      this->rectangle(rectangleThis);
 
 //      ::user::list::_001DrawBackground(pgraphics, lprect);
 

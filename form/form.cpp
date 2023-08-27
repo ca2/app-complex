@@ -62,9 +62,9 @@ namespace app_complex_form
    void form::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
-      pgraphics->fill_rectangle(rectangleClient, argb(127, 245, 250, 255));
+      pgraphics->fill_rectangle(rectangleX, argb(127, 245, 250, 255));
 
    }
 

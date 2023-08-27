@@ -131,9 +131,9 @@ namespace app_complex_form
    void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
-      pgraphics->fill_rectangle(rectangleClient, argb(127, 255, 255, 255));
+      pgraphics->fill_rectangle(rectangleX, argb(127, 255, 255, 255));
 
    }
 
@@ -141,9 +141,9 @@ namespace app_complex_form
    void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
-      if (rectangleClient.area() <= 0)
+      if (rectangleX.area() <= 0)
       {
 
          return;

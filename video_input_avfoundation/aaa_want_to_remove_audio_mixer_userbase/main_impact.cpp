@@ -305,11 +305,11 @@ namespace multimedia
       {
          if(m_pcontrol != nullptr)
          {
-            ::rectangle_f64 rectangleClient;
+            ::rectangle_f64 rectangleX;
 
             ::rectangle_f64 rectangleTabClient;
-            client_rectangle(rectangleClient);
-            m_pcontrol->set_window_position(zorder_none, rectangleClient.left, rectangleClient.top, rectangleClient.width(), rectangleClient.height(), SWP_SHOWWINDOW);
+            this->rectangle(rectangleX);
+            m_pcontrol->set_window_position(zorder_none, rectangleX.left, rectangleX.top, rectangleX.width(), rectangleX.height(), SWP_SHOWWINDOW);
             m_pcontrol->on_layout(pgraphics);
          }
       }
@@ -322,23 +322,23 @@ namespace multimedia
          ::rectangle_f64 rectangleMeta;
          ::rectangle_f64 rectangleDib;
 
-         ::rectangle_f64 rectangleClient;
+         ::rectangle_f64 rectangleX;
 
-         client_rectangle(rectangleClient);
+         this->rectangle(rectangleX);
 
          if(psession->savings().is_trying_to_save(::e_resource_processing))
          {
-            pgraphics->fill_rectangle(rectangleClient, rgb(255,255,255));
+            pgraphics->fill_rectangle(rectangleX, rgb(255,255,255));
          }
          else
          {
-            pgraphics->color_blend(rectangleClient, rgb(255,255,255), 32);
+            pgraphics->color_blend(rectangleX, rgb(255,255,255), 32);
          }
 
          ::rectangle_f64 rectangle;
 
-         rectangle = rectangleClient;
-         rectangle.ScaleHeightAspect(minimum(rectangleClient.height(), rectangleClient.height() - 333), rectangleClient.right, rectangleClient.bottom);
+         rectangle = rectangleX;
+         rectangle.ScaleHeightAspect(minimum(rectangleX.height(), rectangleX.height() - 333), rectangleX.right, rectangleX.bottom);
 
          if(m_enhmetafile != nullptr)
          {
@@ -346,9 +346,9 @@ namespace multimedia
             rectangleMeta.top = 0;
             rectangleMeta.right = m_emh.rclBounds.right - m_emh.rclBounds.left;
             rectangleMeta.bottom = m_emh.rclBounds.bottom - m_emh.rclBounds.top;
-            //rectangleMeta.FitOnCenter(rectangleClient);
-            rectangleMeta.FitOnCenterOf(rectangleClient);
-            //rectangleMeta.Align(::ca2::AlignBottom | ::ca2::AlignRight, rectangleClient);
+            //rectangleMeta.FitOnCenter(rectangleX);
+            rectangleMeta.FitOnCenterOf(rectangleX);
+            //rectangleMeta.Align(::ca2::AlignBottom | ::ca2::AlignRight, rectangleX);
 
             rectangleDib = rectangleMeta;
             rectangleDib -= rectangleMeta.top_left();

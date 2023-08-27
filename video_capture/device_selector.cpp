@@ -308,7 +308,7 @@ namespace app_complex_video_capture
    void device_selector::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
       int y = 10;
 
@@ -329,8 +329,8 @@ namespace app_complex_video_capture
             if (::is_set(puseritem))
             {
                
-               puseritem->m_rectangle.left = rectangleClient.left;
-               puseritem->m_rectangle.right = rectangleClient.right;
+               puseritem->m_rectangle.left = rectangleX.left;
+               puseritem->m_rectangle.right = rectangleX.right;
                puseritem->m_rectangle.top = y;
                puseritem->m_rectangle.bottom = y + h;
                y += h;

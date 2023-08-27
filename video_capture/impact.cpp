@@ -97,7 +97,7 @@ namespace app_complex_video_capture
 
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
       auto pvideoinputdevice = get_app()->m_pvideoinputdevice;
 
@@ -110,7 +110,7 @@ namespace app_complex_video_capture
 
          pgraphics->set_text_color(::color::white);
 
-         pgraphics->fill_inset_rectangle(rectangleClient, argb(127, 0, 0, 0));
+         pgraphics->fill_inset_rectangle(rectangleX, argb(127, 0, 0, 0));
 
          pgraphics->text_out(10, 10, "No video input device selected.");
 
@@ -125,7 +125,7 @@ namespace app_complex_video_capture
 
          pgraphics->set_text_color(::color::white);
 
-         pgraphics->fill_inset_rectangle(rectangleClient, argb(127, 0, 0, 0));
+         pgraphics->fill_inset_rectangle(rectangleX, argb(127, 0, 0, 0));
 
          pgraphics->text_out(10, 10, "Webcam is in use by other application.");
 
@@ -141,7 +141,7 @@ namespace app_complex_video_capture
 
       image_source imagesource(m_prender->m_pimage);
 
-      image_drawing_options imagedrawingoptions(rectangleClient);
+      image_drawing_options imagedrawingoptions(rectangleX);
 
       image_drawing imagedrawing(imagedrawingoptions, imagesource);
 
