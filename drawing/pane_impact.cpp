@@ -27,22 +27,6 @@ namespace app_complex_drawing
    }
 
 
-//   void pane_impact::assert_ok() const
-//   {
-//
-//      ::user::impact::assert_ok();
-//
-//   }
-//
-//
-//   void pane_impact::dump(dump_context & dumpcontext) const
-//   {
-//
-//      ::user::impact::dump(dumpcontext);
-//
-//   }
-
-
    void pane_impact::install_message_routing(::channel * pchannel)
    {
 
@@ -81,22 +65,6 @@ namespace app_complex_drawing
    }
 
 
-//   void pane_impact::_001OnNcDraw(::draw2d::graphics_pointer & pgraphics)
-//   {
-//
-//      ::userex::pane_tab_impact::_001OnNcDraw(pgraphics);
-//
-//   }
-
-
-//   void pane_impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
-//   {
-//
-//      ::userex::pane_tab_impact::_001OnDraw(pgraphics);
-//
-//   }
-
-   
    void pane_impact::on_create_impact(::user::impact_data * pimpactdata)
    {
       
@@ -120,7 +88,7 @@ namespace app_complex_drawing
 
          pimpact->m_prender->initialize_simple_drawing(atoi(strId));
 
-         pimpactdata->m_eflag.add(::user::e_flag_hidid_on_show);
+         //pimpactdata->m_eflag.add(::user::e_flag_hidid_on_show);
 
       }
 
@@ -184,7 +152,7 @@ namespace app_complex_drawing
          else if (ptopic->m_atom == ::id_after_change_cur_hover)
          {
 
-            string strFont = get_font_interaction()->get_sel_by_name();
+            string strFont = get_font_interaction()->get_hover_by_name();
 
             if(::is_set(m_pimpactDrawing))
             {
@@ -245,9 +213,15 @@ namespace app_complex_drawing
 
          m_pimpactDrawing = m_pimpactdata->m_pplaceholder->get_hold();
 
-      }
+         if (::is_set(pimpactOldDrawing))
+         {
 
-      if (get_impact_id() == FONTSEL_IMPACT)
+            pimpactOldDrawing->get_parent()->hide();
+
+         }
+
+      }
+      else if (get_impact_id() == FONTSEL_IMPACT)
       {
 
          if (m_pimpactDrawing != nullptr)
@@ -264,8 +238,7 @@ namespace app_complex_drawing
          }
 
       }
-
-      if (get_impact_id() == COLORSEL_IMPACT)
+      else if (get_impact_id() == COLORSEL_IMPACT)
       {
 
          if (m_pimpactDrawing != nullptr && get_color_interaction())
@@ -274,6 +247,13 @@ namespace app_complex_drawing
             get_color_interaction()->set_sel_color(m_pimpactDrawing->m_prender->m_hlsText);
 
          }
+
+      }
+
+      if (!m_pimpactdataOld->m_atom.begins("drawing"))
+      {
+
+         m_pimpactdataOld->m_pplaceholder->hide();
 
       }
 

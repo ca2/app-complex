@@ -8,7 +8,7 @@ namespace app_complex_video_capture
    toggle_impact::toggle_impact()
    {
 
-      m_ptopview = nullptr;
+      m_ptopimpact = nullptr;
 
    }
 

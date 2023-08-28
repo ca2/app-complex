@@ -63,7 +63,7 @@ namespace app_complex_video_capture
 
       }
 
-      m_peditimpact->m_ptopview = this;
+      m_peditimpact->m_ptopimpact = this;
 
       m_ptoggleimpact = create_impact < toggle_impact >(nullptr, get_pane_holder(1),"top_toggle_impact");
 
@@ -74,7 +74,7 @@ namespace app_complex_video_capture
 
       }
 
-      m_ptoggleimpact->m_ptopview = this;
+      m_ptoggleimpact->m_ptopimpact = this;
 
 
 

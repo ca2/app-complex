@@ -16,7 +16,7 @@ namespace app_complex_video_capture
    public:
 
 
-      top_impact *           m_ptopview;
+      top_impact *           m_ptopimpact;
 
 
       toggle_impact();

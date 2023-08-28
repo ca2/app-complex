@@ -8,7 +8,7 @@ namespace app_complex_video_capture
    main_impact::main_impact()
    {
 
-      m_ptopview = nullptr;
+      m_ptopimpact = nullptr;
       m_pimpact    = nullptr;
 
    }

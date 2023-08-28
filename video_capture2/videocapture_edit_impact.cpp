@@ -8,7 +8,7 @@ namespace app_complex_video_capture
    edit_impact::edit_impact()
    {
 
-      m_ptopview = nullptr;
+      m_ptopimpact = nullptr;
 
    }
 
@@ -36,7 +36,7 @@ namespace app_complex_video_capture
          return;
 
 
-      m_ptopview = get_typed_parent < top_impact >();
+      m_ptopimpact = get_typed_parent < top_impact >();
    }
 
 
@@ -56,7 +56,7 @@ namespace app_complex_video_capture
 
       }
 
-      if (m_ptopview == nullptr)
+      if (m_ptopimpact == nullptr)
       {
 
          return;
@@ -67,7 +67,7 @@ namespace app_complex_video_capture
 
       _001GetText(strText);
 
-      impact_base * pimpact = dynamic_cast < impact_base * > (m_ptopview->get_typed_parent<::user::split_impact>()->get_child_by_id("videocapture_impact"));
+      impact_base * pimpact = dynamic_cast < impact_base * > (m_ptopimpact->get_typed_parent<::user::split_impact>()->get_child_by_id("videocapture_impact"));
 
 
 
