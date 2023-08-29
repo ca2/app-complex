@@ -23,6 +23,7 @@ namespace app_complex_video_capture
 
       m_bDefaultClickHandling = true;
       m_bDefaultMouseHoverHandling = true;
+      m_bDefaultParentMouseMessageHandling = true;
 
    }
 
