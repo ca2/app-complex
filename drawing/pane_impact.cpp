@@ -250,7 +250,7 @@ namespace app_complex_drawing
 
       }
 
-      if (!m_pimpactdataOld->m_atom.begins("drawing"))
+      if (m_pimpactdataOld && !m_pimpactdataOld->m_atom.begins("drawing"))
       {
 
          m_pimpactdataOld->m_pplaceholder->hide();

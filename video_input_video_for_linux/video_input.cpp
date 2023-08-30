@@ -176,6 +176,8 @@ namespace video_input_video_for_linux
 
             pdev->initialize(this);
 
+            __defer_construct_new(m_pitemaDevice);
+
             m_pitemaDevice->add(pdev);
 
             pdevice = pdev;
