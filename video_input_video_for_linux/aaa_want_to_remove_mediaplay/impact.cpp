@@ -256,13 +256,13 @@ namespace mediaplay
       this->rectangle(rectangleX);
       ::rectangle_f64 rectangle = rectangleX;
 
-      rectangle.top = rectangle.bottom - 24;
+      rectangle.top() = rectangle.bottom() - 24;
       m_impactlineaStatus.m_pinteraction = this;
       m_impactlineaStatus.Prepare();
       m_impactlineaStatus.line_at(0)->SetPlacement(rectangle);
 
 
-      m_rectangleKaraokeImpact.bottom -= 16;
+      m_rectangleKaraokeImpact.bottom() -= 16;
 
 
    }

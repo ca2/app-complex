@@ -47,12 +47,12 @@ HRESULT GetDefaultStride(IMFMediaType *pType, ::i32 *plStride);
 
 inline ::i32 Width(const ::rectangle_i32 &r)
 {
-   return rectangle.right - rectangle.left;
+   return rectangle.right() - rectangle.left();
 }
 
 inline ::i32 Height(const ::rectangle_i32 &r)
 {
-   return rectangle.bottom - rectangle.top;
+   return rectangle.bottom() - rectangle.top();
 }
 
 
@@ -523,10 +523,10 @@ HRESULT DrawDevice::DrawFrame(IMFMediaBuffer *pBuffer)
 
 
    ::rectangle_i32 rectangle_i32;
-   rectangle.bottom = 1040;
-   rectangle.left = 0;
-   rectangle.right = 690;
-   rectangle.top = 0;
+   rectangle.bottom() = 1040;
+   rectangle.left() = 0;
+   rectangle.right() = 690;
+   rectangle.top() = 0;
 
    m_pDevice->BeginScene();
    D3DXCreateSprite(m_pDevice, &textSprite);
@@ -937,8 +937,8 @@ void TransformImage_NV12(
 
    ::rectangle_i32 rc;
 
-   ::i32 left = rcDst.left + ((iDstWidth - iDstLBWidth) / 2);
-   ::i32 top = rcDst.top + ((iDstHeight - iDstLBHeight) / 2);
+   ::i32 left = rcDst.left() + ((iDstWidth - iDstLBWidth) / 2);
+   ::i32 top = rcDst.top() + ((iDstHeight - iDstLBHeight) / 2);
 
    SetRect(&rc, left, top, left + iDstLBWidth, top + iDstLBHeight);
 
@@ -959,7 +959,7 @@ void TransformImage_NV12(
 ::rectangle_i32 CorrectAspectRatio(const ::rectangle_i32 &src, const MFRatio& srcPAR)
 {
    // Start with a rectangle_i32 the same size_i32 as src, but offset to the origin (0,0).
-   ::rectangle_i32 rc = { 0, 0, src.right - src.left, src.bottom - src.top };
+   ::rectangle_i32 rc = { 0, 0, src.right() - src.left(), src.bottom() - src.top() };
 
    if ((srcPAR.Numerator != 1) || (srcPAR.Denominator != 1))
    {
@@ -968,12 +968,12 @@ void TransformImage_NV12(
       if (srcPAR.Numerator > srcPAR.Denominator)
       {
          // The source has "wide" pixels, so stretch the width.
-         rc.right = MulDiv(rc.right, srcPAR.Numerator, srcPAR.Denominator);
+         rc.right() = MulDiv(rc.right(), srcPAR.Numerator, srcPAR.Denominator);
       }
       else if (srcPAR.Numerator < srcPAR.Denominator)
       {
          // The source has "tall" pixels, so stretch the height.
-         rc.bottom = MulDiv(rc.bottom, srcPAR.Denominator, srcPAR.Numerator);
+         rc.bottom() = MulDiv(rc.bottom(), srcPAR.Denominator, srcPAR.Numerator);
       }
       // else: PAR is 1:1, which is a no-op.
    }

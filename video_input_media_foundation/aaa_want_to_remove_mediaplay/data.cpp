@@ -627,7 +627,7 @@ namespace mediaplay
       auto pFind = wstrPathName.find(".zip:");
       if(iFind > 0)
       {
-         wstrZipPath = wstrPathName.left(iFind + 4);
+         wstrZipPath = wstrPathName.left()(iFind + 4);
          wstrTitle = wstrPathName.substr(iFind + 5);
          wstrTitle.replace("\\","/");
       }

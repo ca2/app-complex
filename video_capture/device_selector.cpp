@@ -330,10 +330,10 @@ namespace app_complex_video_capture
             if (::is_set(puseritem))
             {
                
-               puseritem->m_rectangle.left = rectangleX.left;
-               puseritem->m_rectangle.right = rectangleX.right;
-               puseritem->m_rectangle.top = y;
-               puseritem->m_rectangle.bottom = y + h;
+               puseritem->m_rectangle.left() = rectangleX.left();
+               puseritem->m_rectangle.right() = rectangleX.right();
+               puseritem->m_rectangle.top() = y;
+               puseritem->m_rectangle.bottom() = y + h;
                y += h;
                
                pdevice->m_item.m_iItem = iItem;

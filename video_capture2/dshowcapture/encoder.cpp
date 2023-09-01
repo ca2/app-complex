@@ -184,8 +184,8 @@ void HVideoEncoder::InitializeVideoFormat(MediaType &mt)
 	vih->bmiHeader.biBitCount      = 12;
 	vih->bmiHeader.biSizeImage     = size;
 	vih->bmiHeader.biCompression   = MAKEFOURCC('Y', 'V', '1', '2');
-	vih->rcSource.right            = config.cx();
-	vih->rcSource.bottom           = config.cy();
+	vih->rcSource.right()            = config.cx();
+	vih->rcSource.bottom()           = config.cy();
 	vih->rcTarget                  = vih->rcSource;
 	vih->dwBitRate                 = (::u32)(bitrate * 8);
 	vih->AvgTimePerFrame           = frameTime;

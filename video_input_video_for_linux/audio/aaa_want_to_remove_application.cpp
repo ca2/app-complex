@@ -668,7 +668,7 @@ pacmedirectory->system() / "translators" / as_string(m_iTranslatorFile) + ".mp3"
 ////      //         }
 ////      //         if (string_ends_ci(strText, " ca2") || string_ends_ci(strText, "\nca2"))
 ////      //         {
-////      //            strText = strText.left(strText.length() - 3) + "c a 2";
+////      //            strText = strText.left()(strText.length() - 3) + "c a 2";
 ////      //         }
 ////      //         strText.utf8_replace(" ca2 ", " c a 2 ");
 ////      //         strText.utf8_replace(" ca2\n", " c a 2\n");
