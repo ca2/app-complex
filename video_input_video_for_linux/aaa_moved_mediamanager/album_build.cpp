@@ -110,7 +110,7 @@ namespace mediamanager
       //   file_pointer spfile(this);
 
       //   spfile->open(
-      //   str.left()(iFind + 4),
+      //   str.left(iFind + 4),
       //   ::file::e_open_read |
       //   ::file::e_open_share_deny_write |
       //   ::file::e_open_binary);
@@ -1065,7 +1065,7 @@ namespace mediamanager
                                     string wstrExt2 = wstraExtension2[i];
                                     string wstrEnd2;
                                     wstrEnd2 = "." + wstrExt2;
-                                    if(wstrExtraPath.right()(wstrEnd2.get_length()) ==
+                                    if(wstrExtraPath.right(wstrEnd2.get_length()) ==
                                        wstrEnd2)
                                     {
                                        wstrPath = str + ":" + wstrExtraPath;

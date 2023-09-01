@@ -2001,7 +2001,7 @@ retry0:
       //      // check for dubious filename
       //      strsize iBad = newName.get_string().FindOneOf(":/\\");
       //      if (iBad != -1)
-      //         newName = newName.get_string().left()(iBad);
+      //         newName = newName.get_string().left(iBad);
 
       //      // append the default suffix if there is one
       //      string strExt;
