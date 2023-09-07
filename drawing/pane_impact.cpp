@@ -48,7 +48,7 @@ namespace app_complex_drawing
       }
 
       set_tab("Menu", MENU_IMPACT);
-      set_tab("Options", OPTIONS_IMPACT);
+      set_tab("Options", APP_OPTIONS_IMPACT);
       set_tab("text://app-simple/drawing/:001", "drawing1");
       set_tab("text://app-simple/drawing/:002", "drawing2");
       set_tab("text://app-simple/drawing/:003", "drawing3");

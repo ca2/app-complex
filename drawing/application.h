@@ -26,6 +26,9 @@ namespace app_complex_drawing
       void init_instance() override;
 
 
+      void create_options_body(::user::interaction * puserinteractionParent) override;
+
+
    };
 
 
