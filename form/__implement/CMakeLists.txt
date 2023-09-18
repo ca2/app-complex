@@ -73,8 +73,9 @@ endif ()
 add_dependencies(${PROJECT_NAME} ${default_draw2d})
 add_dependencies(${PROJECT_NAME} ${default_imaging})
 add_dependencies(${PROJECT_NAME} ${default_write_text})
-#add_dependencies(${PROJECT_NAME} ${default_gpu})
 add_dependencies(${PROJECT_NAME} ${app_common_dependencies})
+add_dependencies(${PROJECT_NAME} crypto_openssl)
+add_dependencies(${PROJECT_NAME} database_sqlite3)
 add_dependencies(${PROJECT_NAME} experience_tranquillum)
 
 

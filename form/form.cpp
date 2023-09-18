@@ -2,6 +2,7 @@
 #include "form.h"
 #include "acme/constant/message.h"
 #include "acme/filesystem/filesystem/file_context.h"
+#include "acme/primitive/geometry2d/_text_stream.h"
 #include "aura/graphics/draw2d/graphics.h"
 #include "aura/message/user.h"
 #include "aura/platform/context.h"
@@ -96,6 +97,8 @@ namespace app_complex_form
       auto puser = user()->m_pbaseuser;
 
       auto strXml = context()->file()->as_string("matter://form/form.menu");
+
+      information() << "form::on_message_context_menu : " << point;
 
       puser->track_popup_xml_menu(this, strXml, 0, point);
 
