@@ -20,7 +20,7 @@ namespace app_complex_drawing
       ~application() override;
 
 
-      ::type get_pane_impact_type() const override;
+      ::type_atom get_pane_impact_type() const override;
 
 
       void init_instance() override;
