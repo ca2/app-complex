@@ -43,7 +43,7 @@ namespace app_complex_drawing
    ::type application::get_pane_impact_type() const
    {
 
-      return __type(pane_impact);
+      return ::type < pane_impact >();
 
    }
 

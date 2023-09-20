@@ -78,7 +78,7 @@ namespace mediaplaylist
          class ::user::control_descriptor control;
 
          control.m_bTransparent              = true;
-         control.m_type                  = __type(::user::button);
+         control.m_type                  = ::type < ::user::button >();
          control.m_atom                        = "play_button";
          control.add_function(::user::e_control_function_action);
          control.set_type(::user::e_control_type_button);

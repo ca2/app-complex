@@ -94,7 +94,7 @@ namespace mediaplaylist
          auto pinteraction = __new(::user::control_descriptor());
 
          pinteraction->m_bTransparent              = true;
-         pinteraction->m_type                  = __type(::user::button);
+         pinteraction->m_type                  = ::type < ::user::button >();
          pinteraction->m_atom                        = "play_button";
          pinteraction->add_function(::user::e_control_function_action);
          pinteraction->set_control_type(::user::e_control_type_button);

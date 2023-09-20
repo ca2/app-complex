@@ -40,8 +40,8 @@ namespace mediaplaylist
       {
       create_context cc;
       cc.m_pCurrentDoc = get_document();
-      cc.m_typeNewImpact = __type(right_impact);
-      create_impact(__type(right_impact), get_document(), get_parent(), 101);
+      cc.m_typeNewImpact = ::type < right_impact >();
+      create_impact(::type < right_impact >(), get_document(), get_parent(), 101);
       }
       if(papp->mediaplaylist::application::m_pmaillist == nullptr)
       return;

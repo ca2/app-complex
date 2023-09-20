@@ -48,9 +48,9 @@ namespace simple_application
 
       auto pdoctemplate = __new(::user::single_document_template(
                                "main",
-                               __type(document),
-                               __type(main_frame),
-                               __type(impact)));
+                               ::type < document >(),
+                               ::type < main_frame >(),
+                               ::type < impact >()));
 
       __construct(m_ptemplateSimpleDrawingMain, pdoctemplate);
 

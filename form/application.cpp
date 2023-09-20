@@ -95,18 +95,18 @@ namespace app_complex_form
 
       auto pdoctemplate = __new(::user::single_document_template(
                                "main",
-                               __type(document),
-                               __type(main_frame),
-                               __type(pane_impact)));
+                               ::type < document >(),
+                               ::type < main_frame >(),
+                               ::type < pane_impact >()));
       m_ptemplateBeatMapperMain = pdoctemplate;
       add_document_template(pdoctemplate);
 
 
       pdoctemplate = __new(::user::single_document_template(
                           "main",
-                          __type(document),
-                          __type(frame),
-                          __type(main_impact)));
+                          ::type < document >(),
+                          ::type < frame >(),
+                          ::type < main_impact >()));
       m_ptemplateBeatMapperImpact = pdoctemplate;
       add_document_template(pdoctemplate);
 

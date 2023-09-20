@@ -264,7 +264,7 @@ namespace mediaplaylist
       m_pimpactsystem = memory_new user::single_document_template(
       get_app()->m_pcoreapp,
       m_strMatter,
-      __type(::mediaplaylist::document),
+      ::type < ::mediaplaylist::document >(),
       m_typeFrameWnd, // custom MDI child frame
       m_typeImpact);
 

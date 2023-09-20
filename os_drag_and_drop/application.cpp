@@ -53,9 +53,9 @@ namespace simple_os_drag_and_drop
 
       auto pdoctemplate = __new(::user::single_document_template(
                                "main",
-                               __type(document),
-                               __type(main_frame),
-                               __type(tab_impact)));
+                               ::type < document >(),
+                               ::type < main_frame >(),
+                               ::type < tab_impact >()));
 
       m_ptemplateSimpleDrawingMain = pdoctemplate;
       add_document_template(pdoctemplate);
@@ -63,9 +63,9 @@ namespace simple_os_drag_and_drop
 
       pdoctemplate = __new(::user::single_document_template(
                           "main",
-                          __type(document),
-                          __type(frame),
-                          __type(main_impact)));
+                          ::type < document >(),
+                          ::type < frame >(),
+                          ::type < main_impact >()));
 
       m_ptemplateSimpleDrawingImpact = pdoctemplate;
       add_document_template(pdoctemplate);

@@ -95,9 +95,9 @@ namespace app_complex_video_capture
       
       auto pDocTemplate = __new(::user::single_document_template(
                           "main",
-                          __type(document),
-                          __type(main_frame),
-                          __type(pane_impact)));
+                          ::type < document >(),
+                          ::type < main_frame >(),
+                          ::type < pane_impact >()));
 
       add_document_template(pDocTemplate);
 
@@ -105,9 +105,9 @@ namespace app_complex_video_capture
 
       pDocTemplate = __new(::user::single_document_template(
                           "main",
-                          __type(document),
-                          __type(frame),
-                          __type(main_impact)));
+                          ::type < document >(),
+                          ::type < frame >(),
+                          ::type < main_impact >()));
       add_document_template(pDocTemplate);
       
       m_ptemplateHelloMultiverseImpact = pDocTemplate;
