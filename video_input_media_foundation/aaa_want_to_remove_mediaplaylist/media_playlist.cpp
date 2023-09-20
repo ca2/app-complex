@@ -60,9 +60,9 @@ namespace mediaplaylist
 
       m_plistview = nullptr;
 
-      m_typeFrameWnd = ::type < ::mediaplaylist::frame >();
+      m_typeatomFrameWnd = ::type < ::mediaplaylist::frame >();
 
-      m_typeImpact = ::type < ::mediaplaylist::main_impact >();
+      m_typeatomImpact = ::type < ::mediaplaylist::main_impact >();
 
    }
 
@@ -455,8 +455,8 @@ namespace mediaplaylist
       m_pimpactsystem = __new(user::single_document_template(
                             m_strMatter,
                             ::type < ::mediaplaylist::document >(),
-                            m_typeFrameWnd, // custom MDI child frame
-                            m_typeImpact));
+                            m_typeatomFrameWnd, // custom MDI child frame
+                            m_typeatomImpact));
 
       if (m_pimpactsystem == nullptr)
       {

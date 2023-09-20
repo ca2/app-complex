@@ -265,8 +265,8 @@ namespace mediaplaylist
       get_app()->m_pcoreapp,
       m_strMatter,
       ::type < ::mediaplaylist::document >(),
-      m_typeFrameWnd, // custom MDI child frame
-      m_typeImpact);
+      m_typeatomFrameWnd, // custom MDI child frame
+      m_typeatomImpact);
 
       m_pimpactsystem->m_bQueueDocumentOpening = false;
 

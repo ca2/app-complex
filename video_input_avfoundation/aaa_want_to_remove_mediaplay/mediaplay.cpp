@@ -40,9 +40,9 @@ namespace mediaplay
 
       auto psingledocumenttemplate = __new(single_document_template(
                                           m_strMatter,
-                                          m_typeDocument,
-                                          m_typeFrameWnd,
-                                          m_typeImpact));
+                                          m_typeatomDocument,
+                                          m_typeatomFrameWnd,
+                                          m_typeatomImpact));
 
       papp->add_document_template(psingledocumenttemplate);
 

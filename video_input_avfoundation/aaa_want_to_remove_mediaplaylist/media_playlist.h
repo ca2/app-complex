@@ -54,8 +54,8 @@ namespace mediaplaylist
 
       ::pointer<user::single_document_template>          m_pimpactsystem;
       ::mediaplaylist::document *                  m_pplaylistdoc;
-      ::type                                     m_typeFrameWnd;
-      ::type                                     m_typeImpact;
+      ::type_atom                                m_typeatomFrameWnd;
+      ::type_atom                                m_typeatomImpact;
       string                                       m_strMatter;
       bool                                         m_bOpenPlaylist;
       bool                                         m_bBeforeOpenPlaylist;
