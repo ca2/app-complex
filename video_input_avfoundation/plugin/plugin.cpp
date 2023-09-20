@@ -1078,7 +1078,7 @@ namespace audio
    string plugin::multimedia_get_origin_path()
    {
 
-      return __type_name(this) + ":" + ::hex::upper_from((uptr)this);
+      return ::type(this).name() + ":" + ::hex::upper_from((uptr)this);
 
    }
 
