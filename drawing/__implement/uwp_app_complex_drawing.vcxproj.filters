@@ -22,23 +22,32 @@
     <None Include="..\..\..\..\..\operating_system\storage-universal_windows\Win32\Debug\third\binary\zlib.dll">
       <Filter>Library\Win32\basis</Filter>
     </None>
-    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\third\binary\bzip2.dll">
-      <Filter>Library\x64\basis</Filter>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\third\UWPStrg-x64-Debug-binary\archive.dll">
+      <Filter>Library\x64\Debug</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\third\UWPStrg-x64-Debug-binary\bzip2.dll">
+      <Filter>Library\x64\Debug</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\third\UWPStrg-x64-Debug-binary\iconv.dll">
+      <Filter>Library\x64\Debug</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\third\UWPStrg-x64-Debug-binary\pcre.dll">
+      <Filter>Library\x64\Debug</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\third\UWPStrg-x64-Debug-binary\sqlite.dll">
+      <Filter>Library\x64\Debug</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\third\UWPStrg-x64-Debug-binary\unac.dll">
+      <Filter>Library\x64\Debug</Filter>
+    </None>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\third\UWPStrg-x64-Debug-binary\zlib.dll">
+      <Filter>Library\x64\Debug</Filter>
     </None>
     <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\binary\libcrypto-3-x64.dll">
-      <Filter>Library\x64\basis</Filter>
+      <Filter>Library\x64\Debug</Filter>
     </None>
     <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\binary\libssl-3-x64.dll">
-      <Filter>Library\x64\basis</Filter>
-    </None>
-    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\third\binary\pcre.dll">
-      <Filter>Library\x64\basis</Filter>
-    </None>
-    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\third\binary\sqlite.dll">
-      <Filter>Library\x64\basis</Filter>
-    </None>
-    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\third\binary\zlib.dll">
-      <Filter>Library\x64\basis</Filter>
+      <Filter>Library\x64\Debug</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -63,7 +72,7 @@
     <Filter Include="Library\x64">
       <UniqueIdentifier>{0f379721-8c82-45ff-a67a-56da742ca32d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Library\x64\basis">
+    <Filter Include="Library\x64\Debug">
       <UniqueIdentifier>{1f51e71f-2f0b-4d63-9c81-d36ecfb6bb64}</UniqueIdentifier>
     </Filter>
   </ItemGroup>

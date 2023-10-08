@@ -70,6 +70,8 @@ namespace video_input_media_capture
 
       synchronous_lock synchronouslock(this->synchronization());
 
+      __defer_construct_new(m_pitemaDevice);
+
       ::winrt::Windows::Foundation::Collections::IVectorView<::winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup> sourcegroupa(nullptr);
 
       sourcegroupa = ::winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup::FindAllAsync().get();
@@ -104,7 +106,7 @@ namespace video_input_media_capture
 
                pdevice->m_pvideoinput = this;
 
-               add_device(pdevice);
+               itema().add_item(pdevice);
 
                break;
 
@@ -157,8 +159,10 @@ namespace video_input_media_capture
    void video_input::close_all_devices()
    {
 
-      for (auto & pdevice : devicea())
+      for (auto & pitem : itema())
       {
+
+         ::pointer < device > pdevice = pitem;
 
          pdevice->close();
 
