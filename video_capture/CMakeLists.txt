@@ -65,7 +65,7 @@ if (MSVC)
 
 elseif(${LINUX} OR ${FREEBSD})
 
-   target_compile_options(app_complex_video_capture PRIVATE -fpermissive)
+   target_compile_options(app_complex_video_capture PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive>)
    #target_link_options(app_complex_video_capture PRIVATE -Wl,-rpath=$ORIGIN)
    target_link_libraries(app_complex_video_capture PRIVATE ${library_references})
    target_link_options(app_complex_video_capture PRIVATE -Wl,-z,defs)
