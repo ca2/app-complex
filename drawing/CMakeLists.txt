@@ -47,7 +47,7 @@ if (MSVC)
 
 elseif(${LINUX} OR ${FREEBSD})
 
-   target_compile_options(app_complex_drawing PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive>)
+   target_compile_options(app_complex_drawing PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
    #target_link_options(app_complex_drawing PRIVATE -Wl,-rpath=$ORIGIN)
    target_link_libraries(app_complex_drawing PRIVATE ${library_references})
    target_link_options(app_complex_drawing PRIVATE -Wl,-z,defs)
