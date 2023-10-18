@@ -307,7 +307,7 @@ namespace multimedia
          {
             ::rectangle_f64 rectangleX;
 
-            ::rectangle_f64 rectangleTabClient;
+            ::rectangle_f64 rectangleHosting;
             this->rectangle(rectangleX);
             m_pcontrol->set_window_position(zorder_none, rectangleX.left(), rectangleX.top(), rectangleX.width(), rectangleX.height(), SWP_SHOWWINDOW);
             m_pcontrol->on_layout(pgraphics);
