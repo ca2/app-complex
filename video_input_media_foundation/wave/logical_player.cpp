@@ -386,12 +386,12 @@ namespace wave
       case command_execute_play:
       {
 
-         information("audio_player command_execute_play");
+         informationf("audio_player command_execute_play");
 
          if (IsPlaying())
          {
 
-            information("Error : Wrong State : audio_player audio already playing");
+            informationf("Error : Wrong State : audio_player audio already playing");
 
             pcommand->m_bResult = false;
 
@@ -402,7 +402,7 @@ namespace wave
          if (m_ppluginPlay == nullptr)
          {
 
-            information("audio_player plugin isn't set : NOT going to play");
+            informationf("audio_player plugin isn't set : NOT going to play");
 
             pcommand->m_bResult = false;
 
@@ -536,21 +536,21 @@ namespace wave
       switch (eevent)
       {
       case e_player_event_open_device:
-         information("logical_player OnEvent e_player_event_open_device");
+         informationf("logical_player OnEvent e_player_event_open_device");
          SetDeviceState(e_device_state_opened);
          break;
       case e_player_event_open_device_failed:
-         information("logical_player OnEvent e_player_event_open_device_failed");
+         informationf("logical_player OnEvent e_player_event_open_device_failed");
          SetDeviceState(e_device_state_initial);
          break;
       case e_player_event_open_decoder:
-         information("logical_player OnEvent e_player_event_open_decoder");
+         informationf("logical_player OnEvent e_player_event_open_decoder");
          SetDecoderState(e_decoder_state_opened);
          break;
       case e_player_event_start_device_failed:
       {
 
-         information("logical_player OnEvent e_player_event_start_device_failed");
+         informationf("logical_player OnEvent e_player_event_start_device_failed");
 
          SetDeviceState(e_device_state_opened);
          SetState(e_state_initial);
@@ -560,7 +560,7 @@ namespace wave
       case e_player_event_play:
       {
 
-         information("logical_player OnEvent e_player_event_play");
+         informationf("logical_player OnEvent e_player_event_play");
 
          SetDeviceState(e_device_state_playing);
          SetState(e_state_playing);
@@ -570,7 +570,7 @@ namespace wave
       case e_player_event_stop:
       {
 
-         information("logical_player OnEvent e_player_event_stop");
+         informationf("logical_player OnEvent e_player_event_stop");
 
          SetDeviceState(e_device_state_stopping);
          SetState(e_state_initial);
@@ -579,7 +579,7 @@ namespace wave
       case e_player_event_fade_out_and_stop:
       {
 
-         information("logical_player OnEvent e_player_event_fade_out_and_stop");
+         informationf("logical_player OnEvent e_player_event_fade_out_and_stop");
 
          SetState(e_state_fading_out_to_stop);
 
@@ -588,7 +588,7 @@ namespace wave
       case e_player_event_execute_pause:
       {
 
-         information("logical_player OnEvent EventDeviceOpen");
+         informationf("logical_player OnEvent EventDeviceOpen");
 
          SetDeviceState(e_device_state_paused);
          SetState(e_state_paused);
@@ -598,7 +598,7 @@ namespace wave
       case e_player_event_execute_restart:
       {
 
-         information("logical_player OnEvent e_player_event_execute_restart");
+         informationf("logical_player OnEvent e_player_event_execute_restart");
 
          SetDeviceState(e_device_state_playing);
 
@@ -610,14 +610,14 @@ namespace wave
       case e_player_event_eof:
       {
 
-         information("logical_player OnEvent e_player_event_eof");
+         informationf("logical_player OnEvent e_player_event_eof");
 
       }
       break;
       case e_player_event_playback_end:
       {
 
-         information("logical_player e_player_event_playback_end");
+         informationf("logical_player e_player_event_playback_end");
 
          m_ppluginRead.release();
 
@@ -643,7 +643,7 @@ namespace wave
       case e_player_event_stopped:
       {
 
-         information("logical_player e_player_event_stopped");
+         informationf("logical_player e_player_event_stopped");
 
          //m_pwaveout->out_close();
          m_ppluginRead.release();
@@ -669,25 +669,25 @@ namespace wave
       break;
       case e_player_event_close_device:
       {
-         information("logical_player OnEvent e_player_event_close_device");
+         informationf("logical_player OnEvent e_player_event_close_device");
          SetDeviceState(e_device_state_initial);
       }
       break;
       case e_player_event_close_decoder:
       {
-         information("logical_player OnEvent e_player_event_close_decoder");
+         informationf("logical_player OnEvent e_player_event_close_decoder");
          SetDecoderState(e_decoder_state_initial);
       }
       break;
       case e_player_event_open_decoder_failed:
       {
-         information("logical_player OnEvent e_player_event_open_decoder_failed");
+         informationf("logical_player OnEvent e_player_event_open_decoder_failed");
          SetDecoderState(e_decoder_state_initial);
       }
       break;
       case e_player_event_destroy:
       {
-         information("logical_player OnEvent e_player_event_destroy");
+         informationf("logical_player OnEvent e_player_event_destroy");
          SetDeviceState(e_device_state_initial);
       }
       break;
@@ -831,7 +831,7 @@ namespace wave
          if (pplugin->audio_eof())
          {
 
-            information("mixer plugin:EOF");
+            informationf("mixer plugin:EOF");
 
             audio_on_event(::audio::event_eof);
 

@@ -90,21 +90,21 @@ namespace mediaplaylist
       if (IS_ID_USED(songs_changed))
       {
 
-         information("id_songs_changed used");
+         informationf("id_songs_changed used");
 
       }
 
       if (IS_ID_USED(invalid))
       {
 
-         information("id_invalid used");
+         informationf("id_invalid used");
 
       }
 
       if (IS_ID_USED(filter))
       {
 
-         information("id_filter used");
+         informationf("id_filter used");
 
       }
 
@@ -609,7 +609,7 @@ namespace mediaplaylist
          if (m_psessionVeriwell == nullptr)
          {
 
-            information("failed to allocated veriwell multimedia playlist session");
+            informationf("failed to allocated veriwell multimedia playlist session");
 
          }
 
@@ -635,7 +635,7 @@ pacmedirectory->config() / "system/spotify.txt"))
             if (!m_plibrarySpotify->is_opened() || !m_plibrarySpotify->open_ca2_library())
             {
 
-               information("spotify multimedia playlist library could not be loaded or is not present");
+               informationf("spotify multimedia playlist library could not be loaded or is not present");
 
             }
             else
@@ -649,7 +649,7 @@ pacmedirectory->config() / "system/spotify.txt"))
                   if (m_psessionSpotify == nullptr)
                   {
 
-                     information("failed to allocated spotify multimedia playlist session");
+                     informationf("failed to allocated spotify multimedia playlist session");
 
                   }
 
@@ -663,7 +663,7 @@ pacmedirectory->config() / "system/spotify.txt"))
                   if (m_pspotifywebapi == nullptr)
                   {
 
-                     information("failed to allocated spotify multimedia playlist session");
+                     informationf("failed to allocated spotify multimedia playlist session");
 
                   }
 

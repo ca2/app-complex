@@ -6,6 +6,9 @@ namespace notify_drawing
 {
 
 
+   __IMPLEMENT_APPLICATION_RELEASE_TIME();
+
+
    application::application()
    {
 
@@ -87,7 +90,7 @@ namespace notify_drawing
          auto pthread = fork([this]()
             {
 
-               information("test");
+               informationf("test");
 
             });
 
@@ -98,13 +101,13 @@ namespace notify_drawing
 
 #ifdef _DEBUG
 
-      information("_DEBUG build? (basis)");
+      informationf("_DEBUG build? (basis)");
 
       ASSERT(false);
 
 #else
 
-      information("RELEASE build? (stage)");
+      informationf("RELEASE build? (stage)");
 
       ASSERT(false);
 
@@ -128,7 +131,7 @@ namespace notify_drawing
 
       }
 
-      information("\nfinished notify_drawing::on_request");
+      informationf("\nfinished notify_drawing::on_request");
 
    }
 

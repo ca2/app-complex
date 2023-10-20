@@ -245,7 +245,7 @@ namespace wave
 
          //throw ::exception("invalid state");
 
-         information("pre_buffer::fill_buffer Buffer ALREADY Filled : invalid state");
+         informationf("pre_buffer::fill_buffer Buffer ALREADY Filled : invalid state");
 
          return false;
 
@@ -372,7 +372,7 @@ namespace wave
 
       if (iRead < 8820)
       {
-         information("1");
+         informationf("1");
 
       }
       ppos += iRead;
@@ -454,7 +454,7 @@ namespace wave
 //         if(iBytesRecorded < pbuffer->m_memory.get_size())
 //         {
 //
-//            information("end of data or starving or ?");
+//            informationf("end of data or starving or ?");
 //
 //         }
 

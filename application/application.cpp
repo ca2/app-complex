@@ -8,6 +8,9 @@ namespace simple_application
 {
 
 
+   __IMPLEMENT_APPLICATION_RELEASE_TIME();
+
+
    application::application()
    {
 
@@ -99,7 +102,7 @@ namespace simple_application
 
       }
 
-      information("\nfinished simple_application::on_request");
+      informationf("\nfinished simple_application::on_request");
 
    }
 

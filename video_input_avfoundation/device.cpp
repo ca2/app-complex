@@ -44,7 +44,7 @@ namespace video_input_video_avfoundation
 
       }
 
-//      information("Initialize video capture device from %s", m_strDevice.c_str());
+//      informationf("Initialize video capture device from %s", m_strDevice.c_str());
 //
 //      m_iDevice = v4l2_open(m_strDevice, O_RDWR | O_NONBLOCK);
 //
@@ -55,7 +55,7 @@ namespace video_input_video_avfoundation
 //
 //         auto estatus = cerrornumber.estatus();
 //
-//         error("Unable to open device");
+//         errorf("Unable to open device");
 //
 //         throw ::exception(estatus, "Unable to open device");
 //
@@ -540,18 +540,18 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //      if (v4l2_set_input(m_iDevice, &m_iInput) < 0)
 //      {
 //
-//         error("Unable to set input %d", m_iInput);
+//         errorf("Unable to set input %d", m_iInput);
 //
 //         goto fail;
 //
 //      }
 //
-//      information("Input: %d", m_iInput);
+//      informationf("Input: %d", m_iInput);
 //
 //      if (v4l2_get_input_caps(m_iDevice, -1, &input_caps) < 0)
 //      {
 //
-//         error("Unable to get input capabilities");
+//         errorf("Unable to get input capabilities");
 //
 //         goto fail;
 //
@@ -564,7 +564,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //         if (v4l2_set_standard(m_iDevice, &m_iStandard) < 0)
 //         {
 //
-//            error("Unable to set video standard");
+//            errorf("Unable to set video standard");
 //
 //            goto fail;
 //
@@ -584,7 +584,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //         if (v4l2_set_dv_timing(m_iDevice, &m_iDvTiming) < 0)
 //         {
 //
-//            error("Unable to set dv timing");
+//            errorf("Unable to set dv timing");
 //
 //            goto fail;
 //
@@ -603,7 +603,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //         auto cerrornumber = c_error_number();
 //
-//         error("Unable to set format");
+//         errorf("Unable to set format");
 //
 //         goto fail;
 //
@@ -612,27 +612,27 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //      if (v4l2_pix_fmt_to_video_format(m_iPixFmt) == e_video_format_none)
 //      {
 //
-//         error("Selected video format not supported");
+//         errorf("Selected video format not supported");
 //
 //         goto fail;
 //
 //      }
 //
-//      information("Resolution: %greekdeltax%d", m_size.cx(), m_size.cy());
-//      information("Pixelformat: %s", ::string((const char *) &m_iPixFmt, 5).c_str());
-//      information("Linesize: %d Bytes", m_iLineSize);
+//      informationf("Resolution: %greekdeltax%d", m_size.cx(), m_size.cy());
+//      informationf("Pixelformat: %s", ::string((const char *) &m_iPixFmt, 5).c_str());
+//      informationf("Linesize: %d Bytes", m_iLineSize);
 //
 //      /* set framerate */
 //      if (v4l2_set_framerate(m_iDevice, &m_iFrameRateDenominator, &m_iFrameRateNumerator) < 0)
 //      {
 //
-//         error("Unable to set framerate");
+//         errorf("Unable to set framerate");
 //
 //         goto fail;
 //
 //      }
 //
-//      information("Framerate: %.2f fps", (float)m_iFrameRateDenominator / m_iFrameRateNumerator);
+//      informationf("Framerate: %.2f fps", (float)m_iFrameRateDenominator / m_iFrameRateNumerator);
 //
 //      m_pmemorymap = __new(memory_map(m_iDevice));
 //
@@ -642,7 +642,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //      fail:
 //
-//      error("Initialization failed");
+//      errorf("Initialization failed");
 //
 //      close();
 
@@ -675,7 +675,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //         m_inputa.add(pinput);
 //
-//         information("Found input '%s' (Index %d)", in.name, in.index);
+//         informationf("Found input '%s' (Index %d)", in.name, in.index);
 //
 //         in.index++;
 //
@@ -743,13 +743,13 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //            m_pixelformata.add(ppixelformat);
 //
-//            information("Pixelformat: %s (available)", ppixelformat->m_strDescription.c_str());
+//            informationf("Pixelformat: %s (available)", ppixelformat->m_strDescription.c_str());
 //
 //         }
 //         else
 //         {
 //
-//            information("Pixelformat: %s (unavailable)", ppixelformat->m_strDescription.c_str());
+//            informationf("Pixelformat: %s (unavailable)", ppixelformat->m_strDescription.c_str());
 //
 //         }
 //
@@ -1108,7 +1108,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 
 //      struct v4l2_buffer buf;
 //
-//      information("attempting to read buffer data for %ld buffers", m_pmemorymap->m_itema.get_count());
+//      informationf("attempting to read buffer data for %ld buffers", m_pmemorymap->m_itema.get_count());
 //
 //      for (uint_fast32_t i = 0; i < m_pmemorymap->m_itema.get_count(); i++)
 //      {

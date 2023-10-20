@@ -53,7 +53,7 @@ namespace multimedia
          if(!library.open(strLibrary, false))
          {
 
-            information("Failed to do multimedia audio mixer factory_item exchange. Could not load library");
+            informationf("Failed to do multimedia audio mixer factory_item exchange. Could not load library");
 
             return false;
 
@@ -64,7 +64,7 @@ namespace multimedia
          if(([a-z0-9_]+)_factory == nullptr)
          {
 
-            information("Failed to do multimedia audio mixer factory_item exchange. Could not get factory_item exchange entry point function");
+            informationf("Failed to do multimedia audio mixer factory_item exchange. Could not get factory_item exchange entry point function");
 
             return false;
 
@@ -83,7 +83,7 @@ namespace multimedia
          if(!([a-z0-9_]+)_factory(::factory::factory * pfactory))
          {
 
-            information("Failed to do multimedia audio mixer factory_item exchange");
+            informationf("Failed to do multimedia audio mixer factory_item exchange");
 
          }
 

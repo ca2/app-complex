@@ -56,7 +56,7 @@ namespace mediaplaylist
 
       on_open_document(m_pathFile);
 
-      information("file path is %s", m_path.c_str());
+      informationf("file path is %s", m_path.c_str());
 
       update_all_impacts(id_playlists_changed);
 
@@ -915,7 +915,7 @@ processed_new:
          if(strId.is_empty())
          {
 
-            information("The song was not added (1) ::mediaplaylist::document::AddSong .\n\n");
+            informationf("The song was not added (1) ::mediaplaylist::document::AddSong .\n\n");
 
             return "";
 

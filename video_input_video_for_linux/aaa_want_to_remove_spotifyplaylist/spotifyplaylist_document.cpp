@@ -97,7 +97,7 @@ namespace mediaplaylist
 
       //on_save_document(m_filepath);
 
-      information("file path is %s",m_filepath);
+      informationf("file path is %s",m_filepath);
 
       update_all_impacts(nullptr,5000);
 

@@ -83,12 +83,12 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////         float ffps;
 ////         uint64_t timeout_usec;
 ////
-////         //information("%s: memory_new capture thread", m_pdevice->m_iDeviceice_id);
+////         //informationf("%s: memory_new capture thread", m_pdevice->m_iDeviceice_id);
 ////         //os_set_thread_name("v4l2: capture");
 ////
 ////         /* Get framerate and calculate appropriate select timeout value. */
 ////         ffps = (float)m_pdevice->m_iFrameRateDenominator / (float) m_pdevice->m_iFrameRateNumerator;
-////         information("%s: framerate: %.2f fps", m_pdevice->m_strDevice.c_str(), ffps);
+////         informationf("%s: framerate: %.2f fps", m_pdevice->m_strDevice.c_str(), ffps);
 ////         /* Timeout set to 5 frame periods. */
 ////         timeout_usec = (1000000 * m_pdevice->m_iTimeoutFrames) / ffps;
 ////      information(
@@ -106,7 +106,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////
 ////      m_bCapturing = true;
 ////
-////      information("%s: memory_new capture started", m_pdevice->m_strDevice.c_str());
+////      informationf("%s: memory_new capture started", m_pdevice->m_strDevice.c_str());
 ////
 ////      m_pframe = memory_new ::video::frame(v4l2_pix_fmt_to_video_format(m_pdevice->m_iPixFmt),
 ////                                    m_pdevice->m_size.cx(), m_pdevice->m_size.cy());
@@ -143,7 +143,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////      first_ts = 0;
 //////         v4l2_prep_obs_frame(data, &out, plane_offsets);
 //////
-//////         information("%s: obs frame prepared", m_pdevice->m_strDevice.c_str());
+//////         informationf("%s: obs frame prepared", m_pdevice->m_strDevice.c_str());
 ////
 ////      while (::task_get_run() && !m_bStopCapture)
 ////      {
@@ -176,7 +176,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////
 ////            }
 ////
-////            error("%s: select failed", m_pdevice->m_strDevice.c_str());
+////            errorf("%s: select failed", m_pdevice->m_strDevice.c_str());
 ////
 ////            break;
 ////
@@ -184,7 +184,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////         else if (r == 0)
 ////         {
 ////
-////            error("%s: select timed out", m_pdevice->m_strDevice.c_str());
+////            errorf("%s: select timed out", m_pdevice->m_strDevice.c_str());
 ////
 ////#ifdef _DEBUG
 ////
@@ -195,7 +195,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////            if (v4l2_ioctl(m_pdevice->m_iDevice, VIDIOC_LOG_STATUS) < 0)
 ////            {
 ////
-////               error("%s: failed to log status", m_pdevice->m_strDevice.c_str());
+////               errorf("%s: failed to log status", m_pdevice->m_strDevice.c_str());
 ////
 ////            }
 ////
@@ -204,9 +204,9 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////
 ////               m_pdevice->_reset_capture();
 ////
-////               information("%s: stream reset successful", m_pdevice->m_strDevice.c_str());
+////               informationf("%s: stream reset successful", m_pdevice->m_strDevice.c_str());
 //////                  else
-//////                     error("%s: failed to reset",
+//////                     errorf("%s: failed to reset",
 //////                          m_pdevice->m_strDevice.c_str());
 ////            }
 ////
@@ -223,13 +223,13 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////            if (errno == EAGAIN)
 ////            {
 ////
-////               information("%s: ioctl dqbuf eagain", m_pdevice->m_strDevice.c_str());
+////               informationf("%s: ioctl dqbuf eagain", m_pdevice->m_strDevice.c_str());
 ////
 ////               continue;
 ////
 ////            }
 ////
-////            error("%s: failed to dequeue buffer", m_pdevice->m_strDevice.c_str());
+////            errorf("%s: failed to dequeue buffer", m_pdevice->m_strDevice.c_str());
 ////
 ////            break;
 ////
@@ -261,7 +261,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////            m_pdevice->m_pmjpegdecoder->decode(m_pframe, start, buf.bytesused);
 ////
 //////                                                      < 0) {
-//////                  error("failed to unpack jpeg");
+//////                  errorf("failed to unpack jpeg");
 //////                  break;
 //////               }
 ////         }
@@ -424,7 +424,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////
 ////            if (v4l2_ioctl(m_pdevice->m_iDevice, VIDIOC_QBUF, &buf) < 0)
 ////            {
-////               error("%s: failed to enqueue buffer",
+////               errorf("%s: failed to enqueue buffer",
 ////                               m_pdevice->m_strDevice.c_str());
 ////               break;
 ////            }
@@ -437,7 +437,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////
 ////      }
 ////
-////      information("%s: Stopped capture after %" PRIu64 " frames",
+////      informationf("%s: Stopped capture after %" PRIu64 " frames",
 ////           m_pdevice->m_strDevice.c_str(), frames);
 ////
 ////      exit:

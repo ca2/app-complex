@@ -16,6 +16,9 @@ namespace helloworld
 
       application();
       ~application() override;
+      
+      __DECLARE_APPLICATION_RELEASE_TIME();
+
 
 
       virtual bool initialize_application();

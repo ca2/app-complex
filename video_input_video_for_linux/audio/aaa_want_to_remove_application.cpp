@@ -80,7 +80,10 @@
 //{
 //
 //
-////   application::application()
+////   __IMPLEMENT_APPLICATION_RELEASE_TIME();
+
+
+   application::application()
 ////   {
 ////
 ////      m_bFadeOutAndStopOnExit = true;
@@ -216,7 +219,7 @@
 ////         if (!estatus)
 ////         {
 ////
-////            warning("Could not initialize Audio Mixer (1)");
+////            warningf("Could not initialize Audio Mixer (1)");
 ////
 ////         }
 ////         else
@@ -225,7 +228,7 @@
 ////            if (!m_paudiomixer->init1())
 ////            {
 ////
-////               warning("Could not initialize Audio Mixer (2)");
+////               warningf("Could not initialize Audio Mixer (2)");
 ////
 ////            }
 ////            else
@@ -234,7 +237,7 @@
 ////               if (!m_paudiomixer->init())
 ////               {
 ////
-////                  warning("Could not initialize Audio Mixer (3)");
+////                  warningf("Could not initialize Audio Mixer (3)");
 ////
 ////               }
 ////
@@ -252,7 +255,7 @@
 ////         if (!estatus)
 ////         {
 ////
-////            warning("Could not initialize Audio Mixer User Base (1)");
+////            warningf("Could not initialize Audio Mixer User Base (1)");
 ////
 ////         }
 ////         else
@@ -263,7 +266,7 @@
 ////            if (!m_paudiomixeruserbase->init1())
 ////            {
 ////
-////               warning("Could not initialize Audio Mixer User Base (2)");
+////               warningf("Could not initialize Audio Mixer User Base (2)");
 ////
 ////            }
 ////            else
@@ -272,7 +275,7 @@
 ////               if (!m_paudiomixeruserbase->init())
 ////               {
 ////
-////                  warning("Could not initialize Audio Mixer User Base (3)");
+////                  warningf("Could not initialize Audio Mixer User Base (3)");
 ////
 ////               }
 ////
@@ -290,7 +293,7 @@
 ////         if (!estatus)
 ////         {
 ////
-////            warning("Could not initialize Audio Wave (1)");
+////            warningf("Could not initialize Audio Wave (1)");
 ////
 ////         }
 ////
@@ -335,7 +338,7 @@
 ////
 ////      /*if(!m_pmediaplaylist->initialize())
 ////      {
-////         information("Could not initialize Multimedia Media Playlist");
+////         informationf("Could not initialize Multimedia Media Playlist");
 ////         return false;
 ////      }*/
 ////
@@ -892,7 +895,7 @@ pacmedirectory->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".mp
 ////         if (!pspeaker->speak(text))
 ////         {
 ////
-////            information("test");
+////            informationf("test");
 ////
 ////         }
 ////
@@ -928,7 +931,7 @@ pacmedirectory->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".mp
 ////
 ////               }
 ////
-////               information("not playing or timeout");
+////               informationf("not playing or timeout");
 ////
 ////            }
 ////

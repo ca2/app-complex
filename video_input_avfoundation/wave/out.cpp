@@ -645,7 +645,7 @@ namespace wave
          if (m_estatusWave != ::success)
          {
 
-            information("out::on_start open FAILED");
+            informationf("out::on_start open FAILED");
 
             m_pplayer->post_event(player::e_player_event_open_device_failed, pcommand);
 
@@ -653,7 +653,7 @@ namespace wave
 
          }
 
-         information("out::on_start open SUCCESS");
+         informationf("out::on_start open SUCCESS");
 
          m_pplayer->post_event(player::e_player_event_open_device);
 
@@ -664,7 +664,7 @@ namespace wave
 
          m_estatusWave = error_wrong_state;
 
-         information("out::on_start wrong state (1)");
+         informationf("out::on_start wrong state (1)");
 
          return;
 
@@ -673,7 +673,7 @@ namespace wave
       if (pcommand->m_bFadeIn)
       {
 
-         information("OMG FADE IN is this source of BUG?!?");
+         informationf("OMG FADE IN is this source of BUG?!?");
 
          effect_crescendo * pfadein = memory_new effect_crescendo;
 
@@ -696,7 +696,7 @@ namespace wave
       if (m_estatusWave != ::success)
       {
 
-         information("audio_player start FAILED");
+         informationf("audio_player start FAILED");
 
          m_pplayer->post_event(player::e_player_event_start_device_failed, pcommand);
 
@@ -704,7 +704,7 @@ namespace wave
 
       }
 
-      information("audio_player start SUCCESS");
+      informationf("audio_player start SUCCESS");
 
       m_pplayer->post_event(player::e_player_event_play, pcommand);
 
@@ -856,7 +856,7 @@ namespace wave
 
             information(trace_category_appmsg, e_trace_level_information, "OUT thread::raw_pump_message - Received e_message_quit.\n");
 
-            ::information("OUT thread::raw_pump_message - Received e_message_quit.\n");
+            ::informationf("OUT thread::raw_pump_message - Received e_message_quit.\n");
 
             m_nDisablePumpCount++; // application must die
             // Note: prevents calling message loop things in 'exit_thread'

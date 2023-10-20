@@ -19,6 +19,9 @@ namespace notify_drawing
 
       application();
       ~application() override;
+      
+      __DECLARE_APPLICATION_RELEASE_TIME();
+
 
       virtual string preferred_experience() override;
       void init_instance() override;

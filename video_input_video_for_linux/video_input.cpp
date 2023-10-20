@@ -112,7 +112,7 @@ namespace video_input_video_for_linux
 
             auto strErrorDescription = cerrornumber.get_error_description();
 
-            information("Unable to open %s - %s", strDevice.c_str(), strErrorDescription.c_str());
+            informationf("Unable to open %s - %s", strDevice.c_str(), strErrorDescription.c_str());
 
             continue;
 
@@ -121,7 +121,7 @@ namespace video_input_video_for_linux
          if (v4l2_ioctl(fd, VIDIOC_QUERYCAP, &video_cap) == -1)
          {
 
-            information("Failed to query capabilities for %s", strDevice.c_str());
+            informationf("Failed to query capabilities for %s", strDevice.c_str());
 
             v4l2_close(fd);
 
@@ -145,7 +145,7 @@ namespace video_input_video_for_linux
          if (!(caps & V4L2_CAP_VIDEO_CAPTURE))
          {
 
-            information("%s seems to not support video capture", strDevice.c_str());
+            informationf("%s seems to not support video capture", strDevice.c_str());
 
             v4l2_close(fd);
 
@@ -184,7 +184,7 @@ namespace video_input_video_for_linux
 
          }
 
-         information("Found device '%s' at %s", video_cap.card, strDevice.c_str());
+         informationf("Found device '%s' at %s", video_cap.card, strDevice.c_str());
 
          v4l2_close(fd);
 

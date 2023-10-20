@@ -122,7 +122,7 @@ namespace multimedia_playlist
       //if(m_strName.is_empty())
       //{
 
-      //   information("playlist with empty name");
+      //   informationf("playlist with empty name");
 
       //}
 

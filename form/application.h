@@ -18,6 +18,9 @@ namespace app_complex_form
 
       application();
       ~application() override;
+      
+      __DECLARE_APPLICATION_RELEASE_TIME();
+
 
       string preferred_experience() override;
       void init_instance() override;

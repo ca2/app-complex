@@ -250,7 +250,7 @@ HRESULT CaptureManager::OnCaptureEvent(WPARAM wParam, LPARAM lParam)
       LPOLESTR str;
       if (SUCCEEDED(StringFromCLSID(guidType, &str)))
       {
-         information("MF_CAPTURE_ENGINE_EVENT: %S (hr = 0x%X)\n", str, hrStatus);
+         informationf("MF_CAPTURE_ENGINE_EVENT: %S (hr = 0x%X)\n", str, hrStatus);
          CoTaskMemFree(str);
       }
 #endif

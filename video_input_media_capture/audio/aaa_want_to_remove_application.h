@@ -43,6 +43,9 @@
 //
 //      application();
 //      ~application() override;
+      
+      __DECLARE_APPLICATION_RELEASE_TIME();
+
 //
 //      virtual void init3() override;
 //      virtual void init_instance() override;

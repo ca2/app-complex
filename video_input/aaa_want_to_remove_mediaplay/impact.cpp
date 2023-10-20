@@ -390,7 +390,7 @@ namespace mediaplay
 
             ::file::path pathOrigin = get_wave_player()->plugin()->multimedia_get_origin_path();
 
-            information("wave_player::EventOpenDecoder pathOrigin = %s", pathOrigin.c_str());
+            informationf("wave_player::EventOpenDecoder pathOrigin = %s", pathOrigin.c_str());
 
          }
          else

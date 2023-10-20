@@ -14,6 +14,9 @@ namespace app_complex_drawing
 {
 
 
+   __IMPLEMENT_APPLICATION_RELEASE_TIME();
+
+
    application::application()
    {
 

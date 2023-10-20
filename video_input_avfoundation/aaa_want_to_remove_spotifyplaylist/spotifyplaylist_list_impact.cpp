@@ -258,7 +258,7 @@ namespace mediaplaylist
 
       set_need_redraw();
 
-      information("list_impact::OnInitialUpdate() oswindow = %d\n", get_handle());
+      informationf("list_impact::OnInitialUpdate() oswindow = %d\n", get_handle());
 
       /*   CTransparentFrameWndV4 * pframe = dynamic_cast < CTransparentFrameWndV4 * > (get_parent_frame());
          if(pframe != nullptr)

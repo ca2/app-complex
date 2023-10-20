@@ -18,6 +18,9 @@ namespace app_complex_drawing
       
       application();
       ~application() override;
+      
+      __DECLARE_APPLICATION_RELEASE_TIME();
+
 
 
       ::type_atom get_pane_impact_type() const override;

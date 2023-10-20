@@ -22,6 +22,9 @@ namespace app_complex_form
 {
 
 
+   __IMPLEMENT_APPLICATION_RELEASE_TIME();
+
+
    application::application()
    {
 
@@ -142,13 +145,13 @@ namespace app_complex_form
 
 #ifdef _DEBUG
 
-      information("_DEBUG build? (basis)");
+      informationf("_DEBUG build? (basis)");
 
       ASSERT(false);
 
 #else
 
-      information("RELEASE build? (stage)");
+      informationf("RELEASE build? (stage)");
 
       ASSERT(false);
 
@@ -179,7 +182,7 @@ namespace app_complex_form
 
       }
 
-      information("\nfinished simple_form::on_request");
+      informationf("\nfinished simple_form::on_request");
 
    }
 

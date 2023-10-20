@@ -27,6 +27,9 @@ namespace app_complex_video_capture
 
       application();
       ~application() override;
+      
+      __DECLARE_APPLICATION_RELEASE_TIME();
+
 
 
       void init_instance() override;

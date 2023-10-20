@@ -9,7 +9,7 @@ namespace mediamanager
    media_manager::media_manager()
    {
 
-      information("media_manager::media_manager(%d)", this);
+      informationf("media_manager::media_manager(%d)", this);
 
    }
 
@@ -37,7 +37,7 @@ namespace mediamanager
       if(!estatus)
       {
 
-         information("Could not create Multimedia Media Manager Album Build");
+         informationf("Could not create Multimedia Media Manager Album Build");
 
          return ::error_failed;
 
@@ -46,13 +46,13 @@ namespace mediamanager
       if(!album_build()->initialize())
       {
          
-         information("Could not create Multimedia Media Manager Album Build");
+         informationf("Could not create Multimedia Media Manager Album Build");
          
          return ::error_failed;
 
       }
 
-      information("media_manager::media_manager(%d)", this);
+      informationf("media_manager::media_manager(%d)", this);
 
       return ::success;
 

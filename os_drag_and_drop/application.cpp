@@ -6,6 +6,9 @@ namespace simple_os_drag_and_drop
 {
 
 
+   __IMPLEMENT_APPLICATION_RELEASE_TIME();
+
+
    application::application()
    {
 
@@ -94,7 +97,7 @@ namespace simple_os_drag_and_drop
 //         auto pthread = fork([this]()
 //            {
 //
-//               information("test");
+//               informationf("test");
 //
 //            });
 //
@@ -104,13 +107,13 @@ namespace simple_os_drag_and_drop
 
 #ifdef _DEBUG
 
-      information("_DEBUG build? (basis)");
+      informationf("_DEBUG build? (basis)");
 
       ASSERT(false);
 
 #else
 
-      information("RELEASE build? (stage)");
+      informationf("RELEASE build? (stage)");
 
       ASSERT(false);
 
@@ -152,7 +155,7 @@ namespace simple_os_drag_and_drop
 
       }
 
-      information("\nfinished simple_os_drag_and_drop::on_request");
+      informationf("\nfinished simple_os_drag_and_drop::on_request");
 
    }
 

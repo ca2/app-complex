@@ -20,6 +20,9 @@ namespace simple_os_drag_and_drop
 
       application();
       ~application() override;
+      
+      __DECLARE_APPLICATION_RELEASE_TIME();
+
 
       virtual string preferred_experience() override;
       void init_instance() override;

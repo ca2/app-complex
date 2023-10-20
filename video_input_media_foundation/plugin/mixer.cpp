@@ -139,7 +139,7 @@ namespace audio
 
             auto elapsed = ::time.elapsed();
 
-            information("elapsedd " + as_string(elapsed.m_i));
+            informationf("elapsedd " + as_string(elapsed.m_i));
 
          }
 
@@ -257,18 +257,18 @@ namespace audio
          if (pplugin && pplugin->audio_eof())
          {
 
-            information("mixer plugin:EOF");
+            informationf("mixer plugin:EOF");
 
             if (pplugin->m_bLoop)
             {
 
-               information("mixer plugin:seek_begin (Loop=1) (RESTART)");
+               informationf("mixer plugin:seek_begin (Loop=1) (RESTART)");
 
             }
             else if (pplugin->m_ppluginNext != nullptr)
             {
 
-               information("mixer plugin:set (NextPlugin) NEXTA");
+               informationf("mixer plugin:set (NextPlugin) NEXTA");
 
                m_plugina.set_at(i, pplugin->m_ppluginNext);
 
@@ -276,7 +276,7 @@ namespace audio
             else
             {
 
-               information("mixer plugin:REMOVE");
+               informationf("mixer plugin:REMOVE");
 
                m_plugina.erase_at(i);
 

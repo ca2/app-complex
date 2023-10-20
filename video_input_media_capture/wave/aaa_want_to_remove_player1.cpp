@@ -438,12 +438,12 @@ namespace wave
       case command_execute_play:
       {
 
-         information("audio_player command_execute_play");
+         informationf("audio_player command_execute_play");
 
          if (IsPlaying())
          {
 
-            information("Error : Wrong State : audio_player audio already playing");
+            informationf("Error : Wrong State : audio_player audio already playing");
 
             pcommand->m_bResult = false;
 
@@ -454,7 +454,7 @@ namespace wave
          if (m_pwaveout->out_plugin() == nullptr)
          {
 
-            information("audio_player plugin isn't set : NOT going to play");
+            informationf("audio_player plugin isn't set : NOT going to play");
 
             pcommand->m_bResult = false;
 
@@ -593,21 +593,21 @@ namespace wave
       switch (eevent)
       {
       case e_player_event_open_device:
-         information("player OnEvent e_player_event_open_device");
+         informationf("player OnEvent e_player_event_open_device");
          SetDeviceState(e_device_state_opened);
          break;
       case EventOpenDeviceFailed:
-         information("player OnEvent EventOpenDeviceFailed");
+         informationf("player OnEvent EventOpenDeviceFailed");
          SetDeviceState(e_device_state_initial);
          break;
       case EventOpenDecoder:
-         information("player OnEvent EventOpenDecoder");
+         informationf("player OnEvent EventOpenDecoder");
          SetDecoderState(e_decoder_state_opened);
          break;
       case EventStartDeviceFailed:
       {
 
-         information("player OnEvent EventStartDeviceFailed");
+         informationf("player OnEvent EventStartDeviceFailed");
 
          SetDeviceState(e_device_state_opened);
          SetState(e_state_initial);
@@ -617,7 +617,7 @@ namespace wave
       case EventPlay:
       {
 
-         information("player OnEvent EventPlay");
+         informationf("player OnEvent EventPlay");
 
          SetDeviceState(e_device_state_playing);
          SetState(e_state_playing);
@@ -627,7 +627,7 @@ namespace wave
       case EventStop:
       {
 
-         information("player OnEvent EventStop");
+         informationf("player OnEvent EventStop");
 
          SetDeviceState(e_device_state_stopping);
          SetState(e_state_initial);
@@ -636,7 +636,7 @@ namespace wave
       case EventFadeOutAndStop:
       {
 
-         information("player OnEvent EventFadeOutAndStop");
+         informationf("player OnEvent EventFadeOutAndStop");
 
          SetState(e_state_fading_out_to_stop);
 
@@ -645,7 +645,7 @@ namespace wave
       case EventExecutePause:
       {
 
-         information("player OnEvent EventDeviceOpen");
+         informationf("player OnEvent EventDeviceOpen");
 
          SetDeviceState(e_device_state_paused);
          SetState(e_state_paused);
@@ -655,7 +655,7 @@ namespace wave
       case EventExecuteRestart:
       {
 
-         information("player OnEvent EventExecuteRestart");
+         informationf("player OnEvent EventExecuteRestart");
 
          SetDeviceState(e_device_state_playing);
 
@@ -667,14 +667,14 @@ namespace wave
       case EventEOF:
       {
 
-         information("player OnEvent EventEOF");
+         informationf("player OnEvent EventEOF");
 
       }
       break;
       case EventPlaybackEnd:
       {
 
-         information("player EventPlaybackEnd");
+         informationf("player EventPlaybackEnd");
 
          m_pwaveout->out_close();
 
@@ -700,7 +700,7 @@ namespace wave
       case EventStopped:
       {
 
-         information("player EventStopped");
+         informationf("player EventStopped");
 
          m_pwaveout->out_close();
 
@@ -723,25 +723,25 @@ namespace wave
       break;
       case EventCloseDevice:
       {
-         information("player OnEvent EventCloseDevice");
+         informationf("player OnEvent EventCloseDevice");
          SetDeviceState(e_device_state_initial);
       }
       break;
       case EventCloseDecoder:
       {
-         information("player OnEvent EventCloseDecoder");
+         informationf("player OnEvent EventCloseDecoder");
          SetDecoderState(e_decoder_state_initial);
       }
       break;
       case EventOpenDecoderFailed:
       {
-         information("player OnEvent EventOpenDecoderFailed");
+         informationf("player OnEvent EventOpenDecoderFailed");
          SetDecoderState(e_decoder_state_initial);
       }
       break;
       case EventDestroy:
       {
-         information("player OnEvent EventDestroy");
+         informationf("player OnEvent EventDestroy");
          SetDeviceState(e_device_state_initial);
       }
       break;

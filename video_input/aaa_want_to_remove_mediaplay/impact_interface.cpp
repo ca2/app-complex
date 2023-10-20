@@ -855,7 +855,7 @@ namespace mediaplay
       if(tickNow - m_durationLastUpdate < dwElapseOptimization)
       {
 
-//      information("Great Optimization!\n");
+//      informationf("Great Optimization!\n");
 
          return true;
 

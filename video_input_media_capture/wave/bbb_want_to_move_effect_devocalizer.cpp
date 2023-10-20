@@ -544,7 +544,7 @@ namespace wave
 //               m_iaMax[i - m_pgroup->m_pparent->m_iMin] = i;
 //               if(i == 91)
 //               {
-//                  //information("Input iaMax = %d fMod = %f\n", i, fMod);
+//                  //informationf("Input iaMax = %d fMod = %f\n", i, fMod);
 //               }
 //            }
 //            //      i32 wDiv = 10;
@@ -710,7 +710,7 @@ namespace wave
 //            {
 //               fMax = faMax[m_iaMax.get_size() - k - 1];
 //               iMax = iaMax[m_iaMax.get_size() - k - 1];
-//               information("Output iMax = %d fMax = %f\n", iMax, fMax);
+//               informationf("Output iMax = %d fMax = %f\n", iMax, fMax);
 //
 //               //         double dFreq = iMax * (m_pgroup->m_pparent->m_iSamplesPerSecond)/ (iBinCount);
 //               for(i = 1;; i++)

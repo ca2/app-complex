@@ -17,6 +17,9 @@ namespace simple_app
 
       application();
       ~application() override;
+      
+      __DECLARE_APPLICATION_RELEASE_TIME();
+
 
       void init_instance() override;
       virtual void term_application() override;

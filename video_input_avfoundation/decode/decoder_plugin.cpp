@@ -60,7 +60,7 @@ namespace audio
    //      if (!m_library.open(dir()->ca2module()/pszTitle))
    //      {
    //         u32 dwLastError = GetLastError();
-   //         information("LoadLibrary failed to open library %s %d %s", pszTitle, dwLastError, win::error_message(dwLastError));
+   //         informationf("LoadLibrary failed to open library %s %d %s", pszTitle, dwLastError, win::error_message(dwLastError));
    //         return false;
    //      }
    //   }
@@ -68,14 +68,14 @@ namespace audio
    //   if (m_lpfnNewDecoder == nullptr)
    //   {
    //      m_library.close();
-   //      information("NewDecoderInterface function not found in library %s", pszTitle);
+   //      informationf("NewDecoderInterface function not found in library %s", pszTitle);
    //      return false;
    //   }
    //   m_lpfnDeleteDecoder = m_library.get < void(*)(::audio::decoder *) >("DeleteDecoderInterface");
    //   if (m_lpfnDeleteDecoder == nullptr)
    //   {
    //      m_library.close();
-   //      information("DeleteDecoder function not found in library %s", pszTitle);
+   //      informationf("DeleteDecoder function not found in library %s", pszTitle);
    //      return false;
    //   }
 

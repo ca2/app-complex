@@ -1004,7 +1004,7 @@ namespace mediaplaylist
       //   catch (...)
       //   {
 
-      //      information("Exception: interaction::_001DrawThis %s", ::type(this).name());
+      //      informationf("Exception: interaction::_001DrawThis %s", ::type(this).name());
 
       //   }
 
@@ -1019,7 +1019,7 @@ namespace mediaplaylist
       //catch (...)
       //{
 
-      //   information("Exception: interaction::_000OnDraw _001DrawThis %s", ::type(this).name());
+      //   informationf("Exception: interaction::_000OnDraw _001DrawThis %s", ::type(this).name());
 
       //}
 
@@ -1036,7 +1036,7 @@ namespace mediaplaylist
       //   catch (...)
       //   {
 
-      //      information("Exception: interaction::_000OnDraw _001DrawChildren %s", ::type(this).name());
+      //      informationf("Exception: interaction::_000OnDraw _001DrawChildren %s", ::type(this).name());
 
       //   }
 
@@ -1051,7 +1051,7 @@ namespace mediaplaylist
       //catch (...)
       //{
 
-      //   information("Exception: interaction::_000OnDraw _008CallOnDraw %s", ::type(this).name());
+      //   informationf("Exception: interaction::_000OnDraw _008CallOnDraw %s", ::type(this).name());
 
       //}
 

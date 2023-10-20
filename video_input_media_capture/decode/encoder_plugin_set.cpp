@@ -63,7 +63,7 @@ namespace audio
       if(!pplugin->m_plibrary->open(lpcszDll))
       {
 
-         information("Fail to open decoder");
+         informationf("Fail to open decoder");
 
          return nullptr;
 
