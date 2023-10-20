@@ -92,7 +92,7 @@ namespace app_complex_form
 
       stra.explode("->:<-",strId);
 
-      if(get_impact_id() == ::impact_simple_form)
+      if(get_impact_id() == ::e_impact_simple_form)
       {
 
          auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);

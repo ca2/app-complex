@@ -18,11 +18,14 @@
 #include "app-complex/video_input/device.h"
 
 
+__DECLARE_RELEASE_TIME(app_complex_video_capture);
+
+
 namespace app_complex_video_capture
 {
 
 
-   __IMPLEMENT_APPLICATION_RELEASE_TIME();
+   __IMPLEMENT_APPLICATION_RELEASE_TIME(app_complex_video_capture);
 
 
    application::application() 

@@ -15,14 +15,14 @@
 
 ////#define memory_new ACME_NEW
 
-//IMPLEMENT_APPLICATION(app_complex_form);
+__DECLARE_RELEASE_TIME(app_complex_form);
 
 
 namespace app_complex_form
 {
 
 
-   __IMPLEMENT_APPLICATION_RELEASE_TIME();
+   __IMPLEMENT_APPLICATION_RELEASE_TIME(app_complex_form);
 
 
    application::application()
