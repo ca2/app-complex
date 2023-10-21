@@ -106,7 +106,7 @@ auto tickEnd = ::duration::now();
 
          double d = __double(tickEnd - tickStart) / (double)(iTest);
 
-         str.format("%0.3f ms", d);
+         str.formatf("%0.3f ms", d);
 
          message_box(str + string(" : Open ") + as_string(iTest) + " times");
 

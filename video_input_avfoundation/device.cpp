@@ -798,7 +798,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //            presolution->m_size.cy() = frmsize.discrete.height;
 //
-//            presolution->m_strDescription.format("%greekdeltax%d", presolution->m_size.cx(), presolution->m_size.cy());
+//            presolution->m_strDescription.formatf("%greekdeltax%d", presolution->m_size.cx(), presolution->m_size.cy());
 //
 //            m_resolutiona.add(presolution);
 //
@@ -821,7 +821,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //            presolution->m_size.cy() = first_u16(*packed);
 //
-//            presolution->m_strDescription.format("%greekdeltax%d", presolution->m_size.cx(), presolution->m_size.cy());
+//            presolution->m_strDescription.formatf("%greekdeltax%d", presolution->m_size.cx(), presolution->m_size.cy());
 //
 //            m_resolutiona.add(presolution);
 //
@@ -936,7 +936,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //            pframerate->m_fFps = (float) pframerate->m_iDenominator / (float) pframerate->m_iNumerator;
 //
-//            pframerate->m_strDescription.format("%.2f", pframerate->m_fFps);
+//            pframerate->m_strDescription.formatf("%.2f", pframerate->m_fFps);
 //
 //            m_frameratea.add(pframerate);
 //
@@ -961,7 +961,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //            pframerate->m_fFps = (float) pframerate->m_iDenominator / (float) pframerate->m_iNumerator;
 //
-//            pframerate->m_strDescription.format("%.2f", pframerate->m_fFps);
+//            pframerate->m_strDescription.formatf("%.2f", pframerate->m_fFps);
 //
 //            m_frameratea.add(pframerate);
 //

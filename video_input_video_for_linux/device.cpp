@@ -770,7 +770,7 @@ namespace video_input_video_for_linux
 
             presolution->m_size.cy() = frmsize.discrete.height;
 
-            presolution->m_strDescription.format("%greekdeltax%d", presolution->m_size.cx(), presolution->m_size.cy());
+            presolution->m_strDescription.formatf("%greekdeltax%d", presolution->m_size.cx(), presolution->m_size.cy());
 
             m_resolutiona.add(presolution);
 
@@ -793,7 +793,7 @@ namespace video_input_video_for_linux
 
             presolution->m_size.cy() = lower_u16(*packed);
 
-            presolution->m_strDescription.format("%greekdeltax%d", presolution->m_size.cx(), presolution->m_size.cy());
+            presolution->m_strDescription.formatf("%greekdeltax%d", presolution->m_size.cx(), presolution->m_size.cy());
 
             m_resolutiona.add(presolution);
 
@@ -908,7 +908,7 @@ namespace video_input_video_for_linux
 
             pframerate->m_fFps = (float) pframerate->m_iDenominator / (float) pframerate->m_iNumerator;
 
-            pframerate->m_strDescription.format("%.2f", pframerate->m_fFps);
+            pframerate->m_strDescription.formatf("%.2f", pframerate->m_fFps);
 
             m_frameratea.add(pframerate);
 
@@ -933,7 +933,7 @@ namespace video_input_video_for_linux
 
             pframerate->m_fFps = (float) pframerate->m_iDenominator / (float) pframerate->m_iNumerator;
 
-            pframerate->m_strDescription.format("%.2f", pframerate->m_fFps);
+            pframerate->m_strDescription.formatf("%.2f", pframerate->m_fFps);
 
             m_frameratea.add(pframerate);
 

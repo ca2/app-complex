@@ -665,11 +665,11 @@ namespace mediaplaylist
           {
             if(iSubItem == 0)
             {
-                 str.format(L"?????");
+                 str.formatf(L"?????");
             }
             else if(iSubItem == 1)
             {
-                 str.format(L"?????");
+                 str.formatf(L"?????");
             }
             else if(iSubItem == 2)
             {
@@ -684,12 +684,12 @@ namespace mediaplaylist
             if(iSubItem == 0)
             {
                pSongsSet->GetData(1);
-               str.format(L"%d", pSongsSet->m_iCode);
+               str.formatf(L"%d", pSongsSet->m_iCode);
             }
             else if(iSubItem == 1)
             {
                pSongsSet->GetData(1);
-               str.format(L"%d", pSongsSet->m_iCode);
+               str.formatf(L"%d", pSongsSet->m_iCode);
             }
             else if(iSubItem == 2)
             {
@@ -701,11 +701,11 @@ namespace mediaplaylist
           {
             if(iSubItem == 0)
             {
-                 str.format("?????");
+                 str.formatf("?????");
             }
             else if(iSubItem == 1)
             {
-                 str.format("?????");
+                 str.formatf("?????");
             }
             else if(iSubItem == 2)
             {

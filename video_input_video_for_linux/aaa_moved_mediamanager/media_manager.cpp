@@ -74,7 +74,7 @@ namespace mediamanager
       {
 #ifdef _DEBUG
          string str;
-         //      str.format("File %S is not in the album", lpcsz);
+         //      str.formatf("File %S is not in the album", lpcsz);
          //message_box(str);
 #endif
       }

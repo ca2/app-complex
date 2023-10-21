@@ -76,7 +76,7 @@ namespace audio
 
          pplugin->m_plibrary->close();
 
-         //str.format("NewEncoderInterface function not found in %s", lpcszDll);
+         //str.formatf("NewEncoderInterface function not found in %s", lpcszDll);
 
          throw ::exception(::exception("NewEncoderInterface function not found"));
 
@@ -91,7 +91,7 @@ namespace audio
 
       //   pplugin->m_plibrary->close();
 
-      //   //str.format("NewEncoderInterface function not found in %s", lpcszDll);
+      //   //str.formatf("NewEncoderInterface function not found in %s", lpcszDll);
 
       //   throw ::exception(::exception("NewEncoderInterface function not found"));
 

@@ -532,7 +532,7 @@ namespace mediamanager
             if(j >= 1)
                strSql += ", ";
             ia.add(iId);
-            str.format(
+            str.formatf(
             "('%d','%s', '%s')",
             iId,
             stra[i].c_str(),
@@ -596,7 +596,7 @@ namespace mediamanager
 
          str.replace("'","''");
 
-         strSql.format("delete from album where filepath = '%s'", str.c_str());
+         strSql.formatf("delete from album where filepath = '%s'", str.c_str());
 
          //m_pdatasetWrite->exec(strSql);
 
@@ -616,7 +616,7 @@ namespace mediamanager
 
       str.replace("'","''");
 
-      strSql.format("delete from album where filepath = '%s'", str.c_str());
+      strSql.formatf("delete from album where filepath = '%s'", str.c_str());
 
       //m_pdatasetWrite->exec(strSql);
 
@@ -630,7 +630,7 @@ namespace mediamanager
 
       string strSql;
 
-      strSql.format("delete from album where atom = '%d'", iId);
+      strSql.formatf("delete from album where atom = '%d'", iId);
 
       //m_pdatasetWrite->exec(strSql);
 
@@ -663,7 +663,7 @@ namespace mediamanager
 
             }
 
-            str.format("atom = '%d'", ia.last());
+            str.formatf("atom = '%d'", ia.last());
 
             ia.erase_at(ia.get_upper_bound());
 
@@ -854,7 +854,7 @@ namespace mediamanager
       if(iId < 0)
       {
 
-         strSql.format("select atom from album where filepath='%s';", str.c_str());
+         strSql.formatf("select atom from album where filepath='%s';", str.c_str());
 
          //pdataset->query(strSql);
 
@@ -1133,7 +1133,7 @@ namespace mediamanager
    void album_record::GetInsertSql(i32 iId)
    {
 
-      m_strSql.format("insert into album (atom, filename, filepath, title, artist, lastmodified) values ('%d','%s','%s','%s','%s','%s');",
+      m_strSql.formatf("insert into album (atom, filename, filepath, title, artist, lastmodified) values ('%d','%s','%s','%s','%s','%s');",
                       iId,
                       Prepare(m_wstrFileName).c_str(),
                       Prepare(m_wstrFilePath).c_str(),
@@ -1154,7 +1154,7 @@ namespace mediamanager
 
          Prepare(str,   m_timeLastWrite);
 
-         m_strSql.format("update album set title = '%s', artist = '%s', lastmodified = '%s' where atom = '%d';",
+         m_strSql.formatf("update album set title = '%s', artist = '%s', lastmodified = '%s' where atom = '%d';",
                          Prepare(m_wstrTitle).c_str(),
                          Prepare(m_wstrArtist).c_str(),
                          str.c_str(),
@@ -1168,7 +1168,7 @@ namespace mediamanager
 
          Prepare(str,   m_timeLastWrite);
 
-         m_strSql.format("update album set filename = '%s', filepath = '%s', title = '%s', artist = '%s', lastmodified = '%s' where atom = '%d';",
+         m_strSql.formatf("update album set filename = '%s', filepath = '%s', title = '%s', artist = '%s', lastmodified = '%s' where atom = '%d';",
                          Prepare(m_wstrFileName).c_str(),
                          Prepare(m_wstrFilePath).c_str(),
                          Prepare(m_wstrTitle).c_str(),
@@ -1449,7 +1449,7 @@ namespace mediamanager
       //   return false;
 
       string strSql;
-      strSql.format("select atom from album where filepath='%s';", lpcsz);
+      strSql.formatf("select atom from album where filepath='%s';", lpcsz);
       //pdataset->query(strSql);
       //bool bHasFile = pdataset->num_rows() >= 1;
 

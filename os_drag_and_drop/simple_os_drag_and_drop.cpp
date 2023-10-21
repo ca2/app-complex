@@ -308,11 +308,11 @@ namespace simple_os_drag_and_drop
 
       string str;
 
-      str.format("Start: %d", dStart);
+      str.formatf("Start: %d", dStart);
 
       pgraphics->text_out(r.left(), r.top(), str);
 
-      str.format("Angle: %d", dAngle);
+      str.formatf("Angle: %d", dAngle);
 
       pgraphics->text_out(r.left(), r.top() + 20, str);
 

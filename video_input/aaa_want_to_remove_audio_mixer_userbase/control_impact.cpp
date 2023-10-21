@@ -496,7 +496,7 @@ namespace multimedia
 
          string strTitle;
          ASSERT(get_destination() != nullptr);
-         strTitle.format(
+         strTitle.formatf(
          strFormat,
          strAppTitle.c_str(),
          get_mixer()->m_pdevice->get_product_name().c_str(),

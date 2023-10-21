@@ -157,7 +157,7 @@ namespace video_input_video_for_linux
 
          string strHardwareId;
 
-         strHardwareId.format("%s (%s)", video_cap.card, video_cap.bus_info);
+         strHardwareId.formatf("%s (%s)", video_cap.card, video_cap.bus_info);
 
          auto pdevice = find_device_with_hardware_id(strHardwareId);
 

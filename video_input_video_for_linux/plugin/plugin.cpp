@@ -981,7 +981,7 @@ namespace audio
 
       string strEvent;
 
-      strEvent.format("audio_plugin_event:%d", (::i32) eevent);
+      strEvent.formatf("audio_plugin_event:%d", (::i32) eevent);
 
       run_property(strEvent);
 
