@@ -89,7 +89,7 @@ namespace mediaplaylist
       DECLARE_MESSAGE_HANDLER(_001OnUpdateEditRemove);
       DECLARE_MESSAGE_HANDLER(_001OnPlaylistExecutePlay);
       DECLARE_MESSAGE_HANDLER(_001OnUpdatePlaylistExecutePlay);
-      DECLARE_MESSAGE_HANDLER(_001OnVScroll);
+      DECLARE_MESSAGE_HANDLER(on_message_scroll_y);
 
 
 

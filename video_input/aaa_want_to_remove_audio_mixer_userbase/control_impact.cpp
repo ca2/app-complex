@@ -62,11 +62,11 @@ namespace multimedia
          MESSAGE_LINK(e_message_create, pchannel, this, &control_impact::on_message_create);
          //   //MESSAGE_LINK(e_message_timer, pchannel, this, &control_impact::_001OnTimer);
          //   MESSAGE_LINK(e_message_context_menu, pchannel, this, &control_impact::on_message_context_menu);
-         MESSAGE_LINK(e_message_vscroll, pchannel, this, &control_impact::_001OnVScroll);
+         MESSAGE_LINK(e_message_scroll_y, pchannel, this, &control_impact::on_message_scroll_y);
 #ifdef WINDOWS
          MESSAGE_LINK(WM_CTLCOLOR, pchannel, this, &control_impact::_001OnCtlColor);
 #endif
-         MESSAGE_LINK(e_message_hscroll, pchannel, this, &control_impact::_001OnHScroll);
+         MESSAGE_LINK(e_message_scroll_x, pchannel, this, &control_impact::on_message_scroll_x);
 
          add_command_handler(IDC_BUTTON_RESERVE, &control_impact::_001OnButtonReserve);
          connect_command_probe(ID_VIEW_UPDATE, &control_impact::_001OnUpdateImpactUpdate);
@@ -622,7 +622,7 @@ namespace multimedia
       }
 
 
-      void control_impact::_001OnVScroll(::message::message * pmessage)
+      void control_impact::on_message_scroll_y(::message::message * pmessage)
       {
 
          SCAST_MSG(scroll);
@@ -671,7 +671,7 @@ namespace multimedia
          }*/
       }
 
-      void control_impact::_001OnHScroll(::message::message * pmessage)
+      void control_impact::on_message_scroll_x(::message::message * pmessage)
       {
          UNREFERENCED_PARAMETER(pmessage);
          //::pointer<::message::scroll>pscroll(pmessage);

@@ -64,7 +64,7 @@ namespace multimedia
          MESSAGE_LINK(e_message_create, pchannel, this, &main_impact::on_message_create);
          //   //MESSAGE_LINK(e_message_timer, pchannel, this, &main_impact::_001OnTimer);
          // MESSAGE_LINK(e_message_context_menu, pchannel, this, &main_impact::on_message_context_menu);
-         //   MESSAGE_LINK(e_message_vscroll, pchannel, this, &main_impact::_001OnVScroll);
+         //   MESSAGE_LINK(e_message_scroll_y, pchannel, this, &main_impact::on_message_scroll_y);
          //      MESSAGE_LINK(WM_CTLCOLOR, pchannel, this, &main_impact::_001OnCtlColor);
 
          //   IGUI_WIN_ON_NOTIFY(LVN_COLUMNCLICK  , IDC_LIST, this, this, &main_impact::_001OnColumnclickList);

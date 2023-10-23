@@ -67,7 +67,7 @@ namespace mediaplaylist
       //MESSAGE_LINK(e_message_context_menu, pchannel, this, &list_impact::on_message_context_menu);
       MESSAGE_LINK(e_message_size, pchannel, this, &list_impact::on_message_size);
       MESSAGE_LINK(e_message_create, pchannel, this, &list_impact::on_message_create);
-      MESSAGE_LINK(e_message_vscroll, pchannel, this, &list_impact::_001OnVScroll);
+      MESSAGE_LINK(e_message_scroll_y, pchannel, this, &list_impact::on_message_scroll_y);
 
       add_command_handler("edit_delete", &list_impact::_001OnEditRemove);
       add_command_prober("edit_delete", &list_impact::_001OnUpdateEditRemove);
@@ -686,7 +686,7 @@ namespace mediaplaylist
       pcommand->m_bRet = true;
    }
 
-   void list_impact::_001OnVScroll(::message::message * pmessage)
+   void list_impact::on_message_scroll_y(::message::message * pmessage)
    {
 
       ::mediaplaylist::document * pdocument = get_document();
