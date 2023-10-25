@@ -61,7 +61,7 @@ bool ffmpeg_init_frame(AVFrame **framep, int width, int height)
    frame = av_frame_alloc();
    if (!frame)
    {
-      information( "Could not allocate video frame\n");
+      informationf( "Could not allocate video frame\n");
       return false;
    }
 

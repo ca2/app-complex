@@ -218,13 +218,13 @@ namespace app_complex_video_capture
                   if (m_pitemHover == pdevice)
                   {
                      
-                     pgraphics->fill_inset_rectangle(puseritem->m_rectangle, argb(127, 80, 180, 230));
+                     pgraphics->fill_inset_rectangle(puseritem->m_rectangle2, argb(127, 80, 180, 230));
                      
                   }
                   else
                   {
                      
-                     pgraphics->fill_inset_rectangle(puseritem->m_rectangle, argb(127, 50, 150, 200));
+                     pgraphics->fill_inset_rectangle(puseritem->m_rectangle2, argb(127, 50, 150, 200));
                      
                   }
                   
@@ -235,19 +235,19 @@ namespace app_complex_video_capture
                   if (m_pitemHover == pdevice)
                   {
                      
-                     pgraphics->fill_inset_rectangle(puseritem->m_rectangle, argb(127, 100, 200, 255));
+                     pgraphics->fill_inset_rectangle(puseritem->m_rectangle2, argb(127, 100, 200, 255));
                      
                   }
                   else
                   {
                      
-                     pgraphics->fill_inset_rectangle(puseritem->m_rectangle, argb(127, 0, 0, 0));
+                     pgraphics->fill_inset_rectangle(puseritem->m_rectangle2, argb(127, 0, 0, 0));
                      
                   }
                   
                }
                
-               pgraphics->draw_text(pdevice->m_strName, puseritem->m_rectangle, e_align_left_center);
+               pgraphics->draw_text(pdevice->m_strName, puseritem->m_rectangle2, e_align_left_center);
                
             }
             
@@ -330,10 +330,10 @@ namespace app_complex_video_capture
             if (::is_set(puseritem))
             {
                
-               puseritem->m_rectangle.left() = rectangleX.left();
-               puseritem->m_rectangle.right() = rectangleX.right();
-               puseritem->m_rectangle.top() = y;
-               puseritem->m_rectangle.bottom() = y + h;
+               puseritem->m_rectangle2.left() = rectangleX.left();
+               puseritem->m_rectangle2.right() = rectangleX.right();
+               puseritem->m_rectangle2.top() = y;
+               puseritem->m_rectangle2.bottom() = y + h;
                y += h;
                
                pdevice->m_item.m_iItem = iItem;

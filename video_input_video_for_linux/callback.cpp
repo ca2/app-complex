@@ -96,11 +96,11 @@ namespace video_input_video_for_linux
          informationf("%s: framerate: %.2f fps", m_pdevice->m_strDevice.c_str(), ffps);
          /* Timeout set to 5 frame periods. */
          timeout_usec = (1000000 * m_pdevice->m_iTimeoutFrames) / ffps;
-      information(
+      informationf(
               "%s: select timeout set to %" PRIu64 " (%greekdeltax frame periods)",
               m_pdevice->m_strDevice.c_str(), timeout_usec, m_pdevice->m_iTimeoutFrames);
 
-         //if (v4l2_start_capture(m_pdevice->m_iDevice, &data->buffers) < 0)
+         //if (v4l2_start_capture(m_pdevicbe->m_iDevice, &data->buffers) < 0)
            // goto exit;
 
       m_sizeSwsDest.cx() = -1;
@@ -242,7 +242,7 @@ namespace video_input_video_for_linux
 
          m_pdevice->m_iBufferedCount--;
 
-         information(
+         informationf(
               "%s: ts: %06ld buf id #%d, flags 0x%08X, seq #%d, len %d, used %d",
               m_pdevice->m_strDevice.c_str(), buf.timestamp.tv_usec, buf.index,
               buf.flags, buf.sequence, buf.length, buf.bytesused);
