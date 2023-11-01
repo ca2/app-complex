@@ -165,8 +165,13 @@ namespace app_complex_form
       }
 
       ::app_simple_form::tab_impact::on_create_impact(pimpactdata);
-
-      ::userex::pane_tab_impact::on_create_impact(pimpactdata);
+      
+      if(pimpactdata->m_pplaceholder->children()->count() <= 0)
+      {
+         
+         ::userex::pane_tab_impact::on_create_impact(pimpactdata);
+         
+      }
 
       pimpactdata->m_eflag.add(::user::e_flag_hide_all_others_on_show);
 
