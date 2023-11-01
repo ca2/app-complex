@@ -17,7 +17,8 @@ namespace video_input_video_avfoundation
    m_iIndex(iIndex),
    m_strDevice(strDevice)
 	{
-
+      m_item.m_iItem = iIndex;
+      m_item.m_eelement = e_element_item;
       m_strHardwareId = strHardwareId;
       m_strName = strName;
       m_bAutoReset = false;

@@ -186,6 +186,10 @@ namespace app_complex_video_capture
       //m_itema = itema;
 
       set_need_layout();
+      
+      set_need_redraw();
+      
+      post_redraw();
 
       return true;
 
@@ -317,10 +321,10 @@ namespace app_complex_video_capture
 
       index iItem = 0;
       
-      if(get_app()->m_pvideoinput->has_item())
+      if(main_content().m_pitema && main_content().m_pitema->has_element())
       {
 
-         for (auto & pitem : get_app()->m_pvideoinput->itema())
+         for (auto & pitem : *main_content().m_pitema)
          {
             
             ::pointer < ::video_input::device > pdevice = pitem;
@@ -336,8 +340,8 @@ namespace app_complex_video_capture
                puseritem->m_rectangle2.bottom() = y + h;
                y += h;
                
-               pdevice->m_item.m_iItem = iItem;
-               pdevice->m_item.m_eelement = e_element_item;
+//               pdevice->m_item.m_iItem = iItem;
+//               pdevice->m_item.m_eelement = e_element_item;
                
                iItem++;
                
