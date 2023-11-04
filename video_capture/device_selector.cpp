@@ -60,7 +60,7 @@ namespace app_complex_video_capture
 
       }
 
-      top_level()->add_auto_refresh(this);
+      top_level()->add_fps_interest(this);
       
       get_app()->m_pvideoinput->add_handler(this);
 

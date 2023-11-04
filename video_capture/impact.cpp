@@ -70,9 +70,9 @@ namespace app_complex_video_capture
 
       }
 
-      //get_top_level()->add_auto_refresh(this);
+      //get_top_level()->add_fps_interest(this);
 
-      set_auto_refresh();
+      set_fps_interest();
       
    }
 
