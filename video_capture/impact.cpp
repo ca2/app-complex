@@ -72,7 +72,7 @@ namespace app_complex_video_capture
 
       //get_top_level()->add_fps_interest(this);
 
-      set_fps_interest();
+      add_graphical_output_purpose(this, ::graphics::e_output_purpose_screen_fps);
       
    }
 

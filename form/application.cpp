@@ -28,8 +28,8 @@ namespace app_complex_form
    application::application()
    {
 
-      m_ptemplateBeatMapperMain  = NULL;
-      m_ptemplateBeatMapperImpact  = NULL;
+      //m_ptemplateBeatMapperMain  = NULL;
+      //m_ptemplateBeatMapperImpact  = NULL;
 
       m_strAppId                 = "app-complex/form";
       m_strBaseSupportId         = "app-complex/form";

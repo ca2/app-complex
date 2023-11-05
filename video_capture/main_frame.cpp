@@ -74,12 +74,12 @@ namespace app_complex_video_capture
    }
 
 
-   bool main_frame::has_pending_graphical_update()
-   {
+   //bool main_frame::has_pending_graphical_update()
+   //{
 
-      return true;
+   //   return true;
 
-   }
+   //}
 
 
    ::user::enum_translucency main_frame::get_translucency(::user::style * pstyle)
