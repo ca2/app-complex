@@ -36,7 +36,7 @@ namespace app_complex_form
       m_strAppName               = "Complex Form";
       m_bLicense                 = false;
 
-      m_bMultiverseChat          = true;
+      //m_bMultiverseChat          = true;
 
 //auto test = memory_new int;
 
@@ -87,7 +87,7 @@ namespace app_complex_form
       factory()->add_factory_item <::app_complex_form::form_001 >();
       factory()->add_factory_item <::app_complex_form::form_002 >();
 
-      ::base::application::init_instance();
+      ::app_simple_form::application::init_instance();
 
       //if (!::base::application::init_instance())
       //{
@@ -96,22 +96,24 @@ namespace app_complex_form
 
       //}
 
-      auto pdoctemplate = __new(::user::single_document_template(
+      
+
+      m_ptemplateAppSimpleFormMain = __new(::user::single_document_template(
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
                                ::type < pane_impact >()));
-      m_ptemplateBeatMapperMain = pdoctemplate;
-      add_document_template(pdoctemplate);
+      //m_ptemplateBeatMapperMain = pdoctemplate;
+      add_document_template(m_ptemplateAppSimpleFormMain);
 
 
-      pdoctemplate = __new(::user::single_document_template(
+      m_ptemplateAppSimpleFormImpact = __new(::user::single_document_template(
                           "main",
                           ::type < document >(),
                           ::type < frame >(),
                           ::type < main_impact >()));
-      m_ptemplateBeatMapperImpact = pdoctemplate;
-      add_document_template(pdoctemplate);
+      // m_ptemplateBeatMapperImpact = pdoctemplate;
+      add_document_template(m_ptemplateAppSimpleFormImpact);
 
       //return true;
 
@@ -159,30 +161,31 @@ namespace app_complex_form
 
 #endif
 
-      m_bMultiverseChat = !is_true("no_hello_edit");
+      app_simple_form::application::on_request(prequest);
+      ////m_bMultiverseChat = !is_true("no_hello_edit");
 
-      if (m_ptemplateBeatMapperMain->get_document_count() == 0)
-      {
+      //if (m_ptemplateBeatMapperMain->get_document_count() == 0)
+      //{
 
-         m_ptemplateBeatMapperMain->request(prequest);
+      //   m_ptemplateBeatMapperMain->request(prequest);
 
-      }
+      //}
 
-      if (prequest->m_payloadFile.has_char())
-      {
+      //if (prequest->m_payloadFile.has_char())
+      //{
 
-         m_ptemplateBeatMapperImpact->request(prequest);
+      //   m_ptemplateBeatMapperImpact->request(prequest);
 
-      }
+      //}
 
-      if (is_true("wfi_maximize"))
-      {
+      //if (is_true("wfi_maximize"))
+      //{
 
-         prequest->payload("document").cast < document >()->get_typed_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
+      //   prequest->payload("document").cast < document >()->get_typed_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
 
-      }
+      //}
 
-      informationf("\nfinished simple_form::on_request");
+      //informationf("\nfinished simple_form::on_request");
 
    }
 

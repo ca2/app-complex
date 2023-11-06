@@ -98,7 +98,7 @@ static inline void udev_signal_event(struct udev_device *dev)
 
             ::topic topic(id_video_input_device_added);
 
-            auto psystem = ::acme::acme::g_pacme->m_psubsystem->acmesystem();
+            auto psystem = ::acme::acme::g_pacme->m_pplatform->acmesystem();
 
             psystem->m_papexsystem->route(&topic, nullptr);
 
@@ -109,7 +109,7 @@ static inline void udev_signal_event(struct udev_device *dev)
 
             ::topic topic(id_video_input_device_removed);
 
-            auto psystem = ::acme::acme::g_pacme->m_psubsystem->acmesystem();
+            auto psystem = ::acme::acme::g_pacme->m_pplatform->acmesystem();
 
             psystem->m_papexsystem->route(&topic, nullptr);
 

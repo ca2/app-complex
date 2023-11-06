@@ -2,6 +2,7 @@
 #include "framework.h"
 #include "video_input.h"
 #include "device.h"
+#include "acme/handler/topic.h"
 #include "acme/parallelization/synchronous_lock.h"
 #include "acme_windows_common/cotaskptr.h"
 #include "acme_windows_common/hresult_exception.h"
@@ -82,6 +83,12 @@ namespace video_input_media_foundation
          initDevices(pAttributes);
 
       }
+
+      auto ptopic = create_topic(ID_UPDATE);
+
+      ptopic->m_pparticle = this;
+
+      route(ptopic);
 
    }
 

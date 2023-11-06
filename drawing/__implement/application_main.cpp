@@ -3,7 +3,7 @@
 #include "acme/application.h"
 
 
-app_complex_drawing::application g_app_complex_drawing;
+//app_complex_drawing::application g_app_complex_drawing;
 
 //int __implement()
 //{
@@ -18,3 +18,18 @@ app_complex_drawing::application g_app_complex_drawing;
 //
 //
 //
+
+
+int application_main()
+{
+
+   auto papplication = __new(app_complex_drawing::application());
+
+   int iExitCode = papplication->application_main();
+
+   return iExitCode;
+
+}
+
+
+

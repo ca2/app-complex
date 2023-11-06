@@ -3,7 +3,7 @@
 #include "acme/application.h"
 
 
-app_complex_form::application g_app_complex_form;
+//app_complex_form::application g_app_complex_form;
 
 
 //int __implement()
@@ -16,6 +16,24 @@ app_complex_form::application g_app_complex_form;
 //   return iExitCode;
 //
 //}
+
+
+
+
+
+int application_main()
+{
+
+   auto papplication = __new(app_complex_form::application());
+
+   int iExitCode = papplication->application_main();
+
+   return iExitCode;
+
+}
+
+
+
 
 
 

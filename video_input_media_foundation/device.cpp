@@ -23,7 +23,7 @@ namespace video_input_media_foundation
       //m_elock(::video_input::e_lock_open),
       //m_emergencystopcallback(NULL)
    {
-
+      m_item.m_eelement = e_element_item;
    }
 
 

@@ -319,7 +319,7 @@ namespace app_complex_video_capture
 
       int h = 50;
 
-      index iItem = 0;
+      //index iItem = 0;
       
       if(main_content().m_pitema && main_content().m_pitema->has_element())
       {
@@ -343,7 +343,7 @@ namespace app_complex_video_capture
 //               pdevice->m_item.m_iItem = iItem;
 //               pdevice->m_item.m_eelement = e_element_item;
                
-               iItem++;
+               //iItem++;
                
             }
          
