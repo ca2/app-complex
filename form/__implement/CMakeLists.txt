@@ -3,7 +3,7 @@ project(_app_complex_form CXX)
 
 
 
-add_executable(${PROJECT_NAME} application.cpp)
+add_executable(${PROJECT_NAME} application_main.cpp)
 
 list(APPEND executable_include_directories ${CMAKE_CURRENT_SOURCE_DIR})
 list(APPEND executable_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/..)

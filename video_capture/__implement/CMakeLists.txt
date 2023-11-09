@@ -4,7 +4,7 @@ project(_${PARENT_PROJECT_NAME} CXX)
 
 
 
-add_executable(${PROJECT_NAME} application.cpp)
+add_executable(${PROJECT_NAME} application_main.cpp)
 
 
 list(APPEND executable_references
