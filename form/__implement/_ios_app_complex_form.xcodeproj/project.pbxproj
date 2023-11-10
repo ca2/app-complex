@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,7 +37,7 @@
 		9AE877BE2858ADE700F88364 /* libios_draw2d_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8719F2858A4C300F88364 /* libios_draw2d_quartz2d.a */; };
 		9AE877C22858ADFF00F88364 /* libnode_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877C02858ADFF00F88364 /* libnode_ios.a */; };
 		9AE877C42858AE0000F88364 /* libwindowing_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877C12858ADFF00F88364 /* libwindowing_ios.a */; };
-		9AE877C62858AE0000F88364 /* ios_write_text_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE871872858A4C200F88364 /* ios_write_text_quartz2d.a */; };
+		9AE877C62858AE0000F88364 /* libios_write_text_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE871872858A4C200F88364 /* libios_write_text_quartz2d.a */; };
 		9AE878222858B26C00F88364 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE878202858B26B00F88364 /* libssl.a */; };
 		9AE878232858B26C00F88364 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE878212858B26C00F88364 /* libcrypto.a */; };
 		9AE878342858BB9E00F88364 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE878332858BB9D00F88364 /* CoreServices.framework */; };
@@ -65,6 +65,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 078C352E1921758500354453;
 			remoteInfo = wiossimple_form_simple_form;
+		};
+		9AA024C22AFDB82800290860 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AE8718E2858A4C200F88364 /* crypto_openssl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AC97ECF2A71B2A700B1BCF3;
+			remoteInfo = static_crypto_openssl;
+		};
+		9AA024CA2AFDB82800290860 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AE871AC2858A4C300F88364 /* folder_zip.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A1BD6E12A0079D400152CD1;
+			remoteInfo = static_folder_zip;
 		};
 		9AE871732858A4C100F88364 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -477,7 +491,7 @@
 				9AE878432858C0A100F88364 /* libios_folder_zip.a in Frameworks */,
 				9AF761551F84384500FDE7CC /* libz.tbd in Frameworks */,
 				9AE877AD2858ADC000F88364 /* libios_aura_apple.a in Frameworks */,
-				9AE877C62858AE0000F88364 /* ios_write_text_quartz2d.a in Frameworks */,
+				9AE877C62858AE0000F88364 /* libios_write_text_quartz2d.a in Frameworks */,
 				9AF761541F84383D00FDE7CC /* libbz2.tbd in Frameworks */,
 				9AE877A02858ADBF00F88364 /* libios_acme_posix.a in Frameworks */,
 			);
@@ -722,7 +736,7 @@
 			isa = PBXGroup;
 			children = (
 				9AE871852858A4C200F88364 /* libwrite_text_quartz2d.dylib */,
-				9AE871872858A4C200F88364 /* ios_write_text_quartz2d.a */,
+				9AE871872858A4C200F88364 /* libios_write_text_quartz2d.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -741,6 +755,7 @@
 			children = (
 				9AE871942858A4C300F88364 /* libcrypto_openssl.dylib */,
 				9AE871962858A4C300F88364 /* libios_crypto_openssl.a */,
+				9AA024C32AFDB82800290860 /* libstatic_crypto_openssl.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -769,6 +784,7 @@
 			children = (
 				9AE871B22858A4C400F88364 /* libfolder_zip.dylib */,
 				9AE871B42858A4C400F88364 /* libios_folder_zip.a */,
+				9AA024CB2AFDB82800290860 /* libstatic_folder_zip.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -866,8 +882,9 @@
 		9A5752A916AAE1D2000CC4EF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				CLASSPREFIX = ca2;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = "Camilo Sasuke Tsumanuma";
 				TargetAttributes = {
 					078C352E1921758500354453 = {
@@ -946,6 +963,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		9AA024C32AFDB82800290860 /* libstatic_crypto_openssl.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libstatic_crypto_openssl.dylib;
+			remoteRef = 9AA024C22AFDB82800290860 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AA024CB2AFDB82800290860 /* libstatic_folder_zip.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libstatic_folder_zip.a;
+			remoteRef = 9AA024CA2AFDB82800290860 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		9AE871742858A4C100F88364 /* libexperience_tranquillum.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
@@ -974,10 +1005,9 @@
 			remoteRef = 9AE871842858A4C200F88364 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AE871872858A4C200F88364 /* ios_write_text_quartz2d.a */ = {
+		9AE871872858A4C200F88364 /* libios_write_text_quartz2d.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			name = ios_write_text_quartz2d.a;
 			path = libios_write_text_quartz2d.a;
 			remoteRef = 9AE871862858A4C200F88364 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -1192,6 +1222,7 @@
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Camilo Tsumanuma (665TC58ZA4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEAD_CODE_STRIPPING = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1200,14 +1231,16 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@loader_path",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "-all_load";
 				PLATFORM_MODIFIER = ios;
 				PRODUCT_BUNDLE_IDENTIFIER = "app-complex.form";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SEPARATE_STRIP = YES;
-				STRIP_STYLE = debugging;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1219,19 +1252,22 @@
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Camilo Tsumanuma (665TC58ZA4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEAD_CODE_STRIPPING = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				INFOPLIST_FILE = ios/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@loader_path",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "-all_load";
 				PLATFORM_MODIFIER = ios;
 				PRODUCT_BUNDLE_IDENTIFIER = "app-complex.form";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SEPARATE_STRIP = YES;
-				STRIP_STYLE = debugging;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1243,6 +1279,7 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/wiossimple_form_simple_form.app/wiossimple_form_simple_form";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				DEAD_CODE_STRIPPING = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1270,6 +1307,7 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/wiossimple_form_simple_form.app/wiossimple_form_simple_form";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				DEAD_CODE_STRIPPING = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -1319,10 +1357,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1347,11 +1385,33 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				STRIP_INSTALLED_PRODUCT = NO;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SYSTEM_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/operating_system $(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include $(WorkspaceDir)/port/_ $(WorkspaceDir)/port/include $(WorkspaceDir)/source/app";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/_",
+					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/source/app",
+				);
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = ". $(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/source/app/include $(WorkspaceDir)/operating_system $(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include $(WorkspaceDir)/port/_ $(WorkspaceDir)/port/include . .. $(WorkspaceDir)  $(WorkspaceDir)/source/app $(WorkspaceDir)/source/app/include";
+				USER_HEADER_SEARCH_PATHS = (
+					.,
+					"$(WorkspaceDir)/source",
+					"$(WorkspaceDir)/source/include",
+					"$(WorkspaceDir)/source/app",
+					"$(WorkspaceDir)/source/app/include",
+					"$(WorkspaceDir)/operating_system",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/_",
+					"$(WorkspaceDir)/port/include",
+					.,
+					..,
+					"$(WorkspaceDir)",
+					"$(WorkspaceDir)/source/app",
+					"$(WorkspaceDir)/source/app/include",
+				);
 				USE_HEADERMAP = NO;
 				WorkspaceDir = "$(SRCROOT)/../../../..";
 			};
@@ -1388,9 +1448,9 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1410,9 +1470,32 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SYSTEM_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/operating_system $(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include $(WorkspaceDir)/port/_ $(WorkspaceDir)/port/include $(WorkspaceDir)/source/app";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/_",
+					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/source/app",
+				);
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = ". $(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/source/app/include $(WorkspaceDir)/operating_system $(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include $(WorkspaceDir)/port/_ $(WorkspaceDir)/port/include . .. $(WorkspaceDir)  $(WorkspaceDir)/source/app $(WorkspaceDir)/source/app/include";
+				USER_HEADER_SEARCH_PATHS = (
+					.,
+					"$(WorkspaceDir)/source",
+					"$(WorkspaceDir)/source/include",
+					"$(WorkspaceDir)/source/app",
+					"$(WorkspaceDir)/source/app/include",
+					"$(WorkspaceDir)/operating_system",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/_",
+					"$(WorkspaceDir)/port/include",
+					.,
+					..,
+					"$(WorkspaceDir)",
+					"$(WorkspaceDir)/source/app",
+					"$(WorkspaceDir)/source/app/include",
+				);
 				USE_HEADERMAP = NO;
 				WorkspaceDir = "$(SRCROOT)/../../../..";
 			};

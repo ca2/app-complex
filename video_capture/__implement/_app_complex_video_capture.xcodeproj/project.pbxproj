@@ -18,7 +18,7 @@
 		9A98A67729B939100057E3F4 /* libapex_darwin.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A98A67529B9390F0057E3F4 /* libapex_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A98A67A29B939390057E3F4 /* libaura_darwin.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A98A67829B939380057E3F4 /* libaura_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A9A15C72AFC24E000FA9BEB /* libdarwin.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A9A15C52AFC24DF00FA9BEB /* libdarwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9AAF6588280870520067E73F /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF6096280864240067E73F /* application.cpp */; };
+		9AAF6588280870520067E73F /* application_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF6096280864240067E73F /* application_main.cpp */; };
 		9AAF65AA280871EA0067E73F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AAF6060280864230067E73F /* Images.xcassets */; };
 		9AAF65B02808724D0067E73F /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF65AF2808724D0067E73F /* libapex.dylib */; };
 		9AAF65B22808724D0067E73F /* libaqua.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF65B12808724D0067E73F /* libaqua.dylib */; };
@@ -377,7 +377,7 @@
 		9AAF6021280863D90067E73F /* database_sqlite3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = database_sqlite3.xcodeproj; path = ../../../app/database_sqlite3/database_sqlite3.xcodeproj; sourceTree = "<group>"; };
 		9AAF6060280864230067E73F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9AAF6062280864230067E73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9AAF6096280864240067E73F /* application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
+		9AAF6096280864240067E73F /* application_main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = application_main.cpp; sourceTree = "<group>"; };
 		9AAF65AD2808724D0067E73F /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAF65AF2808724D0067E73F /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAF65B12808724D0067E73F /* libaqua.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaqua.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -585,7 +585,7 @@
 				9A8F49372A26CDBC00097EE1 /* _____debug.xcconfig */,
 				9A8F49462A26CDBC00097EE1 /* _____release.xcconfig */,
 				9AF2F4592808BFA1007F7B7D /* _matter.zip */,
-				9AAF6096280864240067E73F /* application.cpp */,
+				9AAF6096280864240067E73F /* application_main.cpp */,
 				9AAF605B280864230067E73F /* macos */,
 			);
 			name = video_capture;
@@ -955,7 +955,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AAF6588280870520067E73F /* application.cpp in Sources */,
+				9AAF6588280870520067E73F /* application_main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
