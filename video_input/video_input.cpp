@@ -34,6 +34,10 @@ namespace video_input
 
       __defer_construct_new(m_pitemaDevice);
 
+      register_device_listener(::hardware::e_device_video_input);
+
+
+
 	}
 
 
