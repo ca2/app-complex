@@ -6,6 +6,7 @@ list(APPEND library_references
    acme
    apex
    aqua
+   aura
    )
 
 list(APPEND library_source

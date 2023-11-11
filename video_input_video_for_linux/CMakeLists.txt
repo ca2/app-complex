@@ -29,8 +29,8 @@ list(APPEND library_source
    render.h
    thread.cpp
    thread.h
-   udev.cpp
-   udev.h
+   #udev.cpp
+   #udev.h
    video_input.cpp
    video_input.h
    )
@@ -56,7 +56,7 @@ if (MSVC)
 elseif(${LINUX} OR ${FREEBSD})
 
    if(USE_PKGCONFIG)
-      pkg_check_modules(PKGCONFIG libavcodec libswscale libavformat libavutil libv4l2 libudev)
+      pkg_check_modules(PKGCONFIG libavcodec libswscale libavformat libavutil libv4l2)
    endif()
    target_compile_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
    target_compile_options(static_${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})

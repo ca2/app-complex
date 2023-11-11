@@ -34,7 +34,7 @@ namespace video_input_video_for_linux
 
 		::object::initialize(pparticle);
 
-      v4l2_init_udev();
+      ///v4l2_init_udev();
 
 	}
 
