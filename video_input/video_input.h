@@ -12,7 +12,8 @@ namespace video_input
    class CLASS_DECL_VIDEO_INPUT video_input :
       virtual public ::object,
       virtual public ::video_input::device_array,
-      virtual public ::source
+      virtual public ::source,
+      virtual public ::hardware::device_listener
    {
    public:
 

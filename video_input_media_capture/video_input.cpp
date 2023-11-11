@@ -58,8 +58,6 @@ namespace video_input_media_capture
 
       ::object::initialize(pparticle);
 
-      register_device_listener(::hardware::e_device_video_input);
-
 
    }
 

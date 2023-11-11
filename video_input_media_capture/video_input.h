@@ -11,8 +11,7 @@ namespace video_input_media_capture
 
    /// The only visiable class for controlling of video devices in format singelton
    class CLASS_DECL_VIDEO_INPUT_MEDIA_CAPTURE video_input :
-      virtual public ::video_input::video_input,
-      virtual public ::hardware::device_listener
+      virtual public ::video_input::video_input
    {
    public:
 
