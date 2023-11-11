@@ -32,7 +32,7 @@ namespace video_input_video_for_linux
 	void video_input::initialize(::particle * pparticle)
 	{
 
-		::object::initialize(pparticle);
+		::video_input::video_input::initialize(pparticle);
 
       ///v4l2_init_udev();
 
@@ -211,6 +211,15 @@ namespace video_input_video_for_linux
          }
 
       }
+
+		for(::index i = 0; i < m_pitemaDevice->get_size(); i++)
+		{
+
+			auto pdev = m_pitemaDevice->element_at(i).cast < device >();
+
+			pdev->m_item.m_iItem = i;
+
+		}
 
       m_estatusAccessToDevices = ::success;
 

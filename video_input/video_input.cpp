@@ -223,18 +223,28 @@ namespace video_input
 	}
 
 
-   void video_input::on_device_added()
+   void video_input::on_device_plugged(::hardware::enum_device edevice)
    {
 
-      update_device_list();
+		if(edevice == ::hardware::e_device_video_input)
+		{
+
+			update_device_list();
+
+		}
 
    }
 
 
-   void video_input::on_device_removed()
+   void video_input::on_device_unplugged(::hardware::enum_device edevice)
    {
 
-      update_device_list();
+		if(edevice == ::hardware::e_device_video_input)
+		{
+
+			update_device_list();
+
+		}
 
    }
 

@@ -112,7 +112,7 @@ namespace video_input_video_for_linux
       int      m_iBufferedCount;
 
 
-      ::index m_iIndex;
+      //::index m_iIndex;
       string m_strDevice;
       //string m_strId;
       int_fast32_t m_iDevice;
@@ -124,7 +124,7 @@ namespace video_input_video_for_linux
       int m_iFrameRateDenominator;
 
       int m_iLineSize;
-      int m_iPixFmt;
+      int m_iPixelFormat;
 
       int m_iTimeoutFrames;
 

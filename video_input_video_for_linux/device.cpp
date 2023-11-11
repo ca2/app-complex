@@ -12,15 +12,19 @@
 #include <fcntl.h>
 
 
+#define MORE_LOG
+
+
 namespace video_input_video_for_linux
 {
 
 
 	device::device(::index iIndex, const ::string & strName, const ::string & strDevice, const ::string & strHardwareId) :
-   m_iIndex(iIndex),
+   //m_iIndex(iIndex),
    m_strDevice(strDevice)
 	{
-
+		m_item.m_iItem = iIndex;
+		m_item.m_eelement = e_element_item;
       m_strHardwareId = strHardwareId;
       m_strName = strName;
       m_bAutoReset = false;
@@ -45,6 +49,19 @@ namespace video_input_video_for_linux
          return;
 
       }
+
+		m_iInput = -1;
+		m_iPixelFormat = -1;
+		m_iStandard = -1;
+		m_iDvTiming =-1;
+		//m_iResolution =-1;
+		m_iFrameRateDenominator=-1;
+		m_iFrameRateNumerator = -1;
+		//m_iColorRange = VIDEO_RANGE_DEFAULT;
+		//m_bBuffering = true;
+		m_bAutoReset = false;
+		m_iTimeoutFrames = 5;
+
 
       informationf("Initialize video capture device from %s", m_strDevice.c_str());
 
@@ -503,8 +520,8 @@ namespace video_input_video_for_linux
       auto pmediaformat = m_mediaformata[iIndex];
 
       m_iInput = m_inputa.is_empty()? 0:m_inputa[0]->m_iInput;
-      m_iStandard = m_standarda.is_empty() ? 0: m_standarda[0]->m_iStandard;
-      m_iPixFmt = pmediaformat->m_iPixFmt;
+      m_iStandard = m_standarda.is_empty() ? -1: m_standarda[0]->m_iStandard;
+      m_iPixelFormat = pmediaformat->m_iPixFmt;
       m_size = pmediaformat->m_size;
       m_iFrameRateDenominator = pmediaformat->m_iFrameRateDenominator;
       m_iFrameRateNumerator = pmediaformat->m_iFrameRateNumerator;
@@ -570,7 +587,7 @@ namespace video_input_video_for_linux
       }
 
       /* set pixel format and resolution */
-      if (v4l2_set_format(m_iDevice, &m_size.cx(), &m_size.cy(), &m_iPixFmt, &m_iLineSize) < 0)
+      if (v4l2_set_format(m_iDevice, &m_size.cx(), &m_size.cy(), &m_iPixelFormat, &m_iLineSize) < 0)
       {
 
          auto cerrornumber = c_error_number();
@@ -581,7 +598,7 @@ namespace video_input_video_for_linux
 
       }
 
-      if (v4l2_pix_fmt_to_video_format(m_iPixFmt) == e_video_format_none)
+      if (v4l2_pix_fmt_to_video_format(m_iPixelFormat) == e_video_format_none)
       {
 
          errorf("Selected video format not supported");
@@ -591,7 +608,7 @@ namespace video_input_video_for_linux
       }
 
       informationf("Resolution: %greekdeltax%d", m_size.cx(), m_size.cy());
-      informationf("Pixelformat: %s", ::string((const char *) &m_iPixFmt, 5).c_str());
+      informationf("Pixelformat: %s", ::string((const char *) &m_iPixelFormat, 5).c_str());
       informationf("Linesize: %d Bytes", m_iLineSize);
 
       /* set framerate */
@@ -676,6 +693,8 @@ namespace video_input_video_for_linux
          pstandard->m_iStandard = std.id;
 
          std.index++;
+
+      	m_standarda.add(pstandard);
 
       }
 
@@ -1091,15 +1110,17 @@ namespace video_input_video_for_linux
 
          if (v4l2_ioctl(m_iDevice, VIDIOC_QUERYBUF, &buf) < 0)
          {
-            //blog(LOG_DEBUG,
-            //   "failed to read buffer data for buffer #%ld", i);
+#ifdef MORE_LOG
+            warning() << "failed to read buffer data for buffer #" << i;
+#endif
          }
          else
          {
-            //blog(LOG_DEBUG,
-            //   "query buf #%ld info: ts: %06ld buf id #%d, flags 0x%08X, seq #%d, len %d, used %d",
-            /// i, buf.timestamp.tv_usec, buf.index, buf.flags,
-            //buf.sequence, buf.length, buf.bytesused);
+#ifdef MORE_LOG
+            informationf("query buf #%ld info: ts: %06ld buf id #%d, flags 0x%08X, seq #%d, len %d, used %d",
+             i, buf.timestamp.tv_usec, buf.index, buf.flags,
+            buf.sequence, buf.length, buf.bytesused);
+#endif
          }
 
       }

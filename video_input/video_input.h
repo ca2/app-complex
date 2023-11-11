@@ -36,9 +36,9 @@ namespace video_input
 
       virtual void update_device_list();
 
-      virtual void on_device_added();
+      void on_device_plugged(::hardware::enum_device edevice) override;
 
-      virtual void on_device_removed();
+      void on_device_unplugged(::hardware::enum_device edevice) override;
 
       virtual device * find_device_with_hardware_id(const ::string & strHardwareId) const;
 

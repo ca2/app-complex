@@ -4,6 +4,7 @@
 #include "render.h"
 #include "_functionh_ffmpeg.h"
 #include "acme/parallelization/synchronous_lock.h"
+#include "acme/primitive/geometry2d/_text_stream.h"
 #include "aura/graphics/image/image.h"
 #include "app-complex/video_input/frame.h"
 
@@ -113,13 +114,15 @@ namespace video_input_video_for_linux
 
       informationf("%s: memory_new capture started", m_pdevice->m_strDevice.c_str());
 
-      m_pframe = memory_new ::video::frame(v4l2_pix_fmt_to_video_format(m_pdevice->m_iPixFmt),
+      m_pframe = memory_new ::video::frame(v4l2_pix_fmt_to_video_format(m_pdevice->m_iPixelFormat),
                                     m_pdevice->m_size.cx(), m_pdevice->m_size.cy());
+
+      information() << "frame size : " << m_pdevice->m_size;
 
 //      m_pframe->video_frame_init(x);
 
 
-      switch(m_pdevice->m_iPixFmt) {
+      switch(m_pdevice->m_iPixelFormat) {
          case V4L2_PIX_FMT_NV12:
             linesize[0] = m_pframe->m_linesize[0];
             linesize[1] = m_pframe->m_linesize[0] / 2;
@@ -260,7 +263,7 @@ namespace video_input_video_for_linux
 
          start = (uint8_t *)m_pdevice->m_pmemorymap->m_itema[buf.index].start;
 
-         if (m_pdevice->m_iPixFmt == V4L2_PIX_FMT_MJPEG)
+         if (m_pdevice->m_iPixelFormat == V4L2_PIX_FMT_MJPEG)
          {
 
             m_pdevice->m_pmjpegdecoder->decode(m_pframe, start, buf.bytesused);
@@ -273,7 +276,7 @@ namespace video_input_video_for_linux
          else
          {
 
-            auto eformat = v4l2_pix_fmt_to_video_format(m_pdevice->m_iPixFmt);
+            auto eformat = v4l2_pix_fmt_to_video_format(m_pdevice->m_iPixelFormat);
 
             int cy = m_pdevice->m_size.cy();
 
@@ -363,7 +366,7 @@ namespace video_input_video_for_linux
 
             //}
 
-            auto evideoformat = v4l2_pix_fmt_to_video_format(m_pdevice->m_iPixFmt);
+            auto evideoformat = v4l2_pix_fmt_to_video_format(m_pdevice->m_iPixelFormat);
 
             auto avpixelformat = video_format_to_avpixelformat(evideoformat);
 
