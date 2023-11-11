@@ -32,6 +32,8 @@ namespace video_input_media_capture
       //m_emergencystopcallback(NULL)
    {
 
+      m_item.m_eelement = ::e_element_item;
+
    }
 
 

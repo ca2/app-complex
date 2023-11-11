@@ -70,7 +70,7 @@ namespace video_input_media_capture
 
       synchronous_lock synchronouslock(this->synchronization());
 
-      __defer_construct_new(m_pitemaDevice);
+      auto pitemaDeviceNew = __create_new < ::item_array>();
 
       ::winrt::Windows::Foundation::Collections::IVectorView<::winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup> sourcegroupa(nullptr);
 
@@ -106,7 +106,9 @@ namespace video_input_media_capture
 
                pdevice->m_pvideoinput = this;
 
-               itema().add_item(pdevice);
+               pdevice->m_item.m_iItem = pitemaDeviceNew->count();
+
+               pitemaDeviceNew->add_item(pdevice);
 
                break;
 
@@ -129,6 +131,7 @@ namespace video_input_media_capture
    //   }
 
 
+      m_pitemaDevice = pitemaDeviceNew;
       //if(m_mediacapture.)
 
       m_estatusAccessToDevices = ::success;
@@ -272,6 +275,12 @@ namespace video_input_media_capture
 
    //}
 
+   void video_input::on_device_nodes_changed()
+   {
+
+      update_device_list();
+
+   }
 
 
    void video_input::on_device_plugged(::hardware::enum_device edevice)
@@ -279,7 +288,7 @@ namespace video_input_media_capture
 
       ASSERT(edevice == ::hardware::e_device_video_input);
 
-      _update_device_list();
+      update_device_list();
 
    }
 
@@ -289,7 +298,7 @@ namespace video_input_media_capture
 
       ASSERT(edevice == ::hardware::e_device_video_input);
 
-      _update_device_list();
+      update_device_list();
 
    }
 
