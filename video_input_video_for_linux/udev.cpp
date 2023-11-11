@@ -66,7 +66,7 @@ static enum udev_action udev_action_to_enum(const char *action)
    return UDEV_ACTION_UNKNOWN;
 }
 
-CLASS_DECL_ACME ::acme::system * acmesystem();
+CLASS_DECL_ACME ::acme::system * system();
 /**
  * Call all registered callbacks with the event
  *
@@ -98,7 +98,7 @@ static inline void udev_signal_event(struct udev_device *dev)
 
             ::topic topic(id_video_input_device_added);
 
-            auto psystem = ::acme::acme::g_pacme->m_pplatform->acmesystem();
+            auto psystem = ::platform::get()->system();
 
             psystem->m_papexsystem->route(&topic, nullptr);
 
@@ -109,7 +109,7 @@ static inline void udev_signal_event(struct udev_device *dev)
 
             ::topic topic(id_video_input_device_removed);
 
-            auto psystem = ::acme::acme::g_pacme->m_pplatform->acmesystem();
+            auto psystem = ::platform::get()->system();
 
             psystem->m_papexsystem->route(&topic, nullptr);
 
@@ -201,7 +201,7 @@ namespace video_input_video_for_linux
    void video_input::v4l2_init_udev(void)
    {
 
-      acmesystem()->m_papexsystem->add_handler(this);
+      system()->m_papexsystem->add_handler(this);
 
       fork([]()
            {

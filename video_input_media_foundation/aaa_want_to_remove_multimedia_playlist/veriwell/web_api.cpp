@@ -15,27 +15,27 @@ namespace multimedia_playlist
          m_iExpires = 0;
 
 
-         m_strAccessToken = pcontext->m_papexcontext->file()->as_string(         auto psystem = acmesystem();
+         m_strAccessToken = pcontext->m_papexcontext->file()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "config\\waven\\access_token.txt");
-         m_strTokenType = pcontext->m_papexcontext->file()->as_string(         auto psystem = acmesystem();
+         m_strTokenType = pcontext->m_papexcontext->file()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "config\\waven\\token_type.txt");
-         m_iExpires = atoi(pcontext->m_papexcontext->file()->as_string(         auto psystem = acmesystem();
+         m_iExpires = atoi(pcontext->m_papexcontext->file()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "config\\waven\\expire_in.txt"));
-         m_strRefreshToken = pcontext->m_papexcontext->file()->as_string(         auto psystem = acmesystem();
+         m_strRefreshToken = pcontext->m_papexcontext->file()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "config\\waven\\refresh_token.txt");
-         m_timeAuth.m_time = ansi_to_i64(pcontext->m_papexcontext->file()->as_string(         auto psystem = acmesystem();
+         m_timeAuth.m_time = ansi_to_i64(pcontext->m_papexcontext->file()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
@@ -59,7 +59,7 @@ pacmedirectory->system() / "config\\waven\\time_auth.txt"));
          if (!bForce && m_strAccessToken.has_char() && (tNow - m_timeAuth).GetTotalSeconds() < (60 * 5))
             return true;
 
-         string strClientId = acmefile()->as_string(         auto psystem = acmesystem();
+         string strClientId = acmefile()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
@@ -148,7 +148,7 @@ pacmedirectory->system() / "config\\spotify\\client_id.txt");
             set["post"]["code"] = strCode;
             set["post"]["redirect_uri"] = strRedirectUri;
 
-            string strClientSecret = acmefile()->as_string(         auto psystem = acmesystem();
+            string strClientSecret = acmefile()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
@@ -211,27 +211,27 @@ pacmedirectory->system() / "config\\spotify\\client_secret.txt");
 
          m_timeAuth = ::earth::time::now();
 
-         pcontext->m_papexcontext->file()->put_contents(         auto psystem = acmesystem();
+         pcontext->m_papexcontext->file()->put_contents(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "config\\waven\\access_token.txt", m_strAccessToken);
-         pcontext->m_papexcontext->file()->put_contents(         auto psystem = acmesystem();
+         pcontext->m_papexcontext->file()->put_contents(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "config\\waven\\token_type.txt", m_strTokenType);
-         pcontext->m_papexcontext->file()->put_contents(         auto psystem = acmesystem();
+         pcontext->m_papexcontext->file()->put_contents(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "config\\waven\\expire_in.txt", as_string(m_iExpires));
-         pcontext->m_papexcontext->file()->put_contents(         auto psystem = acmesystem();
+         pcontext->m_papexcontext->file()->put_contents(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "config\\waven\\refresh_token.txt", m_strRefreshToken);
-         pcontext->m_papexcontext->file()->put_contents(         auto psystem = acmesystem();
+         pcontext->m_papexcontext->file()->put_contents(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 

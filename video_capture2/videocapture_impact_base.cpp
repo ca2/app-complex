@@ -160,7 +160,7 @@ namespace app_complex_video_capture
 
       //d->get_graphics()->BitBlt(rectangleX, pimage->g());
 
-      //d.save_to_file(         auto psystem = acmesystem();
+      //d.save_to_file(         auto psystem = system();
 
          //auto pacmedirectory = pacmedirectory->system() / "obs.png");
 

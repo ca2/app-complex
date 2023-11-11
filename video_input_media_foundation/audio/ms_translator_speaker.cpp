@@ -127,7 +127,7 @@ bool ms_translator_speaker::speak(const ::string & strLangParam, const ::string 
 
    ::file::path pathTxt;
 
-   ::file::path pathDir =          auto psystem = acmesystem();
+   ::file::path pathDir =          auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
@@ -184,7 +184,7 @@ retry:
 
       m_strTranslatorToken = strResponse.trimmed();
 
-      pcontext->m_papexcontext->file()->put_text_utf8(         auto psystem = acmesystem();
+      pcontext->m_papexcontext->file()->put_text_utf8(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
@@ -266,13 +266,13 @@ pacmedirectory->system() / "translators" / "token.txt", m_strTranslatorToken);
          }
          else if (str.case_insensitive_find("'language' must be a valid language") >= 0)
          {
-            str = pcontext->m_papexcontext->file()->as_string(         auto psystem = acmesystem();
+            str = pcontext->m_papexcontext->file()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "translators/missing.txt");
             str += strLang + "\n";
-            pcontext->m_papexcontext->file()->put_contents(         auto psystem = acmesystem();
+            pcontext->m_papexcontext->file()->put_contents(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
@@ -281,13 +281,13 @@ pacmedirectory->system() / "translators/missing.txt", str);
          }
          else if (str.case_insensitive_find("Language name is not supported") >= 0)
          {
-            str = pcontext->m_papexcontext->file()->as_string(         auto psystem = acmesystem();
+            str = pcontext->m_papexcontext->file()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "translators/missing2.txt");
             str += strLang + "\n";
-            pcontext->m_papexcontext->file()->put_contents(         auto psystem = acmesystem();
+            pcontext->m_papexcontext->file()->put_contents(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 

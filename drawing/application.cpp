@@ -101,7 +101,7 @@ namespace app_complex_drawing
 
          //bool bCheck = false;
 
-         //if (acmeapplication()->m_papexapplication->datastream()->get("simple_checkbox", bCheck))
+         //if (application()->m_papexapplication->datastream()->get("simple_checkbox", bCheck))
          //{
 
          //   pcheckbox->_001SetCheck(bCheck, ::e_source_initialize);
@@ -113,9 +113,9 @@ namespace app_complex_drawing
 
          //      bool bCheck = pcheck->bcheck();
 
-         //      acmeapplication()->m_papexapplication->datastream()->set("simple_checkbox", bCheck);
+         //      application()->m_papexapplication->datastream()->set("simple_checkbox", bCheck);
 
-         //      //::pointer <application> papplication = acmeapplication();
+         //      //::pointer <application> papplication = application();
 
          //      //papplication->on_change_synchronize_with_weather();
 
@@ -133,7 +133,7 @@ namespace app_complex_drawing
 
          //bool bCheck = false;
 
-         ////if (acmeapplication()->m_papexapplication->datastream()->get("no_client_frame", bCheck))
+         ////if (application()->m_papexapplication->datastream()->get("no_client_frame", bCheck))
          ////{
 
          ////   pcheckbox->_001SetCheck(bCheck, ::e_source_initialize);
@@ -145,9 +145,9 @@ namespace app_complex_drawing
 
          //      bool bCheck = pcheck->bcheck();
 
-         //      acmeapplication()->m_papexapplication->datastream()->set("no_client_frame", bCheck);
+         //      application()->m_papexapplication->datastream()->set("no_client_frame", bCheck);
 
-         //      //::pointer <application> papplication = acmeapplication();
+         //      //::pointer <application> papplication = application();
 
          //      //papplication->on_change_synchronize_with_weather();
 

@@ -615,7 +615,7 @@ namespace mediaplaylist
 
       }
 
-      if (acmefile()->exists(         auto psystem = acmesystem();
+      if (acmefile()->exists(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 

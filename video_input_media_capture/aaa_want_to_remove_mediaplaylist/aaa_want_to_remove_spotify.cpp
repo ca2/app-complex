@@ -473,23 +473,23 @@ namespace mediaplaylist
       session_callbacks.log_message = NULL;
       session_callbacks.end_of_track = &end_of_track;
 
-      m_strLocationCache      =          auto psystem = acmesystem();
+      m_strLocationCache      =          auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "spotify\\cache";
-      m_strLocationSettings   =          auto psystem = acmesystem();
+      m_strLocationSettings   =          auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "spotify\\settings";
 
-               auto psystem = acmesystem();
+               auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->create(m_strLocationCache);
-               auto psystem = acmesystem();
+               auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
@@ -537,7 +537,7 @@ pacmedirectory->create(m_strLocationSettings);
 
       string username = "camiloveriwell";
 
-      string password = acmefile()->as_string(         auto psystem = acmesystem();
+      string password = acmefile()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
