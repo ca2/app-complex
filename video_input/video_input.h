@@ -3,6 +3,7 @@
 
 #include "device_array.h"
 #include "apex/handler/source.h"
+#include "aura/hardware/device_listener.h"
 
 
 namespace video_input

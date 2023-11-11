@@ -2,7 +2,6 @@
 
 
 #include "app-complex/video_input/video_input.h"
-#include "aura/hardware/device_listener.h"
 
 
 namespace video_input_media_capture
