@@ -171,7 +171,7 @@ namespace audio
    LPWAVEOUT source::waveout_open(int iChannel, LPAUDIOFORMAT pformat, LPWAVEOUT_CALLBACK pcallback)
    {
 
-      LPWAVEOUT lpwaveout = memory_new WAVEOUT();
+      LPWAVEOUT lpwaveout = __new< WAVEOUT >();
 
 
       m_iChannelCount = pformat->m_iChannels;

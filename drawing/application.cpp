@@ -157,7 +157,7 @@ namespace app_complex_drawing
 
       }
 
-      //auto pstill = __new(::user::still);
+      //auto pstill = __allocate< ::user::still >();
 
       //__construct_new(m_pedit);
 
@@ -181,7 +181,7 @@ namespace app_complex_drawing
 
       //m_pbuttonSend->add_handler(this);
 
-      //m_pstill->set_window_text("Enter memory_new text:");
+      //m_pstill->set_window_text("Enter  text:");
 
       //m_pstillReceiver->create_control(this, "still");
 

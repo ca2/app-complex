@@ -14,7 +14,7 @@ namespace audio
 
       m_bInitialized = false;
 
-      m_pmutexAudio = __new(class mutex());
+      m_pmutexAudio = __allocate< class mutex >();
 
       m_bReleasePlaybackMemory = true;
 

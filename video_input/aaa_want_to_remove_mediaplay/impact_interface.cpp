@@ -53,7 +53,7 @@ namespace mediaplay
 
    //   m_etimerFade                  = e_timer_none;
 
-   //   m_precordnotifyview           = __new(::mediaplay::record_notify_impact);
+   //   m_precordnotifyview           = __allocate< ::mediaplay::record_notify_impact >();
 
    //   m_spgraphics->CreateCompatibleDC(nullptr);
 
@@ -94,7 +94,7 @@ namespace mediaplay
 
       m_etimerFade = e_timer_none;
 
-      m_precordnotifyview = __new(::mediaplay::record_notify_impact);
+      m_precordnotifyview = __allocate< ::mediaplay::record_notify_impact >();
 
       m_spgraphics->CreateCompatibleDC(nullptr);
 
@@ -1852,7 +1852,7 @@ retry4:
 
             m_propertysetaBatch.erase_all();
 
-            m_propertysetaBatch.add(__new(property_set));
+            m_propertysetaBatch.add(__allocate< property_set >());
 
             auto & prop = m_propertysetaBatch.last();
 
@@ -2436,7 +2436,7 @@ retry4:
 
                   m_propertysetaBatch.erase_all();
 
-                  m_propertysetaBatch.add(__new(property_set));
+                  m_propertysetaBatch.add(__allocate< property_set >());
 
                   property_set & prop = m_propertysetaBatch.last();
 

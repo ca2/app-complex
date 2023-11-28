@@ -34,7 +34,7 @@ namespace video_input
 		
 		debug_print_out * pdebugprintout = &debug_print_out::get_instance();
 
-		*ppIGT = memory_new image_grabber_thread(pSource, deviceID, func);
+		*ppIGT = aaa_primitive_new image_grabber_thread(pSource, deviceID, func);
 
 		if (ppIGT == NULL)
 		{

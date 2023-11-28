@@ -29,7 +29,7 @@ namespace wave
    bool recorder_container::initialize_recorder()
    {
 
-      m_pwaverecorder = memory_new  ::wave::recorder ();
+      m_pwaverecorder = __new< ::wave::recorder  >();
 
       if(m_pwaverecorder == nullptr)
          return false;

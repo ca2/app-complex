@@ -28,14 +28,14 @@ namespace multimedia_playlist
       ::pointer<::multimedia_playlist::playlist>session::new_playlist()
       {
 
-         return __new(playlist);
+         return __allocate< playlist >();
 
       }
 
       ::pointer<::multimedia_playlist::track>session::new_track()
       {
 
-         return __new(track);
+         return __allocate< track >();
 
       }
 
@@ -72,7 +72,7 @@ namespace multimedia_playlist
 //
 //
 
-      //m_pthread = memory_new thread(this);
+      //m_pthread = __new< thread >(this);
 
       //m_pthread->m_psession = this;
 
@@ -188,7 +188,7 @@ namespace multimedia_playlist
          if (::is_null(pFind))
          {
 
-            auto ppl = __new(::multimedia_playlist::veriwell::playlist);
+            auto ppl = __allocate< ::multimedia_playlist::veriwell::playlist >();
 
             ppl->load(payloadFile);
 

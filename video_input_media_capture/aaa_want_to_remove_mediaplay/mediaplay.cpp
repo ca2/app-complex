@@ -38,7 +38,7 @@ namespace mediaplay
 
       }
 
-      auto psingledocumenttemplate = __new(single_document_template(
+      auto psingledocumenttemplate = __allocate < single_document_template >(
                                           m_strMatter,
                                           m_typeatomDocument,
                                           m_typeatomFrameWnd,

@@ -66,14 +66,14 @@ float filter1_coefficients[20] =
 
 filter1Type *filter1_create(void)
 {
-   filter1Type *result = (filter1Type *)memory_allocate(sizeof(filter1Type));	// Allocate memory for the object
+   filter1Type *result = (filter1Type *)::heap::management::memory(::heap::e_memory_main)->allocate(sizeof(filter1Type));	// Allocate memory for the object
    filter1_init(result);											// Initialize it
    return result;																// Return the result
 }
 
 void filter1_destroy(filter1Type *pObject)
 {
-   memory_free(pObject);
+   ::heap::management::memory(::heap::e_memory_main)->free(pObject);
 }
 
 void filter1_init(filter1Type * pThis)
@@ -1039,13 +1039,13 @@ namespace audio
                if (dInterpolation > 32768.0)
                {
 
-                  ::informationf("iInterpolation >= 32768\n");
+                  ::acme::get()->platform()->informationf("iInterpolation >= 32768\n");
 
                }
                else if (dInterpolation < -32767.0)
                {
 
-                  ::informationf("iInterpolation <= -32769\n");
+                  ::acme::get()->platform()->informationf("iInterpolation <= -32769\n");
 
                }
 
@@ -1200,13 +1200,13 @@ namespace audio
                                  if (dInterpolation >= 32768.0f)
                                  {
 
-                                    ::informationf("iInterpolation >= 32768\n");
+                                    ::acme::get()->platform()->informationf("iInterpolation >= 32768\n");
 
                                  }
                                  else if (dInterpolation <= -32769.0f)
                                  {
 
-                                    ::informationf("iInterpolation <= -32769\n");
+                                    ::acme::get()->platform()->informationf("iInterpolation <= -32769\n");
 
                                  }
 
@@ -1332,13 +1332,13 @@ namespace audio
                            if (dInterpolation >= 32768.0)
                            {
 
-                              ::informationf("iInterpolation >= 32768\n");
+                              ::acme::get()->platform()->informationf("iInterpolation >= 32768\n");
 
                            }
                            else if (dInterpolation <= -32769.0)
                            {
 
-                              ::informationf("iInterpolation <= -32769\n");
+                              ::acme::get()->platform()->informationf("iInterpolation <= -32769\n");
 
                            }
 
@@ -1606,13 +1606,13 @@ end4:
                            if (dInterpolation >= 32768.0)
                            {
 
-                              ::informationf("iInterpolation >= 32768\n");
+                              ::acme::get()->platform()->informationf("iInterpolation >= 32768\n");
 
                            }
                            else if (dInterpolation <= -32769.0)
                            {
 
-                              ::informationf("iInterpolation <= -32769\n");
+                              ::acme::get()->platform()->informationf("iInterpolation <= -32769\n");
 
                            }
 
@@ -1730,13 +1730,13 @@ end4:
          //            if (dInterpolation >= 32768.0)
          //            {
 
-         //               ::informationf("iInterpolation >= 32768\n");
+         //               ::acme::get()->platform()->informationf("iInterpolation >= 32768\n");
 
          //            }
          //            else if (dInterpolation <= -32769.0)
          //            {
 
-         //               ::informationf("iInterpolation <= -32769\n");
+         //               ::acme::get()->platform()->informationf("iInterpolation <= -32769\n");
 
          //            }
 

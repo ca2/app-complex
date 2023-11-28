@@ -80,18 +80,18 @@ namespace simple_app
    }
 
 
-   int64_t application::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t application::increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
 
-   int64_t application::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t application::decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
@@ -112,7 +112,7 @@ namespace simple_app
 //::acme::library * app_simple_drawing_get_new_library()
 //{
 //
-//   return memory_new ::apex::single_application_library < ::simple_app::application >("app-simple/drawing");
+//   return __new< ::apex::single_application_library < ::simple_app::application > >("app-simple/drawing");
 //
 //}
 //

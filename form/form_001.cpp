@@ -22,18 +22,18 @@ namespace app_complex_form
 #ifdef _DEBUG
 
 
-   int64_t form_001::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t form_001::increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
 
-   int64_t form_001::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t form_001::decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
@@ -91,7 +91,7 @@ namespace app_complex_form
 //
 //      m_pbuttonSend->add_handler(this);
 //
-//      m_pstill->set_window_text("Enter memory_new text:");
+//      m_pstill->set_window_text("Enter  text:");
 //
 //      m_pstillReceiver->create_control(this, "still");
 //

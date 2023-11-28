@@ -31,9 +31,9 @@ namespace app_complex_video_capture
 
       bool keyboard_focus_is_focusable() override;
 
-      //virtual i64 increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
+      //virtual i64 increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS);
 
-      //virtual i64 decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
+      //virtual i64 decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS);
 
       //bool is_this_visible(::user::enum_layout elayout = ::user::e_layout_design) override;
 

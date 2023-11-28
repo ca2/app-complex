@@ -12,12 +12,12 @@ namespace wave
       m_pencoder = nullptr;
       m_estate = e_state_initial;
       m_bResetting = false;
-      __construct(m_pwavebuffer, __new(buffer));
+      __construct(m_pwavebuffer, __allocate< buffer >());
 
       if(m_pwavebuffer == nullptr)
          throw ::exception(error_no_memory);
 
-      __construct(m_pwaveformat, __new(format));
+      __construct(m_pwaveformat, __allocate< format >());
 
    }
 

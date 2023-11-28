@@ -50,7 +50,7 @@ namespace mediamanager
 
       }
 
-      m_pdatabase = __new(::sqlite::database(this));
+      m_pdatabase = __allocate< ::sqlite::database >(this);
 
       ::file::path str = pcontext->m_papexcontext->dir()->appdata() / "musical_players";
 
@@ -1372,7 +1372,7 @@ namespace mediamanager
       if(m_pthread == nullptr)
       {
          
-         m_pthread = memory_new album_build_thread;
+         m_pthread = __new< album_build_thread >();
 
          if(!m_pthread->begin_synch())
          {

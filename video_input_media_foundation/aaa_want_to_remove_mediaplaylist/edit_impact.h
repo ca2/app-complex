@@ -27,9 +27,9 @@ namespace mediaplaylist
       DECLARE_MESSAGE_HANDLER(on_message_create);
       //bool keyboard_focus_is_focusable();
 
-      //virtual i64 increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
+      //virtual i64 increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS);
 
-      //virtual i64 decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
+      //virtual i64 decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS);
 
       //bool is_window_visible() override;
 

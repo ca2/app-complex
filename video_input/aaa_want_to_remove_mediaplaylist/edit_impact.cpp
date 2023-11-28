@@ -121,11 +121,11 @@ namespace mediaplaylist
 
    i64 edit_impact::increment_reference_count()
    {
-   return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+   return ::object::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
    }
    i64 edit_impact::decrement_reference_count()
    {
-   return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+   return ::object::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
    }
 
 

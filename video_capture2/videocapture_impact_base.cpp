@@ -149,10 +149,10 @@ namespace app_complex_video_capture
 
       //char sz[512];
 
-      //::informationf("impact:");
+      //::acme::get()->platform()->informationf("impact:");
       //::ansi_from_u64(sz, microsecond, 10);
       //::information(sz);
-      //::informationf(", ");
+      //::acme::get()->platform()->informationf(", ");
 
       //image d(e_create);
 

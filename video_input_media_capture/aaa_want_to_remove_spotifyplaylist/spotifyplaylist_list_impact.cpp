@@ -557,9 +557,9 @@ namespace mediaplaylist
       pmessage->previous();
 
 
-      m_pimagelistSubItemHover   = memory_new image_list(this);
-      m_pimagelistNormal         = memory_new image_list(this);
-      m_pimagelistItemHover      = memory_new image_list(this);
+      m_pimagelistSubItemHover   = __new< image_list >(this);
+      m_pimagelistNormal         = __new< image_list >(this);
+      m_pimagelistItemHover      = __new< image_list >(this);
 
       m_pimagelistSubItemHover->create(16, 16, 0,  10, 10);
       m_pimagelistSubItemHover->add_matter("mediaplaylist/execute_play_16.png");
@@ -581,7 +581,7 @@ namespace mediaplaylist
       rgb(220, 220, 215),
       127);
 
-      m_pimagelistGroupHover   = memory_new image_list(this);
+      m_pimagelistGroupHover   = __new< image_list >(this);
 
       m_pimagelistGroupHover->create(96, 96, 0,  10, 10);
       m_pimagelistGroupHover->add_matter("mediaplaylist/playlist_96.png");

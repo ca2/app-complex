@@ -218,7 +218,7 @@
 ////
 ////
 /////**
-////* Callback called when libplspotify has memory_new metadata available
+////* Callback called when libplspotify has new metadata available
 ////*
 ////* Not used in this example (but available to be able to reuse the session.c file
 ////* for other examples.)

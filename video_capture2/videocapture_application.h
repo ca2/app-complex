@@ -46,8 +46,8 @@ namespace app_complex_video_capture
 
       virtual void on_request(::request * prequest) override;
 
-      virtual i64 increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
-      virtual i64 decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
+      virtual i64 increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS);
+      virtual i64 decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS);
 
    };
 

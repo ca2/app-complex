@@ -731,7 +731,7 @@ namespace video_input_media_foundation
 
       }
 
-      m_pthread = __new(::video_input_media_foundation::thread(this));
+      m_pthread = __allocate< ::video_input_media_foundation::thread >(this);
 
       m_pthread->initialize(this);
 

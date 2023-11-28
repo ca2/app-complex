@@ -675,7 +675,7 @@ namespace wave
 
          informationf("OMG FADE IN is this source of BUG?!?");
 
-         effect_crescendo * pfadein = memory_new effect_crescendo;
+         effect_crescendo * pfadein = __new< effect_crescendo >();
 
          pfadein->m_bDeleteOnEnd = true;
          pfadein->m_bSustain = true;
@@ -856,7 +856,7 @@ namespace wave
 
             information(trace_category_appmsg, e_trace_level_information, "OUT thread::raw_pump_message - Received e_message_quit.\n");
 
-            ::informationf("OUT thread::raw_pump_message - Received e_message_quit.\n");
+            ::acme::get()->platform()->informationf("OUT thread::raw_pump_message - Received e_message_quit.\n");
 
             m_nDisablePumpCount++; // application must die
             // Note: prevents calling message loop things in 'exit_thread'

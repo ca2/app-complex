@@ -29,7 +29,7 @@ namespace mediaplaylist
       m_xmldoc(pparticle)
    {
       m_xmldoc.get_root()->set_name("playlist");
-      m_pxmledit              = memory_new ::xml::edit(this);
+      m_pxmledit              = __new< ::xml::edit >(this);
       m_xmldoc.m_pedit        = m_pxmledit;
       m_pxmledit->m_spdata    = &m_xmldoc;
 
@@ -1084,9 +1084,9 @@ namespace mediaplaylist
 //      {
 //         string strName = newName.get_string();
 //         newName["url"] = strName;
-//         newName["xmledit"] = __new(::memory_file(*memfileEdit));
+//         newName["xmledit"] = __allocate< ::memory_file >(*memfileEdit);
 ////         newName["xmledit"].cast < ::memory_file >()->release();
-//         newName["xml"] = __new(::memory_file(*memfileXml));
+//         newName["xml"] = __allocate< ::memory_file >(*memfileXml);
 //  //       newName["xml"].cast < ::memory_file >()->release();
 //      }
 //

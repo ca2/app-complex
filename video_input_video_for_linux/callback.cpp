@@ -89,7 +89,7 @@ namespace video_input_video_for_linux
          float ffps;
          uint64_t timeout_usec;
 
-         //informationf("%s: memory_new capture thread", m_pdevice->m_iDeviceice_id);
+         //informationf("%s: new capture thread", m_pdevice->m_iDeviceice_id);
          //os_set_thread_name("v4l2: capture");
 
          /* Get framerate and calculate appropriate select timeout value. */
@@ -112,9 +112,9 @@ namespace video_input_video_for_linux
 
       m_bCapturing = true;
 
-      informationf("%s: memory_new capture started", m_pdevice->m_strDevice.c_str());
+      informationf("%s: __new< capture started", m_pdevice->m_strDevice.c_str >());
 
-      m_pframe = memory_new ::video::frame(v4l2_pix_fmt_to_video_format(m_pdevice->m_iPixelFormat),
+      m_pframe = __new< ::video::frame(v4l2_pix_fmt_to_video_format >(m_pdevice->m_iPixelFormat),
                                     m_pdevice->m_size.cx(), m_pdevice->m_size.cy());
 
       information() << "frame size : " << m_pdevice->m_size;

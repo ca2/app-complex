@@ -54,7 +54,7 @@ namespace simple_os_drag_and_drop
 
       add_matter_locator("app-simple/drawing");
 
-      auto pdoctemplate = __new(::user::single_document_template(
+      auto pdoctemplate = __allocate < ::user::single_document_template >(
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
@@ -64,7 +64,7 @@ namespace simple_os_drag_and_drop
       add_document_template(pdoctemplate);
 
 
-      pdoctemplate = __new(::user::single_document_template(
+      pdoctemplate = __allocate < ::user::single_document_template >(
                           "main",
                           ::type < document >(),
                           ::type < frame >(),
@@ -168,18 +168,18 @@ namespace simple_os_drag_and_drop
    }
 
 
-   int64_t application::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t application::increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
 
-   int64_t application::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t application::decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
@@ -205,7 +205,7 @@ namespace simple_os_drag_and_drop
 //::acme::library * app_simple_drag_and_drop_get_new_library()
 //{
 //
-//   return memory_new ::apex::single_application_library < ::simple_os_drag_and_drop::application >("app-simple/drag_and_drop");
+//   return __new< ::apex::single_application_library < ::simple_os_drag_and_drop::application > >("app-simple/drag_and_drop");
 //
 //}
 //

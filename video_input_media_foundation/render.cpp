@@ -73,7 +73,7 @@ namespace video_input_media_foundation
 
       ::video_input::render::on_destroy();
 
-      //m_pevRenderEnd = memory_new manual_reset_event(this);
+      //m_pevRenderEnd = __new< manual_reset_event >(this);
 
       //m_prender->set_finish();
 
@@ -549,7 +549,7 @@ namespace video_input_media_foundation
    STDMETHODIMP_(ULONG) render::AddRef()
    {
 
-      return (ULONG) increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return (ULONG) increment_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 

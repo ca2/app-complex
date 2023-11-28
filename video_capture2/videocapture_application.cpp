@@ -96,7 +96,7 @@ namespace app_complex_video_capture
       //}
 
       
-      auto pDocTemplate = __new(::user::single_document_template(
+      auto pDocTemplate = __allocate < ::user::single_document_template >(
                           "main",
                           ::type < document >(),
                           ::type < main_frame >(),
@@ -106,7 +106,7 @@ namespace app_complex_video_capture
 
       m_ptemplateHelloMultiverseMain = pDocTemplate;
 
-      pDocTemplate = __new(::user::single_document_template(
+      pDocTemplate = __allocate < ::user::single_document_template >(
                           "main",
                           ::type < document >(),
                           ::type < frame >(),
@@ -177,14 +177,14 @@ namespace app_complex_video_capture
    i64 application::increment_reference_count()
    {
 
-      return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
    i64 application::decrement_reference_count()
    {
 
-      return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 

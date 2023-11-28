@@ -261,7 +261,7 @@ namespace mediaplaylist
       add_factory_item <::mediaplaylist::playlist_list_impact >();
       add_factory_item <::mediaplaylist::impact >();
 
-      m_pimpactsystem = memory_new user::single_document_template(
+      m_pimpactsystem = __new< user::single_document_template >(
       get_app()->m_pcoreapp,
       m_strMatter,
       ::type < ::mediaplaylist::document >(),

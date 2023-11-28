@@ -211,7 +211,7 @@ static void SP_CALLCONV  end_of_track(sp_session *sess)
 
 
 /**
-* Callback called when libplspotify has memory_new metadata available
+* Callback called when libplspotify has aaa_primitive_new metadata available
 *
 * Not used in this example (but available to be able to reuse the session.c file
 * for other examples.)
@@ -687,7 +687,7 @@ pacmedirectory->system() / "config\\spotify\\pas.txt");
          if(!m_pimagea[0]->load_image(&m))
          {
 
-            ::informationf("image_loaded_failed");
+            ::acme::get()->platform()->informationf("image_loaded_failed");
 
          }
 
@@ -724,7 +724,7 @@ pacmedirectory->system() / "config\\spotify\\pas.txt");
 
          sp_playlist_add_callbacks(pl,&pl_callbacks,m_session);
 
-         plspotify::pl * p = __alloc(memory_new plspotify::pl(this));
+         plspotify::pl * p = __alloc(aaa_primitive_new plspotify::pl(this));
 
          p->m_pl = pl;
 
@@ -854,7 +854,7 @@ pacmedirectory->system() / "config\\spotify\\pas.txt");
       for(index i = 0; i < c; i++)
       {
 
-         tr * ptr = __alloc(memory_new tr(this));
+         tr * ptr = __alloc(aaa_primitive_new tr(this));
 
          m_tra[i] = ptr;
 

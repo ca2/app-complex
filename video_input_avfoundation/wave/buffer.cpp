@@ -445,7 +445,7 @@ namespace wave
       //   m_pfft = nullptr;
       //}
       //auto iPlanSize = 1 << m_uiAnalysisSizeOrder;
-      //m_pfft = memory_new kissfft::fftd(iPlanSize);
+      //m_pfft = __new< kissfft::fftd >(iPlanSize);
    }
 
    void buffer::InterestCalcDoubleSetBModule()

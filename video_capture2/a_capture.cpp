@@ -24,7 +24,7 @@ STDMETHODIMP CaptureManager::CaptureEngineCB::QueryInterface(REFIID riid, void**
 
 STDMETHODIMP_(ULONG) CaptureManager::CaptureEngineCB::AddRef()
 {
-   return increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+   return increment_reference_count(REFERENCING_DEBUGGING_ARGS);
 }
 
 STDMETHODIMP_(ULONG) CaptureManager::CaptureEngineCB::Release()
@@ -165,7 +165,7 @@ CaptureManager::InitializeCaptureManager(HWND hwndThumbnail, IMFCaptureEngineOnS
       goto Exit;
    }
 
-   m_pCallback = memory_new CaptureEngineCB(get_app(), m_hwndEvent);
+   m_pCallback = __new< CaptureEngineCB(get_app >(), m_hwndEvent);
    if (m_pCallback == nullptr)
    {
       hr = E_OUTOFMEMORY;

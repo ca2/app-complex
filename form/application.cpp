@@ -13,7 +13,7 @@
 #include "base/user/user/single_document_template.h"
 
 
-////#define memory_new ACME_NEW
+//
 
 __DECLARE_RELEASE_TIME(app_complex_form);
 
@@ -38,7 +38,7 @@ namespace app_complex_form
 
       //m_bMultiverseChat          = true;
 
-//auto test = memory_new int;
+//auto test = __new< int >();
 
    }
 
@@ -51,18 +51,18 @@ namespace app_complex_form
 #ifdef _DEBUG
 
 
-   int64_t application::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t application::increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
 
-   int64_t application::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t application::decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
@@ -98,7 +98,7 @@ namespace app_complex_form
 
       
 
-      m_ptemplateAppSimpleFormMain = __new(::user::single_document_template(
+      m_ptemplateAppSimpleFormMain = __allocate < ::user::single_document_template >(
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
@@ -107,7 +107,7 @@ namespace app_complex_form
       add_document_template(m_ptemplateAppSimpleFormMain);
 
 
-      m_ptemplateAppSimpleFormImpact = __new(::user::single_document_template(
+      m_ptemplateAppSimpleFormImpact = __allocate < ::user::single_document_template >(
                           "main",
                           ::type < document >(),
                           ::type < frame >(),

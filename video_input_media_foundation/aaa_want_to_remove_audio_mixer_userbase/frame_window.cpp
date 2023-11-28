@@ -165,7 +165,7 @@ namespace multimedia
       {
          //   if(m_poptionsimpact == nullptr)
          //   {
-         //      m_poptionsimpact = memory_new CAlbumOptionsDialog;
+         //      m_poptionsimpact = __new< CAlbumOptionsDialog >();
          //      m_poptionsimpact->create(&m_poptionsimpact);
          //      m_poptionsimpact->show_window(SW_SHOWNORMAL);
          //   }

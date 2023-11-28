@@ -71,7 +71,7 @@ frame::~frame()
    //static inline void video_frame_destroy(struct video_frame *frame)
    //{
       ///if (frame) {
-         memory_free(m_data[0]);
+         ::heap::management::memory(::heap::e_memory_main)->free(m_data[0]);
          //bfree(frame);
       ///}
    //}
@@ -2183,7 +2183,7 @@ void frame::copy_from(const frame * src)
 //   }
 //}
 //
-///* resamples/remixes memory_new audio to the designated main audio output format */
+///* resamples/remixes new audio to the designated main audio output format */
 //static void process_audio(obs_source_t * source,
 //const struct obs_source_audio * audio
 //)
@@ -2395,7 +2395,7 @@ void frame::copy_from(const frame * src)
 //
 //#if DEBUG_ASYNC_FRAMES
 //blog(LOG_DEBUG,
-//           "memory_new frame, "
+//           "new frame, "
 //           "source->last_frame_ts: %llu, "
 //           "next_m_timestamp: %llu",
 //           source->last_frame_ts, next_m_timestamp);

@@ -48,7 +48,7 @@ namespace notify_drawing
 
       add_matter_locator("app-simple/drawing");
 
-      auto pdoctemplate = __new(::user::single_document_template(
+      auto pdoctemplate = __allocate < ::user::single_document_template >(
                                "main",
                                ::type < simple_drawing::document >(),
                                ::type < main_frame >(),
@@ -57,7 +57,7 @@ namespace notify_drawing
       add_document_template(pdoctemplate);
 
 
-//      pdoctemplate = __new(::user::single_document_template(
+//      pdoctemplate = __allocate < ::user::single_document_template >(
 //                          this,
 //                          "main",
 //                          ::type < simple_drawing::document >(),
@@ -146,18 +146,18 @@ namespace notify_drawing
    }
 
 
-   int64_t application::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t application::increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
 
-   int64_t application::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t application::decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
@@ -183,7 +183,7 @@ namespace notify_drawing
 //::acme::library * app_simple_notify_drawing_get_new_library()
 //{
 //
-//   return memory_new ::apex::single_application_library < ::notify_drawing::application >("app-simple/notify_drawing");
+//   return __new< ::apex::single_application_library < ::notify_drawing::application > >("app-simple/notify_drawing");
 //
 //}
 //

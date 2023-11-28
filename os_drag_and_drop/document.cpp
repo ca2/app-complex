@@ -64,17 +64,17 @@ namespace simple_os_drag_and_drop
    }
 
 
-   int64_t document::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t document::increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return  ::user::document::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return  ::user::document::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
-   int64_t document::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t document::decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return  ::user::document::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return  ::user::document::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 

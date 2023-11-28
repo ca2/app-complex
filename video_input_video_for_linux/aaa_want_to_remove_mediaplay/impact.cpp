@@ -62,7 +62,7 @@ namespace mediaplay
 
       m_flagNonClient.erase(e_non_client_background);
       m_flagNonClient.erase(e_non_client_focus_rect);
-      m_impactlineaStatus.m_linea.add(__new(xfplayer_impact_line(&m_impactlineaStatus)));
+      m_impactlineaStatus.m_linea.add(__allocate< xfplayer_impact_line >(&m_impactlineaStatus));
       papp->m_pmediaplayview = this;
 
       return estatus;

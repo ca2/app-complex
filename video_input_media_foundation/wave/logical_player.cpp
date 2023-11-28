@@ -126,7 +126,7 @@ namespace wave
          switch (pcommand->GetCommand())
          {
          case command_open_file_aiff:
-            //m_pplugin = memory_new _vmsaiffdec::plugin();
+            //m_pplugin = __new< _vmsaiffdec::plugin >();
             return false;
             break;
          case command_open_file_cda:
@@ -141,7 +141,7 @@ namespace wave
          }
          break;
          case command_open_file_vqf:
-            //m_pplugin = memory_new _vmstwinvqdec::plugin();
+            //m_pplugin = __new< _vmstwinvqdec::plugin >();
             return false;
             break;
          case command_open_file_wm:
@@ -979,7 +979,7 @@ namespace wave
 
       OnEvent(e_player_event_fade_out_and_stop);
 
-      effect_diminuendo* pdiminuendo = memory_new effect_diminuendo;
+      effect_diminuendo* pdiminuendo = __new< effect_diminuendo >();
 
       pdiminuendo->m_bEnd = true;
       pdiminuendo->m_bSustain = true;

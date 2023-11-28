@@ -119,7 +119,7 @@ namespace app_complex_drawing
 
                pdocument->payload(strId) = m_pimpactDrawing->m_prender->m_hlsText;
 
-               ::informationf("\n\nSIMPLE_DRAWING::PANE_VIEW::" + strId + "\n\n");
+               ::acme::get()->platform()->informationf("\n\nSIMPLE_DRAWING::PANE_VIEW::" + strId + "\n\n");
 
                auto papp = get_app();
 

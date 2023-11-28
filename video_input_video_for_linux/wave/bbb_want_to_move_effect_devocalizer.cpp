@@ -19,8 +19,8 @@ namespace wave
       m_iDivisionCount = iDivisionCount;
       m_iGroupCount = iGroupCount;
       m_iSampleCount = iSampleCount;
-      m_pfft = __new(kissfft::fftd(m_iSampleCount));
-      m_pifft = __new(kissfft::ifftd(m_iSampleCount));
+      m_pfft = __allocate< kissfft::fftd >(m_iSampleCount);
+      m_pifft = __allocate< kissfft::ifftd >(m_iSampleCount);
 
       double fMinFreq = 110.0; // Hz
       double fMaxFreq = 1000.0; // Hz

@@ -128,7 +128,7 @@ namespace mediaplaylist
 
       while ((pnodeChild = pnode->get_child("playlist", iStart)) != nullptr)
       {
-         ::pointer<::mediaplaylist::item>pitem = memory_new ::mediaplaylist::item(this);
+         ::pointer<::mediaplaylist::item>pitem = __new< ::mediaplaylist::item >(this);
          pnodeChild->get_attr("name", pitem->m_strName);
          ::pointer<::data::tree_item>pitemNew = insert_item(pitem, ::data::e_relative_last_child, pitemParent);
          create_tree(pnodeChild, pitemNew);

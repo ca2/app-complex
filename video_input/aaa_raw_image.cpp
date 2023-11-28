@@ -10,7 +10,7 @@
 {
 	ri_size = size;
 
-	ri_pixels.reset(memory_new unsigned char[size_i32]);
+	ri_pixels.reset(aaa_primitive_new unsigned char[size_i32]);
 
 	memset((void *)ri_pixels.get(),0,ri_size);
 }
@@ -31,7 +31,7 @@ bool ::image::isNew()
 
 long ::image::CreateInstance(::image **ppRImage,::u32 size_i32)
 {
-	*ppRImage = memory_new (std::nothrow) ::image(size);
+	*ppRImage = aaa_primitive_new (std::nothrow) ::image(size);
 
     if (ppRImage == NULL)
     {

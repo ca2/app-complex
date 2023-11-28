@@ -564,7 +564,7 @@ namespace video_input
    HRESULT image_grabber::CreateInstance(image_grabber ** ppIG, ::u32 deviceID)
    {
 
-      *ppIG = memory_new image_grabber(deviceID);
+      *ppIG = aaa_primitive_new image_grabber(deviceID);
 
       if (ppIG == NULL)
       {
