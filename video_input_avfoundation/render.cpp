@@ -614,7 +614,7 @@ namespace video_input_video_avfoundation
 //   STDMETHODIMP_(ULONG) render::AddRef()
 //   {
 //
-//      return (ULONG) increment_reference_count(REFERENCING_DEBUGGING_ARGS);
+//      return (ULONG) increment_reference_count();
 //
 //   }
 //

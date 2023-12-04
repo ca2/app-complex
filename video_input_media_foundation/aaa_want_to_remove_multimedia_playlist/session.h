@@ -67,18 +67,18 @@ namespace multimedia_playlist
       virtual ~session();
 
 
-      i64 increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS) override
+      i64 increment_reference_count() override
       {
 
-         return ::thread::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
+         return ::thread::increment_reference_count();
 
       }
 
 
-      i64 decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS) override
+      i64 decrement_reference_count() override
       {
 
-         return ::thread::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
+         return ::thread::decrement_reference_count();
 
       }
 

@@ -30,13 +30,13 @@ namespace video_input_video_avfoundation
 
 #ifdef _DEBUG
 
-      i64 increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS) override
+      i64 increment_reference_count() override
       {
-         return ::object::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
+         return ::object::increment_reference_count();
       }
-      i64 decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS) override
+      i64 decrement_reference_count() override
       {
-         return ::object::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
+         return ::object::decrement_reference_count();
       }
 
 #endif

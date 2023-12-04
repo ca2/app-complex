@@ -594,7 +594,7 @@ namespace video_input_media_capture
    //STDMETHODIMP_(ULONG) render::AddRef()
    //{
 
-   //   return (ULONG) increment_reference_count(REFERENCING_DEBUGGING_ARGS);
+   //   return (ULONG) increment_reference_count();
 
    //}
 

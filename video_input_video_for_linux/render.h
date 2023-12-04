@@ -31,13 +31,13 @@ namespace video_input_video_for_linux
 
 #ifdef _DEBUG
 
-      virtual i64 increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS)
+      virtual i64 increment_reference_count()
       {
-         return ::object::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
+         return ::object::increment_reference_count();
       }
-      virtual i64 decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS)
+      virtual i64 decrement_reference_count()
       {
-         return ::object::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
+         return ::object::decrement_reference_count();
       }
 
 #endif

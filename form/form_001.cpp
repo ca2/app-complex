@@ -22,18 +22,18 @@ namespace app_complex_form
 #ifdef _DEBUG
 
 
-   int64_t form_001::increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
+   int64_t form_001::increment_reference_count()
    {
 
-      return ::object::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
+      return ::object::increment_reference_count();
 
    }
 
 
-   int64_t form_001::decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
+   int64_t form_001::decrement_reference_count()
    {
 
-      return ::object::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
+      return ::object::decrement_reference_count();
 
    }
 

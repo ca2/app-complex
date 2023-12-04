@@ -41,17 +41,17 @@ namespace wave
          virtual ~output_thread();
 
 
-         virtual i64 increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS) override
+         virtual i64 increment_reference_count() override
          {
 
-            return ::thread::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
+            return ::thread::increment_reference_count();
 
          }
 
-         virtual i64 decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS) override
+         virtual i64 decrement_reference_count() override
          {
 
-            return ::thread::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
+            return ::thread::decrement_reference_count();
 
          }
 

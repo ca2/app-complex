@@ -610,7 +610,7 @@ namespace video_input_video_for_linux
 //   STDMETHODIMP_(ULONG) render::AddRef()
 //   {
 //
-//      return (ULONG) increment_reference_count(REFERENCING_DEBUGGING_ARGS);
+//      return (ULONG) increment_reference_count();
 //
 //   }
 //

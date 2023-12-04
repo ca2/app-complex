@@ -37,13 +37,13 @@ namespace video_input_media_foundation
 
 #ifdef _DEBUG
 
-      virtual i64 increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS)
+      virtual i64 increment_reference_count()
       {
-         return ::object::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
+         return ::object::increment_reference_count();
       }
-      virtual i64 decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS)
+      virtual i64 decrement_reference_count()
       {
-         return ::object::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
+         return ::object::decrement_reference_count();
       }
 
 #endif
