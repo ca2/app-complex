@@ -121,7 +121,7 @@ namespace wave
 //         u32 i, j, k, n;
 //         u32 uiBlockSize, uiBlockEnd;
 //
-//         double dAngleNumerator = 2.0 * pmathematics->get_pi();
+//         double dAngleNumerator = 2.0 * π;
 //         //   double dTr, dTi;    /* temp real, temp imaginary */
 //
 //         ASSERT(::math::math::IsPowerOfTwo(m_uiBufferSize));
