@@ -23,7 +23,7 @@ namespace app_complex_drawing
    application::application()
    {
 
-      m_ptemplateSimpleDrawingMain = nullptr;
+      //m_ptemplateSimpleDrawingMain = nullptr;
 
       m_ptabimpact = nullptr;
 

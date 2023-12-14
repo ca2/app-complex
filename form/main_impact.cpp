@@ -3,6 +3,7 @@
 #include "application.h"
 #include "document.h"
 #include "acme/constant/id.h"
+#include "acme/handler/topic.h"
 
 
 namespace app_complex_form

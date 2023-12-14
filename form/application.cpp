@@ -97,23 +97,25 @@ namespace app_complex_form
       //}
 
       
-
-      m_ptemplateAppSimpleFormMain = __allocate < ::user::single_document_template >(
+      add_impact_system("main",
+      __allocate < ::user::single_document_template >(
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
                                ::type < pane_impact >()));
       //m_ptemplateBeatMapperMain = pdoctemplate;
-      add_document_template(m_ptemplateAppSimpleFormMain);
+      //add_document_template(m_ptemplateAppSimpleFormMain);
 
 
-      m_ptemplateAppSimpleFormImpact = __allocate < ::user::single_document_template >(
+      add_impact_system(
+         "impact",
+         __allocate < ::user::single_document_template >(
                           "main",
                           ::type < document >(),
                           ::type < frame >(),
                           ::type < main_impact >()));
       // m_ptemplateBeatMapperImpact = pdoctemplate;
-      add_document_template(m_ptemplateAppSimpleFormImpact);
+      //add_document_template(m_ptemplateAppSimpleFormImpact);
 
       //return true;
 

@@ -2,6 +2,7 @@
 #include "impact.h"
 #include "application.h"
 #include "pane_impact.h"
+#include "acme/handler/topic.h"
 #include "app-complex/video_input/render.h"
 #include "app-complex/video_input/device.h"
 #include "aura/graphics/draw2d/graphics.h"

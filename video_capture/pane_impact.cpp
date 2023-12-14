@@ -4,6 +4,7 @@
 #include "application.h"
 #include "acme/constant/id.h"
 #include "acme/handler/request.h"
+#include "acme/handler/topic.h"
 #include "base/user/form/document.h"
 #include "base/user/user/tab_pane.h"
 #include "base/user/user/single_document_template.h"

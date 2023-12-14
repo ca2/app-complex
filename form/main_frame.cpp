@@ -38,7 +38,7 @@ namespace app_complex_form
    //}
 
 
-   ::experience::frame * main_frame::frame_experience()
+   ::pointer< ::experience::frame > main_frame::frame_experience()
    {
 
       auto pframe = ::simple_main_frame::frame_experience(nullptr, "008", "LightBlue");

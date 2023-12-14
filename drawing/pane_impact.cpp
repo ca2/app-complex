@@ -4,6 +4,7 @@
 #include "acme/constant/id.h"
 #include "acme/constant/message.h"
 #include "acme/graphics/draw2d/_binary_stream.h"
+#include "acme/handler/topic.h"
 #include "apex/database/_binary_stream.h"
 #include "base/user/user/document.h"
 #include "app-simple/drawing/render.h"

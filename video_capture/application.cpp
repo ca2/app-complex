@@ -71,25 +71,28 @@ namespace app_complex_video_capture
 
       ::aura::application::init_instance();
         
-      auto pDocTemplate = __allocate < ::user::single_document_template >(
+      add_impact_system("main",
+      __allocate < ::user::single_document_template >(
                           "main",
                           ::type < ::user::document >(),
                           ::type < main_frame >(),
                           ::type < pane_impact >()));
 
-      add_document_template(pDocTemplate);
+      //add_document_template(pDocTemplate);
 
-      m_ptemplateVideoCaptureMain = pDocTemplate;
+      //m_ptemplateVideoCaptureMain = pDocTemplate;
 
-      pDocTemplate = __allocate < ::user::single_document_template >(
+      add_impact_system(
+         "impact",
+      __allocate < ::user::single_document_template >(
                           "main",
                           ::type < document >(),
                           ::type < frame >(),
                           ::type < main_impact >()));
 
-      add_document_template(pDocTemplate);
-      
-      m_ptemplateVideoCaptureImpact = pDocTemplate;
+      //add_document_template(pDocTemplate);
+      //
+      //m_ptemplateVideoCaptureImpact = pDocTemplate;
 
 #if defined(MACOS)
 

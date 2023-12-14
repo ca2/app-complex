@@ -4,6 +4,7 @@
 #include "pane_impact.h"
 #include "acme/handler/item.h"
 #include "acme/user/user/content.h"
+#include "acme/handler/topic.h"
 #include "app-complex/video_input/video_input.h"
 #include "app-complex/video_input/device.h"
 #include "aura/graphics/draw2d/graphics.h"

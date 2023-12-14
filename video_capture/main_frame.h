@@ -30,7 +30,7 @@ namespace app_complex_video_capture
 
 
       ::user::enum_translucency get_translucency(::user::style * pstyle) override;
-      ::experience::frame * frame_experience() override;
+      ::pointer < ::experience::frame > frame_experience() override;
 
       //bool has_pending_graphical_update() override;
 
