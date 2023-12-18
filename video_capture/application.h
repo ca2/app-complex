@@ -21,8 +21,8 @@ namespace app_complex_video_capture
 
 
       document *                             m_pdocument;
-      ::user::single_document_template *     m_ptemplateVideoCaptureMain;
-      ::user::single_document_template *     m_ptemplateVideoCaptureImpact;
+      //::user::single_document_template *     m_ptemplateVideoCaptureMain;
+      //::user::single_document_template *     m_ptemplateVideoCaptureImpact;
 
 
       application();

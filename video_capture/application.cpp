@@ -31,9 +31,9 @@ namespace app_complex_video_capture
    application::application() 
    {
 
-      m_ptemplateVideoCaptureMain = nullptr;
+      //m_ptemplateVideoCaptureMain = nullptr;
 
-      m_ptemplateVideoCaptureImpact = nullptr;
+      //m_ptemplateVideoCaptureImpact = nullptr;
 
       m_strAppId = "app-complex/video_capture";
 
@@ -143,17 +143,17 @@ namespace app_complex_video_capture
 
 #endif
 
-      if(m_ptemplateVideoCaptureMain->get_document_count() == 0)
+      if(impact_system("main")->get_document_count() == 0)
       {
 
-         m_ptemplateVideoCaptureMain->request(prequest);
+         impact_system("main")->request(prequest);
 
       }
 
       if(prequest->m_payloadFile.has_char())
       {
 
-         m_ptemplateVideoCaptureImpact->request(prequest);
+         impact_system("impact")->request(prequest);
 
       }
 
