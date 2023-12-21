@@ -10,14 +10,14 @@
 #include "core/user/user/user.h"
 
 
-__DECLARE_RELEASE_TIME(app_complex_drawing);
+__IMPLEMENT_APPLICATION_RELEASE_TIME(app_complex_drawing);
 
 
 namespace app_complex_drawing
 {
 
 
-   __IMPLEMENT_APPLICATION_RELEASE_TIME(app_complex_drawing);
+   // __IMPLEMENT_APPLICATION_RELEASE_TIME1(app_complex_drawing));
 
 
    application::application()
