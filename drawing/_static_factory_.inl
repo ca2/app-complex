@@ -5,5 +5,6 @@ do(default_imaging); \
 do(default_node); \
 do(default_write_text); \
 do(database_sqlite3); \
-do(folder_zip);
+do(folder_zip); \
+do(crypto_openssl);
 
