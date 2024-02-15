@@ -45,8 +45,6 @@
 		9AE877C22858ADFF00F88364 /* libnode_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877C02858ADFF00F88364 /* libnode_ios.a */; };
 		9AE877C42858AE0000F88364 /* libwindowing_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877C12858ADFF00F88364 /* libwindowing_ios.a */; };
 		9AE877C62858AE0000F88364 /* libios_write_text_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE871872858A4C200F88364 /* libios_write_text_quartz2d.a */; };
-		9AE878222858B26C00F88364 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE878202858B26B00F88364 /* libssl.a */; };
-		9AE878232858B26C00F88364 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE878212858B26C00F88364 /* libcrypto.a */; };
 		9AE878342858BB9E00F88364 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE878332858BB9D00F88364 /* CoreServices.framework */; };
 		9AE8783C2858BECF00F88364 /* libios_app_complex_form.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8780B2858AEB600F88364 /* libios_app_complex_form.a */; };
 		9AE8783E2858BF0500F88364 /* libios_app_simple_form.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8783D2858BF0500F88364 /* libios_app_simple_form.a */; };
@@ -417,10 +415,8 @@
 				9AE8783C2858BECF00F88364 /* libios_app_complex_form.a in Frameworks */,
 				9AE877A62858ADBF00F88364 /* libapex_ios.a in Frameworks */,
 				9AE877B12858ADC000F88364 /* libios_aura_posix.a in Frameworks */,
-				9AE878232858B26C00F88364 /* libcrypto.a in Frameworks */,
 				9AE8779C2858ADBE00F88364 /* libios_acme_apple.a in Frameworks */,
 				9AE8783F2858BF6B00F88364 /* libios_experience_tranquillum.a in Frameworks */,
-				9AE878222858B26C00F88364 /* libssl.a in Frameworks */,
 				9AE878432858C0A100F88364 /* libios_folder_zip.a in Frameworks */,
 				9AF761551F84384500FDE7CC /* libz.tbd in Frameworks */,
 				9AE877AD2858ADC000F88364 /* libios_aura_apple.a in Frameworks */,
