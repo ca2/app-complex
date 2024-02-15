@@ -34,7 +34,7 @@
 		9AE8775A2858ACFC00F88364 /* libios_apex_apple.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877442858ACFB00F88364 /* libios_apex_apple.a */; };
 		9AE8775C2858ACFC00F88364 /* libapex_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877452858ACFB00F88364 /* libapex_ios.a */; };
 		9AE8775E2858ACFC00F88364 /* libios_apex_posix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877462858ACFB00F88364 /* libios_apex_posix.a */; };
-		9AE877602858ACFC00F88364 /* libios_app_complex_drawing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE871512858A45E00F88364 /* libios_app_complex_drawing.a */; };
+		9AE877602858ACFC00F88364 /* libapp_complex_drawing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE871512858A45E00F88364 /* libapp_complex_drawing.a */; };
 		9AE877632858ACFD00F88364 /* libios_aqua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877472858ACFB00F88364 /* libios_aqua.a */; };
 		9AE877652858ACFD00F88364 /* libios_aura.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877482858ACFB00F88364 /* libios_aura.a */; };
 		9AE877662858ACFD00F88364 /* libios_aura_apple.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877492858ACFB00F88364 /* libios_aura_apple.a */; };
@@ -411,7 +411,7 @@
 				9AE877662858ACFD00F88364 /* libios_aura_apple.a in Frameworks */,
 				9AF7615C1F84387F00FDE7CC /* CoreGraphics.framework in Frameworks */,
 				9AE877632858ACFD00F88364 /* libios_aqua.a in Frameworks */,
-				9AE877602858ACFC00F88364 /* libios_app_complex_drawing.a in Frameworks */,
+				9AE877602858ACFC00F88364 /* libapp_complex_drawing.a in Frameworks */,
 				9AE877792858AD5C00F88364 /* libios_draw2d_quartz2d.a in Frameworks */,
 				9AE877562858ACFB00F88364 /* libios_acme_posix.a in Frameworks */,
 				9AE8777B2858AD5C00F88364 /* libios_experience_core.a in Frameworks */,
@@ -558,7 +558,7 @@
 			isa = PBXGroup;
 			children = (
 				9AE86E0E2858A35A00F88364 /* libapp_complex_drawing.dylib */,
-				9AE871512858A45E00F88364 /* libios_app_complex_drawing.a */,
+				9AE871512858A45E00F88364 /* libapp_complex_drawing.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -885,10 +885,10 @@
 			remoteRef = 9AE86E282858A35B00F88364 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AE871512858A45E00F88364 /* libios_app_complex_drawing.a */ = {
+		9AE871512858A45E00F88364 /* libapp_complex_drawing.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libios_app_complex_drawing.a;
+			path = libapp_complex_drawing.a;
 			remoteRef = 9AE871502858A45E00F88364 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1010,11 +1010,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 10;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/ios/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Complex Drawing!!";
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 0.1;
 				PLATFORM_MODIFIER = ios;
 				PRODUCT_BUNDLE_IDENTIFIER = "ca2.software.app-complex.drawing";
@@ -1027,11 +1029,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 10;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/ios/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Complex Drawing!!";
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 0.1;
 				PLATFORM_MODIFIER = ios;
 				PRODUCT_BUNDLE_IDENTIFIER = "ca2.software.app-complex.drawing";

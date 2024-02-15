@@ -477,7 +477,7 @@
 				9AA803E626657ABC00A6B449 /* imaging_coreimage.xcodeproj */,
 				9AA8038F26657ABA00A6B449 /* node_macos.xcodeproj */,
 				9AA803C826657ABB00A6B449 /* write_text_quartz2d.xcodeproj */,
-				9A8C61C42783E9A6000C8587 /* form */,
+				9A8C61C42783E9A6000C8587 /* __implement */,
 				070B8EEB1B6E53F900D26137 /* Products */,
 				9ADF1D4522C16E1600456537 /* Frameworks */,
 				9A3E0BA22309FBDC00B5459B /* Library */,
@@ -519,7 +519,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9A8C61C42783E9A6000C8587 /* form */ = {
+		9A8C61C42783E9A6000C8587 /* __implement */ = {
 			isa = PBXGroup;
 			children = (
 				9A8F49C82A26CED200097EE1 /* __implement */,
@@ -529,7 +529,7 @@
 				9A8C7EE92783F7D9000C8587 /* _matter.zip */,
 				9A8C64BF2783EA0D000C8587 /* macos */,
 			);
-			name = form;
+			name = __implement;
 			sourceTree = "<group>";
 		};
 		9A8C64BF2783EA0D000C8587 /* macos */ = {
@@ -810,7 +810,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1520;
 				ORGANIZATIONNAME = "ca2 Desenvolvimento de Software Ltdal";
 				TargetAttributes = {
 					070B8EE91B6E53F900D26137 = {
@@ -1176,6 +1176,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1269,6 +1270,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
