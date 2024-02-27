@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>_ios_app_complex_form.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
-		</dict>
 		<key>ios_simple_form_simple_form.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
