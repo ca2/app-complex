@@ -53,28 +53,28 @@ add_library(static_${PROJECT_NAME} STATIC ${library_source})
 target_precompile_headers(${PROJECT_NAME} PRIVATE framework.h)
 target_precompile_headers(static_${PROJECT_NAME} PRIVATE framework.h)
 
-set_target_properties(app_complex_video_capture PROPERTIES LINKER_LANGUAGE CXX)
+set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
 
 if (MSVC)
 
-   target_compile_options(app_complex_video_capture PRIVATE "/MD$<$<CONFIG:Debug>:d>")
-   target_link_options(app_complex_video_capture PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
-   target_link_options(app_complex_video_capture PRIVATE "/SUBSYSTEM:WINDOWS")
-   target_link_libraries(app_complex_video_capture PRIVATE ${library_references})
+   target_compile_options(${PROJECT_NAME} PRIVATE "/MD$<$<CONFIG:Debug>:d>")
+   target_link_options(${PROJECT_NAME} PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
+   target_link_options(${PROJECT_NAME} PRIVATE "/SUBSYSTEM:WINDOWS")
+   target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references})
 
 elseif(${LINUX} OR ${FREEBSD})
 
-   target_compile_options(app_complex_video_capture PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
-   #target_link_options(app_complex_video_capture PRIVATE -Wl,-rpath=$ORIGIN)
-   target_link_libraries(app_complex_video_capture PRIVATE ${library_references})
-   target_link_options(app_complex_video_capture PRIVATE -Wl,-z,defs)
+   target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
+   #target_link_options(${PROJECT_NAME} PRIVATE -Wl,-rpath=$ORIGIN)
+   target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references})
+   target_link_options(${PROJECT_NAME} PRIVATE -Wl,-z,defs)
 
 endif()
 
 
 
-target_link_directories(app_complex_video_capture PRIVATE ${library_link_directories})
+target_link_directories(${PROJECT_NAME} PRIVATE ${library_link_directories})
 
 
 list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR})
@@ -86,7 +86,7 @@ target_include_directories(static_${PROJECT_NAME} PRIVATE ${library_include_dire
 
 
 
-target_compile_definitions(app_complex_video_capture PRIVATE _APP_COMPLEX_VIDEO_CAPTURE_LIBRARY)
+target_compile_definitions(${PROJECT_NAME} PRIVATE _APP_COMPLEX_VIDEO_CAPTURE_LIBRARY)
 
 
 add_subdirectory(__implement)
