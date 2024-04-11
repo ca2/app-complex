@@ -76,7 +76,7 @@ pacmedirectory->system() / "config\\spotify\\client_id.txt");
 
             set["raw_http"] = true;
 
-            strUrl = "https://api.ca2software.com/account/spotify_register";
+            strUrl = "https://api.ca2.software/account/spotify_register";
 
             strState = pcontext->m_papexcontext->http().get(strUrl, set);
 
@@ -92,7 +92,7 @@ pacmedirectory->system() / "config\\spotify\\client_id.txt");
 
          }
 
-         string strRedirectUri = "https://ca2software.com/spotify_redirect";
+         string strRedirectUri = "https://ca2.software/spotify_redirect";
 
          //string strScope = "user-read-private user-read-email";
 
@@ -116,7 +116,7 @@ pacmedirectory->system() / "config\\spotify\\client_id.txt");
 
                set["raw_http"] = true;
 
-               strUrl = "https://api.ca2software.com/account/spotify_response?state=" + strState;
+               strUrl = "https://api.ca2.software/account/spotify_response?state=" + strState;
 
                strResponse = pcontext->m_papexcontext->http().get(strUrl, set);
 
