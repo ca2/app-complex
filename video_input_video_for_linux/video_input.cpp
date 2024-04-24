@@ -2,6 +2,7 @@
 #include "framework.h"
 #include "video_input.h"
 #include "device.h"
+#include "acme/operating_system/shared_posix/c_error_number.h"
 #include "acme/parallelization/synchronous_lock.h"
 #if defined(FREEBSD)
 #define __BSD_VISIBLE 1

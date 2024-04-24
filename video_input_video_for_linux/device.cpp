@@ -6,6 +6,7 @@
 #include "callback.h"
 #include "app-complex/video_input/media_format.h"
 #include "acme/include/_c_swap.h"
+#include "acme/operating_system/shared_posix/c_error_number.h"
 #include "acme/primitive/primitive/memory.h"
 #include "acme/crypto/crypto.h"
 #include "apex/platform/system.h"
