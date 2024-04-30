@@ -312,10 +312,10 @@ namespace mediaplaylist
 
             synchronous_lock synchronouslock(m_pmutexData);
 
-            for (index i = 0; i < m_straOnAddPlay.get_count(); i++)
+            for (::raw::index i = 0; i < m_straOnAddPlay.get_count(); i++)
             {
 
-               for (index j = 0; j < pstraNew->get_count(); j++)
+               for (::raw::index j = 0; j < pstraNew->get_count(); j++)
                {
 
                   if (m_straOnAddPlay[i].case_insensitive_order(pstraNew->element_at(j)) == 0)
@@ -347,10 +347,10 @@ namespace mediaplaylist
 
             }
 
-            for (index i = 0; i < m_straOnAddQueue.get_count(); i++)
+            for (::raw::index i = 0; i < m_straOnAddQueue.get_count(); i++)
             {
 
-               for (index j = 0; j < pstraNew->get_count(); j++)
+               for (::raw::index j = 0; j < pstraNew->get_count(); j++)
                {
 
                   if (m_straOnAddQueue[i].case_insensitive_order(pstraNew->element_at(j)) == 0)
@@ -439,7 +439,7 @@ processed_new:
    }
 
 
-   index document::get_current_song(bool bEditingPlaylist)
+   ::raw::index document::get_current_song(bool bEditingPlaylist)
    {
 
       synchronous_lock synchronouslock(m_pmutexData);
@@ -509,7 +509,7 @@ processed_new:
 
       string str;
 
-      index iSong = pinfo->m_iCurrentSong;
+      ::raw::index iSong = pinfo->m_iCurrentSong;
 
       if (pinfo->m_context.is_user_source()
             || pinfo->m_uHint == id_do_play
@@ -834,12 +834,12 @@ processed_new:
    }
 
 
-   bool document::AddSong(LPINT lpiaSongs, ::count iSongCount, bool bDoPlay, bool bMakeVisible)
+   bool document::AddSong(LPINT lpiaSongs, ::raw::count iSongCount, bool bDoPlay, bool bMakeVisible)
    {
 
       bool bFirst = bDoPlay;
 
-      for(index i = 0; i < iSongCount; i++)
+      for(::raw::index i = 0; i < iSongCount; i++)
       {
 
          AddSong(lpiaSongs[i], bFirst, bMakeVisible, false);
@@ -959,7 +959,7 @@ processed_new:
    }
 
 
-   bool document::AddSong(::index nSong, bool bDoPlay, bool bMakeVisible, bool bUpdateAllImpacts)
+   bool document::AddSong(::raw::index nSong, bool bDoPlay, bool bMakeVisible, bool bUpdateAllImpacts)
    {
 
       __UNREFERENCED_PARAMETER(nSong);
@@ -1465,7 +1465,7 @@ processed_new:
    }
 
 
-   ::count document::get_song_count(bool bEditingPlaylist)
+   ::raw::count document::get_song_count(bool bEditingPlaylist)
    {
 
       return get_songs(bEditingPlaylist).get_size();
@@ -1473,7 +1473,7 @@ processed_new:
    }
 
 
-   bool document::get_song_at(::file::path & str, ::index iSong, bool bEditingPlaylist)
+   bool document::get_song_at(::file::path & str, ::raw::index iSong, bool bEditingPlaylist)
    {
 
       if(iSong < 0)
@@ -1508,7 +1508,7 @@ processed_new:
 
    }
 
-   void document::populate_queue(::index iSong)
+   void document::populate_queue(::raw::index iSong)
    {
 
       if (play_playlist() != nullptr && play_playlist()->m_bDiscard)
@@ -1576,7 +1576,7 @@ processed_new:
    }
 
 
-   bool document::pick_song(index & iSong, string & str, bool bRandom, int & iLoop)
+   bool document::pick_song(::raw::index & iSong, string & str, bool bRandom, int & iLoop)
    {
 
       synchronous_lock synchronouslock(m_pmutexData);
@@ -1712,7 +1712,7 @@ retry0:
    }
 
 
-   bool document::RemoveSong(index iSong, ::pointer<::user::impact>pimpact, bool bUpdate)
+   bool document::RemoveSong(::raw::index iSong, ::pointer<::user::impact>pimpact, bool bUpdate)
    {
 
       if(iSong < 0)
@@ -1924,7 +1924,7 @@ retry0:
    }
 
 
-   ::count document::get_current_playlist_song_count()
+   ::raw::count document::get_current_playlist_song_count()
    {
 
       return m_iCurrentPlaylistSongCount;
@@ -1932,7 +1932,7 @@ retry0:
    }
 
 
-   ::count document::get_current_queue_song_count()
+   ::raw::count document::get_current_queue_song_count()
    {
 
       synchronous_lock synchronouslock(m_pmutexData);
@@ -1969,8 +1969,8 @@ retry0:
 
       //::file::array::write(osEdit, *play_playlist()->m_pxmledit);
 
-      //::count iXmlSize = memfileXml->get_size();
-      //::count iEditSize = memfileEdit->get_size();
+      //::raw::count iXmlSize = memfileXml->get_size();
+      //::raw::count iEditSize = memfileEdit->get_size();
 
       //::memory_file * pfile;
 

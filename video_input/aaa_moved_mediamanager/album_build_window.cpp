@@ -113,7 +113,7 @@ namespace  mediamanager
          //   ::get_task()->set_thread_priority(::e_priority_highest);
 
 
-         //   ::count iRemove = maximum(30, ia.get_size());
+         //   ::raw::count iRemove = maximum(30, ia.get_size());
 
          //   ::i32_array iaRemove;
          //   ::payload fv;

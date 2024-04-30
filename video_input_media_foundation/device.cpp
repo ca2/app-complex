@@ -350,7 +350,7 @@ namespace video_input_media_foundation
    }
 
 
-   //::video_input::media_format device::get_format(::index iIndex)
+   //::video_input::media_format device::get_format(::raw::index iIndex)
    //{
 
    //	if (::comparison::lt(atom, m_mediaformata.size()))
@@ -864,7 +864,7 @@ namespace video_input_media_foundation
    }
 
 
-   void device::set_format(::index iIndex)
+   void device::set_format(::raw::index iIndex)
    {
 
       ////debug_print_out * pdebugprintout = &debug_print_out::get_instance();

@@ -133,7 +133,7 @@ namespace app_complex_form
 
          ::pointer<form>pform;
 
-         index iId = atoi(strId);
+         ::raw::index iId = atoi(strId);
 
          switch (iId)
          {

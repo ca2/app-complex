@@ -66,7 +66,7 @@ namespace mediaplay
       int iTest = DEBUG_REPEAT_OPEN;
 auto tickStart = ::duration::now();
 
-      for (index i = 0; i < iTest; i++)
+      for (::raw::index i = 0; i < iTest; i++)
       {
 
          if (pdata != nullptr)

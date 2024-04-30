@@ -47,10 +47,10 @@ namespace multimedia_playlist
          virtual bool load(string strFile) override;
 
          virtual string add_song(::payload payloadFile, bool bAddDuplicate) override;
-         virtual bool erase_song(index iSong, bool bUpdateSongs = true) override;
+         virtual bool erase_song(::raw::index iSong, bool bUpdateSongs = true) override;
          virtual void ensure_playlist() override;
 
-         virtual ::count get_count() override;
+         virtual ::raw::count get_count() override;
 
 
          virtual bool is_recursive() override;

@@ -112,7 +112,7 @@ namespace video_input_video_for_linux
       int      m_iBufferedCount;
 
 
-      //::index m_iIndex;
+      //::raw::index m_iIndex;
       string m_strDevice;
       //string m_strId;
       int_fast32_t m_iDevice;
@@ -161,7 +161,7 @@ namespace video_input_video_for_linux
 		::pointer<thread>							m_pthread;
 
 
-		device(::index iDevice, const ::string & strName, const ::string & strDevice, const ::string & strHardwareId);
+		device(::raw::index iDevice, const ::string & strName, const ::string & strDevice, const ::string & strHardwareId);
 		~device(void) override;
 
 
@@ -198,11 +198,11 @@ namespace video_input_video_for_linux
 
 		::size_i32 get_size() override;
 
-		//::video_input::media_format get_format(::index iIndex) override;
+		//::video_input::media_format get_format(::raw::index iIndex) override;
 
-		//::index find_format(::u32 w, ::u32 h, ::u32 idealFramerate = 0) override;
+		//::raw::index find_format(::u32 w, ::u32 h, ::u32 idealFramerate = 0) override;
 
-		void set_format(::index iIndex) override;
+		void set_format(::raw::index iIndex) override;
 
 		bool is_setup() override;
 

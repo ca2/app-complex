@@ -306,7 +306,7 @@ namespace mediaplaylist
 
       screen_to_client()(point);
 
-      index iItem;
+      ::raw::index iItem;
 
       if(_001HitTest_(pt, iItem))
       {
@@ -344,7 +344,7 @@ namespace mediaplaylist
    {
       ::pointer<::message::context_menu>pcontextmenu(pmessage);
       ::point_i32 point = pcontextmenu->GetPoint();
-      index iItem;
+      ::raw::index iItem;
       ::point_i32 ptClient = point;
       screen_to_client(&ptClient);
       if(_001HitTest_(ptClient, iItem))
@@ -422,7 +422,7 @@ namespace mediaplaylist
       pcommand->m_bRet = true;
    }
 
-   bool list_impact::_001OnRemoveItem(index iItem)
+   bool list_impact::_001OnRemoveItem(::raw::index iItem)
    {
       ::pointer<::mediaplaylist::document>pdocument = get_document();
       return pdocument->RemoveSong(iItem);
@@ -481,7 +481,7 @@ namespace mediaplaylist
       get_selection(range);
       if(range.get_item_count() > 0)
       {
-         index iItem = range.ItemAt(0).get_lower_bound();
+         ::raw::index iItem = range.ItemAt(0).get_lower_bound();
 
          info info;
 
@@ -541,7 +541,7 @@ namespace mediaplaylist
       }
    }
 
-   ::count list_impact::_001GetItemCount()
+   ::raw::count list_impact::_001GetItemCount()
    {
       if(get_document() != nullptr)
          return get_document()->get_song_count(true);
@@ -588,7 +588,7 @@ namespace mediaplaylist
       m_pimagelistGroup = m_pimagelistGroupHover;
    }
 
-   //::count list_impact::_001GetGroupCount()
+   //::raw::count list_impact::_001GetGroupCount()
    //{
    //   if(get_document() == nullptr)
    //      return 0;
@@ -604,7 +604,7 @@ namespace mediaplaylist
    //   }
    //}
 
-   //::count list_impact::_001GetGroupItemCount(index iGroup)
+   //::raw::count list_impact::_001GetGroupItemCount(::raw::index iGroup)
    //{
    //   if(get_document() == nullptr)
    //      return 0;
@@ -715,7 +715,7 @@ namespace mediaplaylist
       pitem->m_bOk = true;
    }
 
-   //::count list_impact::_001GetGroupMetaItemCount(index iGroup)
+   //::raw::count list_impact::_001GetGroupMetaItemCount(::raw::index iGroup)
    //{
    //   __UNREFERENCED_PARAMETER(iGroup);
    //   return 1;

@@ -207,7 +207,7 @@ namespace mediaplaylist
 
       auto pmouse = pmessage->m_union.m_pmouse;
 
-      index iItem;
+      ::raw::index iItem;
 
       if(_001HitTest_(pmouse->m_point,iItem))
       {
@@ -313,7 +313,7 @@ namespace mediaplaylist
 
       if(range.get_item_count() > 0)
       {
-         index iItem = range.ItemAt(0).get_lower_bound();
+         ::raw::index iItem = range.ItemAt(0).get_lower_bound();
 
          playlist_play(iItem);
 
@@ -364,10 +364,10 @@ namespace mediaplaylist
 
    }
 
-   ::count playlist_list_impact::_001GetItemCount()
+   ::raw::count playlist_list_impact::_001GetItemCount()
    {
 
-      ::count iAddUp = 0;
+      ::raw::count iAddUp = 0;
 
       try
       {
@@ -487,7 +487,7 @@ namespace mediaplaylist
 
    }
 
-   //::count playlist_list_impact::_001GetGroupCount()
+   //::raw::count playlist_list_impact::_001GetGroupCount()
    //{
    //   if(get_document() == nullptr)
    //      return 0;
@@ -503,7 +503,7 @@ namespace mediaplaylist
    //   }
    //}
 
-   //::count playlist_list_impact::_001GetGroupItemCount(index iGroup)
+   //::raw::count playlist_list_impact::_001GetGroupItemCount(::raw::index iGroup)
    //{
    //   if(get_document() == nullptr)
    //      return 0;
@@ -791,7 +791,7 @@ namespace mediaplaylist
    //}
 
 
-   index playlist_list_impact::playlist_index()
+   ::raw::index playlist_list_impact::playlist_index()
    {
 
       ::file::path path;
@@ -837,7 +837,7 @@ namespace mediaplaylist
    }
 
 
-   index playlist_list_impact::playlist_index(const ::file::path & pathName)
+   ::raw::index playlist_list_impact::playlist_index(const ::file::path & pathName)
    {
 
       auto pFind = m_plisting->predicate_find_first([=](auto & i)
@@ -881,7 +881,7 @@ namespace mediaplaylist
    void playlist_list_impact::update_playlist_hilite(const ::file::path & pathPlaylist)
    {
 
-      index iPlaylist = playlist_index(pathPlaylist);
+      ::raw::index iPlaylist = playlist_index(pathPlaylist);
 
       _001Highlight(iPlaylist, true);
 
@@ -891,7 +891,7 @@ namespace mediaplaylist
    bool playlist_list_impact::playlist_previous()
    {
 
-      index iItem = playlist_index();
+      ::raw::index iItem = playlist_index();
 
       if (iItem < 0)
       {
@@ -900,7 +900,7 @@ namespace mediaplaylist
 
       }
 
-      index iNewItem = iItem - 1;
+      ::raw::index iNewItem = iItem - 1;
 
       if (iNewItem < 0)
       {
@@ -945,7 +945,7 @@ namespace mediaplaylist
    bool playlist_list_impact::playlist_next()
    {
 
-      index iItem = playlist_index();
+      ::raw::index iItem = playlist_index();
 
       if (iItem < 0)
       {
@@ -954,7 +954,7 @@ namespace mediaplaylist
 
       }
 
-      index iNewItem = iItem + 1;
+      ::raw::index iNewItem = iItem + 1;
 
       if (iNewItem >= _001GetItemCount())
       {
@@ -1010,9 +1010,9 @@ restart:
 
       }
 
-      index iItem = playlist_index();
+      ::raw::index iItem = playlist_index();
 
-      index iNewItem = -1;
+      ::raw::index iNewItem = -1;
 
       while(true)
       {
@@ -1047,7 +1047,7 @@ restart:
    }
 
 
-   bool playlist_list_impact::playlist_play(index iItem)
+   bool playlist_list_impact::playlist_play(::raw::index iItem)
    {
 
       if(!playlist_select(iItem))
@@ -1087,7 +1087,7 @@ restart:
 
    }
 
-   bool playlist_list_impact::playlist_select(index iItem)
+   bool playlist_list_impact::playlist_select(::raw::index iItem)
    {
 
       if (iItem < 0)
@@ -1109,7 +1109,7 @@ restart:
 
             string strPlaylist;
 
-            for(index i = 0; i < 8; i++)
+            for(::raw::index i = 0; i < 8; i++)
             {
 
                strPlaylist = papp->mediaplaylist()->spotify()->m_pla[iItem]->get_name();
@@ -1163,7 +1163,7 @@ restart:
    }
 
 
-   bool playlist_list_impact::playlist_erase(index iItem)
+   bool playlist_list_impact::playlist_erase(::raw::index iItem)
    {
 
       //::pointer<::mediaplaylist::document>pdocument = get_document();

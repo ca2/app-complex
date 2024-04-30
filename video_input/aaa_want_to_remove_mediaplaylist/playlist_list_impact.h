@@ -24,7 +24,7 @@ namespace mediaplaylist
       };
 
 
-      index                         m_iLastClickItem;
+      ::raw::index                         m_iLastClickItem;
       count                         m_cSameItemClick;
 
 
@@ -74,21 +74,21 @@ namespace mediaplaylist
       DECLARE_MESSAGE_HANDLER(_001OnPlaylistExecutePlay);
       DECLARE_MESSAGE_HANDLER(_001OnUpdatePlaylistExecutePlay);
 
-      virtual index playlist_index();
+      virtual ::raw::index playlist_index();
 
       virtual bool playlist_previous();
       virtual bool playlist_next();
 
       virtual bool playlist_roulette();
 
-      virtual bool playlist_play(index iItem);
-      virtual bool playlist_select(index iItem);
-      virtual bool playlist_erase(index iItem);
+      virtual bool playlist_play(::raw::index iItem);
+      virtual bool playlist_select(::raw::index iItem);
+      virtual bool playlist_erase(::raw::index iItem);
 
       virtual bool on_click(::item * pitem) override;
       //void on_selection_change() override;
 
-      index playlist_index(const ::file::path & pathName);
+      ::raw::index playlist_index(const ::file::path & pathName);
       void update_playlist_hilite(const ::file::path & pathPlaylist);
 
       i32 _001CalcItemHeight(int iBaseHeight) override;

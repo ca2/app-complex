@@ -13,7 +13,7 @@ namespace video_input_video_avfoundation
 
 
 
-	device::device(::index iIndex, const ::string & strName, const ::string & strDevice, const ::string & strHardwareId) :
+	device::device(::raw::index iIndex, const ::string & strName, const ::string & strDevice, const ::string & strHardwareId) :
    m_iIndex(iIndex),
    m_strDevice(strDevice)
 	{
@@ -502,7 +502,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 	}
 
 
-	void device::set_format(::index iIndex)
+	void device::set_format(::raw::index iIndex)
 	{
 
 		if (!m_bSetup)
@@ -857,7 +857,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //      for (auto & ppixelformat: m_pixelformata)
 //      {
 //
-//         for (::index iResolution = 0; iResolution <  ppixelformat->m_resolutiona.get_count();)
+//         for (::raw::index iResolution = 0; iResolution <  ppixelformat->m_resolutiona.get_count();)
 //         {
 //
 //            auto presolution = ppixelformat->m_resolutiona[iResolution];
@@ -885,7 +885,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
    void device::_007_erase_pixel_format_with_empty_resolution_list()
    {
 
-      for (::index iPixelFormat = 0; iPixelFormat <  m_pixelformata.get_count();)
+      for (::raw::index iPixelFormat = 0; iPixelFormat <  m_pixelformata.get_count();)
       {
 
          auto ppixelformat = m_pixelformata[iPixelFormat];

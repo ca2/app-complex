@@ -15,7 +15,7 @@ namespace multimedia_playlist
 
       session *               m_psession;
       playlist *              m_pl;
-      index                   m_iIndex;
+      ::raw::index                   m_iIndex;
       string                  m_strName;
       //::duration m_durationLastUpdate;
       bool                    m_bNew;

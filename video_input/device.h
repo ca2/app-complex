@@ -80,15 +80,15 @@ namespace video_input
 
 		virtual ::size_i32 get_size();
 
-		virtual ::pointer<media_format>get_media_format(::index i);
+		virtual ::pointer<media_format>get_media_format(::raw::index i);
 
-		virtual ::count get_media_format_count();
+		virtual ::raw::count get_media_format_count();
 
-		virtual ::index find_argb_32_format();
+		virtual ::raw::index find_argb_32_format();
 
-		virtual ::index find_format(::u32 w, ::u32 h, ::u32 idealFramerate = 0);
+		virtual ::raw::index find_format(::u32 w, ::u32 h, ::u32 idealFramerate = 0);
 
-		virtual void set_format(::index iIndex);
+		virtual void set_format(::raw::index iIndex);
 
 		virtual bool is_setup();
 

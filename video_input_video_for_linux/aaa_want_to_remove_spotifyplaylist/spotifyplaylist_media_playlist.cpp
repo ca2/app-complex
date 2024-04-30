@@ -39,7 +39,7 @@ namespace mediaplaylist
 
          keep <bool> keepBeforeOpenPlaylist(&m_bBeforeOpenPlaylist, true, false, true);
 
-         for(index i = m_listenerspa.get_count() - 1; i >= 0; i--)
+         for(::raw::index i = m_listenerspa.get_count() - 1; i >= 0; i--)
          {
 
             pdocument = m_listenerspa(i)->_001OnBeforeOpenPlaylist();
@@ -187,7 +187,7 @@ namespace mediaplaylist
 
       }
 
-      for(index i = 1; i <= (5000); i++)
+      for(::raw::index i = 1; i <= (5000); i++)
       {
 
          path = pathFolder / "Playlist " + as_string(i) + ".playlist";

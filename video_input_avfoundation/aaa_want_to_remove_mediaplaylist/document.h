@@ -26,7 +26,7 @@ namespace mediaplaylist
 
       ::user::document *                     m_pdocument;
       string                                 m_strFilePath;
-      index                                  m_iCurrentSong;
+      ::raw::index                                  m_iCurrentSong;
       bool                                   m_bRandom;
       bool                                   m_bMakeVisible;
       ::duration                            m_time;
@@ -73,7 +73,7 @@ namespace mediaplaylist
       //::pointer<player>                       m_pplayer;
 
       // pre calculated values
-      ::count                             m_iCurrentPlaylistSongCount;
+      ::raw::count                             m_iCurrentPlaylistSongCount;
       string_array                             m_straQueue;
 
       string_array                             m_straImpact;
@@ -160,7 +160,7 @@ namespace mediaplaylist
 
       virtual bool restart(const ::action_context & action_context, bool bFadeIn);
 
-      virtual void populate_queue(index iSong);
+      virtual void populate_queue(::raw::index iSong);
 
       virtual void on_final_release();
       virtual bool on_open_document(const ::payload & payloadFile) override;
@@ -181,25 +181,25 @@ namespace mediaplaylist
       virtual void DoPlaylistSave();
       virtual void OnChangeSongs(::pointer<::user::impact>pimpact = nullptr);
       virtual void OnAddSong();
-      virtual ::count get_song_count(bool bEditingPlaylist);
-      virtual index get_current_song(bool bEditingPlaylist);
+      virtual ::raw::count get_song_count(bool bEditingPlaylist);
+      virtual ::raw::index get_current_song(bool bEditingPlaylist);
 
-      virtual bool get_song_at(::file::path & str, index iSong, bool bEditingPlaylist);
-      virtual bool pick_song(index & iSong, string & str, bool bRandom, int & iLoop);
+      virtual bool get_song_at(::file::path & str, ::raw::index iSong, bool bEditingPlaylist);
+      virtual bool pick_song(::raw::index & iSong, string & str, bool bRandom, int & iLoop);
 
       virtual bool play(info * pinfo);
 
-      virtual bool RemoveSong(index iSong, ::pointer<::user::impact>pimpact = nullptr, bool bUpdate = true);
+      virtual bool RemoveSong(::raw::index iSong, ::pointer<::user::impact>pimpact = nullptr, bool bUpdate = true);
       virtual string_array get_songs(bool bEditingPlaylist);
       virtual bool get_song_current_queue(string_array & stra, bool bEditingPlaylist);
       virtual void update_title();
 
 
       virtual bool AddSong(string_array & stra, bool bDoPlay, bool bMakeVisible);
-      virtual bool AddSong(LPINT lpiaSongs, ::count iSongCount, bool bDoPlay, bool bMakeVisible);
+      virtual bool AddSong(LPINT lpiaSongs, ::raw::count iSongCount, bool bDoPlay, bool bMakeVisible);
 
       virtual string AddSong(::payload payloadFile, EAddSong eaddsong, bool bMakeVisible, bool bUpdateAllImpacts, bool bAddDuplicate = true);
-      virtual bool AddSong(index iSongCode, bool bDoPlay, bool bMakeVisible, bool bUpdateAllImpacts);
+      virtual bool AddSong(::raw::index iSongCode, bool bDoPlay, bool bMakeVisible, bool bUpdateAllImpacts);
 
 
 
@@ -213,8 +213,8 @@ namespace mediaplaylist
 
 
 
-      virtual ::count get_current_playlist_song_count();
-      virtual ::count get_current_queue_song_count();
+      virtual ::raw::count get_current_playlist_song_count();
+      virtual ::raw::count get_current_queue_song_count();
 
 
 

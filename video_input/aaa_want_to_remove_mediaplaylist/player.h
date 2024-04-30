@@ -38,8 +38,8 @@ namespace mediaplaylist
 
       virtual void playlist_on_playback_end();
 
-      virtual void PlaylistPlayByIndex(index iIndex);
-      virtual bool PlaylistPlay(index iOffset);
+      virtual void PlaylistPlayByIndex(::raw::index iIndex);
+      virtual bool PlaylistPlay(::raw::index iOffset);
       virtual bool PlaylistPlayRandomItem();
       virtual e_play PlaylistPlay(info * pinfo);
 

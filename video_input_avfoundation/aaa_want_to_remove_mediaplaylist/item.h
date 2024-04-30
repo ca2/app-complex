@@ -23,7 +23,7 @@ namespace mediaplaylist
 
 
       string data_item_get_text(object * pparticle);
-      index data_item_get_image(object * pparticle);
+      ::raw::index data_item_get_image(object * pparticle);
 
 
 

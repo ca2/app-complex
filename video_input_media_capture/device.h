@@ -85,11 +85,11 @@ namespace video_input_media_capture
 
 		::size_i32 get_size() override;
 
-		//::video_input::media_format get_format(::index iIndex) override;
+		//::video_input::media_format get_format(::raw::index iIndex) override;
 
-		//::index find_format(::u32 w, ::u32 h, ::u32 idealFramerate = 0) override;
+		//::raw::index find_format(::u32 w, ::u32 h, ::u32 idealFramerate = 0) override;
 
-		void set_format(::index iIndex) override;
+		void set_format(::raw::index iIndex) override;
 
 		bool is_setup() override;
 

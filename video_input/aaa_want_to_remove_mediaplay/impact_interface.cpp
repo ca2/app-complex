@@ -1972,7 +1972,7 @@ retry4:
       if (m_pplaylistdoc != nullptr)
       {
 
-         index iStartSong = m_pplaylistdoc->play_playlist()->m_iCurrentSong;
+         ::raw::index iStartSong = m_pplaylistdoc->play_playlist()->m_iCurrentSong;
 
          m_bFadeOut = false;
 

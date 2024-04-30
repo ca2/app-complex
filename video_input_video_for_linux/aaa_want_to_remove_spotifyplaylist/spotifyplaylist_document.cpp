@@ -272,7 +272,7 @@ namespace mediaplaylist
       return true;
    }
 
-   index document::get_current_song(bool bEditingPlaylist)
+   ::raw::index document::get_current_song(bool bEditingPlaylist)
    {
       if(bEditingPlaylist)
          return m_impact.m_iCurrentSong;
@@ -302,7 +302,7 @@ namespace mediaplaylist
 
       }
 
-      index iSong = -1;
+      ::raw::index iSong = -1;
 
       if (get_player() == nullptr)
          return false;
@@ -448,12 +448,12 @@ namespace mediaplaylist
       play(&info);
    }
 
-   bool document::AddSong(LPINT lpiaSongs, ::count iSongCount, bool bDoPlay, bool bMakeVisible)
+   bool document::AddSong(LPINT lpiaSongs, ::raw::count iSongCount, bool bDoPlay, bool bMakeVisible)
    {
 
       bool bFirst = bDoPlay;
 
-      for(index i = 0; i < iSongCount; i++)
+      for(::raw::index i = 0; i < iSongCount; i++)
       {
          AddSong(lpiaSongs[i], bFirst, bMakeVisible, false);
          //        if(pSongsSet->FindCode(lpiaSongs[i]))
@@ -538,7 +538,7 @@ namespace mediaplaylist
    }
 
 
-   bool document::AddSong(::index nSong, bool bDoPlay, bool bMakeVisible, bool bUpdateAllImpacts)
+   bool document::AddSong(::raw::index nSong, bool bDoPlay, bool bMakeVisible, bool bUpdateAllImpacts)
    {
 
       __UNREFERENCED_PARAMETER(nSong);
@@ -687,14 +687,14 @@ namespace mediaplaylist
 
    }*/
 
-   ::count document::get_song_count(bool bEditingPlaylist)
+   ::raw::count document::get_song_count(bool bEditingPlaylist)
    {
       string_array stra;
       get_songs(stra, bEditingPlaylist);
       return stra.get_size();
    }
 
-   bool document::get_song_at(::file::path & str, ::index iSong, bool bEditingPlaylist)
+   bool document::get_song_at(::file::path & str, ::raw::index iSong, bool bEditingPlaylist)
    {
 
       string_array stra;
@@ -715,7 +715,7 @@ namespace mediaplaylist
       return true;
    }
 
-   void document::populate_queue(::index iSong)
+   void document::populate_queue(::raw::index iSong)
    {
 
       string_array stra;
@@ -759,7 +759,7 @@ namespace mediaplaylist
 
    }
 
-   bool document::pick_a_song(index & iSong, string & str)
+   bool document::pick_a_song(::raw::index & iSong, string & str)
    {
 
       string_array stra;
@@ -832,7 +832,7 @@ namespace mediaplaylist
       return strValue;
    }
 
-   bool document::RemoveSong(index iSong, ::pointer<::user::impact>pimpact)
+   bool document::RemoveSong(::raw::index iSong, ::pointer<::user::impact>pimpact)
    {
 
       if(iSong < 0)
@@ -957,12 +957,12 @@ namespace mediaplaylist
    }
 
 
-   ::count document::get_current_playlist_song_count()
+   ::raw::count document::get_current_playlist_song_count()
    {
       return m_iCurrentPlaylistSongCount;
    }
 
-   ::count document::get_current_queue_song_count()
+   ::raw::count document::get_current_queue_song_count()
    {
       return m_straQueue.get_count();
    }
@@ -1028,8 +1028,8 @@ namespace mediaplaylist
 
       //::file::array::write(osEdit, *m_play.m_pxmledit);
 
-      //::count iXmlSize = memfileXml->get_size();
-      //::count iEditSize = memfileEdit->get_size();
+      //::raw::count iXmlSize = memfileXml->get_size();
+      //::raw::count iEditSize = memfileEdit->get_size();
 
       //::memory_file * pfile;
 

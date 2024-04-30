@@ -63,7 +63,7 @@ namespace mediaplaylist
       return -1;
    }
 
-   void player::PlaylistPlayByIndex(index iIndex)
+   void player::PlaylistPlayByIndex(::raw::index iIndex)
    {
 
       if (m_pplaylistdoc != nullptr)
@@ -87,7 +87,7 @@ namespace mediaplaylist
    }
 
 
-   bool player::PlaylistPlay(index iOffset)
+   bool player::PlaylistPlay(::raw::index iOffset)
    {
 
       if (iOffset < 0)
@@ -194,7 +194,7 @@ namespace mediaplaylist
 
       m_imageaAlbum128.set_size(m_imageaAlbum.get_size());
 
-      index i = 0;
+      ::raw::index i = 0;
 
       for (; i < m_imageaAlbum.get_size(); i++)
       {

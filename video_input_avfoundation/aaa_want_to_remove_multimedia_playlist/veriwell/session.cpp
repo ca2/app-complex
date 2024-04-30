@@ -171,7 +171,7 @@ namespace multimedia_playlist
       {
          synchronous_lock synchronouslock(this->synchronization());
          auto pFind = -1;
-         for (index i = 0; i < m_pla.get_count(); i++)
+         for (::raw::index i = 0; i < m_pla.get_count(); i++)
          {
             try
             {

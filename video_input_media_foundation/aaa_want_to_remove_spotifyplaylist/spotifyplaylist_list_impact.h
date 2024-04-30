@@ -78,9 +78,9 @@ namespace mediaplaylist
       DECLARE_MESSAGE_HANDLER(_001OnUpdatePlaylistExecutePlay);
 
       //virtual count _001GetGroupCount();
-      //virtual count _001GetGroupItemCount(index iGroup);
+      //virtual count _001GetGroupItemCount(::raw::index iGroup);
 
-      //virtual ::count _001GetGroupMetaItemCount(index iGroup);
+      //virtual ::raw::count _001GetGroupMetaItemCount(::raw::index iGroup);
       //virtual void _001GetGroupText(::user::mesh_item * pitem);
       //virtual void _001GetGroupImage(::user::mesh_item * pitem);
 

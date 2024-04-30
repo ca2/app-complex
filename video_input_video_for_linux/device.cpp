@@ -20,7 +20,7 @@ namespace video_input_video_for_linux
 {
 
 
-	device::device(::index iIndex, const ::string & strName, const ::string & strDevice, const ::string & strHardwareId) :
+	device::device(::raw::index iIndex, const ::string & strName, const ::string & strDevice, const ::string & strHardwareId) :
    //m_iIndex(iIndex),
    m_strDevice(strDevice)
 	{
@@ -491,7 +491,7 @@ namespace video_input_video_for_linux
 	}
 
 
-	void device::set_format(::index iIndex)
+	void device::set_format(::raw::index iIndex)
 	{
 
 		if (!m_bSetup)
@@ -848,7 +848,7 @@ namespace video_input_video_for_linux
       for (auto & ppixelformat: m_pixelformata)
       {
 
-         for (::index iResolution = 0; iResolution <  ppixelformat->m_resolutiona.get_count();)
+         for (::raw::index iResolution = 0; iResolution <  ppixelformat->m_resolutiona.get_count();)
          {
 
             auto presolution = ppixelformat->m_resolutiona[iResolution];
@@ -876,7 +876,7 @@ namespace video_input_video_for_linux
    void device::_007_erase_pixel_format_with_empty_resolution_list()
    {
 
-      for (::index iPixelFormat = 0; iPixelFormat <  m_pixelformata.get_count();)
+      for (::raw::index iPixelFormat = 0; iPixelFormat <  m_pixelformata.get_count();)
       {
 
          auto ppixelformat = m_pixelformata[iPixelFormat];

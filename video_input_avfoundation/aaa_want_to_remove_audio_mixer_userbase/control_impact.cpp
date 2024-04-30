@@ -569,7 +569,7 @@ namespace multimedia
             }
          }
 
-         for(::index iControl = 0; iControl < controla.get_size(); iControl++)
+         for(::raw::index iControl = 0; iControl < controla.get_size(); iControl++)
          {
 
             pinteraction = controla[iControl];
@@ -583,8 +583,8 @@ namespace multimedia
 
             if(pinteraction->control_type(::audio_mixer::control_boolean))
             {
-               ::count iSize = pinteraction->get_size();
-               for(index i = 0; i < iSize; i++)
+               ::raw::count iSize = pinteraction->get_size();
+               for(::raw::index i = 0; i < iSize; i++)
                {
                   pusercontrol = pinteraction->GetControlByIndex(i);
                   bHasAtLeastOneControl = true;
