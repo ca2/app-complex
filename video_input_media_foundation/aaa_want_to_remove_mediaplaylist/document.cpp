@@ -864,7 +864,7 @@ processed_new:
    string document::AddSong(::payload payloadFile, EAddSong eaddsong, bool bMakeVisible, bool bUpdateAllImpacts, bool bAddDuplicate)
    {
 
-      UNREFERENCED_PARAMETER(bUpdateAllImpacts);
+      __UNREFERENCED_PARAMETER(bUpdateAllImpacts);
 
       string strPathName;
 
@@ -962,10 +962,10 @@ processed_new:
    bool document::AddSong(::index nSong, bool bDoPlay, bool bMakeVisible, bool bUpdateAllImpacts)
    {
 
-      UNREFERENCED_PARAMETER(nSong);
-      UNREFERENCED_PARAMETER(bDoPlay);
-      UNREFERENCED_PARAMETER(bMakeVisible);
-      UNREFERENCED_PARAMETER(bUpdateAllImpacts);
+      __UNREFERENCED_PARAMETER(nSong);
+      __UNREFERENCED_PARAMETER(bDoPlay);
+      __UNREFERENCED_PARAMETER(bMakeVisible);
+      __UNREFERENCED_PARAMETER(bUpdateAllImpacts);
 
       return false;
 
@@ -1784,7 +1784,7 @@ retry0:
    void document::OnChangeSongs(::pointer<::user::impact>pimpact)
    {
 
-      UNREFERENCED_PARAMETER(pimpact);
+      __UNREFERENCED_PARAMETER(pimpact);
 
       on_update_playlist();
 

@@ -38,8 +38,8 @@ namespace multimedia
 
       bool control::CreateWindows(::pointer<::user::interaction>pParent, i32 iStyle)
       {
-         UNREFERENCED_PARAMETER(pParent);
-         UNREFERENCED_PARAMETER(iStyle);
+         __UNREFERENCED_PARAMETER(pParent);
+         __UNREFERENCED_PARAMETER(iStyle);
          return true;
       }
 
@@ -263,7 +263,7 @@ namespace multimedia
       bool control::control_type(e_control econtrol) const
       {
 
-         UNREFERENCED_PARAMETER(econtrol);
+         __UNREFERENCED_PARAMETER(econtrol);
 
          return false;
 

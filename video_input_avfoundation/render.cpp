@@ -210,7 +210,7 @@ namespace video_input_video_avfoundation
       //   //}
 
       //}
-      //UNREFERENCED_PARAMETER(ptopic);
+      //__UNREFERENCED_PARAMETER(ptopic);
    }
 
    //bool render::in_anime()

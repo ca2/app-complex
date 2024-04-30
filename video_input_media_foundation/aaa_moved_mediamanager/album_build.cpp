@@ -222,8 +222,8 @@ namespace mediamanager
    {
 
 
-      UNREFERENCED_PARAMETER(build);
-      UNREFERENCED_PARAMETER(storage);
+      __UNREFERENCED_PARAMETER(build);
+      __UNREFERENCED_PARAMETER(storage);
 
 
       bool bValidRecord = false;
@@ -756,7 +756,7 @@ namespace mediamanager
    bool album_build::AddInvalidFile(const ::file::path & lpcsz)
    {
 
-      UNREFERENCED_PARAMETER(lpcsz);
+      __UNREFERENCED_PARAMETER(lpcsz);
 
       return true;
 
@@ -766,7 +766,7 @@ namespace mediamanager
    bool album_build::UpdateInvalidFile(const file::path & lpcsz)
    {
 
-      UNREFERENCED_PARAMETER(lpcsz);
+      __UNREFERENCED_PARAMETER(lpcsz);
 
       return true;
 
@@ -883,7 +883,7 @@ namespace mediamanager
    bool album_build::add(::mediamanager::album_record &albumrecord)
    {
 
-      UNREFERENCED_PARAMETER(albumrecord);
+      __UNREFERENCED_PARAMETER(albumrecord);
 
       return true;
 
@@ -969,9 +969,9 @@ namespace mediamanager
    void album_build::ZipFindFiles(::file::listing & wstraFile, time_array & timea, ::file::listing & wstraFolder)
    {
 
-      UNREFERENCED_PARAMETER(wstraFile);
-      UNREFERENCED_PARAMETER(timea);
-      UNREFERENCED_PARAMETER(wstraFolder);
+      __UNREFERENCED_PARAMETER(wstraFile);
+      __UNREFERENCED_PARAMETER(timea);
+      __UNREFERENCED_PARAMETER(wstraFolder);
       //ASSERT(false);
       /*      FileFind & fileFind = m_filefindZip;
             i32 i, j;

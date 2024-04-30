@@ -85,7 +85,7 @@ namespace app_complex_video_capture
          //}
 
       }
-      UNREFERENCED_PARAMETER(ptopic);
+      __UNREFERENCED_PARAMETER(ptopic);
    }
 
 

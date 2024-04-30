@@ -376,7 +376,7 @@ namespace mediaplay
    bool data::on_open_midi_document(::payload payloadFile)
    {
 
-      UNREFERENCED_PARAMETER(payloadFile);
+      __UNREFERENCED_PARAMETER(payloadFile);
 
       return false;
 
@@ -700,7 +700,7 @@ namespace mediaplay
    bool data::on_initialize_wave_player(::wave::player * pplayer)
    {
 
-      UNREFERENCED_PARAMETER(pplayer);
+      __UNREFERENCED_PARAMETER(pplayer);
 
       return false;
 
@@ -709,7 +709,7 @@ namespace mediaplay
    /*bool data::open_document_no_reserve(const ::string & pszFilePath)
    {
 
-   UNREFERENCED_PARAMETER(pszFilePath);
+   __UNREFERENCED_PARAMETER(pszFilePath);
 
    return false;
 

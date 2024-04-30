@@ -632,7 +632,7 @@ namespace mediaplay
    void impact::_001OnExecutePrevious(::message::message * pmessage)
    {
 
-      UNREFERENCED_PARAMETER(pmessage);
+      __UNREFERENCED_PARAMETER(pmessage);
 
       if (!_ExecuteIsPlaying())
       {
@@ -775,7 +775,7 @@ namespace mediaplay
    void impact::_001OnExecuteStop(::message::message * pmessage)
    {
 
-      UNREFERENCED_PARAMETER(pmessage);
+      __UNREFERENCED_PARAMETER(pmessage);
 
       if (_ExecuteIsPlaying())
       {

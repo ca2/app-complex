@@ -48,7 +48,7 @@ namespace mediaplaylist
 
    e_play player::PlaylistPlay(info * pinfo)
    {
-      UNREFERENCED_PARAMETER(pinfo);
+      __UNREFERENCED_PARAMETER(pinfo);
       return play_error_cancel;
    }
 
@@ -59,7 +59,7 @@ namespace mediaplaylist
 
    i32 player::GetSongNumber(const wchar_t * lpcwsz)
    {
-      UNREFERENCED_PARAMETER(lpcwsz);
+      __UNREFERENCED_PARAMETER(lpcwsz);
       return -1;
    }
 

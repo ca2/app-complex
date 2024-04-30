@@ -116,7 +116,7 @@ namespace multimedia
 
       void main_impact::_001OnGetdispinfoList(::message::message * pmessage)
       {
-         UNREFERENCED_PARAMETER(pmessage);
+         __UNREFERENCED_PARAMETER(pmessage);
          //      ::pointer<::message::notify>pnotify(pmessage);
       }
 
@@ -124,26 +124,26 @@ namespace multimedia
       {
 
 
-         UNREFERENCED_PARAMETER(pmessage);
+         __UNREFERENCED_PARAMETER(pmessage);
 
       }
 
       void main_impact::_001OnColumnclickList(::message::message * pmessage)
       {
-         UNREFERENCED_PARAMETER(pmessage);
+         __UNREFERENCED_PARAMETER(pmessage);
       }
 
 
 
       void main_impact::_001OnDblclkList(::message::message * pmessage)
       {
-         UNREFERENCED_PARAMETER(pmessage);
+         __UNREFERENCED_PARAMETER(pmessage);
          //      ::pointer<::message::notify>pnotify(pmessage);
       }
 
       void main_impact::_001OnButtonReserve(::message::message * pmessage)
       {
-         UNREFERENCED_PARAMETER(pmessage);
+         __UNREFERENCED_PARAMETER(pmessage);
       }
 
 
@@ -211,14 +211,14 @@ namespace multimedia
       void main_impact::_001OnCtlColor(::message::message * pmessage)
       {
 
-         UNREFERENCED_PARAMETER(pmessage);
+         __UNREFERENCED_PARAMETER(pmessage);
 
       }
 
 
       void main_impact::_001OnMixerSpeakerscontrols(::message::message * pmessage)
       {
-         UNREFERENCED_PARAMETER(pmessage);
+         __UNREFERENCED_PARAMETER(pmessage);
          ::pointer<department>user = papp->audiomixeruserbase();
          if(get_current_tab_id() != user->m_atomPlaybackPane)
          {
@@ -245,7 +245,7 @@ namespace multimedia
 
       void main_impact::_001OnMixerWaveincontrols(::message::message * pmessage)
       {
-         UNREFERENCED_PARAMETER(pmessage);
+         __UNREFERENCED_PARAMETER(pmessage);
          ::pointer<department>user = papp->audiomixeruserbase();
          if(get_current_tab_id() != user->m_atomRecordingPane)
          {
@@ -276,7 +276,7 @@ namespace multimedia
       bool main_impact::OnNotify(::user::message * pusermessage)
       {
 
-         UNREFERENCED_PARAMETER(pusermessage);
+         __UNREFERENCED_PARAMETER(pusermessage);
 
          return false;
 
@@ -383,7 +383,7 @@ namespace multimedia
 
       /*void main_impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
       {
-      UNREFERENCED_PARAMETER(pgraphics);
+      __UNREFERENCED_PARAMETER(pgraphics);
 
 
 

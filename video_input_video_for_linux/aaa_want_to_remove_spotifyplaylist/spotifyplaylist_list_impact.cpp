@@ -160,7 +160,7 @@ namespace mediaplaylist
 
    void list_impact::handle(::topic * ptopic, ::context * pcontext)
    {
-      UNREFERENCED_PARAMETER(pimpact);
+      __UNREFERENCED_PARAMETER(pimpact);
       if(eupdate == 0)
       {
          _001UpdateColumns();
@@ -405,7 +405,7 @@ namespace mediaplaylist
 
    void list_impact::_001OnEditRemove(::message::message * pmessage)
    {
-      UNREFERENCED_PARAMETER(pmessage);
+      __UNREFERENCED_PARAMETER(pmessage);
       _001RemoveSelection();
       get_document()->on_save_document(nullptr);
    }
@@ -476,7 +476,7 @@ namespace mediaplaylist
 
    void list_impact::_001OnPlaylistExecutePlay(::message::message * pmessage)
    {
-      UNREFERENCED_PARAMETER(pmessage);
+      __UNREFERENCED_PARAMETER(pmessage);
       ::user::range range;
       get_selection(range);
       if(range.get_item_count() > 0)
@@ -552,7 +552,7 @@ namespace mediaplaylist
 
    void list_impact::on_message_create(::message::message * pmessage)
    {
-      UNREFERENCED_PARAMETER(pmessage);
+      __UNREFERENCED_PARAMETER(pmessage);
 
       pmessage->previous();
 
@@ -717,7 +717,7 @@ namespace mediaplaylist
 
    //::count list_impact::_001GetGroupMetaItemCount(index iGroup)
    //{
-   //   UNREFERENCED_PARAMETER(iGroup);
+   //   __UNREFERENCED_PARAMETER(iGroup);
    //   return 1;
    //}
 

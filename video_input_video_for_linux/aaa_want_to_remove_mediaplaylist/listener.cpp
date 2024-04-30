@@ -18,7 +18,7 @@ namespace mediaplaylist
 
    void listener::on_event(e_event eevent)
    {
-      UNREFERENCED_PARAMETER(eevent);
+      __UNREFERENCED_PARAMETER(eevent);
    }
 
 

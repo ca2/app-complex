@@ -76,7 +76,7 @@ namespace multimedia
       void department::on_message_close(::message::message * pmessage)
       {
 
-         UNREFERENCED_PARAMETER(pmessage);
+         __UNREFERENCED_PARAMETER(pmessage);
 
          DestroyWindow();
 

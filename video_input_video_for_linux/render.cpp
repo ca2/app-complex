@@ -206,7 +206,7 @@ namespace video_input_video_for_linux
       //   //}
 
       //}
-      //UNREFERENCED_PARAMETER(ptopic);
+      //__UNREFERENCED_PARAMETER(ptopic);
    }
 
    //bool render::in_anime()

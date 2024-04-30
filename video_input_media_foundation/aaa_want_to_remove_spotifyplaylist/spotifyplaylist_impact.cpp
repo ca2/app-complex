@@ -39,9 +39,9 @@ namespace mediaplaylist
 
    void impact::handle(::topic * ptopic, ::context * pcontext)
    {
-      UNREFERENCED_PARAMETER(pimpact);
-      UNREFERENCED_PARAMETER(eupdate);
-      UNREFERENCED_PARAMETER(pHint);
+      __UNREFERENCED_PARAMETER(pimpact);
+      __UNREFERENCED_PARAMETER(eupdate);
+      __UNREFERENCED_PARAMETER(pHint);
    }
 
    ::pointer<::mediaplaylist::document>impact::get_document()

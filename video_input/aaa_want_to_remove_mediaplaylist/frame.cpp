@@ -30,7 +30,7 @@ namespace mediaplaylist
    void frame::on_message_create(::message::message * pmessage)
    {
 
-      UNREFERENCED_PARAMETER(pmessage);
+      __UNREFERENCED_PARAMETER(pmessage);
 
 
       LoadToolBar(0, "mediaplaylist/playlist_toolbar.xml");

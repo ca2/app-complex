@@ -145,7 +145,7 @@ namespace video_input_media_foundation
       //   //}
 
       //}
-      //UNREFERENCED_PARAMETER(ptopic);
+      //__UNREFERENCED_PARAMETER(ptopic);
    }
 
    //bool render::in_anime()
