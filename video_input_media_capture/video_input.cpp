@@ -251,7 +251,7 @@ namespace video_input_media_capture
 
    //   m_estatusAccessToDevices = ::success;
 
-   //   for (::raw::index i = 0; i < m_devicea.get_count();)
+   //   for (::collection::index i = 0; i < m_devicea.get_count();)
    //   {
 
    //      auto pdevice = m_devicea[i];

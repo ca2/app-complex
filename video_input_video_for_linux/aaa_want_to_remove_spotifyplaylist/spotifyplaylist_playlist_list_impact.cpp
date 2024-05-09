@@ -187,7 +187,7 @@ namespace mediaplaylist
 
       auto pmouse = pmessage->m_union.m_pmouse;
 
-      ::raw::index iItem;
+      ::collection::index iItem;
 
       if(_001HitTest_(pmouse->m_point,iItem))
       {
@@ -219,7 +219,7 @@ namespace mediaplaylist
    {
       ::pointer<::message::context_menu>pcontextmenu(pmessage);
       ::point_i32 point = pcontextmenu->GetPoint();
-      ::raw::index iItem;
+      ::collection::index iItem;
       ::point_i32 ptClient = point;
       screen_to_client(&ptClient);
       if(_001HitTest_(ptClient,iItem))
@@ -287,7 +287,7 @@ namespace mediaplaylist
       get_selection(range);
       if(range.get_item_count() > 0)
       {
-         ::raw::index iItem = range.ItemAt(0).get_lower_bound();
+         ::collection::index iItem = range.ItemAt(0).get_lower_bound();
 
          playlist_play(iItem);
 
@@ -336,7 +336,7 @@ namespace mediaplaylist
 
    }
 
-   ::raw::count playlist_list_impact::_001GetItemCount()
+   ::collection::count playlist_list_impact::_001GetItemCount()
    {
 
       return m_listing.get_count();
@@ -384,7 +384,7 @@ namespace mediaplaylist
 
    }
 
-   //::raw::count playlist_list_impact::_001GetGroupCount()
+   //::collection::count playlist_list_impact::_001GetGroupCount()
    //{
    //   if(get_document() == nullptr)
    //      return 0;
@@ -400,7 +400,7 @@ namespace mediaplaylist
    //   }
    //}
 
-   //::raw::count playlist_list_impact::_001GetGroupItemCount(::raw::index iGroup)
+   //::collection::count playlist_list_impact::_001GetGroupItemCount(::collection::index iGroup)
    //{
    //   if(get_document() == nullptr)
    //      return 0;
@@ -477,7 +477,7 @@ namespace mediaplaylist
       get_selection(range);
       if(range.get_item_count() > 0)
       {
-         ::raw::index iItem = range.ItemAt(0).get_lower_bound();
+         ::collection::index iItem = range.ItemAt(0).get_lower_bound();
 
          playlist_select(iItem);
 

@@ -20,7 +20,7 @@ namespace mediaplaylist
       return m_strName;
    }
 
-   ::raw::index item::data_item_get_image(object * pparticle)
+   ::collection::index item::data_item_get_image(object * pparticle)
    {
 
       //if(m_ptree->is_selected(this))

@@ -13,7 +13,7 @@ namespace multimedia_playlist
       session *                        m_psession;
       string                           m_path;
       ::property_set                   m_setFile;
-      ::raw::index                            m_iCurrentSong;
+      ::collection::index                            m_iCurrentSong;
       bool                             m_bDiscard;
       bool                             m_bSearch;
       string                           m_strUrl;
@@ -24,8 +24,8 @@ namespace multimedia_playlist
       pointer_array < track >                m_tracka;
       bool                             m_bNew;
       bool                             m_bNewTracks;
-      ::raw::index                            m_iIndex;
-      ::raw::count                          m_c;
+      ::collection::index                            m_iIndex;
+      ::collection::count                          m_c;
       string_array                          m_stra;
 
       property_set                     m_setPlaylist;
@@ -61,10 +61,10 @@ namespace multimedia_playlist
       virtual bool load(string strFile);
 
       virtual string add_song(::payload payloadFile, bool bAddDuplicate);
-      virtual bool erase_song(::raw::index iSong, bool bUpdate= true);
+      virtual bool erase_song(::collection::index iSong, bool bUpdate= true);
       virtual void ensure_playlist();
 
-      virtual ::raw::count get_count();
+      virtual ::collection::count get_count();
 
 
       virtual void set_int(const ::string & psz, i64 iValue);

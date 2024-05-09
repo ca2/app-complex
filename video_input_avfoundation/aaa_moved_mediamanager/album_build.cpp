@@ -1203,7 +1203,7 @@ namespace mediamanager
    void album_build::GetExistingFiles(::pointer<::database::result_set>pset,  ::i32_array & ia, ::file::listing & wstraFile, time_array & timea)
    {
 
-      //::raw::count iRowCount = pset->m_rowa.get_count();
+      //::collection::count iRowCount = pset->m_rowa.get_count();
 
       //i32 iFieldIndexId = (i32) pdataset->field_index("id");
 
@@ -1319,7 +1319,7 @@ namespace mediamanager
       timeaRemove = timeaOld;
 
       i32 iUpdate = 0;
-      ::raw::index iFound;
+      ::collection::index iFound;
 
       while(iUpdate < straUpdate.get_size())
       {

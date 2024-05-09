@@ -47,7 +47,7 @@ namespace mediaplaylist
       e_mode                     m_emode;
       string                     m_str;
       bool                       m_bPendingEnsureVisible;
-      ::raw::index                      m_iItemHilite;
+      ::collection::index                      m_iItemHilite;
 
 
       list_impact();
@@ -65,7 +65,7 @@ namespace mediaplaylist
       virtual void _001OnInitializeControl(::pointer<user::interaction>pinteraction) override;
       virtual void on_insert_columns() override;
       virtual void _001DrawBackground(::draw2d::graphics *pdc, ::rectangle_i32 * lprect);
-      virtual bool _001OnRemoveItem(::raw::index iItem) override;
+      virtual bool _001OnRemoveItem(::collection::index iItem) override;
       void update_drawing_objects();
       virtual void _001GetItemImage(::user::mesh_item * pitem) override;
       e_mode GetMode();
@@ -98,9 +98,9 @@ namespace mediaplaylist
       virtual bool on_right_click(const ::item & item) override;
 
       //virtual count _001GetGroupCount();
-      //virtual count _001GetGroupItemCount(::raw::index iGroup);
+      //virtual count _001GetGroupItemCount(::collection::index iGroup);
 
-      //virtual ::raw::count _001GetGroupMetaItemCount(::raw::index iGroup);
+      //virtual ::collection::count _001GetGroupMetaItemCount(::collection::index iGroup);
       //virtual void _001GetGroupText(::user::mesh_item * pitem);
       //virtual void _001GetGroupImage(::user::mesh_item * pitem);
 

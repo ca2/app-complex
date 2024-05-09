@@ -384,7 +384,7 @@ namespace video_input_media_capture
    }
 
 
-   //::video_input::media_format device::get_format(::raw::index iIndex)
+   //::video_input::media_format device::get_format(::collection::index iIndex)
    //{
 
    //	if (::comparison::lt(atom, m_mediaformata.size()))
@@ -928,7 +928,7 @@ namespace video_input_media_capture
    }
 
 
-   void device::set_format(::raw::index iIndex)
+   void device::set_format(::collection::index iIndex)
    {
 
       ////debug_print_out * pdebugprintout = &debug_print_out::get_instance();

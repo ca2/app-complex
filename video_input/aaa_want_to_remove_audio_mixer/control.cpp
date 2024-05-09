@@ -97,7 +97,7 @@ namespace multimedia
       }
 
 
-      ::pointer<::audio_mixer::user_control>control::GetControlByIndex(::raw::index iIndex)
+      ::pointer<::audio_mixer::user_control>control::GetControlByIndex(::collection::index iIndex)
       {
 
          return this->element_at(iIndex);

@@ -385,7 +385,7 @@ namespace video_input
 	}
 
 
-	::pointer<media_format>device::get_media_format(::raw::index iIndex)
+	::pointer<media_format>device::get_media_format(::collection::index iIndex)
 	{
 
 		if (iIndex < 0 || iIndex >= m_mediaformata.size())
@@ -400,7 +400,7 @@ namespace video_input
 	}
 
 
-	::raw::count device::get_media_format_count()
+	::collection::count device::get_media_format_count()
 	{
 
 		return m_mediaformata.size();
@@ -472,14 +472,14 @@ namespace video_input
 	}
 
 
-	::raw::index device::find_argb_32_format()
+	::collection::index device::find_argb_32_format()
 	{
 
-		::raw::index iBest = 0;
+		::collection::index iBest = 0;
 
 		::i64 iScoreMax = 0;
 
-		for (::raw::index i = 0; i < m_mediaformata.get_count(); i++)
+		for (::collection::index i = 0; i < m_mediaformata.get_count(); i++)
 		{
 
 			auto pmediaformat = m_mediaformata[i];
@@ -901,7 +901,7 @@ namespace video_input
 	}
 
 
-	void device::set_format(::raw::index iIndex)
+	void device::set_format(::collection::index iIndex)
 	{
 
 		initialize_device();
@@ -911,7 +911,7 @@ namespace video_input
 	}
 
 
-	::raw::index device::find_format(::u32 w, ::u32 h, ::u32 idealFramerate)
+	::collection::index device::find_format(::u32 w, ::u32 h, ::u32 idealFramerate)
 	{
 
 		//::u32 atom = findType(w * h, idealFramerate);

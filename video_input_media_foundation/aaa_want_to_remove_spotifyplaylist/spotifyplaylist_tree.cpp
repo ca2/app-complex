@@ -123,7 +123,7 @@ namespace mediaplaylist
       if (pitemParent == nullptr)
          pitemParent = get_base_item();
 
-      ::raw::index iStart = 0;
+      ::collection::index iStart = 0;
       ::pointer<::xml::node>pnodeChild;
 
       while ((pnodeChild = pnode->get_child("playlist", iStart)) != nullptr)

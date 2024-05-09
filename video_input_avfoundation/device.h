@@ -122,7 +122,7 @@ namespace video_input_video_avfoundation
       int      m_iBufferedCount;
 
 
-      ::raw::index m_iIndex;
+      ::collection::index m_iIndex;
       string m_strDevice;
       //string m_strId;
       int_fast32_t m_iDevice;
@@ -145,7 +145,7 @@ namespace video_input_video_avfoundation
 		::pointer<thread>							m_pthread;
 
 
-		device(::raw::index iDevice, const ::string & strName, const ::string & strDevice, const ::string & strHardwareId);
+		device(::collection::index iDevice, const ::string & strName, const ::string & strDevice, const ::string & strHardwareId);
 		~device(void) override;
 
 
@@ -182,11 +182,11 @@ namespace video_input_video_avfoundation
 
 		::size_i32 get_size() override;
 
-		//::video_input::media_format get_format(::raw::index iIndex) override;
+		//::video_input::media_format get_format(::collection::index iIndex) override;
 
-		//::raw::index find_format(::u32 w, ::u32 h, ::u32 idealFramerate = 0) override;
+		//::collection::index find_format(::u32 w, ::u32 h, ::u32 idealFramerate = 0) override;
 
-		void set_format(::raw::index iIndex) override;
+		void set_format(::collection::index iIndex) override;
 
 		bool is_setup() override;
 

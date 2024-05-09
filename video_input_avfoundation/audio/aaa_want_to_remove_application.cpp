@@ -54,7 +54,7 @@
 //
 //   string_array stra;
 //
-//   for (::raw::index i = 0; i < v["data"]["detections"][0].payloada().get_count(); i++)
+//   for (::collection::index i = 0; i < v["data"]["detections"][0].payloada().get_count(); i++)
 //   {
 //
 //      string strLanguageCode = v["data"]["detections"][0][i]["language"];

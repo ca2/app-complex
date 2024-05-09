@@ -7,7 +7,7 @@ class CLASS_DECL_APP_CORE_AUDIO ms_translator_speaker :
 public:
 
 
-   ::raw::index       m_iTranslatorFile;
+   ::collection::index       m_iTranslatorFile;
    string      m_strTranslatorToken;
 
 

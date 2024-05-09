@@ -207,7 +207,7 @@ namespace mediaplaylist
 
       auto pmouse = pmessage->m_union.m_pmouse;
 
-      ::raw::index iItem;
+      ::collection::index iItem;
 
       if(_001HitTest_(pmouse->m_point,iItem))
       {
@@ -313,7 +313,7 @@ namespace mediaplaylist
 
       if(range.get_item_count() > 0)
       {
-         ::raw::index iItem = range.ItemAt(0).get_lower_bound();
+         ::collection::index iItem = range.ItemAt(0).get_lower_bound();
 
          playlist_play(iItem);
 
@@ -364,10 +364,10 @@ namespace mediaplaylist
 
    }
 
-   ::raw::count playlist_list_impact::_001GetItemCount()
+   ::collection::count playlist_list_impact::_001GetItemCount()
    {
 
-      ::raw::count iAddUp = 0;
+      ::collection::count iAddUp = 0;
 
       try
       {
@@ -487,7 +487,7 @@ namespace mediaplaylist
 
    }
 
-   //::raw::count playlist_list_impact::_001GetGroupCount()
+   //::collection::count playlist_list_impact::_001GetGroupCount()
    //{
    //   if(get_document() == nullptr)
    //      return 0;
@@ -503,7 +503,7 @@ namespace mediaplaylist
    //   }
    //}
 
-   //::raw::count playlist_list_impact::_001GetGroupItemCount(::raw::index iGroup)
+   //::collection::count playlist_list_impact::_001GetGroupItemCount(::collection::index iGroup)
    //{
    //   if(get_document() == nullptr)
    //      return 0;
@@ -791,7 +791,7 @@ namespace mediaplaylist
    //}
 
 
-   ::raw::index playlist_list_impact::playlist_index()
+   ::collection::index playlist_list_impact::playlist_index()
    {
 
       ::file::path path;
@@ -837,7 +837,7 @@ namespace mediaplaylist
    }
 
 
-   ::raw::index playlist_list_impact::playlist_index(const ::file::path & pathName)
+   ::collection::index playlist_list_impact::playlist_index(const ::file::path & pathName)
    {
 
       auto pFind = m_plisting->predicate_find_first([=](auto & i)
@@ -881,7 +881,7 @@ namespace mediaplaylist
    void playlist_list_impact::update_playlist_hilite(const ::file::path & pathPlaylist)
    {
 
-      ::raw::index iPlaylist = playlist_index(pathPlaylist);
+      ::collection::index iPlaylist = playlist_index(pathPlaylist);
 
       _001Highlight(iPlaylist, true);
 
@@ -891,7 +891,7 @@ namespace mediaplaylist
    bool playlist_list_impact::playlist_previous()
    {
 
-      ::raw::index iItem = playlist_index();
+      ::collection::index iItem = playlist_index();
 
       if (iItem < 0)
       {
@@ -900,7 +900,7 @@ namespace mediaplaylist
 
       }
 
-      ::raw::index iNewItem = iItem - 1;
+      ::collection::index iNewItem = iItem - 1;
 
       if (iNewItem < 0)
       {
@@ -945,7 +945,7 @@ namespace mediaplaylist
    bool playlist_list_impact::playlist_next()
    {
 
-      ::raw::index iItem = playlist_index();
+      ::collection::index iItem = playlist_index();
 
       if (iItem < 0)
       {
@@ -954,7 +954,7 @@ namespace mediaplaylist
 
       }
 
-      ::raw::index iNewItem = iItem + 1;
+      ::collection::index iNewItem = iItem + 1;
 
       if (iNewItem >= _001GetItemCount())
       {
@@ -1010,9 +1010,9 @@ restart:
 
       }
 
-      ::raw::index iItem = playlist_index();
+      ::collection::index iItem = playlist_index();
 
-      ::raw::index iNewItem = -1;
+      ::collection::index iNewItem = -1;
 
       while(true)
       {
@@ -1047,7 +1047,7 @@ restart:
    }
 
 
-   bool playlist_list_impact::playlist_play(::raw::index iItem)
+   bool playlist_list_impact::playlist_play(::collection::index iItem)
    {
 
       if(!playlist_select(iItem))
@@ -1087,7 +1087,7 @@ restart:
 
    }
 
-   bool playlist_list_impact::playlist_select(::raw::index iItem)
+   bool playlist_list_impact::playlist_select(::collection::index iItem)
    {
 
       if (iItem < 0)
@@ -1109,7 +1109,7 @@ restart:
 
             string strPlaylist;
 
-            for(::raw::index i = 0; i < 8; i++)
+            for(::collection::index i = 0; i < 8; i++)
             {
 
                strPlaylist = papp->mediaplaylist()->spotify()->m_pla[iItem]->get_name();
@@ -1163,7 +1163,7 @@ restart:
    }
 
 
-   bool playlist_list_impact::playlist_erase(::raw::index iItem)
+   bool playlist_list_impact::playlist_erase(::collection::index iItem)
    {
 
       //::pointer<::mediaplaylist::document>pdocument = get_document();

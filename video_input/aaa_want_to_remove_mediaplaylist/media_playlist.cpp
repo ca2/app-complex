@@ -353,7 +353,7 @@ namespace mediaplaylist
 
       }
 
-      for (::raw::index i = 1; i <= 10000; i++)
+      for (::collection::index i = 1; i <= 10000; i++)
       {
 
          path = pathFolder / "Playlist " + as_string(i) + ".playlist";

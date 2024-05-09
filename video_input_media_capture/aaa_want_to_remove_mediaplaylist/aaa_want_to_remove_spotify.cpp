@@ -851,7 +851,7 @@ pacmedirectory->system() / "config\\spotify\\pas.txt");
 
       m_tra.set_size(c);
 
-      for(::raw::index i = 0; i < c; i++)
+      for(::collection::index i = 0; i < c; i++)
       {
 
          tr * ptr = __alloc(aaa_primitive_new tr(this));
@@ -994,7 +994,7 @@ pacmedirectory->system() / "config\\spotify\\pas.txt");
 
       int cA = sp_track_num_artists(m_tr);
 
-      for(::raw::index i = 0; i < cA; i++)
+      for(::collection::index i = 0; i < cA; i++)
       {
 
          sp_artist * a = sp_track_artist(m_tr,i);

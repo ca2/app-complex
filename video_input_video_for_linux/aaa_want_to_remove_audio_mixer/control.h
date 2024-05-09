@@ -43,7 +43,7 @@ namespace multimedia
          virtual ::pointer<::audio_mixer::control_data>GetWindowData(i32 iType);
          virtual void OnMixerControlChange();
          virtual ::pointer<::audio_mixer::user_control>GetControl(i32 iType);
-         virtual ::pointer<::audio_mixer::user_control>GetControlByIndex(::raw::index iIndex);
+         virtual ::pointer<::audio_mixer::user_control>GetControlByIndex(::collection::index iIndex);
          virtual void Prepare();
          virtual bool CreateWindowsVolumeV001(::pointer<::user::interaction>pParent, u32 nStartID, u32 * nNextID);
 

@@ -467,10 +467,10 @@ namespace mediaplaylist
 
       string_array stra;
 
-      for (::raw::index i = 0; i < range.get_item_count(); i++)
+      for (::collection::index i = 0; i < range.get_item_count(); i++)
       {
 
-         for (::raw::index j = range.m_itemrangea[i].m_iLowerBound; j <= range.m_itemrangea[i].m_iUpperBound; j++)
+         for (::collection::index j = range.m_itemrangea[i].m_iLowerBound; j <= range.m_itemrangea[i].m_iUpperBound; j++)
          {
 
             if (get_document()->impact_playlist() != nullptr
@@ -553,10 +553,10 @@ namespace mediaplaylist
 
       index_array ia;
 
-      for (::raw::index i = 0; i < range.get_item_count(); i++)
+      for (::collection::index i = 0; i < range.get_item_count(); i++)
       {
 
-         for(::raw::index j = range.m_itemrangea[i].m_iLowerBound; j <= range.m_itemrangea[i].m_iUpperBound; j++)
+         for(::collection::index j = range.m_itemrangea[i].m_iLowerBound; j <= range.m_itemrangea[i].m_iUpperBound; j++)
          {
 
             ia.add_unique(j);
@@ -603,7 +603,7 @@ namespace mediaplaylist
       pcommand->m_bRet = true;
    }
 
-   bool list_impact::_001OnRemoveItem(::raw::index iItem)
+   bool list_impact::_001OnRemoveItem(::collection::index iItem)
    {
       ::pointer<::mediaplaylist::document>pdocument = get_document();
       return pdocument->RemoveSong(iItem);
@@ -662,7 +662,7 @@ namespace mediaplaylist
       get_selection(range);
       if(range.get_item_count() > 0)
       {
-         ::raw::index iItem = range.ItemAt(0).get_lower_bound();
+         ::collection::index iItem = range.ItemAt(0).get_lower_bound();
 
          info info;
 
@@ -745,7 +745,7 @@ namespace mediaplaylist
       }
    }
 
-   ::raw::count list_impact::_001GetItemCount()
+   ::collection::count list_impact::_001GetItemCount()
    {
       if(get_document() != nullptr)
          return get_document()->get_song_count(true);
@@ -848,7 +848,7 @@ namespace mediaplaylist
    }
 
 
-//::raw::count list_impact::_001GetGroupMetaItemCount(::raw::index iGroup)
+//::collection::count list_impact::_001GetGroupMetaItemCount(::collection::index iGroup)
 //{
 //   __UNREFERENCED_PARAMETER(iGroup);
 //   return 1;

@@ -187,7 +187,7 @@ namespace multimedia_playlist
 
       //   m_c = c;
 
-      //   for(::raw::index i = 0; i < m_c; i++)
+      //   for(::collection::index i = 0; i < m_c; i++)
       //   {
 
       //      sp_track * tr = sp_playlist_track(m_pl,i);
@@ -207,7 +207,7 @@ namespace multimedia_playlist
 
       //   m_tra.set_size(a.get_size());
 
-      //   for(::raw::index i = 0; i < a.get_size(); i++)
+      //   for(::collection::index i = 0; i < a.get_size(); i++)
       //   {
 
       //      sp_track * tr = a[i];
@@ -373,7 +373,7 @@ namespace multimedia_playlist
 
 
 
-   ::raw::count playlist::get_count()
+   ::collection::count playlist::get_count()
    {
 
       return 0;
@@ -413,7 +413,7 @@ namespace multimedia_playlist
    }
 
 
-   bool playlist::erase_song(::raw::index iSong, bool bUpdate)
+   bool playlist::erase_song(::collection::index iSong, bool bUpdate)
    {
 
       return true;

@@ -187,7 +187,7 @@ namespace video_input_media_foundation
 
       m_estatusAccessToDevices = ::success;
 
-      for (::raw::index i = 0; i < m_pitemaDevice->get_count();)
+      for (::collection::index i = 0; i < m_pitemaDevice->get_count();)
       {
 
          auto pitem = m_pitemaDevice->element_at(i);
@@ -209,7 +209,7 @@ namespace video_input_media_foundation
 
       }
 
-      for (::raw::index i = 0; i < m_pitemaDevice->get_count(); i++)
+      for (::collection::index i = 0; i < m_pitemaDevice->get_count(); i++)
       {
 
          m_pitemaDevice->element_at(i)->m_item.m_iItem = i;

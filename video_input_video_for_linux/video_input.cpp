@@ -73,7 +73,7 @@ namespace video_input_video_for_linux
 
       string strFolder = "/dev/";
 
-      ::raw::index iDevice = 0;
+      ::collection::index iDevice = 0;
 
       string_array straDevice;
 
@@ -193,7 +193,7 @@ namespace video_input_video_for_linux
 
       closedir(dirp);
 
-      for(::raw::index i = 0; i < m_pitemaDevice->get_size();)
+      for(::collection::index i = 0; i < m_pitemaDevice->get_size();)
       {
 
          auto pdev = m_pitemaDevice->element_at(i).cast < device >();
@@ -213,7 +213,7 @@ namespace video_input_video_for_linux
 
       }
 
-		for(::raw::index i = 0; i < m_pitemaDevice->get_size(); i++)
+		for(::collection::index i = 0; i < m_pitemaDevice->get_size(); i++)
 		{
 
 			auto pdev = m_pitemaDevice->element_at(i).cast < device >();

@@ -225,7 +225,7 @@ namespace mediaplay
 
          int iDelay;
 
-         for (::raw::index i = 0; i < straLines.get_size();)
+         for (::collection::index i = 0; i < straLines.get_size();)
          {
 
             strFrame.empty();
@@ -238,7 +238,7 @@ namespace mediaplay
 
             i++;
 
-            for (::raw::index j = 0; j < m_iAscLineCount - 1 && i < straLines.get_size(); j++)
+            for (::collection::index j = 0; j < m_iAscLineCount - 1 && i < straLines.get_size(); j++)
             {
 
                strFrame += straLines[i];

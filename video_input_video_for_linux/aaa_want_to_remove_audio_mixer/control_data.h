@@ -38,7 +38,7 @@ namespace multimedia
          u32                  m_uiMixerID;
          u32                  m_uiLineID;
          u32                  m_uiControlID;
-         ::raw::index                m_iIndex;
+         ::collection::index                m_iIndex;
 
 
          control_data();

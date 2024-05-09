@@ -157,7 +157,7 @@ namespace multimedia_playlist
 
          m_tracka.erase_all();
 
-         for (::raw::index i = 0; i < stra.get_size(); i++)
+         for (::collection::index i = 0; i < stra.get_size(); i++)
          {
 
             ::pointer<track>ptrack = m_psession->new_track();
@@ -299,7 +299,7 @@ namespace multimedia_playlist
 
       }
 
-      ::raw::count playlist::get_count()
+      ::collection::count playlist::get_count()
       {
 
          return m_pxmlplaylist->m_pnodeCurrent->get_children_count("song");
@@ -413,7 +413,7 @@ namespace multimedia_playlist
       }
 
 
-      bool playlist::erase_song(::raw::index iSong, bool bUpdate)
+      bool playlist::erase_song(::collection::index iSong, bool bUpdate)
       {
 
          ::xml::node * pnode = m_pxmlplaylist->m_pnodeCurrent->get_child_at("song", iSong, 1);
