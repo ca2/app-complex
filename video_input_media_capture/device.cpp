@@ -377,7 +377,7 @@ namespace video_input_media_capture
       }
       //}
       
-      //settings.VideoDeviceId(::__hstring(m_strHardwareId.c_str()));
+      //settings.VideoDeviceId(::as_hstring(m_strHardwareId.c_str()));
 
       //m_mediacapture.InitializeAsync(settings);
 
