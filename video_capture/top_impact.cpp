@@ -3,7 +3,7 @@
 #include "edit_impact.h"
 #include "toggle_impact.h"
 #include "acme/platform/sequencer.h"
-#include "acme/user/nano/nano.h"
+//#include "acme/user/nano/nano.h"
 
 
 namespace app_complex_video_capture
@@ -64,7 +64,7 @@ namespace app_complex_video_capture
       if(m_peditimpact == nullptr)
       {
 
-         auto psequencer = nano()->message_box(nullptr,"Could not create folder edit impact");
+         auto psequencer = message_box(nullptr,"Could not create folder edit impact");
 
          psequencer->do_asynchronously();
 
@@ -77,7 +77,7 @@ namespace app_complex_video_capture
       if(m_ptoggleimpact == nullptr)
       {
 
-         auto psequencer = nano()->message_box(nullptr,"Could not create file list ::user::impact");
+         auto psequencer = message_box(nullptr,"Could not create file list ::user::impact");
 
          psequencer->do_asynchronously();
 
