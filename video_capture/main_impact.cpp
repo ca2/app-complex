@@ -4,7 +4,7 @@
 #include "edit_impact.h"
 #include "application.h"
 #include "acme/platform/sequencer.h"
-#include "acme/user/nano/nano.h"
+//#include "acme/user/nano/nano.h"
 #include "apex/database/_binary_stream.h"
 
 
@@ -71,7 +71,7 @@ namespace app_complex_video_capture
       if(m_pimpact == nullptr)
       {
 
-         auto psequencer = nano()->message_box(nullptr,"Could not create file list ::user::impact");
+         auto psequencer = message_box(nullptr,"Could not create file list ::user::impact");
 
          psequencer->do_asynchronously();
 
