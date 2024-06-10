@@ -23,8 +23,8 @@ namespace multimedia
          using ::user::button::create_window;
          virtual bool create_window(::user::interaction * puiParent, const ::atom & atom) override;
 
-         //virtual ::enum_check _001GetCheck() override;
-         virtual void _001SetCheck(::enum_check echeck, const ::action_context & action_context) override;
+         //virtual ::enum_check get_check() override;
+         virtual void set_check(::enum_check echeck, const ::action_context & action_context) override;
          virtual void set_label(const ::string & pcsz) override;
 
 

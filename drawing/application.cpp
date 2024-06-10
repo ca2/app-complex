@@ -104,7 +104,7 @@ namespace app_complex_drawing
          //if (application()->m_papexapplication->datastream()->get("simple_checkbox", bCheck))
          //{
 
-         //   pcheckbox->_001SetCheck(bCheck, ::e_source_initialize);
+         //   pcheckbox->set_check(bCheck, ::e_source_initialize);
 
          //}
 
@@ -136,7 +136,7 @@ namespace app_complex_drawing
          ////if (application()->m_papexapplication->datastream()->get("no_client_frame", bCheck))
          ////{
 
-         ////   pcheckbox->_001SetCheck(bCheck, ::e_source_initialize);
+         ////   pcheckbox->set_check(bCheck, ::e_source_initialize);
 
          ////}
 

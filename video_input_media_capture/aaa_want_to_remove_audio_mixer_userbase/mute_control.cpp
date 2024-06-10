@@ -21,16 +21,16 @@ namespace multimedia
       {
       }
 
-//      enum_check mute_control::_001GetCheck()
+//      enum_check mute_control::get_check()
 //      {
-//         return ::user::button::_001GetCheck();
+//         return ::user::button::get_check();
 //      }
 
 
-      void mute_control::_001SetCheck(::enum_check echeck, const ::action_context & context)
+      void mute_control::set_check(::enum_check echeck, const ::action_context & context)
       {
 
-         ::user::button::_001SetCheck(echeck, context);
+         ::user::button::set_check(echeck, context);
 
       }
 

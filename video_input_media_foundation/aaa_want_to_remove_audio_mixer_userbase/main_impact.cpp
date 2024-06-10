@@ -232,12 +232,12 @@ namespace multimedia
          ::pointer<department>user = papp->audiomixeruserbase();
          if(get_current_tab_id() == user->m_atomPlaybackPane)
          {
-            pcommand->_001SetCheck(true);
+            pcommand->set_check(true);
             pcommand->enable(true);
          }
          else
          {
-            pcommand->_001SetCheck(false);
+            pcommand->set_check(false);
             pcommand->enable(true);
          }
          pcommand->m_bRet = true;
@@ -259,12 +259,12 @@ namespace multimedia
          ::pointer<department>user = papp->audiomixeruserbase();
          if(get_current_tab_id() == user->m_atomRecordingPane)
          {
-            pcommand->_001SetCheck(true);
+            pcommand->set_check(true);
             pcommand->enable(true);
          }
          else
          {
-            pcommand->_001SetCheck(false);
+            pcommand->set_check(false);
             pcommand->enable(true);
          }
 

@@ -27,7 +27,7 @@ namespace multimedia
 
 //            virtual void initialize(::particle * pparticle) override;
 
-            virtual void _001SetCheck(::enum_check echeck, const ::action_context & action_context) = 0;
+            virtual void set_check(::enum_check echeck, const ::action_context & action_context) = 0;
             virtual void set_label(const ::string & lpcszLabel) = 0;
 
             virtual ::pointer<::audio_mixer::control_data_switch>get_data_switch();

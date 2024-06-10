@@ -518,12 +518,12 @@ namespace mediaplay
       u32 dwCodePage = IdToCodePage(pcommand->m_atom);
       if(GetKaraokeCodePage(nullptr) == dwCodePage)
       {
-         pcommand->_001SetCheck(::e_check_checked);
+         pcommand->set_check(::e_check_checked);
          pcommand->enable(0);
       }
       else
       {
-         pcommand->_001SetCheck(::e_check_unchecked);
+         pcommand->set_check(::e_check_unchecked);
          pcommand->enable(1);
       }
       pcommand->m_bRet = true;
