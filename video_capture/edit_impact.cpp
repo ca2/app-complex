@@ -68,7 +68,7 @@ namespace app_complex_video_capture
 
       string strText;
 
-      _001GetText(strText);
+      get_text(strText);
 
 
 

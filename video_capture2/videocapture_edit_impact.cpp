@@ -65,7 +65,7 @@ namespace app_complex_video_capture
 
       string strText;
 
-      _001GetText(strText);
+      get_text(strText);
 
       impact_base * pimpact = dynamic_cast < impact_base * > (m_ptopimpact->get_typed_parent<::user::split_impact>()->get_child_by_id("videocapture_impact"));
 

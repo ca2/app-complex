@@ -195,7 +195,7 @@ namespace app_complex_drawing
 
       //papp->datastream()->get("last_text", strInitialText);
 
-      //m_pedit->_001SetText(strInitialText, ::e_source_initialize);
+      //m_pedit->set_text(strInitialText, ::e_source_initialize);
 
       //m_pbuttonClear->set_window_text("Clear");
 

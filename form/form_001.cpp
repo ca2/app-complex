@@ -105,7 +105,7 @@ namespace app_complex_form
 //
 //      strInitialText = papp->datastream()->get("last_text");
 //
-//      m_pedit->_001SetText(strInitialText, ::e_source_initialize);
+//      m_pedit->set_text(strInitialText, ::e_source_initialize);
 //
 //      m_pbuttonClear->set_window_text("Clear");
 //
@@ -186,7 +186,7 @@ namespace app_complex_form
 //
 //               string strText;
 //
-//               m_pedit->_001GetText(strText);
+//               m_pedit->get_text(strText);
 //
 //               auto papp = get_app();
 //
@@ -210,7 +210,7 @@ namespace app_complex_form
 //         if (ptopic->m_puserelement->m_atom == "clear_button")
 //         {
 //
-//            m_pedit->_001SetText("", ::e_source_user);
+//            m_pedit->set_text("", ::e_source_user);
 //
 //         }
 //         else if (ptopic->m_puserelement->m_atom == "send_button")
@@ -218,7 +218,7 @@ namespace app_complex_form
 //
 //            string strText;
 //
-//            m_pedit->_001GetText(strText);
+//            m_pedit->get_text(strText);
 //
 //            //main_async(__routine([this, strText]()
 //              // {

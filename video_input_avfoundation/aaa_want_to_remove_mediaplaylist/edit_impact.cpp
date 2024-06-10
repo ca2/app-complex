@@ -55,7 +55,7 @@ namespace mediaplaylist
 
          string strText;
 
-         _001GetText(strText);
+         get_text(strText);
 
          if (strText.has_char())
          {
