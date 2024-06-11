@@ -75,7 +75,7 @@ namespace app_complex_drawing
 
       //}
 
-      application_properties().m_strMainTitle = "Simple Drawing";
+      m_textMainTitle = { "Simple Drawing", ::e_source_initialize };
 
       add_matter_locator("app-simple/drawing");
 
