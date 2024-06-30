@@ -6,6 +6,7 @@
 #include "aura/graphics/draw2d/graphics.h"
 #include "aura/message/user.h"
 #include "aura/platform/context.h"
+#include "aura/user/menu/track_popup.h"
 #include "base/user/user/user.h"
 
 
@@ -92,15 +93,28 @@ namespace app_complex_form
 
       auto pcontextmenu = pmessage->m_union.m_pcontextmenu;
 
-      auto point = pcontextmenu->GetPoint();
+      auto pointCursor = pcontextmenu->GetPoint();
 
       auto puser = user()->m_pbaseuser;
 
-      auto strXml = context()->file()->as_string("matter://form/form.menu");
+      auto pmenu = user()->menu_from_xml(this, "matter://form/form.menu");
 
-      information() << "form::on_message_context_menu : " << point;
+      // auto strXml = context()->file()->as_string("matter://form/form.menu");
 
-      puser->track_popup_xml_menu(this, strXml, 0, point);
+      information() << "form::on_message_context_menu : " << pointCursor;
+
+      auto ptrackpopup = __new < ::menu::track_popup >(
+                                                 pmenu,
+                                                 this,
+                                                 this,
+                                                 pointCursor);
+
+      //puser->track_popup_menu(ptrackpopup);
+
+      ptrackpopup->track([]() {});
+
+
+      //puser->track_popup_xml_menu(this, strXml, 0, point);
 
    }
 
