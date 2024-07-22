@@ -97,7 +97,7 @@ namespace app_complex_drawing
 
          auto playoutLine = create_line_layout(puserinteractionParent, e_orientation_horizontal);
 
-         auto pcheckbox = create_check_box<::user::check_box>(playoutLine, "simple_checkbox");
+         auto pcheckbox = create_check_box<::user::check_box>(playoutLine, m_checkSimple);
 
          //bool bCheck = false;
 
@@ -129,7 +129,7 @@ namespace app_complex_drawing
 
          auto playoutLine = create_line_layout(puserinteractionParent, e_orientation_horizontal);
 
-         auto pcheckbox = create_check_box<::user::check_box>(playoutLine, "no_client_frame");
+         auto pcheckbox = create_check_box<::user::check_box>(playoutLine, m_checkNoClientFrame);
 
          //bool bCheck = false;
 
