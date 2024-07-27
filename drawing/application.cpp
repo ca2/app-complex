@@ -23,8 +23,6 @@ namespace app_complex_drawing
    application::application()
    {
 
-      //m_ptemplateSimpleDrawingMain = nullptr;
-
       m_ptabimpact = nullptr;
 
       m_strAppId = "app-complex/drawing";

@@ -33,8 +33,6 @@
 		9AE8712C2858A3DE00F88364 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A42DB0C26667BD10011645D /* application.cpp */; };
 		9AE8782B2858B99F00F88364 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8782A2858B99F00F88364 /* _factory.cpp */; };
 		9AE8782C2858B99F00F88364 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8782A2858B99F00F88364 /* _factory.cpp */; };
-		9AE8782E2858B9CF00F88364 /* _app_complex_drawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AE8782D2858B9CE00F88364 /* _app_complex_drawing.h */; };
-		9AE8782F2858B9CF00F88364 /* _app_complex_drawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AE8782D2858B9CE00F88364 /* _app_complex_drawing.h */; };
 		9AEA1C682679797F006F4A68 /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA1C652679797F006F4A68 /* _.cpp */; };
 /* End PBXBuildFile section */
 
@@ -120,7 +118,6 @@
 		9A8C03E32A2830F30049B167 /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "_____release.xcconfig"; sourceTree = "<group>"; };
 		9AE8713A2858A3DE00F88364 /* libapp_complex_drawing.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapp_complex_drawing.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE8782A2858B99F00F88364 /* _factory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _factory.cpp; sourceTree = "<group>"; };
-		9AE8782D2858B9CE00F88364 /* _app_complex_drawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _app_complex_drawing.h; sourceTree = "<group>"; };
 		9AEA1C652679797F006F4A68 /* _.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,7 +168,6 @@
 				9A8C03E32A2830F30049B167 /* _____release.xcconfig */,
 				9AEA1C652679797F006F4A68 /* _.cpp */,
 				9A42DB3D26667BD20011645D /* _.h */,
-				9AE8782D2858B9CE00F88364 /* _app_complex_drawing.h */,
 				9AE8782A2858B99F00F88364 /* _factory.cpp */,
 				9A42DB0C26667BD10011645D /* application.cpp */,
 				9A42DA7326667BD00011645D /* application.h */,
@@ -224,7 +220,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A42DB5726667BD30011645D /* application.h in Headers */,
-				9AE8782E2858B9CF00F88364 /* _app_complex_drawing.h in Headers */,
 				9A42DB6D26667BD30011645D /* _.h in Headers */,
 				9A42DB6926667BD30011645D /* framework.h in Headers */,
 				9A42DB6526667BD30011645D /* pane_impact.h in Headers */,
@@ -236,7 +231,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AE871232858A3DE00F88364 /* application.h in Headers */,
-				9AE8782F2858B9CF00F88364 /* _app_complex_drawing.h in Headers */,
 				9AE871242858A3DE00F88364 /* _.h in Headers */,
 				9AE871262858A3DE00F88364 /* framework.h in Headers */,
 				9AE871272858A3DE00F88364 /* pane_impact.h in Headers */,
