@@ -139,12 +139,10 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="application.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\framework.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="application_main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package10.appxmanifest">
