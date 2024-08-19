@@ -289,7 +289,7 @@ namespace audio
    void audio::init3()
    {
 
-      information() << "start";
+      information() << "audio::init3 start";
 
 #ifdef CUBE
 
