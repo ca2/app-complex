@@ -360,6 +360,7 @@
 		070B8F021B6E53FA00D26137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hello_Multiverse__Tests.m; sourceTree = "<group>"; };
 		9A273CFE29CF1AF100CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		9A3276332C6DAF3900EB43C5 /* libnano_dynamic_library_dyld.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libnano_dynamic_library_dyld.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A438980299E8B3700D2EE15 /* video_input_avfoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = video_input_avfoundation.xcodeproj; path = ../../video_input_avfoundation/video_input_avfoundation.xcodeproj; sourceTree = "<group>"; };
 		9A438993299E8B8B00D2EE15 /* app_complex_video_capture.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_complex_video_capture.xcodeproj; path = ../app_complex_video_capture.xcodeproj; sourceTree = "<group>"; };
 		9A71B89B2A469FEC00F9FC3D /* libunac.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libunac.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -607,6 +608,7 @@
 		9AAF65AB280872360067E73F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A3276332C6DAF3900EB43C5 /* libnano_dynamic_library_dyld.dylib */,
 				9A90BA622B549696002BFC9E /* libarchive.dylib */,
 				9A9A15C52AFC24DF00FA9BEB /* libdarwin.dylib */,
 				9A71B89B2A469FEC00F9FC3D /* libunac.dylib */,
