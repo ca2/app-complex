@@ -155,7 +155,7 @@ namespace app_complex_drawing
 
       }
 
-      //auto pstill = __allocate< ::user::still >();
+      //auto pstill = ::place(new ::user::still());
 
       //__construct_new(m_pedit);
 

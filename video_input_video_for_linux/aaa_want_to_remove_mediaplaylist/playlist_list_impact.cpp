@@ -91,7 +91,7 @@ namespace mediaplaylist
 
       {
 
-         auto pinteraction = __allocate< ::user::control_descriptor >();
+         auto pinteraction = ::place(new ::user::control_descriptor());
 
          pinteraction->m_bTransparent              = true;
          pinteraction->m_type                  = ::type < ::user::button >();
@@ -417,9 +417,9 @@ namespace mediaplaylist
 
       get_parent_frame()->set_frame_title("Playlist");
 
-      m_pimagelistSubItemHover   = __allocate< image_list >();
-      m_pimagelistNormal         = __allocate< image_list >();
-      m_pimagelistItemHover      = __allocate< image_list >();
+      m_pimagelistSubItemHover   = ::place(new image_list());
+      m_pimagelistNormal         = ::place(new image_list());
+      m_pimagelistItemHover      = ::place(new image_list());
 
       m_pimagelistSubItemHover->create(16,16,0,10,10);
       m_pimagelistSubItemHover->add_file("matter://mediaplaylist/execute_play_16.png");
@@ -440,7 +440,7 @@ namespace mediaplaylist
       rgb(220,220,215),
       127);
 
-      m_pimagelistGroupHover = __allocate< image_list >();
+      m_pimagelistGroupHover = ::place(new image_list());
 
       m_pimagelistGroupHover->create(96,96,0,10,10);
       m_pimagelistGroupHover->add_file("matter://mediaplaylist/playlist_96.png");
@@ -466,7 +466,7 @@ namespace mediaplaylist
 
       papp->mediaplaylist()->m_pplaylistlistview = this;
 
-//      papp->mediaplaylist()->m_pspotify = __allocate< ::multimedia_playlist::session >(this);
+//      papp->mediaplaylist()->m_pspotify = ::place(new ::multimedia_playlist::session(this));
 
       //#else
 

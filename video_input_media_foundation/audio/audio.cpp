@@ -81,7 +81,7 @@ namespace audio
       if (!pplugin->audio_matches(sound_track()->m_paudiomixer))
       {
 
-         auto presampler = __allocate< ::audio::resampler >();
+         auto presampler = ::place(new ::audio::resampler());
 
          presampler->m_pplugin = pplugin;
 
@@ -926,7 +926,7 @@ pacmedirectory->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".mp
    LPWAVEOUT audio::waveout_open(int iChannel, LPAUDIOFORMAT pformat, LPWAVEOUT_CALLBACK pcallback)
    {
 
-      auto pplugin = __allocate< ::audio::source >();
+      auto pplugin = ::place(new ::audio::source());
 
       if (pplugin.is_null())
       {
@@ -953,7 +953,7 @@ pacmedirectory->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".mp
 
       //::file::path path = payloadFile.get_file_path();
 
-      //auto pfile = __allocate< rtp::file >();
+      //auto pfile = ::place(new rtp::file());
 
       //if (!pfile->rx_open(purl->get_server(path), purl->get_port(path)))
       //{

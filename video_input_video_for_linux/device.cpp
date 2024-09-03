@@ -357,7 +357,7 @@ namespace video_input_video_for_linux
 
 		}
 
-		m_pthread = __allocate< ::video_input_video_for_linux::thread >(this);
+		m_pthread = ::place(new ::video_input_video_for_linux::thread(this));
 
 		m_pthread->initialize(this);
 
@@ -624,7 +624,7 @@ namespace video_input_video_for_linux
 
       informationf("Framerate: %.2f fps", (float)m_iFrameRateDenominator / m_iFrameRateNumerator);
 
-      m_pmemorymap = __allocate< memory_map >(m_iDevice);
+      m_pmemorymap = ::place(new memory_map(m_iDevice));
 
       __construct_new(m_pmjpegdecoder);
 
@@ -657,7 +657,7 @@ namespace video_input_video_for_linux
       while (ioctl(VIDIOC_ENUMINPUT, &in) == 0)
       {
 
-         auto pinput = __allocate< input >();
+         auto pinput = ::place(new input());
 
          pinput->m_strDescription = (const char *) in.name;
 
@@ -687,7 +687,7 @@ namespace video_input_video_for_linux
       while (ioctl( VIDIOC_ENUMSTD, &std) == 0)
       {
 
-         auto pstandard = __allocate< standard >();
+         auto pstandard = ::place(new standard());
 
          pstandard->m_strDescription = (const char *) std.name;
 
@@ -717,7 +717,7 @@ namespace video_input_video_for_linux
       while (ioctl(VIDIOC_ENUM_FMT, &fmt) == 0)
       {
 
-         auto ppixelformat = __allocate< pixel_format >();
+         auto ppixelformat = ::place(new pixel_format());
 
          ppixelformat->m_iPixFmt = fmt.pixelformat;
 
@@ -784,7 +784,7 @@ namespace video_input_video_for_linux
          while (pdevice->ioctl(VIDIOC_ENUM_FRAMESIZES, &frmsize) == 0)
          {
 
-            auto presolution = __allocate< resolution >();
+            auto presolution = ::place(new resolution());
 
             presolution->m_size.cx() = frmsize.discrete.width;
 
@@ -807,7 +807,7 @@ namespace video_input_video_for_linux
          for (const int *packed = v4l2_framesizes; *packed; ++packed)
          {
 
-            auto presolution = __allocate< resolution >();
+            auto presolution = ::place(new resolution());
 
             presolution->m_size.cx() = upper_u16(*packed);
 
@@ -920,7 +920,7 @@ namespace video_input_video_for_linux
          while (pdevice->ioctl(VIDIOC_ENUM_FRAMEINTERVALS, &frmival) == 0)
          {
 
-            auto pframerate = __allocate< frame_rate >();
+            auto pframerate = ::place(new frame_rate());
 
             pframerate->m_iDenominator = frmival.discrete.denominator;
 
@@ -945,7 +945,7 @@ namespace video_input_video_for_linux
          for (const int *packed = v4l2_framerates; *packed; ++packed)
          {
 
-            auto pframerate = __allocate< frame_rate >();
+            auto pframerate = ::place(new frame_rate());
 
             pframerate->m_iDenominator = lower_u16(*packed);
 

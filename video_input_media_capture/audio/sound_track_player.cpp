@@ -178,7 +178,7 @@ namespace audio
       if (!pdecoder->audio_matches(m_paudiomixer))
       {
 
-         auto presampler = __allocate< ::audio::resampler >();
+         auto presampler = ::place(new ::audio::resampler());
 
 
 
@@ -219,7 +219,7 @@ namespace audio
       if (!pplugin->audio_matches(m_paudiomixer))
       {
 
-         auto presampler = __allocate< ::audio::resampler >();
+         auto presampler = ::place(new ::audio::resampler());
 
          presampler->m_pplugin = pplugin;
 
@@ -255,7 +255,7 @@ namespace audio
       if (!pplugin->audio_matches(m_paudiomixer))
       {
 
-         auto presampler = __allocate< ::audio::resampler >();
+         auto presampler = ::place(new ::audio::resampler());
 
          presampler->m_pplugin = pplugin;
 

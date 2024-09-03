@@ -116,7 +116,7 @@
 //       if (!pplugin->audio_plugin_matches(sound_track()->m_paudiomixer))
 //       {
 
-//          auto presampler = __allocate< ::audio_plugin::resampler >();
+//          auto presampler = ::place(new ::audio_plugin::resampler());
 
 //          presampler->m_pplugin = pplugin;
 
@@ -361,7 +361,7 @@
 
 // #endif
 
-//       m_pmultimediafile = __allocate< ::multimedia::file_application >();
+//       m_pmultimediafile = ::place(new ::multimedia::file_application());
 
 // #ifdef WINDOWS_DESKTOP
 
@@ -508,12 +508,12 @@
 //       //// xxx TODO
 //       ////add_library(__allocate< ::multimedia::library >());
 
-//       //m_pmediaplay = __allocate< ::mediaplay::mediaplay >();
+//       //m_pmediaplay = ::place(new ::mediaplay::mediaplay());
 
 //       //if (m_pmediaplay == nullptr)
 //       //   return false;
 
-//       //m_pmediaplaylist = __allocate< ::mediaplaylist::media_playlist >();
+//       //m_pmediaplaylist = ::place(new ::mediaplaylist::media_playlist());
 
 
 //       //if (m_pmediaplaylist.is_null())
@@ -738,7 +738,7 @@
 
 //       ::pointer<::tts::speaker>pspeaker;
 
-//       pspeaker = __allocate< ms_translator_speaker >();
+//       pspeaker = ::place(new ms_translator_speaker());
 
 //       return pspeaker;
 
@@ -1139,7 +1139,7 @@ pacmedirectory->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".mp
 //    LPWAVEOUT department::waveout_open(int iChannel, LPAUDIOFORMAT pformat, LPWAVEOUT_CALLBACK pcallback)
 //    {
 
-//       auto pplugin = __allocate< ::audio_plugin::source >();
+//       auto pplugin = ::place(new ::audio_plugin::source());
 
 //       if (pplugin.is_null())
 //       {

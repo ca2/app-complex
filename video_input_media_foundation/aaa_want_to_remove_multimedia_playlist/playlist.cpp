@@ -212,7 +212,7 @@ namespace multimedia_playlist
 
       //      sp_track * tr = a[i];
 
-      auto ptr  = __allocate< track >();
+      auto ptr  = ::place(new track());
 
       //      m_tra.element_at(i) = ptr;
 

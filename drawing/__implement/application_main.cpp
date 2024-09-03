@@ -23,7 +23,7 @@
 ::i32 application_main(::platform::platform * pplatform)
 {
 
-   auto papplication = __allocate< app_complex_drawing::application >();
+   auto papplication = ::place(new app_complex_drawing::application());
 
    int iExitCode = papplication->application_main(pplatform);
 
