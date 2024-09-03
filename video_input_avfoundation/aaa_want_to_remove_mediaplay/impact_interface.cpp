@@ -1852,7 +1852,7 @@ retry4:
 
             m_propertysetaBatch.erase_all();
 
-            m_propertysetaBatch.add(__allocate< property_set >());
+            m_propertysetaBatch.add(::place(new property_set()));
 
             auto & prop = m_propertysetaBatch.last();
 
@@ -2436,7 +2436,7 @@ retry4:
 
                   m_propertysetaBatch.erase_all();
 
-                  m_propertysetaBatch.add(__allocate< property_set >());
+                  m_propertysetaBatch.add(::place(new property_set()));
 
                   property_set & prop = m_propertysetaBatch.last();
 

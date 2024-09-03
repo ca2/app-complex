@@ -506,7 +506,7 @@
 //       //}
 
 //       //// xxx TODO
-//       ////add_library(__allocate< ::multimedia::library >());
+//       ////add_library(::place(new ::multimedia::library()));
 
 //       //m_pmediaplay = ::place(new ::mediaplay::mediaplay());
 
