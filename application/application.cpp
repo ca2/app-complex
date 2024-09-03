@@ -49,11 +49,11 @@ namespace simple_application
 
       }
 
-      auto pdoctemplate = __allocate < ::user::single_document_template >(
+      auto pdoctemplate = ::place(new ::user::single_document_template(
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
-                               ::type < impact >()));
+                               ::type < impact >())));
 
       __construct(m_ptemplateSimpleDrawingMain, pdoctemplate);
 

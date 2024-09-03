@@ -39,7 +39,7 @@ namespace helloworld
 
 	   ::user::single_document_template* pdocumenttemplate;
 
-      pdocumenttemplate = __new< ::user::single_document_template >(
+      pdocumenttemplate = new ::user::single_document_template(
          this,
 		   "main",
          ::type < ::helloworld::document >(),
@@ -80,7 +80,7 @@ extern "C"
 ::acme::library * app_simple_helloworld_get_new_library(::particle * pparticle)
 {
 
-   return __new< ::apex::single_application_library < ::helloworld::application > >(papp, "app-simple/helloworld");
+   return new ::apex::single_application_library < ::helloworld::application >(papp, "app-simple/helloworld");
 
 }
 

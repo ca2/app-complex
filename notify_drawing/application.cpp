@@ -48,21 +48,21 @@ namespace notify_drawing
 
       add_matter_locator("app-simple/drawing");
 
-      auto pdoctemplate = __allocate < ::user::single_document_template >(
+      auto pdoctemplate = ::place(new ::user::single_document_template(
                                "main",
                                ::type < simple_drawing::document >(),
                                ::type < main_frame >(),
-                               ::type < simple_drawing::tab_impact >()));
+                               ::type < simple_drawing::tab_impact >())));
       m_ptemplateNotifyDrawingMain = pdoctemplate;
       add_document_template(pdoctemplate);
 
 
-//      pdoctemplate = __allocate < ::user::single_document_template >(
+//      pdoctemplate = ::place(new ::user::single_document_template(
 //                          this,
 //                          "main",
 //                          ::type < simple_drawing::document >(),
 //                          ::type < simple_drawing::frame >(),
-//                          ::type < simple_drawing::main_impact >()));
+//                          ::type < simple_drawing::main_impact >())));
 //
 //      m_ptemplateNotifyDrawingImpact = pdoctemplate;
 //
@@ -183,7 +183,7 @@ namespace notify_drawing
 //::acme::library * app_simple_notify_drawing_get_new_library()
 //{
 //
-//   return __new< ::apex::single_application_library < ::notify_drawing::application > >("app-simple/notify_drawing");
+//   return new ::apex::single_application_library < ::notify_drawing::application >("app-simple/notify_drawing");
 //
 //}
 //

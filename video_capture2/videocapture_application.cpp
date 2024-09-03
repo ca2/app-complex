@@ -96,21 +96,21 @@ namespace app_complex_video_capture
       //}
 
       
-      auto pDocTemplate = __allocate < ::user::single_document_template >(
+      auto pDocTemplate = ::place(new ::user::single_document_template(
                           "main",
                           ::type < document >(),
                           ::type < main_frame >(),
-                          ::type < pane_impact >()));
+                          ::type < pane_impact >())));
 
       add_document_template(pDocTemplate);
 
       m_ptemplateHelloMultiverseMain = pDocTemplate;
 
-      pDocTemplate = __allocate < ::user::single_document_template >(
+      pDocTemplate = ::place(new ::user::single_document_template(
                           "main",
                           ::type < document >(),
                           ::type < frame >(),
-                          ::type < main_impact >()));
+                          ::type < main_impact >())));
       add_document_template(pDocTemplate);
       
       m_ptemplateHelloMultiverseImpact = pDocTemplate;

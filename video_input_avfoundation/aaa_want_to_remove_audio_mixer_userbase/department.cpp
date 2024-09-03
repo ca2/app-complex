@@ -89,11 +89,11 @@ namespace multimedia
          if(m_pimpactsystem == nullptr)
          {
 
-            m_pimpactsystem = __allocate < ::user::multiple_document_template >(
+            m_pimpactsystem = ::place(new ::user::multiple_document_template(
                                   "audio_mixer_user_base/audio_mixer",
                                   ::type < document >(),
                                   ::type < frame_window >(),
-                                  ::type < main_impact >()));
+                                  ::type < main_impact >())));
 
             papp->add_document_template(m_pimpactsystem);
 

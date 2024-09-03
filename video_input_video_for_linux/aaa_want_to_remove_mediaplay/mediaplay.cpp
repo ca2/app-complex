@@ -38,11 +38,11 @@ namespace mediaplay
 
       }
 
-      auto psingledocumenttemplate = __allocate < single_document_template >(
+      auto psingledocumenttemplate = ::place(new single_document_template(
                                           m_strMatter,
                                           m_typeatomDocument,
                                           m_typeatomFrameWnd,
-                                          m_typeatomImpact));
+                                          m_typeatomImpact)));
 
       papp->add_document_template(psingledocumenttemplate);
 

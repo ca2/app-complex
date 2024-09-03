@@ -97,23 +97,21 @@ namespace app_complex_form
       //}
 
       
-      add_impact_system("main",
-      __allocate < ::user::single_document_template >(
+      add_impact_system("main", ::place(new ::user::single_document_template(
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
-                               ::type < pane_impact >()));
+                               ::type < pane_impact >())));
       //m_ptemplateBeatMapperMain = pdoctemplate;
       //add_document_template(m_ptemplateAppSimpleFormMain);
 
 
       add_impact_system(
-         "impact",
-         __allocate < ::user::single_document_template >(
+         "impact", ::place(new ::user::single_document_template(
                           "main",
                           ::type < document >(),
                           ::type < frame >(),
-                          ::type < main_impact >()));
+                          ::type < main_impact >())));
       // m_ptemplateBeatMapperImpact = pdoctemplate;
       //add_document_template(m_ptemplateAppSimpleFormImpact);
 
