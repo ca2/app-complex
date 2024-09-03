@@ -15,7 +15,7 @@ namespace multimedia_playlist
       playlist::playlist()
       {
 
-         m_pxmlplaylist = __new< xml_playlist >();
+         m_pxmlplaylist = new xml_playlist();
 
          defer_create_synchronization();
 

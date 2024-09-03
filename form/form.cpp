@@ -103,7 +103,7 @@ namespace app_complex_form
 
       information() << "form::on_message_context_menu : " << pointCursor;
 
-      auto ptrackpopup = __new < ::menu::track_popup >(
+      auto ptrackpopup = new ::menu::track_popup(
                                                  pmenu,
                                                  this,
                                                  this,

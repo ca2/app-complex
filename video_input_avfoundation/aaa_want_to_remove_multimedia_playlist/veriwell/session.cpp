@@ -72,7 +72,7 @@ namespace multimedia_playlist
 //
 //
 
-      //m_pthread = __new< thread >(this);
+      //m_pthread = new thread(this);
 
       //m_pthread->m_psession = this;
 

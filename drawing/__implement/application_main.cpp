@@ -8,7 +8,7 @@
 //int __implement()
 //{
 //
-//   auto papp = __new< app_complex_drawing::application >();
+//   auto papp = new app_complex_drawing::application();
 //
 //   int iExitCode = papp->__implement();
 //

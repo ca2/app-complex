@@ -59,7 +59,7 @@ extern "C"
 ::acme::library * audio_get_new_library(::particle * pparticle)
 {
 
-   return __new< ::audio::library >(pparticle);
+   return new ::audio::library(pparticle);
 
 }
 
@@ -69,7 +69,7 @@ extern "C"
 ::acme::library * audio_get_new_library()
 {
 
-   return __new< ::audio::library >();
+   return new ::audio::library();
 
 }
 
@@ -77,7 +77,7 @@ extern "C"
 CLASS_DECL_EXPORT ::aqua::audio * get_new_audio()
 {
 
-   return __new< ::audio::audio >();
+   return new ::audio::audio();
 
 }
 

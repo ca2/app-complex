@@ -38,7 +38,7 @@ namespace app_complex_form
 
       //m_bMultiverseChat          = true;
 
-//auto test = __new< int >();
+//auto test = new int();
 
    }
 

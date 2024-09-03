@@ -28,7 +28,7 @@ namespace video_input_media_foundation
 
 		::CoInitialize(NULL);
 
-		m_pcallback = __new< callback >(m_pdevice);
+		m_pcallback = new callback(m_pdevice);
 
 		//m_pcallback->_initialize_callback(MFVideoFormat_RGB32);
 		m_pcallback->_initialize_callback(MFVideoFormat_RGB32);

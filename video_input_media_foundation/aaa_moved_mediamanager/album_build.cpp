@@ -1372,7 +1372,7 @@ namespace mediamanager
       if(m_pthread == nullptr)
       {
          
-         m_pthread = __new< album_build_thread >();
+         m_pthread = new album_build_thread();
 
          if(!m_pthread->begin_synch())
          {

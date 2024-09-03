@@ -46,7 +46,7 @@ bool Device::ResetGraph()
 {
 	/* cheap and easy way to clear all the filters */
 	delete context;
-	context = __new< HDevice >();
+	context = new HDevice();
 
 	return context->CreateGraph();
 }
@@ -54,7 +54,7 @@ bool Device::ResetGraph()
 void Device::ShutdownGraph()
 {
 	delete context;
-	context = __new< HDevice >();
+	context = new HDevice();
 }
 
 bool Device::SetVideoConfig(VideoConfig *config)
