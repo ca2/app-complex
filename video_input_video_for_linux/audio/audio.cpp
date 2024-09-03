@@ -334,7 +334,7 @@ namespace audio
 
 #endif
 
-      __construct(m_pmultimediafile, __allocate< ::multimedia::file_application >());
+      __construct(m_pmultimediafile, ::place(new ::multimedia::file_application()));
 
 #ifdef WINDOWS_DESKTOP
 

@@ -114,7 +114,7 @@ namespace multimedia
 
          }
 
-         __construct(m_pthread, __allocate< thread >());
+         __construct(m_pthread, ::place(new thread()));
 
          if (m_pthread == nullptr)
          {
