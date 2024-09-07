@@ -353,7 +353,7 @@ namespace multimedia
             rectangleDib = rectangleMeta;
             rectangleDib -= rectangleMeta.top_left();
 
-            ::image_pointer pimage;
+            ::image::image_pointer pimage;
 
             pimage = create_image(rectangleDib.size());
 

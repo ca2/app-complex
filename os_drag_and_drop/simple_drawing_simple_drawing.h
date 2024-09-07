@@ -15,7 +15,7 @@ namespace simple_drag_and_drop
       ::user::impact *                    m_pimpact;
       string                              m_strFont;
       int                                 m_iDrawing;
-      string_map < ::image_pointer >                m_pimagemap;
+      string_map < ::image::image_pointer >                m_pimagemap;
 
 
       simple_drag_and_drop();

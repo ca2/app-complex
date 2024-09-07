@@ -47,7 +47,7 @@ namespace multimedia_playlist
 
       ::pointer<::multimedia_playlist::track>         m_ptrackDiba;
 
-      array < ::image_pointer >                m_pimagea;
+      array < ::image::image_pointer >                m_pimagea;
 
       string                                    m_strListName;
 
@@ -110,7 +110,7 @@ namespace multimedia_playlist
 
       virtual void load_image();
 
-      virtual void on_load_image(::image * pimage);
+      virtual void on_load_image(::image::image *pimage);
 
       virtual void on_play(::multimedia_playlist::track * ptrack);
 

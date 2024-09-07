@@ -12,23 +12,23 @@
 	memset((void *)ri_pixels.get(),0,ri_size);
 }
 
-bool ::image::isNew()
+bool ::image::image::isNew()
 {
 	return ri_new;
 }
 
-::u32 ::image::getSize()
+::u32 ::image::image::getSize()
 {
 	return ri_size;
 }
 
-::image::~::image(void)
+::image::image::~::image::image(void)
 {
 }
 
-long ::image::CreateInstance(::image **ppRImage,::u32 size_i32)
+long ::image::image::CreateInstance(::image::image **ppRImage,::u32 size_i32)
 {
-	*ppRImage = aaa_primitive_new (std::nothrow) ::image(size);
+	*ppRImage = aaa_primitive_new (std::nothrow) ::image::image(size);
 
     if (ppRImage == NULL)
     {
@@ -37,14 +37,14 @@ long ::image::CreateInstance(::image **ppRImage,::u32 size_i32)
     return S_OK;
 }
 
-void ::image::setCopy(const BYTE * pSampleBuffer)
+void ::image::image::setCopy(const BYTE * pSampleBuffer)
 {
 	memcpy(ri_pixels.get(), pSampleBuffer, ri_size);
 
 	ri_new = true;
 }
 
-void ::image::fastCopy(const BYTE * pSampleBuffer)
+void ::image::image::fastCopy(const BYTE * pSampleBuffer)
 {
 
 	int *bsrc = (int *)pSampleBuffer;
@@ -59,7 +59,7 @@ void ::image::fastCopy(const BYTE * pSampleBuffer)
 
 }
 
-unsigned char * ::image::get_data()
+unsigned char * ::image::image::get_data()
 {
 	return ri_pixels.get();
 

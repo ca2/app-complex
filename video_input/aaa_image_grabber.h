@@ -4,9 +4,9 @@
 namespace video_input
 {
 
-	//class ::image;
+	//class ::image::image;
 
-	// Class for grabbing ::image from video stream
+	// Class for grabbing ::image::image from video stream
 	class image_grabber : public IMFSampleGrabberSinkCallback
 	{
 	public:

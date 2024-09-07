@@ -114,7 +114,7 @@ namespace video_input_video_for_linux
 
       informationf("%s: new capture started", m_pdevice->m_strDevice.c_str ());
 
-      m_pframe = __new< ::video::frame> (v4l2_pix_fmt_to_video_format(m_pdevice->m_iPixelFormat),
+      m_pframe = new ::video::frame(v4l2_pix_fmt_to_video_format(m_pdevice->m_iPixelFormat),
                                     m_pdevice->m_size.cx(), m_pdevice->m_size.cy());
 
       information() << "frame size : " << m_pdevice->m_size;

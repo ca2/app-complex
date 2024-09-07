@@ -310,7 +310,7 @@ namespace multimedia
       }
 
 
-      void control_impact::OnDraw(::image * pimage)
+      void control_impact::OnDraw(::image::image *pimage)
       {
 
          __UNREFERENCED_PARAMETER(pimage);

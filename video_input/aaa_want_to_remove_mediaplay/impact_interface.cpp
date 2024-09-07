@@ -899,12 +899,12 @@ namespace mediaplay
    }
 
 
-   void impact_interface::backimpact_Feedback(::image * pimage)
+   void impact_interface::backimpact_Feedback(::image::image *pimage)
    {
       __UNREFERENCED_PARAMETER(pimage);
    }
 
-   void impact_interface::_001OnTopDraw(::image * pimage)
+   void impact_interface::_001OnTopDraw(::image::image *pimage)
    {
       __UNREFERENCED_PARAMETER(pimage);
    }
@@ -1455,7 +1455,7 @@ retry:
 
                   }
 
-                  ::image_pointer pimage;
+                  ::image::image_pointer pimage;
 
                   ::payload vDib;
 
