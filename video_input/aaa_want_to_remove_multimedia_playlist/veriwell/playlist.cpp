@@ -130,7 +130,7 @@ namespace multimedia_playlist
 
          string strPlay = m_pxmlplaylist->m_xmldoc.get_xml();
 
-         pcontext->m_papexcontext->file()->put_contents(m_path, strPlay);
+         file()->put_contents(m_path, strPlay);
 
          return true;
 
@@ -142,7 +142,7 @@ namespace multimedia_playlist
 
          m_path = strFile;
 
-         string strXml = pcontext->m_papexcontext->file()->as_string(m_path);
+         string strXml = file()->as_string(m_path);
 
          if (!m_pxmlplaylist->m_xmldoc.load(strXml))
          {

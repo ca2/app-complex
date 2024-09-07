@@ -52,7 +52,7 @@ namespace mediaplaylist
 
       delete_contents();
 
-      pcontext->m_papexcontext->file()->put_contents(m_pathFile,"");
+      file()->put_contents(m_pathFile,"");
 
       on_open_document(m_pathFile);
 
@@ -88,7 +88,7 @@ namespace mediaplaylist
 
       //{
 
-      //   file_pointer file = pcontext->m_papexcontext->file()->get_file(path,::file::e_open_binary | ::file::e_open_read_write | ::file::e_open_no_truncate | ::file::e_open_create | ::file::e_open_defer_create_directory);
+      //   file_pointer file = file()->get_file(path,::file::e_open_binary | ::file::e_open_read_write | ::file::e_open_no_truncate | ::file::e_open_create | ::file::e_open_defer_create_directory);
 
       //}
 
@@ -1330,7 +1330,7 @@ processed_new:
 
          }
 
-         if(!pcontext->m_papexcontext->file()->exists(path))
+         if(!file()->exists(path))
          {
 
             return false;
@@ -2038,7 +2038,7 @@ retry0:
 //         //   // be sure to delete the file
 //         //   try
 //         //   {
-//         //      pcontext->m_papexcontext->file()->del(newName);
+//         //      file()->del(newName);
 //         //   }
 //         //   catch(const ::exception & e)
 //         //   {

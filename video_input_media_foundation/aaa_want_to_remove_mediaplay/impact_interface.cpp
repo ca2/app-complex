@@ -2082,7 +2082,7 @@ retry4:
          while(true)
          {
             strRec.formatf("%s.%d.wav", strBase.c_str(), i);
-            if(!pcontext->m_papexcontext->file()->exists(strRec))
+            if(!file()->exists(strRec))
                break;
             i++;
          }

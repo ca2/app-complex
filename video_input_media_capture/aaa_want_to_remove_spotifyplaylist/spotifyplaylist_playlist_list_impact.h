@@ -21,9 +21,9 @@ namespace mediaplaylist
       };
 
       ::file::listing            m_listing;
-      ::pointer<image_list>            m_pimagelistSubItemHover;
-      ::pointer<image_list>            m_pimagelistItemHover;
-      ::pointer<image_list>            m_pimagelistNormal;
+      ::image::image_list_pointer             m_pimagelistSubItemHover;
+      ::image::image_list_pointer             m_pimagelistItemHover;
+      ::image::image_list_pointer             m_pimagelistNormal;
 
       e_mode                     m_emode;
       string                     m_str;

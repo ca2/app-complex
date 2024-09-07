@@ -251,7 +251,7 @@
 //       predicate_run(bSynch, [=]()
 //       {
 
-//          auto pfile = pcontext->m_papexcontext->file()->get_reader(payloadFile, ::file::e_open_share_deny_none);
+//          auto pfile = file()->get_reader(payloadFile, ::file::e_open_share_deny_none);
 
 //          if (pfile)
 //          {
@@ -320,7 +320,7 @@
 
 // #ifdef CUBE
 
-//       void * l = dlopen(pcontext->m_papexcontext->file()->module(), RTLD_LOCAL);
+//       void * l = dlopen(file()->module(), RTLD_LOCAL);
 
 //       if (l != nullptr)
 //       {
@@ -809,7 +809,7 @@
 //       //            set["post"]["client_secret"] = pszKey1;
 //       //            set["post"]["scope"] = "http://api.microsofttranslator.com";
 //       //
-//       //            strResponse = pcontext->m_papexcontext->http().get(strUrl, set);
+//       //            strResponse = http()->get(strUrl, set);
 //       //
 //       //         }
 //       //
@@ -821,7 +821,7 @@
 //       //
 //       //         m_strTranslatorToken = v["access_token"];
 //       //
-//       //         pcontext->m_papexcontext->file()->put_text_utf8(         auto psystem = system();
+//       //         file()->put_text_utf8(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
@@ -834,7 +834,7 @@ pacmedirectory->system() / "translators" / "token.txt", m_strTranslatorToken);
 //       //
 //       //         string strFile;
 //       //
-//       //         while (pcontext->m_papexcontext->file()->exists(strFile =          auto psystem = system();
+//       //         while (file()->exists(strFile =          auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
@@ -873,13 +873,13 @@ pacmedirectory->system() / "translators" / as_string(m_iTranslatorFile) + ".mp3"
 //       //
 //       //         string strUrl = "http://api.microsofttranslator.com/V2/Http.svc/Speak?text=" + strEncode + "&language=" + strLang + "&format=audio/mp3&options=MaxQuality";
 //       //
-//       //         pcontext->m_papexcontext->http().download(strUrl, strFile, set);
+//       //         http()->download(strUrl, strFile, set);
 //       //
 //       //         int iStatusCode = set["http_status_code"];
 //       //
 //       //         if (iStatusCode >= 400 && iStatusCode < 500)
 //       //         {
-//       //            string str = pcontext->m_papexcontext->file()->as_string(strFile);
+//       //            string str = file()->as_string(strFile);
 //       //            if (str.case_insensitive_find("The incoming token has expired") >= 0)
 //       //            {
 //       //
@@ -889,13 +889,13 @@ pacmedirectory->system() / "translators" / as_string(m_iTranslatorFile) + ".mp3"
 //       //            }
 //       //            else if (str.case_insensitive_find("'language' must be a valid language") >= 0)
 //       //            {
-//       //               str = pcontext->m_papexcontext->file()->as_string(         auto psystem = system();
+//       //               str = file()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "translators/missing.txt");
 //       //               str += strLang + "\n";
-//       //               pcontext->m_papexcontext->file()->put_contents(         auto psystem = system();
+//       //               file()->put_contents(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
@@ -904,13 +904,13 @@ pacmedirectory->system() / "translators/missing.txt", str);
 //       //            }
 //       //            else if (str.case_insensitive_find("Language name is not supported") >= 0)
 //       //            {
-//       //               str = pcontext->m_papexcontext->file()->as_string(         auto psystem = system();
+//       //               str = file()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "translators/missing2.txt");
 //       //               str += strLang + "\n";
-//       //               pcontext->m_papexcontext->file()->put_contents(         auto psystem = system();
+//       //               file()->put_contents(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
@@ -1028,7 +1028,7 @@ pacmedirectory->system() / "translators/missing2.txt", str);
 
 //       string strFile;
 
-//       while (pcontext->m_papexcontext->file()->exists(strFile =          auto psystem = system();
+//       while (file()->exists(strFile =          auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
@@ -1055,7 +1055,7 @@ pacmedirectory->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".mp
 
 //       string strUrl = "http://translate.google.com/translate_tts?ie=UTF-8&q=" + strQuery + "&tl=" + strLang + "&key=" + strKey;
 
-//       pcontext->m_papexcontext->http().download(strUrl, strFile, set);
+//       http()->download(strUrl, strFile, set);
 
 //       pmultimedia->play_audio(strFile, bSynch);
 

@@ -186,10 +186,10 @@ namespace mediaplaylist
 
       }
 
-      if (!pcontext->m_papexcontext->file()->exists(path))
+      if (!file()->exists(path))
       {
 
-         pcontext->m_papexcontext->file()->put_contents(path, "<playlist></playlist>");
+         file()->put_contents(path, "<playlist></playlist>");
 
       }
 
@@ -358,7 +358,7 @@ namespace mediaplaylist
 
          path = pathFolder / "Playlist " + as_string(i) + ".playlist";
 
-         if (!pcontext->m_papexcontext->file()->exists(path))
+         if (!file()->exists(path))
             break;
 
       }
