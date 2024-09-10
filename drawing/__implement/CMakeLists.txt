@@ -17,7 +17,7 @@ list(APPEND executable_references
    app_complex_drawing)
 
 
-if(${LINUX} OR ${FREEBSD})
+if(${LINUX} OR ${__BSD__})
 
 #   add_custom_command(
 #      COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
@@ -49,7 +49,7 @@ if (MSVC)
    target_link_libraries(${PROJECT_NAME} PRIVATE ${executable_references})
 
 
-elseif(${LINUX} OR ${FREEBSD})
+elseif(${LINUX} OR ${__BSD__})
 
 
    target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)

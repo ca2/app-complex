@@ -19,7 +19,7 @@ list(APPEND executable_references
    ${PARENT_PROJECT_NAME})
 
 
-if(${LINUX} OR ${FREEBSD})
+if(${LINUX} OR ${__BSD__})
 
 #   add_custom_command(
 #      COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
@@ -51,7 +51,7 @@ if (MSVC)
    target_link_libraries(${PROJECT_NAME} PRIVATE ${executable_references})
 
 
-elseif(${LINUX} OR ${FREEBSD})
+elseif(${LINUX} OR ${__BSD__})
 
 
    target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
@@ -73,7 +73,7 @@ add_dependencies(${PROJECT_NAME} folder_zip)
 add_dependencies(${PROJECT_NAME} networking_bsd)
 
 
-if(${LINUX} OR ${FREEBSD})
+if(${LINUX} OR ${__BSD__})
 
    add_dependencies(${PROJECT_NAME} video_input_video_for_linux)
 
