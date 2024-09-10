@@ -185,7 +185,7 @@ namespace mediaplaylist
    }
 
 
-   void player::set_album_art(pointer_array < ::image > & imagea)
+   void player::set_album_art(pointer_array < ::image::image > & imagea)
    {
 
       synchronous_lock sl2(mutex());

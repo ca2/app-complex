@@ -20,7 +20,7 @@ namespace app_complex_video_capture
    public:
 
 
-      ::image_pointer         m_pimage;
+      ::image::image_pointer         m_pimage;
 
       impact *                  m_pimpact;
 

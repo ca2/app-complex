@@ -18,8 +18,8 @@ namespace mediaplaylist
       ::mediaplaylist::document *               m_pplaylistdoc;
       ::multimedia_playlist::playlist *         m_pplPlaying;
       bool                                      m_bAlbumArt;
-      pointer_array < ::image >                       m_imageaAlbum;
-      pointer_array < ::image >                       m_imageaAlbum128;
+      pointer_array < ::image::image >                       m_imageaAlbum;
+      pointer_array < ::image::image >                       m_imageaAlbum128;
 
 
       player();
@@ -47,7 +47,7 @@ namespace mediaplaylist
 
       virtual void _ExecuteStop();
 
-      virtual void set_album_art(pointer_array < ::image > & imagea);
+      virtual void set_album_art(pointer_array < ::image::image > & imagea);
 
    };
 

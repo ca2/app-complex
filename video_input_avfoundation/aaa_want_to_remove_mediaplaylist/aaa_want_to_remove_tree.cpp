@@ -20,7 +20,7 @@ namespace mediaplaylist
    }
 
 
-/*   void tree::OnDraw(::image * pimage)
+/*   void tree::OnDraw(::image::image *pimage)
    {
       __UNREFERENCED_PARAMETER(pgraphics);
    }

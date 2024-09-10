@@ -121,7 +121,7 @@ namespace audio
       //if(!file.is_set())
       {
 
-         file_pointer fileSrc = pcontext->m_papexcontext->file()->get_file(sound_path(psz), ::file::e_open_binary | ::file::e_open_read | ::file::e_open_share_deny_write);
+         file_pointer fileSrc = file()->get_file(sound_path(psz), ::file::e_open_binary | ::file::e_open_read | ::file::e_open_share_deny_write);
 
          pfile->get_memory()->set_size((memsize) fileSrc->get_size());
 

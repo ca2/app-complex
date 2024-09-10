@@ -161,7 +161,7 @@ namespace multimedia_playlist
       }
 
 
-      void session::on_load_image(::image * pimage)
+      void session::on_load_image(::image::image *pimage)
       {
 
       }
@@ -266,7 +266,7 @@ namespace multimedia_playlist
 
          }
 
-         ::image_pointer pimage = ::object::load_image(ptr->m_path.folder() / "Folder.jpg");
+         ::image::image_pointer pimage = ::object::load_image(ptr->m_path.folder() / "Folder.jpg");
 
          if (!pimage)
          {

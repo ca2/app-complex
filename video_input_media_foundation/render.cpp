@@ -273,7 +273,7 @@ namespace video_input_media_foundation
       //               //
       //               //   payloadFile["http_set"]["raw_http"] = purl->get_server(m_strImage).unicode_case_insensitive_find("ca2") < 0;
       //               //
-      //               //   ::image_pointer pimage;
+      //               //   ::image::image_pointer pimage;
       //               //
       //               //   if(pimage->load_from_file(payloadFile))
       //               //   {

@@ -21,7 +21,7 @@ namespace mediaplaylist
 
 
 
-      virtual void OnDraw(::image::image * pimage);
+      virtual void OnDraw(::image::image *pimage);
 
       void install_message_routing(::channel * pchannel) override;
 

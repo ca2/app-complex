@@ -230,7 +230,7 @@ namespace multimedia_playlist
                      || ::str::find_wwci("youtu.be", strServer) >= 0)
                {
 
-                  auto pfile = pcontext->m_papexcontext->file()->get_reader(m_path);
+                  auto pfile = file()->get_reader(m_path);
 
                   auto pdecoder = papp->audiowave()->m_pdecoderset->GetNewDecoder(pfile);
 
@@ -254,7 +254,7 @@ namespace multimedia_playlist
             if(!bParsed)
             {
 
-               file_pointer file = pcontext->m_papexcontext->file()->get_file(m_path, ::file::e_open_binary | ::file::e_open_read | ::file::e_open_share_deny_none);
+               file_pointer file = file()->get_file(m_path, ::file::e_open_binary | ::file::e_open_read | ::file::e_open_share_deny_none);
 
                if (file.is_null())
                {

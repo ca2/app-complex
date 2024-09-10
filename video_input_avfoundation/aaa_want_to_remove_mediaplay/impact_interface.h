@@ -128,7 +128,7 @@ namespace mediaplay
       virtual bool StartFadeOut(EExecute eexecuteNow, EExecute eexecuteAfter);
       virtual bool StartFadeIn(::mediaplaylist::info * pinfo);
       virtual void StartVisualFadeIn(bool bAudio);
-      virtual void backimpact_Feedback(::image * pimage);
+      virtual void backimpact_Feedback(::image::image *pimage);
       virtual void _001OnTimer(::timer * ptimer) override;
       virtual void CloseDevice();
       virtual void OnMediaPlaybackStart(::wave::player_command * pcommand);
@@ -145,7 +145,7 @@ namespace mediaplay
       DECLARE_MESSAGE_HANDLER(on_message_destroy);
 
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
-      virtual void _001OnTopDraw(::image * pimage);
+      virtual void _001OnTopDraw(::image::image *pimage);
 
       virtual void karaoke_bouncing_ball();
       virtual void KaraokeGradualFilling();

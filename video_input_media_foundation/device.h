@@ -15,7 +15,7 @@ namespace video_input_media_foundation
 
 	class thread;
 
-	//class ::image;
+	//class ::image::image;
 
 	using subtype_map = string_map < ::i32_array >;
 

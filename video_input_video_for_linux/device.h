@@ -10,7 +10,7 @@ namespace video_input_video_for_linux
 
 	class thread;
 
-	//class ::image;
+	//class ::image::image;
 
 	using subtype_map = string_map < ::i32_array >;
 

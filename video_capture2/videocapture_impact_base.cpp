@@ -78,7 +78,7 @@ namespace app_complex_video_capture
 
       on_draw_image_layer(pgraphicsParam);
 
-/*      ::image_pointer pimage = m_pimagePost;
+/*      ::image::image_pointer pimage = m_pimagePost;
 
 /*      _006OnDraw(pimage->g());
 

@@ -18,7 +18,7 @@ namespace video_input_video_avfoundation
 
 	class thread;
 
-	//class ::image;
+	//class ::image::image;
 
 	using subtype_map = string_map < ::i32_array >;
 

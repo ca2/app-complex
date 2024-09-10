@@ -107,7 +107,7 @@ namespace multimedia_playlist
    }
 
 
-   void session::on_load_image(::image * pimage)
+   void session::on_load_image(::image::image *pimage)
    {
 
    }

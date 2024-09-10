@@ -15,27 +15,27 @@ namespace multimedia_playlist
          m_iExpires = 0;
 
 
-         m_strAccessToken = pcontext->m_papexcontext->file()->as_string(         auto psystem = system();
+         m_strAccessToken = file()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "config\\waven\\access_token.txt");
-         m_strTokenType = pcontext->m_papexcontext->file()->as_string(         auto psystem = system();
+         m_strTokenType = file()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "config\\waven\\token_type.txt");
-         m_iExpires = atoi(pcontext->m_papexcontext->file()->as_string(         auto psystem = system();
+         m_iExpires = atoi(file()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "config\\waven\\expire_in.txt"));
-         m_strRefreshToken = pcontext->m_papexcontext->file()->as_string(         auto psystem = system();
+         m_strRefreshToken = file()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "config\\waven\\refresh_token.txt");
-         m_timeAuth.m_time = ansi_to_i64(pcontext->m_papexcontext->file()->as_string(         auto psystem = system();
+         m_timeAuth.m_time = ansi_to_i64(file()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
@@ -78,7 +78,7 @@ pacmedirectory->system() / "config\\spotify\\client_id.txt");
 
             strUrl = "https://api.ca2.software/account/spotify_register";
 
-            strState = pcontext->m_papexcontext->http().get(strUrl, set);
+            strState = http()->get(strUrl, set);
 
             if (strState.has_char())
                break;
@@ -118,7 +118,7 @@ pacmedirectory->system() / "config\\spotify\\client_id.txt");
 
                strUrl = "https://api.ca2.software/account/spotify_response?state=" + strState;
 
-               strResponse = pcontext->m_papexcontext->http().get(strUrl, set);
+               strResponse = http()->get(strUrl, set);
 
             }
 
@@ -158,7 +158,7 @@ pacmedirectory->system() / "config\\spotify\\client_secret.txt");
 
             strUrl = "https://accounts.spotify.com/api/token";
 
-            strResponse = pcontext->m_papexcontext->http().get(strUrl, set);
+            strResponse = http()->get(strUrl, set);
 
          }
 
@@ -211,27 +211,27 @@ pacmedirectory->system() / "config\\spotify\\client_secret.txt");
 
          m_timeAuth = ::earth::time::now();
 
-         pcontext->m_papexcontext->file()->put_contents(         auto psystem = system();
+         file()->put_contents(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "config\\waven\\access_token.txt", m_strAccessToken);
-         pcontext->m_papexcontext->file()->put_contents(         auto psystem = system();
+         file()->put_contents(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "config\\waven\\token_type.txt", m_strTokenType);
-         pcontext->m_papexcontext->file()->put_contents(         auto psystem = system();
+         file()->put_contents(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "config\\waven\\expire_in.txt", as_string(m_iExpires));
-         pcontext->m_papexcontext->file()->put_contents(         auto psystem = system();
+         file()->put_contents(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "config\\waven\\refresh_token.txt", m_strRefreshToken);
-         pcontext->m_papexcontext->file()->put_contents(         auto psystem = system();
+         file()->put_contents(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
@@ -260,7 +260,7 @@ pacmedirectory->system() / "config\\waven\\time_auth.txt", as_string((i64)m_time
             set["headers"]["Accept"] = "application/network_payload";
             set["headers"]["Accept-Encoding"] = "gzip";
 
-            str = pcontext->m_papexcontext->http().get(strUrl, set);
+            str = http()->get(strUrl, set);
 
          }
 

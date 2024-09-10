@@ -145,7 +145,7 @@ namespace mediaplaylist
    {
       string strFile;
 
-      if(datastream()->get("default_playlist",strFile) && pcontext->m_papexcontext->file()->exists(strFile))
+      if(datastream()->get("default_playlist",strFile) && file()->exists(strFile))
       {
 
          str = strFile;
@@ -192,7 +192,7 @@ namespace mediaplaylist
 
          path = pathFolder / "Playlist " + as_string(i) + ".playlist";
 
-         if(!pcontext->m_papexcontext->file()->exists(path))
+         if(!file()->exists(path))
             break;
 
       }

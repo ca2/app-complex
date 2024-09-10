@@ -18,7 +18,7 @@ namespace multimedia_playlist
          ::pointer < ::mutex >                                            m_pmutex2;
          //thread *                                         m_pthread;
          ::memory_file                                      m_memfile;
-         pointer_array < ::image >                                m_imagea;
+         pointer_array < ::image::image >                                m_imagea;
          string                                             m_strListName;
          pointer_array < ::multimedia_playlist::playlist >        m_pla;
          manual_reset_event                                 m_ev;
@@ -49,7 +49,7 @@ namespace multimedia_playlist
 
          virtual void load_image() override;
 
-         virtual void on_load_image(::image * pimage) override;
+         virtual void on_load_image(::image::image *pimage) override;
 
 
          virtual ::multimedia_playlist::playlist * open_playlist(::payload payloadFile) override;

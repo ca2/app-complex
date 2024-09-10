@@ -138,7 +138,7 @@ pacmedirectory->system() / "speech";
    pathTxt = pathDir / strLang / strQuality / strGender / strFileRel + ".txt";
 
    // todo... fastly check if file is mp3 file...
-   if (pcontext->m_papexcontext->file()->as_string(pathTxt) == strText && pcontext->m_papexcontext->file()->length(pathMp3) > 100)
+   if (file()->as_string(pathTxt) == strText && file()->length(pathMp3) > 100)
    {
 
       goto play;
@@ -170,7 +170,7 @@ retry:
          //set["post"]["code"]= "# code=\"" + strCode + "\"";
          set["post"]["network_payload"] = "{body}";
 
-         strResponse = pcontext->m_papexcontext->http().get(strUrl, set);
+         strResponse = http()->get(strUrl, set);
 
       }
 
@@ -184,7 +184,7 @@ retry:
 
       m_strTranslatorToken = strResponse.trimmed();
 
-      pcontext->m_papexcontext->file()->put_text_utf8(         auto psystem = system();
+      file()->put_text_utf8(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
@@ -240,13 +240,13 @@ pacmedirectory->system() / "translators" / "token.txt", m_strTranslatorToken);
 
       string strUrl = "http://api.microsofttranslator.com/V2/Http.svc/Speak?text=" + strEncode + "&language=" + strLang + "&format=audio/mp3&options=" + strQuality + "|" + strGender;
 
-      pcontext->m_papexcontext->http().download(strUrl, pathMp3, set);
+      http()->download(strUrl, pathMp3, set);
 
       int iStatusCode = set["http_status_code"];
 
       if (iStatusCode >= 400 && iStatusCode < 500)
       {
-         string str = pcontext->m_papexcontext->file()->as_string(pathMp3);
+         string str = file()->as_string(pathMp3);
          if (str.case_insensitive_find("The incoming token has expired") >= 0)
          {
 
@@ -266,13 +266,13 @@ pacmedirectory->system() / "translators" / "token.txt", m_strTranslatorToken);
          }
          else if (str.case_insensitive_find("'language' must be a valid language") >= 0)
          {
-            str = pcontext->m_papexcontext->file()->as_string(         auto psystem = system();
+            str = file()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "translators/missing.txt");
             str += strLang + "\n";
-            pcontext->m_papexcontext->file()->put_contents(         auto psystem = system();
+            file()->put_contents(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
@@ -281,13 +281,13 @@ pacmedirectory->system() / "translators/missing.txt", str);
          }
          else if (str.case_insensitive_find("Language name is not supported") >= 0)
          {
-            str = pcontext->m_papexcontext->file()->as_string(         auto psystem = system();
+            str = file()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
 pacmedirectory->system() / "translators/missing2.txt");
             str += strLang + "\n";
-            pcontext->m_papexcontext->file()->put_contents(         auto psystem = system();
+            file()->put_contents(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
@@ -302,7 +302,7 @@ pacmedirectory->system() / "translators/missing2.txt", str);
 
       }
 
-      pcontext->m_papexcontext->file()->put_contents(pathTxt, strText);
+      file()->put_contents(pathTxt, strText);
 
    }
 

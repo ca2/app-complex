@@ -12,7 +12,7 @@ namespace video_capture
    public:
 
 
-      ::image_pointer        m_pimageBk;
+      ::image::image_pointer        m_pimageBk;
       bool                    m_bBkLoaded;
 
 

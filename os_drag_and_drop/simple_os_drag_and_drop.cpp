@@ -146,13 +146,13 @@ namespace simple_os_drag_and_drop
                /**pimage1 += { success, [this](auto & result)
                {
                   
-                  ::image_pointer pimage = result;
+                  ::image::image_pointer pimage = result;
 
                   m_pimpact->set_need_redraw();
 
-                  ::image_pointer pimpl = pimage->clone();
+                  ::image::image_pointer pimpl = pimage->clone();
 
-                  ::image_pointer imageClone = pimpl;
+                  ::image::image_pointer imageClone = pimpl;
 
                   m_pimagemap["pat1grayed"] = imageClone;
 

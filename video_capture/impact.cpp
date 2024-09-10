@@ -140,11 +140,11 @@ namespace app_complex_video_capture
 
       m_prender->prepare_image();
 
-      image_source imagesource(m_prender->m_pimage);
+      ::image::image_source imagesource(m_prender->m_pimage);
 
-      image_drawing_options imagedrawingoptions(rectangleX);
+      ::image::image_drawing_options imagedrawingoptions(rectangleX);
 
-      image_drawing imagedrawing(imagedrawingoptions, imagesource);
+      ::image::image_drawing imagedrawing(imagedrawingoptions, imagesource);
 
       pgraphics->m_bUseImageMipMapsOrResizedImages = false;
 

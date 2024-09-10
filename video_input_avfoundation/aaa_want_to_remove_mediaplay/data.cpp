@@ -78,7 +78,7 @@ namespace mediaplay
 
       ::file::path pathFile = payloadFile.get_file_path();
 
-      string str = pcontext->m_papexcontext->file()->as_string(payloadFile);
+      string str = file()->as_string(payloadFile);
 
       string_array stra;
 
@@ -530,7 +530,7 @@ namespace mediaplay
       else if(path.case_insensitive_ends(".asciimedia"))
       {
 
-         string str = pcontext->m_papexcontext->file()->as_string(path);
+         string str = file()->as_string(path);
 
          string_array stra;
 
@@ -643,13 +643,13 @@ namespace mediaplay
       if(!pcontext->m_papexcontext->dir()->is(strPathName))
       {
 
-         if(pcontext->m_papexcontext->file()->exists(strPathName))
+         if(file()->exists(strPathName))
          {
 
             try
             {
 
-               pcontext->m_papexcontext->file()->del(strPathName);
+               file()->del(strPathName);
 
             }
             catch(...)
@@ -672,7 +672,7 @@ namespace mediaplay
 
       string strFileName;
 
-      strFileName = pcontext->m_papexcontext->file()->time(strPathName,1);
+      strFileName = file()->time(strPathName,1);
 
       compress_context compress(this);
 
