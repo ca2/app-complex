@@ -24,7 +24,7 @@
 ::i32 application_main(::platform::platform * pplatform)
 {
 
-   auto papplication = ::place(new app_complex_video_capture::application());
+   auto papplication = new app_complex_video_capture::application();
 
    int iExitCode = papplication->application_main(pplatform);
 
