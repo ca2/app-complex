@@ -4,6 +4,7 @@ cmake-build-*/
 cmake-time-*/
 cmake_install.cmake
 Makefile
+**/.visualgdb
 **/CMakeFiles
 **/.vs
 **/.vscode
@@ -11,9 +12,12 @@ Makefile
 **/.git
 **/.svn
 **/.link_object
+**/VisualGDB
 **/CVS
 **/_____operating_system
 **/xcuserdata
+**/Generated Files
+**/doxygen.directory
 .DS_Store
 ._.DS_Store
 *.suo
@@ -34,8 +38,8 @@ Thumbs.db
 deployment.rc
 _matter.zip
 Makefile
+java.core
 _packages.txt
-
 application_build_helper_input.txt
 application_build_helper_output.txt
 matter_output.txt
