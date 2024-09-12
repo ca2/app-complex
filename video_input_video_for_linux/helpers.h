@@ -14,7 +14,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+#ifdef NETBSD
+#include "/usr/pkgsrc/graphics/libv4l/files/videodev2.h"
+#else
 #include <linux/videodev2.h>
+#endif
 #include <libv4l2.h>
 
 //#include <obs-module.h>
