@@ -54,7 +54,7 @@
 		9AF2F443280884D9007F7B7D /* libidn.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2F426280884D8007F7B7D /* libidn.dylib */; };
 		9AF2F444280884D9007F7B7D /* libidn.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AF2F426280884D8007F7B7D /* libidn.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AF2F446280884D9007F7B7D /* libimaging_coreimage.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAF600D280863D90067E73F /* libimaging_coreimage.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9AF2F44A280884FA007F7B7D /* node_macos.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAF5FF9280863D80067E73F /* node_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AF2F44A280884FA007F7B7D /* libnode_macos.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAF5FF9280863D80067E73F /* libnode_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AF2F44C280884FA007F7B7D /* libvideo_input.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AF2F447280884FA007F7B7D /* libvideo_input.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AF2F450280884FA007F7B7D /* libwindowing_macos.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AF2F448280884FA007F7B7D /* libwindowing_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AF2F452280884FA007F7B7D /* libwrite_text_quartz2d.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAF5FFF280863D90067E73F /* libwrite_text_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -329,7 +329,7 @@
 				9A98A67729B939100057E3F4 /* libapex_darwin.dylib in CopyFiles */,
 				9AF2F43E280884D9007F7B7D /* libdraw2d_quartz2d.dylib in CopyFiles */,
 				9A98A67A29B939390057E3F4 /* libaura_darwin.dylib in CopyFiles */,
-				9AF2F44A280884FA007F7B7D /* node_macos.dylib in CopyFiles */,
+				9AF2F44A280884FA007F7B7D /* libnode_macos.dylib in CopyFiles */,
 				9AF2F440280884D9007F7B7D /* libexperience_core.dylib in CopyFiles */,
 				9AF2F438280884D9007F7B7D /* libaura_posix.dylib in CopyFiles */,
 				9AF2F436280884D9007F7B7D /* libaura_macos.dylib in CopyFiles */,
@@ -522,7 +522,7 @@
 		9AAF5FF5280863D80067E73F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AAF5FF9280863D80067E73F /* node_macos.dylib */,
+				9AAF5FF9280863D80067E73F /* libnode_macos.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -864,10 +864,10 @@
 			remoteRef = 9AAF5FF2280863D80067E73F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AAF5FF9280863D80067E73F /* node_macos.dylib */ = {
+		9AAF5FF9280863D80067E73F /* libnode_macos.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = node_macos.dylib;
+			path = libnode_macos.dylib;
 			remoteRef = 9AAF5FF8280863D80067E73F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
