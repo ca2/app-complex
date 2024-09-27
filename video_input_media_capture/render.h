@@ -3,7 +3,7 @@
 
 
 #include "app-complex/video_input/render.h"
-#include "acme/primitive/primitive/memory.h"
+#include "acme/prototype/prototype/memory.h"
 #include <winrt/windows.media.capture.frames.h>
 extern "C"
 {

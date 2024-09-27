@@ -2,7 +2,7 @@
 #include "form.h"
 #include "acme/constant/message.h"
 #include "acme/filesystem/filesystem/file_context.h"
-#include "acme/primitive/geometry2d/_text_stream.h"
+#include "acme/prototype/geometry2d/_text_stream.h"
 #include "aura/graphics/draw2d/graphics.h"
 #include "aura/message/user.h"
 #include "aura/platform/context.h"

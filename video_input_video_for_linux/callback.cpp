@@ -4,7 +4,7 @@
 #include "render.h"
 #include "_functionh_ffmpeg.h"
 #include "acme/parallelization/synchronous_lock.h"
-#include "acme/primitive/geometry2d/_text_stream.h"
+#include "acme/prototype/geometry2d/_text_stream.h"
 #include "aura/graphics/image/image.h"
 #include "app-complex/video_input/frame.h"
 
