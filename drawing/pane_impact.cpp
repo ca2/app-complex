@@ -134,7 +134,7 @@ namespace app_complex_drawing
 
       }
       else if (ptopic->m_puserelement
-               && ptopic->m_puserelement->m_atom == FONTSEL_IMPACT)
+               && ptopic->user_interaction_id() == FONTSEL_IMPACT)
       {
 
          if (ptopic->m_atom == ::id_after_change_cur_sel)

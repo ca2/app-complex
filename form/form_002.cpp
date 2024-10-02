@@ -175,7 +175,7 @@ namespace app_complex_form
 //      if (ptopic->m_atom == ::id_click)
 //      {
 //
-//         if (ptopic->m_puserelement->m_atom == "send_button")
+//         if (ptopic->user_interaction_id() == "send_button")
 //         {
 //
 //            string strText1;

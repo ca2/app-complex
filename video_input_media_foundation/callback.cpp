@@ -807,7 +807,7 @@ namespace video_input_media_foundation
 
       synchronous_lock synchronouslock(m_pdevice->get_render()->synchronization());
 
-      ::copy_image32(m_pdevice->get_render()->m_pimage, &p);
+      m_pdevice->get_render()->m_pimage->copy(& p);
       return S_OK;
 
    }

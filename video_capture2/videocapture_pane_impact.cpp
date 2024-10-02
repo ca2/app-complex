@@ -186,26 +186,26 @@ namespace app_complex_video_capture
             if (ptopic->m_atom == ::id_set_check && ptopic->user_interaction() != nullptr)
             {
 
-               string strCheck = ptopic->user_element_id();
+               string strCheck = ptopic->user_interaction_id();
 
 
             }
-         //if(ptopic->user_element_id() == "clockverse")
+         //if(ptopic->user_interaction_id() == "clockverse")
          //   {
          //      papp->set_binding_clockverse_country_time_zone_set_on_hover(ptopic->user_interaction()->get_check() == ::e_check_checked);
          //      return true;
          //   }
-         //   else if(ptopic->user_element_id() == "clockverse_auto")
+         //   else if(ptopic->user_interaction_id() == "clockverse_auto")
          //   {
          //      papp->set_auto_launch_clockverse_on_hover(ptopic->user_interaction()->get_check() == ::e_check_checked);
          //      return true;
          //   }
-         //   else if(ptopic->user_element_id() == "flag")
+         //   else if(ptopic->user_interaction_id() == "flag")
          //   {
          //      papp->set_binding_flag_country_ca2_domain_image_on_hover(ptopic->user_interaction()->get_check() == ::e_check_checked);
          //      return true;
          //   }
-         //   else if(ptopic->user_element_id() == "flag_auto")
+         //   else if(ptopic->user_interaction_id() == "flag_auto")
          //   {
          //      papp->set_auto_launch_flag_on_hover(ptopic->user_interaction()->get_check() == ::e_check_checked);
          //      return true;

@@ -193,7 +193,7 @@ namespace app_complex_form
          else if (ptopic->m_atom == ::id_set_check && ::is_set(ptopic->m_puserelement))
          {
 
-            string strCheck = ptopic->m_puserelement->m_atom;
+            string strCheck = ptopic->m_puserelement->user_interaction()->m_atom;
 
             if (strCheck.case_insensitive_begins_eat("bilbo"))
             {

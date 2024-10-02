@@ -166,7 +166,7 @@ namespace app_complex_form
    //   if(ptopic->m_atom == ::id_click)
    //   {
 
-   //      if(ptopic->user_element_id() == "simple_form_toggle")
+   //      if(ptopic->user_interaction_id() == "simple_form_toggle")
    //      {
 
    //         m_pimpact->set_need_layout();

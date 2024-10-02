@@ -206,7 +206,7 @@ namespace simple_os_drag_and_drop
          else if (ptopic->m_atom == ::id_set_check && ptopic->user_interaction() != nullptr)
          {
 
-            string strCheck = ptopic->user_element_id();
+            string strCheck = ptopic->user_interaction_id();
 
 
             if (strCheck.case_insensitive_begins_eat("bilbo"))
