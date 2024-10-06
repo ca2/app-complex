@@ -357,7 +357,7 @@ namespace mediaplaylist
                   frame_window * pframe = get_parent_frame();
                   pPopup->TrackPopupMenu(
                      point.x(), point.y(),
-                     (::user::interaction_impl *) pframe);
+                     (::windowing::window *) pframe);
                }*/
       }
       else
@@ -370,7 +370,7 @@ namespace mediaplaylist
                   frame_window * pframe = get_parent_frame();
                   pPopup->TrackPopupMenu(
                      point.x(), point.y(),
-                     (::user::interaction_impl *) pframe);
+                     (::windowing::window *) pframe);
                }*/
       }
    }
