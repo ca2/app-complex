@@ -96,7 +96,7 @@ namespace app_complex_video_capture
       //}
 
       
-      auto pDocTemplate = ::place(new ::user::single_document_template(
+      auto pDocTemplate = ::as(new ::user::single_document_template(
                           "main",
                           ::type < document >(),
                           ::type < main_frame >(),
@@ -106,7 +106,7 @@ namespace app_complex_video_capture
 
       m_ptemplateHelloMultiverseMain = pDocTemplate;
 
-      pDocTemplate = ::place(new ::user::single_document_template(
+      pDocTemplate = ::as(new ::user::single_document_template(
                           "main",
                           ::type < document >(),
                           ::type < frame >(),

@@ -128,7 +128,7 @@ namespace multimedia
       ::audio_mixer_user::level_control * control_data::allocate_level_control()
       {
 
-         auto pinteraction  = ::place(new ::audio_mixer_user_base::slider());
+         auto pinteraction  = __new ::audio_mixer_user_base::slider();
 
          return pinteraction;
 
@@ -138,7 +138,7 @@ namespace multimedia
       ::audio_mixer_user::toggle_control * control_data::allocate_toggle_control()
       {
 
-         auto pinteraction  = ::place(new ::audio_mixer_user_base::mute_control());
+         auto pinteraction  = __new ::audio_mixer_user_base::mute_control();
 
          return pinteraction;
 
@@ -148,7 +148,7 @@ namespace multimedia
       ::audio_mixer_user::label * control_data::allocate_label()
       {
 
-         auto pinteraction  = ::place(new ::audio_mixer_user_base::label());
+         auto pinteraction  = __new ::audio_mixer_user_base::label();
 
          return pinteraction;
 

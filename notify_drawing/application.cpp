@@ -48,7 +48,7 @@ namespace notify_drawing
 
       add_matter_locator("app-simple/drawing");
 
-      auto pdoctemplate = ::place(new ::user::single_document_template(
+      auto pdoctemplate = ::as(new ::user::single_document_template(
                                "main",
                                ::type < simple_drawing::document >(),
                                ::type < main_frame >(),
@@ -57,7 +57,7 @@ namespace notify_drawing
       add_document_template(pdoctemplate);
 
 
-//      pdoctemplate = ::place(new ::user::single_document_template(
+//      pdoctemplate = ::as(new ::user::single_document_template(
 //                          this,
 //                          "main",
 //                          ::type < simple_drawing::document >(),

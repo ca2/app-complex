@@ -127,7 +127,7 @@ namespace mediaplaylist
 
       {
 
-         auto pinteraction = ::place(new ::user::control_descriptor());
+         auto pinteraction = __new ::user::control_descriptor();
 
          pinteraction->m_bTransparent = true;
          pinteraction->m_type = ::type < ::user::button >();
@@ -761,9 +761,9 @@ namespace mediaplaylist
       pmessage->previous();
 
 
-      m_pimagelistSubItemHover   = ::place(new image_list());
-      m_pimagelistNormal         = ::place(new image_list());
-      m_pimagelistItemHover      = ::place(new image_list());
+      m_pimagelistSubItemHover   = __new image_list();
+      m_pimagelistNormal         = __new image_list();
+      m_pimagelistItemHover      = __new image_list();
 
       m_pimagelistSubItemHover->create(16, 16, 0,  10, 10);
       m_pimagelistSubItemHover->add_file("matter://mediaplaylist/execute_play_16.png");
@@ -784,7 +784,7 @@ namespace mediaplaylist
       rgb(220, 220, 215),
       127);
 
-      m_pimagelistGroupHover = ::place(new image_list());
+      m_pimagelistGroupHover = __new image_list();
 
       m_pimagelistGroupHover->create(96, 96, 0,  10, 10);
       m_pimagelistGroupHover->add_file("matter://mediaplaylist/playlist_96.png");

@@ -26,7 +26,7 @@ namespace video_input_video_for_linux
 	void thread::run()
 	{
 
-		m_pcallback = ::place(new callback(m_pdevice, m_uDevice));
+		m_pcallback = __new callback(m_pdevice, m_uDevice);
 
       m_pcallback->initialize(this);
 

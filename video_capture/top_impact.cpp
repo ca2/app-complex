@@ -2,7 +2,7 @@
 #include "top_impact.h"
 #include "edit_impact.h"
 #include "toggle_impact.h"
-#include "acme/platform/sequencer.h"
+//#include "acme/platform/sequencer.h"
 //#include "acme/user/nano/nano.h"
 
 

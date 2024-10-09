@@ -143,7 +143,9 @@ void ShowError(HWND hwnd, PCWSTR szMessage, HRESULT hr)
    if (SUCCEEDED(StringCchPrintfW(msg, ARRAYSIZE(msg), L"%s (hr = 0x%X)", szMessage, hr)))
    {
 
-      message_box_synchronous(hwnd, msg, nullptr, e_message_box_ok | MB_ICONERROR);
+      auto pmessagebox = __initialize_new ::message_box(hwnd, msg, nullptr, e_message_box_ok | MB_ICONERROR);
+
+send(pmessagebox);
 
    }
 

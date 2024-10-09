@@ -65,7 +65,7 @@ namespace video_input_video_for_linux
 				for (UINT32 i = 0; i < cCount; i++)
 				{
 
-					auto pdevice = ::place(new device());
+					auto pdevice = __new device();
 
 					pdevice->readInfoOfDevice(ppDevices[i], i);
 

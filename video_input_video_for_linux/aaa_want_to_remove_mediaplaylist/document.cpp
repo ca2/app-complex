@@ -78,7 +78,7 @@ namespace mediaplaylist
 
       m_filepathPreviousRegular = path;
 
-      auto pplaylist = ::place(new multimedia_playlist::veriwell::playlist());
+      auto pplaylist = __new multimedia_playlist::veriwell::playlist();
 
       set_impact_playlist(pplaylist);
 
@@ -206,7 +206,7 @@ namespace mediaplaylist
       if (impact_playlist() == nullptr)
       {
 
-         auto pplaylist = ::place(new ::multimedia_playlist::veriwell::playlist());
+         auto pplaylist = __new ::multimedia_playlist::veriwell::playlist();
 
          set_impact_playlist(pplaylist);
 
@@ -896,7 +896,7 @@ processed_new:
          if (impact_playlist() == nullptr)
          {
 
-            auto pplaylist = ::place(new multimedia_playlist::veriwell::playlist());
+            auto pplaylist = __new multimedia_playlist::veriwell::playlist();
 
             set_impact_playlist(pplaylist);
 
@@ -2025,9 +2025,9 @@ retry0:
 //      {
 //         string strName = newName.get_string();
 //         newName["url"] = strName;
-//         newName["xmledit"] = ::place(new ::memory_file(*memfileEdit));
+//         newName["xmledit"] = __new ::memory_file(*memfileEdit);
 ////         newName["xmledit"].cast < ::memory_file >()->release();
-//         newName["xml"] = ::place(new ::memory_file(*memfileXml));
+//         newName["xml"] = __new ::memory_file(*memfileXml);
 //  //       newName["xml"].cast < ::memory_file >()->release();
 //      }
 //

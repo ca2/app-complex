@@ -45,7 +45,7 @@ namespace mediaplay
    ::pointer<::mediaplay::data>document::create_new_mediaplay_data()
    {
 
-      return ::place(new ::mediaplay::data());
+      return __new ::mediaplay::data();
 
    }
 

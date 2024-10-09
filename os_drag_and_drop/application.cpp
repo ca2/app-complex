@@ -54,7 +54,7 @@ namespace simple_os_drag_and_drop
 
       add_matter_locator("app-simple/drawing");
 
-      auto pdoctemplate = ::place(new ::user::single_document_template(
+      auto pdoctemplate = ::as(new ::user::single_document_template(
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
@@ -64,7 +64,7 @@ namespace simple_os_drag_and_drop
       add_document_template(pdoctemplate);
 
 
-      pdoctemplate = ::place(new ::user::single_document_template(
+      pdoctemplate = ::as(new ::user::single_document_template(
                           "main",
                           ::type < document >(),
                           ::type < frame >(),

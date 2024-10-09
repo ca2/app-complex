@@ -172,7 +172,7 @@
 ////
 ////#endif
 ////
-////      m_pmultimediafile = ::place(new ::multimedia::file_application());
+////      m_pmultimediafile = __new ::multimedia::file_application();
 ////
 ////#ifdef WINDOWS_DESKTOP
 ////
@@ -317,14 +317,14 @@
 ////      }
 ////
 ////      // xxx TODO
-////      //add_library(::place(new ::multimedia::library()));
+////      //add_library(__new ::multimedia::library());
 ////
-////      m_pmediaplay = ::place(new ::mediaplay::mediaplay());
+////      m_pmediaplay = __new ::mediaplay::mediaplay();
 ////
 ////      if (m_pmediaplay == nullptr)
 ////         return false;
 ////
-////      m_pmediaplaylist = ::place(new ::mediaplaylist::media_playlist());
+////      m_pmediaplaylist = __new ::mediaplaylist::media_playlist();
 ////
 ////
 ////      if (m_pmediaplaylist.is_null())
@@ -549,7 +549,7 @@
 ////
 ////      ::pointer<::tts::speaker>pspeaker;
 ////
-////      pspeaker = ::place(new ms_translator_speaker());
+////      pspeaker = __new ms_translator_speaker();
 ////
 ////      return pspeaker;
 ////
@@ -947,7 +947,7 @@ pacmedirectory->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".mp
 ////   LPWAVEOUT application::waveout_open(int iChannel, LPAUDIOFORMAT pformat, LPWAVEOUT_CALLBACK pcallback)
 ////   {
 ////
-////      auto pplugin = ::place(new ::audio_plugin::source());
+////      auto pplugin = __new ::audio_plugin::source();
 ////
 ////      if (pplugin.is_null())
 ////      {

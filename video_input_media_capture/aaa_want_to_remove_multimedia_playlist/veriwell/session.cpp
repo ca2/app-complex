@@ -28,14 +28,14 @@ namespace multimedia_playlist
       ::pointer<::multimedia_playlist::playlist>session::new_playlist()
       {
 
-         return ::place(new playlist());
+         return __new playlist();
 
       }
 
       ::pointer<::multimedia_playlist::track>session::new_track()
       {
 
-         return ::place(new track());
+         return __new track();
 
       }
 
@@ -188,7 +188,7 @@ namespace multimedia_playlist
          if (::is_null(pFind))
          {
 
-            auto ppl = ::place(new ::multimedia_playlist::veriwell::playlist());
+            auto ppl = __new ::multimedia_playlist::veriwell::playlist();
 
             ppl->load(payloadFile);
 

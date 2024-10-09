@@ -64,7 +64,7 @@ namespace video_input_video_avfoundation
 
       CFTypeRef * ptyperef = nullptr;
       
-      auto pitemaDevice = ::place(new ::item_array());
+      auto pitemaDevice = __new ::item_array();
       
       auto count =  avfoundation_enumerate_webcams(&ptyperef);
       
@@ -77,7 +77,7 @@ namespace video_input_video_avfoundation
          
          string strHardwareId = ::string_from_strdup(avcapture_device_unique_id(typerefAVCaptureDevice));
          
-         auto pdevice = ::place(new device(iDevice, strName,"", strHardwareId));
+         auto pdevice = __new device(iDevice, strName,"", strHardwareId);
   
          pdevice->m_ptyperefAVCaptureDevice = typerefAVCaptureDevice;
          
