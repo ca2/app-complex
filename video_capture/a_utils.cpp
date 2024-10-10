@@ -145,7 +145,7 @@ void ShowError(HWND hwnd, PCWSTR szMessage, HRESULT hr)
 
       auto pmessagebox = __initialize_new ::message_box(hwnd, msg, nullptr, e_message_box_ok | MB_ICONERROR);
 
-send(pmessagebox);
+pmessagebox->sync();
 
    }
 
