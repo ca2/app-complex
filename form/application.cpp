@@ -38,7 +38,7 @@ namespace app_complex_form
 
       //m_bMultiverseChat          = true;
 
-//auto test = new int();
+//auto test = __new int();
 
    }
 
@@ -97,7 +97,7 @@ namespace app_complex_form
       //}
 
       
-      add_impact_system("main", ::as(new ::user::single_document_template(
+      add_impact_system("main", ::as(__new ::user::single_document_template(
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
@@ -107,7 +107,7 @@ namespace app_complex_form
 
 
       add_impact_system(
-         "impact", ::as(new ::user::single_document_template(
+         "impact", ::as(__new ::user::single_document_template(
                           "main",
                           ::type < document >(),
                           ::type < frame >(),

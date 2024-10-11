@@ -83,7 +83,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////         float ffps;
 ////         uint64_t timeout_usec;
 ////
-////         //informationf("%s: new capture thread", m_pdevice->m_iDeviceice_id);
+////         //informationf("%s: __new capture thread", m_pdevice->m_iDeviceice_id);
 ////         //os_set_thread_name("v4l2: capture");
 ////
 ////         /* Get framerate and calculate appropriate select timeout value. */
@@ -106,9 +106,9 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////
 ////      m_bCapturing = true;
 ////
-////      informationf("%s: __new< capture started", m_pdevice->m_strDevice.c_str >());
+////      informationf("%s: __allocate< capture started", m_pdevice->m_strDevice.c_str >());
 ////
-////      m_pframe = __new< ::video::frame(v4l2_pix_fmt_to_video_format >(m_pdevice->m_iPixFmt),
+////      m_pframe = __allocate< ::video::frame(v4l2_pix_fmt_to_video_format >(m_pdevice->m_iPixFmt),
 ////                                    m_pdevice->m_size.cx(), m_pdevice->m_size.cy());
 ////
 //////      m_pframe->video_frame_init(x);

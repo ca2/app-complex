@@ -452,7 +452,7 @@ namespace mediaplaylist
 
       m_strMatter = "mediaplaylist";
 
-      m_pimpactsystem = ::as(new user::single_document_template(
+      m_pimpactsystem = ::as(__new user::single_document_template(
                             m_strMatter,
                             ::type < ::mediaplaylist::document >(),
                             m_typeatomFrameWnd, // custom MDI child frame
@@ -604,7 +604,7 @@ namespace mediaplaylist
       if (m_psessionVeriwell == nullptr)
       {
 
-         m_psessionVeriwell = new ::multimedia_playlist::veriwell::session();
+         m_psessionVeriwell = __new ::multimedia_playlist::veriwell::session();
 
          if (m_psessionVeriwell == nullptr)
          {

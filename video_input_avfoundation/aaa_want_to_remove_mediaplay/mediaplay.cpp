@@ -38,7 +38,7 @@ namespace mediaplay
 
       }
 
-      auto psingledocumenttemplate = ::as(new single_document_template(
+      auto psingledocumenttemplate = ::as(__new single_document_template(
                                           m_strMatter,
                                           m_typeatomDocument,
                                           m_typeatomFrameWnd,

@@ -49,7 +49,7 @@ namespace simple_application
 
       }
 
-      auto pdoctemplate = ::as(new ::user::single_document_template(
+      auto pdoctemplate = ::as(__new ::user::single_document_template(
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),

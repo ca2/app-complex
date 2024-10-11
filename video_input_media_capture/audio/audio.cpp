@@ -81,7 +81,7 @@ namespace audio
       if (!pplugin->audio_matches(sound_track()->m_paudiomixer))
       {
 
-         auto presampler = __new ::audio::resampler();
+         auto presampler = __allocate ::audio::resampler();
 
          presampler->m_pplugin = pplugin;
 
@@ -334,7 +334,7 @@ namespace audio
 
 #endif
 
-      __construct(m_pmultimediafile, __new ::multimedia::file_application());
+      __construct(m_pmultimediafile, __allocate ::multimedia::file_application());
 
 #ifdef WINDOWS_DESKTOP
 
@@ -926,7 +926,7 @@ pacmedirectory->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".mp
    LPWAVEOUT audio::waveout_open(int iChannel, LPAUDIOFORMAT pformat, LPWAVEOUT_CALLBACK pcallback)
    {
 
-      auto pplugin = __new ::audio::source();
+      auto pplugin = __allocate ::audio::source();
 
       if (pplugin.is_null())
       {
@@ -953,7 +953,7 @@ pacmedirectory->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".mp
 
       //::file::path path = payloadFile.get_file_path();
 
-      //auto pfile = __new rtp::file();
+      //auto pfile = __allocate rtp::file();
 
       //if (!pfile->rx_open(purl->get_server(path), purl->get_port(path)))
       //{

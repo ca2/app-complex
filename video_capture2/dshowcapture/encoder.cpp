@@ -254,8 +254,8 @@ bool HVideoEncoder::SetupEncoder(IBaseFilter *filter)
 
 	encoder = filter;
 	device  = deviceFilter;
-	capture = new CaptureFilter(captureInfo);
-	output  = new OutputFilter(outputInfo);
+	capture = __new CaptureFilter(captureInfo);
+	output  = __new OutputFilter(outputInfo);
 
 	graph->AddFilter(output, nullptr);
 	graph->AddFilter(device, L"Device Filter");

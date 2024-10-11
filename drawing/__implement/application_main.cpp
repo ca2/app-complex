@@ -8,7 +8,7 @@
 //int __implement()
 //{
 //
-//   auto papp = new app_complex_drawing::application();
+//   auto papp = __new app_complex_drawing::application();
 //
 //   int iExitCode = papp->__implement();
 //
@@ -23,7 +23,7 @@
 ::i32 application_main(::platform::platform * pplatform)
 {
 
-   auto papplication = new app_complex_drawing::application();
+   auto papplication = __new app_complex_drawing::application();
 
    int iExitCode = papplication->application_main(pplatform);
 

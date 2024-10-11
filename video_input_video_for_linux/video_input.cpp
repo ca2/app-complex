@@ -173,7 +173,7 @@ namespace video_input_video_for_linux
          else
          {
 
-            auto pdev = __new device(iDevice++, (const char *) video_cap.card, strDevice, strHardwareId);
+            auto pdev = __allocate device(iDevice++, (const char *) video_cap.card, strDevice, strHardwareId);
 
             pdev->initialize(this);
 

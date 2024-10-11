@@ -34,7 +34,7 @@ namespace audio
 
       m_pdecoderplugin = paudio->audiowave()->m_pdecoderset->LoadPlugin("audio_decode_wave");
 
-      auto estatus = __construct(m_pwaveplayer, __new ::wave::device_player());
+      auto estatus = __construct(m_pwaveplayer, __allocate ::wave::device_player());
 
       if (!estatus)
       {
@@ -178,7 +178,7 @@ namespace audio
       if (!pdecoder->audio_matches(m_paudiomixer))
       {
 
-         auto presampler = __new ::audio::resampler();
+         auto presampler = __allocate ::audio::resampler();
 
 
 
@@ -219,7 +219,7 @@ namespace audio
       if (!pplugin->audio_matches(m_paudiomixer))
       {
 
-         auto presampler = __new ::audio::resampler();
+         auto presampler = __allocate ::audio::resampler();
 
          presampler->m_pplugin = pplugin;
 
@@ -255,7 +255,7 @@ namespace audio
       if (!pplugin->audio_matches(m_paudiomixer))
       {
 
-         auto presampler = __new ::audio::resampler();
+         auto presampler = __allocate ::audio::resampler();
 
          presampler->m_pplugin = pplugin;
 

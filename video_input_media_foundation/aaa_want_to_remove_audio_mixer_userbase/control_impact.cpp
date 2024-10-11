@@ -23,7 +23,7 @@ namespace multimedia
          m_pbrushBackground(e_create)
       {
 
-         //m_pdata = new control_data(this);
+         //m_pdata = __new control_data(this);
 
          m_bInitialized = false;
          //   m_iCacheNextIndex = 0;
@@ -359,7 +359,7 @@ namespace multimedia
             
             ::rectangle_f64 rectangle(0, 0, 0, 0);
             
-            auto pst = __new simple_static();
+            auto pst = __allocate simple_static();
 
             pst->create_window(this, pSource->get_source_name());
 

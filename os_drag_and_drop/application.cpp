@@ -54,7 +54,7 @@ namespace simple_os_drag_and_drop
 
       add_matter_locator("app-simple/drawing");
 
-      auto pdoctemplate = ::as(new ::user::single_document_template(
+      auto pdoctemplate = ::as(__new ::user::single_document_template(
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
@@ -64,7 +64,7 @@ namespace simple_os_drag_and_drop
       add_document_template(pdoctemplate);
 
 
-      pdoctemplate = ::as(new ::user::single_document_template(
+      pdoctemplate = ::as(__new ::user::single_document_template(
                           "main",
                           ::type < document >(),
                           ::type < frame >(),
@@ -205,7 +205,7 @@ namespace simple_os_drag_and_drop
 //::acme::library * app_simple_drag_and_drop_get_new_library()
 //{
 //
-//   return new ::apex::single_application_library < ::simple_os_drag_and_drop::application >("app-simple/drag_and_drop");
+//   return __new ::apex::single_application_library < ::simple_os_drag_and_drop::application >("app-simple/drag_and_drop");
 //
 //}
 //

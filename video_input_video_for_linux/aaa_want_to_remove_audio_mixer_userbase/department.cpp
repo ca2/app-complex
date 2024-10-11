@@ -89,7 +89,7 @@ namespace multimedia
          if(m_pimpactsystem == nullptr)
          {
 
-            m_pimpactsystem = ::as(new ::user::multiple_document_template(
+            m_pimpactsystem = ::as(__new ::user::multiple_document_template(
                                   "audio_mixer_user_base/audio_mixer",
                                   ::type < document >(),
                                   ::type < frame_window >(),
@@ -114,7 +114,7 @@ namespace multimedia
 
          }
 
-         __construct(m_pthread, __new thread());
+         __construct(m_pthread, __allocate thread());
 
          if (m_pthread == nullptr)
          {

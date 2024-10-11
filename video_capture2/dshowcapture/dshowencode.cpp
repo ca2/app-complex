@@ -47,7 +47,7 @@ bool VideoEncoder::Active() const
 bool VideoEncoder::ResetGraph()
 {
 	delete context;
-	context = new HVideoEncoder();
+	context = __new HVideoEncoder();
 
 	return context->initialized;
 }
@@ -56,7 +56,7 @@ bool VideoEncoder::SetConfig(VideoEncoderConfig &config)
 {
 	if (context->active) {
 		delete context;
-		context = new HVideoEncoder();
+		context = __new HVideoEncoder();
 	}
 
 	return context->SetConfig(config);

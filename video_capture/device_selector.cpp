@@ -82,7 +82,7 @@ namespace app_complex_video_capture
    //   if (::is_null(pitem))
    //   {
 
-   //      pitem = __new ::item();
+   //      pitem = __allocate ::item();
 
    //      pitem->m_pparticle = pdevice;
 
@@ -116,7 +116,7 @@ namespace app_complex_video_capture
       //   if (::is_null(pitem))
       //   {
 
-      //      pitem = __new ::item();
+      //      pitem = __allocate ::item();
 
       //      pitem->m_pparticle = pdevice;
 

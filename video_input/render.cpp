@@ -64,7 +64,7 @@ namespace video_input
    void render::destroy()
    {
 
-      m_pevRenderEnd = new manual_reset_event();
+      m_pevRenderEnd = __new manual_reset_event();
 
       set_finish();
 

@@ -17,7 +17,7 @@ namespace multimedia
          label::label()
          {
 
-            __construct(m_pdata, __new ::audio_mixer::control_data());
+            __construct(m_pdata, __allocate ::audio_mixer::control_data());
 
          }
 

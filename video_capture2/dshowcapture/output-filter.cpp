@@ -255,7 +255,7 @@ STDMETHODIMP OutputPin::EnumMediaTypes(IEnumMediaTypes **ppEnum)
 {
 	PrintFunc(L"OutputPin::EnumMediaTypes");
 
-	*ppEnum = new OutputEnumMediaTypes(this);
+	*ppEnum = __new OutputEnumMediaTypes(this);
 	if (!*ppEnum)
 		return E_OUTOFMEMORY;
 
@@ -422,8 +422,8 @@ public:
 OutputFilter::OutputFilter(const PinOutputInfo &info)
 	: refCount (0),
 	  state    (State_Stopped),
-	  pin      (__new< OutputPin >(this, info)),
-	  misc     (new SourceMiscFlags)
+	  pin      (__allocate< OutputPin >(this, info)),
+	  misc     (__new SourceMiscFlags)
 {
 }
 
@@ -536,7 +536,7 @@ STDMETHODIMP OutputFilter::EnumPins(IEnumPins **ppEnum)
 {
 	PrintFunc(L"OutputFilter::EnumPins");
 
-	*ppEnum = new OutputEnumPins(this, nullptr);
+	*ppEnum = __new OutputEnumPins(this, nullptr);
 	return (*ppEnum == nullptr) ? E_OUTOFMEMORY : NOERROR;
 }
 
@@ -650,7 +650,7 @@ STDMETHODIMP OutputEnumPins::Reset()
 
 STDMETHODIMP OutputEnumPins::Clone(IEnumPins **ppEnum)
 {
-	*ppEnum = new OutputEnumPins(filter, this);
+	*ppEnum = __new OutputEnumPins(filter, this);
 	return (*ppEnum == nullptr) ? E_OUTOFMEMORY : NOERROR;
 }
 
@@ -729,7 +729,7 @@ STDMETHODIMP OutputEnumMediaTypes::Reset()
 
 STDMETHODIMP OutputEnumMediaTypes::Clone(IEnumMediaTypes **ppEnum)
 {
-	*ppEnum = new OutputEnumMediaTypes(pin);
+	*ppEnum = __new OutputEnumMediaTypes(pin);
 	return (*ppEnum == nullptr) ? E_OUTOFMEMORY : NOERROR;
 }
 

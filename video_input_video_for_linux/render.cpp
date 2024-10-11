@@ -134,7 +134,7 @@ namespace video_input_video_for_linux
 
       ::video_input::render::on_destroy();
 
-      //m_pevRenderEnd = new manual_reset_event(this);
+      //m_pevRenderEnd = __new manual_reset_event(this);
 
       //m_prender->set_finish();
 
