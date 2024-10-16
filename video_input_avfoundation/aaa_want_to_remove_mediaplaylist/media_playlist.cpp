@@ -452,11 +452,11 @@ namespace mediaplaylist
 
       m_strMatter = "mediaplaylist";
 
-      m_pimpactsystem = ::as(__new user::single_document_template(
+      m_pimpactsystem = __initialize_new user::single_document_template(
                             m_strMatter,
                             ::type < ::mediaplaylist::document >(),
                             m_typeatomFrameWnd, // custom MDI child frame
-                            m_typeatomImpact)));
+                            m_typeatomImpact));
 
       if (m_pimpactsystem == nullptr)
       {

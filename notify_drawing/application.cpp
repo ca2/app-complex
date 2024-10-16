@@ -48,21 +48,21 @@ namespace notify_drawing
 
       add_matter_locator("app-simple/drawing");
 
-      auto pdoctemplate = ::as(__new ::user::single_document_template(
+      auto pdoctemplate = __initialize_new ::user::single_document_template(
                                "main",
                                ::type < simple_drawing::document >(),
                                ::type < main_frame >(),
-                               ::type < simple_drawing::tab_impact >())));
+                               ::type < simple_drawing::tab_impact >()));
       m_ptemplateNotifyDrawingMain = pdoctemplate;
       add_document_template(pdoctemplate);
 
 
-//      pdoctemplate = ::as(__new ::user::single_document_template(
+//      pdoctemplate = __initialize_new ::user::single_document_template(
 //                          this,
 //                          "main",
 //                          ::type < simple_drawing::document >(),
 //                          ::type < simple_drawing::frame >(),
-//                          ::type < simple_drawing::main_impact >())));
+//                          ::type < simple_drawing::main_impact >()));
 //
 //      m_ptemplateNotifyDrawingImpact = pdoctemplate;
 //
