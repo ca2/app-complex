@@ -25,7 +25,7 @@ void application_main()
 
    auto papplication = __new app_complex_drawing::application();
 
-   papplication->application_main(pplatform);
+   papplication->application_main();
 
 }
 
