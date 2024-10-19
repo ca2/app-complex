@@ -64,9 +64,9 @@ namespace app_complex_video_capture
       if(m_peditimpact == nullptr)
       {
 
-         auto psequencer = message_box(nullptr,"Could not create folder edit impact");
+         auto pmessagebox = __initialize_new ::message_box(nullptr,"Could not create folder edit impact");
 
-         psequencer->do_asynchronously();
+         pmessagebox->async();
 
       }
 
@@ -77,9 +77,9 @@ namespace app_complex_video_capture
       if(m_ptoggleimpact == nullptr)
       {
 
-         auto psequencer = message_box(nullptr,"Could not create file list ::user::impact");
+         auto pmessagebox = __initialize_new ::message_box(nullptr,"Could not create file list ::user::impact");
 
-         psequencer->do_asynchronously();
+         pmessagebox->async();
 
       }
 

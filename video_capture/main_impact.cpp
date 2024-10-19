@@ -71,9 +71,9 @@ namespace app_complex_video_capture
       if(m_pimpact == nullptr)
       {
 
-         auto psequencer = message_box(nullptr,"Could not create file list ::user::impact");
+         auto pmessagebox = __initialize_new ::message_box("Could not create file list ::user::impact");
 
-         psequencer->do_asynchronously();
+         pmessagebox->async();
 
       }
 
