@@ -215,7 +215,7 @@ STDMETHODIMP CapturePin::EnumMediaTypes(IEnumMediaTypes **ppEnum)
 {
 	PrintFunc(L"CapturePin::EnumMediaTypes");
 
-	*ppEnum = __new CaptureEnumMediaTypes(this);
+	*ppEnum = ___new CaptureEnumMediaTypes(this);
 	if (!*ppEnum)
 		return E_OUTOFMEMORY;
 
@@ -497,7 +497,7 @@ STDMETHODIMP CaptureFilter::EnumPins(IEnumPins **ppEnum)
 {
 	PrintFunc(L"CaptureFilter::EnumPins");
 
-	*ppEnum = __new CaptureEnumPins(this, nullptr);
+	*ppEnum = ___new CaptureEnumPins(this, nullptr);
 	return (*ppEnum == nullptr) ? E_OUTOFMEMORY : NOERROR;
 }
 
@@ -611,7 +611,7 @@ STDMETHODIMP CaptureEnumPins::Reset()
 
 STDMETHODIMP CaptureEnumPins::Clone(IEnumPins **ppEnum)
 {
-	*ppEnum = __new CaptureEnumPins(filter, this);
+	*ppEnum = ___new CaptureEnumPins(filter, this);
 	return (*ppEnum == nullptr) ? E_OUTOFMEMORY : NOERROR;
 }
 
@@ -690,7 +690,7 @@ STDMETHODIMP CaptureEnumMediaTypes::Reset()
 
 STDMETHODIMP CaptureEnumMediaTypes::Clone(IEnumMediaTypes **ppEnum)
 {
-	*ppEnum = __new CaptureEnumMediaTypes(pin);
+	*ppEnum = ___new CaptureEnumMediaTypes(pin);
 	return (*ppEnum == nullptr) ? E_OUTOFMEMORY : NOERROR;
 }
 

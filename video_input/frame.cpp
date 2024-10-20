@@ -2183,7 +2183,7 @@ void frame::copy_from(const frame * src)
 //   }
 //}
 //
-///* resamples/remixes __new audio to the designated main audio output format */
+///* resamples/remixes ___new audio to the designated main audio output format */
 //static void process_audio(obs_source_t * source,
 //const struct obs_source_audio * audio
 //)
@@ -2395,7 +2395,7 @@ void frame::copy_from(const frame * src)
 //
 //#if DEBUG_ASYNC_FRAMES
 //blog(LOG_DEBUG,
-//           "__new frame, "
+//           "___new frame, "
 //           "source->last_frame_ts: %llu, "
 //           "next_m_timestamp: %llu",
 //           source->last_frame_ts, next_m_timestamp);

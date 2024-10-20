@@ -9,7 +9,7 @@
 
 //#include "acme/operating_system/windows_common/cotaskptr.h"
 
-/* The __new dv timing api was introduced in Linux 3.4
+/* The ___new dv timing api was introduced in Linux 3.4
  * Currently we simply disable dv timings when this is not defined */
 extern "C"
 {

@@ -23,7 +23,7 @@ namespace  mediamanager
    void album_build_thread::init_thread()
    {
 
-      m_puserinteraction = __new album_build_window();
+      m_puserinteraction = ___new album_build_window();
 
       m_puserinteraction->create();
 

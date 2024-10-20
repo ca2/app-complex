@@ -83,7 +83,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////         float ffps;
 ////         uint64_t timeout_usec;
 ////
-////         //informationf("%s: __new capture thread", m_pdevice->m_iDeviceice_id);
+////         //informationf("%s: ___new capture thread", m_pdevice->m_iDeviceice_id);
 ////         //os_set_thread_name("v4l2: capture");
 ////
 ////         /* Get framerate and calculate appropriate select timeout value. */

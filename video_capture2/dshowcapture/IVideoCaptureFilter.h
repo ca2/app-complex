@@ -187,7 +187,7 @@ DECLARE_INTERFACE_(IElgatoVideoCaptureFilter3, IElgatoVideoCaptureFilter2)
 //! Messages
 enum VIDEO_CAPTURE_FILTER_NOTIFICATION
 {
-	//! Description: Delay of the device has changed. Call GetDelayMs() to get the __new delay.
+	//! Description: Delay of the device has changed. Call GetDelayMs() to get the ___new delay.
     VIDEO_CAPTURE_FILTER_NOTIFICATION_DEVICE_DELAY_CHANGED              = 110,      //!< Data: none
 
 	//! Description: Output format has changed. Update your signal path accordingly.

@@ -23,7 +23,7 @@ namespace multimedia
          m_pbrushBackground(e_create)
       {
 
-         //m_pdata = __new control_data(this);
+         //m_pdata = ___new control_data(this);
 
          m_bInitialized = false;
          //   m_iCacheNextIndex = 0;

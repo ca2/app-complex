@@ -604,7 +604,7 @@ namespace mediaplaylist
       if (m_psessionVeriwell == nullptr)
       {
 
-         m_psessionVeriwell = __new ::multimedia_playlist::veriwell::session();
+         m_psessionVeriwell = ___new ::multimedia_playlist::veriwell::session();
 
          if (m_psessionVeriwell == nullptr)
          {

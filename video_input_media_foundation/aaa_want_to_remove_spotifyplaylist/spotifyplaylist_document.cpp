@@ -29,7 +29,7 @@ namespace mediaplaylist
       m_xmldoc(pparticle)
    {
       m_xmldoc.get_root()->set_name("playlist");
-      m_pxmledit              = __new ::xml::edit(this);
+      m_pxmledit              = ___new ::xml::edit(this);
       m_xmldoc.m_pedit        = m_pxmledit;
       m_pxmledit->m_spdata    = &m_xmldoc;
 

@@ -9,7 +9,7 @@
 //int __implement()
 //{
 //
-//   auto papp = __new app_complex_form::application();
+//   auto papp = ___new app_complex_form::application();
 //
 //   int iExitCode = papp->__implement();
 //
@@ -24,7 +24,7 @@
 void application_main()
 {
 
-   auto papplication = __new app_complex_form::application();
+   auto papplication = ___new app_complex_form::application();
 
    papplication->application_main();
 
