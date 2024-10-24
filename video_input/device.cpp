@@ -798,7 +798,7 @@ namespace video_input
 	string device::get_id2()
 	{
 
-		auto psystem = system()->m_papexsystem;
+		auto psystem = system();
 
 		return psystem->crypto_md5_text(m_strName);
 

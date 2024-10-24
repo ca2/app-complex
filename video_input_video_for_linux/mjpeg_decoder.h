@@ -43,7 +43,7 @@ virtual public ::object
 public:
 
    const AVCodec * m_pcodec;
-   AVCodecContext * m_pcontext;
+   AVCodecContext * m_papplication;
    AVPacket * m_ppacket;
    AVFrame * m_pframe;
    AVFrame * m_pframePicture;

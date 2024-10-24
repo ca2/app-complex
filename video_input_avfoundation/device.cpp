@@ -411,7 +411,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
    string device::get_id2()
 	{
 
-		auto psystem = system()->m_papexsystem;
+		auto psystem = system();
 
 		return psystem->crypto_md5_text(m_strName);
 

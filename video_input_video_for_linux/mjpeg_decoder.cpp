@@ -107,9 +107,9 @@ namespace video_input_video_for_linux
          av_packet_free(&m_ppacket);
       }
 
-      if (m_pcontext)
+      if (m_papplication)
       {
-         avcodec_free_context(&m_pcontext);
+         avcodec_free_context(&m_papplication);
       }
    }
 
@@ -128,9 +128,9 @@ namespace video_input_video_for_linux
 
       }
 
-      m_pcontext = avcodec_alloc_context3(m_pcodec);
+      m_papplication = avcodec_alloc_context3(m_pcodec);
 
-      if (!m_pcontext)
+      if (!m_papplication)
       {
 
          throw resource_exception();
@@ -156,11 +156,11 @@ namespace video_input_video_for_linux
 
       }
 
-      m_pcontext->flags2 |= AV_CODEC_FLAG2_FAST;
+      m_papplication->flags2 |= AV_CODEC_FLAG2_FAST;
 
-      m_pcontext->pix_fmt = AV_PIX_FMT_YUVJ422P;
+      m_papplication->pix_fmt = AV_PIX_FMT_YUVJ422P;
 
-      if (avcodec_open2(m_pcontext, m_pcodec, NULL) < 0)
+      if (avcodec_open2(m_papplication, m_pcodec, NULL) < 0)
       {
 
          throw ::exception(error_failed, "failed to open codec");
@@ -180,7 +180,7 @@ namespace video_input_video_for_linux
 
       m_ppacket->size = length;
 
-      if (avcodec_send_packet(m_pcontext, m_ppacket) < 0)
+      if (avcodec_send_packet(m_papplication, m_ppacket) < 0)
       {
 
          error() <<"failed to send jpeg to codec";
@@ -189,7 +189,7 @@ namespace video_input_video_for_linux
 
       }
 
-      if (avcodec_receive_frame(m_pcontext, m_pframe) < 0)
+      if (avcodec_receive_frame(m_papplication, m_pframe) < 0)
       {
 
          error() <<"failed to recieve frame from codec";

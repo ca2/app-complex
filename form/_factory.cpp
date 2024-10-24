@@ -6,6 +6,6 @@
 __FACTORY_EXPORT void app_complex_form_factory(::factory::factory* pfactory)
 {
 
-   pfactory->add_factory_item < ::app_complex_form::application, ::acme::application >();
+   pfactory->add_factory_item < ::app_complex_form::application, ::platform::application >();
 
 }
