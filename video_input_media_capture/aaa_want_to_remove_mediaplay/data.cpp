@@ -638,9 +638,9 @@ namespace mediaplay
 
       string strPathName;
 
-      strPathName = pcontext->dir()->time() / "mplite";
+      strPathName = pcontext->directory()->time() / "mplite";
 
-      if(!pcontext->dir()->is(strPathName))
+      if(!pcontext->directory()->is(strPathName))
       {
 
          if(file()->exists(strPathName))
@@ -661,7 +661,7 @@ namespace mediaplay
 
          }
 
-         if (!pcontext->dir()->create(strPathName))
+         if (!pcontext->directory()->create(strPathName))
          {
 
             return false;

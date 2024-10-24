@@ -158,7 +158,7 @@ namespace mediaplaylist
       if(string(papp->m_dataid.m_atom.m_psz).find("&data_source=local&") >= 0)
       {
 
-         str = pcontext->dir()->userdata() / papp->m_strRelativeFolder / "default.playlist";
+         str = pcontext->directory()->userdata() / papp->m_strRelativeFolder / "default.playlist";
 
       }
       else
@@ -206,7 +206,7 @@ namespace mediaplaylist
       if(string(papp->m_dataid.m_atom.m_psz).find("&data_source=local&") >= 0)
       {
 
-         path = pcontext->dir()->userdata() / papp->m_strRelativeFolder;
+         path = pcontext->directory()->userdata() / papp->m_strRelativeFolder;
 
       }
       else

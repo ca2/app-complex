@@ -18,7 +18,7 @@
 //CLASS_DECL_APP_CORE_AUDIO string_array det_l(::particle * pparticle, string str)
 //{
 //
-//   //string strKey = acmefile()->as_string("C:\\sensitive\\sensitive\\seed\\google_translate_api.txt");
+//   //string strKey = file_system()->as_string("C:\\sensitive\\sensitive\\seed\\google_translate_api.txt");
 //
 //   //   strKey.trim();
 //
@@ -852,7 +852,7 @@ pacmedirectory->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".mp
 ////
 ////      //bool bRetry = false;
 ////
-////      string strKey = acmefile()->as_string("C:\\sensitive\\sensitive\\seed\\google_translate_api.txt");
+////      string strKey = file_system()->as_string("C:\\sensitive\\sensitive\\seed\\google_translate_api.txt");
 ////
 ////      strKey.trim();
 ////

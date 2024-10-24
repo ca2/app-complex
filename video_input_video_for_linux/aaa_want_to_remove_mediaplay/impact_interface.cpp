@@ -2070,8 +2070,8 @@ retry4:
 
          ::file::path strTitle = strPath.name();
 
-         ::file::path strFolder = pcontext->dir()->appdata() /unitext("Gravacões de Karaokê");
-         pcontext->dir()->create(strFolder);
+         ::file::path strFolder = pcontext->directory()->appdata() /unitext("Gravacões de Karaokê");
+         pcontext->directory()->create(strFolder);
 
 
          ::file::path strBase;

@@ -537,7 +537,7 @@ pacmedirectory->create(m_strLocationSettings);
 
       string username = "camiloveriwell";
 
-      string password = acmefile()->as_string(         auto psystem = system();
+      string password = file_system()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 

@@ -168,7 +168,7 @@ namespace multimedia
 
 #ifdef WINDOWS_DESKTOP
 
-         m_enhmetafile = GetEnhMetaFileW(wstring(pcontext->dir()->matter("veriwell_vmsp/image/vector/vmp.emf")));
+         m_enhmetafile = GetEnhMetaFileW(wstring(pcontext->directory()->matter("veriwell_vmsp/image/vector/vmp.emf")));
 
 
          GetEnhMetaFileHeader(m_enhmetafile, sizeof(m_emh), &m_emh);

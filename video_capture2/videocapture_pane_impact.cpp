@@ -230,7 +230,7 @@ namespace app_complex_video_capture
 
       ::file::path path;
 
-      path = dir()->appdata() / "videocapture_menu.html";
+      path = directory()->appdata() / "videocapture_menu.html";
 
       file()->put_text(path, str);
 

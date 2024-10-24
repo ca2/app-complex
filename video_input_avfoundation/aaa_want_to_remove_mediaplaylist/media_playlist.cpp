@@ -371,9 +371,9 @@ namespace mediaplaylist
    bool media_playlist::GetFolder(::file::path & pathDir)
    {
 
-      pathDir = pcontext->dir()->music() / "Music/Playlists";
+      pathDir = pcontext->directory()->music() / "Music/Playlists";
 
-      pcontext->dir()->create(pathDir);
+      pcontext->directory()->create(pathDir);
 
       return true;
 
@@ -383,9 +383,9 @@ namespace mediaplaylist
    bool media_playlist::GetDiscardPath(::file::path & path)
    {
 
-      path = pcontext->dir()->music() / "Music/Playlists/ca2" / "discard.playlist";
+      path = pcontext->directory()->music() / "Music/Playlists/ca2" / "discard.playlist";
 
-      pcontext->dir()->create(path.folder());
+      pcontext->directory()->create(path.folder());
 
       return true;
 
@@ -395,9 +395,9 @@ namespace mediaplaylist
    bool media_playlist::GetDefaultPath(::file::path & path, bool bLocal)
    {
 
-      path = pcontext->dir()->music() / "Music/Playlists/ca2" / "default.playlist";
+      path = pcontext->directory()->music() / "Music/Playlists/ca2" / "default.playlist";
 
-      pcontext->dir()->create(path.folder());
+      pcontext->directory()->create(path.folder());
 
       return true;
 
@@ -615,7 +615,7 @@ namespace mediaplaylist
 
       }
 
-      if (acmefile()->exists(         auto psystem = system();
+      if (file_system()->exists(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 

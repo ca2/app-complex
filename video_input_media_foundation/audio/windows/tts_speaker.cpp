@@ -187,7 +187,7 @@ BOOL fCreateCategoryIfNotExist)
 
       ::property_set set;
 
-      string strNetworkPayload = papp->file()->as_string(papp->dir()->matter("speech/windows/lang.network_payload"));
+      string strNetworkPayload = papp->file()->as_string(papp->directory()->matter("speech/windows/lang.network_payload"));
 
       const char * pszNetworkPayload = strNetworkPayload;
 

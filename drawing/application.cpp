@@ -99,7 +99,7 @@ namespace app_complex_drawing
 
          //bool bCheck = false;
 
-         //if (application()->m_papexapplication->datastream()->get("simple_checkbox", bCheck))
+         //if (application()->datastream()->get("simple_checkbox", bCheck))
          //{
 
          //   pcheckbox->set_check(bCheck, ::e_source_initialize);
@@ -111,7 +111,7 @@ namespace app_complex_drawing
 
          //      bool bCheck = pcheck->bcheck();
 
-         //      application()->m_papexapplication->datastream()->set("simple_checkbox", bCheck);
+         //      application()->datastream()->set("simple_checkbox", bCheck);
 
          //      //::pointer <application> papplication = application();
 
@@ -131,7 +131,7 @@ namespace app_complex_drawing
 
          //bool bCheck = false;
 
-         ////if (application()->m_papexapplication->datastream()->get("no_client_frame", bCheck))
+         ////if (application()->datastream()->get("no_client_frame", bCheck))
          ////{
 
          ////   pcheckbox->set_check(bCheck, ::e_source_initialize);
@@ -143,7 +143,7 @@ namespace app_complex_drawing
 
          //      bool bCheck = pcheck->bcheck();
 
-         //      application()->m_papexapplication->datastream()->set("no_client_frame", bCheck);
+         //      application()->datastream()->set("no_client_frame", bCheck);
 
          //      //::pointer <application> papplication = application();
 

@@ -59,7 +59,7 @@ pacmedirectory->system() / "config\\waven\\time_auth.txt"));
          if (!bForce && m_strAccessToken.has_char() && (tNow - m_timeAuth).GetTotalSeconds() < (60 * 5))
             return true;
 
-         string strClientId = acmefile()->as_string(         auto psystem = system();
+         string strClientId = file_system()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
@@ -148,7 +148,7 @@ pacmedirectory->system() / "config\\spotify\\client_id.txt");
             set["post"]["code"] = strCode;
             set["post"]["redirect_uri"] = strRedirectUri;
 
-            string strClientSecret = acmefile()->as_string(         auto psystem = system();
+            string strClientSecret = file_system()->as_string(         auto psystem = system();
 
          auto pacmedirectory = psystem->m_pacmedirectory;
 
