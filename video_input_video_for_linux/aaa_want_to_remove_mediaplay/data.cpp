@@ -330,7 +330,7 @@ namespace mediaplay
             if(m_etype == data::type_rtp)
             {
 
-               command->OpenRtpFile(pcontext->m_papexcontext->get_reader(payloadFile));
+               command->OpenRtpFile(pcontext->get_reader(payloadFile));
 
             }
             else
@@ -342,7 +342,7 @@ namespace mediaplay
                                   //|| payloadFile.propset()["file"].cast < ::sockets::http_buffer >() != nullptr
                                   || payloadFile.propset()["file"].cast < ::file::file >() != nullptr); // may be seekable through memory buffer but should also know the length before-hand
 
-               command->OpenFile(pcontext->m_papexcontext->get_reader(payloadFile), bSeekable);
+               command->OpenFile(pcontext->get_reader(payloadFile), bSeekable);
 
             }
 
@@ -638,9 +638,9 @@ namespace mediaplay
 
       string strPathName;
 
-      strPathName = pcontext->m_papexcontext->dir()->time() / "mplite";
+      strPathName = pcontext->dir()->time() / "mplite";
 
-      if(!pcontext->m_papexcontext->dir()->is(strPathName))
+      if(!pcontext->dir()->is(strPathName))
       {
 
          if(file()->exists(strPathName))
@@ -661,7 +661,7 @@ namespace mediaplay
 
          }
 
-         if (!pcontext->m_papexcontext->dir()->create(strPathName))
+         if (!pcontext->dir()->create(strPathName))
          {
 
             return false;

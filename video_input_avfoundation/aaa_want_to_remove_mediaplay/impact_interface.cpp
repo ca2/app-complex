@@ -1069,7 +1069,7 @@ namespace mediaplay
 
             ::file::path path = papp->mediaplaylist()->m_pplaylistdoc->m_pplaylistImpact->m_path;
 
-            path = pcontext->m_papexcontext->defer_make_file_system_url(path);
+            path = pcontext->defer_make_file_system_url(path);
 
             papp->mediaplaylist()->m_pstartup->m_strPlaylist = path;
 
@@ -1583,7 +1583,7 @@ retry4:
 
                      auto pfile = create_memory_file();
 
-                     pcontext->m_papexcontext->save_image(pfile, pimage);
+                     pcontext->save_image(pfile, pimage);
 
                      pipi->on_media_playback_start(strPathOrigin, m_strLastTitle, m_straLastPerformer, m_strAlbum, *pfile->get_primitive_memory(), strUrl);
 
@@ -2070,8 +2070,8 @@ retry4:
 
          ::file::path strTitle = strPath.name();
 
-         ::file::path strFolder = pcontext->m_papexcontext->dir()->appdata() /unitext("Gravacões de Karaokê");
-         pcontext->m_papexcontext->dir()->create(strFolder);
+         ::file::path strFolder = pcontext->dir()->appdata() /unitext("Gravacões de Karaokê");
+         pcontext->dir()->create(strFolder);
 
 
          ::file::path strBase;
@@ -2356,7 +2356,7 @@ retry4:
                      
                      ::file::path path = pdocument->m_pathFile;
 
-                     path = pcontext->m_papexcontext->defer_make_file_system_url(path);
+                     path = pcontext->defer_make_file_system_url(path);
 
                      pstartup->set(path + ".current_song_millis") = time;
 

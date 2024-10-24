@@ -604,7 +604,7 @@ processed_new:
 
                   ::file::path path = m_pathFile;
 
-                  path = pcontext->m_papexcontext->defer_make_file_system_url(m_pathFile);
+                  path = pcontext->defer_make_file_system_url(m_pathFile);
 
                   pstartup->m_strPlaylistPlaying = path;
 

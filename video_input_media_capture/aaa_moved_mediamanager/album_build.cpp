@@ -52,9 +52,9 @@ namespace mediamanager
 
       m_pdatabase = __allocate ::sqlite::database(this);
 
-      ::file::path str = pcontext->m_papexcontext->dir()->appdata() / "musical_players";
+      ::file::path str = pcontext->dir()->appdata() / "musical_players";
 
-      pcontext->m_papexcontext->dir()->create(str);
+      pcontext->dir()->create(str);
 
       str = str / DATABASE_FILENAME;
 
