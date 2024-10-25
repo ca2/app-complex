@@ -41,8 +41,8 @@ namespace app_complex_video_capture
       ::user::impact::install_message_routing(pchannel);
 
 
-      MESSAGE_LINK(MESSAGE_CREATE, pchannel, this, &device_selector::on_message_create);
-      MESSAGE_LINK(MESSAGE_DESTROY, pchannel, this, &device_selector::on_message_destroy);
+      MESSAGE_LINK(e_message_create, pchannel, this, &device_selector::on_message_create);
+      MESSAGE_LINK(e_message_destroy, pchannel, this, &device_selector::on_message_destroy);
 
    }
 

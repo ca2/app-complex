@@ -24,7 +24,7 @@ namespace app_complex_video_capture
 
       ::user::show < ::user::plain_edit >::install_message_routing(pchannel);
 
-      MESSAGE_LINK(MESSAGE_CREATE,pchannel,this,&edit_impact::on_message_create);
+      MESSAGE_LINK(e_message_create,pchannel,this,&edit_impact::on_message_create);
 
    }
 

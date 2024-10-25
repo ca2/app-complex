@@ -34,7 +34,7 @@ namespace app_complex_form
 
       ::app_simple_form::tab_impact::install_message_routing(pchannel);
 
-      MESSAGE_LINK(MESSAGE_CREATE, pchannel, this, &pane_impact::on_message_create);
+      MESSAGE_LINK(e_message_create, pchannel, this, &pane_impact::on_message_create);
 
    }
 
