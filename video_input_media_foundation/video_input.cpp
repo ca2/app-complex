@@ -84,7 +84,7 @@ namespace video_input_media_foundation
 
       }
 
-      auto ptopic = create_topic(ID_UPDATE);
+      auto ptopic = create_topic(id_update);
 
       ptopic->m_pparticle = this;
 

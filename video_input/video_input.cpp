@@ -61,7 +61,7 @@ namespace video_input
 
 		}
       
-      notify_topic(ID_UPDATE);
+      notify_topic(id_update);
 
 	}
 

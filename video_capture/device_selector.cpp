@@ -270,7 +270,7 @@ namespace app_complex_video_capture
       
       if(ptopic->m_pparticle == get_app()->m_pvideoinput)
       {
-         if(ptopic->m_atom == ID_UPDATE)
+         if(ptopic->m_atom == id_update)
          {
             
             update_impact();
