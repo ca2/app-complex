@@ -129,7 +129,7 @@ bool ms_translator_speaker::speak(const ::string & strLangParam, const ::string 
 
    ::file::path pathDir =          auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pacmedirectory;
+         auto pacmedirectory = psystem->m_pdirectorysystem;
 
 pacmedirectory->system() / "speech";
 
@@ -186,7 +186,7 @@ retry:
 
       file()->put_text_utf8(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pacmedirectory;
+         auto pacmedirectory = psystem->m_pdirectorysystem;
 
 pacmedirectory->system() / "translators" / "token.txt", m_strTranslatorToken);
 
@@ -268,13 +268,13 @@ pacmedirectory->system() / "translators" / "token.txt", m_strTranslatorToken);
          {
             str = file()->as_string(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pacmedirectory;
+         auto pacmedirectory = psystem->m_pdirectorysystem;
 
 pacmedirectory->system() / "translators/missing.txt");
             str += strLang + "\n";
             file()->put_contents(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pacmedirectory;
+         auto pacmedirectory = psystem->m_pdirectorysystem;
 
 pacmedirectory->system() / "translators/missing.txt", str);
             return false;
@@ -283,13 +283,13 @@ pacmedirectory->system() / "translators/missing.txt", str);
          {
             str = file()->as_string(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pacmedirectory;
+         auto pacmedirectory = psystem->m_pdirectorysystem;
 
 pacmedirectory->system() / "translators/missing2.txt");
             str += strLang + "\n";
             file()->put_contents(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pacmedirectory;
+         auto pacmedirectory = psystem->m_pdirectorysystem;
 
 pacmedirectory->system() / "translators/missing2.txt", str);
             return false;

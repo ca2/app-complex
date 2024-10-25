@@ -658,7 +658,7 @@ namespace audio
       //
       //         file()->put_text_utf8(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pacmedirectory;
+         auto pacmedirectory = psystem->m_pdirectorysystem;
 
 pacmedirectory->system() / "translators" / "token.txt", m_strTranslatorToken);
       //
@@ -671,7 +671,7 @@ pacmedirectory->system() / "translators" / "token.txt", m_strTranslatorToken);
       //
       //         while (file()->exists(strFile =          auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pacmedirectory;
+         auto pacmedirectory = psystem->m_pdirectorysystem;
 
 pacmedirectory->system() / "translators" / as_string(m_iTranslatorFile) + ".mp3"))
       //         {
@@ -726,13 +726,13 @@ pacmedirectory->system() / "translators" / as_string(m_iTranslatorFile) + ".mp3"
       //            {
       //               str = file()->as_string(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pacmedirectory;
+         auto pacmedirectory = psystem->m_pdirectorysystem;
 
 pacmedirectory->system() / "translators/missing.txt");
       //               str += strLang + "\n";
       //               file()->put_contents(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pacmedirectory;
+         auto pacmedirectory = psystem->m_pdirectorysystem;
 
 pacmedirectory->system() / "translators/missing.txt", str);
       //               return;
@@ -741,13 +741,13 @@ pacmedirectory->system() / "translators/missing.txt", str);
       //            {
       //               str = file()->as_string(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pacmedirectory;
+         auto pacmedirectory = psystem->m_pdirectorysystem;
 
 pacmedirectory->system() / "translators/missing2.txt");
       //               str += strLang + "\n";
       //               file()->put_contents(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pacmedirectory;
+         auto pacmedirectory = psystem->m_pdirectorysystem;
 
 pacmedirectory->system() / "translators/missing2.txt", str);
       //               return;
@@ -816,7 +816,7 @@ pacmedirectory->system() / "translators/missing2.txt", str);
 
       while (file()->exists(strFile =          auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pacmedirectory;
+         auto pacmedirectory = psystem->m_pdirectorysystem;
 
 pacmedirectory->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".mp3"))
       {

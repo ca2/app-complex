@@ -617,7 +617,7 @@ namespace mediaplaylist
 
       if (file_system()->exists(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pacmedirectory;
+         auto pacmedirectory = psystem->m_pdirectorysystem;
 
 pacmedirectory->config() / "system/spotify.txt"))
       {
