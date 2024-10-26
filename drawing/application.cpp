@@ -56,7 +56,7 @@ namespace app_complex_drawing
    {
 
 
-      auto psession = get_session();
+      
 
       auto puser = psession->user()->m_pcoreuser;
 
