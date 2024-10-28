@@ -24,9 +24,9 @@
 void application_main()
 {
 
-   auto papplication = ___new app_complex_form::application();
+   app_complex_form::application application;
 
-   papplication->application_main();
+   application.application_main();
 
 }
 

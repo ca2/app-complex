@@ -24,8 +24,8 @@
 void application_main()
 {
 
-   auto papplication = ___new app_complex_video_capture::application();
+   app_complex_video_capture::application application;
 
-   papplication->application_main();
+   application.application_main();
 
 }
