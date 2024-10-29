@@ -161,7 +161,7 @@ namespace multimedia
       void slider::update_drawing_objects()
       {
 
-         //      ::aura::savings & savings = psession->savings();
+         //      ::aura::savings & savings = session()->savings();
 
          auto pgraphics = create_memory_graphics();
 
@@ -795,7 +795,7 @@ namespace multimedia
 
 
 
-         ::aura::savings & savings = psession->savings();
+         ::aura::savings & savings = session()->savings();
 
          ::rectangle_f64 rectangleX;
          this->rectangle(rectangleX);

@@ -386,7 +386,7 @@ namespace mediaplaylist
    {
 //      cube1sp(::aura::application) papp = dynamic_cast < cube1sp(::aura::application) > (this);
       //    ASSERT(papp != nullptr);
-      //   ::aura::savings & savings = psession->savings();
+      //   ::aura::savings & savings = session()->savings();
       /*   m_enhmetafile = papp->LoadEnhMetaFile(IDR_MUSICALPLAYER);*/
       /*      if(m_enhmetafile != nullptr)
             {

@@ -326,7 +326,7 @@ namespace multimedia
 
          this->rectangle(rectangleX);
 
-         if(psession->savings().is_trying_to_save(::e_resource_processing))
+         if(session()->savings()->is_trying_to_save(::e_resource_processing))
          {
             pgraphics->fill_rectangle(rectangleX, rgb(255,255,255));
          }
