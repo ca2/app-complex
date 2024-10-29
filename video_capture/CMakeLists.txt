@@ -86,7 +86,7 @@ target_include_directories(static_${PROJECT_NAME} PRIVATE ${library_include_dire
 
 
 
-target_compile_definitions(${PROJECT_NAME} PRIVATE _APP_COMPLEX_VIDEO_CAPTURE_LIBRARY)
+target_compile_definitions(${PROJECT_NAME} PRIVATE _${PROJECT_NAME}_project)
 
 
 add_subdirectory(__implement)
