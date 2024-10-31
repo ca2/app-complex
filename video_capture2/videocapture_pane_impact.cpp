@@ -106,7 +106,7 @@ namespace app_complex_video_capture
       case MENU_IMPACT:
       {
 
-         auto puser = user()->m_pcoreuser;
+         auto puser = user();
 
          m_pdocMenu = puser->create_child_form(this, this, pimpactdata->m_pplaceholder);
 

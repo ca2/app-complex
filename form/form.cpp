@@ -95,7 +95,7 @@ namespace app_complex_form
 
       auto pointCursor = pcontextmenu->GetPoint();
 
-      //auto puser = user()->m_pbaseuser;
+      //auto puser = user();
 
       auto pmenu = user()->menu_from_xml(this, "matter://form/form.menu");
 

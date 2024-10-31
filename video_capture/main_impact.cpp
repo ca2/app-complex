@@ -84,7 +84,9 @@ namespace app_complex_video_capture
 
          string strText;
 
-         get_app()->datastream()->get("cur_text",strText);
+         ::cast < ::database::client > pdatabaseclient = application();
+
+         pdatabaseclient->datastream()->get("cur_text",strText);
 
          peditview->set_text(strText, ::e_source_initialize);
 

@@ -277,7 +277,7 @@ namespace app_complex_video_capture
          }
          
       }
-      else if (ptopic->m_atom == ID_INITIAL_UPDATE)
+      else if (ptopic->m_atom == id_initial_update)
       {
 
          ::pointer<::userex::pane_tab_impact>ppaneimpact = get_typed_parent < ::userex::pane_tab_impact >();

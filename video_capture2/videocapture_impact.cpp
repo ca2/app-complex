@@ -75,7 +75,7 @@ namespace app_complex_video_capture
    void impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if(ptopic->m_atom == ID_INITIAL_UPDATE)
+      if(ptopic->m_atom == id_initial_update)
       {
 
          ::pointer<::userex::pane_tab_impact>ppaneimpact = get_typed_parent < ::userex::pane_tab_impact >();
