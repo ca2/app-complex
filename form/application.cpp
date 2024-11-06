@@ -171,7 +171,7 @@ namespace app_complex_form
 
       //}
 
-      //if (prequest->m_payloadFile.has_char())
+      //if (prequest->m_payloadFile.has_character())
       //{
 
       //   m_ptemplateBeatMapperImpact->request(prequest);

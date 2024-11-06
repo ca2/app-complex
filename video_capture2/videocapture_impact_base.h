@@ -16,11 +16,11 @@ namespace app_complex_video_capture
       impact_base();
       virtual ~impact_base();
 
-      virtual i64 increment_reference_count()
+      virtual huge_integer increment_reference_count()
       {
          return ::object::increment_reference_count();
       }
-      virtual i64 decrement_reference_count()
+      virtual huge_integer decrement_reference_count()
       {
          return ::object::decrement_reference_count();
       }

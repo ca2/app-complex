@@ -71,9 +71,9 @@ namespace mediaplaylist
 
       initialize_split_layout();
 
-      create_impact < mediaplaylist::playlist_list_impact >(get_document(),::rectangle_f64(),get_pane_holder(0),"playlist_list_impact");
+      create_impact < mediaplaylist::playlist_list_impact >(get_document(),::double_rectangle(),get_pane_holder(0),"playlist_list_impact");
 
-      create_impact < mediaplaylist::list_impact >(get_document(),::rectangle_f64(),get_pane_holder(1),"list_impact");
+      create_impact < mediaplaylist::list_impact >(get_document(),::double_rectangle(),get_pane_holder(1),"list_impact");
 
    }
 

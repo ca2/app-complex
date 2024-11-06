@@ -87,7 +87,7 @@ typedef struct video_output video_t;
 //struct video_data {
 //   unsigned char *data[max_av_planes];
 //   unsigned int linesize[max_av_planes];
-//   u64 timestamp;
+//   huge_natural timestamp;
 //};
 
 struct video_output_info
@@ -98,7 +98,7 @@ struct video_output_info
    enum_video_format m_eformat;
    unsigned int m_uFpsNumerator;
    unsigned int m_uFpsDenominator;
-	::size_i32 m_size;
+	::int_size m_size;
    memsize m_memsizeCache;
 
    enum_video_colorspace m_ecolorspace;
@@ -110,7 +110,7 @@ struct video_output_info
 
 struct e_video_scale_info {
    enum_video_format m_eformat;
-   ::size_i32 m_size;
+   ::int_size m_size;
    enum_video_range_type m_erangetype;
    enum_video_colorspace m_ecolorspace;
 };

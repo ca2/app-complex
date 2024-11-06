@@ -174,7 +174,7 @@ namespace multimedia
          GetEnhMetaFileHeader(m_enhmetafile, sizeof(m_emh), &m_emh);
 #endif
 
-         ::rectangle_f64 clientRect(0, 0, 0, 0);
+         ::double_rectangle clientRect(0, 0, 0, 0);
 
          ::pointer<department>central = papp->audiomixeruserbase();
 
@@ -305,9 +305,9 @@ namespace multimedia
       {
          if(m_pcontrol != nullptr)
          {
-            ::rectangle_f64 rectangleX;
+            ::double_rectangle rectangleX;
 
-            ::rectangle_f64 rectangleHosting;
+            ::double_rectangle rectangleHosting;
             this->rectangle(rectangleX);
             m_pcontrol->set_window_position(zorder_none, rectangleX.left(), rectangleX.top(), rectangleX.width(), rectangleX.height(), SWP_SHOWWINDOW);
             m_pcontrol->on_layout(pgraphics);
@@ -319,10 +319,10 @@ namespace multimedia
 
 
 
-         ::rectangle_f64 rectangleMeta;
-         ::rectangle_f64 rectangleDib;
+         ::double_rectangle rectangleMeta;
+         ::double_rectangle rectangleDib;
 
-         ::rectangle_f64 rectangleX;
+         ::double_rectangle rectangleX;
 
          this->rectangle(rectangleX);
 
@@ -335,7 +335,7 @@ namespace multimedia
             pgraphics->color_blend(rectangleX, rgb(255,255,255), 32);
          }
 
-         ::rectangle_f64 rectangle;
+         ::double_rectangle rectangle;
 
          rectangle = rectangleX;
          rectangle.ScaleHeightAspect(minimum(rectangleX.height(), rectangleX.height() - 333), rectangleX.right(), rectangleX.bottom());

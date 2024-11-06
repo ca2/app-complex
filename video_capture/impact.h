@@ -25,13 +25,13 @@ namespace app_complex_video_capture
 //      // void dump(dump_context & dumpcontext) const override;
 
 
-      i64 increment_reference_count() override
+      huge_integer increment_reference_count() override
       {
          return ::object::increment_reference_count();
       }
       
       
-      i64 decrement_reference_count() override
+      huge_integer decrement_reference_count() override
       {
          return ::object::decrement_reference_count();
       }

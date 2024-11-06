@@ -141,7 +141,7 @@ namespace simple_os_drag_and_drop
 
       }
 
-      if (pcreate->m_payloadFile.has_char())
+      if (pcreate->m_payloadFile.has_character())
       {
 
          m_ptemplateSimpleDrawingImpact->do_request(pcreate);

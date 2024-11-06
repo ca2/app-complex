@@ -19,7 +19,7 @@ namespace video_input_media_foundation
 
 	using subtype_map = string_map < ::int_array >;
 
-	using frame_rate_map = map < ::u64, subtype_map >;
+	using frame_rate_map = map < huge_natural, subtype_map >;
 
 	typedef void(*emergensyStopEventCallback)(int, void *);
 
@@ -37,13 +37,13 @@ namespace video_input_media_foundation
 
 		//::video_input::camera_parameters			m_cameraparametersPrevious;
 
-		//::size_i32										m_size;
+		//::int_size										m_size;
 
 		//unsigned int												m_uCurrentNumber;
 
 		//bool												m_bSetup;
 
-		//map < u64, frame_rate_map>					m_mapCaptureFormat;
+		//map < huge_natural, frame_rate_map>					m_mapCaptureFormat;
 
 		////::array <::video_input::media_format >	m_mediaformata;
 
@@ -77,7 +77,7 @@ namespace video_input_media_foundation
 
 		unsigned int get_height() override;
 
-		::size_i32 get_size() override;
+		::int_size get_size() override;
 
 		//::video_input::media_format get_format(::collection::index iIndex) override;
 

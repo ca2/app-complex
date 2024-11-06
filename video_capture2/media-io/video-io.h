@@ -67,7 +67,7 @@ enum video_range_type {
 struct video_data {
 	unsigned char           *data[MAX_AV_PLANES];
 	unsigned int          linesize[MAX_AV_PLANES];
-	u64          timestamp;
+	huge_natural          timestamp;
 };
 
 struct video_output_info {
@@ -166,9 +166,9 @@ EXPORT bool video_output_active(const video_t *video);
 EXPORT const struct video_output_info *video_output_get_info(
 		const video_t *video);
 EXPORT bool video_output_lock_frame(video_t *video, struct video_frame *frame,
-		int count, u64 timestamp);
+		int count, huge_natural timestamp);
 EXPORT void video_output_unlock_frame(video_t *video);
-EXPORT u64 video_output_get_frame_time(const video_t *video);
+EXPORT huge_natural video_output_get_frame_time(const video_t *video);
 EXPORT void video_output_stop(video_t *video);
 EXPORT bool video_output_stopped(video_t *video);
 

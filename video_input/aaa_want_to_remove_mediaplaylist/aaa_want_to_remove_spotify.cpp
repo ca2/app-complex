@@ -802,7 +802,7 @@ pdirectorysystem->system() / "config\\spotify\\pas.txt");
    string plspotify::pl::get_name()
    {
 
-      if(m_strName.has_char() && (m_durationLastUpdate.elapsed() < 30 * 1000))
+      if(m_strName.has_character() && (m_durationLastUpdate.elapsed() < 30 * 1000))
       {
 
          return m_strName;
@@ -811,7 +811,7 @@ pdirectorysystem->system() / "config\\spotify\\pas.txt");
 
       defer_update();
 
-      if(m_strName.has_char())
+      if(m_strName.has_character())
       {
 
          return m_strName;
@@ -900,7 +900,7 @@ pdirectorysystem->system() / "config\\spotify\\pas.txt");
    string plspotify::tr::get_name()
    {
 
-      if(m_strName.has_char() && (m_durationLastUpdate.elapsed() < 60 * 1000))
+      if(m_strName.has_character() && (m_durationLastUpdate.elapsed() < 60 * 1000))
       {
 
          return m_strName;
@@ -909,7 +909,7 @@ pdirectorysystem->system() / "config\\spotify\\pas.txt");
 
       defer_update();
 
-      if(m_strName.has_char())
+      if(m_strName.has_character())
       {
 
          return m_strName;
@@ -934,7 +934,7 @@ pdirectorysystem->system() / "config\\spotify\\pas.txt");
    string plspotify::tr::get_artist()
    {
 
-      if(m_strArtist.has_char() && (m_durationLastUpdate.elapsed() < 60 * 1000))
+      if(m_strArtist.has_character() && (m_durationLastUpdate.elapsed() < 60 * 1000))
       {
 
          return m_strArtist;
@@ -943,7 +943,7 @@ pdirectorysystem->system() / "config\\spotify\\pas.txt");
 
       defer_update();
 
-      if(m_strArtist.has_char())
+      if(m_strArtist.has_character())
       {
 
          return m_strArtist;
@@ -960,7 +960,7 @@ pdirectorysystem->system() / "config\\spotify\\pas.txt");
    string plspotify::tr::get_album()
    {
 
-      if(m_strAlbum.has_char() && (m_durationLastUpdate.elapsed() < 60 * 1000))
+      if(m_strAlbum.has_character() && (m_durationLastUpdate.elapsed() < 60 * 1000))
       {
 
          return m_strAlbum;
@@ -969,7 +969,7 @@ pdirectorysystem->system() / "config\\spotify\\pas.txt");
 
       defer_update();
 
-      if(m_strAlbum.has_char())
+      if(m_strAlbum.has_character())
       {
 
          return m_strAlbum;

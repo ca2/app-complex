@@ -326,7 +326,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////
 ////         //obs_source_output_video(m_pdevice->m_iSource, &out);
 ////
-////         ::size_i32 s;
+////         ::int_size s;
 ////
 ////         s.cx() = m_pdevice->m_size.cx();
 ////         s.cy() = m_pdevice->m_size.cy();

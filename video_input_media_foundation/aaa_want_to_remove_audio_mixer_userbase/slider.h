@@ -48,9 +48,9 @@ namespace multimedia
 
 
          void update_drawing_objects();
-         bool GetPageARect(::rectangle_i32 * lpRectClient, ::rectangle_i32 * lpRectTrack,  ::rectangle_i32 * lpRect);
-         bool GetPageBRect(::rectangle_i32 * lpRectClient, ::rectangle_i32 * lpRectTrack,  ::rectangle_i32 * lpRect);
-         bool GetThumbRect(::rectangle_i32 * lpRect);
+         bool GetPageARect(::int_rectangle * lpRectClient, ::int_rectangle * lpRectTrack,  ::int_rectangle * lpRect);
+         bool GetPageBRect(::int_rectangle * lpRectClient, ::int_rectangle * lpRectTrack,  ::int_rectangle * lpRect);
+         bool GetThumbRect(::int_rectangle * lpRect);
 
          bool IsHover();
          void DoHoverSmartUpdate();
@@ -80,7 +80,7 @@ namespace multimedia
          int   ScrollPageA();
 
 
-         int SetTrackingPos(::point_i32 point);
+         int SetTrackingPos(::int_point point);
 
 
          DECLARE_MESSAGE_HANDLER(on_message_create);

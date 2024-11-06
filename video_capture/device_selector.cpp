@@ -202,7 +202,7 @@ namespace app_complex_video_capture
 
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-      ::rectangle_i32 rectItem;
+      ::int_rectangle rectItem;
       
       if(main_content().m_pitema)
       {

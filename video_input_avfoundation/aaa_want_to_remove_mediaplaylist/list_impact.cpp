@@ -480,7 +480,7 @@ namespace mediaplaylist
 
                string strUri = get_document()->impact_playlist()->m_tracka[j]->get_uri();
 
-               if (strUri.has_char())
+               if (strUri.has_character())
                {
 
                   stra.add_unique(strUri);
@@ -619,16 +619,16 @@ namespace mediaplaylist
    /* return nullptr;
    }*/
 
-   void list_impact::_001DrawBackground(::draw2d::graphics *graphics, ::rectangle_i32 * lprect)
+   void list_impact::_001DrawBackground(::draw2d::graphics *graphics, ::int_rectangle * lprect)
    {
-      ::rectangle_f64 rectangleThis;
+      ::double_rectangle rectangleThis;
       this->rectangle(rectangleThis);
 
 //      ::user::list::_001DrawBackground(pgraphics, lprect);
 
       /*   if(m_enhmetafile != nullptr)
          {
-            ::rectangle_f64 rectangleUpdate;
+            ::double_rectangle rectangleUpdate;
             pgraphics->get_clip_box(rectangleUpdate);
             CBaseRect rectangleMeta;
 
@@ -993,7 +993,7 @@ namespace mediaplaylist
 
       //      _001OnClip(pgraphics);
 
-      //      ::rectangle_f64 rectangleTest1(100, 100, 200, 200);
+      //      ::double_rectangle rectangleTest1(100, 100, 200, 200);
 
       //      pgraphics->fill_rectangle(rectangleTest1, argb(255, 255, 255, 0));
 

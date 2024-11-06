@@ -302,7 +302,7 @@ namespace mediaplaylist
 
       auto pmouse = pmessage->m_union.m_pmouse;
 
-      ::point_i32 point(pmouse->m_point);
+      ::int_point point(pmouse->m_point);
 
       screen_to_client()(point);
 
@@ -343,9 +343,9 @@ namespace mediaplaylist
    void list_impact::on_message_context_menu(::message::message * pmessage)
    {
       ::pointer<::message::context_menu>pcontextmenu(pmessage);
-      ::point_i32 point = pcontextmenu->GetPoint();
+      ::int_point point = pcontextmenu->GetPoint();
       ::collection::index iItem;
-      ::point_i32 ptClient = point;
+      ::int_point ptClient = point;
       screen_to_client(&ptClient);
       if(_001HitTest_(ptClient, iItem))
       {
@@ -438,16 +438,16 @@ namespace mediaplaylist
    /* return nullptr;
    }*/
 
-   void list_impact::_001DrawBackground(::draw2d::graphics *graphics, ::rectangle_i32 * lprect)
+   void list_impact::_001DrawBackground(::draw2d::graphics *graphics, ::int_rectangle * lprect)
    {
-      ::rectangle_f64 rectangleThis;
+      ::double_rectangle rectangleThis;
       this->rectangle(rectangleThis);
 
 //      ::user::list::_001DrawBackground(pgraphics, lprect);
 
       /*   if(m_enhmetafile != nullptr)
          {
-            ::rectangle_f64 rectangleUpdate;
+            ::double_rectangle rectangleUpdate;
             pgraphics->get_clip_box(rectangleUpdate);
             CBaseRect rectangleMeta;
 

@@ -129,7 +129,7 @@ namespace app_complex_form
 //
 //      y += rectangleStillMargin.top();
 //
-//      m_pstill->display_child(::rectangle_double_dimension(iLeft, y, sizeStill.cx(), sizeStill.cy()));
+//      m_pstill->display_child(::double_rectangle_dimension(iLeft, y, sizeStill.cx(), sizeStill.cy()));
 //
 //      y += sizeStill.cy();
 //
@@ -141,7 +141,7 @@ namespace app_complex_form
 //
 //      y += rectangleEditMargin.top();
 //
-//      m_pedit->display_child(::rectangle_double_dimension(iLeft, y, 600, sizeEdit.cy()));
+//      m_pedit->display_child(::double_rectangle_dimension(iLeft, y, 600, sizeEdit.cy()));
 //
 //      y += sizeEdit.cy();
 //
@@ -161,13 +161,13 @@ namespace app_complex_form
 //
 //      auto button_height = maximum(sizeButtonClear.cy(), sizeButtonSend.cy());
 //
-//      m_pbuttonClear->display_child(::rectangle_double_dimension(iLeft, y, button_width, button_height));
+//      m_pbuttonClear->display_child(::double_rectangle_dimension(iLeft, y, button_width, button_height));
 //
-//      m_pbuttonSend->display_child(::rectangle_double_dimension(iLeft + button_width + 32, y, button_width, button_height));
+//      m_pbuttonSend->display_child(::double_rectangle_dimension(iLeft + button_width + 32, y, button_width, button_height));
 //
 //      y += button_height + 20;
 //
-//      m_pstillReceiver->display_child(::rectangle_double_dimension(iLeft, y, 600, sizeEdit.cy() * 5));
+//      m_pstillReceiver->display_child(::double_rectangle_dimension(iLeft, y, 600, sizeEdit.cy() * 5));
 
    }
 

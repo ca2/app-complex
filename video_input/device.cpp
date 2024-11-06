@@ -453,7 +453,7 @@ namespace video_input
 	}
 
 
-	::size_i32 device::get_size()
+	::int_size device::get_size()
 	{
 
 		if (m_bSetup)
@@ -477,7 +477,7 @@ namespace video_input
 
 		::collection::index iBest = 0;
 
-		::i64 iScoreMax = 0;
+		huge_integer iScoreMax = 0;
 
 		for (::collection::index i = 0; i < m_mediaformata.get_count(); i++)
 		{
@@ -495,7 +495,7 @@ namespace video_input
          if (iSampleSize == 32)
          {
 
-            ::i64 iScore = pmediaformat->m_size.area() * pmediaformat->m_uFrameRate;
+            huge_integer iScore = pmediaformat->m_size.area() * pmediaformat->m_uFrameRate;
 
             if (iScore > iScoreMax)
             {
@@ -546,7 +546,7 @@ namespace video_input
 
 		return 0;
 
-		//auto & FRM = m_mapCaptureFormat[size_i32];
+		//auto & FRM = m_mapCaptureFormat[int_size];
 
 		//if (FRM.size() == 0)
 		//{
@@ -640,7 +640,7 @@ namespace video_input
 
 		//	framerate = mediatype.m_uFrameRate;
 
-		//	auto & FRM = m_mapCaptureFormat[size_i32];
+		//	auto & FRM = m_mapCaptureFormat[int_size];
 
 		//	auto & STM = FRM[framerate];
 
@@ -654,7 +654,7 @@ namespace video_input
 
 		//	//FRM[framerate] = STM;
 
-		//	//m_mapCaptureFormat[size_i32] = FRM;
+		//	//m_mapCaptureFormat[int_size] = FRM;
 
 		//	m_cCount++;
 

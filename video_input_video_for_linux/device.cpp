@@ -178,7 +178,7 @@ namespace video_input_video_for_linux
 	}
 
 
-	::size_i32 device::get_size()
+	::int_size device::get_size()
 	{
 
 		if (m_bSetup)
@@ -315,7 +315,7 @@ namespace video_input_video_for_linux
 
 			//FRM[framerate] = STM;
 
-			//m_mapCaptureFormat[size_i32] = FRM;
+			//m_mapCaptureFormat[int_size] = FRM;
 
 			m_cCount++;
 
@@ -809,9 +809,9 @@ namespace video_input_video_for_linux
 
             auto presolution = __allocate resolution();
 
-            presolution->m_size.cx() = upper_u16(*packed);
+            presolution->m_size.cx() = upper_unsigned_short(*packed);
 
-            presolution->m_size.cy() = lower_u16(*packed);
+            presolution->m_size.cy() = lower_unsigned_short(*packed);
 
             presolution->m_strDescription.formatf("%greekdeltax%d", presolution->m_size.cx(), presolution->m_size.cy());
 
@@ -947,9 +947,9 @@ namespace video_input_video_for_linux
 
             auto pframerate = __allocate frame_rate();
 
-            pframerate->m_iDenominator = lower_u16(*packed);
+            pframerate->m_iDenominator = lower_unsigned_short(*packed);
 
-            pframerate->m_iNumerator = upper_u16(*packed);
+            pframerate->m_iNumerator = upper_unsigned_short(*packed);
 
             pframerate->m_fFps = (float) pframerate->m_iDenominator / (float) pframerate->m_iNumerator;
 

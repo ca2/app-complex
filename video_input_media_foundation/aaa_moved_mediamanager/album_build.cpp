@@ -104,7 +104,7 @@ namespace mediamanager
 
       //m_wstrFilePath = lpcsz;
 
-      //strsize iFind = str.find(".zip:");
+      //character_count iFind = str.find(".zip:");
       //if(iFind >= 0)
       //{
       //   file_pointer spfile(this);
@@ -167,9 +167,9 @@ namespace mediamanager
 
 
 
-      //   strsize iFind1 = str.rear_find('\\');
-      //   strsize iFind2 = str.rear_find('/');
-      //   strsize iFind = 0;
+      //   character_count iFind1 = str.rear_find('\\');
+      //   character_count iFind2 = str.rear_find('/');
+      //   character_count iFind = 0;
       //   if(iFind1 >= 0)
       //   {
       //      if(iFind2 >= 0)
@@ -239,9 +239,9 @@ namespace mediamanager
    //   string str(lpcsz);
 
 
-   //   strsize iFind1 = str.rear_find('\\');
-   //   strsize iFind2 = str.rear_find('/');
-   //   strsize iFind = 0;
+   //   character_count iFind1 = str.rear_find('\\');
+   //   character_count iFind2 = str.rear_find('/');
+   //   character_count iFind = 0;
    //   if(iFind1 >= 0)
    //   {
    //      if(iFind2 >= 0)

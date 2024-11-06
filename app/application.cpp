@@ -59,7 +59,7 @@ namespace simple_app
 
       __refer(m_pwindow, __create_new < window >());
 
-      ::rectangle_i32 rectangleWindow;
+      ::int_rectangle rectangleWindow;
 
       m_pwindow->_001InitialFramePosition(rectangleWindow, {0.05, 0.05, 0.4, 0.4});
 

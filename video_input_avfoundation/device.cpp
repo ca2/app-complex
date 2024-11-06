@@ -186,7 +186,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 	}
 
 
-	::size_i32 device::get_size()
+	::int_size device::get_size()
 	{
 
 		if (m_bSetup)
@@ -323,7 +323,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 
 			//FRM[framerate] = STM;
 
-			//m_mapCaptureFormat[size_i32] = FRM;
+			//m_mapCaptureFormat[int_size] = FRM;
 
 			m_cCount++;
 
@@ -818,9 +818,9 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //            auto presolution = __allocate resolution();
 //
-//            presolution->m_size.cx() = second_u16(*packed);
+//            presolution->m_size.cx() = second_unsigned_short(*packed);
 //
-//            presolution->m_size.cy() = first_u16(*packed);
+//            presolution->m_size.cy() = first_unsigned_short(*packed);
 //
 //            presolution->m_strDescription.formatf("%greekdeltax%d", presolution->m_size.cx(), presolution->m_size.cy());
 //
@@ -956,9 +956,9 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //            auto pframerate = __allocate frame_rate();
 //
-//            pframerate->m_iDenominator = first_u16(*packed);
+//            pframerate->m_iDenominator = first_unsigned_short(*packed);
 //
-//            pframerate->m_iNumerator = second_u16(*packed);
+//            pframerate->m_iNumerator = second_unsigned_short(*packed);
 //
 //            pframerate->m_fFps = (float) pframerate->m_iDenominator / (float) pframerate->m_iNumerator;
 //

@@ -25,7 +25,7 @@ namespace video_input
       int               m_iFrameRateNumerator;
 
 
-      ::size_i32			m_size;
+      ::int_size			m_size;
 		unsigned int					m_uSampleSize;
 		unsigned int					m_uFrameRate;
 		unsigned int					m_uFrameSize;

@@ -161,7 +161,7 @@ enum ResType {
 	ResType_Custom
 };
 
-enum class BufferingType : i64 {
+enum class BufferingType : huge_integer {
 	Auto,
 	On,
 	Off
@@ -306,16 +306,16 @@ struct DShowInput {
 	}
 
 	void OnEncodedVideoData(enum AVCodecID identification,
-			unsigned char *data, size_t size, long long ts);
+			unsigned char *data, size_t size, huge_integer ts);
 	void OnEncodedAudioData(enum AVCodecID identification,
-			unsigned char *data, size_t size, long long ts);
+			unsigned char *data, size_t size, huge_integer ts);
 
 	void OnVideoData(const VideoConfig &config,
 			unsigned char *data, size_t size,
-			long long startTime, long long endTime);
+			huge_integer startTime, huge_integer endTime);
 	void OnAudioData(const AudioConfig &config,
 			unsigned char *data, size_t size,
-			long long startTime, long long endTime);
+			huge_integer startTime, huge_integer endTime);
 
 	bool UpdateVideoConfig(aura_data *settings);
 	bool UpdateAudioConfig(aura_data *settings);
@@ -432,7 +432,7 @@ static bool ResolutionAvailable(const VideoInfo &cap, int cx, int cy)
 
 #define DEVICE_INTERVAL_DIFF_LIMIT 20
 
-static bool FrameRateAvailable(const VideoInfo &cap, long long interval)
+static bool FrameRateAvailable(const VideoInfo &cap, huge_integer interval)
 {
 	return interval == FPS_HIGHEST || interval == FPS_MATCHING ||
 		between(cap.minInterval - DEVICE_INTERVAL_DIFF_LIMIT,
@@ -440,8 +440,8 @@ static bool FrameRateAvailable(const VideoInfo &cap, long long interval)
 				cap.maxInterval + DEVICE_INTERVAL_DIFF_LIMIT);
 }
 
-static long long FrameRateInterval(const VideoInfo &cap,
-		long long desired_interval)
+static huge_integer FrameRateInterval(const VideoInfo &cap,
+		huge_integer desired_interval)
 {
 	return desired_interval < cap.minInterval ?
 		cap.minInterval :
@@ -479,7 +479,7 @@ static inline audio_format ConvertAudioFormat(AudioFormat format)
 //#define LOG_ENCODED_AUDIO_TS 1
 
 void DShowInput::OnEncodedVideoData(enum AVCodecID identification,
-		unsigned char *data, size_t size, long long ts)
+		unsigned char *data, size_t size, huge_integer ts)
 {
 	if (!ffmpeg_decode_valid(video_decoder)) {
 		if (ffmpeg_decode_init(video_decoder, identification) < 0) {
@@ -497,7 +497,7 @@ void DShowInput::OnEncodedVideoData(enum AVCodecID identification,
 	}
 
 	if (got_output) {
-		frame.timestamp = (u64)ts * 100;
+		frame.timestamp = (huge_natural)ts * 100;
 		if (flip)
 			frame.flip = !frame.flip;
 #if LOG_ENCODED_VIDEO_TS
@@ -509,7 +509,7 @@ void DShowInput::OnEncodedVideoData(enum AVCodecID identification,
 
 void DShowInput::OnVideoData(const VideoConfig &config,
 		unsigned char *data, size_t size,
-		long long startTime, long long endTime)
+		huge_integer startTime, huge_integer endTime)
 {
 	if (videoConfig.format == VideoFormat::H264) {
 		OnEncodedVideoData(AV_CODEC_ID_H264, data, size, startTime);
@@ -519,7 +519,7 @@ void DShowInput::OnVideoData(const VideoConfig &config,
 	const int cx = config.cx();
 	const int cy = config.cy();
 
-	frame.timestamp  = (u64)startTime * 100;
+	frame.timestamp  = (huge_natural)startTime * 100;
 	frame.width      = config.cx();
 	frame.height     = config.cy();
 	frame.format     = ConvertVideoFormat(config.format);
@@ -579,7 +579,7 @@ void DShowInput::OnVideoData(const VideoConfig &config,
 }
 
 void DShowInput::OnEncodedAudioData(enum AVCodecID identification,
-		unsigned char *data, size_t size, long long ts)
+		unsigned char *data, size_t size, huge_integer ts)
 {
 	if (!ffmpeg_decode_valid(audio_decoder)) {
 		if (ffmpeg_decode_init(audio_decoder, identification) < 0) {
@@ -597,7 +597,7 @@ void DShowInput::OnEncodedAudioData(enum AVCodecID identification,
 	}
 
 	if (got_output) {
-		audio.timestamp = (u64)ts * 100;
+		audio.timestamp = (huge_natural)ts * 100;
 #if LOG_ENCODED_AUDIO_TS
 		blog(LOG_DEBUG, "audio ts: %llu", audio.timestamp);
 #endif
@@ -607,7 +607,7 @@ void DShowInput::OnEncodedAudioData(enum AVCodecID identification,
 
 void DShowInput::OnAudioData(const AudioConfig &config,
 		unsigned char *data, size_t size,
-		long long startTime, long long endTime)
+		huge_integer startTime, huge_integer endTime)
 {
 	size_t block_size;
 
@@ -631,7 +631,7 @@ void DShowInput::OnAudioData(const AudioConfig &config,
 		get_audio_channels(audio.speakers);
 
 	audio.frames          = (unsigned int)(size / block_size);
-	audio.timestamp       = (u64)startTime * 100;
+	audio.timestamp       = (huge_natural)startTime * 100;
 
 //	if (audio.format != AUDIO_FORMAT_UNKNOWN)
 	//	obs_source_output_audio(source, &audio);
@@ -713,10 +713,10 @@ static inline bool MatcherMatchVideoFormat(VideoFormat format,
 	return match;
 }
 
-static inline bool MatcherClosestFrameRateSelector(long long interval,
-		long long &best_match, const VideoInfo &info)
+static inline bool MatcherClosestFrameRateSelector(huge_integer interval,
+		huge_integer &best_match, const VideoInfo &info)
 {
-	long long current = FrameRateInterval(info, interval);
+	huge_integer current = FrameRateInterval(info, interval);
 	if (llabs(interval - best_match) > llabs(interval - current))
 		best_match = current;
 	return true;
@@ -731,7 +731,7 @@ auto ResolutionMatcher = [](int cx, int cy)
 	};
 };
 
-auto FrameRateMatcher = [](long long interval)
+auto FrameRateMatcher = [](huge_integer interval)
 {
 	return [interval](const VideoInfo &info)
 	{
@@ -747,7 +747,7 @@ auto VideoFormatMatcher = [](VideoFormat format, bool &did_match)
 	};
 };
 
-auto ClosestFrameRateSelector = [](long long interval, long long &best_match)
+auto ClosestFrameRateSelector = [](huge_integer interval, huge_integer &best_match)
 {
 	return [interval, &best_match](const VideoInfo &info) mutable -> bool
 	{
@@ -794,7 +794,7 @@ static bool DetermineResolution(int &cx, int &cy, aura_data *settings,
 	return false;
 }
 
-static long long GetOBSFPS();
+static huge_integer GetOBSFPS();
 
 static inline bool IsEncoded(const VideoConfig &config)
 {
@@ -850,7 +850,7 @@ bool DShowInput::UpdateVideoConfig(aura_data *settings)
 
 	int resType = (int)obs_data_get_int(settings, RES_TYPE);
 	int cx = 0, cy = 0;
-	long long interval = 0;
+	huge_integer interval = 0;
 	VideoFormat format = VideoFormat::Any;
 
 	if (resType == ResType_Custom) {
@@ -873,7 +873,7 @@ bool DShowInput::UpdateVideoConfig(aura_data *settings)
 
 		format = (VideoFormat)obs_data_get_int(settings, VIDEO_FORMAT);
 
-		long long best_interval = numeric_limits<long long>::maximum();
+		huge_integer best_interval = numeric_limits<huge_integer>::maximum();
 		bool video_format_match = false;
 		bool caps_match = CapsMatch(dev, ResolutionMatcher(cx, cy),
 				VideoFormatMatcher(format, video_format_match),
@@ -1176,7 +1176,7 @@ static inline void AddCap(vector<Resolution> &resolutions, const VideoInfo &cap)
 #define MAKE_DSHOW_FPS(fps)                 (10000000LL/(fps))
 #define MAKE_DSHOW_FRACTIONAL_FPS(den, num) ((num)*10000000LL/(den))
 
-static long long GetOBSFPS()
+static huge_integer GetOBSFPS()
 {
 	obs_video_info ovi;
 	if (!obs_get_video_info(&ovi))
@@ -1187,7 +1187,7 @@ static long long GetOBSFPS()
 
 struct FPSFormat {
 	const char *text;
-	long long  interval;
+	huge_integer  interval;
 };
 
 static const FPSFormat validFPSFormats[] = {
@@ -1496,7 +1496,7 @@ static bool ResTypeChanged(obs_properties_t *props, obs_property_t *p,
 	return true;
 }
 
-static DStr GetFPSName(long long interval)
+static DStr GetFPSName(huge_integer interval)
 {
 	DStr name;
 
@@ -1523,7 +1523,7 @@ static DStr GetFPSName(long long interval)
 }
 
 static void UpdateFPS(VideoDevice &device, VideoFormat format,
-		long long interval, int cx, int cy, obs_properties_t *props)
+		huge_integer interval, int cx, int cy, obs_properties_t *props)
 {
 	obs_property_t *list = obs_properties_get(props, FRAME_INTERVAL);
 
@@ -1536,7 +1536,7 @@ static void UpdateFPS(VideoDevice &device, VideoFormat format,
 				interval == FPS_MATCHING;
 	for (const FPSFormat &fps_format : validFPSFormats) {
 		bool video_format_match = false;
-		long long format_interval = fps_format.interval;
+		huge_integer format_interval = fps_format.interval;
 
 		bool available = CapsMatch(device,
 				ResolutionMatcher(cx, cy),
@@ -1573,12 +1573,12 @@ static DStr GetVideoFormatName(VideoFormat format)
 	}
 
 	std::string_cat(name, TEXT_FORMAT_UNKNOWN);
-	std::string_replace(name, "%1", std::to_string((long long)format).c_str());
+	std::string_replace(name, "%1", std::to_string((huge_integer)format).c_str());
 	return name;
 }
 
 static void UpdateVideoFormats(VideoDevice &device, VideoFormat format_,
-		int cx, int cy, long long interval, obs_properties_t *props)
+		int cx, int cy, huge_integer interval, obs_properties_t *props)
 {
 	set<VideoFormat> formats = { VideoFormat::Any };
 	auto format_gatherer = [&formats](const VideoInfo &info) mutable -> bool
@@ -1607,7 +1607,7 @@ static void UpdateVideoFormats(VideoDevice &device, VideoFormat format_,
 
 		size_t idx = obs_property_list_add_int(list,
 				obs_module_text(format.name),
-				(long long)format.format);
+				(huge_integer)format.format);
 		obs_property_list_item_disable(list, idx, !available);
 	}
 
@@ -1615,11 +1615,11 @@ static void UpdateVideoFormats(VideoDevice &device, VideoFormat format_,
 		return;
 
 	size_t idx = obs_property_list_add_int(list,
-			GetVideoFormatName(format_), (long long)format_);
+			GetVideoFormatName(format_), (huge_integer)format_);
 	obs_property_list_item_disable(list, idx, true);
 }
 
-static bool UpdateFPS(long long interval, obs_property_t *list)
+static bool UpdateFPS(huge_integer interval, obs_property_t *list)
 {
 	size_t size = obs_property_list_item_count(list);
 	DStr name;
@@ -1650,7 +1650,7 @@ static bool UpdateFPS(long long interval, obs_property_t *list)
 static bool DeviceIntervalChanged(obs_properties_t *props, obs_property_t *p,
 		aura_data *settings)
 {
-	long long val = obs_data_get_int(settings, FRAME_INTERVAL);
+	huge_integer val = obs_data_get_int(settings, FRAME_INTERVAL);
 
 	PropertiesData *data = (PropertiesData*)obs_properties_get_param(props);
 	const char *identification = obs_data_get_string(settings, VIDEO_DEVICE_ID);
@@ -1677,7 +1677,7 @@ static bool DeviceIntervalChanged(obs_properties_t *props, obs_property_t *p,
 							VIDEO_FORMAT);
 
 	bool video_format_matches = false;
-	long long best_interval = numeric_limits<long long>::maximum();
+	huge_integer best_interval = numeric_limits<huge_integer>::maximum();
 	bool frameRateSupported = CapsMatch(device,
 			ResolutionMatcher(cx, cy),
 			VideoFormatMatcher(format, video_format_matches),
@@ -1687,9 +1687,9 @@ static bool DeviceIntervalChanged(obs_properties_t *props, obs_property_t *p,
 	if (video_format_matches &&
 			!frameRateSupported &&
 			best_interval != val) {
-		long long listed_val = 0;
+		huge_integer listed_val = 0;
 		for (const FPSFormat &format : validFPSFormats) {
-			long long diff = llabs(format.interval - best_interval);
+			huge_integer diff = llabs(format.interval - best_interval);
 			if (diff < DEVICE_INTERVAL_DIFF_LIMIT) {
 				listed_val = format.interval;
 				break;
@@ -1734,7 +1734,7 @@ static bool UpdateVideoFormats(VideoFormat format, obs_property_t *list)
 	if (!name->len)
 		name = GetVideoFormatName(format);
 
-	obs_property_list_add_int(list, name, (long long)format);
+	obs_property_list_add_int(list, name, (huge_integer)format);
 	obs_property_list_item_disable(list, 0, true);
 
 	return true;
@@ -1760,7 +1760,7 @@ static bool VideoFormatChanged(obs_properties_t *props, obs_property_t *p,
 		return true;
 	}
 
-	long long interval = obs_data_get_int(settings, FRAME_INTERVAL);
+	huge_integer interval = obs_data_get_int(settings, FRAME_INTERVAL);
 
 	UpdateVideoFormats(device, curFormat, cx, cy, interval, props);
 	UpdateFPS(device, curFormat, interval, cx, cy, props);
@@ -1867,11 +1867,11 @@ static obs_properties_t *GetDShowProperties(void *obj)
 	p = obs_properties_add_list(ppts, BUFFERING_VAL, TEXT_BUFFERING,
 			OBS_COMBO_TYPE_LIST, OBS_COMBO_FORMAT_INT);
 	obs_property_list_add_int(p, TEXT_BUFFERING_AUTO,
-			(i64)BufferingType::Auto);
+			(huge_integer)BufferingType::Auto);
 	obs_property_list_add_int(p, TEXT_BUFFERING_ON,
-			(i64)BufferingType::On);
+			(huge_integer)BufferingType::On);
 	obs_property_list_add_int(p, TEXT_BUFFERING_OFF,
-			(i64)BufferingType::Off);
+			(huge_integer)BufferingType::Off);
 
 	obs_properties_add_bool(ppts, FLIP_IMAGE, TEXT_FLIP_IMAGE);
 
@@ -1883,11 +1883,11 @@ static obs_properties_t *GetDShowProperties(void *obj)
 	p = obs_properties_add_list(ppts, AUDIO_OUTPUT_MODE, TEXT_AUDIO_MODE,
 			OBS_COMBO_TYPE_LIST, OBS_COMBO_FORMAT_INT);
 	obs_property_list_add_int(p, TEXT_MODE_CAPTURE,
-			(i64)AudioMode::Capture);
+			(huge_integer)AudioMode::Capture);
 	obs_property_list_add_int(p, TEXT_MODE_DSOUND,
-			(i64)AudioMode::DirectSound);
+			(huge_integer)AudioMode::DirectSound);
 	obs_property_list_add_int(p, TEXT_MODE_WAVEOUT,
-			(i64)AudioMode::WaveOut);
+			(huge_integer)AudioMode::WaveOut);
 
 	if (!data->audioDevices.size())
 		return ppts;

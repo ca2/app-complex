@@ -15,7 +15,7 @@
 namespace mediaplaylist
 {
 
-   static ::u64 g_usedid[] =
+   static huge_natural g_usedid[] =
    {
 
       id_do_play,
@@ -28,7 +28,7 @@ namespace mediaplaylist
    };
 
    
-   ::u64* usedid()
+   huge_natural* usedid()
    {
 
       return g_usedid;

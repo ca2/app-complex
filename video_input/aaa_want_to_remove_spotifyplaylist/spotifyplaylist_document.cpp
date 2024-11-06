@@ -163,7 +163,7 @@ namespace mediaplaylist
    bool document::on_save_document(::payload payloadFile)
    {
 
-      if(m_play.m_path.has_char())
+      if(m_play.m_path.has_character())
       {
 
          string strPlay = m_play.m_xmldoc.get_xml();
@@ -172,7 +172,7 @@ namespace mediaplaylist
 
       }
 
-      if(m_impact.m_path.has_char() && m_impact.m_path != m_play.m_path)
+      if(m_impact.m_path.has_character() && m_impact.m_path != m_play.m_path)
       {
 
          string strImpact = m_impact.m_xmldoc.get_xml();
@@ -477,7 +477,7 @@ namespace mediaplaylist
    {
       __UNREFERENCED_PARAMETER(bUpdateAllImpacts);
       string strPathName;
-      if(payloadFile.get_type() == ::e_type_property_set && payloadFile.propset()["url"].get_string().has_char())
+      if(payloadFile.get_type() == ::e_type_property_set && payloadFile.propset()["url"].get_string().has_character())
       {
          strPathName = payloadFile.propset()["url"];
       }
@@ -806,12 +806,12 @@ namespace mediaplaylist
          return bFlag;
    }
 
-   void document::data::set_int(const ::string & psz, i64 iValue)
+   void document::data::set_int(const ::string & psz, huge_integer iValue)
    {
       m_xmldoc.get_root()->set_attr(psz, iValue);
    }
 
-   i64 document::data::get_int(const ::string & psz, i64 iDefault)
+   huge_integer document::data::get_int(const ::string & psz, huge_integer iDefault)
    {
       int iValue;
       if(!m_xmldoc.get_root()->get_attr(psz,iValue))
@@ -1058,7 +1058,7 @@ namespace mediaplaylist
       //   {
       //      newName = m_strTitle;
       //      // check for dubious filename
-      //      strsize iBad = newName.get_string().FindOneOf(":/\\");
+      //      character_count iBad = newName.get_string().FindOneOf(":/\\");
       //      if (iBad != -1)
       //         newName = newName.get_string().left(iBad);
 
@@ -1068,7 +1068,7 @@ namespace mediaplaylist
       //        !strExt.is_empty())
       //      {
       //         ASSERT(strExt[0] == '.');
-      //         strsize iStart = 0;
+      //         character_count iStart = 0;
       //         newName += strExt.Tokenize(";", iStart);
       //      }
       //   }

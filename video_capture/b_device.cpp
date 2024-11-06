@@ -40,17 +40,17 @@ void TransformImage_NV12(
 );
 
 
-::rectangle_i32    LetterBoxRect(const ::rectangle_i32 &rcSrc, const ::rectangle_i32 &rcDst);
-::rectangle_i32    CorrectAspectRatio(const ::rectangle_i32 &src, const MFRatio& srcPAR);
+::int_rectangle    LetterBoxRect(const ::int_rectangle &rcSrc, const ::int_rectangle &rcDst);
+::int_rectangle    CorrectAspectRatio(const ::int_rectangle &src, const MFRatio& srcPAR);
 HRESULT GetDefaultStride(IMFMediaType *pType, int *plStride);
 
 
-inline int Width(const ::rectangle_i32 &r)
+inline int Width(const ::int_rectangle &r)
 {
    return rectangle.right() - rectangle.left();
 }
 
-inline int Height(const ::rectangle_i32 &r)
+inline int Height(const ::int_rectangle &r)
 {
    return rectangle.bottom() - rectangle.top();
 }
@@ -335,7 +335,7 @@ HRESULT DrawDevice::SetVideoType(IMFMediaType *pType)
    }
 
 
-   // Update the destination rectangle_i32 for the correct
+   // Update the destination int_rectangle for the correct
    // aspect ratio.
 
    UpdateDestinationRect();
@@ -348,15 +348,15 @@ HRESULT DrawDevice::SetVideoType(IMFMediaType *pType)
 //-------------------------------------------------------------------
 //  UpdateDestinationRect
 //
-//  Update the destination rectangle_i32 for the current window size.
-//  The destination rectangle_i32 is letterboxed to preserve the 
+//  Update the destination int_rectangle for the current window size.
+//  The destination int_rectangle is letterboxed to preserve the 
 //  aspect ratio of the video pimage->
 //-------------------------------------------------------------------
 
 void DrawDevice::UpdateDestinationRect()
 {
-   ::rectangle_i32 rcClient;
-   ::rectangle_i32 rcSrc = { 0, 0, m_width, m_height };
+   ::int_rectangle rcClient;
+   ::int_rectangle rcSrc = { 0, 0, m_width, m_height };
 
    this->rectangle(m_hwnd, &rcClient);
 
@@ -522,7 +522,7 @@ HRESULT DrawDevice::DrawFrame(IMFMediaBuffer *pBuffer)
    m_pDevice->CreateOffscreenPlainSurface(1040, 690, D3DFMT_A8R8G8B8, D3DPOOL_SYSTEMMEM, &pRenderTarget, 0);
 
 
-   ::rectangle_i32 rectangle_i32;
+   ::int_rectangle int_rectangle;
    rectangle.bottom() = 1040;
    rectangle.left() = 0;
    rectangle.right() = 690;
@@ -544,7 +544,7 @@ HRESULT DrawDevice::DrawFrame(IMFMediaBuffer *pBuffer)
    textSprite->End();
 
    m_pDevice->SetRenderTarget(0, pSurf);
-   ::point_i32 p;
+   ::int_point p;
    p.x() = 0;
    p.y() = 0;
    // then use UpdateSurface to copy the drawn text surface to the texture's surface
@@ -896,8 +896,8 @@ void TransformImage_NV12(
 //-------------------------------------------------------------------
 // LetterBoxDstRect
 //
-// Takes a src rectangle_i32 and constructs the largest possible 
-// destination rectangle_i32 within the specifed destination rectangle_i32 
+// Takes a src int_rectangle and constructs the largest possible 
+// destination int_rectangle within the specifed destination int_rectangle 
 // such thatthe video maintains its current shape.
 //
 // This function assumes that pels are the same shape within both the 
@@ -905,7 +905,7 @@ void TransformImage_NV12(
 //
 //-------------------------------------------------------------------
 
-::rectangle_i32    LetterBoxRect(const ::rectangle_i32 &rcSrc, const ::rectangle_i32 &rcDst)
+::int_rectangle    LetterBoxRect(const ::int_rectangle &rcSrc, const ::int_rectangle &rcDst)
 {
    // figure out src/dest scale ratios
    int iSrcWidth = Width(rcSrc);
@@ -933,9 +933,9 @@ void TransformImage_NV12(
    }
 
 
-   // Create a centered rectangle_i32 within the current destination rectangle_i32
+   // Create a centered int_rectangle within the current destination int_rectangle
 
-   ::rectangle_i32 rc;
+   ::int_rectangle rc;
 
    int left = rcDst.left() + ((iDstWidth - iDstLBWidth) / 2);
    int top = rcDst.top() + ((iDstHeight - iDstLBHeight) / 2);
@@ -949,17 +949,17 @@ void TransformImage_NV12(
 //-----------------------------------------------------------------------------
 // CorrectAspectRatio
 //
-// Converts a rectangle_i32 from the source's pixel aspect ratio (PAR) to 1:1 PAR.
+// Converts a int_rectangle from the source's pixel aspect ratio (PAR) to 1:1 PAR.
 // Returns the corrected rectangle.
 //
-// For example, a 720 x 486 rectangle_i32 with a PAR of 9:10, when converted to 1x1 PAR,  
+// For example, a 720 x 486 int_rectangle with a PAR of 9:10, when converted to 1x1 PAR,  
 // is stretched to 720 x 540. 
 //-----------------------------------------------------------------------------
 
-::rectangle_i32 CorrectAspectRatio(const ::rectangle_i32 &src, const MFRatio& srcPAR)
+::int_rectangle CorrectAspectRatio(const ::int_rectangle &src, const MFRatio& srcPAR)
 {
-   // Start with a rectangle_i32 the same size_i32 as src, but offset to the origin (0,0).
-   ::rectangle_i32 rc = { 0, 0, src.right() - src.left(), src.bottom() - src.top() };
+   // Start with a int_rectangle the same int_size as src, but offset to the origin (0,0).
+   ::int_rectangle rc = { 0, 0, src.right() - src.left(), src.bottom() - src.top() };
 
    if ((srcPAR.Numerator != 1) || (srcPAR.Denominator != 1))
    {

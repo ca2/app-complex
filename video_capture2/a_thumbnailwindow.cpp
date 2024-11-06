@@ -81,7 +81,7 @@ HWND CreateThumbnailWindow(HINSTANCE hInstance, HWND hParent, CaptureManager * p
 
    RegisterClassW(&wc);
 
-   ::rectangle_i32 rc;
+   ::int_rectangle rc;
    this->rectangle(hParent, &rc);
 
    // Create the window.

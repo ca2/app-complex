@@ -22,7 +22,7 @@ namespace video_input_video_avfoundation
 
 	using subtype_map = string_map < ::int_array >;
 
-	using frame_rate_map = map < ::u64, subtype_map >;
+	using frame_rate_map = map < huge_natural, subtype_map >;
 
 	typedef void(*emergensyStopEventCallback)(int, void *);
 
@@ -53,7 +53,7 @@ namespace video_input_video_avfoundation
    public:
 
 
-      ::size_i32              m_size;
+      ::int_size              m_size;
       string                  m_strDescription;
 
       pointer_array < frame_rate >    m_frameratea;
@@ -180,7 +180,7 @@ namespace video_input_video_avfoundation
 
 		unsigned int get_height() override;
 
-		::size_i32 get_size() override;
+		::int_size get_size() override;
 
 		//::video_input::media_format get_format(::collection::index iIndex) override;
 

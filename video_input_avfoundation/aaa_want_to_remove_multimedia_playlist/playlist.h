@@ -67,8 +67,8 @@ namespace multimedia_playlist
       virtual ::collection::count get_count();
 
 
-      virtual void set_int(const ::string & psz, i64 iValue);
-      virtual i64 get_int(const ::string & psz, i64 iDefault);
+      virtual void set_int(const ::string & psz, huge_integer iValue);
+      virtual huge_integer get_int(const ::string & psz, huge_integer iDefault);
       virtual void set_string(const ::string & psz, const ::string & pszValue);
       virtual string get_string(const ::string & psz, const ::string & pszValue);
 

@@ -33,7 +33,7 @@ namespace video
       unsigned int m_linesize[MAX_AV_PLANES];
       unsigned int m_width;
       unsigned int m_height;
-      ::u64 m_timestamp;
+      huge_natural m_timestamp;
 
       enum_video_format m_eformat;
       float m_color_matrix[16];
@@ -275,7 +275,7 @@ namespace video
       unsigned int m_linesize[MAX_AV_PLANES];
       unsigned int m_width;
       unsigned int m_height;
-      ::u64 m_timestamp;
+      huge_natural m_timestamp;
 
       enum_video_format m_eformat;
       enum_video_range_type m_erangetype;

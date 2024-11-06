@@ -12,7 +12,7 @@ struct DShowEncoder {
 
 	const wchar_t          *device;
 	video_format           format;
-	long long              frameInterval;
+	huge_integer              frameInterval;
 
 	bool                   first = true;
 	unsigned char *        firstPacket;
@@ -223,7 +223,7 @@ static void DestroyDShowEncoder(void *data)
 //		frame_sizes[2] = frame->linesize[1] * config.cy() / 2;
 //	}
 //
-//	long long actualPTS = frame->pts * frameInterval;
+//	huge_integer actualPTS = frame->pts * frameInterval;
 //
 //	bool success = encoder.Encode(frame_data, frame_sizes,
 //			actualPTS, actualPTS + frameInterval,
@@ -231,18 +231,18 @@ static void DestroyDShowEncoder(void *data)
 //	if (!success)
 //		return false;
 //
-//	if (new_packet && !!dshowPacket.data && !!dshowPacket.size_i32) {
+//	if (new_packet && !!dshowPacket.data && !!dshowPacket.int_size) {
 //		packet->data     = dshowPacket.data;
-//		packet->size_i32     = dshowPacket.size_i32;
+//		packet->int_size     = dshowPacket.int_size;
 //		packet->type     = OBS_ENCODER_VIDEO;
 //		packet->pts      = dshowPacket.pts / frameInterval;
 //		packet->dts      = dshowPacket.dts / frameInterval;
-//		packet->keyframe = obs_avc_keyframe(packet->data, packet->size_i32);
+//		packet->keyframe = obs_avc_keyframe(packet->data, packet->int_size);
 //
 //		/* first packet must be parsed in order to retrieve header */
 //		if (first) {
 //			first = false;
-//			ParseFirstPacket(packet->data, packet->size_i32);
+//			ParseFirstPacket(packet->data, packet->int_size);
 //			packet->data = firstPacket.array;
 //			packet->size = firstPacket.num;
 //		}
@@ -260,14 +260,14 @@ static bool DShowEncode(void *data, struct encoder_frame *frame,
 			received_packet);
 }
 
-//static bool GetDShowExtraData(void *data, unsigned char **extra_data, size_t *size_i32)
+//static bool GetDShowExtraData(void *data, unsigned char **extra_data, size_t *int_size)
 //{
 //	DShowEncoder *encoder = reinterpret_cast<DShowEncoder*>(data);
 //
 //	*extra_data = encoder->header.array;
 //	*size = encoder->header.num;
 //
-//	return *size_i32 > 0;
+//	return *int_size > 0;
 //}
 //
 //static inline bool ValidResolution(unsigned int width, unsigned int height)

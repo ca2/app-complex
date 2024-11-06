@@ -6,11 +6,11 @@
 #include "raw_image.h"
 
 
-::image::image(unsigned int size_i32): ri_new(false), ri_pixels(NULL)
+::image::image(unsigned int int_size): ri_new(false), ri_pixels(NULL)
 {
 	ri_size = size;
 
-	ri_pixels.reset(aaa_primitive_new unsigned char[size_i32]);
+	ri_pixels.reset(aaa_primitive_new unsigned char[int_size]);
 
 	memset((void *)ri_pixels.get(),0,ri_size);
 }
@@ -29,7 +29,7 @@ unsigned int ::image::image::getSize()
 {
 }
 
-long ::image::image::CreateInstance(::image::image **ppRImage,unsigned int size_i32)
+long ::image::image::CreateInstance(::image::image **ppRImage,unsigned int int_size)
 {
 	*ppRImage = aaa_primitive_new (std::nothrow) ::image::image(size);
 

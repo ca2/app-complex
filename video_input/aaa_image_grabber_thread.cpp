@@ -149,7 +149,7 @@ namespace video_input
 		begin();
 		//m_handle = CreateThread(
 		//	NULL,                   // default security attributes
-		//	0,                      // use default stack size_i32  
+		//	0,                      // use default stack int_size  
 		//	MainThreadFunction,       // thread function name
 		//	this,          // argument to thread function 
 		//	0,                      // use default creation flags 

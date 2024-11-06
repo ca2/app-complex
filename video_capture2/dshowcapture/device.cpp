@@ -48,8 +48,8 @@ HDevice::~HDevice()
 	 * simply start/stop the stream right away after/before you enable or
 	 * disable the rocket.  If you start it too fast after enabling, it
 	 * won't return any data.  If you try to turn off the rocket too
-	 * quickly after stopping, then it'll be perpetually stuck on, and then
-	 * you'll have to unplug/replug the device to get it working again.
+	 * quickly after stopping, then it'hi be perpetually stuck on, and then
+	 * you'hi have to unplug/replug the device to get it working again.
 	 */
 	if (!!rocketEncoder) {
 		sleep(ROCKET_WAIT_TIME_MS);
@@ -89,9 +89,9 @@ bool HDevice::EnsureInactive(const wchar_t *func)
 
 inline void HDevice::SendToCallback(bool video,
 		unsigned char *data, size_t size,
-		long long startTime, long long stopTime)
+		huge_integer startTime, huge_integer stopTime)
 {
-	if (!size_i32)
+	if (!int_size)
 		return;
 
 	if (video)
@@ -127,13 +127,13 @@ void HDevice::Receive(bool isVideo, IMediaSample *sample)
 	}
 
 	int size = sample->GetActualDataLength();
-	if (!size_i32)
+	if (!int_size)
 		return;
 
 	if (FAILED(sample->GetPointer(&ptr)))
 		return;
 
-	long long startTime, stopTime;
+	huge_integer startTime, stopTime;
 	bool hasTime = SUCCEEDED(sample->GetTime(&startTime, &stopTime));
 
 	if (encoded) {

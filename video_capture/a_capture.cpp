@@ -468,7 +468,7 @@ done:
    return hr;
 }
 
-// Helper function to get the frame size_i32 from a video media type.
+// Helper function to get the frame int_size from a video media type.
 inline HRESULT GetFrameSize(IMFMediaType *pType, unsigned int *pWidth, unsigned int *pHeight)
 {
    return MFGetAttributeSize(pType, MF_MT_FRAME_SIZE, pWidth, pHeight);

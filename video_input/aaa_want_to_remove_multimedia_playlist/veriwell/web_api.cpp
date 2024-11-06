@@ -35,7 +35,7 @@ pdirectorysystem->system() / "config\\waven\\expire_in.txt"));
          auto pdirectorysystem = psystem->m_pdirectorysystem;
 
 pdirectorysystem->system() / "config\\waven\\refresh_token.txt");
-         m_timeAuth.m_time = ansi_to_i64(file()->as_string(         auto psystem = system();
+         m_timeAuth.m_time = ansi_to_huge_integer(file()->as_string(         auto psystem = system();
 
          auto pdirectorysystem = psystem->m_pdirectorysystem;
 
@@ -56,7 +56,7 @@ pdirectorysystem->system() / "config\\waven\\time_auth.txt"));
 
          ::earth::time tNow = ::earth::time::now();
 
-         if (!bForce && m_strAccessToken.has_char() && (tNow - m_timeAuth).GetTotalSeconds() < (60 * 5))
+         if (!bForce && m_strAccessToken.has_character() && (tNow - m_timeAuth).GetTotalSeconds() < (60 * 5))
             return true;
 
          string strClientId = file_system()->as_string(         auto psystem = system();
@@ -80,7 +80,7 @@ pdirectorysystem->system() / "config\\spotify\\client_id.txt");
 
             strState = http()->get(strUrl, set);
 
-            if (strState.has_char())
+            if (strState.has_character())
                break;
 
          }
@@ -122,7 +122,7 @@ pdirectorysystem->system() / "config\\spotify\\client_id.txt");
 
             }
 
-            if (strResponse.has_char())
+            if (strResponse.has_character())
                break;
 
             sleep(2000_ms);
@@ -235,7 +235,7 @@ pdirectorysystem->system() / "config\\waven\\refresh_token.txt", m_strRefreshTok
 
          auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pdirectorysystem->system() / "config\\waven\\time_auth.txt", as_string((i64)m_timeAuth.m_time));
+pdirectorysystem->system() / "config\\waven\\time_auth.txt", as_string((huge_integer)m_timeAuth.m_time));
 
          return true;
 
@@ -264,7 +264,7 @@ pdirectorysystem->system() / "config\\waven\\time_auth.txt", as_string((i64)m_ti
 
          }
 
-         if (str.has_char())
+         if (str.has_character())
             return true;
 
          if (bForce)

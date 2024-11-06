@@ -64,7 +64,7 @@ namespace mediaplay
       ::pointer<::mediaplay::record_notify_impact>      m_precordnotifyview;
       atom                                        m_atomPopup;
       atom                                        m_atomPopupLink;
-      ::rectangle_f64                                    m_rectangleKaraokeImpact;
+      ::double_rectangle                                    m_rectangleKaraokeImpact;
       file_pointer                           m_spfileRecord;
       ::mediaplay::document *                   m_pdocument;
       xfplayer_impact_linea                       m_impactlineaStatus;
@@ -74,7 +74,7 @@ namespace mediaplay
       bool                                      m_bDestroy;
       ::duration                                      m_tick100Timer;
       string                                    m_strCurrentLink;
-      rectangle_int_array                                m_rectangleaUpdate;
+      int_rectangle_array                                m_rectangleaUpdate;
       ::duration                                      m_durationLastUpdate;
       double                                    m_dBlend;
       double                                    m_dAudioBlend;
@@ -166,7 +166,7 @@ namespace mediaplay
       virtual void StartMusicRendering();
       
       //   virtual void data_on_after_change(int iConfigurationId, int iLine, int iColumn, CVmsDataUpdateHint * pupdate);
-      virtual bool UpdateScreen(rectangle_int_array & recta, unsigned int uiRedraw);
+      virtual bool UpdateScreen(int_rectangle_array & recta, unsigned int uiRedraw);
 
       virtual void on_delete_contents();
 
@@ -200,10 +200,10 @@ namespace mediaplay
       virtual void get_scalar_minimum(e_scalar escalar, double & d) override;
       virtual void get_scalar(e_scalar escalar, double & d) override;
       virtual void get_scalar_maximum(e_scalar escalar, double & d) override;
-      virtual void on_set_scalar(e_scalar escalar,i64 iValue,int iFlags) override;
-      virtual void get_scalar_minimum(e_scalar escalar, i64 & iValue) override;
-      virtual void get_scalar(e_scalar escalar, i64 & iValue) override;
-      virtual void get_scalar_maximum(e_scalar escalar, i64 & iValue) override;
+      virtual void on_set_scalar(e_scalar escalar,huge_integer iValue,int iFlags) override;
+      virtual void get_scalar_minimum(e_scalar escalar, huge_integer & iValue) override;
+      virtual void get_scalar(e_scalar escalar, huge_integer & iValue) override;
+      virtual void get_scalar_maximum(e_scalar escalar, huge_integer & iValue) override;
 
       virtual ::duration KaraokeGetLyricsDelay();
 

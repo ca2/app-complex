@@ -23,7 +23,7 @@ public:
       HRESULT hrStatus,
       unsigned int dwStreamIndex,
       unsigned int dwStreamFlags,
-      ::i64 llTimestamp,
+      huge_integer llTimestamp,
       IMFSample *pSample
    );
 

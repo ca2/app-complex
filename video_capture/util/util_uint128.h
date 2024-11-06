@@ -20,8 +20,8 @@ struct util_::u32128 {
 	union {
 		unsigned int int[4];
 		struct {
-			u64 low;
-			u64 high;
+			huge_natural low;
+			huge_natural high;
 		};
 	};
 };
@@ -31,7 +31,7 @@ typedef struct util_::u32128 util_::u32128_t;
 static inline util_::u32128_t util_add128(util_::u32128_t a, util_::u32128_t b)
 {
 	util_::u32128_t out;
-	u64 val;
+	huge_natural val;
 
 	val = (a.low & 0xFFFFFFFFULL) + (b.low & 0xFFFFFFFFULL);
 	out.int[0] = (unsigned int)(val & 0xFFFFFFFFULL);
@@ -51,7 +51,7 @@ static inline util_::u32128_t util_add128(util_::u32128_t a, util_::u32128_t b)
 	return out;
 }
 
-static inline util_::u32128_t util_lshift64(u64 a, int num)
+static inline util_::u32128_t util_lshift64(huge_natural a, int num)
 {
 	util_::u32128_t val;
 	val.low = a << num;
@@ -59,10 +59,10 @@ static inline util_::u32128_t util_lshift64(u64 a, int num)
 	return val;
 }
 
-static inline util_::u32128_t util_mul64_64(u64 a, u64 b)
+static inline util_::u32128_t util_mul64_64(huge_natural a, huge_natural b)
 {
 	util_::u32128_t out;
-	u64 m;
+	huge_natural m;
 
 	m = (a & 0xFFFFFFFFULL) * (b & 0xFFFFFFFFULL);
 	out.low = m;
@@ -83,7 +83,7 @@ static inline util_::u32128_t util_mul64_64(u64 a, u64 b)
 static inline util_::u32128_t util_div128_32(util_::u32128_t a, unsigned int b)
 {
 	util_::u32128_t out;
-	u64 val = 0;
+	huge_natural val = 0;
 
 	for (int i = 3; i >= 0; i--) {
 		val = (val << 32) | a.int[i];

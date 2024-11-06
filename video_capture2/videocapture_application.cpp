@@ -157,14 +157,14 @@ namespace app_complex_video_capture
 
       }
 
-      if(pcreate->m_payloadFile.has_char())
+      if(pcreate->m_payloadFile.has_character())
       {
 
          m_ptemplateHelloMultiverseImpact->do_request(pcreate);
 
       }
 
-      //rectangle_i32 r(20, 20, 20, 20);
+      //int_rectangle r(20, 20, 20, 20);
 
       //ClipCursor(rectangle);
 
@@ -174,14 +174,14 @@ namespace app_complex_video_capture
 
 
 
-   i64 application::increment_reference_count()
+   huge_integer application::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
 
    }
 
-   i64 application::decrement_reference_count()
+   huge_integer application::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();

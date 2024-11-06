@@ -714,7 +714,7 @@ namespace mediaplay
          if(m_impactlineaStatus.get_line_count() > 0 && m_impactlineaStatus.line_at(0) != nullptr)
          {
 
-            rectangle_int_array recta;
+            int_rectangle_array recta;
 
             m_impactlineaStatus.line_at(0)->OnTimerAnimate(nullptr, recta);
 
@@ -815,7 +815,7 @@ namespace mediaplay
          if(m_durationLastUpdate.elapsed() > 100)
          {
 
-            rectangle_int_array recta;
+            int_rectangle_array recta;
 
             UpdateScreen(recta, 0);
 
@@ -832,7 +832,7 @@ namespace mediaplay
    }
 
 
-   bool impact_interface::UpdateScreen(rectangle_int_array & recta, unsigned int uiRedraw)
+   bool impact_interface::UpdateScreen(int_rectangle_array & recta, unsigned int uiRedraw)
    {
 
       __UNREFERENCED_PARAMETER(uiRedraw);
@@ -883,7 +883,7 @@ namespace mediaplay
    void impact_interface::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      ::rectangle_f64 rectangleX;
+      ::double_rectangle rectangleX;
 
       this->rectangle(rectangleX);
 
@@ -954,7 +954,7 @@ namespace mediaplay
    {
       __UNREFERENCED_PARAMETER(psz);
       ASSERT(false);
-      //u32_array dwa;
+      //unsigned_int_array dwa;
       return 0xffffffff;
    }
 
@@ -1159,7 +1159,7 @@ namespace mediaplay
             // if (get_data()->get_mode() == ::mediaplay::data::mode_wave)
             {
 
-               if (m_strLastTitle.has_char())
+               if (m_strLastTitle.has_character())
                {
 
                   pipi->on_media_playback_end(m_pathLastOrigin, m_strLastTitle, m_straLastPerformer, m_strAlbum);
@@ -1314,14 +1314,14 @@ namespace mediaplay
                strPlaylist.empty();
 
             }
-            else if (strTitle.has_char())
+            else if (strTitle.has_character())
             {
 
                strPlaylist = papp->mediaplaylist()->m_pplaylistdoc->play_playlist()->m_strName;
 
             }
 
-            return strTitle.has_char();
+            return strTitle.has_character();
 
          }
 
@@ -1396,7 +1396,7 @@ retry:
 
                   }
 
-                  if (strTitle.has_char())
+                  if (strTitle.has_character())
                   {
 
                      bMediaCall = true;
@@ -1750,7 +1750,7 @@ retry4:
 
       }
 
-      if (strTitle.has_char())
+      if (strTitle.has_character())
       {
 
          try
@@ -1818,7 +1818,7 @@ retry4:
       if(pusermessage->m_wparam == 1)
       {
 
-         rectangle_int_array * precta = (rectangle_int_array *) pusermessage->m_lparam.m_lparam;
+         int_rectangle_array * precta = (int_rectangle_array *) pusermessage->m_lparam.m_lparam;
 
          UpdateScreen(*precta, RDW_INVALIDATE );
 
@@ -1867,7 +1867,7 @@ retry4:
             }
             prop["doc"] = this;
             prop["make_visible"] = true;
-            prop["context"] = (i64) pinfo->m_context.m_esource;
+            prop["context"] = (huge_integer) pinfo->m_context.m_esource;
 
          }
 
@@ -2198,7 +2198,7 @@ retry4:
    }
 
 
-   void impact_interface::on_set_scalar(e_scalar i,i64 iValue,int iFlags)
+   void impact_interface::on_set_scalar(e_scalar i,huge_integer iValue,int iFlags)
    {
 
       __UNREFERENCED_PARAMETER(i);
@@ -2206,7 +2206,7 @@ retry4:
 
    }
 
-   void impact_interface::get_scalar_minimum(e_scalar i, i64 & iValue)
+   void impact_interface::get_scalar_minimum(e_scalar i, huge_integer & iValue)
    {
 
       __UNREFERENCED_PARAMETER(i);
@@ -2214,7 +2214,7 @@ retry4:
 
    }
 
-   void impact_interface::get_scalar(e_scalar i, i64 & iValue)
+   void impact_interface::get_scalar(e_scalar i, huge_integer & iValue)
    {
 
       __UNREFERENCED_PARAMETER(i);
@@ -2222,7 +2222,7 @@ retry4:
 
    }
 
-   void impact_interface::get_scalar_maximum(e_scalar i, i64 & iValue)
+   void impact_interface::get_scalar_maximum(e_scalar i, huge_integer & iValue)
    {
 
       __UNREFERENCED_PARAMETER(i);
@@ -2324,9 +2324,9 @@ retry4:
                   if (get_data()->m_emode == ::mediaplay::data::mode_wave && get_wave_player() != nullptr && get_wave_player()->get_out()->get_prebuffer_millis_length() > 5000)
                   {
 
-                     i64 iPosition = (i64) ( get_wave_player()->get_out()->out_get_time_for_synch());
+                     huge_integer iPosition = (huge_integer) ( get_wave_player()->get_out()->out_get_time_for_synch());
 
-                     i64 iLength = (i64) ( get_wave_player()->get_out()->get_prebuffer_millis_length());
+                     huge_integer iLength = (huge_integer) ( get_wave_player()->get_out()->get_prebuffer_millis_length());
 
                      if (m_dBlend > 0.001 && iPosition - iLength >= -5000)
                      {
@@ -2369,7 +2369,7 @@ retry4:
 
                      }
 
-                     pdocument->playback_playlist()->set_int("current_song_millis", (i64) time);
+                     pdocument->playback_playlist()->set_int("current_song_millis", (huge_integer) time);
 
                      pdocument->playback_playlist()->save();
 
@@ -2450,7 +2450,7 @@ retry4:
                   m_pplaylistdoc->m_bPendingRestart = false;
                   prop["make_visible"] = pinfo->m_bMakeVisible;
                   prop["::duration"] = pinfo->m_time;
-                  prop["context"] = (i64)pinfo->m_context.m_esource;
+                  prop["context"] = (huge_integer)pinfo->m_context.m_esource;
 
                }
 
@@ -2648,7 +2648,7 @@ retry4:
             }
             info.m_bMakeVisible = prop["make_visible"];
             info.m_time = prop["::duration"].get_double();
-            info.m_context += (::e_source) (prop["context"].i64());
+            info.m_context += (::e_source) (prop["context"].huge_integer());
             info.m_bFadeIn = prop["command"] == "StartFadeIn";
 
          }

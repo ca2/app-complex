@@ -166,7 +166,7 @@ HRESULT CThumbnail::OnReadSample(
    HRESULT hrStatus,
    unsigned int /* dwStreamIndex */,
    unsigned int /* dwStreamFlags */,
-   ::i64 /* llTimestamp */,
+   huge_integer /* llTimestamp */,
    IMFSample *pSample      // Can be nullptr
 )
 {
@@ -422,7 +422,7 @@ HRESULT CThumbnail::SetDevice(IMFActivate *pActivate)
 //  ResizeVideo
 //  Resizes the video rectangle.
 //
-//  The application should call this method if the size_i32 of the video
+//  The application should call this method if the int_size of the video
 //  window changes; e.g., when the application receives e_message_size.
 //-------------------------------------------------------------------
 

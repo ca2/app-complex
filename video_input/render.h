@@ -32,11 +32,11 @@ namespace video_input
 
 #ifdef _DEBUG
 
-      i64 increment_reference_count() override
+      huge_integer increment_reference_count() override
       {
          return ::object::increment_reference_count();
       }
-      i64 decrement_reference_count() override
+      huge_integer decrement_reference_count() override
       {
          return ::object::decrement_reference_count();
       }

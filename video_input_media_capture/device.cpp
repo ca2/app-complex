@@ -486,7 +486,7 @@ namespace video_input_media_capture
    }
 
 
-   ::size_i32 device::get_size()
+   ::int_size device::get_size()
    {
 
       if (m_bSetup)
@@ -644,7 +644,7 @@ namespace video_input_media_capture
 
          //FRM[framerate] = STM;
 
-         //m_mapCaptureFormat[size_i32] = FRM;
+         //m_mapCaptureFormat[int_size] = FRM;
 
          m_cCount++;
 

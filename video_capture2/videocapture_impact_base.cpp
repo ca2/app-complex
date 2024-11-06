@@ -94,8 +94,8 @@ namespace app_complex_video_capture
 
       xOffset %= m_pimageTime->width();
 
-      m_pimageTime->from(point_i32(xOffset, 0), m_pimagePost, ::point_i32(), ::size_i32(m_pimagePost->width() - xOffset, m_pimagePost->height()));
-      m_pimageTime->from(::point_i32(), m_pimagePost, point_i32(m_pimagePost->width() - xOffset, 0), size_i32(xOffset, m_pimagePost->height()));
+      m_pimageTime->from(int_point(xOffset, 0), m_pimagePost, ::int_point(), ::int_size(m_pimagePost->width() - xOffset, m_pimagePost->height()));
+      m_pimageTime->from(::int_point(), m_pimagePost, int_point(m_pimagePost->width() - xOffset, 0), int_size(xOffset, m_pimagePost->height()));
 
       //m_pimagePost->from(m_pimageTime);
       _001OnPostProcess(m_pimageTime->get_graphics());
@@ -134,7 +134,7 @@ namespace app_complex_video_capture
         pdcParam->TextOutA(0, 0, as_string(m_dwaFrame.get_size()));*/
 
 
-      //size_i32 s = m_pimageTime->get_size();
+      //int_size s = m_pimageTime->get_size();
 
       //::draw2d::graphics_pointer & pgraphics = m_pimageTime->get_graphics();
 
@@ -143,14 +143,14 @@ namespace app_complex_video_capture
       //pdcScreen->FillSolidRect(10,10,100,100,argb(184,49,184,60));
 
       //pdcScreen->Draw3dRect(200,200,100,100,argb(255,0,255,0),argb(255,0,0,255));
-      //u64 endTime = get_nanos();
+      //huge_natural endTime = get_nanos();
 
-      //u64 microsecond = (endTime - startTime) / 1000;
+      //huge_natural microsecond = (endTime - startTime) / 1000;
 
       //char sz[512];
 
       //informationf("impact:");
-      //::ansi_from_u64(sz, microsecond, 10);
+      //::ansi_from_huge_natural(sz, microsecond, 10);
       //::information(sz);
       //informationf(", ");
 

@@ -192,7 +192,7 @@ namespace mediaplay
             try
             {
 
-               while ((strFrame = ::str::consume_c_quoted_value(psz)).has_char())
+               while ((strFrame = ::str::consume_c_quoted_value(psz)).has_character())
                {
 
                   strFrame.replace("\t", "\n");
@@ -597,7 +597,7 @@ namespace mediaplay
 
       string_array stra;
 
-      if(get_document()->get_title().has_char())
+      if(get_document()->get_title().has_character())
       {
 
          stra.add(get_document()->get_title());

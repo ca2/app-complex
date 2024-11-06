@@ -111,7 +111,7 @@ HRESULT LogAttributeValueByIndexNew(IMFAttributes *pAttr, DWORD index, ::video_i
 
             strValName = GetGUIDNameNew(*var.puuid);
 
-				if (strValName.has_char())
+				if (strValName.has_character())
 				{
 
 					out.m_guidAmFormatType = MF_MT_AM_FORMAT_TYPE;
@@ -127,7 +127,7 @@ HRESULT LogAttributeValueByIndexNew(IMFAttributes *pAttr, DWORD index, ::video_i
 
             strValName = GetGUIDNameNew(*var.puuid);
 
-				if (strValName.has_char())
+				if (strValName.has_character())
 				{
 
 					out.m_guidMajorType = MF_MT_MAJOR_TYPE;
@@ -143,7 +143,7 @@ HRESULT LogAttributeValueByIndexNew(IMFAttributes *pAttr, DWORD index, ::video_i
 				
             strValName = GetGUIDNameNew(*var.puuid);
 
-				if (strValName.has_char())
+				if (strValName.has_character())
 				{
 
 					out.m_guidSubtype = MF_MT_SUBTYPE;

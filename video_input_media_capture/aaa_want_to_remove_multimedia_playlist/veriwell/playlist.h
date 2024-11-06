@@ -59,8 +59,8 @@ namespace multimedia_playlist
 
          virtual void set_flag(const ::string & psz, bool bFlag);
          virtual bool get_flag(const ::string & psz, bool bDefault);
-         virtual void set_int(const ::string & psz, i64 iValue) override;
-         virtual i64 get_int(const ::string & psz, i64 iDefault) override;
+         virtual void set_int(const ::string & psz, huge_integer iValue) override;
+         virtual huge_integer get_int(const ::string & psz, huge_integer iDefault) override;
          virtual void set_string(const ::string & psz, const ::string & pszValue) override;
          virtual string get_string(const ::string & psz, const ::string & pszValue) override;
 

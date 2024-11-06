@@ -252,9 +252,9 @@ namespace mediaplay
       this->rectangle(m_rectangleKaraokeImpact);
 
 
-      ::rectangle_f64 rectangleX;
+      ::double_rectangle rectangleX;
       this->rectangle(rectangleX);
-      ::rectangle_f64 rectangle = rectangleX;
+      ::double_rectangle rectangle = rectangleX;
 
       rectangle.top() = rectangle.bottom() - 24;
       m_impactlineaStatus.m_pinteraction = this;
@@ -310,9 +310,9 @@ namespace mediaplay
    void impact::on_message_context_menu(::message::message * pmessage)
    {
       ::pointer<::message::context_menu>pcontextmenu(pmessage);
-      ::point_i32 point = pcontextmenu->GetPoint();
+      ::int_point point = pcontextmenu->GetPoint();
 //      ::karaoke::lyric_impact_lines & lyriclines = GetLyricLines();
-      ::point_i32 pointCursor;
+      ::int_point pointCursor;
       pointCursor = point;
       screen_to_client(&pointCursor);
       /* linux   if(m_lyrictemplatelines.hit_test(pointCursor, iLine, iToken, iChar)

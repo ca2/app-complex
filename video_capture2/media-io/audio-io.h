@@ -68,7 +68,7 @@ enum speaker_layout {
 struct audio_data {
 	unsigned char             *data[MAX_AV_PLANES];
 	unsigned int            frames;
-	u64            timestamp;
+	huge_natural            timestamp;
 };
 
 struct audio_output_data {
@@ -76,7 +76,7 @@ struct audio_output_data {
 };
 
 typedef bool (*audio_input_callback_t)(void *param,
-		u64 start_ts, u64 end_ts, u64 *new_ts,
+		huge_natural start_ts, huge_natural end_ts, huge_natural *new_ts,
 		unsigned int active_mixers, struct audio_output_data *mixes);
 
 struct audio_output_info {
@@ -177,8 +177,8 @@ static inline size_t get_audio_size(enum audio_format format,
 	       frames;
 }
 
-static inline u64 audio_frames_to_ns(size_t sample_rate,
-		u64 frames)
+static inline huge_natural audio_frames_to_ns(size_t sample_rate,
+		huge_natural frames)
 {
 	util_::u32128_t val;
 	val = util_mul64_64(frames, 1000000000ULL);
@@ -186,8 +186,8 @@ static inline u64 audio_frames_to_ns(size_t sample_rate,
 	return val.low;
 }
 
-static inline u64 ns_to_audio_frames(size_t sample_rate,
-		u64 frames)
+static inline huge_natural ns_to_audio_frames(size_t sample_rate,
+		huge_natural frames)
 {
 	util_::u32128_t val;
 	val = util_mul64_64(frames, sample_rate);

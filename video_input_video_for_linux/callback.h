@@ -48,13 +48,13 @@ namespace video_input_video_for_linux
 		::pointer<device>m_pdevice;
 
       SwsContext *                           m_psws;
-      ::size_i32                             m_sizeSwsDest;
+      ::int_size                             m_sizeSwsDest;
 
       AVFrame * m_pframePicture;
 
       int	m_iMemory;
 
-      ::i64 m_iTimestamp;
+      huge_integer m_iTimestamp;
       bool        m_bCapturing;
 
 

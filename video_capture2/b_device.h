@@ -31,7 +31,7 @@ private:
    int                    m_lDefaultStride;
    MFRatio                 m_PixelAR;
    MFVideoInterlaceMode    m_interlace;
-   ::rectangle_i32                    m_rcDest;       // Destination rectangle_i32
+   ::int_rectangle                    m_rcDest;       // Destination int_rectangle
 
                                            // Drawing
    IMAGE_TRANSFORM_FN      m_convertFn;    // Function to convert the video to RGB32

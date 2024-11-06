@@ -121,7 +121,7 @@ namespace multimedia_playlist
       bool playlist::save()
       {
 
-         if (!m_path.has_char())
+         if (!m_path.has_character())
          {
 
             return false;
@@ -364,7 +364,7 @@ namespace multimedia_playlist
       }
 
 
-      void playlist::set_int(const ::string & psz, i64 iValue)
+      void playlist::set_int(const ::string & psz, huge_integer iValue)
       {
 
          synchronous_lock synchronouslock(this->synchronization());
@@ -374,7 +374,7 @@ namespace multimedia_playlist
       }
 
 
-      i64 playlist::get_int(const ::string & psz, i64 iDefault)
+      huge_integer playlist::get_int(const ::string & psz, huge_integer iDefault)
       {
 
          synchronous_lock synchronouslock(this->synchronization());

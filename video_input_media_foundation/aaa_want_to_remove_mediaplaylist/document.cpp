@@ -868,7 +868,7 @@ processed_new:
 
       string strPathName;
 
-      if(payloadFile.get_type() == ::e_type_property_set && payloadFile.propset()["url"].get_string().has_char())
+      if(payloadFile.get_type() == ::e_type_property_set && payloadFile.propset()["url"].get_string().has_character())
       {
 
          strPathName = payloadFile.propset()["url"];
@@ -1999,7 +1999,7 @@ retry0:
       //   {
       //      newName = m_strTitle;
       //      // check for dubious filename
-      //      strsize iBad = newName.get_string().FindOneOf(":/\\");
+      //      character_count iBad = newName.get_string().FindOneOf(":/\\");
       //      if (iBad != -1)
       //         newName = newName.get_string().left(iBad);
 
@@ -2009,7 +2009,7 @@ retry0:
       //        !strExt.is_empty())
       //      {
       //         ASSERT(strExt[0] == '.');
-      //         strsize iStart = 0;
+      //         character_count iStart = 0;
       //         newName += strExt.Tokenize(";", iStart);
       //      }
       //   }

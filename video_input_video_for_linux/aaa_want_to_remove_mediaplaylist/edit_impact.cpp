@@ -57,7 +57,7 @@ namespace mediaplaylist
 
          get_text(strText);
 
-         if (strText.has_char())
+         if (strText.has_character())
          {
 
             string strCommandLine = "a.exe \"https://api.spotify.com/v1/search?q=" + purl->url_encode(strText) + "&type=track\"";
@@ -119,11 +119,11 @@ namespace mediaplaylist
    }
 
 
-   i64 edit_impact::increment_reference_count()
+   huge_integer edit_impact::increment_reference_count()
    {
    return ::object::increment_reference_count();
    }
-   i64 edit_impact::decrement_reference_count()
+   huge_integer edit_impact::decrement_reference_count()
    {
    return ::object::decrement_reference_count();
    }

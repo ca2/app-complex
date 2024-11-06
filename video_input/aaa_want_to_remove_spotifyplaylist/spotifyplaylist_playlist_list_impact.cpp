@@ -218,9 +218,9 @@ namespace mediaplaylist
    void playlist_list_impact::on_message_context_menu(::message::message * pmessage)
    {
       ::pointer<::message::context_menu>pcontextmenu(pmessage);
-      ::point_i32 point = pcontextmenu->GetPoint();
+      ::int_point point = pcontextmenu->GetPoint();
       ::collection::index iItem;
-      ::point_i32 ptClient = point;
+      ::int_point ptClient = point;
       screen_to_client(&ptClient);
       if(_001HitTest_(ptClient,iItem))
       {

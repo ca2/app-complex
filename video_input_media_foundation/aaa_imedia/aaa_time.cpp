@@ -7,42 +7,42 @@ namespace imedia
 
 
    //time::time() :
-   //   c_number < i64 >(0)
+   //   c_number < huge_integer >(0)
    //{
    //}
 
    //time::time(int i) :
-   //   c_number < i64 >(static_cast < i64 > (i))
+   //   c_number < huge_integer >(static_cast < huge_integer > (i))
    //{
    //}
 
    //time::time(unsigned int u) :
-   //   c_number < i64 >(static_cast < i64 > (u))
+   //   c_number < huge_integer >(static_cast < huge_integer > (u))
    //{
    //}
 
-   //time::time(i64 i) :
-   //   c_number < i64 >(i)
+   //time::time(huge_integer i) :
+   //   c_number < huge_integer >(i)
    //{
    //}
 
-   //time::time(u64 u) :
-   //   c_number < i64 >(static_cast < i64 > (u))
+   //time::time(huge_natural u) :
+   //   c_number < huge_integer >(static_cast < huge_integer > (u))
    //{
    //}
 
    //time::time(double d) :
-   //   c_number < i64 >((int) d)
+   //   c_number < huge_integer >((int) d)
    //{
    //}
 
    // return ::durations
-   /*time::operator i64()
+   /*time::operator huge_integer()
    {
       return m_i;
    }
 
-   time::operator i64() const
+   time::operator huge_integer() const
    {
       return m_i;
    }

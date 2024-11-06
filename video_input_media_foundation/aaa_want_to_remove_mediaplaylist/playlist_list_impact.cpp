@@ -239,7 +239,7 @@ namespace mediaplaylist
       
       ::pointer<::message::context_menu>pcontextmenu(pmessage);
       
-      ::point_i32 pointContextMenu = pcontextmenu->GetPoint();
+      ::int_point pointContextMenu = pcontextmenu->GetPoint();
 
       auto item = hit_test(pointContextMenu);
 
@@ -779,7 +779,7 @@ namespace mediaplaylist
 
    //      string strPlaylist = papp->m_pmediaplaylist->m_pplaylistdoc->m_pathFile;
 
-   //      if(strPlaylist.has_char())
+   //      if(strPlaylist.has_character())
    //      {
 
    //         papp->mediaplaylist()->datastream()->set("default_playlist",strPlaylist);
@@ -1116,7 +1116,7 @@ restart:
 
                synchronouslock.unlock();
 
-               if(strPlaylist.has_char())
+               if(strPlaylist.has_character())
                {
 
                   synchronouslock.lock();

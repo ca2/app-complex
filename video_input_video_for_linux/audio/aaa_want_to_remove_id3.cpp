@@ -4,7 +4,7 @@
 #include "id3.h"
 
 
-CLASS_DECL_AURA strsize unichar_len(const unichar * psz);
+CLASS_DECL_AURA character_count unichar_len(const unichar * psz);
 
 
 int id3_cp(ID3_TextEnc enc)
@@ -124,7 +124,7 @@ string id3_frame_text(ID3_Frame * pframe)
 
    string str = id3_field_text(pframe->GetField(ID3FN_TEXTENC));
 
-   if (str.has_char())
+   if (str.has_character())
    {
 
       return str;

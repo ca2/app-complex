@@ -829,7 +829,7 @@ pdirectorysystem->system() / "translators" / "token.txt", m_strTranslatorToken);
 //       //
 //       //      }
 //       //
-//       //      if (m_strTranslatorToken.has_char())
+//       //      if (m_strTranslatorToken.has_character())
 //       //      {
 //       //
 //       //         string strFile;

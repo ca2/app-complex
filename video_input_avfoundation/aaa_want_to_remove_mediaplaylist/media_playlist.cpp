@@ -4,7 +4,7 @@
 #include "acme/constant/id.h"
 
 
-inline bool is_id_used(::u64 * pinteraction, ::u64 uId)
+inline bool is_id_used(huge_natural * pinteraction, huge_natural uId)
 {
    
    while(*pinteraction != INVALID_ID)

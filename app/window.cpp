@@ -95,7 +95,7 @@ namespace simple_app
    void window::on_message_display_change(::message::message* pmessage)
    {
 
-      ::rectangle_i32 rectangleWindow;
+      ::int_rectangle rectangleWindow;
 
       _001InitialFramePosition(rectangleWindow, { 0.05, 0.05, 0.4, 0.4 });
 

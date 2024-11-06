@@ -148,7 +148,7 @@ namespace app_complex_video_capture
 
       }
 
-      if(prequest->m_payloadFile.has_char())
+      if(prequest->m_payloadFile.has_character())
       {
 
          impact_system("impact")->request(prequest);
@@ -163,7 +163,7 @@ namespace app_complex_video_capture
       //set_current_video_input_device(strDevice);
 
 
-      //rectangle_i32 r(20, 20, 20, 20);
+      //int_rectangle r(20, 20, 20, 20);
 
       //ClipCursor(rectangle);
 
@@ -173,14 +173,14 @@ namespace app_complex_video_capture
 
 
 
-   i64 application::increment_reference_count()
+   huge_integer application::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
 
    }
 
-   i64 application::decrement_reference_count()
+   huge_integer application::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();

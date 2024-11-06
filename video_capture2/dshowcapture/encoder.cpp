@@ -163,9 +163,9 @@ bool HVideoEncoder::SetupCrossbar()
 
 void HVideoEncoder::InitializeVideoFormat(MediaType &mt)
 {
-	long long frameTime;
+	huge_integer frameTime;
 	unsigned int size;
-	long long bitrate;
+	huge_integer bitrate;
 
 	frameTime = config.fpsDenominator;
 	frameTime *= 10000000;
@@ -174,7 +174,7 @@ void HVideoEncoder::InitializeVideoFormat(MediaType &mt)
 	size = config.cx() * config.cy();
 	size += size / 2;
 
-	bitrate = size_i32 * config.fpsNumerator / config.fpsDenominator;
+	bitrate = int_size * config.fpsNumerator / config.fpsDenominator;
 
 	VIDEOINFOHEADER *vih           = mt.AllocFormat<VIDEOINFOHEADER>();
 	vih->bmiHeader.biSize          = sizeof(vih->bmiHeader);
@@ -411,7 +411,7 @@ void HVideoEncoder::Receive(IMediaSample *s)
 		return;
 
 	size = (size_t)s->GetActualDataLength();
-	if (!size_i32)
+	if (!int_size)
 		return;
 
 	packetMutex.lock();
@@ -421,7 +421,7 @@ void HVideoEncoder::Receive(IMediaSample *s)
 
 bool HVideoEncoder::Encode(unsigned char *data[DSHOW_MAX_PLANES],
 		size_t linesize[DSHOW_MAX_PLANES],
-		long long timestampStart, long long timestampEnd,
+		huge_integer timestampStart, huge_integer timestampEnd,
 		EncoderPacket &packet, bool &new_packet)
 {
 	new_packet = false;
@@ -435,7 +435,7 @@ bool HVideoEncoder::Encode(unsigned char *data[DSHOW_MAX_PLANES],
 	packetMutex.lock();
 	if (packets.size() > 0) {
 		curPacket = transfer(packets.front());
-		long long ptsOut = ptsVals[0];
+		huge_integer ptsOut = ptsVals[0];
 		packets.pop_front();
 		ptsVals.pop_front();
 

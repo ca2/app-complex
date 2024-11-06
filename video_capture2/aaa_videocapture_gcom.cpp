@@ -10,7 +10,7 @@ namespace video_capture
 
       m_bBkLoaded = false;
 
-      if (papp->m_varTopicQuery["hello_bk"].get_string().has_char())
+      if (papp->m_varTopicQuery["hello_bk"].get_string().has_character())
       {
 
          property_set payloadFile;
@@ -101,7 +101,7 @@ namespace video_capture
    {
 
 
-      ::rectangle_i32 rectangleX;
+      ::int_rectangle rectangleX;
 
       this->rectangle(rectangleX);
 

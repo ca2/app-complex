@@ -16,7 +16,7 @@ namespace userex
 namespace mediaplaylist
 {
    
-   ::u64* usedid();
+   huge_natural* usedid();
 
    class playlist_list_impact;
    class list_impact;

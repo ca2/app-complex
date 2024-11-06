@@ -74,8 +74,8 @@ namespace mediaplaylist
 
          virtual void set_flag(const ::string & psz,bool bFlag);
          virtual bool get_flag(const ::string & psz,bool bDefault);
-         virtual void set_int(const ::string & psz,i64 iValue);
-         virtual i64 get_int(const ::string & psz,i64 iDefault);
+         virtual void set_int(const ::string & psz,huge_integer iValue);
+         virtual huge_integer get_int(const ::string & psz,huge_integer iDefault);
          virtual void set_string(const ::string & psz, const ::string & pszValue);
          virtual string get_string(const ::string & psz, const ::string & pszValue);
          virtual bool is_recursive();

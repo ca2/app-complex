@@ -20,7 +20,7 @@
 #define V4L2_DATA(voidptr) struct v4l2_data *data = voidptr;
 
 #define timeval2ns(tv) \
-	(((::u64)tv.tv_sec * 1000000000) + ((::u64)tv.tv_usec * 1000))
+	(((huge_natural)tv.tv_sec * 1000000000) + ((huge_natural)tv.tv_usec * 1000))
 
 #define V4L2_FOURCC_STR(code)                                         \
 	(char[5])                                                     \

@@ -122,7 +122,7 @@ int ffmpeg_decode_audio(struct ffmpeg_decode *decode,
 
 	av_init_packet(&packet);
 	packet.data = decode->packet_buffer;
-	packet.size = (int)size_i32;
+	packet.size = (int)int_size;
 
 	if (!decode->frame) {
 		decode->frame = av_frame_alloc();
@@ -158,7 +158,7 @@ int ffmpeg_decode_audio(struct ffmpeg_decode *decode,
 }
 
 int ffmpeg_decode_video(struct ffmpeg_decode *decode,
-		unsigned char *data, size_t size, long long *ts,
+		unsigned char *data, size_t size, huge_integer *ts,
 		struct obs_source_frame *frame,
 		bool *got_output)
 {
@@ -173,7 +173,7 @@ int ffmpeg_decode_video(struct ffmpeg_decode *decode,
 
 	av_init_packet(&packet);
 	packet.data     = decode->packet_buffer;
-	packet.size_i32     = (int)size_i32;
+	packet.int_size     = (int)int_size;
 	packet.pts      = *ts;
 
 //	if (decode->codec->identification == AV_CODEC_ID_H264 &&

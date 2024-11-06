@@ -45,7 +45,7 @@ namespace multimedia_playlist
    string track::get_name()
    {
 
-//      if(m_strName.has_char() && (m_durationLastUpdate.elapsed() < 60 * 1000))
+//      if(m_strName.has_character() && (m_durationLastUpdate.elapsed() < 60 * 1000))
 //      {
 //
 //         return m_strName;

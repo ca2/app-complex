@@ -128,7 +128,7 @@ namespace video_capture
 
                string strFont = m_pimpact->get_cur_sel_face_name();
 
-               if(strFont.has_char())
+               if(strFont.has_character())
                {
 
                   get_typed_parent < pane_impact >()->m_pimpactLast->m_strNewFont = strFont;
