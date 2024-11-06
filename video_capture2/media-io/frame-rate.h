@@ -5,8 +5,8 @@ extern "C" {
 #endif
 
 struct media_frames_per_second {
-	u32 numerator;
-	u32 denominator;
+	unsigned int numerator;
+	unsigned int denominator;
 };
 
 static inline double media_frames_per_second_to_frame_interval(

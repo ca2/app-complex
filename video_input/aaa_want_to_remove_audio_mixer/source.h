@@ -36,8 +36,8 @@ namespace multimedia
       public:
 
 
-         virtual void     mixerGetLineInfo(u32 dwSource, u32 dwDestination, u32 fdwInfo);
-         virtual void     mixerGetLineInfo(u32 dwSource, ::audio_mixer::destination * pdestination);
+         virtual void     mixerGetLineInfo(unsigned int dwSource, unsigned int dwDestination, unsigned int fdwInfo);
+         virtual void     mixerGetLineInfo(unsigned int dwSource, ::audio_mixer::destination * pdestination);
 
          virtual ::atom GetLineID();
          virtual string get_source_name();

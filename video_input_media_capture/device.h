@@ -42,7 +42,7 @@ namespace video_input_media_capture
 
 		//::size_i32										m_size;
 
-		//::u32												m_uCurrentNumber;
+		//unsigned int												m_uCurrentNumber;
 
 		//bool												m_bSetup;
 
@@ -79,15 +79,15 @@ namespace video_input_media_capture
 
 		//int get_format_count() override;
 
-		::u32 get_width() override;
+		unsigned int get_width() override;
 
-		::u32 get_height() override;
+		unsigned int get_height() override;
 
 		::size_i32 get_size() override;
 
 		//::video_input::media_format get_format(::collection::index iIndex) override;
 
-		//::collection::index find_format(::u32 w, ::u32 h, ::u32 idealFramerate = 0) override;
+		//::collection::index find_format(unsigned int w, unsigned int h, unsigned int idealFramerate = 0) override;
 
 		void set_format(::collection::index iIndex) override;
 
@@ -111,7 +111,7 @@ namespace video_input_media_capture
 
 		void buildLibraryofTypes() override;
 
-		int findType(::u32 size, ::u32 frameRate = 0) override;
+		int findType(unsigned int size, unsigned int frameRate = 0) override;
 
 		//virtual void _set_device(IMFActivate * pActivate);
 

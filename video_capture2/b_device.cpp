@@ -1,15 +1,15 @@
 #include "Common.h"
 //#include "BufferLock.h"
 
-const ::u32 NUM_BACK_BUFFERS = 2;
+const unsigned int NUM_BACK_BUFFERS = 2;
 
 void TransformImage_RGB24(
    unsigned char*       pDest,
    int        lDestStride,
    const unsigned char* pSrc,
    int        lSrcStride,
-   ::u32       dwWidthInPixels,
-   ::u32       dwHeightInPixels
+   unsigned int       dwWidthInPixels,
+   unsigned int       dwHeightInPixels
 );
 
 void TransformImage_RGB32(
@@ -17,8 +17,8 @@ void TransformImage_RGB32(
    int        lDestStride,
    const unsigned char* pSrc,
    int        lSrcStride,
-   ::u32       dwWidthInPixels,
-   ::u32       dwHeightInPixels
+   unsigned int       dwWidthInPixels,
+   unsigned int       dwHeightInPixels
 );
 
 void TransformImage_YUY2(
@@ -26,8 +26,8 @@ void TransformImage_YUY2(
    int        lDestStride,
    const unsigned char* pSrc,
    int        lSrcStride,
-   ::u32       dwWidthInPixels,
-   ::u32       dwHeightInPixels
+   unsigned int       dwWidthInPixels,
+   unsigned int       dwHeightInPixels
 );
 
 void TransformImage_NV12(
@@ -35,8 +35,8 @@ void TransformImage_NV12(
    int dstStride,
    const unsigned char* pSrc,
    int srcStride,
-   ::u32 dwWidthInPixels,
-   ::u32 dwHeightInPixels
+   unsigned int dwWidthInPixels,
+   unsigned int dwHeightInPixels
 );
 
 
@@ -72,7 +72,7 @@ ConversionFunction   g_FormatConversions[] =
    { MFVideoFormat_NV12,  TransformImage_NV12 }
 };
 
-const ::u32   g_cFormats = ARRAYSIZE(g_FormatConversions);
+const unsigned int   g_cFormats = ARRAYSIZE(g_FormatConversions);
 
 
 //-------------------------------------------------------------------
@@ -113,7 +113,7 @@ DrawDevice::~DrawDevice()
 // Get a supported output format by index.
 //-------------------------------------------------------------------
 
-HRESULT DrawDevice::GetFormat(::u32 index, GUID *pSubtype) const
+HRESULT DrawDevice::GetFormat(unsigned int index, GUID *pSubtype) const
 {
    if (index < g_cFormats)
    {
@@ -132,7 +132,7 @@ HRESULT DrawDevice::GetFormat(::u32 index, GUID *pSubtype) const
 
 BOOL DrawDevice::IsFormatSupported(REFGUID subtype) const
 {
-   for (::u32 i = 0; i < g_cFormats; i++)
+   for (unsigned int i = 0; i < g_cFormats; i++)
    {
       if (subtype == g_FormatConversions[i].subtype)
       {
@@ -225,7 +225,7 @@ HRESULT DrawDevice::SetConversionFunction(REFGUID subtype)
 {
    m_convertFn = nullptr;
 
-   for (::u32 i = 0; i < g_cFormats; i++)
+   for (unsigned int i = 0; i < g_cFormats; i++)
    {
       if (g_FormatConversions[i].subtype == subtype)
       {
@@ -288,7 +288,7 @@ HRESULT DrawDevice::SetVideoType(IMFMediaType *pType)
 
 
    // Get the interlace mode. Default: assume progressive.
-   m_interlace = (MFVideoInterlaceMode)MFGetAttribute::u32(
+   m_interlace = (MFVideoInterlaceMode)MFGetAttributeunsigned int(
       pType,
       MF_MT_INTERLACE_MODE,
       MFVideoInterlace_Progressive
@@ -308,8 +308,8 @@ HRESULT DrawDevice::SetVideoType(IMFMediaType *pType)
    hr = MFGetAttributeRatio(
       pType,
       MF_MT_PIXEL_ASPECT_RATIO,
-      (::u32*)&PAR.Numerator,
-      (::u32*)&PAR.Denominator
+      (unsigned int*)&PAR.Numerator,
+      (unsigned int*)&PAR.Denominator
    );
 
    if (SUCCEEDED(hr))
@@ -730,16 +730,16 @@ void TransformImage_RGB24(
    int        lDestStride,
    const unsigned char* pSrc,
    int        lSrcStride,
-   ::u32       dwWidthInPixels,
-   ::u32       dwHeightInPixels
+   unsigned int       dwWidthInPixels,
+   unsigned int       dwHeightInPixels
 )
 {
-   for (::u32 y = 0; y < dwHeightInPixels; y++)
+   for (unsigned int y = 0; y < dwHeightInPixels; y++)
    {
       RGBTRIPLE *pSrcPel = (RGBTRIPLE*)pSrc;
-      ::u32 *pDestPel = (::u32*)pDest;
+      unsigned int *pDestPel = (unsigned int*)pDest;
 
-      for (::u32 x = 0; x < dwWidthInPixels; x++)
+      for (unsigned int x = 0; x < dwWidthInPixels; x++)
       {
          pDestPel[x] = D3DCOLOR_XRGB(
             pSrcPel[x].rgbtRed,
@@ -767,8 +767,8 @@ void TransformImage_RGB32(
    int        lDestStride,
    const unsigned char* pSrc,
    int        lSrcStride,
-   ::u32       dwWidthInPixels,
-   ::u32       dwHeightInPixels
+   unsigned int       dwWidthInPixels,
+   unsigned int       dwHeightInPixels
 )
 {
    MFCopyImage(pDest, lDestStride, pSrc, lSrcStride, dwWidthInPixels * 4, dwHeightInPixels);
@@ -785,16 +785,16 @@ void TransformImage_YUY2(
    int        lDestStride,
    const unsigned char* pSrc,
    int        lSrcStride,
-   ::u32       dwWidthInPixels,
-   ::u32       dwHeightInPixels
+   unsigned int       dwWidthInPixels,
+   unsigned int       dwHeightInPixels
 )
 {
-   for (::u32 y = 0; y < dwHeightInPixels; y++)
+   for (unsigned int y = 0; y < dwHeightInPixels; y++)
    {
       RGBQUAD *pDestPel = (RGBQUAD*)pDest;
-      ::u16    *pSrcPel = (::u16*)pSrc;
+      unsigned short    *pSrcPel = (unsigned short*)pSrc;
 
-      for (::u32 x = 0; x < dwWidthInPixels; x += 2)
+      for (unsigned int x = 0; x < dwWidthInPixels; x += 2)
       {
          // Byte order is U0 Y0 V0 Y1
 
@@ -825,15 +825,15 @@ void TransformImage_NV12(
    int dstStride,
    const unsigned char* pSrc,
    int srcStride,
-   ::u32 dwWidthInPixels,
-   ::u32 dwHeightInPixels
+   unsigned int dwWidthInPixels,
+   unsigned int dwHeightInPixels
 )
 {
    const unsigned char* lpBitsY = pSrc;
    const unsigned char* lpBitsCb = lpBitsY + (dwHeightInPixels * srcStride);;
    const unsigned char* lpBitsCr = lpBitsCb + 1;
 
-   for (::u32 y = 0; y < dwHeightInPixels; y += 2)
+   for (unsigned int y = 0; y < dwHeightInPixels; y += 2)
    {
       const unsigned char* lpLineY1 = lpBitsY;
       const unsigned char* lpLineY2 = lpBitsY + srcStride;
@@ -843,7 +843,7 @@ void TransformImage_NV12(
       LPBYTE lpDibLine1 = pDst;
       LPBYTE lpDibLine2 = pDst + dstStride;
 
-      for (::u32 x = 0; x < dwWidthInPixels; x += 2)
+      for (unsigned int x = 0; x < dwWidthInPixels; x += 2)
       {
          int  y0 = (int)lpLineY1[0];
          int  y1 = (int)lpLineY1[1];
@@ -993,14 +993,14 @@ HRESULT GetDefaultStride(IMFMediaType *pType, int *plStride)
    int lStride = 0;
 
    // Try to get the default stride from the media type.
-   HRESULT hr = pType->Get::u32(MF_MT_DEFAULT_STRIDE, (::u32*)&lStride);
+   HRESULT hr = pType->Getunsigned int(MF_MT_DEFAULT_STRIDE, (unsigned int*)&lStride);
    if (FAILED(hr))
    {
       // Attribute not set. Try to calculate the default stride.
       GUID subtype = GUID_NULL;
 
-      ::u32 width = 0;
-      ::u32 height = 0;
+      unsigned int width = 0;
+      unsigned int height = 0;
 
       // Get the subtype and the image size.
       hr = pType->GetGUID(MF_MT_SUBTYPE, &subtype);
@@ -1016,7 +1016,7 @@ HRESULT GetDefaultStride(IMFMediaType *pType, int *plStride)
       // Set the attribute for later object.
       if (SUCCEEDED(hr))
       {
-         (void)pType->Set::u32(MF_MT_DEFAULT_STRIDE, ::u32(lStride));
+         (void)pType->Setunsigned int(MF_MT_DEFAULT_STRIDE, unsigned int(lStride));
       }
    }
 

@@ -29,7 +29,7 @@ namespace video_input
 
 	}
 
-	HRESULT image_grabber_thread::CreateInstance(image_grabber_thread ** ppIGT, IMFMediaSource * pSource, ::u32 deviceID, void(*func)(int, void *))
+	HRESULT image_grabber_thread::CreateInstance(image_grabber_thread ** ppIGT, IMFMediaSource * pSource, unsigned int deviceID, void(*func)(int, void *))
 	{
 		
 		debug_print_out * pdebugprintout = &debug_print_out::get_instance();
@@ -56,7 +56,7 @@ namespace video_input
 	}
 
 
-	image_grabber_thread::image_grabber_thread(IMFMediaSource * pSource, ::u32 deviceID, void(*func)(int, void *)) 
+	image_grabber_thread::image_grabber_thread(IMFMediaSource * pSource, unsigned int deviceID, void(*func)(int, void *)) 
 		: m_bStop(false)
 	{
 

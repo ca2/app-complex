@@ -37,17 +37,17 @@ namespace multimedia
 
          virtual bool control_type(e_control econtrol) const;
          virtual bool OnCommand(WPARAM wParam, LPARAM lParam);
-         virtual ::pointer<::audio_mixer::control_data>GetWindowDataByDlgCtrlID(u32 nID);
-         virtual ::pointer<::audio_mixer::user_control>GetControlByDlgCtrlID(u32 nID);
-         virtual void OnVHScroll(u32 nSBCode, u32 nPos, ::pointer<::user::interaction>pScrollBar);
+         virtual ::pointer<::audio_mixer::control_data>GetWindowDataByDlgCtrlID(unsigned int nID);
+         virtual ::pointer<::audio_mixer::user_control>GetControlByDlgCtrlID(unsigned int nID);
+         virtual void OnVHScroll(unsigned int nSBCode, unsigned int nPos, ::pointer<::user::interaction>pScrollBar);
          virtual ::pointer<::audio_mixer::control_data>GetWindowData(int iType);
          virtual void OnMixerControlChange();
          virtual ::pointer<::audio_mixer::user_control>GetControl(int iType);
          virtual ::pointer<::audio_mixer::user_control>GetControlByIndex(::collection::index iIndex);
          virtual void Prepare();
-         virtual bool CreateWindowsVolumeV001(::pointer<::user::interaction>pParent, u32 nStartID, u32 * nNextID);
+         virtual bool CreateWindowsVolumeV001(::pointer<::user::interaction>pParent, unsigned int nStartID, unsigned int * nNextID);
 
-         virtual bool _001CreateMuteControl(::pointer<::user::interaction>pParent, u32 nStartID, u32 * nNextID);
+         virtual bool _001CreateMuteControl(::pointer<::user::interaction>pParent, unsigned int nStartID, unsigned int * nNextID);
 
          virtual bool CreateWindows(::pointer<::user::interaction>pParent, int iStyle);
 

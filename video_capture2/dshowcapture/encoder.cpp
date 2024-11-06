@@ -164,7 +164,7 @@ bool HVideoEncoder::SetupCrossbar()
 void HVideoEncoder::InitializeVideoFormat(MediaType &mt)
 {
 	long long frameTime;
-	::u32 size;
+	unsigned int size;
 	long long bitrate;
 
 	frameTime = config.fpsDenominator;
@@ -187,7 +187,7 @@ void HVideoEncoder::InitializeVideoFormat(MediaType &mt)
 	vih->rcSource.right()            = config.cx();
 	vih->rcSource.bottom()           = config.cy();
 	vih->rcTarget                  = vih->rcSource;
-	vih->dwBitRate                 = (::u32)(bitrate * 8);
+	vih->dwBitRate                 = (unsigned int)(bitrate * 8);
 	vih->AvgTimePerFrame           = frameTime;
 
 	mt->majortype                  = MEDIATYPE_Video;

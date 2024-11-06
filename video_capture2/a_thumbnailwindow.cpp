@@ -43,7 +43,7 @@ namespace ThumbnailWnd
       EndPaint(hwnd, &ps);
    }
 
-   void OnSize(HWND hwnd, ::u32 state, int /*cx*/, int /*cy*/)
+   void OnSize(HWND hwnd, unsigned int state, int /*cx*/, int /*cy*/)
    {
       if (state == SIZE_RESTORED)
       {
@@ -51,7 +51,7 @@ namespace ThumbnailWnd
       }
    }
 
-   LRESULT CALLBACK WindowProc(HWND hwnd, ::u32 uMsg, WPARAM wParam, LPARAM lParam)
+   LRESULT CALLBACK WindowProc(HWND hwnd, unsigned int uMsg, WPARAM wParam, LPARAM lParam)
    {
       switch (uMsg)
       {

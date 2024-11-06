@@ -34,7 +34,7 @@ HRESULT out_file(::memory_file * f, WAVEFORMATEX & fmt, IStream * pStream)
 
    // Write the file headers
    f->write("RIFF----WAVEfmt ", 16);     // (chunk size_i32 to be filled in later)
-   ::u32 dw = fmt.cbSize;
+   unsigned int dw = fmt.cbSize;
    f->write(&dw, sizeof(dw));
    f->write(&fmt, fmt.cbSize);
    // Write the data chunk header
@@ -69,14 +69,14 @@ HRESULT out_file(::memory_file * f, WAVEFORMATEX & fmt, IStream * pStream)
 
    // Fix the data chunk header to contain the data size_i32
    f->seek(data_chunk_pos + 4, ::e_seek_set);
-   dw = (::u32) (file_length - data_chunk_pos + 8);
-   f->write(&dw, sizeof(::u32));
+   dw = (unsigned int) (file_length - data_chunk_pos + 8);
+   f->write(&dw, sizeof(unsigned int));
 
 
    // Fix the file header to contain the proper RIFF chunk size, which is (file size - 8) bytes
    f->seek(0 + 4, ::e_seek_set);
-   dw = (::u32) (file_length - 8);
-   f->write(&dw, sizeof(::u32));
+   dw = (unsigned int) (file_length - 8);
+   f->write(&dw, sizeof(unsigned int));
    return S_OK;
 }
 #include <sapi.h>               // SAPI
@@ -692,7 +692,7 @@ namespace windows
 
          string strT(strText);
 
-         ::u32 uFlag = 0;
+         unsigned int uFlag = 0;
 
          strT.trim();
 
@@ -911,7 +911,7 @@ namespace windows
 
          string strT(strText);
 
-         ::u32 uFlag = 0;
+         unsigned int uFlag = 0;
 
          strT.trim();
 

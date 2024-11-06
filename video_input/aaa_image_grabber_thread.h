@@ -32,12 +32,12 @@ namespace video_input
 
 		bool m_bStop;
 
-		::u32 m_uDevice;
-		image_grabber_thread(IMFMediaSource * pSource, ::u32 deviceID, void(*func)(int, void *));
+		unsigned int m_uDevice;
+		image_grabber_thread(IMFMediaSource * pSource, unsigned int deviceID, void(*func)(int, void *));
 
 		virtual ~image_grabber_thread();
 
-		static HRESULT CreateInstance(image_grabber_thread ** ppIGT, IMFMediaSource * pSource, ::u32 deviceID, void(*func)(int, void *));
+		static HRESULT CreateInstance(image_grabber_thread ** ppIGT, IMFMediaSource * pSource, unsigned int deviceID, void(*func)(int, void *));
 
 		HRESULT __create_instance();
 

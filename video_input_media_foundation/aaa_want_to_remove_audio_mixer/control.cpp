@@ -45,7 +45,7 @@ namespace multimedia
 
 
 
-      bool control::CreateWindowsVolumeV001(::pointer<::user::interaction>pParent, u32 nStartID, u32 * nNextID)
+      bool control::CreateWindowsVolumeV001(::pointer<::user::interaction>pParent, unsigned int nStartID, unsigned int * nNextID)
       {
 
          return false;
@@ -53,7 +53,7 @@ namespace multimedia
       }
 
 
-      bool control::_001CreateMuteControl(::pointer<::user::interaction>pParent, u32 nStartID, u32 * nNextID)
+      bool control::_001CreateMuteControl(::pointer<::user::interaction>pParent, unsigned int nStartID, unsigned int * nNextID)
       {
 
          return false;
@@ -117,13 +117,13 @@ namespace multimedia
          //    LPMACONTROLINSTANCE             pmaci;
          //    LPMIXERCONTROL                  pmxctrl;
 //         int                             nRange;
-//         u32                            cChannels;
-//         u32                            cMultipleItems;
-         //       u32                            cChannels;
-         //     u32                            cMultipleItems;
-         //    u32                            u;
-         //    u32                            uIndex;
-         //    u32                            v;
+//         unsigned int                            cChannels;
+//         unsigned int                            cMultipleItems;
+         //       unsigned int                            cChannels;
+         //     unsigned int                            cMultipleItems;
+         //    unsigned int                            u;
+         //    unsigned int                            uIndex;
+         //    unsigned int                            v;
          //    MIXERCONTROLDETAILS             mxcd;
          //   oswindow                            hsbFocus;
          //    oswindow                            hsb;
@@ -147,7 +147,7 @@ namespace multimedia
          //
          //
          //
-         //    pmaci_fader = (PMACONTROLINSTANCE_FADER)(u32)GetWindowLong(oswindow, DWL_USER);
+         //    pmaci_fader = (PMACONTROLINSTANCE_FADER)(unsigned int)GetWindowLong(oswindow, DWL_USER);
          //    pmaci       = pmaci_fader->pmaci;
          //    pmxl        = pmaci->pmxl;
          //    pmxctrl     = pmaci->pmxctrl;
@@ -187,7 +187,7 @@ namespace multimedia
       }
 
 
-      ::pointer<::audio_mixer::user_control>ontrol::GetControlByDlgCtrlID(u32 nID)
+      ::pointer<::audio_mixer::user_control>ontrol::GetControlByDlgCtrlID(unsigned int nID)
       {
 
          ::pointer<::audio_mixer::user_control>pusercontrol;
@@ -204,7 +204,7 @@ namespace multimedia
 
             }
 
-            if((u32) pusercontrol->GetDlgCtrlId() == nID)
+            if((unsigned int) pusercontrol->GetDlgCtrlId() == nID)
             {
 
                return pusercontrol;
@@ -218,7 +218,7 @@ namespace multimedia
       }
 
 
-      ::pointer<::audio_mixer::control_data>control::GetWindowDataByDlgCtrlID(u32 nID)
+      ::pointer<::audio_mixer::control_data>control::GetWindowDataByDlgCtrlID(unsigned int nID)
       {
 
          ::pointer<::audio_mixer::user_control>pusercontrol;
@@ -231,7 +231,7 @@ namespace multimedia
             if(pusercontrol == nullptr)
                continue;
 
-            if((u32) pusercontrol->GetDlgCtrlId() == nID)
+            if((unsigned int) pusercontrol->GetDlgCtrlId() == nID)
             {
 
                return pusercontrol->get_data();
@@ -245,7 +245,7 @@ namespace multimedia
       }
 
 
-      void control::OnVHScroll(u32 nSBCode, u32 nPos, ::pointer<::user::interaction>pScrollBar)
+      void control::OnVHScroll(unsigned int nSBCode, unsigned int nPos, ::pointer<::user::interaction>pScrollBar)
       {
 
       }

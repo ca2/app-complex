@@ -381,7 +381,7 @@ namespace multimedia
 
          m_labelmap.erase_all();
 
-         //u32 dwKey;
+         //unsigned int dwKey;
 
          //simple_static * pst;
 
@@ -631,7 +631,7 @@ namespace multimedia
          ::audio_mixer::control * pControl;
          if(get_mixer()->m_pdevice->m_mapDlgItemIDToControl.lookup(pusercontrol->GetDlgCtrlId(), pControl))
          {
-            pControl->OnVHScroll(pscroll->m_nSBCode, (u32) pscroll->m_nPos, pscroll->m_pScrollBar);
+            pControl->OnVHScroll(pscroll->m_nSBCode, (unsigned int) pscroll->m_nPos, pscroll->m_pScrollBar);
          }
       }
 

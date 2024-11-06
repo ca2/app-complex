@@ -11,8 +11,8 @@ namespace mediaplay
    public:
       
       
-      u32       m_dwOnTime;
-      u32       m_dwOffTime;
+      unsigned int       m_dwOnTime;
+      unsigned int       m_dwOffTime;
 
       
       record_notify_impact();
@@ -29,7 +29,7 @@ namespace mediaplay
       virtual void _001OnTimer(::timer * ptimer);
 
 
-      static void CALLBACK TimerProc(oswindow, u32, uptr, u32);
+      static void CALLBACK TimerProc(oswindow, unsigned int, uptr, unsigned int);
 
    };
 

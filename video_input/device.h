@@ -44,7 +44,7 @@ namespace video_input
 
 		::size_i32									m_size;
 
-		//::u32										m_uCurrentNumber;
+		//unsigned int										m_uCurrentNumber;
 
 		bool										m_bSetup;
 
@@ -74,9 +74,9 @@ namespace video_input
 
 		
 
-		virtual ::u32 get_width();
+		virtual unsigned int get_width();
 
-		virtual ::u32 get_height();
+		virtual unsigned int get_height();
 
 		virtual ::size_i32 get_size();
 
@@ -86,7 +86,7 @@ namespace video_input
 
 		virtual ::collection::index find_argb_32_format();
 
-		virtual ::collection::index find_format(::u32 w, ::u32 h, ::u32 idealFramerate = 0);
+		virtual ::collection::index find_format(unsigned int w, unsigned int h, unsigned int idealFramerate = 0);
 
 		virtual void set_format(::collection::index iIndex);
 
@@ -110,7 +110,7 @@ namespace video_input
 
 		virtual void buildLibraryofTypes();
 
-		virtual int findType(::u32 size, ::u32 frameRate = 0);
+		virtual int findType(unsigned int size, unsigned int frameRate = 0);
 
 		virtual void initialize_device();
 

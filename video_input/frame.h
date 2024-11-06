@@ -30,9 +30,9 @@ namespace video
    public:
 
       unsigned char * m_data[MAX_AV_PLANES];
-      ::u32 m_linesize[MAX_AV_PLANES];
-      ::u32 m_width;
-      ::u32 m_height;
+      unsigned int m_linesize[MAX_AV_PLANES];
+      unsigned int m_width;
+      unsigned int m_height;
       ::u64 m_timestamp;
 
       enum_video_format m_eformat;
@@ -272,9 +272,9 @@ namespace video
    struct frame2
    {
       unsigned char * m_data[MAX_AV_PLANES];
-      ::u32 m_linesize[MAX_AV_PLANES];
-      ::u32 m_width;
-      ::u32 m_height;
+      unsigned int m_linesize[MAX_AV_PLANES];
+      unsigned int m_width;
+      unsigned int m_height;
       ::u64 m_timestamp;
 
       enum_video_format m_eformat;

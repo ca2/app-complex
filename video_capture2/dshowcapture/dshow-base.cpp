@@ -197,7 +197,7 @@ static HRESULT GetPinCategory(IPin *pin, GUID &category)
 		return E_POINTER;
 
 	ComQIPtr<IKsPropertySet>  propertySet(pin);
-	::u32                     size;
+	unsigned int                     size;
 
 	if (propertySet == nullptr)
 		return E_NOINTERFACE;
@@ -349,7 +349,7 @@ bool GetFilterByMedium(const CLSID &identification, REGPINMEDIUM &medium,
 	ComPtr<ICreateDevEnum>  deviceEnum;
 	ComPtr<IEnumMoniker>    enumMoniker;
 	ComPtr<IMoniker>        moniker;
-	::u32                   count = 0;
+	unsigned int                   count = 0;
 	HRESULT                 hr;
 
 	hr = CoCreateInstance(CLSID_SystemDeviceEnum, nullptr,

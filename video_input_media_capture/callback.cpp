@@ -134,7 +134,7 @@ namespace video_input_media_capture
 
    //   }
 
-   //   ::u32 sizeRawImage = 0;
+   //   unsigned int sizeRawImage = 0;
 
    //   if (VideoFormat == MFVideoFormat_RGB24)
    //   {

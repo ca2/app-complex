@@ -11,7 +11,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 //{
 //
 //
-//   callback::callback(device * pdevice, ::u32 deviceID) :
+//   callback::callback(device * pdevice, unsigned int deviceID) :
 //      m_cRef(1), m_uDevice(deviceID), m_iMemory(0), m_bClose(false),
 //      m_pframe(nullptr)
 //   {

@@ -7,7 +7,7 @@
 #ifdef UNIVERSAL_WINDOWS
 [Session::MTAThread]
 #endif
-BOOL WINAPI DllMain(HINSTANCE hInstance, ::u32 dwReason, LPVOID lpReserved)
+BOOL WINAPI DllMain(HINSTANCE hInstance, unsigned int dwReason, LPVOID lpReserved)
 {
 
    __UNREFERENCED_PARAMETER(hInstance);

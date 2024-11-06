@@ -29,7 +29,7 @@ namespace video_input
 		//clearDevices();
 	}
 
-	//device * device_array::get_device(::u32 i)
+	//device * device_array::get_device(unsigned int i)
 	//{
 	//	if (i >= m_deviceptra.size())
 	//	{

@@ -151,9 +151,9 @@ namespace mediaplay
       virtual void KaraokeGradualFilling();
       virtual void CopyLinkLocation();
 
-      virtual void SetKaraokeCodePage(u32 dw);
-      virtual u32 IdToCodePage(const ::string & pszCommandId);
-      virtual u32 GetKaraokeCodePage(const ::string & lpsz);
+      virtual void SetKaraokeCodePage(unsigned int dw);
+      virtual unsigned int IdToCodePage(const ::string & pszCommandId);
+      virtual unsigned int GetKaraokeCodePage(const ::string & lpsz);
 
 
       virtual void attach_playlist(::mediaplaylist::document * pdocument);
@@ -166,7 +166,7 @@ namespace mediaplay
       virtual void StartMusicRendering();
       
       //   virtual void data_on_after_change(int iConfigurationId, int iLine, int iColumn, CVmsDataUpdateHint * pupdate);
-      virtual bool UpdateScreen(rectangle_i32_array & recta, u32 uiRedraw);
+      virtual bool UpdateScreen(rectangle_i32_array & recta, unsigned int uiRedraw);
 
       virtual void on_delete_contents();
 

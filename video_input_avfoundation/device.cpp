@@ -148,7 +148,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //   }
 //
 
-   ::u32 device::get_width()
+   unsigned int device::get_width()
 	{
 
 		if (m_bSetup)
@@ -167,7 +167,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 	}
 
 
-	::u32 device::get_height()
+	unsigned int device::get_height()
 	{
 
 		if (m_bSetup)
@@ -205,7 +205,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 	}
 
 
-	int device::findType(::u32 size, ::u32 frameRate)
+	int device::findType(unsigned int size, unsigned int frameRate)
 	{
 
 		if (m_mapCaptureFormat.size() == 0)
@@ -224,7 +224,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 
 		}
 
-		::u32 frameRateMax = 0;  
+		unsigned int frameRateMax = 0;  
 		
 		subtype_map * psubtypemap = nullptr;
 
@@ -237,7 +237,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 				if (pair.element1() >= frameRateMax)
 				{
 
-					frameRateMax = (::u32) pair.element1();
+					frameRateMax = (unsigned int) pair.element1();
 
 					psubtypemap = &pair.element2();
 
@@ -258,7 +258,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 					if (frameRate > pair.element1())
 					{
 
-						frameRateMax = (::u32) pair.element1();
+						frameRateMax = (unsigned int) pair.element1();
 
 						psubtypemap = &pair.element2();
 
@@ -296,9 +296,9 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 	void device::buildLibraryofTypes()
 	{
 
-		::u32 size;
+		unsigned int size;
 
-		::u32 framerate;
+		unsigned int framerate;
 
 		int m_cCount = 0;
 
@@ -423,7 +423,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 
 		bool success = false;
 
-		::u32 bytes = 4;
+		unsigned int bytes = 4;
 
 		//debug_print_out * pdebugprintout = &debug_print_out::get_instance();
 
@@ -442,11 +442,11 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 		if (pmemory)
 		{
 
-			::u32 height = get_height();
+			unsigned int height = get_height();
 
-			::u32 width = get_width();
+			unsigned int width = get_width();
 
-			::u32 size = bytes * width * height;
+			unsigned int size = bytes * width * height;
 
 			if (size == pmemory->size())
 			{

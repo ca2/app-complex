@@ -10,7 +10,7 @@
 
 IMFDXGIDeviceManager* g_pDXGIMan = nullptr;
 ID3D11Device*         g_pDX11Device = nullptr;
-::u32                  g_ResetToken = 0;
+unsigned int                  g_ResetToken = 0;
 
 STDMETHODIMP CaptureManager::CaptureEngineCB::QueryInterface(REFIID riid, void** ppv)
 {
@@ -382,7 +382,7 @@ HRESULT CaptureManager::StartThumbnail()
       }
 
       //// Configure the video format for the thumbnail sink.
-      hr = pSource->GetCurrentDeviceMediaType((::u32)MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_VIDEO_PREVIEW, &pMediaType);
+      hr = pSource->GetCurrentDeviceMediaType((unsigned int)MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_VIDEO_PREVIEW, &pMediaType);
       if (FAILED(hr))
       {
          goto done;
@@ -394,15 +394,15 @@ HRESULT CaptureManager::StartThumbnail()
          goto done;
       }
 
-      hr = pMediaType2->Set::u32(MF_MT_ALL_SAMPLES_INDEPENDENT, true);
+      hr = pMediaType2->Setunsigned int(MF_MT_ALL_SAMPLES_INDEPENDENT, true);
       if (FAILED(hr))
       {
          goto done;
       }
 
       // Connect the video stream to the thumbnail sink.
-      ::u32 dwSinkStreamIndex;
-      hr = m_pThumbnail->AddStream((::u32)MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_VIDEO_PREVIEW, pMediaType2, nullptr, &dwSinkStreamIndex);
+      unsigned int dwSinkStreamIndex;
+      hr = m_pThumbnail->AddStream((unsigned int)MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_VIDEO_PREVIEW, pMediaType2, nullptr, &dwSinkStreamIndex);
       if (FAILED(hr))
       {
          goto done;
@@ -469,7 +469,7 @@ done:
 }
 
 // Helper function to get the frame size_i32 from a video media type.
-inline HRESULT GetFrameSize(IMFMediaType *pType, ::u32 *pWidth, ::u32 *pHeight)
+inline HRESULT GetFrameSize(IMFMediaType *pType, unsigned int *pWidth, unsigned int *pHeight)
 {
    return MFGetAttributeSize(pType, MF_MT_FRAME_SIZE, pWidth, pHeight);
 }
@@ -477,8 +477,8 @@ inline HRESULT GetFrameSize(IMFMediaType *pType, ::u32 *pWidth, ::u32 *pHeight)
 // Helper function to get the frame rate from a video media type.
 inline HRESULT GetFrameRate(
    IMFMediaType *pType,
-   ::u32 *pNumerator,
-   ::u32 *pDenominator
+   unsigned int *pNumerator,
+   unsigned int *pDenominator
 )
 {
    return MFGetAttributeRatio(
@@ -490,13 +490,13 @@ inline HRESULT GetFrameRate(
 }
 
 
-HRESULT GetEncodingBitrate(IMFMediaType *pMediaType, ::u32 *uiEncodingBitrate)
+HRESULT GetEncodingBitrate(IMFMediaType *pMediaType, unsigned int *uiEncodingBitrate)
 {
-   ::u32 uiWidth;
-   ::u32 uiHeight;
+   unsigned int uiWidth;
+   unsigned int uiHeight;
    float uiBitrate;
-   ::u32 uiFrameRateNum;
-   ::u32 uiFrameRateDenom;
+   unsigned int uiFrameRateNum;
+   unsigned int uiFrameRateDenom;
 
    HRESULT hr = GetFrameSize(pMediaType, &uiWidth, &uiHeight);
    if (FAILED(hr))
@@ -512,7 +512,7 @@ HRESULT GetEncodingBitrate(IMFMediaType *pMediaType, ::u32 *uiEncodingBitrate)
 
    uiBitrate = uiWidth / 3.0f * uiHeight * uiFrameRateNum / uiFrameRateDenom;
 
-   *uiEncodingBitrate = (::u32)uiBitrate;
+   *uiEncodingBitrate = (unsigned int)uiBitrate;
 
 done:
 
@@ -526,7 +526,7 @@ HRESULT ConfigureVideoEncoding(IMFCaptureSource *pSource, IMFCaptureRecordSink *
    GUID guidSubType = GUID_NULL;
 
    // Configure the video format for the recording sink.
-   HRESULT hr = pSource->GetCurrentDeviceMediaType((::u32)MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_VIDEO_RECORD, &pMediaType);
+   HRESULT hr = pSource->GetCurrentDeviceMediaType((unsigned int)MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_VIDEO_RECORD, &pMediaType);
    if (FAILED(hr))
    {
       goto done;
@@ -552,14 +552,14 @@ HRESULT ConfigureVideoEncoding(IMFCaptureSource *pSource, IMFCaptureRecordSink *
    }
    else
    {
-      ::u32 uiEncodingBitrate;
+      unsigned int uiEncodingBitrate;
       hr = GetEncodingBitrate(pMediaType2, &uiEncodingBitrate);
       if (FAILED(hr))
       {
          goto done;
       }
 
-      hr = pMediaType2->Set::u32(MF_MT_AVG_BITRATE, uiEncodingBitrate);
+      hr = pMediaType2->Setunsigned int(MF_MT_AVG_BITRATE, uiEncodingBitrate);
    }
 
    if (FAILED(hr))
@@ -568,8 +568,8 @@ HRESULT ConfigureVideoEncoding(IMFCaptureSource *pSource, IMFCaptureRecordSink *
    }
 
    // Connect the video stream to the recording sink.
-   ::u32 dwSinkStreamIndex;
-   hr = pRecord->AddStream((::u32)MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_VIDEO_RECORD, pMediaType2, nullptr, &dwSinkStreamIndex);
+   unsigned int dwSinkStreamIndex;
+   hr = pRecord->AddStream((unsigned int)MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_VIDEO_RECORD, pMediaType2, nullptr, &dwSinkStreamIndex);
 
 done:
    SafeRelease(&pMediaType);
@@ -592,7 +592,7 @@ HRESULT ConfigureAudioEncoding(IMFCaptureSource *pSource, IMFCaptureRecordSink *
    }
 
    // Enumerate low latency media types
-   hr = pAttributes->Set::u32(MF_LOW_LATENCY, true);
+   hr = pAttributes->Setunsigned int(MF_LOW_LATENCY, true);
    if (FAILED(hr))
    {
       goto done;
@@ -615,8 +615,8 @@ HRESULT ConfigureAudioEncoding(IMFCaptureSource *pSource, IMFCaptureRecordSink *
    }
 
    // Connect the audio stream to the recording sink.
-   ::u32 dwSinkStreamIndex;
-   hr = pRecord->AddStream((::u32)MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_AUDIO, pMediaType, nullptr, &dwSinkStreamIndex);
+   unsigned int dwSinkStreamIndex;
+   hr = pRecord->AddStream((unsigned int)MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_AUDIO, pMediaType, nullptr, &dwSinkStreamIndex);
    if (hr == MF_E_INVALIDSTREAMNUMBER)
    {
       //If an audio device is not present, allow video only recording
@@ -778,7 +778,7 @@ HRESULT CaptureManager::TakePhoto(PCWSTR pszFileName)
       goto done;
    }
 
-   hr = pSource->GetCurrentDeviceMediaType((::u32)MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_PHOTO, &pMediaType);
+   hr = pSource->GetCurrentDeviceMediaType((unsigned int)MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_PHOTO, &pMediaType);
    if (FAILED(hr))
    {
       goto done;
@@ -797,11 +797,11 @@ HRESULT CaptureManager::TakePhoto(PCWSTR pszFileName)
       goto done;
    }
 
-   ::u32 dwSinkStreamIndex;
+   unsigned int dwSinkStreamIndex;
    // Try to connect the first still image stream to the photo sink
    if (bHasPhotoStream)
    {
-      hr = pPhoto->AddStream((::u32)MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_PHOTO, pMediaType2, nullptr, &dwSinkStreamIndex);
+      hr = pPhoto->AddStream((unsigned int)MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_PHOTO, pMediaType2, nullptr, &dwSinkStreamIndex);
    }
 
    if (FAILED(hr))

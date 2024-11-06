@@ -18,7 +18,7 @@
 
 struct util_::u32128 {
 	union {
-		u32 int[4];
+		unsigned int int[4];
 		struct {
 			u64 low;
 			u64 high;
@@ -34,19 +34,19 @@ static inline util_::u32128_t util_add128(util_::u32128_t a, util_::u32128_t b)
 	u64 val;
 
 	val = (a.low & 0xFFFFFFFFULL) + (b.low & 0xFFFFFFFFULL);
-	out.int[0] = (u32)(val & 0xFFFFFFFFULL);
+	out.int[0] = (unsigned int)(val & 0xFFFFFFFFULL);
 	val >>= 32;
 
 	val += (a.low >> 32) + (b.low >> 32);
-	out.int[1] = (u32)val;
+	out.int[1] = (unsigned int)val;
 	val >>= 32;
 
 	val += (a.high & 0xFFFFFFFFULL) + (b.high & 0xFFFFFFFFULL);
-	out.int[2] = (u32)(val & 0xFFFFFFFFULL);
+	out.int[2] = (unsigned int)(val & 0xFFFFFFFFULL);
 	val >>= 32;
 
 	val += (a.high >> 32) + (b.high >> 32);
-	out.int[3] = (u32)val;
+	out.int[3] = (unsigned int)val;
 
 	return out;
 }
@@ -80,7 +80,7 @@ static inline util_::u32128_t util_mul64_64(u64 a, u64 b)
 	return out;
 }
 
-static inline util_::u32128_t util_div128_32(util_::u32128_t a, u32 b)
+static inline util_::u32128_t util_div128_32(util_::u32128_t a, unsigned int b)
 {
 	util_::u32128_t out;
 	u64 val = 0;
@@ -92,7 +92,7 @@ static inline util_::u32128_t util_div128_32(util_::u32128_t a, u32 b)
 			continue;
 		}
 
-		out.int[i] = (u32)(val / b);
+		out.int[i] = (unsigned int)(val / b);
 		val = val % b;
 	}
 

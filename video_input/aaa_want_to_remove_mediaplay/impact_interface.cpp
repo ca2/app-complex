@@ -832,7 +832,7 @@ namespace mediaplay
    }
 
 
-   bool impact_interface::UpdateScreen(rectangle_i32_array & recta, u32 uiRedraw)
+   bool impact_interface::UpdateScreen(rectangle_i32_array & recta, unsigned int uiRedraw)
    {
 
       __UNREFERENCED_PARAMETER(uiRedraw);
@@ -850,7 +850,7 @@ namespace mediaplay
 
       }
 
-      u32 dwElapseOptimization = 83;
+      unsigned int dwElapseOptimization = 83;
 
       if(tickNow - m_durationLastUpdate < dwElapseOptimization)
       {
@@ -941,7 +941,7 @@ namespace mediaplay
    }
 
 
-   u32 impact_interface::GetKaraokeCodePage(const ::string & lpsz)
+   unsigned int impact_interface::GetKaraokeCodePage(const ::string & lpsz)
    {
 
       __UNREFERENCED_PARAMETER(lpsz);
@@ -950,7 +950,7 @@ namespace mediaplay
 
    }
 
-   u32 impact_interface::IdToCodePage(const ::string & psz)
+   unsigned int impact_interface::IdToCodePage(const ::string & psz)
    {
       __UNREFERENCED_PARAMETER(psz);
       ASSERT(false);
@@ -958,7 +958,7 @@ namespace mediaplay
       return 0xffffffff;
    }
 
-   void impact_interface::SetKaraokeCodePage(u32 dw)
+   void impact_interface::SetKaraokeCodePage(unsigned int dw)
    {
       __UNREFERENCED_PARAMETER(dw);
       /*     CVmsDataServerInterface & db = ((CVmpLightApp *) System)->GetVmsDataServerInterface();

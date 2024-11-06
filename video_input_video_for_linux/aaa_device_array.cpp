@@ -27,7 +27,7 @@ namespace video_input_video_for_linux
 		//clearDevices();
 	}
 
-	//device * device_array::get_device(::u32 i)
+	//device * device_array::get_device(unsigned int i)
 	//{
 	//	if (i >= m_deviceptra.size())
 	//	{

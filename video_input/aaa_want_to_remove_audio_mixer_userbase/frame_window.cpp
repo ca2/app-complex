@@ -282,7 +282,7 @@ namespace multimedia
 
       }
 
-      bool frame_window::GetToolButtonText(string & str, u32 uiCmd)
+      bool frame_window::GetToolButtonText(string & str, unsigned int uiCmd)
       {
          __UNREFERENCED_PARAMETER(str);
          __UNREFERENCED_PARAMETER(uiCmd);

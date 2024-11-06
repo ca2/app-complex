@@ -18,12 +18,12 @@ namespace video
       enum_video_format m_eformatCache;
       bool m_bCacheFullRange;
 
-      ::u32 m_width;
-      ::u32 m_height;
-      ::u32 m_cache_width;
-      ::u32 m_cache_height;
-      ::u32 m_convert_width[MAX_AV_PLANES];
-      ::u32 m_convert_height[MAX_AV_PLANES];
+      unsigned int m_width;
+      unsigned int m_height;
+      unsigned int m_cache_width;
+      unsigned int m_cache_height;
+      unsigned int m_convert_width[MAX_AV_PLANES];
+      unsigned int m_convert_height[MAX_AV_PLANES];
 
       enum gs_color_format m_texture_formats[MAX_AV_PLANES];
       int m_channel_count;

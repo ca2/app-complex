@@ -9,16 +9,16 @@ namespace video_input_video_for_linux
 {
 
 
-	void processPixels(color32_t* src, color32_t* dst, ::u32 width, ::u32 height, ::u32 bpp, bool bRGB, bool bFlip)
+	void processPixels(color32_t* src, color32_t* dst, unsigned int width, unsigned int height, unsigned int bpp, bool bRGB, bool bFlip)
 	{
 
-		::u32 widthInBytes = width * bpp;
+		unsigned int widthInBytes = width * bpp;
 
-		::u32 numBytes = widthInBytes * height;
+		unsigned int numBytes = widthInBytes * height;
 
-		::u32 numInts = numBytes >> 2;
+		unsigned int numInts = numBytes >> 2;
 
-		::u32 widthInInts = widthInBytes >> 2;
+		unsigned int widthInInts = widthInBytes >> 2;
 
 		int* dstInt, * srcInt;
 
@@ -69,7 +69,7 @@ namespace video_input_video_for_linux
 				int y = (height - 1) * widthInBytes;
 				src += y;
 
-				for (::u32 i = 0; i < numBytes; i += 4)
+				for (unsigned int i = 0; i < numBytes; i += 4)
 				{
 					if (x >= width)
 					{
@@ -92,7 +92,7 @@ namespace video_input_video_for_linux
 			}
 			else
 			{
-				for (::u32 i = 0; i < numBytes; i += 4)
+				for (unsigned int i = 0; i < numBytes; i += 4)
 				{
 					*dst = *(src + 3);
 					dst++;

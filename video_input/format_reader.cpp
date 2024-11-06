@@ -10,7 +10,7 @@
 //HRESULT LogAttributeValueByIndexNew(IMFAttributes *pAttr, DWORD index, ::video_input_media_foundation::media_format * pmediaformat);
 //HRESULT SpecialCaseAttributeValueNew(GUID guid, const prop_variant& var, ::video_input::media &out);
 //
-//::u32 *GetParametr(GUID guid, ::video_input::media &out)
+//unsigned int *GetParametr(GUID guid, ::video_input::media &out)
 //{
 //	if(guid == MF_MT_YUV_MATRIX) 
 //		return &(out.m_uYuvMatrix);
@@ -77,7 +77,7 @@
 //
 //    hr = SpecialCaseAttributeValueNew(guid, var, out);
 //
-//	::u32 *p;
+//	unsigned int *p;
 //
 //    if (FAILED(hr))
 //    {

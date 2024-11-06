@@ -236,7 +236,7 @@ enum class Action {
 	ConfigCrossbar2,
 };
 
-static ::u32 CALLBACK DShowThread(LPVOID ptr);
+static unsigned int CALLBACK DShowThread(LPVOID ptr);
 
 struct DShowInput {
 	video_enc *source;
@@ -330,7 +330,7 @@ struct DShowInput {
 	void DShowLoop();
 };
 
-static ::u32 CALLBACK DShowThread(LPVOID ptr)
+static unsigned int CALLBACK DShowThread(LPVOID ptr)
 {
 	DShowInput *dshowInput = (DShowInput*)ptr;
 
@@ -355,7 +355,7 @@ static inline void ProcessMessages()
 void DShowInput::DShowLoop()
 {
 	while (true) {
-		//::u32 ret = MsgWaitForMultipleObjects(1, &semaphore, false,
+		//unsigned int ret = MsgWaitForMultipleObjects(1, &semaphore, false,
 		//		U32_INFINITE_TIMEOUT, QS_ALLINPUT);
 		//if (ret == (WAIT_OBJECT_0 + 1)) {
 		//	ProcessMessages();
@@ -624,13 +624,13 @@ void DShowInput::OnAudioData(const AudioConfig &config,
 
 	audio.speakers        = (enum speaker_layout)config.channels;
 	audio.format          = ConvertAudioFormat(config.format);
-	audio.samples_per_sec = (u32)config.sampleRate;
+	audio.samples_per_sec = (unsigned int)config.sampleRate;
 	audio.data[0]         = data;
 
 	block_size = get_audio_bytes_per_channel(audio.format) *
 		get_audio_channels(audio.speakers);
 
-	audio.frames          = (u32)(size / block_size);
+	audio.frames          = (unsigned int)(size / block_size);
 	audio.timestamp       = (u64)startTime * 100;
 
 //	if (audio.format != AUDIO_FORMAT_UNKNOWN)
@@ -806,7 +806,7 @@ static inline bool IsEncoded(const VideoConfig &config)
 inline void DShowInput::SetupBuffering(aura_data *settings)
 {
 	BufferingType bufType;
-	u32 flags = obs_source_get_flags(source);
+	unsigned int flags = obs_source_get_flags(source);
 	bool useBuffering;
 
 	bufType = (BufferingType)obs_data_get_int(settings, BUFFERING_VAL);

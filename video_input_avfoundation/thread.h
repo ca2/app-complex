@@ -25,7 +25,7 @@ namespace video_input_video_avfoundation
 
 		bool m_bStop;
 
-		::u32 m_uDevice;
+		unsigned int m_uDevice;
 
 
       thread(device * pdevice);

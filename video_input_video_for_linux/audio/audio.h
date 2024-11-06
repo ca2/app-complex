@@ -40,7 +40,7 @@ namespace audio
       void term_instance() override;
 
 #ifdef LINUX
-      inline ::u32 multimedia_get_time() { return ::get_tick(); }
+      inline unsigned int multimedia_get_time() { return ::get_tick(); }
 #endif
 
       virtual void play_audio(::file::file* pfile, bool bSynch = false);

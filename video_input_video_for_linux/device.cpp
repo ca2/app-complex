@@ -140,7 +140,7 @@ namespace video_input_video_for_linux
    }
 
 
-   ::u32 device::get_width()
+   unsigned int device::get_width()
 	{
 
 		if (m_bSetup)
@@ -159,7 +159,7 @@ namespace video_input_video_for_linux
 	}
 
 
-	::u32 device::get_height()
+	unsigned int device::get_height()
 	{
 
 		if (m_bSetup)
@@ -197,7 +197,7 @@ namespace video_input_video_for_linux
 	}
 
 
-	int device::findType(::u32 size, ::u32 frameRate)
+	int device::findType(unsigned int size, unsigned int frameRate)
 	{
 
 		if (m_mapCaptureFormat.size() == 0)
@@ -216,7 +216,7 @@ namespace video_input_video_for_linux
 
 		}
 
-		::u32 frameRateMax = 0;  
+		unsigned int frameRateMax = 0;  
 		
 		subtype_map * psubtypemap = nullptr;
 
@@ -229,7 +229,7 @@ namespace video_input_video_for_linux
 				if (pair.element1() >= frameRateMax)
 				{
 
-					frameRateMax = (::u32) pair.element1();
+					frameRateMax = (unsigned int) pair.element1();
 
 					psubtypemap = &pair.element2();
 
@@ -250,7 +250,7 @@ namespace video_input_video_for_linux
 					if (frameRate > pair.element1())
 					{
 
-						frameRateMax = (::u32) pair.element1();
+						frameRateMax = (unsigned int) pair.element1();
 
 						psubtypemap = &pair.element2();
 
@@ -288,9 +288,9 @@ namespace video_input_video_for_linux
 	void device::buildLibraryofTypes()
 	{
 
-		::u32 size;
+		unsigned int size;
 
-		::u32 framerate;
+		unsigned int framerate;
 
 		int m_cCount = 0;
 
@@ -412,7 +412,7 @@ namespace video_input_video_for_linux
 
 		bool success = false;
 
-		::u32 bytes = 4;
+		unsigned int bytes = 4;
 
 		//debug_print_out * pdebugprintout = &debug_print_out::get_instance();
 
@@ -431,11 +431,11 @@ namespace video_input_video_for_linux
 		if (pmemory)
 		{
 
-			::u32 height = get_height();
+			unsigned int height = get_height();
 
-			::u32 width = get_width();
+			unsigned int width = get_width();
 
-			::u32 size = bytes * width * height;
+			unsigned int size = bytes * width * height;
 
 			if (size == pmemory->size())
 			{

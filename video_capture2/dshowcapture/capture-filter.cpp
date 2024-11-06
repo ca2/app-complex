@@ -444,7 +444,7 @@ STDMETHODIMP CaptureFilter::GetClassID(CLSID *pClsID)
 }
 
 // IMediaFilter methods
-STDMETHODIMP CaptureFilter::GetState(::u32 dwMSecs, FILTER_STATE *State)
+STDMETHODIMP CaptureFilter::GetState(unsigned int dwMSecs, FILTER_STATE *State)
 {
 	PrintFunc(L"CaptureFilter::GetState");
 
@@ -581,7 +581,7 @@ STDMETHODIMP_(ULONG) CaptureEnumPins::Release()
 // IEnumPins
 STDMETHODIMP CaptureEnumPins::Next(ULONG cPins, IPin **ppPins, ULONG *pcFetched)
 {
-	::u32 nFetched = 0;
+	unsigned int nFetched = 0;
 
 	if (curPin == 0 && cPins > 0) {
 		IPin *pPin = filter->GetPin();
@@ -660,7 +660,7 @@ STDMETHODIMP CaptureEnumMediaTypes::Next(ULONG cMediaTypes,
 {
 	PrintFunc(L"CaptureEnumMediaTypes::Next");
 
-	::u32 nFetched = 0;
+	unsigned int nFetched = 0;
 
 	if (curMT == 0 && cMediaTypes > 0) {
 		*ppMediaTypes = pin->connectedMediaType.Duplicate();

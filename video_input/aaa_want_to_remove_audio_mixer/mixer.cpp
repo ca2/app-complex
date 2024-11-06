@@ -42,7 +42,7 @@ namespace multimedia
       }
 
 
-      void     audio_mixer::set_new_device(u32 uiMixerId)
+      void     audio_mixer::set_new_device(unsigned int uiMixerId)
       {
 
          return error_failed;

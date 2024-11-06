@@ -153,24 +153,24 @@ static const GUID RocketEncoderGUID =
 {0x99100000, 0xa330, 0x11e1, {0xa3, 0x80, 0x99, 0x10, 0x68, 0x64, 0x00, 0x00}};
 
 struct RocketPropStruct {
-	::u32 dwSize;
-	::u32 unknown1;
-	::u32 unknown2;
-	::u32 unknown3;
-	::u32 code;
-	::u32 unknown4;
+	unsigned int dwSize;
+	unsigned int unknown1;
+	unsigned int unknown2;
+	unsigned int unknown3;
+	unsigned int code;
+	unsigned int unknown4;
 	BOOL  enabled;
 };
 
 struct RocketInstStruct {
-	::u32 code;
-	::u32 unknown1;
+	unsigned int code;
+	unsigned int unknown1;
 };
 
 bool SetRocketEnabled(IBaseFilter *encoder, bool enable)
 {
 	static const ULONG rocketEnableId   = 0x9910E001;
-	static const ::u32 rocketEnableCode = 0x38384001;
+	static const unsigned int rocketEnableCode = 0x38384001;
 	RocketInstStruct   rocketInstance   = {};
 	RocketPropStruct   rocketProperty   = {};
 

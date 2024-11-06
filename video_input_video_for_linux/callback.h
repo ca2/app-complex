@@ -36,7 +36,7 @@ namespace video_input_video_for_linux
 
 		long m_cRef;
 
-		::u32 m_uDevice;
+		unsigned int m_uDevice;
 
       manual_reset_event      m_eventStop;
 
@@ -58,7 +58,7 @@ namespace video_input_video_for_linux
       bool        m_bCapturing;
 
 
-      callback(device * pdevice, ::u32 deviceID);
+      callback(device * pdevice, unsigned int deviceID);
 		~callback(void) override;
 
 

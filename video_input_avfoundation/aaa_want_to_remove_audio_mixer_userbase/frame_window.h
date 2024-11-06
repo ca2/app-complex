@@ -30,7 +30,7 @@ namespace multimedia
          virtual ~frame_window();
 
 
-         bool GetToolButtonText(string &str, u32 uiCmd);
+         bool GetToolButtonText(string &str, unsigned int uiCmd);
          void UpdateToolBarText(simple_toolbar &toolbar);
          ::pointer<main_impact>GetMainImpact();
 

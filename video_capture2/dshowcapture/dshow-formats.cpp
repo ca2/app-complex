@@ -38,7 +38,7 @@ const GUID MEDIASUBTYPE_Y800 =
 
 namespace DShow {
 
-static bool GetFourCCVFormat(::u32 fourCC, VideoFormat &format)
+static bool GetFourCCVFormat(unsigned int fourCC, VideoFormat &format)
 {
 	switch (fourCC) {
 	/* raw formats */

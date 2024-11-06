@@ -26,9 +26,9 @@ namespace video_input
 
 
       ::size_i32			m_size;
-		::u32					m_uSampleSize;
-		::u32					m_uFrameRate;
-		::u32					m_uFrameSize;
+		unsigned int					m_uSampleSize;
+		unsigned int					m_uFrameRate;
+		unsigned int					m_uFrameSize;
 
       string			   m_strSubtypeName;
 

@@ -42,22 +42,22 @@
 #include <commctrl.h>
 #include <d3d11.h>
 
-const ::u32 WM_APP_CAPTURE_EVENT = WM_APP + 975;
+const unsigned int WM_APP_CAPTURE_EVENT = WM_APP + 975;
 
 class CaptureManager;
 
 HWND    CreateThumbnailWindow(HINSTANCE hInstance, HWND hParent, CaptureManager * p);
 HWND    CreateMainWindow(HINSTANCE hInstance);
-void    SetMenuItemText(HMENU hMenu, ::u32 utem, _In_ PWSTR pszText);
+void    SetMenuItemText(HMENU hMenu, unsigned int utem, _In_ PWSTR pszText);
 void    ShowError(HWND hwnd, PCWSTR szMessage, HRESULT hr);
-void    ShowError(HWND hwnd, ::u32 identification, HRESULT hr);
+void    ShowError(HWND hwnd, unsigned int identification, HRESULT hr);
 HRESULT CloneVideoMediaType(IMFMediaType *pSrcMediaType, REFGUID guidSubType, IMFMediaType **ppNewMediaType);
 HRESULT CreatePhotoMediaType(IMFMediaType *pSrcMediaType, IMFMediaType **ppPhotoMediaType);
 
 // DXGI DevManager support
 extern IMFDXGIDeviceManager* g_pDXGIMan;
 extern ID3D11Device*         g_pDX11Device;
-extern ::u32                  g_ResetToken;
+extern unsigned int                  g_ResetToken;
 
 #ifdef _DEBUG
 #define DBGMSG(x)  { DbgPrint x;}
@@ -79,7 +79,7 @@ template <class T> void SafeRelease(T **ppT)
 
 // Gets an interface pointer from a Media Foundation collection.
 template <class IFACE>
-HRESULT GetCollectionObject(IMFCollection *pCollection, ::u32 index, IFACE **ppObject)
+HRESULT GetCollectionObject(IMFCollection *pCollection, unsigned int index, IFACE **ppObject)
 {
    IUnknown *pUnk;
    HRESULT hr = pCollection->GetElement(index, &pUnk);
@@ -99,7 +99,7 @@ struct ChooseDeviceParam
    }
    ~ChooseDeviceParam()
    {
-      for (::u32 i = 0; i < count; i++)
+      for (unsigned int i = 0; i < count; i++)
       {
          SafeRelease(&ppDevices[i]);
       }
@@ -107,8 +107,8 @@ struct ChooseDeviceParam
    }
 
    IMFActivate **ppDevices;
-   ::u32      count;
-   ::u32      selection;
+   unsigned int      count;
+   unsigned int      selection;
 };
 
 
@@ -153,7 +153,7 @@ class CaptureManager :
    bool                    m_bRecording;
    bool                    m_bPhotoPending;
 
-   ::u32                    m_errorID;
+   unsigned int                    m_errorID;
    HANDLE                  m_hEvent;
    HANDLE                  m_hpwrRequest;
    bool                    m_fPowerRequestSet;
@@ -174,7 +174,7 @@ class CaptureManager :
       m_hpwrRequest = PowerCreateRequest(&pwrCtxt);
    }
 
-   void SetErrorID(HRESULT hr, ::u32 identification)
+   void SetErrorID(HRESULT hr, unsigned int identification)
    {
       m_errorID = SUCCEEDED(hr) ? 0 : identification;
    }
@@ -247,7 +247,7 @@ public:
    bool    IsThumbnailing() const { return m_bThumbnailing; }
    bool    IsRecording() const { return m_bRecording; }
    bool    IsPhotoPending() const { return m_bPhotoPending; }
-   ::u32    ErrorID() const { return m_errorID; }
+   unsigned int    ErrorID() const { return m_errorID; }
 
    HRESULT OnCaptureEvent(WPARAM wParam, LPARAM lParam);
    HRESULT SetVideoDevice(IUnknown *pUnk);

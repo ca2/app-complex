@@ -32,7 +32,7 @@ namespace multimedia
 
 
          void     set_new_destination(::audio_mixer::e_destination edestination);
-         void     set_new_device(u32 uiMixerID);
+         void     set_new_device(unsigned int uiMixerID);
 
          ::audio_mixer::destination * get_destination();
          ::audio_mixer::audio_mixer * get_mixer();

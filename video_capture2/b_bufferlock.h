@@ -39,7 +39,7 @@ public:
 
    HRESULT LockBuffer(
       int  lDefaultStride,    // Minimum stride (with no padding).
-      ::u32 dwHeightInPixels,  // Height of the image, in pixels.
+      unsigned int dwHeightInPixels,  // Height of the image, in pixels.
       unsigned char  **ppbScanLine0,    // Receives a pointer to the start of scan line 0.
       int  *plStride          // Receives the actual stride.
    )

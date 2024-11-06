@@ -31,7 +31,7 @@ namespace multimedia
 
       }
 
-      /*void     source::GetControl(u32 dwControlType, u32 dwControlFlags,  ::audio_mixer::control ** ppControl)
+      /*void     source::GetControl(unsigned int dwControlType, unsigned int dwControlFlags,  ::audio_mixer::control ** ppControl)
       {
       ::audio_mixer::control_array & controla = m_mixercontrola;
       if(controla.get_size() <= 0)
@@ -113,12 +113,12 @@ namespace multimedia
          m_pdestination = pdestination;
       }
 
-      void     source::mixerGetLineInfo(u32 dwSource, u32 dwDestination, u32 fdwInfo)
+      void     source::mixerGetLineInfo(unsigned int dwSource, unsigned int dwDestination, unsigned int fdwInfo)
       {
          return error_failed;
       }
 
-      void     source::mixerGetLineInfo(u32 dwSource, ::audio_mixer::destination * pdestination)
+      void     source::mixerGetLineInfo(unsigned int dwSource, ::audio_mixer::destination * pdestination)
       {
          return error_failed;
       }

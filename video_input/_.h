@@ -32,7 +32,7 @@ namespace video_input
 	class media_format;
 	class device;
 
-	CLASS_DECL_VIDEO_INPUT void processPixels(color32_t * src, color32_t * dst, ::u32 width, ::u32 height, ::u32 bpp, bool bRGB, bool bFlip);
+	CLASS_DECL_VIDEO_INPUT void processPixels(color32_t * src, color32_t * dst, unsigned int width, unsigned int height, unsigned int bpp, bool bRGB, bool bFlip);
 
 
 } // namespace video_input

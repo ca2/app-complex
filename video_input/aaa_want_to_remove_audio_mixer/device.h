@@ -16,7 +16,7 @@ namespace multimedia
 
 
          
-         u32                                                   m_uiMixerID;
+         unsigned int                                                   m_uiMixerID;
          ::pointer<::audio_mixer::audio_mixer>  m_pmixer;
          ::audio_mixer::destination_array          m_mixerdestinationa;
 
@@ -38,14 +38,14 @@ namespace multimedia
          virtual void MapDlgCtrlIDToLineControls(::audio_mixer::source * pSource);
          virtual void MapDlgCtrlIDToControls();
          virtual void MapLineControls(::audio_mixer::source * pSource);
-         virtual void OnMixerControlChange(u32 dwControlID);
-         virtual void OnMixerLineChange(u32 dwLineID);
+         virtual void OnMixerControlChange(unsigned int dwControlID);
+         virtual void OnMixerLineChange(unsigned int dwLineID);
          virtual void map_lines();
          virtual void map_controls();
          virtual ::pointer<::audio_mixer::destination>get_destination(::audio_mixer::e_destination edestination);
          virtual void     initialize_destinations();
          virtual void     initialize_capabilities();
-         virtual void     open(u32 uiMixerId, UINT_PTR dwCallback, u32 dwInstance, u32 fdwOpen);
+         virtual void     open(unsigned int uiMixerId, UINT_PTR dwCallback, unsigned int dwInstance, unsigned int fdwOpen);
 
 
       };

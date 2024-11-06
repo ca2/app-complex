@@ -28,34 +28,34 @@ extern "C" {
  */
 
 EXPORT void compress_uyvx_to_i420(
-		const unsigned char *input, u32 in_linesize,
-		u32 start_y, u32 end_y,
-		unsigned char *output[], const u32 out_linesize[]);
+		const unsigned char *input, unsigned int in_linesize,
+		unsigned int start_y, unsigned int end_y,
+		unsigned char *output[], const unsigned int out_linesize[]);
 
 EXPORT void compress_uyvx_to_nv12(
-		const unsigned char *input, u32 in_linesize,
-		u32 start_y, u32 end_y,
-		unsigned char *output[], const u32 out_linesize[]);
+		const unsigned char *input, unsigned int in_linesize,
+		unsigned int start_y, unsigned int end_y,
+		unsigned char *output[], const unsigned int out_linesize[]);
 
 EXPORT void convert_uyvx_to_i444(
-		const unsigned char *input, u32 in_linesize,
-		u32 start_y, u32 end_y,
-		unsigned char *output[], const u32 out_linesize[]);
+		const unsigned char *input, unsigned int in_linesize,
+		unsigned int start_y, unsigned int end_y,
+		unsigned char *output[], const unsigned int out_linesize[]);
 
 EXPORT void decompress_nv12(
-		const unsigned char *const input[], const u32 in_linesize[],
-		u32 start_y, u32 end_y,
-		unsigned char *output, u32 out_linesize);
+		const unsigned char *const input[], const unsigned int in_linesize[],
+		unsigned int start_y, unsigned int end_y,
+		unsigned char *output, unsigned int out_linesize);
 
 EXPORT void decompress_420(
-		const unsigned char *const input[], const u32 in_linesize[],
-		u32 start_y, u32 end_y,
-		unsigned char *output, u32 out_linesize);
+		const unsigned char *const input[], const unsigned int in_linesize[],
+		unsigned int start_y, unsigned int end_y,
+		unsigned char *output, unsigned int out_linesize);
 
 EXPORT void decompress_422(
-		const unsigned char *input, u32 in_linesize,
-		u32 start_y, u32 end_y,
-		unsigned char *output, u32 out_linesize,
+		const unsigned char *input, unsigned int in_linesize,
+		unsigned int start_y, unsigned int end_y,
+		unsigned char *output, unsigned int out_linesize,
 		bool leading_lum);
 
 #ifdef __cplusplus

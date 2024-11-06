@@ -35,9 +35,9 @@ namespace multimedia
 
 
          int                  m_iType;
-         u32                  m_uiMixerID;
-         u32                  m_uiLineID;
-         u32                  m_uiControlID;
+         unsigned int                  m_uiMixerID;
+         unsigned int                  m_uiLineID;
+         unsigned int                  m_uiControlID;
          ::collection::index                m_iIndex;
 
 

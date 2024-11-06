@@ -270,7 +270,7 @@ static bool DShowEncode(void *data, struct encoder_frame *frame,
 //	return *size_i32 > 0;
 //}
 //
-//static inline bool ValidResolution(u32 width, u32 height)
+//static inline bool ValidResolution(unsigned int width, unsigned int height)
 //{
 //	return (width == 1280 && height == 720) ||
 //		(width == 1024 && height == 768);

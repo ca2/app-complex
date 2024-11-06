@@ -154,7 +154,7 @@ namespace mediamanager
       //   unzReadCurrentFile(
       //   pf,
       //   m_storage.get_data(),
-      //   (u32) m_storage.get_size());
+      //   (unsigned int) m_storage.get_size());
 
       //   iResult = unzCloseCurrentFile(pf);
 
@@ -897,7 +897,7 @@ namespace mediamanager
 
       ::file::path str;
 
-      //u32 dw = ::_getmbcp();
+      //unsigned int dw = ::_getmbcp();
 
       for(i = 0; i < wstraFolderSource.get_size(); i++)
       {

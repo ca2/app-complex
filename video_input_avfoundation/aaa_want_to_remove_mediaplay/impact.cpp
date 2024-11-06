@@ -515,7 +515,7 @@ namespace mediaplay
    void impact::_001OnUpdateImpactEncoding(::message::message * pmessage)
    {
       ::pointer<::message::command>pcommand(pmessage);
-      u32 dwCodePage = IdToCodePage(pcommand->m_atom);
+      unsigned int dwCodePage = IdToCodePage(pcommand->m_atom);
       if(GetKaraokeCodePage(nullptr) == dwCodePage)
       {
          pcommand->set_check(::e_check_checked);
@@ -531,7 +531,7 @@ namespace mediaplay
    void impact::_001OnShowEncoding(::message::message * pmessage)
    {
       ::pointer<::message::command>pcommand(pmessage);
-      u32 dwCodePage = IdToCodePage(pcommand->m_atom);
+      unsigned int dwCodePage = IdToCodePage(pcommand->m_atom);
       SetKaraokeCodePage(dwCodePage);
    }
 

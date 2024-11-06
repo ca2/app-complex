@@ -15,7 +15,7 @@ namespace video_input
 {
 
 
-   image_grabber::image_grabber(::u32 deviceID) : m_cRef(1), m_uDevice(deviceID), m_iMemory(0), m_bClose(false)
+   image_grabber::image_grabber(unsigned int deviceID) : m_cRef(1), m_uDevice(deviceID), m_iMemory(0), m_bClose(false)
    {
 
       HRESULT hr = MFStartup(MF_VERSION);
@@ -118,7 +118,7 @@ namespace video_input
     //  ::acme::del(pmediatypehandler);
       //::acme::del(pCurrentType);
 
-      ::u32 sizeRawImage = 0;
+      unsigned int sizeRawImage = 0;
 
       if (VideoFormat == MFVideoFormat_RGB24)
       {
@@ -561,7 +561,7 @@ namespace video_input
    }
 
 
-   HRESULT image_grabber::CreateInstance(image_grabber ** ppIG, ::u32 deviceID)
+   HRESULT image_grabber::CreateInstance(image_grabber ** ppIG, unsigned int deviceID)
    {
 
       *ppIG = aaa_primitive_new image_grabber(deviceID);

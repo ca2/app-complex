@@ -29,7 +29,7 @@ namespace multimedia
       public:
 
 
-         virtual u32 get_component_type();
+         virtual unsigned int get_component_type();
          virtual void update_all_controls();
          virtual void     initialize_all_controls();
          virtual void     initialize_source_info();
@@ -41,7 +41,7 @@ namespace multimedia
          virtual ::audio_mixer::device * get_device();
          virtual void set_device(::audio_mixer::device * pdevice);
 
-         virtual u32 get_mixer_line_id();
+         virtual unsigned int get_mixer_line_id();
 
       };
 

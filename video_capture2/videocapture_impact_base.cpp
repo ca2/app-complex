@@ -88,7 +88,7 @@ namespace app_complex_video_capture
       m_pimageTime->Fill(0, 0, 0, 0);
 
 
-      ::u32 xOffset;
+      unsigned int xOffset;
 
       xOffset = m_pimageTime->width() * m_frequencyFramesPerSecond * (double)(m_timeRoll->elapsed()) / 1000->0; // x = v->t; f=fps  1920 * 1FPS * t
 

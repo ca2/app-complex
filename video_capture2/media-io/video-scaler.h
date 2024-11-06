@@ -38,8 +38,8 @@ EXPORT int video_scaler_create(video_scaler_t **scaler,
 EXPORT void video_scaler_destroy(video_scaler_t *scaler);
 
 EXPORT bool video_scaler_scale(video_scaler_t *scaler,
-		unsigned char *output[], const u32 out_linesize[],
-		const unsigned char *const input[], const u32 in_linesize[]);
+		unsigned char *output[], const unsigned int out_linesize[],
+		const unsigned char *const input[], const unsigned int in_linesize[]);
 
 #ifdef __cplusplus
 }

@@ -336,7 +336,7 @@ static bool ClosestAudioMTCallback(ClosestAudioData &data,
 			int channels = data.config.channels;
 			ClampToGranularity(channels, info.minChannels,
 					info.channelsGranularity);
-			wfex->nChannels = (::u16)channels;
+			wfex->nChannels = (unsigned short)channels;
 
 			wfex->nBlockAlign =
 				wfex->wBitsPerSample * wfex->nChannels / 8;
@@ -517,7 +517,7 @@ bool EnumDevices(const GUID &type, EnumDeviceCallback callback, void *param)
 	ComPtr<IEnumMoniker>    enumMoniker;
 	ComPtr<IMoniker>        deviceInfo;
 	HRESULT                 hr;
-	::u32                   count = 0;
+	unsigned int                   count = 0;
 
 	if (type == CLSID_AudioInputDeviceCategory) {
 		CheckForDecklinkVideo();

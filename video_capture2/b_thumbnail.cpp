@@ -164,8 +164,8 @@ HRESULT CThumbnail::QueryInterface(REFIID riid, void** ppv)
 
 HRESULT CThumbnail::OnReadSample(
    HRESULT hrStatus,
-   ::u32 /* dwStreamIndex */,
-   ::u32 /* dwStreamFlags */,
+   unsigned int /* dwStreamIndex */,
+   unsigned int /* dwStreamFlags */,
    ::i64 /* llTimestamp */,
    IMFSample *pSample      // Can be nullptr
 )
@@ -201,7 +201,7 @@ HRESULT CThumbnail::OnReadSample(
    if (SUCCEEDED(hr))
    {
       hr = m_pReader->ReadSample(
-         (::u32)MF_SOURCE_READER_FIRST_VIDEO_STREAM,
+         (unsigned int)MF_SOURCE_READER_FIRST_VIDEO_STREAM,
          0,
          nullptr,   // actual
          nullptr,   // flags
@@ -251,7 +251,7 @@ HRESULT CThumbnail::TryMediaType(IMFMediaType *pType)
       // Can we decode this media type to one of our supported
       // output formats?
 
-      for (::u32 i = 0; ; i++)
+      for (unsigned int i = 0; ; i++)
       {
          // Get the i'th format.
          m_draw.GetFormat(i, &subtype);
@@ -262,7 +262,7 @@ HRESULT CThumbnail::TryMediaType(IMFMediaType *pType)
 
          // Try to set this type on the source reader.
          hr = m_pReader->SetCurrentMediaType(
-            (::u32)MF_SOURCE_READER_FIRST_VIDEO_STREAM,
+            (unsigned int)MF_SOURCE_READER_FIRST_VIDEO_STREAM,
             nullptr,
             pType
          );
@@ -337,7 +337,7 @@ HRESULT CThumbnail::SetDevice(IMFActivate *pActivate)
    }
    if (SUCCEEDED(hr))
    {
-      hr = pAttributes->Set::u32(MF_READWRITE_DISABLE_CONVERTERS, true);
+      hr = pAttributes->Setunsigned int(MF_READWRITE_DISABLE_CONVERTERS, true);
    }
 
    // Set the callback pointer.
@@ -361,10 +361,10 @@ HRESULT CThumbnail::SetDevice(IMFActivate *pActivate)
    // Try to find a suitable output type.
    if (SUCCEEDED(hr))
    {
-      for (::u32 i = 0; ; i++)
+      for (unsigned int i = 0; ; i++)
       {
          hr = m_pReader->GetNativeMediaType(
-            (::u32)MF_SOURCE_READER_FIRST_VIDEO_STREAM,
+            (unsigned int)MF_SOURCE_READER_FIRST_VIDEO_STREAM,
             i,
             &pType
          );
@@ -387,7 +387,7 @@ HRESULT CThumbnail::SetDevice(IMFActivate *pActivate)
    {
       // Ask for the first sample.
       hr = m_pReader->ReadSample(
-         (::u32)MF_SOURCE_READER_FIRST_VIDEO_STREAM,
+         (unsigned int)MF_SOURCE_READER_FIRST_VIDEO_STREAM,
          0,
          nullptr,
          nullptr,
@@ -426,7 +426,7 @@ HRESULT CThumbnail::SetDevice(IMFActivate *pActivate)
 //  window changes; e.g., when the application receives e_message_size.
 //-------------------------------------------------------------------
 
-HRESULT CThumbnail::ResizeVideo(::u16 /*width*/, ::u16 /*height*/)
+HRESULT CThumbnail::ResizeVideo(unsigned short /*width*/, unsigned short /*height*/)
 {
    HRESULT hr = S_OK;
 

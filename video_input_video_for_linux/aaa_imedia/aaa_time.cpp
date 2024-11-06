@@ -16,7 +16,7 @@ namespace imedia
    //{
    //}
 
-   //time::time(u32 u) :
+   //time::time(unsigned int u) :
    //   c_number < i64 >(static_cast < i64 > (u))
    //{
    //}

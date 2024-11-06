@@ -7,8 +7,8 @@ typedef void(*IMAGE_TRANSFORM_FN)(
    int        lDestStride,
    const unsigned char* pSrc,
    int        lSrcStride,
-   ::u32       dwWidthInPixels,
-   ::u32       dwHeightInPixels
+   unsigned int       dwWidthInPixels,
+   unsigned int       dwHeightInPixels
    );
 
 
@@ -45,10 +45,10 @@ private:
 
 public:
    bool saveframe;
-   ::u32                    m_width;
-   ::u32                    m_height;
-   ::u32                    width;
-   ::u32                    height;
+   unsigned int                    m_width;
+   unsigned int                    m_height;
+   unsigned int                    width;
+   unsigned int                    height;
    DrawDevice();
    virtual ~DrawDevice();
 
@@ -61,7 +61,7 @@ public:
 
    // What video formats we accept
    BOOL     IsFormatSupported(REFGUID subtype) const;
-   HRESULT  GetFormat(::u32 index, GUID *pSubtype)  const;
+   HRESULT  GetFormat(unsigned int index, GUID *pSubtype)  const;
 };
 
 

@@ -40,7 +40,7 @@ namespace multimedia
          virtual void set_callback(::audio_mixer::callback * pcallback);
 
 
-         virtual void     set_new_device(u32 uiMixerId);
+         virtual void     set_new_device(unsigned int uiMixerId);
 
 
          virtual bool OnCommand(::user::message * pusermessage);

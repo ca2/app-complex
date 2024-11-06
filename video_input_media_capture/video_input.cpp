@@ -74,12 +74,12 @@ namespace video_input_media_capture
 
       sourcegroupa = ::winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup::FindAllAsync().get();
       
-      for(::u32 uSourceGroup = 0; uSourceGroup < sourcegroupa.Size(); uSourceGroup++)
+      for(unsigned int uSourceGroup = 0; uSourceGroup < sourcegroupa.Size(); uSourceGroup++)
       {
 
          auto sourcegroup = sourcegroupa.GetAt(uSourceGroup);
 
-         for(::u32 uSourceInfo = 0; uSourceInfo < sourcegroup.SourceInfos().Size(); uSourceInfo++)
+         for(unsigned int uSourceInfo = 0; uSourceInfo < sourcegroup.SourceInfos().Size(); uSourceInfo++)
          {
 
             auto sourceinfo = sourcegroup.SourceInfos().GetAt(uSourceInfo);

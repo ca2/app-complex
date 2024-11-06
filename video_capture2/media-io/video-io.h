@@ -66,7 +66,7 @@ enum video_range_type {
 
 struct video_data {
 	unsigned char           *data[MAX_AV_PLANES];
-	u32          linesize[MAX_AV_PLANES];
+	unsigned int          linesize[MAX_AV_PLANES];
 	u64          timestamp;
 };
 
@@ -74,10 +74,10 @@ struct video_output_info {
 	const char        *name;
 
 	enum video_format format;
-	u32          fps_num;
-	u32          fps_den;
-	u32          width;
-	u32          height;
+	unsigned int          fps_num;
+	unsigned int          fps_den;
+	unsigned int          width;
+	unsigned int          height;
 	size_t            cache_size;
 
 	enum video_colorspace colorspace;
@@ -134,13 +134,13 @@ enum video_scale_type {
 
 struct video_scale_info {
 	enum video_format     format;
-	u32              width;
-	u32              height;
+	unsigned int              width;
+	unsigned int              height;
 	enum video_range_type range;
 	enum video_colorspace colorspace;
 };
 
-EXPORT enum video_format video_format_from_fourcc(u32 fourcc);
+EXPORT enum video_format video_format_from_fourcc(unsigned int fourcc);
 
 EXPORT bool video_format_get_parameters(enum video_colorspace color_space,
 		enum video_range_type range, float matrix[16],
@@ -173,12 +173,12 @@ EXPORT void video_output_stop(video_t *video);
 EXPORT bool video_output_stopped(video_t *video);
 
 EXPORT enum video_format video_output_get_format(const video_t *video);
-EXPORT u32 video_output_get_width(const video_t *video);
-EXPORT u32 video_output_get_height(const video_t *video);
+EXPORT unsigned int video_output_get_width(const video_t *video);
+EXPORT unsigned int video_output_get_height(const video_t *video);
 EXPORT double video_output_get_frame_rate(const video_t *video);
 
-EXPORT u32 video_output_get_skipped_frames(const video_t *video);
-EXPORT u32 video_output_get_total_frames(const video_t *video);
+EXPORT unsigned int video_output_get_skipped_frames(const video_t *video);
+EXPORT unsigned int video_output_get_total_frames(const video_t *video);
 
 
 #ifdef __cplusplus

@@ -79,17 +79,17 @@ namespace multimedia
       }
 
 
-      u32 destination::get_component_type()
+      unsigned int destination::get_component_type()
       {
 
-         return (u32) -1;
+         return (unsigned int) -1;
 
       }
 
 
-      u32 destination::get_mixer_line_id()
+      unsigned int destination::get_mixer_line_id()
       {
-         return (u32) -1;
+         return (unsigned int) -1;
       }
 
       ::audio_mixer::device * destination::get_device()

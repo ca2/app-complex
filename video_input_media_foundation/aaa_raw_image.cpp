@@ -3,7 +3,7 @@
 
 
 
-::image::image(::u32 size_i32): ri_new(false), ri_pixels(NULL)
+::image::image(unsigned int size_i32): ri_new(false), ri_pixels(NULL)
 {
 	ri_size = size;
 
@@ -17,7 +17,7 @@ bool ::image::image::isNew()
 	return ri_new;
 }
 
-::u32 ::image::image::getSize()
+unsigned int ::image::image::getSize()
 {
 	return ri_size;
 }
@@ -26,7 +26,7 @@ bool ::image::image::isNew()
 {
 }
 
-long ::image::image::CreateInstance(::image::image **ppRImage,::u32 size_i32)
+long ::image::image::CreateInstance(::image::image **ppRImage,unsigned int size_i32)
 {
 	*ppRImage = aaa_primitive_new (std::nothrow) ::image::image(size);
 
@@ -51,7 +51,7 @@ void ::image::image::fastCopy(const BYTE * pSampleBuffer)
 
 	int *dst = (int *)ri_pixels.get();
 
-	::u32 buffersize = ri_size;
+	unsigned int buffersize = ri_size;
 
 	memcpy(dst, bsrc, buffersize);
 
