@@ -11,7 +11,7 @@ namespace imedia
    //{
    //}
 
-   //time::time(i32 i) :
+   //time::time(int i) :
    //   c_number < i64 >(static_cast < i64 > (i))
    //{
    //}
@@ -32,7 +32,7 @@ namespace imedia
    //}
 
    //time::time(double d) :
-   //   c_number < i64 >((i32) d)
+   //   c_number < i64 >((int) d)
    //{
    //}
 
@@ -64,9 +64,9 @@ namespace imedia
       return time(m_i + t2.m_i);
    }
 
-   i32 time::compare(const time & t1, const time & t2)
+   int time::compare(const time & t1, const time & t2)
    {
-      return (i32)(t2 - t1);
+      return (int)(t2 - t1);
    }*/
 
 

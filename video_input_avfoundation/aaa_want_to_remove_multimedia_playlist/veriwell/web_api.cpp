@@ -17,29 +17,29 @@ namespace multimedia_playlist
 
          m_strAccessToken = file()->as_string(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "config\\waven\\access_token.txt");
+pdirectorysystem->system() / "config\\waven\\access_token.txt");
          m_strTokenType = file()->as_string(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "config\\waven\\token_type.txt");
+pdirectorysystem->system() / "config\\waven\\token_type.txt");
          m_iExpires = atoi(file()->as_string(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "config\\waven\\expire_in.txt"));
+pdirectorysystem->system() / "config\\waven\\expire_in.txt"));
          m_strRefreshToken = file()->as_string(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "config\\waven\\refresh_token.txt");
+pdirectorysystem->system() / "config\\waven\\refresh_token.txt");
          m_timeAuth.m_time = ansi_to_i64(file()->as_string(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "config\\waven\\time_auth.txt"));
+pdirectorysystem->system() / "config\\waven\\time_auth.txt"));
 
       }
 
@@ -61,9 +61,9 @@ pacmedirectory->system() / "config\\waven\\time_auth.txt"));
 
          string strClientId = file_system()->as_string(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "config\\spotify\\client_id.txt");
+pdirectorysystem->system() / "config\\spotify\\client_id.txt");
 
          string strState;
 
@@ -150,9 +150,9 @@ pacmedirectory->system() / "config\\spotify\\client_id.txt");
 
             string strClientSecret = file_system()->as_string(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "config\\spotify\\client_secret.txt");
+pdirectorysystem->system() / "config\\spotify\\client_secret.txt");
 
             set["headers"]["Authorization"] = "Basic " + pbase64->encode(strClientId + ":" + strClientSecret);
 
@@ -213,29 +213,29 @@ pacmedirectory->system() / "config\\spotify\\client_secret.txt");
 
          file()->put_contents(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "config\\waven\\access_token.txt", m_strAccessToken);
+pdirectorysystem->system() / "config\\waven\\access_token.txt", m_strAccessToken);
          file()->put_contents(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "config\\waven\\token_type.txt", m_strTokenType);
+pdirectorysystem->system() / "config\\waven\\token_type.txt", m_strTokenType);
          file()->put_contents(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "config\\waven\\expire_in.txt", as_string(m_iExpires));
+pdirectorysystem->system() / "config\\waven\\expire_in.txt", as_string(m_iExpires));
          file()->put_contents(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "config\\waven\\refresh_token.txt", m_strRefreshToken);
+pdirectorysystem->system() / "config\\waven\\refresh_token.txt", m_strRefreshToken);
          file()->put_contents(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "config\\waven\\time_auth.txt", as_string((i64)m_timeAuth.m_time));
+pdirectorysystem->system() / "config\\waven\\time_auth.txt", as_string((i64)m_timeAuth.m_time));
 
          return true;
 

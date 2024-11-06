@@ -273,7 +273,7 @@ namespace mediaplay
 
 
 
-   bool single_document_template::ReserveSong(LPINT lpiaSongs, i32 iSongCount, bool bDoPlay, bool bMakeVisible)
+   bool single_document_template::ReserveSong(LPINT lpiaSongs, int iSongCount, bool bDoPlay, bool bMakeVisible)
    {
 
       ::pointer<::mediaplaylist::media_playlist>mediaplaylist = papp->mediaplaylist();
@@ -288,7 +288,7 @@ namespace mediaplay
    }
 
 
-   bool single_document_template::ReserveSong(i32 iSongCode, bool bDoPlay, bool bMakeVisible)
+   bool single_document_template::ReserveSong(int iSongCode, bool bDoPlay, bool bMakeVisible)
    {
 
       ::pointer<::mediaplaylist::media_playlist>mediaplaylist = papp->mediaplaylist();

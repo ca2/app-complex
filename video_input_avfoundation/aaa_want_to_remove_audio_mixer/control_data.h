@@ -34,7 +34,7 @@ namespace multimedia
          };
 
 
-         i32                  m_iType;
+         int                  m_iType;
          u32                  m_uiMixerID;
          u32                  m_uiLineID;
          u32                  m_uiControlID;
@@ -45,8 +45,8 @@ namespace multimedia
          virtual ~control_data();
 
 
-         virtual i32 GetObjectType();
-         virtual i32 get_type();
+         virtual int GetObjectType();
+         virtual int get_type();
 
 
 

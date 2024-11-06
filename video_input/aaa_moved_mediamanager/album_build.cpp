@@ -146,7 +146,7 @@ namespace mediamanager
 
       //   m_storage.allocate(file_info.uncompressed_size);
 
-      //   i32 iResult = unzOpenCurrentFile(pf);
+      //   int iResult = unzOpenCurrentFile(pf);
       //   if(iResult != UNZ_OK)
       //      return false;
 
@@ -379,7 +379,7 @@ namespace mediamanager
    }*/
 
    bool   album_build::PreBuild(
-   i32 &          iStep,
+   int &          iStep,
    bool           bRecursive,
    bool           bAddEmpty)
    {
@@ -415,7 +415,7 @@ namespace mediamanager
       //{
       //}
 
-      //i32 m_iPreBuildRowCount = m_pdatasetPreBuildRead->num_rows();
+      //int m_iPreBuildRowCount = m_pdatasetPreBuildRead->num_rows();
       m_wstraPreBuildFolders.erase_all();
       if(bRecursive)
       {
@@ -480,7 +480,7 @@ namespace mediamanager
    bool album_build::add(::file::listing & stra, time_array & timea)
    {
 
-      for(i32 i = 0; i < stra.get_size(); i++)
+      for(int i = 0; i < stra.get_size(); i++)
       {
 
          add(stra[i], timea[i]);
@@ -501,14 +501,14 @@ namespace mediamanager
 
       cslock slRead1(&m_csRead1);
 
-      i32 iId = 0;
+      int iId = 0;
 
       //pdataset->query("select maximum(atom) as maxid from album;");
 
       //if (pdataset->num_rows() > 0)
       //{
 
-      //   iId = pdataset->field_value("maxid").i32();
+      //   iId = pdataset->field_value("maxid").int();
 
       //   iId++;
 
@@ -516,7 +516,7 @@ namespace mediamanager
 
       album_record record;
 
-      i32 iGroup = 1;
+      int iGroup = 1;
 
       string strSql;
       string str;
@@ -525,9 +525,9 @@ namespace mediamanager
 
       strSql = "insert into album (atom, filepath, filename) values ";
       auto ptransaction = pdb->transaction();
-      for(i32 i = 0; i < stra.get_size(); i++)
+      for(int i = 0; i < stra.get_size(); i++)
       {
-         for(i32 j = 0; j < iGroup; j++)
+         for(int j = 0; j < iGroup; j++)
          {
             if(j >= 1)
                strSql += ", ";
@@ -570,7 +570,7 @@ namespace mediamanager
    bool album_build::Update(::file::listing & stra, time_array & timea)
    {
 
-      for(i32 i = 0; i < stra.get_size(); i++)
+      for(int i = 0; i < stra.get_size(); i++)
       {
 
          Update(stra[i], timea[i]);
@@ -589,7 +589,7 @@ namespace mediamanager
 
       string str;
 
-      for(i32 i = 0; i < stra.get_size(); i++)
+      for(int i = 0; i < stra.get_size(); i++)
       {
 
          str = stra[i];
@@ -625,7 +625,7 @@ namespace mediamanager
    }
 
 
-   bool album_build::erase(i32 iId)
+   bool album_build::erase(int iId)
    {
 
       string strSql;
@@ -642,7 +642,7 @@ namespace mediamanager
    bool album_build::erase(::i32_array & ia)
    {
 
-      i32 iGroup = 30;
+      int iGroup = 30;
 
       string strSql;
 
@@ -653,7 +653,7 @@ namespace mediamanager
 
          strSql = "delete from album where ";
 
-         for(i32 i = 0; i < iGroup; i++)
+         for(int i = 0; i < iGroup; i++)
          {
 
             if (i >= 1)
@@ -716,7 +716,7 @@ namespace mediamanager
    }
 
 
-   bool album_build::Update(const ::file::path & lpcsz, ::earth::time & time, i32 iId)
+   bool album_build::Update(const ::file::path & lpcsz, ::earth::time & time, int iId)
    {
 
 //      ::pointer<::sqlite::dataset>pdataset = m_pdatasetWrite;
@@ -782,7 +782,7 @@ namespace mediamanager
 
       ::mediamanager::album_record & albumrecord = record();
 
-      i32 iId = 0;
+      int iId = 0;
 
       //pdataset->query("select maximum(atom) as maxid from album;");
       //if (pdataset->num_rows() > 0)
@@ -804,7 +804,7 @@ namespace mediamanager
    }
 
 
-   i32 album_build::AddEmptyFile(const ::file::path & lpcsz)
+   int album_build::AddEmptyFile(const ::file::path & lpcsz)
    {
 
       ::pointer<::sqlite::database>pdb   = m_pdatabase;
@@ -813,7 +813,7 @@ namespace mediamanager
 
       record.m_wstrFilePath = lpcsz;
 
-      i32 iId = 0;
+      int iId = 0;
 
       //pdataset->query("select maximum(atom) as maxid from album;");
       //if (pdataset->num_rows() > 0)
@@ -835,7 +835,7 @@ namespace mediamanager
    }
 
 
-   bool album_build::UpdateAlbumRecord(i32 iId, bool bUpdateFilePath, bool bUpdateFileName)
+   bool album_build::UpdateAlbumRecord(int iId, bool bUpdateFilePath, bool bUpdateFileName)
    {
 
       //      ::pointer<::sqlite::database>pdb   = m_pdatabase;
@@ -893,7 +893,7 @@ namespace mediamanager
    void album_build::RecurseFolders(::file::listing & wstraFolder,::file::listing & wstraFolderSource)
    {
 
-      i32 i;
+      int i;
 
       ::file::path str;
 
@@ -926,7 +926,7 @@ namespace mediamanager
 
       // bool ok = m_bFindFiles;
 
-      i32 i, j;
+      int i, j;
 
       ::earth::time time;
 
@@ -947,9 +947,9 @@ namespace mediamanager
 
       string strB;
 
-      //i32 iIteration = 0;
+      //int iIteration = 0;
 
-      //i32 iIterationCount = 10;
+      //int iIterationCount = 10;
 
       for(i = 0; i < wstraFolder.get_size(); i++)
       {
@@ -974,7 +974,7 @@ namespace mediamanager
       __UNREFERENCED_PARAMETER(wstraFolder);
       //ASSERT(false);
       /*      FileFind & fileFind = m_filefindZip;
-            i32 i, j;
+            int i, j;
             ::earth::time time;
             string str, strFormat;
 
@@ -1035,7 +1035,7 @@ namespace mediamanager
                            {
                               if(unzOpenCurrentFile(pf) == UNZ_OK)
                               {
-                                 const i32 BUFSIZE = 4096;
+                                 const int BUFSIZE = 4096;
          //                        char szTempName[MAX_PATH];
          //                        char buffer[BUFSIZE];
                                  WCHAR lpPathBuffer[BUFSIZE];
@@ -1060,7 +1060,7 @@ namespace mediamanager
 
                                  wstrExtraPath = szTitle;
 
-                                 for(i32 i = 0; i < wstraExtension2.get_size(); i++)
+                                 for(int i = 0; i < wstraExtension2.get_size(); i++)
                                  {
                                     string wstrExt2 = wstraExtension2[i];
                                     string wstrEnd2;
@@ -1130,7 +1130,7 @@ namespace mediamanager
    }
 
 
-   void album_record::GetInsertSql(i32 iId)
+   void album_record::GetInsertSql(int iId)
    {
 
       m_strSql.formatf("insert into album (atom, filename, filepath, title, artist, lastmodified) values ('%d','%s','%s','%s','%s','%s');",
@@ -1144,7 +1144,7 @@ namespace mediamanager
    }
 
 
-   void album_record::GetUpdateSql(i32 iId, bool bUpdateFilePath, bool bUpdateFileName)
+   void album_record::GetUpdateSql(int iId, bool bUpdateFilePath, bool bUpdateFileName)
    {
 
       if(!bUpdateFilePath && !bUpdateFileName)
@@ -1205,19 +1205,19 @@ namespace mediamanager
 
       //::collection::count iRowCount = pset->m_rowa.get_count();
 
-      //i32 iFieldIndexId = (i32) pdataset->field_index("id");
+      //int iFieldIndexId = (int) pdataset->field_index("id");
 
-      //i32 iFieldIndexFilePath = (i32) pdataset->field_index("filepath");
+      //int iFieldIndexFilePath = (int) pdataset->field_index("filepath");
 
-      //i32 iFieldIndexLastModified = (i32) pdataset->field_index("lastmodified");
+      //int iFieldIndexLastModified = (int) pdataset->field_index("lastmodified");
 
       string strTime;
-      //i32 iYear;
-//      i32 iMonth;
-//      i32 iDay;
-//      i32 iHour;
-//      i32 iMinute;
-//      i32 iSecond;
+      //int iYear;
+//      int iMonth;
+//      int iDay;
+//      int iHour;
+//      int iMinute;
+//      int iSecond;
       ::file::path wstrFile;
 
 //      char * lpszTime;
@@ -1231,7 +1231,7 @@ namespace mediamanager
 //
 //      for(; m_iGetExStep < iRowCount; m_iGetExStep++)
 //      {
-//         i32 iRow = m_iGetExStep;
+//         int iRow = m_iGetExStep;
 ////         pdataset->seek(iRow);
 //
 //         ia.set_at(iRow, pdataset->select_field_value(iFieldIndexId));
@@ -1318,7 +1318,7 @@ namespace mediamanager
       straRemove = straOld;
       timeaRemove = timeaOld;
 
-      i32 iUpdate = 0;
+      int iUpdate = 0;
       ::collection::index iFound;
 
       while(iUpdate < straUpdate.get_size())

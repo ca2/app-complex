@@ -28,34 +28,34 @@ extern "C" {
  */
 
 EXPORT void compress_uyvx_to_i420(
-		const u8 *input, u32 in_linesize,
+		const unsigned char *input, u32 in_linesize,
 		u32 start_y, u32 end_y,
-		u8 *output[], const u32 out_linesize[]);
+		unsigned char *output[], const u32 out_linesize[]);
 
 EXPORT void compress_uyvx_to_nv12(
-		const u8 *input, u32 in_linesize,
+		const unsigned char *input, u32 in_linesize,
 		u32 start_y, u32 end_y,
-		u8 *output[], const u32 out_linesize[]);
+		unsigned char *output[], const u32 out_linesize[]);
 
 EXPORT void convert_uyvx_to_i444(
-		const u8 *input, u32 in_linesize,
+		const unsigned char *input, u32 in_linesize,
 		u32 start_y, u32 end_y,
-		u8 *output[], const u32 out_linesize[]);
+		unsigned char *output[], const u32 out_linesize[]);
 
 EXPORT void decompress_nv12(
-		const u8 *const input[], const u32 in_linesize[],
+		const unsigned char *const input[], const u32 in_linesize[],
 		u32 start_y, u32 end_y,
-		u8 *output, u32 out_linesize);
+		unsigned char *output, u32 out_linesize);
 
 EXPORT void decompress_420(
-		const u8 *const input[], const u32 in_linesize[],
+		const unsigned char *const input[], const u32 in_linesize[],
 		u32 start_y, u32 end_y,
-		u8 *output, u32 out_linesize);
+		unsigned char *output, u32 out_linesize);
 
 EXPORT void decompress_422(
-		const u8 *input, u32 in_linesize,
+		const unsigned char *input, u32 in_linesize,
 		u32 start_y, u32 end_y,
-		u8 *output, u32 out_linesize,
+		unsigned char *output, u32 out_linesize,
 		bool leading_lum);
 
 #ifdef __cplusplus

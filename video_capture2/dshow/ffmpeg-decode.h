@@ -40,7 +40,7 @@ struct ffmpeg_decode {
 
 	AVFrame        *frame;
 
-	u8        *packet_buffer;
+	unsigned char        *packet_buffer;
 	size_t         packet_size;
 };
 
@@ -48,12 +48,12 @@ extern int ffmpeg_decode_init(struct ffmpeg_decode *decode, enum AVCodecID ident
 extern void ffmpeg_decode_free(struct ffmpeg_decode *decode);
 
 extern int ffmpeg_decode_audio(struct ffmpeg_decode *decode,
-		u8 *data, size_t size,
+		unsigned char *data, size_t size,
 		struct obs_source_audio *audio,
 		bool *got_output);
 
 extern int ffmpeg_decode_video(struct ffmpeg_decode *decode,
-		u8 *data, size_t size, long long *ts,
+		unsigned char *data, size_t size, long long *ts,
 		struct obs_source_frame *frame,
 		bool *got_output);
 

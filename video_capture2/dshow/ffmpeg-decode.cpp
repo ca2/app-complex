@@ -93,13 +93,13 @@ static inline enum audio_format convert_sample_format(int f)
 	return AUDIO_FORMAT_UNKNOWN;
 }
 
-static inline void copy_data(struct ffmpeg_decode *decode, u8 *data,
+static inline void copy_data(struct ffmpeg_decode *decode, unsigned char *data,
 		size_t size)
 {
 	size_t new_size = size + FF_INPUT_BUFFER_PADDING_SIZE;
 
 	if (decode->packet_size < new_size) {
-		decode->packet_buffer = (u8 *) realloc(decode->packet_buffer,
+		decode->packet_buffer = (unsigned char *) realloc(decode->packet_buffer,
 				new_size);
 	}
 
@@ -108,7 +108,7 @@ static inline void copy_data(struct ffmpeg_decode *decode, u8 *data,
 }
 
 int ffmpeg_decode_audio(struct ffmpeg_decode *decode,
-		u8 *data, size_t size,
+		unsigned char *data, size_t size,
 		struct obs_source_audio *audio,
 		bool *got_output)
 {
@@ -158,7 +158,7 @@ int ffmpeg_decode_audio(struct ffmpeg_decode *decode,
 }
 
 int ffmpeg_decode_video(struct ffmpeg_decode *decode,
-		u8 *data, size_t size, long long *ts,
+		unsigned char *data, size_t size, long long *ts,
 		struct obs_source_frame *frame,
 		bool *got_output)
 {

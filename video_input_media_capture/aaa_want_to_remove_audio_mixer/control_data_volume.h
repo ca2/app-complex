@@ -15,14 +15,14 @@ namespace multimedia
       public:
 
 
-         i32                             nRange;
-         i32                             nPageInc;
+         int                             nRange;
+         int                             nPageInc;
 
 
          control_data_volume();
          virtual ~control_data_volume();
 
-         virtual i32 GetObjectType();
+         virtual int GetObjectType();
 
       };
 

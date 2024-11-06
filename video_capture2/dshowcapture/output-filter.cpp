@@ -331,7 +331,7 @@ void OutputPin::Send(unsigned char *data[DSHOW_MAX_PLANES],
 	REFERENCE_TIME endTime = timestampEnd;
 	ComPtr<IMediaSample> sample;
 	HRESULT hr;
-	::u8 *ptr;
+	unsigned char *ptr;
 
 	if (!memInput || !allocator)
 		return;

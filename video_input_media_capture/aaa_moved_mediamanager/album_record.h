@@ -30,8 +30,8 @@ namespace mediamanager
       album_record();
 
 
-      virtual void GetInsertSql(i32 iId);
-      virtual void GetUpdateSql(i32 iId, bool bFilePath, bool bFileName);
+      virtual void GetInsertSql(int iId);
+      virtual void GetUpdateSql(int iId, bool bFilePath, bool bFileName);
       virtual bool FillFileInfo(::pointer<::mediamanager::album_build>build, const ::string & pcsz);
       virtual bool FillFileInfo(::pointer<::mediamanager::album_build>build, memory & storage);
 

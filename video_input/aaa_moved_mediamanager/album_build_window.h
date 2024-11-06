@@ -13,12 +13,12 @@ namespace  mediamanager
       ::pointer<::user::interaction>    m_oswindowCallback;
       bool                 m_b1123;
 
-      i32                  m_iTransactionTrigger;
-      i32                  m_iFieldIndexTitle;
-      i32                  m_iFieldIndexArtist;
-      i32                  m_iFieldIndexFileName;
+      int                  m_iTransactionTrigger;
+      int                  m_iFieldIndexTitle;
+      int                  m_iFieldIndexArtist;
+      int                  m_iFieldIndexFileName;
 
-      i32                  m_iPreBuildStep;
+      int                  m_iPreBuildStep;
 
       album_build_window();
       virtual ~album_build_window();

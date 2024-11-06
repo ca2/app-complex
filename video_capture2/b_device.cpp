@@ -4,37 +4,37 @@
 const ::u32 NUM_BACK_BUFFERS = 2;
 
 void TransformImage_RGB24(
-   ::u8*       pDest,
-   ::i32        lDestStride,
-   const ::u8* pSrc,
-   ::i32        lSrcStride,
+   unsigned char*       pDest,
+   int        lDestStride,
+   const unsigned char* pSrc,
+   int        lSrcStride,
    ::u32       dwWidthInPixels,
    ::u32       dwHeightInPixels
 );
 
 void TransformImage_RGB32(
-   ::u8*       pDest,
-   ::i32        lDestStride,
-   const ::u8* pSrc,
-   ::i32        lSrcStride,
+   unsigned char*       pDest,
+   int        lDestStride,
+   const unsigned char* pSrc,
+   int        lSrcStride,
    ::u32       dwWidthInPixels,
    ::u32       dwHeightInPixels
 );
 
 void TransformImage_YUY2(
-   ::u8*       pDest,
-   ::i32        lDestStride,
-   const ::u8* pSrc,
-   ::i32        lSrcStride,
+   unsigned char*       pDest,
+   int        lDestStride,
+   const unsigned char* pSrc,
+   int        lSrcStride,
    ::u32       dwWidthInPixels,
    ::u32       dwHeightInPixels
 );
 
 void TransformImage_NV12(
-   ::u8* pDst,
-   ::i32 dstStride,
-   const ::u8* pSrc,
-   ::i32 srcStride,
+   unsigned char* pDst,
+   int dstStride,
+   const unsigned char* pSrc,
+   int srcStride,
    ::u32 dwWidthInPixels,
    ::u32 dwHeightInPixels
 );
@@ -42,15 +42,15 @@ void TransformImage_NV12(
 
 ::rectangle_i32    LetterBoxRect(const ::rectangle_i32 &rcSrc, const ::rectangle_i32 &rcDst);
 ::rectangle_i32    CorrectAspectRatio(const ::rectangle_i32 &src, const MFRatio& srcPAR);
-HRESULT GetDefaultStride(IMFMediaType *pType, ::i32 *plStride);
+HRESULT GetDefaultStride(IMFMediaType *pType, int *plStride);
 
 
-inline ::i32 Width(const ::rectangle_i32 &r)
+inline int Width(const ::rectangle_i32 &r)
 {
    return rectangle.right() - rectangle.left();
 }
 
-inline ::i32 Height(const ::rectangle_i32 &r)
+inline int Height(const ::rectangle_i32 &r)
 {
    return rectangle.bottom() - rectangle.top();
 }
@@ -416,8 +416,8 @@ HRESULT DrawDevice::DrawFrame(IMFMediaBuffer *pBuffer)
    }
 
    HRESULT hr = S_OK;
-   ::u8 *pbScanline0 = nullptr;
-   ::i32 lStride = 0;
+   unsigned char *pbScanline0 = nullptr;
+   int lStride = 0;
    D3DLOCKED_RECT lr;
 
    IDirect3DSurface9 *pSurf = nullptr;
@@ -475,7 +475,7 @@ HRESULT DrawDevice::DrawFrame(IMFMediaBuffer *pBuffer)
    // Convert the frame. This also copies it to the Direct3D surface.
 
    m_convertFn(
-      (::u8*)lr.pBits,
+      (unsigned char*)lr.pBits,
       lr.Pitch,
       pbScanline0,
       lStride,
@@ -694,9 +694,9 @@ void DrawDevice::DestroyDevice()
 //
 //-------------------------------------------------------------------
 
-__forceinline ::u8 Clip(int clr)
+__forceinline unsigned char Clip(int clr)
 {
-   return (::u8)(clr < 0 ? 0 : (clr > 255 ? 255 : clr));
+   return (unsigned char)(clr < 0 ? 0 : (clr > 255 ? 255 : clr));
 }
 
 __forceinline RGBQUAD ConvertYCrCbToRGB(
@@ -726,10 +726,10 @@ __forceinline RGBQUAD ConvertYCrCbToRGB(
 //-------------------------------------------------------------------
 
 void TransformImage_RGB24(
-   ::u8*       pDest,
-   ::i32        lDestStride,
-   const ::u8* pSrc,
-   ::i32        lSrcStride,
+   unsigned char*       pDest,
+   int        lDestStride,
+   const unsigned char* pSrc,
+   int        lSrcStride,
    ::u32       dwWidthInPixels,
    ::u32       dwHeightInPixels
 )
@@ -763,10 +763,10 @@ void TransformImage_RGB24(
 //-------------------------------------------------------------------
 
 void TransformImage_RGB32(
-   ::u8*       pDest,
-   ::i32        lDestStride,
-   const ::u8* pSrc,
-   ::i32        lSrcStride,
+   unsigned char*       pDest,
+   int        lDestStride,
+   const unsigned char* pSrc,
+   int        lSrcStride,
    ::u32       dwWidthInPixels,
    ::u32       dwHeightInPixels
 )
@@ -781,10 +781,10 @@ void TransformImage_RGB32(
 //-------------------------------------------------------------------
 
 void TransformImage_YUY2(
-   ::u8*       pDest,
-   ::i32        lDestStride,
-   const ::u8* pSrc,
-   ::i32        lSrcStride,
+   unsigned char*       pDest,
+   int        lDestStride,
+   const unsigned char* pSrc,
+   int        lSrcStride,
    ::u32       dwWidthInPixels,
    ::u32       dwHeightInPixels
 )
@@ -821,24 +821,24 @@ void TransformImage_YUY2(
 //-------------------------------------------------------------------
 
 void TransformImage_NV12(
-   ::u8* pDst,
-   ::i32 dstStride,
-   const ::u8* pSrc,
-   ::i32 srcStride,
+   unsigned char* pDst,
+   int dstStride,
+   const unsigned char* pSrc,
+   int srcStride,
    ::u32 dwWidthInPixels,
    ::u32 dwHeightInPixels
 )
 {
-   const ::u8* lpBitsY = pSrc;
-   const ::u8* lpBitsCb = lpBitsY + (dwHeightInPixels * srcStride);;
-   const ::u8* lpBitsCr = lpBitsCb + 1;
+   const unsigned char* lpBitsY = pSrc;
+   const unsigned char* lpBitsCb = lpBitsY + (dwHeightInPixels * srcStride);;
+   const unsigned char* lpBitsCr = lpBitsCb + 1;
 
    for (::u32 y = 0; y < dwHeightInPixels; y += 2)
    {
-      const ::u8* lpLineY1 = lpBitsY;
-      const ::u8* lpLineY2 = lpBitsY + srcStride;
-      const ::u8* lpLineCr = lpBitsCr;
-      const ::u8* lpLineCb = lpBitsCb;
+      const unsigned char* lpLineY1 = lpBitsY;
+      const unsigned char* lpLineY2 = lpBitsY + srcStride;
+      const unsigned char* lpLineCr = lpBitsCr;
+      const unsigned char* lpLineCb = lpBitsCb;
 
       LPBYTE lpDibLine1 = pDst;
       LPBYTE lpDibLine2 = pDst + dstStride;
@@ -937,8 +937,8 @@ void TransformImage_NV12(
 
    ::rectangle_i32 rc;
 
-   ::i32 left = rcDst.left() + ((iDstWidth - iDstLBWidth) / 2);
-   ::i32 top = rcDst.top() + ((iDstHeight - iDstLBHeight) / 2);
+   int left = rcDst.left() + ((iDstWidth - iDstLBWidth) / 2);
+   int top = rcDst.top() + ((iDstHeight - iDstLBHeight) / 2);
 
    SetRect(&rc, left, top, left + iDstLBWidth, top + iDstLBHeight);
 
@@ -988,9 +988,9 @@ void TransformImage_NV12(
 //
 //-----------------------------------------------------------------------------
 
-HRESULT GetDefaultStride(IMFMediaType *pType, ::i32 *plStride)
+HRESULT GetDefaultStride(IMFMediaType *pType, int *plStride)
 {
-   ::i32 lStride = 0;
+   int lStride = 0;
 
    // Try to get the default stride from the media type.
    HRESULT hr = pType->Get::u32(MF_MT_DEFAULT_STRIDE, (::u32*)&lStride);

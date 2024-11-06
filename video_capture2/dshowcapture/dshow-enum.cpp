@@ -33,7 +33,7 @@ namespace DShow {
 using namespace std;
 
 typedef bool (*EnumCapsCallback)(void *param, const AM_MEDIA_TYPE &mt,
-		const ::u8 *data);
+		const unsigned char *data);
 
 static void EnumElgatoCaps(IPin *pin, EnumCapsCallback callback, void *param)
 {
@@ -61,7 +61,7 @@ static bool EnumPinCaps(IPin *pin, EnumCapsCallback callback, void *param)
 
 	hr = config->GetNumberOfCapabilities(&count, &size);
 	if (SUCCEEDED(hr)) {
-		vector<::u8> caps;
+		vector<unsigned char> caps;
 		caps.resize(size);
 
 		for (int i = 0; i < count; i++) {
@@ -82,7 +82,7 @@ static bool EnumPinCaps(IPin *pin, EnumCapsCallback callback, void *param)
 
 /* Note:  DEVICE_VideoInfo is not to be confused with Device::VideoInfo */
 static bool Get_FORMAT_VideoInfo_Data(VideoInfo &info,
-		const AM_MEDIA_TYPE &mt, const ::u8 *data)
+		const AM_MEDIA_TYPE &mt, const unsigned char *data)
 {
 	const VIDEO_STREAM_CONFIG_CAPS *vscc;
 	const VIDEOINFOHEADER          *viHeader;
@@ -126,7 +126,7 @@ static bool Get_FORMAT_VideoInfo_Data(VideoInfo &info,
 }
 
 static bool Get_FORMAT_WaveFormatEx_Data(AudioInfo &info,
-		const AM_MEDIA_TYPE &mt, const ::u8 *data)
+		const AM_MEDIA_TYPE &mt, const unsigned char *data)
 {
 	const AUDIO_STREAM_CONFIG_CAPS *ascc;
 	const WAVEFORMATEX             *wfex;
@@ -168,7 +168,7 @@ struct ClosestVideoData {
 	{}
 };
 
-static inline void ClampToGranularity(::i32 &val, int minVal, int granularity)
+static inline void ClampToGranularity(int &val, int minVal, int granularity)
 {
 	val -= ((val - minVal) % granularity);
 }
@@ -186,7 +186,7 @@ static inline int GetFormatRating(VideoFormat format)
 }
 
 static bool ClosestVideoMTCallback(ClosestVideoData &data,
-		const AM_MEDIA_TYPE &mt, const ::u8 *capData)
+		const AM_MEDIA_TYPE &mt, const unsigned char *capData)
 {
 	VideoInfo info;
 
@@ -298,7 +298,7 @@ struct ClosestAudioData {
 };
 
 static bool ClosestAudioMTCallback(ClosestAudioData &data,
-		const AM_MEDIA_TYPE &mt, const ::u8 *capData)
+		const AM_MEDIA_TYPE &mt, const unsigned char *capData)
 {
 	AudioInfo info = {};
 
@@ -333,7 +333,7 @@ static bool ClosestAudioMTCallback(ClosestAudioData &data,
 
 	if (!data.found || data.bestVal > totalVal) {
 		if (channelsVal == 0) {
-			::i32 channels = data.config.channels;
+			int channels = data.config.channels;
 			ClampToGranularity(channels, info.minChannels,
 					info.channelsGranularity);
 			wfex->nChannels = (::u16)channels;
@@ -344,7 +344,7 @@ static bool ClosestAudioMTCallback(ClosestAudioData &data,
 
 		if (sampleRateVal == 0) {
 			wfex->nSamplesPerSec = data.config.sampleRate;
-			ClampToGranularity((::i32&)wfex->nSamplesPerSec,
+			ClampToGranularity((int&)wfex->nSamplesPerSec,
 					info.minSampleRate,
 					info.sampleRateGranularity);
 		}
@@ -388,7 +388,7 @@ bool GetClosestAudioMediaType(IBaseFilter *filter, AudioConfig &config,
 }
 
 static bool EnumVideoCap(vector<VideoInfo> &caps,
-		const AM_MEDIA_TYPE &mt, const ::u8 *data)
+		const AM_MEDIA_TYPE &mt, const unsigned char *data)
 {
 	VideoInfo info;
 
@@ -405,7 +405,7 @@ bool EnumVideoCaps(IPin *pin, vector<VideoInfo> &caps)
 }
 
 static bool EnumAudioCap(vector<AudioInfo> &caps,
-		const AM_MEDIA_TYPE &mt, const ::u8 *data)
+		const AM_MEDIA_TYPE &mt, const unsigned char *data)
 {
 	AudioInfo info;
 

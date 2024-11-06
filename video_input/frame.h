@@ -29,7 +29,7 @@ namespace video
    {
    public:
 
-      ::u8 * m_data[MAX_AV_PLANES];
+      unsigned char * m_data[MAX_AV_PLANES];
       ::u32 m_linesize[MAX_AV_PLANES];
       ::u32 m_width;
       ::u32 m_height;
@@ -41,7 +41,7 @@ namespace video
       float m_color_range_min[3];
       float m_color_range_max[3];
       bool m_flip;
-      ::u8 m_flags;
+      unsigned char m_flags;
 
       /* used internally by video */
       volatile long m_refs;
@@ -271,7 +271,7 @@ namespace video
 
    struct frame2
    {
-      ::u8 * m_data[MAX_AV_PLANES];
+      unsigned char * m_data[MAX_AV_PLANES];
       ::u32 m_linesize[MAX_AV_PLANES];
       ::u32 m_width;
       ::u32 m_height;
@@ -283,7 +283,7 @@ namespace video
       float m_color_range_min[3];
       float m_color_range_max[3];
       bool m_flip;
-      ::u8 m_flags;
+      unsigned char m_flags;
    };
 
 

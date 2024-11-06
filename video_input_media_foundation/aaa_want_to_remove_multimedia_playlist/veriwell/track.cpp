@@ -49,7 +49,7 @@ string extract_mccdi(string str)
       mem.set_size(wLength);
 
       if (FAILED(pIWMHeaderInfo3->GetAttributeByName(
-                 &wStreamNum, g_wszWMMCDI, &wmtDataType, (::u8*)mem.get_data(), &wLength))) break;
+                 &wStreamNum, g_wszWMMCDI, &wmtDataType, (unsigned char*)mem.get_data(), &wLength))) break;
 
       bOK = true;
 

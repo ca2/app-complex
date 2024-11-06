@@ -379,7 +379,7 @@ namespace multimedia_playlist
 
          synchronous_lock synchronouslock(this->synchronization());
 
-         i32 iValue;
+         int iValue;
 
          if (!m_pxmlplaylist->m_xmldoc.get_root()->find_attribute(psz, iValue))
             return iDefault;

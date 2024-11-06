@@ -349,7 +349,7 @@ namespace mediaplay
    }
 
 
-   void impact::_001OnTabClick(i32 iTab)
+   void impact::_001OnTabClick(int iTab)
    {
 
       if(iTab == 1)

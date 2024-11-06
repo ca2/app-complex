@@ -17,7 +17,7 @@
 #include <UIKit/UIKit.h>
 
 
-i32 __ios_main(i32 argc, char * argv[]);
+int __ios_main(int argc, char * argv[]);
 
 
 int main(int argc, char * argv[])

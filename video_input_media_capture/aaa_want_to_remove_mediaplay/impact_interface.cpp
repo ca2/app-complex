@@ -928,7 +928,7 @@ namespace mediaplay
 
 
 
-   i32 impact_interface::InitGL()
+   int impact_interface::InitGL()
    {
 
       return true;
@@ -2078,7 +2078,7 @@ retry4:
 
          strBase = strFolder / strTitle;
 
-         i32 i = 1;
+         int i = 1;
          while(true)
          {
             strRec.formatf("%s.%d.wav", strBase.c_str(), i);
@@ -2258,7 +2258,7 @@ retry4:
    }
 
 
-   i32 impact_interface::KaraokeGetLyricsDelay()
+   int impact_interface::KaraokeGetLyricsDelay()
    {
 
       return m_iDelay;

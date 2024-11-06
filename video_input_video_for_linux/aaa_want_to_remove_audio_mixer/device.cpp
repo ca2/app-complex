@@ -78,12 +78,12 @@ namespace multimedia
       {
          m_mapIDToControl.erase_all();
 
-         for(i32 i = 0; i < m_mixerdestinationa.get_size(); i++)
+         for(int i = 0; i < m_mixerdestinationa.get_size(); i++)
          {
             ::audio_mixer::destination & destination = m_mixerdestinationa(i);
             MapLineControls(&destination);
             ::audio_mixer::source_array & sourcea = destination.get_source_info();
-            for(i32 j = 0; j < sourcea.get_size(); j++)
+            for(int j = 0; j < sourcea.get_size(); j++)
             {
                ::audio_mixer::source & source = sourcea(j);
                MapLineControls(&source);
@@ -123,12 +123,12 @@ namespace multimedia
          m_mapDlgItemIDToControl.erase_all();
 
          ::audio_mixer::destination_array & destinationa = m_mixerdestinationa;
-         for(i32 i = 0; i < destinationa.get_size(); i++)
+         for(int i = 0; i < destinationa.get_size(); i++)
          {
             ::audio_mixer::destination & destination = destinationa(i);
             MapDlgCtrlIDToLineControls(&destination);
             ::audio_mixer::source_array & sourcea = destination.get_source_info();
-            for(i32 j = 0; j < sourcea.get_size(); j++)
+            for(int j = 0; j < sourcea.get_size(); j++)
             {
                ::audio_mixer::source & source = sourcea(j);
                MapDlgCtrlIDToLineControls(&source);
@@ -140,12 +140,12 @@ namespace multimedia
       void device::MapDlgCtrlIDToLineControls(::audio_mixer::source * psource)
       {
          ::audio_mixer::control_array & controla = psource->get_control_array();
-         for(i32 k = 0; k < controla.get_size(); k++)
+         for(int k = 0; k < controla.get_size(); k++)
          {
 
             ::audio_mixer::control & control = controla(k);
 
-            for(i32 l = 0; l < control.get_size(); l++)
+            for(int l = 0; l < control.get_size(); l++)
             {
 
                ::audio_mixer::user_control * pinteraction = control[l];

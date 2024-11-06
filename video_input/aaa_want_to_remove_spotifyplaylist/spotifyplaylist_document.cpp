@@ -265,7 +265,7 @@ namespace mediaplaylist
    {
       string_array straTotal;
       get_songs(straTotal, bEditingPlaylist);
-      for(i32 i = 0; i < m_iaQueue.get_count(); i++)
+      for(int i = 0; i < m_iaQueue.get_count(); i++)
       {
          stra.add(straTotal[m_iaQueue[i]]);
       }
@@ -573,7 +573,7 @@ namespace mediaplaylist
 
       bool bFirst = bDoPlay;
 
-      for(i32 i = 0; i < stra.get_size(); i++)
+      for(int i = 0; i < stra.get_size(); i++)
       {
          AddSong(stra.element_at(i), bFirst ? (bDoPlay ? AddSongAndPlay : AddSongOnly) : AddSongOnly, bMakeVisible, false);
          //        if(pSongsSet->FindCode(lpiaSongs[i]))
@@ -651,13 +651,13 @@ namespace mediaplaylist
       }
    }
 
-   /*bool document::Play(bool bDoPlay, i32 iOffset, bool bLoop)
+   /*bool document::Play(bool bDoPlay, int iOffset, bool bLoop)
    {
 
       string wstrPath;
       //   bool bOpen = false;
-      i32 iSong = m_iCurrentSong;
-      i32 iNextSong;
+      int iSong = m_iCurrentSong;
+      int iNextSong;
       while(PeekSongPath(wstrPath, iOffset, bLoop))
       {
          iNextSong = m_iCurrentSong;
@@ -813,7 +813,7 @@ namespace mediaplaylist
 
    i64 document::data::get_int(const ::string & psz, i64 iDefault)
    {
-      i32 iValue;
+      int iValue;
       if(!m_xmldoc.get_root()->get_attr(psz,iValue))
          return iDefault;
       return iValue;

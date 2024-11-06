@@ -790,7 +790,7 @@ namespace video_input_media_capture
    //      for (int iLine = 0; iLine < m_pdevice->m_size.cy(); iLine++)
    //      {
 
-   //         auto pline = ((::u8 *)pSampleBuffer) + m_pdevice->m_size.cx() * 4 * iLine;
+   //         auto pline = ((unsigned char *)pSampleBuffer) + m_pdevice->m_size.cx() * 4 * iLine;
 
    //         pline += 3;
 

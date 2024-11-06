@@ -16,12 +16,12 @@ namespace mediaplaylist
 
    }
 
-   i32 ::update::GetHint()
+   int ::update::GetHint()
    {
       return m_iHint;
    }
 
-   void ::update::SetHint(i32 iHint)
+   void ::update::SetHint(int iHint)
    {
       m_iHint = iHint;
    }

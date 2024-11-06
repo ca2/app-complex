@@ -12,7 +12,7 @@
 //	unsigned long  Data1;
 //	unsigned short Data2;
 //	unsigned short Data3;
-//	::u8           Data4[8];
+//	unsigned char           Data4[8];
 //} GUID;
 //#else
 //typedef struct _GUID {
@@ -85,7 +85,7 @@ typedef struct video_output video_t;
 
 
 //struct video_data {
-//   u8 *data[max_av_planes];
+//   unsigned char *data[max_av_planes];
 //   u32 linesize[max_av_planes];
 //   u64 timestamp;
 //};

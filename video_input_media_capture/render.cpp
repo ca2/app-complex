@@ -537,7 +537,7 @@ namespace video_input_media_capture
 
    //   }
    //
-   //   ::u8 * p = nullptr;
+   //   unsigned char * p = nullptr;
    //
    //   hr = pBuffer->Lock(&p, nullptr, nullptr);
    //

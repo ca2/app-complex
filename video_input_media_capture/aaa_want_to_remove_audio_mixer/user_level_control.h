@@ -30,14 +30,14 @@ namespace multimedia
             virtual ~level_control();
 
 
-            virtual void SetPos(i32 iPos);
-            virtual i32 GetPos() const;
+            virtual void SetPos(int iPos);
+            virtual int GetPos() const;
 
 
             virtual void SetOrientation(enum_orientation eorientation);
-            virtual void SetRange(i32 iMin, i32 iMax);
-            virtual void SetPageSize(i32 iPage);
-            virtual void SetLineSize(i32 iSize);
+            virtual void SetRange(int iMin, int iMax);
+            virtual void SetPageSize(int iPage);
+            virtual void SetLineSize(int iSize);
 
             virtual ::audio_mixer::control_data_volume * get_data_volume();
 

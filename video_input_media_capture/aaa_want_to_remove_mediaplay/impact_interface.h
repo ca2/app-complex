@@ -86,7 +86,7 @@ namespace mediaplay
       bool                                      m_bIpiPostNewSong;
 
 
-      i32                                   m_iDelay;
+      int                                   m_iDelay;
 
       bool                                      m_bFadeOut;
 
@@ -160,12 +160,12 @@ namespace mediaplay
 
 
       virtual ::draw2d::graphics * GetGdi();
-      virtual i32 InitGL();
+      virtual int InitGL();
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
       virtual bool backimpact_GetDestroy();
       virtual void StartMusicRendering();
       
-      //   virtual void data_on_after_change(i32 iConfigurationId, i32 iLine, i32 iColumn, CVmsDataUpdateHint * pupdate);
+      //   virtual void data_on_after_change(int iConfigurationId, int iLine, int iColumn, CVmsDataUpdateHint * pupdate);
       virtual bool UpdateScreen(rectangle_i32_array & recta, u32 uiRedraw);
 
       virtual void on_delete_contents();

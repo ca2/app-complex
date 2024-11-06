@@ -6,16 +6,16 @@ namespace video_input_media_foundation
 {
 
 
-	void processPixels(color32_t* src, color32_t* dst, ::i32 width, ::i32 height, ::u32 bpp, bool bRGB, bool bFlip)
+	void processPixels(color32_t* src, color32_t* dst, int width, int height, ::u32 bpp, bool bRGB, bool bFlip)
 	{
 
-		::i32 widthInBytes = width * bpp;
+		int widthInBytes = width * bpp;
 
-		::i32 numBytes = widthInBytes * height;
+		int numBytes = widthInBytes * height;
 
-		::i32 numInts = numBytes >> 2;
+		int numInts = numBytes >> 2;
 
-		::i32 widthInInts = widthInBytes >> 2;
+		int widthInInts = widthInBytes >> 2;
 
 		int* dstInt, * srcInt;
 
@@ -43,7 +43,7 @@ namespace video_input_media_foundation
 
 				memcpy(dst, src, numBytes);
 
-				::u8* pbyteDst = (::u8*)dst;
+				unsigned char* pbyteDst = (unsigned char*)dst;
 
 				pbyteDst += 3;
 
@@ -63,11 +63,11 @@ namespace video_input_media_foundation
 			if (bFlip)
 			{
 
-				::i32 x = 0;
-				::i32 y = (height - 1) * widthInBytes;
+				int x = 0;
+				int y = (height - 1) * widthInBytes;
 				src += y;
 
-				for (::i32 i = 0; i < numBytes; i += 4)
+				for (int i = 0; i < numBytes; i += 4)
 				{
 					if (x >= width)
 					{
@@ -90,7 +90,7 @@ namespace video_input_media_foundation
 			}
 			else
 			{
-				for (::i32 i = 0; i < numBytes; i += 4)
+				for (int i = 0; i < numBytes; i += 4)
 				{
 					*dst = *(src + 3);
 					dst++;

@@ -62,43 +62,43 @@ namespace multimedia
       /////////////////////////////////////////////////////////////////////////////
       // slider message handlers
 
-      i32 slider::GetLineSize() const
+      int slider::GetLineSize() const
       {
          return m_iLineSize;
       }
 
-      void slider::SetLineSize(i32 iLineSize)
+      void slider::SetLineSize(int iLineSize)
       {
          m_iLineSize = iLineSize;
       }
 
-      i32 slider::GetPageSize() const
+      int slider::GetPageSize() const
       {
          return m_iPageSize;
       }
 
-      void slider::SetPageSize(i32 iPageSize)
+      void slider::SetPageSize(int iPageSize)
       {
          m_iPageSize = iPageSize;
       }
 
-      i32 slider::GetRangeMax() const
+      int slider::GetRangeMax() const
       {
          return m_iRangeMax;
       }
 
-      i32 slider::GetRangeMin() const
+      int slider::GetRangeMin() const
       {
          return m_iRangeMin;
       }
 
-      void slider::GetRange(i32 &iMin, i32 &iMax) const
+      void slider::GetRange(int &iMin, int &iMax) const
       {
          iMin = m_iRangeMin;
          iMax = m_iRangeMax;
       }
 
-      void slider::SetRangeMin(i32 iMin, bool bRedraw)
+      void slider::SetRangeMin(int iMin, bool bRedraw)
       {
          m_iRangeMin = iMin;
          if(bRedraw)
@@ -107,7 +107,7 @@ namespace multimedia
          }
       }
 
-      void slider::SetRangeMax(i32 iMax, bool bRedraw)
+      void slider::SetRangeMax(int iMax, bool bRedraw)
       {
          m_iRangeMax = iMax;
          if(bRedraw)
@@ -117,7 +117,7 @@ namespace multimedia
 
       }
 
-      void slider::SetRange(i32 iMin, i32 iMax, bool bRedraw)
+      void slider::SetRange(int iMin, int iMax, bool bRedraw)
       {
          m_iRangeMin = iMin;
          m_iRangeMax = iMax;
@@ -127,13 +127,13 @@ namespace multimedia
          }
       }
 
-      void slider::SetRange(i32 iMin, i32 iMax)
+      void slider::SetRange(int iMin, int iMax)
       {
          m_iRangeMin = iMin;
          m_iRangeMax = iMax;
       }
 
-      i32 slider::GetPos() const
+      int slider::GetPos() const
       {
          if(m_bTracking)
          {
@@ -146,7 +146,7 @@ namespace multimedia
 
       }
 
-      void slider::SetPos(i32 iPos)
+      void slider::SetPos(int iPos)
       {
          m_iPos = iPos;
 
@@ -169,8 +169,8 @@ namespace multimedia
 
          this->rectangle(rectangleX);
 
-         //      i32 cx = rectangleX.width();
-         //      i32 cy = rectangleX.height();
+         //      int cx = rectangleX.width();
+         //      int cy = rectangleX.height();
 
          /*if(iEconoMode == Savings::SaveNoSave)
          {
@@ -582,7 +582,7 @@ namespace multimedia
          ::rectangle_f64 rectangleThumb;
          if(m_eorientation == e_orientation_horizontal)
          {
-            lpRect->left() = ((i32) dPos) - 4;
+            lpRect->left() = ((int) dPos) - 4;
             lpRect->right() = lpRect->left() + 10;
             lpRect->top() = rectangleX.top();
             lpRect->bottom() = rectangleX.bottom() + 1;;
@@ -591,9 +591,9 @@ namespace multimedia
          {
             lpRect->left() = rectangleX.left();
             lpRect->right() = rectangleX.right() + 1 ;
-            lpRect->top() = ((i32) dPos) - 4;
+            lpRect->top() = ((int) dPos) - 4;
             lpRect->bottom() = lpRect->top() + 10;
-            //        i32 iHeight = rectangleX.height() - GetSystemMetrics(SM_CYVSCROLL) * 2 - sizeTrack.cy() - 1;
+            //        int iHeight = rectangleX.height() - GetSystemMetrics(SM_CYVSCROLL) * 2 - sizeTrack.cy() - 1;
             //      if(m_iRangeMax - m_iRangeMin - m_iPageSize == 0)
             //        lpRect->top() = 0;
             //  else
@@ -608,7 +608,7 @@ namespace multimedia
 
 
 
-      i32 slider::SetTrackingPos(::point_i32 point)
+      int slider::SetTrackingPos(::point_i32 point)
       {
          double nPos;
          ::size sizeTrack;
@@ -620,7 +620,7 @@ namespace multimedia
          sizeTrack.cy() = rectangleX.height();
          if(m_eorientation == e_orientation_horizontal)
          {
-            i32 iWidth = rectangleX.width() - m_iMargin * 2;
+            int iWidth = rectangleX.width() - m_iMargin * 2;
             nPos = point.x() - m_sizeTrackOffset.x();
             nPos -= m_iMargin - 4;
             nPos *= m_iRangeMax - m_iRangeMin;
@@ -630,7 +630,7 @@ namespace multimedia
          }
          else if(m_eorientation == e_orientation_vertical)
          {
-            i32 iHeight = rectangleX.height() -  m_iMargin * 2;
+            int iHeight = rectangleX.height() -  m_iMargin * 2;
             nPos = point.y() - m_sizeTrackOffset.y();
             nPos -= m_iMargin - 4;
             nPos *= (m_iRangeMax - m_iRangeMin);
@@ -648,20 +648,20 @@ namespace multimedia
             nPos = m_iRangeMax;
          if(m_bTracking)
          {
-            m_iTrackingPos = (i32) nPos;
+            m_iTrackingPos = (int) nPos;
          }
          else
          {
-            m_iPos = (i32) nPos;
+            m_iPos = (int) nPos;
          }
          return true;
       }
 
 
-      i32 slider::ScrollLineA()
+      int slider::ScrollLineA()
       {
          ::pointer<::user::interaction>pParentWnd = get_parent();
-         i32 nPos = m_iPos;
+         int nPos = m_iPos;
          nPos-=3;
          if(nPos < m_iRangeMin)
             nPos = m_iRangeMin;
@@ -684,10 +684,10 @@ namespace multimedia
          return true;
       }
 
-      i32 slider::ScrollLineB()
+      int slider::ScrollLineB()
       {
          ::pointer<::user::interaction>pParentWnd = get_parent();
-         i32 nPos = m_iPos;
+         int nPos = m_iPos;
          nPos+=3;
          if(nPos > m_iRangeMax - m_iPageSize)
             nPos = m_iRangeMax - m_iPageSize;
@@ -709,10 +709,10 @@ namespace multimedia
          }
          return true;
       }
-      i32 slider::ScrollPageA()
+      int slider::ScrollPageA()
       {
          ::pointer<::user::interaction>pParentWnd = get_parent();
-         i32 nPos = m_iPos;
+         int nPos = m_iPos;
          nPos-=m_iPageSize ;
          if(nPos < m_iRangeMin)
             nPos = m_iRangeMin;
@@ -736,10 +736,10 @@ namespace multimedia
 
       }
 
-      i32 slider::ScrollPageB()
+      int slider::ScrollPageB()
       {
          ::pointer<::user::interaction>pParentWnd = get_parent();
-         i32 nPos = m_iPos;
+         int nPos = m_iPos;
          nPos+=m_iPageSize ;
          if(nPos > m_iRangeMax - m_iPageSize)
             nPos = m_iRangeMax - m_iPageSize;
@@ -768,9 +768,9 @@ namespace multimedia
             dRate = 1.0;
          if(dRate < 0.0)
             dRate = 0.0;
-         //      i32 iMin = GetRangeMin();
-         //      i32 iMax = GetRangeMax();
-         SetPos((i32) (((m_iRangeMax - m_iRangeMin) * dRate) + m_iRangeMin));
+         //      int iMin = GetRangeMin();
+         //      int iMax = GetRangeMax();
+         SetPos((int) (((m_iRangeMax - m_iRangeMin) * dRate) + m_iRangeMin));
 
       }
 

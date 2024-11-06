@@ -146,7 +146,7 @@ static bool PinConfigHasMajorType(IPin *pin, const GUID &type)
 	if (FAILED(hr))
 		return false;
 
-	vector<::u8> caps;
+	vector<unsigned char> caps;
 	caps.resize(size);
 
 	for (int i = 0; i < count; i++) {

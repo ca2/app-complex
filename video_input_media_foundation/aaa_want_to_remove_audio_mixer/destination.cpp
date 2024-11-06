@@ -40,7 +40,7 @@ namespace multimedia
 
          ::audio_mixer::source_array & sourcea = m_mixersourcea;
 
-         for(i32 i = 0; i < sourcea.get_size(); i++)
+         for(int i = 0; i < sourcea.get_size(); i++)
          {
 
             sourcea[i]->GetLineControls();
@@ -59,7 +59,7 @@ namespace multimedia
 
          ::audio_mixer::source_array & sourcea = m_mixersourcea;
 
-         for(i32 i = 0; i < sourcea.get_size(); i++)
+         for(int i = 0; i < sourcea.get_size(); i++)
          {
 
             sourcea[i]->update_all_controls();

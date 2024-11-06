@@ -553,7 +553,7 @@ namespace video_input_video_for_linux
 //
 //      }
 //
-//      ::u8 * p = nullptr;
+//      unsigned char * p = nullptr;
 //
 //      hr = pBuffer->Lock(&p, nullptr, nullptr);
 //

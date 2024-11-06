@@ -108,7 +108,7 @@ namespace  mediamanager
          //      palbumbuild->m_pdatabase->start_transaction();
          //   }
 
-         //   i32 iUpdatedId;
+         //   int iUpdatedId;
 
          //   ::get_task()->set_thread_priority(::e_priority_highest);
 
@@ -117,10 +117,10 @@ namespace  mediamanager
 
          //   ::i32_array iaRemove;
          //   ::payload fv;
-         //   i32 iId;
-         //   i32 iAdded = 0;
-         //   i32 iUpdated = 0;
-         //   i32 iRemoved = 0;
+         //   int iId;
+         //   int iAdded = 0;
+         //   int iUpdated = 0;
+         //   int iRemoved = 0;
          //   while(ia.get_size() > 0)
          //   {
          //      iId = ia.element_at(0);
@@ -206,7 +206,7 @@ namespace  mediamanager
 
          //::get_task()->set_thread_priority(::e_priority_below_normal);
 
-         //i32 iRemove = 30;
+         //int iRemove = 30;
          //if(!palbumbuild->m_pdatabase->in_transaction())
          //{
          //   m_iTransactionTrigger = 0;
@@ -216,9 +216,9 @@ namespace  mediamanager
          //::i32_array iaRemove;
          //auto pFind = 0;
          //::payload fv;
-         //i32 iAdded = 0;
-         //i32 iUpdated = 0;
-         //i32 iRemoved = 0;
+         //int iAdded = 0;
+         //int iUpdated = 0;
+         //int iRemoved = 0;
          //while(true)
          //{
          //   if(iFind < palbumbuild->m_fileinfo.m_iaUpdate.get_size())

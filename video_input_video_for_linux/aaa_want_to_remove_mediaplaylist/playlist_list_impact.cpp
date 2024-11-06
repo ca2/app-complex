@@ -1173,7 +1173,7 @@ restart:
    }
 
 
-   i32 playlist_list_impact::_001CalcItemHeight(int iBaseHeight)
+   int playlist_list_impact::_001CalcItemHeight(int iBaseHeight)
    {
 
       return simple_form_list_impact::_001CalcItemHeight(iBaseHeight);

@@ -38,7 +38,7 @@ namespace multimedia
       GetLineControls();
       if(controla.get_size() <= 0)
       return MMSYSERR_ERROR;
-      for(i32 i = 0; i < controla.get_size(); i++)
+      for(int i = 0; i < controla.get_size(); i++)
       {
       if((dwControlType != 0 && controla[i].GetControlType() == dwControlType)
       || (dwControlType == 0 && ((controla[i].GetControlType() & dwControlFlags) != 0)))
@@ -65,7 +65,7 @@ namespace multimedia
       void source::update_all_controls()
       {
          ::audio_mixer::control_array & controla = get_control_array();
-         for(i32 i = 0; i < controla.get_size(); i++)
+         for(int i = 0; i < controla.get_size(); i++)
          {
             controla[i]->OnMixerControlChange();
          }

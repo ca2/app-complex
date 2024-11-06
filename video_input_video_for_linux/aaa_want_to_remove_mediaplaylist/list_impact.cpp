@@ -902,7 +902,7 @@ namespace mediaplaylist
 
    }
 
-   i32 list_impact::_001CalcItemHeight(int iBaseHeight)
+   int list_impact::_001CalcItemHeight(int iBaseHeight)
    {
 
       return simple_form_list_impact::_001CalcItemHeight(iBaseHeight);
@@ -910,7 +910,7 @@ namespace mediaplaylist
    }
 
    
-   i32 list_impact::_001GetDrawTextFlags(::user::list::enum_impact eview)
+   int list_impact::_001GetDrawTextFlags(::user::list::enum_impact eview)
    {
 
       return ::user::list::_001GetDrawTextFlags(eview);

@@ -111,7 +111,7 @@ frame::~frame()
             offsets[1] = size;
             size += quarter_area;
             ALIGN_SIZE(size, alignment);
-            m_data[0] =(::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
+            m_data[0] =(unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
             m_data[1] = (uint8_t *)m_data[0] + offsets[0];
             m_data[2] = (uint8_t *)m_data[0] + offsets[1];
             m_linesize[0] = width;
@@ -127,7 +127,7 @@ frame::~frame()
             const uint32_t cbcr_width = (width + 1) & (UINT32_MAX - 1);
             size += cbcr_width * ((height + 1) / 2);
             ALIGN_SIZE(size, alignment);
-            m_data[0] = (::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
+            m_data[0] = (unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
             m_data[1] = (uint8_t *)m_data[0] + offsets[0];
             m_linesize[0] = width;
             m_linesize[1] = cbcr_width;
@@ -137,7 +137,7 @@ frame::~frame()
          case e_video_format_y800:
             size = width * height;
             ALIGN_SIZE(size, alignment);
-            m_data[0] = (::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
+            m_data[0] = (unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
             m_linesize[0] = width;
             break;
 
@@ -148,7 +148,7 @@ frame::~frame()
                ((width + 1) & (UINT32_MAX - 1)) * 2;
             size = double_width * height;
             ALIGN_SIZE(size, alignment);
-            m_data[0] =(::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
+            m_data[0] =(unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
             m_linesize[0] = double_width;
             break;
          }
@@ -159,14 +159,14 @@ frame::~frame()
          case e_video_format_ayuv:
             size = width * height * 4;
             ALIGN_SIZE(size, alignment);
-            m_data[0] =(::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
+            m_data[0] =(unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
             m_linesize[0] = width * 4;
             break;
 
          case e_video_format_i444:
             size = width * height;
             ALIGN_SIZE(size, alignment);
-            m_data[0] =(::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size * 3, nullptr, alignment);
+            m_data[0] =(unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size * 3, nullptr, alignment);
             m_data[1] = (uint8_t *)m_data[0] + size;
             m_data[2] = (uint8_t *)m_data[1] + size;
             m_linesize[0] = width;
@@ -177,7 +177,7 @@ frame::~frame()
          case e_video_format_bgr3:
             size = width * height * 3;
             ALIGN_SIZE(size, alignment);
-            m_data[0] =(::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
+            m_data[0] =(unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
             m_linesize[0] = width * 3;
             break;
 
@@ -192,7 +192,7 @@ frame::~frame()
             offsets[1] = size;
             size += half_area;
             ALIGN_SIZE(size, alignment);
-            m_data[0] =(::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
+            m_data[0] =(unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
             m_data[1] = (uint8_t *)m_data[0] + offsets[0];
             m_data[2] = (uint8_t *)m_data[0] + offsets[1];
             m_linesize[0] = width;
@@ -216,7 +216,7 @@ frame::~frame()
             offsets[2] = size;
             size += width * height;
             ALIGN_SIZE(size, alignment);
-            m_data[0] =(::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
+            m_data[0] =(unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
             m_data[1] = (uint8_t *)m_data[0] + offsets[0];
             m_data[2] = (uint8_t *)m_data[0] + offsets[1];
             m_data[3] = (uint8_t *)m_data[0] + offsets[2];
@@ -241,7 +241,7 @@ frame::~frame()
             offsets[2] = size;
             size += width * height;
             ALIGN_SIZE(size, alignment);
-            m_data[0] =(::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
+            m_data[0] =(unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
             m_data[1] = (uint8_t *)m_data[0] + offsets[0];
             m_data[2] = (uint8_t *)m_data[0] + offsets[1];
             m_data[3] = (uint8_t *)m_data[0] + offsets[2];
@@ -264,7 +264,7 @@ frame::~frame()
             offsets[2] = size;
             size += width * height;
             ALIGN_SIZE(size, alignment);
-            m_data[0] =(::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
+            m_data[0] =(unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
             m_data[1] = (uint8_t *)m_data[0] + offsets[0];
             m_data[2] = (uint8_t *)m_data[0] + offsets[1];
             m_data[3] = (uint8_t *)m_data[0] + offsets[2];

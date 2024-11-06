@@ -15,8 +15,8 @@ struct DShowEncoder {
 	long long              frameInterval;
 
 	bool                   first = true;
-	u8 *        firstPacket;
-	u8  *        header;
+	unsigned char *        firstPacket;
+	unsigned char  *        header;
 
 	inline DShowEncoder(video_enc *context_, const wchar_t *device_)
 		: context(context_),
@@ -32,7 +32,7 @@ struct DShowEncoder {
 		free(header);
 	}
 
-	//inline void ParseFirstPacket(const u8 *data, size_t size);
+	//inline void ParseFirstPacket(const unsigned char *data, size_t size);
 
 	inline bool Update(video_data *settings);
 	inline bool Encode(struct encoder_frame *frame,
@@ -103,8 +103,8 @@ inline bool DShowEncoder::Update(video_data *settings)
 	config.path                   = identification.path;
 
 	first = true;
-	firstPacket = (u8 *) malloc(0);
-   header = (u8 *)malloc(0);
+	firstPacket = (unsigned char *) malloc(0);
+   header = (unsigned char *)malloc(0);
 
 	deviceName= identification.name;
 
@@ -170,10 +170,10 @@ static void DestroyDShowEncoder(void *data)
 
 /* the first packet contains the SPS/PPS (header) NALs, so parse the first
  * packet and separate the NALs */
-//inline void DShowEncoder::ParseFirstPacket(const u8 *data, size_t size)
+//inline void DShowEncoder::ParseFirstPacket(const unsigned char *data, size_t size)
 //{
-//	const u8 *nal_start, *nal_end, *nal_codestart;
-//	const u8 *end = data + size;
+//	const unsigned char *nal_start, *nal_end, *nal_codestart;
+//	const unsigned char *end = data + size;
 //	int type;
 //
 //	nal_start = obs_avc_find_startcode(data, end);
@@ -260,7 +260,7 @@ static bool DShowEncode(void *data, struct encoder_frame *frame,
 			received_packet);
 }
 
-//static bool GetDShowExtraData(void *data, u8 **extra_data, size_t *size_i32)
+//static bool GetDShowExtraData(void *data, unsigned char **extra_data, size_t *size_i32)
 //{
 //	DShowEncoder *encoder = reinterpret_cast<DShowEncoder*>(data);
 //

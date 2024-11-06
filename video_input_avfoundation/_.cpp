@@ -46,7 +46,7 @@ namespace video_input_video_avfoundation
 
 				memcpy(dst, src, numBytes);
 
-				::u8* pbyteDst = (::u8*)dst;
+				unsigned char* pbyteDst = (unsigned char*)dst;
 
 				pbyteDst += 3;
 

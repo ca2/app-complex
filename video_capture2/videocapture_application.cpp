@@ -122,7 +122,7 @@ namespace app_complex_video_capture
 
    }
 
-   //i32 application::exit_application()
+   //int application::exit_application()
    //{
 
    //   return ::aura::application::exit_application();

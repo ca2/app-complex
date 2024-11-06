@@ -823,9 +823,9 @@
 //       //
 //       //         file()->put_text_utf8(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "translators" / "token.txt", m_strTranslatorToken);
+pdirectorysystem->system() / "translators" / "token.txt", m_strTranslatorToken);
 //       //
 //       //      }
 //       //
@@ -836,9 +836,9 @@ pacmedirectory->system() / "translators" / "token.txt", m_strTranslatorToken);
 //       //
 //       //         while (file()->exists(strFile =          auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "translators" / as_string(m_iTranslatorFile) + ".mp3"))
+pdirectorysystem->system() / "translators" / as_string(m_iTranslatorFile) + ".mp3"))
 //       //         {
 //       //
 //       //            m_iTranslatorFile++;
@@ -891,30 +891,30 @@ pacmedirectory->system() / "translators" / as_string(m_iTranslatorFile) + ".mp3"
 //       //            {
 //       //               str = file()->as_string(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "translators/missing.txt");
+pdirectorysystem->system() / "translators/missing.txt");
 //       //               str += strLang + "\n";
 //       //               file()->put_contents(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "translators/missing.txt", str);
+pdirectorysystem->system() / "translators/missing.txt", str);
 //       //               return;
 //       //            }
 //       //            else if (str.case_insensitive_find("Language name is not supported") >= 0)
 //       //            {
 //       //               str = file()->as_string(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "translators/missing2.txt");
+pdirectorysystem->system() / "translators/missing2.txt");
 //       //               str += strLang + "\n";
 //       //               file()->put_contents(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "translators/missing2.txt", str);
+pdirectorysystem->system() / "translators/missing2.txt", str);
 //       //               return;
 //       //            }
 //       //            else
@@ -1030,9 +1030,9 @@ pacmedirectory->system() / "translators/missing2.txt", str);
 
 //       while (file()->exists(strFile =          auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".mp3"))
+pdirectorysystem->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".mp3"))
 //       {
 
 //          m_iGTranslatorFile++;

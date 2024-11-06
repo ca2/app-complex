@@ -63,7 +63,7 @@ namespace multimedia
          HENHMETAFILE               m_enhmetafile;
          ENHMETAHEADER              m_emh;
 
-         static const i32 cnListCount;
+         static const int cnListCount;
 
          main_impact();
          virtual ~main_impact();

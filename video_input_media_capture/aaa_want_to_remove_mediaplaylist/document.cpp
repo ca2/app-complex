@@ -427,7 +427,7 @@ processed_new:
 
       string_array straTotal = get_songs(bEditingPlaylist);
 
-      for(i32 i = 0; i < m_iaQueue.get_count(); i++)
+      for(int i = 0; i < m_iaQueue.get_count(); i++)
       {
 
          stra.add(straTotal[m_iaQueue[i]]);
@@ -995,7 +995,7 @@ processed_new:
 
       bool bFirst = bDoPlay;
 
-      for(i32 i = 0; i < stra.get_size(); i++)
+      for(int i = 0; i < stra.get_size(); i++)
       {
          AddSong(stra.element_at(i), bFirst ? (bDoPlay ? AddSongAndPlay : AddSongOnly) : AddSongOnly, bMakeVisible, false);
          //        if(pSongsSet->FindCode(lpiaSongs[i]))

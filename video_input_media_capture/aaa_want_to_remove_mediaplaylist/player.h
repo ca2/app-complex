@@ -32,7 +32,7 @@ namespace mediaplaylist
       virtual void OnClosePlayer();
 
       virtual bool DoesImplementSongNumber();
-      virtual i32 GetSongNumber(const wchar_t * lpcwsz);
+      virtual int GetSongNumber(const wchar_t * lpcwsz);
 
       virtual void PlaylistOnBeforeOpen();
 

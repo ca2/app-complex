@@ -404,7 +404,7 @@ bool HVideoEncoder::SetConfig(VideoEncoderConfig &config)
 
 void HVideoEncoder::Receive(IMediaSample *s)
 {
-	::u8 *data;
+	unsigned char *data;
 	size_t size;
 
 	if (FAILED(s->GetPointer(&data)))

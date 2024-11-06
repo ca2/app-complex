@@ -57,7 +57,7 @@ namespace mediaplaylist
       return false;
    }
 
-   i32 player::GetSongNumber(const wchar_t * lpcwsz)
+   int player::GetSongNumber(const wchar_t * lpcwsz)
    {
       __UNREFERENCED_PARAMETER(lpcwsz);
       return -1;

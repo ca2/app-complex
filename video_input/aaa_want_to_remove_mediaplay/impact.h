@@ -67,7 +67,7 @@ namespace mediaplay
 
       document * get_document();
 
-      virtual void _001OnTabClick(i32 iTab);
+      virtual void _001OnTabClick(int iTab);
 
       data * get_data();
    };

@@ -617,9 +617,9 @@ namespace mediaplaylist
 
       if (file_system()->exists(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->config() / "system/spotify.txt"))
+pdirectorysystem->config() / "system/spotify.txt"))
       {
          if (
          (m_psessionSpotify == nullptr

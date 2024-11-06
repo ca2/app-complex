@@ -89,9 +89,9 @@ string id3_field_text(ID3_Field * pfield)
       while (*pwsz != L'\0')
       {
 
-         ::u8 * psz = (::u8 *)pwsz;
+         unsigned char * psz = (unsigned char *)pwsz;
 
-         ::u8 ch0 = psz[0];
+         unsigned char ch0 = psz[0];
 
          psz[0] = psz[1];
 

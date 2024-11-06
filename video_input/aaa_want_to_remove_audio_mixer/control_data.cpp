@@ -22,7 +22,7 @@ namespace multimedia
       }
 
 
-      i32 control_data::GetObjectType()
+      int control_data::GetObjectType()
       {
 
          return DataTypeBase;
@@ -30,7 +30,7 @@ namespace multimedia
       }
 
 
-      i32 control_data::get_type()
+      int control_data::get_type()
       {
 
          return m_iType;

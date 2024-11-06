@@ -18,7 +18,7 @@ namespace multimedia
    {
 
 
-      const i32 main_impact::cnListCount = 9;
+      const int main_impact::cnListCount = 9;
 
 
       main_impact::main_impact() :

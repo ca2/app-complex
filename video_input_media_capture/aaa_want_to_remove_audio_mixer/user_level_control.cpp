@@ -37,7 +37,7 @@ namespace multimedia
          }
 
 
-         void level_control::SetRange(i32 iMin, i32 iMax)
+         void level_control::SetRange(int iMin, int iMax)
          {
 
             __UNREFERENCED_PARAMETER(iMin);
@@ -48,7 +48,7 @@ namespace multimedia
          }
 
 
-         void level_control::SetLineSize(i32 iSize)
+         void level_control::SetLineSize(int iSize)
          {
 
             __UNREFERENCED_PARAMETER(iSize);
@@ -58,7 +58,7 @@ namespace multimedia
          }
 
 
-         void level_control::SetPageSize(i32 iPage)
+         void level_control::SetPageSize(int iPage)
          {
 
             __UNREFERENCED_PARAMETER(iPage);
@@ -68,7 +68,7 @@ namespace multimedia
          }
 
 
-         i32 level_control::GetPos() const
+         int level_control::GetPos() const
          {
 
             throw ::interface_only();
@@ -76,7 +76,7 @@ namespace multimedia
          }
 
 
-         void level_control::SetPos(i32 iPos)
+         void level_control::SetPos(int iPos)
          {
 
             __UNREFERENCED_PARAMETER(iPos);

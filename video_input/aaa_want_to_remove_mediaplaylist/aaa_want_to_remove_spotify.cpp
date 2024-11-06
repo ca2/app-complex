@@ -475,25 +475,25 @@ namespace mediaplaylist
 
       m_strLocationCache      =          auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "spotify\\cache";
+pdirectorysystem->system() / "spotify\\cache";
       m_strLocationSettings   =          auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "spotify\\settings";
+pdirectorysystem->system() / "spotify\\settings";
 
                auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->create(m_strLocationCache);
+pdirectorysystem->create(m_strLocationCache);
                auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->create(m_strLocationSettings);
+pdirectorysystem->create(m_strLocationSettings);
 
       m_strUserAgent          = "waven";
 
@@ -539,9 +539,9 @@ pacmedirectory->create(m_strLocationSettings);
 
       string password = file_system()->as_string(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "config\\spotify\\pas.txt");
+pdirectorysystem->system() / "config\\spotify\\pas.txt");
 
       m_ev.ResetEvent();
 
@@ -628,7 +628,7 @@ pacmedirectory->system() / "config\\spotify\\pas.txt");
       if(a == NULL)
          return;
 
-      const ::u8 * imageid = sp_album_cover(a,SP_IMAGE_SIZE_LARGE);
+      const unsigned char * imageid = sp_album_cover(a,SP_IMAGE_SIZE_LARGE);
 
       if(imageid == NULL)
          return;

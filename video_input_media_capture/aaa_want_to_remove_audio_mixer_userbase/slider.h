@@ -17,13 +17,13 @@ namespace multimedia
 
          bool                    m_bPresenceOnHover;
          bool                    m_bHover;
-         i32                 m_iLineSize;
-         i32                 m_iPageSize;
-         i32                 m_iRangeMin;
-         i32                 m_iRangeMax;
-         i32                 m_iPos;
-         i32                 m_iTrackingPos;
-         i32                 m_eorientation;
+         int                 m_iLineSize;
+         int                 m_iPageSize;
+         int                 m_iRangeMin;
+         int                 m_iRangeMax;
+         int                 m_iPos;
+         int                 m_iTrackingPos;
+         int                 m_eorientation;
          bool                    m_bTracking;
          bool                    m_bThumbHover;
          point                   m_sizeTrackOffset;
@@ -32,7 +32,7 @@ namespace multimedia
          ::draw2d::pen_pointer        m_ppenHoverA;
          ::draw2d::pen_pointer        m_ppenHoverB;
          ::draw2d::brush_pointer      m_pbrush;
-         i32                 m_iMargin;
+         int                 m_iMargin;
          ::pointer < ::mutex >                   m_pmutexPaint;
 
 
@@ -60,27 +60,27 @@ namespace multimedia
          virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
          double GetRate() const;
          void SetRate(double rate);
-         void  SetPos(i32 iPos) override;
-         i32   GetPos() const override;
-         void  SetRange(i32 iMin, i32 iMax, bool bRedraw);
-         void  SetRange(i32 iMin, i32 iMax) override;
-         void  SetRangeMax(i32 iMax, bool bRedraw);
-         void  SetRangeMin(i32 iMin, bool bRedraw = false);
-         void  GetRange(i32 & iMin, i32 & iMax) const;
-         i32   GetRangeMin() const;
-         i32   GetRangeMax()  const;
-         void  SetPageSize(i32 iPageSize) override;
-         i32   GetPageSize() const;
-         void  SetLineSize(i32 iLineSize) override;
-         i32   GetLineSize() const; 
+         void  SetPos(int iPos) override;
+         int   GetPos() const override;
+         void  SetRange(int iMin, int iMax, bool bRedraw);
+         void  SetRange(int iMin, int iMax) override;
+         void  SetRangeMax(int iMax, bool bRedraw);
+         void  SetRangeMin(int iMin, bool bRedraw = false);
+         void  GetRange(int & iMin, int & iMax) const;
+         int   GetRangeMin() const;
+         int   GetRangeMax()  const;
+         void  SetPageSize(int iPageSize) override;
+         int   GetPageSize() const;
+         void  SetLineSize(int iLineSize) override;
+         int   GetLineSize() const; 
 
-         i32   ScrollLineA();
-         i32   ScrollLineB();
-         i32   ScrollPageB();
-         i32   ScrollPageA();
+         int   ScrollLineA();
+         int   ScrollLineB();
+         int   ScrollPageB();
+         int   ScrollPageA();
 
 
-         i32 SetTrackingPos(::point_i32 point);
+         int SetTrackingPos(::point_i32 point);
 
 
          DECLARE_MESSAGE_HANDLER(on_message_create);

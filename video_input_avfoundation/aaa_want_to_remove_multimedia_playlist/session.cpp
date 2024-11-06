@@ -175,7 +175,7 @@ namespace multimedia_playlist
 //   }
 //
 //
-//   i32 session::thread::run()
+//   int session::thread::run()
 //   {
 //
 //      return m_psession->run();

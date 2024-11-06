@@ -91,7 +91,7 @@ namespace mediaplaylist
       ::collection::index playlist_index(const ::file::path & pathName);
       void update_playlist_hilite(const ::file::path & pathPlaylist);
 
-      i32 _001CalcItemHeight(int iBaseHeight) override;
+      int _001CalcItemHeight(int iBaseHeight) override;
 
 
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;

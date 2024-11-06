@@ -20,7 +20,7 @@ namespace multimedia
 
       }
 
-      i32 control_data_switch::GetObjectType()
+      int control_data_switch::GetObjectType()
       {
 
          return DataTypeMute;

@@ -22,7 +22,7 @@ namespace multimedia
 
          ::audio_mixer::user_control * pinteraction;
 
-         for(i32 i = 0; i < this->get_size(); i++)
+         for(int i = 0; i < this->get_size(); i++)
          {
 
             if((pinteraction = this->element_at(i)) != nullptr)
@@ -36,7 +36,7 @@ namespace multimedia
 
       }
 
-      bool control::CreateWindows(::pointer<::user::interaction>pParent, i32 iStyle)
+      bool control::CreateWindows(::pointer<::user::interaction>pParent, int iStyle)
       {
          __UNREFERENCED_PARAMETER(pParent);
          __UNREFERENCED_PARAMETER(iStyle);
@@ -66,12 +66,12 @@ namespace multimedia
       }
 
 
-      ::pointer<::audio_mixer::user_control>control::GetControl(i32 iType)
+      ::pointer<::audio_mixer::user_control>control::GetControl(int iType)
       {
 
          ::pointer<::audio_mixer::user_control>pusercontrol;
 
-         for(i32 i = 0; i < this->get_size(); i++)
+         for(int i = 0; i < this->get_size(); i++)
          {
 
             pusercontrol = this->element_at(i);
@@ -116,7 +116,7 @@ namespace multimedia
          //    PMACONTROLINSTANCE_FADER        pmaci_fader;
          //    LPMACONTROLINSTANCE             pmaci;
          //    LPMIXERCONTROL                  pmxctrl;
-//         i32                             nRange;
+//         int                             nRange;
 //         u32                            cChannels;
 //         u32                            cMultipleItems;
          //       u32                            cChannels;
@@ -156,12 +156,12 @@ namespace multimedia
       }
 
 
-      ::pointer<::audio_mixer::control_data>control::GetWindowData(i32 iType)
+      ::pointer<::audio_mixer::control_data>control::GetWindowData(int iType)
       {
 
          ::pointer<::audio_mixer::user_control>pusercontrol;
 
-         for(i32 i = 0; i < this->get_size(); i++)
+         for(int i = 0; i < this->get_size(); i++)
          {
 
             pusercontrol = this->element_at(i);
@@ -192,7 +192,7 @@ namespace multimedia
 
          ::pointer<::audio_mixer::user_control>pusercontrol;
 
-         for(i32 i = 0; i < this->get_size(); i++)
+         for(int i = 0; i < this->get_size(); i++)
          {
 
             pusercontrol = this->element_at(i);
@@ -223,7 +223,7 @@ namespace multimedia
 
          ::pointer<::audio_mixer::user_control>pusercontrol;
 
-         for(i32 i = 0; i < this->get_size(); i++)
+         for(int i = 0; i < this->get_size(); i++)
          {
 
             pusercontrol = this->element_at(i);

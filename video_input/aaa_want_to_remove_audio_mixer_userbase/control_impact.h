@@ -65,7 +65,7 @@ namespace multimedia
          u32                           m_dwUpdateTime;
          string                        m_strSearch;
 
-         static const i32              cnListCount;
+         static const int              cnListCount;
 
          
          pointer_array < ::audio_mixer::control >     m_controla;
@@ -84,7 +84,7 @@ namespace multimedia
          ::user::document * get_document();
 
          control_data * get_data();
-         void LayoutLine(i32 iSource, ::audio_mixer::source * pSource, i32 iStartX, i32 iStartY, i32 * iEndX, i32 *iEndY);
+         void LayoutLine(int iSource, ::audio_mixer::source * pSource, int iStartX, int iStartY, int * iEndX, int *iEndY);
          void set_title();
          void on_layout(::draw2d::graphics_pointer & pgraphics) override;
          bool create_control(::audio_mixer::control * pControl);

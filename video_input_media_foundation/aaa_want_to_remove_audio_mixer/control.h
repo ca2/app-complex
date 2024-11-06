@@ -40,16 +40,16 @@ namespace multimedia
          virtual ::pointer<::audio_mixer::control_data>GetWindowDataByDlgCtrlID(u32 nID);
          virtual ::pointer<::audio_mixer::user_control>GetControlByDlgCtrlID(u32 nID);
          virtual void OnVHScroll(u32 nSBCode, u32 nPos, ::pointer<::user::interaction>pScrollBar);
-         virtual ::pointer<::audio_mixer::control_data>GetWindowData(i32 iType);
+         virtual ::pointer<::audio_mixer::control_data>GetWindowData(int iType);
          virtual void OnMixerControlChange();
-         virtual ::pointer<::audio_mixer::user_control>GetControl(i32 iType);
+         virtual ::pointer<::audio_mixer::user_control>GetControl(int iType);
          virtual ::pointer<::audio_mixer::user_control>GetControlByIndex(::collection::index iIndex);
          virtual void Prepare();
          virtual bool CreateWindowsVolumeV001(::pointer<::user::interaction>pParent, u32 nStartID, u32 * nNextID);
 
          virtual bool _001CreateMuteControl(::pointer<::user::interaction>pParent, u32 nStartID, u32 * nNextID);
 
-         virtual bool CreateWindows(::pointer<::user::interaction>pParent, i32 iStyle);
+         virtual bool CreateWindows(::pointer<::user::interaction>pParent, int iStyle);
 
 
       };

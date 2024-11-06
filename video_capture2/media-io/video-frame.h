@@ -21,7 +21,7 @@
 #include "video-io.h"
 
 struct video_frame {
-	u8  *data[MAX_AV_PLANES];
+	unsigned char  *data[MAX_AV_PLANES];
 	u32 linesize[MAX_AV_PLANES];
 };
 

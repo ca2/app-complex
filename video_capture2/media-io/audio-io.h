@@ -66,7 +66,7 @@ enum speaker_layout {
 };
 
 struct audio_data {
-	u8             *data[MAX_AV_PLANES];
+	unsigned char             *data[MAX_AV_PLANES];
 	u32            frames;
 	u64            timestamp;
 };

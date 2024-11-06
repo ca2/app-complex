@@ -46,11 +46,11 @@ namespace mediamanager
 
       bool                       m_bBuilding;
       ::file::listing            m_wstraPreBuildFolders;
-      i32                    m_iPreBuildRowCount;
+      int                    m_iPreBuildRowCount;
       //::pointer<::sqlite::dataset>     m_pdatasetPreBuildRead;
       //::pointer<::sqlite::dataset>     m_pdatasetPreBuildWrite;
       //::pointer<::sqlite::dataset>     m_pdatasetGetExRead;
-      i32                    m_iGetExStep;
+      int                    m_iGetExStep;
       file_info                  m_fileinfo;
       ::i32_array                  m_iaPriority;
       album_build_thread *       m_pthread;
@@ -81,7 +81,7 @@ namespace mediamanager
 
       void Build(::file::listing & wstraFolder,bool bRecursive);
 
-      bool PreBuild(i32 &  iStep, bool bRecursive, bool bAddEmpty);
+      bool PreBuild(int &  iStep, bool bRecursive, bool bAddEmpty);
    public:
       bool IsBuilding();
       bool HasFile(const ::string & pcsz);
@@ -109,17 +109,17 @@ namespace mediamanager
       bool AddAlbumRecord();
       bool AddInvalidFile(const ::file::path & path);
       bool AddEmpty(::i32_array & ia,::file::listing & straFile);
-      i32  AddEmptyFile(const ::file::path & path);
+      int  AddEmptyFile(const ::file::path & path);
 
       bool Update(::file::listing & straFile,time_array & array);
-      bool Update(const ::file::path & lpcszFile,::earth::time & time,i32 iId = I32_MINIMUM);
+      bool Update(const ::file::path & lpcszFile,::earth::time & time,int iId = I32_MINIMUM);
       bool Update(::mediamanager::album_record & record);
-      bool UpdateAlbumRecord(i32 iId, bool bUpdateFilePath, bool bUpdateFileName);
+      bool UpdateAlbumRecord(int iId, bool bUpdateFilePath, bool bUpdateFileName);
       bool UpdateInvalidFile(const ::file::path & path);
 
       bool erase(::file::listing & straFile);
       bool erase(::file::path & wstrFile);
-      bool erase(i32 iId);
+      bool erase(int iId);
       bool erase(::i32_array & ia);
 
       ::i32_array & GetPriorityArray();

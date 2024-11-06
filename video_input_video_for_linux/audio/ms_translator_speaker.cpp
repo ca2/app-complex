@@ -129,9 +129,9 @@ bool ms_translator_speaker::speak(const ::string & strLangParam, const ::string 
 
    ::file::path pathDir =          auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "speech";
+pdirectorysystem->system() / "speech";
 
    pathMp3 = pathDir / strLang / strQuality / strGender / strFileRel + ".mp3";
 
@@ -186,9 +186,9 @@ retry:
 
       file()->put_text_utf8(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "translators" / "token.txt", m_strTranslatorToken);
+pdirectorysystem->system() / "translators" / "token.txt", m_strTranslatorToken);
 
    }
 
@@ -268,30 +268,30 @@ pacmedirectory->system() / "translators" / "token.txt", m_strTranslatorToken);
          {
             str = file()->as_string(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "translators/missing.txt");
+pdirectorysystem->system() / "translators/missing.txt");
             str += strLang + "\n";
             file()->put_contents(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "translators/missing.txt", str);
+pdirectorysystem->system() / "translators/missing.txt", str);
             return false;
          }
          else if (str.case_insensitive_find("Language name is not supported") >= 0)
          {
             str = file()->as_string(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "translators/missing2.txt");
+pdirectorysystem->system() / "translators/missing2.txt");
             str += strLang + "\n";
             file()->put_contents(         auto psystem = system();
 
-         auto pacmedirectory = psystem->m_pdirectorysystem;
+         auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pacmedirectory->system() / "translators/missing2.txt", str);
+pdirectorysystem->system() / "translators/missing2.txt", str);
             return false;
          }
          else

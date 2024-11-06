@@ -26,9 +26,9 @@ namespace mediaplay
       void request(::request * prequest);
       ::pointer<::user::document>OpenDocumentFileNoReserve(::payload varPathName, ::request * prequest);
       bool ReserveSong(string_array & stra, bool bDoPlay, bool bMakeVisible);
-      bool ReserveSong(i32 iSongCode, bool bDoPlay, bool bMakeVisible);
+      bool ReserveSong(int iSongCode, bool bDoPlay, bool bMakeVisible);
       bool ReserveSong(::payload varPath, bool bDoPlay, bool bMakeVisible);
-      bool ReserveSong(LPINT lpiaSongs, i32 iSongCount, bool bDoPlay, bool bMakeVisible);
+      bool ReserveSong(LPINT lpiaSongs, int iSongCount, bool bDoPlay, bool bMakeVisible);
 
 
    #ifdef _DEBUG

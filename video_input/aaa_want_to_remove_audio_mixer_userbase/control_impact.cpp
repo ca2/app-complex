@@ -17,7 +17,7 @@ namespace multimedia
    {
 
 
-      const i32 control_impact::cnListCount = 9;
+      const int control_impact::cnListCount = 9;
 
       control_impact::control_impact() :
          m_pbrushBackground(e_create)
@@ -177,7 +177,7 @@ namespace multimedia
       bool control_impact::pre_create_window(::user::system * pusersystem)
       {
          pusersystem->m_createstruct.style = pusersystem->m_createstruct.style;
-         //   i32 i = WS_POPUP;
+         //   int i = WS_POPUP;
 
 #ifdef WINDOWS_DESKTOP
 
@@ -203,7 +203,7 @@ namespace multimedia
       {
       //  pTab->SetImageList(nullptr);
       }
-      i32 iBitCount = spgraphics->GetDeviceCaps(BITSPIXEL);
+      int iBitCount = spgraphics->GetDeviceCaps(BITSPIXEL);
       if(iBitCount > 8)
       {
       m_SmallImageListBitmap.delete_object();
@@ -326,7 +326,7 @@ namespace multimedia
 
          ::audio_mixer::source_array & sourcea = get_destination()->get_source_info();
 
-         for(i32 i = 0; i < sourcea.get_size(); i++)
+         for(int i = 0; i < sourcea.get_size(); i++)
          {
             CreateControls(sourcea[i]);
          }
@@ -343,7 +343,7 @@ namespace multimedia
 
          ::audio_mixer::control_array & controla = pSource->m_mixercontrola;
 
-         for(i32 iControl = 0; iControl < controla.get_size(); iControl++)
+         for(int iControl = 0; iControl < controla.get_size(); iControl++)
          {
             pinteraction = controla[iControl];
 
@@ -451,10 +451,10 @@ namespace multimedia
 
       void control_impact::on_layout(::draw2d::graphics_pointer & pgraphics)
       {
-         i32 iStartX = 0;
-         i32 iEndX = 0;
-         i32 iStartY = 0;
-         i32 iEndY = 0;
+         int iStartX = 0;
+         int iEndX = 0;
+         int iStartY = 0;
+         int iEndY = 0;
 
          if(get_destination() == nullptr)
             return;
@@ -464,7 +464,7 @@ namespace multimedia
 
          ::audio_mixer::source_array & sourcea = get_destination()->get_source_info();
 
-         for(i32 i = 0; i < sourcea.get_size(); i++)
+         for(int i = 0; i < sourcea.get_size(); i++)
          {
 
             LayoutLine(i, sourcea[i], iStartX, iStartY, &iEndX, &iEndY);
@@ -506,14 +506,14 @@ namespace multimedia
 
       }
 
-      void control_impact::LayoutLine(i32 iSource, ::audio_mixer::source *pSource, i32 iStartX, i32 iStartY, i32 *piEndX, i32 *piEndY)
+      void control_impact::LayoutLine(int iSource, ::audio_mixer::source *pSource, int iStartX, int iStartY, int *piEndX, int *piEndY)
       {
          ::audio_mixer::control_array & controla = pSource->m_mixercontrola;
          ::audio_mixer::control * pinteraction;
          ::audio_mixer::user_control * pusercontrol;
          bool bHasAtLeastOneControl = false;
-         i32 y = iStartY;
-         i32 y2;
+         int y = iStartY;
+         int y2;
          y += 2;
 
          auto & pst = m_labelmap[pSource->GetLineID()];
@@ -526,7 +526,7 @@ namespace multimedia
 
          y += 30;
 
-         for(i32 iControl = 0; iControl < controla.get_size(); iControl++)
+         for(int iControl = 0; iControl < controla.get_size(); iControl++)
          {
 
             pinteraction = controla[iControl];
@@ -595,7 +595,7 @@ namespace multimedia
          }
          if(iSource >= 0)
          {
-            for(i32 iControl = 0; iControl < m_controla.get_size(); iControl++)
+            for(int iControl = 0; iControl < m_controla.get_size(); iControl++)
             {
                pinteraction = m_controla[iControl];
                if(pinteraction->control_type(::audio_mixer::control_boolean))
@@ -609,7 +609,7 @@ namespace multimedia
          }
          if(iSource >= 0)
          {
-            for(i32 iControl = 0; iControl < m_controla.get_size(); iControl++)
+            for(int iControl = 0; iControl < m_controla.get_size(); iControl++)
             {
                pinteraction = m_controla[iControl];
             }

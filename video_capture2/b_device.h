@@ -3,10 +3,10 @@
 // Function pointer for the function that transforms the pimage->
 
 typedef void(*IMAGE_TRANSFORM_FN)(
-   ::u8*       pDest,
-   ::i32        lDestStride,
-   const ::u8* pSrc,
-   ::i32        lSrcStride,
+   unsigned char*       pDest,
+   int        lDestStride,
+   const unsigned char* pSrc,
+   int        lSrcStride,
    ::u32       dwWidthInPixels,
    ::u32       dwHeightInPixels
    );
@@ -28,7 +28,7 @@ private:
 //   ID3DXSprite             *textSprite;
    // Format information
    D3DFORMAT               m_format;
-   ::i32                    m_lDefaultStride;
+   int                    m_lDefaultStride;
    MFRatio                 m_PixelAR;
    MFVideoInterlaceMode    m_interlace;
    ::rectangle_i32                    m_rcDest;       // Destination rectangle_i32

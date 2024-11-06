@@ -22,7 +22,7 @@ namespace multimedia
       }
 
 
-      i32 control_data_volume::GetObjectType()
+      int control_data_volume::GetObjectType()
       {
 
          return DataTypeVolume;

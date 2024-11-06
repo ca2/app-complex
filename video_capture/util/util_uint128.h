@@ -18,7 +18,7 @@
 
 struct util_::u32128 {
 	union {
-		u32 i32[4];
+		u32 int[4];
 		struct {
 			u64 low;
 			u64 high;
@@ -34,19 +34,19 @@ static inline util_::u32128_t util_add128(util_::u32128_t a, util_::u32128_t b)
 	u64 val;
 
 	val = (a.low & 0xFFFFFFFFULL) + (b.low & 0xFFFFFFFFULL);
-	out.i32[0] = (u32)(val & 0xFFFFFFFFULL);
+	out.int[0] = (u32)(val & 0xFFFFFFFFULL);
 	val >>= 32;
 
 	val += (a.low >> 32) + (b.low >> 32);
-	out.i32[1] = (u32)val;
+	out.int[1] = (u32)val;
 	val >>= 32;
 
 	val += (a.high & 0xFFFFFFFFULL) + (b.high & 0xFFFFFFFFULL);
-	out.i32[2] = (u32)(val & 0xFFFFFFFFULL);
+	out.int[2] = (u32)(val & 0xFFFFFFFFULL);
 	val >>= 32;
 
 	val += (a.high >> 32) + (b.high >> 32);
-	out.i32[3] = (u32)val;
+	out.int[3] = (u32)val;
 
 	return out;
 }
@@ -86,13 +86,13 @@ static inline util_::u32128_t util_div128_32(util_::u32128_t a, u32 b)
 	u64 val = 0;
 
 	for (int i = 3; i >= 0; i--) {
-		val = (val << 32) | a.i32[i];
+		val = (val << 32) | a.int[i];
 		if (val < b) {
-			out.i32[i] = 0;
+			out.int[i] = 0;
 			continue;
 		}
 
-		out.i32[i] = (u32)(val / b);
+		out.int[i] = (u32)(val / b);
 		val = val % b;
 	}
 

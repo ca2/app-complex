@@ -16,7 +16,7 @@ namespace mediaplaylist
       
       tree *            m_ptree;
       string            m_strName;
-      i32           m_iIdentation;
+      int           m_iIdentation;
 
 
       item(tree * ptree);

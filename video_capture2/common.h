@@ -56,7 +56,7 @@ struct obs_source_frame
 {
    u64 timestamp;
    int flip;
-   u8 * data[MAX_AV_PLANES];
+   unsigned char * data[MAX_AV_PLANES];
    int linesize[MAX_AV_PLANES];
    video_format format;
    int full_range;
@@ -68,7 +68,7 @@ struct obs_source_frame
 struct obs_source_audio
 {
    u64 timestamp;
-   u8 * data[MAX_AV_PLANES];
+   unsigned char * data[MAX_AV_PLANES];
    int samples_per_sec;
    speaker_layout speakers;
    audio_format format;

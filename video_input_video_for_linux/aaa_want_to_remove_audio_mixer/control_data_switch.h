@@ -19,7 +19,7 @@ namespace multimedia
          virtual ~control_data_switch();
 
 
-         virtual i32 GetObjectType();
+         virtual int GetObjectType();
 
 
       };

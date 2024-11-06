@@ -22,7 +22,7 @@ namespace mediaplaylist
    protected:
 
 
-      i32     m_iHint;
+      int     m_iHint;
       array < ::pointer<::user::impact> ::pointer<::user::impact>>_impactpaAttachable;
 
    public:
@@ -33,8 +33,8 @@ namespace mediaplaylist
 
       bool is_type_of(EHint ehint);
       void AddAttachableImpact(::pointer<::user::impact>pimpact);
-      void SetHint(i32 iHint);
-      i32 GetHint();
+      void SetHint(int iHint);
+      int GetHint();
       void GetAttachableImpacts(array < ::pointer<::user::impact> ::pointer<::user::impact>> viewpa);
 
 

@@ -106,9 +106,9 @@ namespace mediaplaylist
 
       virtual void on_change_impact();
 
-      virtual i32 _001CalcItemHeight(int iBaseHeight) override;
+      virtual int _001CalcItemHeight(int iBaseHeight) override;
 
-      virtual i32 _001GetDrawTextFlags(::user::list::enum_impact eview) override;
+      virtual int _001GetDrawTextFlags(::user::list::enum_impact eview) override;
 
       virtual void defer_update_track_hilite();
 
