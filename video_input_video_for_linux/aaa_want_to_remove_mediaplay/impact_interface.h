@@ -74,7 +74,7 @@ namespace mediaplay
       bool                                      m_bDestroy;
       ::duration                                      m_tick100Timer;
       string                                    m_strCurrentLink;
-      rectangle_i32_array                                m_rectangleaUpdate;
+      rectangle_int_array                                m_rectangleaUpdate;
       ::duration                                      m_durationLastUpdate;
       double                                    m_dBlend;
       double                                    m_dAudioBlend;
@@ -166,7 +166,7 @@ namespace mediaplay
       virtual void StartMusicRendering();
       
       //   virtual void data_on_after_change(int iConfigurationId, int iLine, int iColumn, CVmsDataUpdateHint * pupdate);
-      virtual bool UpdateScreen(rectangle_i32_array & recta, unsigned int uiRedraw);
+      virtual bool UpdateScreen(rectangle_int_array & recta, unsigned int uiRedraw);
 
       virtual void on_delete_contents();
 

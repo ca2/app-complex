@@ -714,7 +714,7 @@ namespace mediaplay
          if(m_impactlineaStatus.get_line_count() > 0 && m_impactlineaStatus.line_at(0) != nullptr)
          {
 
-            rectangle_i32_array recta;
+            rectangle_int_array recta;
 
             m_impactlineaStatus.line_at(0)->OnTimerAnimate(nullptr, recta);
 
@@ -815,7 +815,7 @@ namespace mediaplay
          if(m_durationLastUpdate.elapsed() > 100)
          {
 
-            rectangle_i32_array recta;
+            rectangle_int_array recta;
 
             UpdateScreen(recta, 0);
 
@@ -832,7 +832,7 @@ namespace mediaplay
    }
 
 
-   bool impact_interface::UpdateScreen(rectangle_i32_array & recta, unsigned int uiRedraw)
+   bool impact_interface::UpdateScreen(rectangle_int_array & recta, unsigned int uiRedraw)
    {
 
       __UNREFERENCED_PARAMETER(uiRedraw);
@@ -1818,7 +1818,7 @@ retry4:
       if(pusermessage->m_wparam == 1)
       {
 
-         rectangle_i32_array * precta = (rectangle_i32_array *) pusermessage->m_lparam.m_lparam;
+         rectangle_int_array * precta = (rectangle_int_array *) pusermessage->m_lparam.m_lparam;
 
          UpdateScreen(*precta, RDW_INVALIDATE );
 

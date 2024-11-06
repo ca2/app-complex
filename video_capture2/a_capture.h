@@ -7,8 +7,8 @@
 
 #pragma once
 
-#undef i32_x
-#undef i32_y
+#undef int_x
+#undef int_y
 
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
