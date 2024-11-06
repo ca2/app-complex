@@ -22,11 +22,11 @@ namespace mediamanager
       public:
 
 
-         ::i32_array         m_iaNew;
-         ::i32_array         m_iaOld;
-         ::i32_array         m_iaAdd;
-         ::i32_array         m_iaUpdate;
-         ::i32_array         m_iaRemove;
+         ::int_array         m_iaNew;
+         ::int_array         m_iaOld;
+         ::int_array         m_iaAdd;
+         ::int_array         m_iaUpdate;
+         ::int_array         m_iaRemove;
 
          ::file::listing   m_wstraNew;
          time_array        m_timeaNew;
@@ -52,7 +52,7 @@ namespace mediamanager
       //::pointer<::sqlite::dataset>     m_pdatasetGetExRead;
       int                    m_iGetExStep;
       file_info                  m_fileinfo;
-      ::i32_array                  m_iaPriority;
+      ::int_array                  m_iaPriority;
       album_build_thread *       m_pthread;
       ::pointer<::sqlite::database>    m_pdatabase;
       //::pointer<::sqlite::dataset>     m_pdatasetRead1;
@@ -98,8 +98,8 @@ namespace mediamanager
       void FindFiles(::file::listing & straFile,time_array & array,::file::listing & straFolder);
       void ZipFindFiles(::file::listing & straFile,time_array & timea,::file::listing & straFolder);
 
-      void GetExistingFiles(::i32_array & ia,::file::listing & straFile,time_array & array);
-      void GetExistingFiles(::pointer<::database::result_set>pset,::i32_array & ia,::file::listing & straFile,time_array & array);
+      void GetExistingFiles(::int_array & ia,::file::listing & straFile,time_array & array);
+      void GetExistingFiles(::pointer<::database::result_set>pset,::int_array & ia,::file::listing & straFile,time_array & array);
 
       void CalcFiles(file_info & fileinfo, bool bRestart);
 
@@ -108,7 +108,7 @@ namespace mediamanager
       bool add(::mediamanager::album_record & record);
       bool AddAlbumRecord();
       bool AddInvalidFile(const ::file::path & path);
-      bool AddEmpty(::i32_array & ia,::file::listing & straFile);
+      bool AddEmpty(::int_array & ia,::file::listing & straFile);
       int  AddEmptyFile(const ::file::path & path);
 
       bool Update(::file::listing & straFile,time_array & array);
@@ -120,9 +120,9 @@ namespace mediamanager
       bool erase(::file::listing & straFile);
       bool erase(::file::path & wstrFile);
       bool erase(int iId);
-      bool erase(::i32_array & ia);
+      bool erase(::int_array & ia);
 
-      ::i32_array & GetPriorityArray();
+      ::int_array & GetPriorityArray();
 
 
    };

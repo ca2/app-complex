@@ -89,7 +89,7 @@ namespace  mediamanager
          //   }
 
 
-         //   ::i32_array & ia = palbumbuild->GetPriorityArray();
+         //   ::int_array & ia = palbumbuild->GetPriorityArray();
 
          //   if(ia.get_size() <= 0)
          //   {
@@ -115,7 +115,7 @@ namespace  mediamanager
 
          //   ::collection::count iRemove = maximum(30, ia.get_size());
 
-         //   ::i32_array iaRemove;
+         //   ::int_array iaRemove;
          //   ::payload fv;
          //   int iId;
          //   int iAdded = 0;
@@ -213,7 +213,7 @@ namespace  mediamanager
          //   palbumbuild->m_pdatabase->start_transaction();
          //}
 
-         //::i32_array iaRemove;
+         //::int_array iaRemove;
          //auto pFind = 0;
          //::payload fv;
          //int iAdded = 0;
