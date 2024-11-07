@@ -7,8 +7,17 @@
 #include "acme_windows_common/cotaskptr.h"
 #include "acme_windows_common/hresult_exception.h"
 #include "app-complex/video_input/media_format.h"
+#include "acme/_operating_system.h"
 #include <dbt.h>
 #include <ks.h>
+CLASS_DECL_ACME_WINDOWS_COMMON void throw_if_failed(HRESULT hr);
+//#include <mfapi.h>
+#include <mfapi.h>
+#include <mfidl.h>
+#include <mfobjects.h>
+#include <mferror.h>
+#include <mfreadwrite.h>
+#include <Mfvirtualcamera.h>
 
 
 // This GUID is for all USB serial host PnP drivers, but you can replace it 
@@ -21,10 +30,10 @@ namespace video_input_media_foundation
 {
 
 
-   video_input::video_input(void)
+   video_input::video_input()
    {
 
-      //m_hdevnotify = nullptr;
+      ::CoInitialize(NULL);
 
       HRESULT hr = MFStartup(MF_VERSION);
 
@@ -52,9 +61,7 @@ namespace video_input_media_foundation
 
       register_device_listener(::hardware::e_device_video_input);
 
-
    }
-
 
 
    void video_input::_update_device_list()
@@ -62,25 +69,29 @@ namespace video_input_media_foundation
 
       synchronous_lock synchronouslock(this->synchronization());
 
-      HRESULT hr = S_OK;
-
-      comptr<IMFAttributes> pAttributes;
-
-      ::CoInitialize(NULL);
-
-      hr = MFCreateAttributes(&pAttributes, 1);
-
-      if (SUCCEEDED(hr))
       {
 
-         hr = pAttributes->SetGUID(MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE, MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_VIDCAP_GUID);
+         HRESULT hr = S_OK;
 
-      }
+         HRESULT hrCamera = E_FAIL;
 
-      if (SUCCEEDED(hr))
-      {
+         comptr<IMFAttributes> pAttributes;
 
-         initDevices(pAttributes);
+         hr = MFCreateAttributes(&pAttributes, 1);
+
+         if (SUCCEEDED(hr))
+         {
+
+            hrCamera = pAttributes->SetGUID(MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE, MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_VIDCAP_GUID);
+
+         }
+
+         if (SUCCEEDED(hrCamera))
+         {
+
+            initDevices(pAttributes);
+
+         }
 
       }
 
@@ -106,6 +117,7 @@ namespace video_input_media_foundation
       }
 
    }
+
 
    bool video_input::are_devices_accessible()
    {
