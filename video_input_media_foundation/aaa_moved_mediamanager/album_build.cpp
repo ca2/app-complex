@@ -508,7 +508,7 @@ namespace mediamanager
       //if (pdataset->num_rows() > 0)
       //{
 
-      //   iId = pdataset->field_value("maxid").int();
+      //   iId = pdataset->field_value("maxid").as_int();
 
       //   iId++;
 
