@@ -21,7 +21,7 @@ namespace multimedia_playlist
          pointer_array < ::image::image >                                m_imagea;
          string                                             m_strListName;
          pointer_array < ::multimedia_playlist::playlist >        m_pla;
-         manual_reset_event                                 m_ev;
+         manual_reset_happening                                 m_ev;
          ::pointer < ::mutex >                                            m_pmutexFile;
 
 

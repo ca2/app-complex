@@ -118,7 +118,7 @@ namespace video_input_media_capture
 
       ::video_input::render::on_destroy();
 
-      //m_pevRenderEnd = ___new manual_reset_event(this);
+      //m_pevRenderEnd = ___new manual_reset_happening(this);
 
       //m_prender->set_finish();
 

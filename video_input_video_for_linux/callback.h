@@ -4,7 +4,7 @@
 
 
 //struct IMFMediaSource;
-#include "acme/parallelization/manual_reset_event.h"
+#include "acme/parallelization/manual_reset_happening.h"
 
 
 //#include "acme/prototype/geometry2d/_geometry2d.h"
@@ -38,7 +38,7 @@ namespace video_input_video_for_linux
 
 		unsigned int m_uDevice;
 
-      manual_reset_event      m_eventStop;
+      manual_reset_happening      m_eventStop;
 
       bool                    m_bStopCapture;
 

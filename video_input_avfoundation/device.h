@@ -2,7 +2,7 @@
 
 
 #include "app-complex/video_input/device.h"
-#include "acme/parallelization/manual_reset_event.h"
+#include "acme/parallelization/manual_reset_happening.h"
 #include "acme/prototype/collection/string_map.h"
 //#include "acme/prototype/geometry2d/_geometry2d.h"
 #include "avcapture_device_callback.h"
@@ -140,7 +140,7 @@ namespace video_input_video_avfoundation
 
       bool m_bAutoReset;
 
-      manual_reset_event         m_event;
+      manual_reset_happening         m_event;
 
 		::pointer<thread>							m_pthread;
 

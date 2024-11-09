@@ -14,7 +14,7 @@ namespace video_input
       ::image::image_pointer        m_pimage;
 
 
-      manual_reset_event* m_pevRenderEnd;
+      manual_reset_happening* m_pevRenderEnd;
 
 
 

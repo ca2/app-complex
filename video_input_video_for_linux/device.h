@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "acme/parallelization/manual_reset_event.h"
+#include "acme/parallelization/manual_reset_happening.h"
 #include "app-complex/video_input/device.h"
 
 
@@ -134,7 +134,7 @@ namespace video_input_video_for_linux
 
       ::pointer<mjpeg_decoder>  m_pmjpegdecoder;
 
-      manual_reset_event         m_event;
+      manual_reset_happening         m_event;
 
 		//::video_input::enum_lock					m_elock;
 		//string											m_strName;

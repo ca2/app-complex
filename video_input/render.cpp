@@ -3,7 +3,7 @@
 #include "render.h"
 #include "device.h"
 #include "media_format.h"
-#include "acme/parallelization/manual_reset_event.h"
+#include "acme/parallelization/manual_reset_happening.h"
 
 
 namespace video_input
@@ -64,7 +64,7 @@ namespace video_input
    void render::destroy()
    {
 
-      m_pevRenderEnd = ___new manual_reset_event();
+      m_pevRenderEnd = ___new manual_reset_happening();
 
       set_finish();
 
