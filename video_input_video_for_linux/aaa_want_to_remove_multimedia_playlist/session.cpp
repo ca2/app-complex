@@ -68,7 +68,7 @@ namespace multimedia_playlist
 //
 //      }
 //
-//      m_ev.ResetEvent();
+//      m_ev.reset_happening();
 //
 //      m_pthread = nullptr;
 //

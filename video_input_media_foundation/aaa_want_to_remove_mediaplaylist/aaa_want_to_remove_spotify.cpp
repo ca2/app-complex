@@ -137,7 +137,7 @@ static void SP_CALLCONV  notify_main_thread(sp_session *sess)
 {
    //   pthread_mutex_lock(&g_notify_mutex);
    userdata(sess)->notify_do = 1;
-   userdata(sess)->m_ev.SetEvent();
+   userdata(sess)->m_ev.set_happening();
    //pthread_cond_signal(&g_notify_cond);
    //pthread_mutex_unlock(&g_notify_mutex);
 }
@@ -166,7 +166,7 @@ static int SP_CALLCONV music_delivery(sp_session *sess,const sp_audioformat *for
 
             userdata(sess)->m_af = *format;
 
-            userdata(sess)->m_evAudioFormat.SetEvent();
+            userdata(sess)->m_evAudioFormat.set_happening();
 
          }
 
@@ -389,7 +389,7 @@ static void track_ended(sp_session * sess)
    int tracks = 0;
    if(userdata(sess)->currenttrack)
    {
-      userdata(sess)->m_evAudioFormat.SetEvent();
+      userdata(sess)->m_evAudioFormat.set_happening();
       userdata(sess)->currenttrack = NULL;
       sp_session_player_unload(sess);
       userdata(sess)->track_loaded = 0;
@@ -512,7 +512,7 @@ pdirectorysystem->create(m_strLocationSettings);
 
       spconfig.userdata                = this;
 
-      m_evAudioFormat.ResetEvent();
+      m_evAudioFormat.reset_happening();
 
       begin();
 
@@ -529,7 +529,7 @@ pdirectorysystem->create(m_strLocationSettings);
    int plspotify::run()
    {
 
-      m_ev.ResetEvent();
+      m_ev.reset_happening();
 
       int err = sp_session_create(&spconfig,&m_session);
 
@@ -543,7 +543,7 @@ pdirectorysystem->create(m_strLocationSettings);
 
 pdirectorysystem->system() / "config\\spotify\\pas.txt");
 
-      m_ev.ResetEvent();
+      m_ev.reset_happening();
 
       sp_session_login(m_session,username,password,0,NULL);
 
@@ -596,7 +596,7 @@ pdirectorysystem->system() / "config\\spotify\\pas.txt");
 
       notify_do = 0;
 
-      m_ev.ResetEvent();
+      m_ev.reset_happening();
 
       if(playback_done && track_loaded)
       {

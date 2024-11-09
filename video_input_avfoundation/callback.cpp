@@ -62,7 +62,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 //
 //      m_bStopCapture = false;
 //
-//      m_happeningStop.ResetEvent();
+//      m_happeningStop.reset_happening();
 //
 ///*
 // * Worker thread to get video data

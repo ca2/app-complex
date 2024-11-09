@@ -139,7 +139,7 @@
 ////{
 ////   //   pthread_mutex_lock(&g_notify_mutex);
 ////   session_session(sess)->notify_do = 1;
-////   session_session(sess)->m_ev.SetEvent();
+////   session_session(sess)->m_ev.set_happening();
 ////   //pthread_cond_signal(&g_notify_cond);
 ////   //pthread_mutex_unlock(&g_notify_mutex);
 ////}
@@ -167,7 +167,7 @@
 ////
 ////            session_session(sess)->m_af = *format;
 ////
-////            session_session(sess)->m_evAudioFormat.SetEvent();
+////            session_session(sess)->m_evAudioFormat.set_happening();
 ////
 ////         }
 ////
@@ -401,7 +401,7 @@
 ////{
 ////   int tracks = 0;
 ////   if(session_session(sess)->currenttrack) {
-////      session_session(sess)->m_evAudioFormat.SetEvent();
+////      session_session(sess)->m_evAudioFormat.set_happening();
 ////      session_session(sess)->currenttrack = nullptr;
 ////      sp_session_player_unload(sess);
 ////      session_session(sess)->track_loaded = 0;

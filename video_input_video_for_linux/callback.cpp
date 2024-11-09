@@ -68,7 +68,7 @@ namespace video_input_video_for_linux
 
       m_bStopCapture = false;
 
-      m_happeningStop.ResetEvent();
+      m_happeningStop.reset_happening();
 
 /*
  * Worker thread to get video data

@@ -84,7 +84,7 @@ namespace multimedia_playlist
       void     session::run()
       {
 
-         m_ev.ResetEvent();
+         m_ev.reset_happening();
 
          m_bGettingCredentials = false;
 
@@ -92,7 +92,7 @@ namespace multimedia_playlist
 
          m_strListName = "waven";
 
-         m_evAudioFormat.ResetEvent();
+         m_evAudioFormat.reset_happening();
 
          m_iDebug1 = 0;
 
