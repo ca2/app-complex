@@ -38,7 +38,7 @@ namespace video_input_video_for_linux
 
 		unsigned int m_uDevice;
 
-      manual_reset_happening      m_eventStop;
+      manual_reset_happening      m_happeningStop;
 
       bool                    m_bStopCapture;
 

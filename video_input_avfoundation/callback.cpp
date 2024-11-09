@@ -50,7 +50,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 //
 //         m_bStopCapture = true;
 //
-//         m_eventStop.wait(5_s);
+//         m_happeningStop.wait(5_s);
 //
 //      }
 //
@@ -62,7 +62,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 //
 //      m_bStopCapture = false;
 //
-//      m_eventStop.ResetEvent();
+//      m_happeningStop.ResetEvent();
 //
 ///*
 // * Worker thread to get video data
@@ -470,7 +470,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////
 ////      m_pdevice->close();
 ////
-////      m_eventStop.set_event();
+////      m_happeningStop.set_event();
 //
 //   }
 //

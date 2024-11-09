@@ -143,7 +143,7 @@ namespace mediaplay
             if (m_pwaverecorder != nullptr && m_pwaverecorder->IsRecording())
             {
                _StopRecording();
-               m_pwaverecorder->m_eventStopped.wait(::duration((2000 + 197) * 20));
+               m_pwaverecorder->m_happeningStopped.wait(::duration((2000 + 197) * 20));
             }
 
 

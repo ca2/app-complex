@@ -134,7 +134,7 @@ namespace video_input_video_for_linux
 
       ::pointer<mjpeg_decoder>  m_pmjpegdecoder;
 
-      manual_reset_happening         m_event;
+      manual_reset_happening         m_happening;
 
 		//::video_input::enum_lock					m_elock;
 		//string											m_strName;

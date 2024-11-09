@@ -140,7 +140,7 @@ namespace video_input_video_avfoundation
 
       bool m_bAutoReset;
 
-      manual_reset_happening         m_event;
+      manual_reset_happening         m_happening;
 
 		::pointer<thread>							m_pthread;
 
