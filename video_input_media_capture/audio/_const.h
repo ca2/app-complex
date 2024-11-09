@@ -5,7 +5,7 @@ namespace audio
 {
 
 
-   enum e_event
+   enum e_happening
    {
 
       event_eof,

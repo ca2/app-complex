@@ -370,10 +370,10 @@ namespace mediaplay
    }
 
 
-   void impact::OnWavePlayerEvent(::wave::player * pplayer, ::wave::player::e_event eevent, ::wave::player_command * pcommand)
+   void impact::OnWavePlayerEvent(::wave::player * pplayer, ::wave::player::e_happening ehappening, ::wave::player_command * pcommand)
    {
 
-      switch(eevent)
+      switch(ehappening)
       {
       case ::wave::player::EventDestroy:
       {
@@ -425,7 +425,7 @@ namespace mediaplay
          on_media_playback_end();
 
          break;
-      case ::wave::e_player_event_open_device:
+      case ::wave::e_player_happening_open_device:
       {
 
          papp->mediaplaylist()->load_startup();
@@ -490,12 +490,12 @@ namespace mediaplay
          break;
       }
 
-      if (eevent == ::wave::player::EventFadeOutAndStop
-            || eevent == ::wave::player::EventStop
-            || eevent == ::wave::player::EventStopped
-            || eevent == ::wave::player::EventPlaybackEnd
-            || eevent == ::wave::player::EventCloseDevice
-            || eevent == ::wave::player::EventDestroy)
+      if (ehappening == ::wave::player::EventFadeOutAndStop
+            || ehappening == ::wave::player::EventStop
+            || ehappening == ::wave::player::EventStopped
+            || ehappening == ::wave::player::EventPlaybackEnd
+            || ehappening == ::wave::player::EventCloseDevice
+            || ehappening == ::wave::player::EventDestroy)
       {
 
          auto pdocument = papp->mediaplaylist()->m_pplaylistdoc;

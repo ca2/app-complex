@@ -27,7 +27,7 @@ public:
       IMFSample *pSample
    );
 
-   STDMETHODIMP OnEvent(unsigned int, IMFMediaEvent *)
+   STDMETHODIMP OnHappening(unsigned int, IMFMediaEvent *)
    {
       return S_OK;
    }
@@ -58,7 +58,7 @@ protected:
    CRITICAL_SECTION        m_critsec;
 
    HWND                    m_hwndVideo;        // Video window.
-   HWND                    m_hwndEvent;        // papp window to receive events.
+   HWND                    m_hwndEvent;        // papp window to receive happenings.
 
    IMFSourceReader         *m_pReader;
 

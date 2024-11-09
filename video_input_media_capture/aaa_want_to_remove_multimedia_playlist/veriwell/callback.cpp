@@ -76,7 +76,7 @@
 ////
 ////
 /////**
-////* Called on various events to start playback if it hasn't been started already.
+////* Called on various happenings to start playback if it hasn't been started already.
 ////*
 ////* The function simply starts playing the first track of the playlist.
 ////*/
@@ -167,7 +167,7 @@
 ////
 ////            session_session(sess)->m_af = *format;
 ////
-////            session_session(sess)->m_evAudioFormat.set_happening();
+////            session_session(sess)->m_happeningAudioFormat.set_happening();
 ////
 ////         }
 ////
@@ -401,7 +401,7 @@
 ////{
 ////   int tracks = 0;
 ////   if(session_session(sess)->currenttrack) {
-////      session_session(sess)->m_evAudioFormat.set_happening();
+////      session_session(sess)->m_happeningAudioFormat.set_happening();
 ////      session_session(sess)->currenttrack = nullptr;
 ////      sp_session_player_unload(sess);
 ////      session_session(sess)->track_loaded = 0;

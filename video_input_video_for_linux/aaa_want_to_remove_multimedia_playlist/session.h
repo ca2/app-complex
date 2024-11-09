@@ -39,7 +39,7 @@ namespace multimedia_playlist
       pointer_array < playlist >                             m_plaDeferUpdateTracks;
       pointer_array < track >                                m_traDeferUpdate;
 
-      manual_reset_happening                        m_evAudioFormat;
+      manual_reset_happening                        m_happeningAudioFormat;
 
       ::memory_file                             m_memfile;
 

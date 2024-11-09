@@ -114,13 +114,13 @@ struct ChooseDeviceParam
 
 
 // CaptureManager class
-// Wraps the capture engine and implements the event callback.
+// Wraps the capture engine and implements the happening callback.
 
 class CaptureManager :
    virtual public ::object
 {
-   // The event callback object.
-   class CaptureEngineCB : public IMFCaptureEngineOnEventCallback,
+   // The happening callback object.
+   class CaptureEngineCB : public IMFCaptureEngineOnHappeningCallback,
       virtual public ::object
    {
       HWND m_hwnd;
@@ -133,8 +133,8 @@ class CaptureManager :
       STDMETHODIMP_(ULONG) AddRef();
       STDMETHODIMP_(ULONG) Release();
 
-      // IMFCaptureEngineOnEventCallback
-      STDMETHODIMP OnEvent(_In_ IMFMediaEvent* pEvent);
+      // IMFCaptureEngineOnHappeningCallback
+      STDMETHODIMP OnHappening(_In_ IMFMediaEvent* pEvent);
 
       bool m_fSleeping;
       CaptureManager* m_pManager;

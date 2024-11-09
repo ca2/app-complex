@@ -66,7 +66,7 @@ namespace audio
       virtual void init_multimedia();
       virtual void term_multimedia();
 
-      virtual void OnWavePlayerEvent(::wave::player * pplayer, ::wave::player::enum_player_event event, ::wave::player_command * pcommand) override;
+      virtual void OnWavePlayerEvent(::wave::player * pplayer, ::wave::player::enum_player_event happening, ::wave::player_command * pcommand) override;
 
       virtual ::pointer<::audio::plugin>prepare_audio(::file::file * pfile);
       virtual ::pointer<::audio::plugin>prepare_plugin(::audio::plugin * pplugin);

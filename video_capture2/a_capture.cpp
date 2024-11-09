@@ -16,7 +16,7 @@ STDMETHODIMP CaptureManager::CaptureEngineCB::QueryInterface(REFIID riid, void**
 {
    static const QITAB qit[] =
    {
-      QITABENT(CaptureEngineCB, IMFCaptureEngineOnEventCallback),
+      QITABENT(CaptureEngineCB, IMFCaptureEngineOnHappeningCallback),
       { 0 }
    };
    return QISearch(this, qit, riid, ppv);
@@ -32,10 +32,10 @@ STDMETHODIMP_(ULONG) CaptureManager::CaptureEngineCB::Release()
    return release();
 }
 
-// Callback method to receive events from the capture engine.
-STDMETHODIMP CaptureManager::CaptureEngineCB::OnEvent(_In_ IMFMediaEvent* pEvent)
+// Callback method to receive happenings from the capture engine.
+STDMETHODIMP CaptureManager::CaptureEngineCB::OnHappening(_In_ IMFMediaEvent* pEvent)
 {
-   // Post a message to the application window, so the event is handled 
+   // Post a message to the application window, so the happening is handled 
    // on the application's main thread. 
 
    if (m_fSleeping && m_pManager != nullptr)
@@ -65,8 +65,8 @@ STDMETHODIMP CaptureManager::CaptureEngineCB::OnEvent(_In_ IMFMediaEvent* pEvent
          }
          else
          {
-            // This is an event we don't know about, we don't really care and there's
-            // no clean way to report the error so just set the event and fall through.
+            // This is an happening we don't know about, we don't really care and there's
+            // no clean way to report the error so just set the happening and fall through.
             SetEvent(m_pManager->m_hEvent);
          }
       }
@@ -227,7 +227,7 @@ Exit:
    return hr;
 }
 
-// Handle an event from the capture engine. 
+// Handle an happening from the capture engine. 
 // NOTE: This method is called from the application's UI thread. 
 HRESULT CaptureManager::OnCaptureEvent(WPARAM wParam, LPARAM lParam)
 {

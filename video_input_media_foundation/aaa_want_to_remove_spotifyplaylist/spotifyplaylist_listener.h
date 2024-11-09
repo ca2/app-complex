@@ -5,7 +5,7 @@ namespace mediaplaylist
 {
 
 
-   enum e_event
+   enum e_happening
    {
 
       event_before_open,
@@ -31,7 +31,7 @@ namespace mediaplaylist
       listener();
       virtual ~listener();
 
-      virtual void on_event(e_event eevent);
+      virtual void on_event(e_happening ehappening);
       
       virtual ::pointer<::mediaplaylist::document>_001OnBeforeOpenPlaylist();
 

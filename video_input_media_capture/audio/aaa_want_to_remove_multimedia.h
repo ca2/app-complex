@@ -74,7 +74,7 @@
 
 //       sound_track_player * sound_track();
 
-//       virtual void OnWavePlayerEvent(wave::player * pplayer, wave::player::e_event event, wave::player_command * pcommand) override;
+//       virtual void OnWavePlayerEvent(wave::player * pplayer, wave::player::e_happening happening, wave::player_command * pcommand) override;
 
 //       virtual void defer_initialize_audio_playback(::audio::e_purpose epurpose= ::wave::purpose_playground);
 

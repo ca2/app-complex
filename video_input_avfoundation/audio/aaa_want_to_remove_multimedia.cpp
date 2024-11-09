@@ -131,7 +131,7 @@
 //    }
 
 
-//    void department::OnWavePlayerEvent(wave::player * pplayer, wave::player::e_event event, wave::player_command * pcommand)
+//    void department::OnWavePlayerEvent(wave::player * pplayer, wave::player::e_happening happening, wave::player_command * pcommand)
 //    {
 
 

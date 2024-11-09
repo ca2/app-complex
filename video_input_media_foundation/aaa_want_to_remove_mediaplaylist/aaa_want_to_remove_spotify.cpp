@@ -74,7 +74,7 @@ static void SP_CALLCONV  logged_in(sp_session *sess,sp_error error)
 
 
 /**
-* Called on various events to start playback if it hasn't been started already.
+* Called on various happenings to start playback if it hasn't been started already.
 *
 * The function simply starts playing the first track of the playlist.
 */
@@ -166,7 +166,7 @@ static int SP_CALLCONV music_delivery(sp_session *sess,const sp_audioformat *for
 
             userdata(sess)->m_af = *format;
 
-            userdata(sess)->m_evAudioFormat.set_happening();
+            userdata(sess)->m_happeningAudioFormat.set_happening();
 
          }
 
@@ -389,7 +389,7 @@ static void track_ended(sp_session * sess)
    int tracks = 0;
    if(userdata(sess)->currenttrack)
    {
-      userdata(sess)->m_evAudioFormat.set_happening();
+      userdata(sess)->m_happeningAudioFormat.set_happening();
       userdata(sess)->currenttrack = NULL;
       sp_session_player_unload(sess);
       userdata(sess)->track_loaded = 0;
@@ -512,7 +512,7 @@ pdirectorysystem->create(m_strLocationSettings);
 
       spconfig.userdata                = this;
 
-      m_evAudioFormat.reset_happening();
+      m_happeningAudioFormat.reset_happening();
 
       begin();
 

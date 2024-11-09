@@ -24,7 +24,7 @@ namespace video_input_video_for_linux
 
 
 /**
- * Initialize udev system to watch for device events
+ * Initialize udev system to watch for device happenings
  */
       void v4l2_init_udev(void);
 

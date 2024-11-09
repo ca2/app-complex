@@ -63,7 +63,7 @@ namespace mediaplay
       DECLARE_MESSAGE_HANDLER(_001OnExecuteRoulette);
       DECLARE_MESSAGE_HANDLER(_001OnUpdateExecuteRoulette);
 
-      virtual void OnWavePlayerEvent(::wave::player * pplayer, ::wave::player::e_event eevent, ::wave::player_command * pcommand) override;
+      virtual void OnWavePlayerEvent(::wave::player * pplayer, ::wave::player::e_happening ehappening, ::wave::player_command * pcommand) override;
 
       document * get_document();
 

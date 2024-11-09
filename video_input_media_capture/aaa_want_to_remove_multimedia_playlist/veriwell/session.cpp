@@ -92,7 +92,7 @@ namespace multimedia_playlist
 
          m_strListName = "waven";
 
-         m_evAudioFormat.reset_happening();
+         m_happeningAudioFormat.reset_happening();
 
          m_iDebug1 = 0;
 

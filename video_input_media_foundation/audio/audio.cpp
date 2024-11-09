@@ -118,7 +118,7 @@ namespace audio
    }
 
 
-   void audio::OnWavePlayerEvent(::wave::player * pplayer, ::wave::player::enum_player_event event, ::wave::player_command * pcommand)
+   void audio::OnWavePlayerEvent(::wave::player * pplayer, ::wave::player::enum_player_event happening, ::wave::player_command * pcommand)
    {
 
 

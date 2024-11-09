@@ -194,7 +194,7 @@ enum VIDEO_CAPTURE_FILTER_NOTIFICATION
     VIDEO_CAPTURE_FILTER_NOTIFICATION_CAPTURE_OUTPUT_FORMAT_CHANGED     = 305,      //!< Data: none
 };
 
-//! Custom event that can be received by IMediaEvent::GetEvent. If SetNotificationCallback() was not set this method is used to send notifications.
+//! Custom happening that can be received by IMediaEvent::GetEvent. If SetNotificationCallback() was not set this method is used to send notifications.
 //! lEventCode = VIDEO_CAPTURE_FILTER_EVENT
 //! lParam1    = VIDEO_CAPTURE_FILTER_NOTIFICATION
 //! lParam2    = reserved for future use (e.g. notifications with additional data)
