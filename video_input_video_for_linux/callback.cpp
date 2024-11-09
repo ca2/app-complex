@@ -478,7 +478,7 @@ namespace video_input_video_for_linux
 
       m_pdevice->close();
 
-      m_happeningStop.set_event();
+      m_happeningStop.set_happening();
 
    }
 

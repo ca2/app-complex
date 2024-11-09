@@ -470,7 +470,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////
 ////      m_pdevice->close();
 ////
-////      m_happeningStop.set_event();
+////      m_happeningStop.set_happening();
 //
 //   }
 //
