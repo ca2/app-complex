@@ -776,7 +776,7 @@ namespace video_input_media_foundation
 
       pixmap p;
 
-      p.init(m_pdevice->m_size, (image32_t *)pSampleBuffer, m_pdevice->m_size.cx() * 4);
+      p.initialize(m_pdevice->m_size, (image32_t *)pSampleBuffer, m_pdevice->m_size.cx() * 4);
 
       if (!m_pdevice->get_render()->m_pimage)
       {
