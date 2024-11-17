@@ -25,8 +25,8 @@ namespace app_complex_form
 
 
 #ifdef _DEBUG
-      int64_t increment_reference_count() override;
-      int64_t decrement_reference_count() override;
+      huge_integer increment_reference_count() override;
+      huge_integer decrement_reference_count() override;
 #endif
 
       void install_message_routing(::channel * psender) override;
