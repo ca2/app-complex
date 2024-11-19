@@ -15,7 +15,7 @@ namespace mediaplaylist
       virtual ~edit_impact();
 
       virtual void _001OnAfterChangeText(const ::action_context & action_context);
-      virtual void _001OnTimer(::timer * ptimer);
+      virtual void on_timer(::timer * ptimer);
 
       void handle(::topic * ptopic, ::context * pcontext);
 

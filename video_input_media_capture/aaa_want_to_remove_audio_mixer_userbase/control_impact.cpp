@@ -60,7 +60,7 @@ namespace multimedia
          MESSAGE_LINK(e_message_size, pchannel, this, &control_impact::on_message_size);
          MESSAGE_LINK(e_message_destroy, pchannel, this, &control_impact::on_message_destroy);
          MESSAGE_LINK(e_message_create, pchannel, this, &control_impact::on_message_create);
-         //   //MESSAGE_LINK(e_message_timer, pchannel, this, &control_impact::_001OnTimer);
+         //   //MESSAGE_LINK(e_message_timer, pchannel, this, &control_impact::on_timer);
          //   MESSAGE_LINK(e_message_context_menu, pchannel, this, &control_impact::on_message_context_menu);
          MESSAGE_LINK(e_message_scroll_y, pchannel, this, &control_impact::on_message_scroll_y);
 #ifdef WINDOWS

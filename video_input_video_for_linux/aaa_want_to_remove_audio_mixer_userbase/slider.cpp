@@ -53,7 +53,7 @@ namespace multimedia
          MESSAGE_LINK(e_message_left_button_down, pchannel, this, &slider::on_message_left_button_down);
          MESSAGE_LINK(e_message_left_button_up, pchannel, this, &slider::on_message_left_button_up);
          MESSAGE_LINK(e_message_mouse_move, pchannel, this, &slider::on_message_mouse_move);
-         //MESSAGE_LINK(e_message_timer, pchannel, this, &slider::_001OnTimer);
+         //MESSAGE_LINK(e_message_timer, pchannel, this, &slider::on_timer);
          //MESSAGE_LINK(e_message_size, pchannel, this, &slider::on_message_size);
       }
 
@@ -469,9 +469,9 @@ namespace multimedia
       }
 
 
-      void slider::_001OnTimer(::timer * ptimer)
+      void slider::on_timer(::timer * ptimer)
       {
-         ::audio_mixer_user::level_control::_001OnTimer(ptimer);
+         ::audio_mixer_user::level_control::on_timer(ptimer);
          ::int_point point;
          ::double_rectangle rectangle;
          ::double_rectangle rectangleTrack;

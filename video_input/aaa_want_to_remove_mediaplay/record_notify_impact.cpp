@@ -31,10 +31,10 @@ namespace mediaplay
    }
 
 
-   void record_notify_impact::_001OnTimer(::timer * ptimer)
+   void record_notify_impact::on_timer(::timer * ptimer)
    {
 
-      ::user::interaction::_001OnTimer(ptimer);
+      ::user::interaction::on_timer(ptimer);
 
       if(ptimer->m_uEvent == ((uptr) this))
       {
@@ -77,7 +77,7 @@ namespace mediaplay
 
    void record_notify_impact::install_message_routing(::channel * pchannel)
    {
-      //MESSAGE_LINK(e_message_timer, pchannel, this, &record_notify_impact::_001OnTimer);
+      //MESSAGE_LINK(e_message_timer, pchannel, this, &record_notify_impact::on_timer);
    }
 
    void record_notify_impact::GetParentClientRect(::int_rectangle * lprect)

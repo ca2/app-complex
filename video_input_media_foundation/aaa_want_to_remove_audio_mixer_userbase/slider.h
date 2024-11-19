@@ -87,7 +87,7 @@ namespace multimedia
          DECLARE_MESSAGE_HANDLER(on_message_mouse_move);
          DECLARE_MESSAGE_HANDLER(on_message_left_button_down);
          DECLARE_MESSAGE_HANDLER(on_message_left_button_up);
-         virtual void _001OnTimer(::timer * ptimer) override;
+         virtual void on_timer(::timer * ptimer) override;
          //DECLARE_MESSAGE_HANDLER(on_message_size);
 
 

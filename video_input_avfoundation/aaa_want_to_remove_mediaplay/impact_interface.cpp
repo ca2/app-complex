@@ -696,10 +696,10 @@ namespace mediaplay
    }
 
 
-   void impact_interface::_001OnTimer(::timer * ptimer)
+   void impact_interface::on_timer(::timer * ptimer)
    {
 
-      ::user::interaction::_001OnTimer(ptimer);
+      ::user::interaction::on_timer(ptimer);
 
       //::duration tickNow= ::duration::now();
 

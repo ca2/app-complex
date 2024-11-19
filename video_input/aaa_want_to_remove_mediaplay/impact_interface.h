@@ -129,7 +129,7 @@ namespace mediaplay
       virtual bool StartFadeIn(::mediaplaylist::info * pinfo);
       virtual void StartVisualFadeIn(bool bAudio);
       virtual void backimpact_Feedback(::image::image *pimage);
-      virtual void _001OnTimer(::timer * ptimer) override;
+      virtual void on_timer(::timer * ptimer) override;
       virtual void CloseDevice();
       virtual void OnMediaPlaybackStart(::wave::player_command * pcommand);
       virtual void OnMediaPlaybackStart();

@@ -45,7 +45,7 @@ namespace mediaplaylist
 
    }
 
-   void edit_impact::_001OnTimer(::timer * ptimer)
+   void edit_impact::on_timer(::timer * ptimer)
    {
 
       if (ptimer->m_uEvent == 123)

@@ -30,7 +30,7 @@ namespace  mediamanager
 
       bool create();
 
-      virtual void _001OnTimer(::timer * ptimer);
+      virtual void on_timer(::timer * ptimer);
    };
 
 } // namespace mediamanager
