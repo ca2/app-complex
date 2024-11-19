@@ -58,7 +58,7 @@ namespace simple_application
    }
 
 
-   int64_t document::increment_reference_count()
+   huge_integer document::increment_reference_count()
    {
 
       return  ::user::document::increment_reference_count();
@@ -66,7 +66,7 @@ namespace simple_application
    }
 
 
-   int64_t document::decrement_reference_count()
+   huge_integer document::decrement_reference_count()
    {
 
       return  ::user::document::decrement_reference_count();

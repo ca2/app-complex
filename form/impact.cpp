@@ -48,7 +48,7 @@ namespace app_complex_form
 #ifdef _DEBUG
 
 
-   int64_t impact::increment_reference_count()
+   huge_integer impact::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -56,7 +56,7 @@ namespace app_complex_form
    }
 
 
-   int64_t impact::decrement_reference_count()
+   huge_integer impact::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();

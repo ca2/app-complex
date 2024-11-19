@@ -168,7 +168,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   int64_t application::increment_reference_count()
+   huge_integer application::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -176,7 +176,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   int64_t application::decrement_reference_count()
+   huge_integer application::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();

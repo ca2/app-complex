@@ -22,11 +22,11 @@ namespace simple_drag_and_drop
       virtual ~simple_drag_and_drop();
 
 
-      virtual int64_t increment_reference_count()
+      virtual huge_integer increment_reference_count()
       {
          return ::object::increment_reference_count();
       }
-      virtual int64_t decrement_reference_count()
+      virtual huge_integer decrement_reference_count()
       {
          return ::object::decrement_reference_count();
       }

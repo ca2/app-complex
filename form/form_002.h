@@ -26,8 +26,8 @@ namespace app_complex_form
 
 
 #ifdef _DEBUG
-      virtual int64_t increment_reference_count() override;
-      virtual int64_t decrement_reference_count() override;
+      virtual huge_integer increment_reference_count() override;
+      virtual huge_integer decrement_reference_count() override;
 #endif
 
 
