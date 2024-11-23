@@ -55,7 +55,7 @@ namespace simple_application
                                ::type < main_frame >(),
                                ::type < impact >()));
 
-      __construct(m_ptemplateSimpleDrawingMain, pdoctemplate);
+      __øconstruct(m_ptemplateSimpleDrawingMain, pdoctemplate);
 
       add_document_template(pdoctemplate);
 

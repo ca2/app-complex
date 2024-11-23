@@ -151,7 +151,7 @@ namespace mediaplaylist
       else if(ptopic->m_atom == id_playlists_changed)
       {
 
-         __construct(m_plisting);
+         __øconstruct(m_plisting);
 
          papp->mediaplaylist()->GetPath(*m_plisting);
 

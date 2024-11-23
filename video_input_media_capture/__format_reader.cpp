@@ -460,7 +460,7 @@ namespace video_input_media_capture
 
       HRESULT hr = S_OK;
 
-      auto pmediaformat = __create < ::video_input::media_format >();
+      auto pmediaformat = __øcreate < ::video_input::media_format >();
 
       hr = pmediatype->LockStore();
 

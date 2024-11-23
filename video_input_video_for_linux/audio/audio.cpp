@@ -118,7 +118,7 @@ namespace audio
    }
 
 
-   void audio::OnWavePlayerEvent(::wave::player * pplayer, ::wave::player::enum_player_event happening, ::wave::player_command * pcommand)
+   void audio::OnWavePlayerEvent(::wave::player * pplayer, ::wave::player::enum_player_happening happening, ::wave::player_command * pcommand)
    {
 
 
@@ -334,7 +334,7 @@ namespace audio
 
 #endif
 
-      __construct(m_pmultimediafile, __allocate ::multimedia::file_application());
+      __øconstruct(m_pmultimediafile, __allocate ::multimedia::file_application());
 
 #ifdef WINDOWS_DESKTOP
 
@@ -548,7 +548,7 @@ namespace audio
    ::pointer<::tts::speaker>audio::create_tts_speaker()
    {
 
-      auto pspeaker = __create < ::tts::speaker >();
+      auto pspeaker = __øcreate < ::tts::speaker >();
 
       if (pspeaker.is_set())
       {

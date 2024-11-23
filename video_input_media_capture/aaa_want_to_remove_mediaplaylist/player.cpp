@@ -202,7 +202,7 @@ namespace mediaplaylist
          if (m_imageaAlbum128[i]->is_null())
          {
 
-            __construct(m_imageaAlbum128.element_at(i));
+            __øconstruct(m_imageaAlbum128.element_at(i));
 
             m_imageaAlbum128[i]->create({ 84, 90 });
 

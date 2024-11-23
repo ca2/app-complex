@@ -81,11 +81,11 @@ namespace simple_os_drag_and_drop
    void simple_os_drag_and_drop::_001OnDraw1Through3(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto ppen = __create < ::draw2d::pen > ();
+      auto ppen = __øcreate < ::draw2d::pen > ();
 
-      auto pbrush = __create < ::draw2d::brush >();
+      auto pbrush = __øcreate < ::draw2d::brush >();
 
-      auto pfont = __create < ::write_text::font > ();
+      auto pfont = __øcreate < ::write_text::font > ();
 
       pfont->create_pixel_font(pnode->font_name(e_font_sans_ex), 100.0, 800);
 
@@ -298,7 +298,7 @@ namespace simple_os_drag_and_drop
    {
 
 
-      auto pfont = __create < ::write_text::font > ();
+      auto pfont = __øcreate < ::write_text::font > ();
 
       pfont->create_point_font(pnode->font_name(e_font_sans), 14.0, FW_LIGHT);
 
@@ -316,7 +316,7 @@ namespace simple_os_drag_and_drop
 
       pgraphics->text_out(r.left(), r.top() + 20, str);
 
-      auto ppen = __create < ::draw2d::pen > ();
+      auto ppen = __øcreate < ::draw2d::pen > ();
 
       if (dAngle < 0.0)
       {

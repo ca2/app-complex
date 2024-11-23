@@ -71,9 +71,9 @@ namespace video_input_video_avfoundation
       m_size.cx() = w;
       m_size.cy() = h;
       
-      __construct(m_prender);
+      __øconstruct(m_prender);
       
-      __construct(m_prender->m_pimage);
+      __øconstruct(m_prender->m_pimage);
 //
       m_bSetup = true;
 //
@@ -127,7 +127,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
    synchronous_lock synchronouslock(m_prender->synchronization());
    
    m_prender->m_pimage->create({width, height});
-   ::vertical_swap_copy_image32(m_prender->m_pimage->get_data(),
+   m_prender->m_pimage->image32()->vertical_swap_copy(
                            minimum(width,m_prender->m_pimage->width()),
                            minimum(height,m_prender->m_pimage->height()),
                            m_prender->m_pimage->m_iScan,

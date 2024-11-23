@@ -243,13 +243,13 @@ namespace simple_os_drag_and_drop
       //         && m_pviewTopic != nullptr)
       //   {
 
-      //      if(pupdate->m_pcontrolevent->m_eevent == ::id_after_change_cur_sel)
+      //      if(pupdate->m_pcontrolevent->m_ehappening == ::id_after_change_cur_sel)
       //      {
 
       //         string strFont = m_pfontimpact->m_pimpact->get_cur_sel_face_name();
 
       //      }
-      //      else if (pupdate->m_pcontrolevent->m_eevent == ::id_after_change_cur_hover)
+      //      else if (pupdate->m_pcontrolevent->m_ehappening == ::id_after_change_cur_hover)
       //      {
 
       //         string strFont = m_pfontimpact->m_pimpact->get_cur_hover_face_name();

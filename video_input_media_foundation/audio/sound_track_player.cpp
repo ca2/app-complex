@@ -34,7 +34,7 @@ namespace audio
 
       m_pdecoderplugin = paudio->audiowave()->m_pdecoderset->LoadPlugin("audio_decode_wave");
 
-      auto estatus = __construct(m_pwaveplayer, __allocate ::wave::device_player());
+      auto estatus = __øconstruct(m_pwaveplayer, __allocate ::wave::device_player());
 
       if (!estatus)
       {

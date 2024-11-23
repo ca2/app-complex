@@ -385,7 +385,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////         if(pimage.nok())
 ////         {
 ////
-////            __construct(pimage);
+////            __øconstruct(pimage);
 ////
 ////         }
 ////
