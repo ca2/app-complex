@@ -704,7 +704,7 @@ namespace mediaplay
       //::duration tickNow= ::duration::now();
 
 
-      switch(ptimer->m_uEvent)
+      switch(ptimer->m_uTimer)
       {
       case e_timer_lyric:
       {
@@ -750,7 +750,7 @@ namespace mediaplay
 
             m_dBlend = 0.0;
 
-            KillTimer(ptimer->m_uEvent);
+            KillTimer(ptimer->m_uTimer);
 
             m_etimerFade = e_timer_none;
 
@@ -775,7 +775,7 @@ namespace mediaplay
 
             m_dBlend = 1.0;
 
-            KillTimer(ptimer->m_uEvent);
+            KillTimer(ptimer->m_uTimer);
 
             m_etimerFade = e_timer_none;
 

@@ -36,7 +36,7 @@ namespace mediaplay
 
       ::user::interaction::on_timer(ptimer);
 
-      if(ptimer->m_uEvent == ((uptr) this))
+      if(ptimer->m_uTimer == ((uptr) this))
       {
 
          set_need_redraw();

@@ -48,7 +48,7 @@ namespace mediaplaylist
    void edit_impact::on_timer(::timer * ptimer)
    {
 
-      if (ptimer->m_uEvent == 123)
+      if (ptimer->m_uTimer == 123)
       {
 
          KillTimer(123);

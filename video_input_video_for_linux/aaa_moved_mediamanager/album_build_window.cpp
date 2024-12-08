@@ -44,7 +44,7 @@ namespace  mediamanager
 
       ::user::interaction::on_timer(ptimer);
 
-      auto uEvent = ptimer->m_uEvent;
+      auto uEvent = ptimer->m_uTimer;
 
       if(uEvent == 1122)
       {

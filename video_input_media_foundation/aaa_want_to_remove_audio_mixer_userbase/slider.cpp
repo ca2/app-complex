@@ -476,7 +476,7 @@ namespace multimedia
          ::double_rectangle rectangle;
          ::double_rectangle rectangleTrack;
          ::double_rectangle rectangleX;
-         switch(ptimer->m_uEvent)
+         switch(ptimer->m_uTimer)
          {
          case 1317:
          {
@@ -487,7 +487,7 @@ namespace multimedia
          }
          break;
          case 100:
-            KillTimer(ptimer->m_uEvent);
+            KillTimer(ptimer->m_uTimer);
             SetTimer(110, 10, nullptr);
          case 110:
             ScrollLineA();
@@ -497,7 +497,7 @@ namespace multimedia
             }
             break;
          case 200:
-            KillTimer(ptimer->m_uEvent);
+            KillTimer(ptimer->m_uTimer);
             SetTimer(210, 10, nullptr);
          case 210:
             ScrollLineB();
@@ -507,7 +507,7 @@ namespace multimedia
             }
             break;
          case 300:
-            KillTimer(ptimer->m_uEvent);
+            KillTimer(ptimer->m_uTimer);
             SetTimer(310, 10, nullptr);
          case 310:
             GetCursorPos(&point);
@@ -522,13 +522,13 @@ namespace multimedia
             }
             if(m_iPos == m_iRangeMin)
             {
-               KillTimer(ptimer->m_uEvent);
+               KillTimer(ptimer->m_uTimer);
                break;
             }
             ScrollPageA();
             break;
          case 400:
-            KillTimer(ptimer->m_uEvent);
+            KillTimer(ptimer->m_uTimer);
             SetTimer(410, 10, nullptr);
          case 410:
             GetCursorPos(&point);
@@ -549,10 +549,10 @@ namespace multimedia
             ScrollPageB();
             break;
          default:
-            KillTimer(ptimer->m_uEvent);
+            KillTimer(ptimer->m_uTimer);
             break;
          }
-         // trans   ::user::interaction::OnTimer(ptimer->m_uEvent);
+         // trans   ::user::interaction::OnTimer(ptimer->m_uTimer);
       }
 
       bool slider::GetThumbRect(::int_rectangle * lpRect)
