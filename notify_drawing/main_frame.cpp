@@ -8,7 +8,7 @@ namespace notify_drawing
    main_frame::main_frame()
    {
 
-      m_bDefaultNotifyIcon = true;
+      enable_default_notification_icon();
 
    }
 
