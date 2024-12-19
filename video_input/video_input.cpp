@@ -41,6 +41,18 @@ namespace video_input
 	}
 
 
+	void video_input::destroy()
+	{
+
+		::object::destroy();
+		::video_input::device_array::destroy();
+		::source::destroy();
+		::hardware::device_listener::destroy();
+	
+
+	}
+
+
 	void video_input::_update_device_list()
 	{
 
