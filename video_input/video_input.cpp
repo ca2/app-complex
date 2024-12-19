@@ -48,7 +48,7 @@ namespace video_input
 		::video_input::device_array::destroy();
 		::source::destroy();
 		::hardware::device_listener::destroy();
-	
+
 
 	}
 
