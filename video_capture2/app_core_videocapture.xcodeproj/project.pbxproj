@@ -171,7 +171,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		070533CB1C90B2A100F31B3F /* gcom.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gcom.xcodeproj; path = ../gcom/gcom.xcodeproj; sourceTree = "<group>"; };
+		070533CB1C90B2A100F31B3F /* gcom.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gcom.xcodeproj; path = ../gcom/gcom.xcodeproj; sourceTree = SOURCE_ROOT; };
 		070561E41C412AFA004085DF /* hellomultiverse_font_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_font_impact.cpp; sourceTree = "<group>"; };
 		070561E51C412AFA004085DF /* hellomultiverse_font_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_font_impact.h; sourceTree = "<group>"; };
 		070561E81C412B59004085DF /* user_font_list.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = user_font_list.cpp; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 		07AE494B1CC7A83F00959A6F /* hellomultiverse_gcom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_gcom.h; sourceTree = "<group>"; };
 		07AE494C1CC7A83F00959A6F /* hellomultiverse_impact_base.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_impact_base.cpp; sourceTree = "<group>"; };
 		07AE494D1CC7A83F00959A6F /* hellomultiverse_impact_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_impact_base.h; sourceTree = "<group>"; };
-		07B65416190F2C0F002DAADE /* aura.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura.xcodeproj; path = ../../app/aura/.xcodeproj; sourceTree = "<group>"; };
+		07B65416190F2C0F002DAADE /* aura.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura.xcodeproj; path = ../../app/aura/.xcodeproj; sourceTree = SOURCE_ROOT; };
 		07FB1AA21B744E8800F3FCC1 /* hellomultiverse_render.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_render.cpp; sourceTree = "<group>"; };
 		07FB1AA31B744E8800F3FCC1 /* hellomultiverse_render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_render.h; sourceTree = "<group>"; };
 		9A72594A1D1403E6001F56B4 /* hellomultiverse_main_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_main_frame.cpp; sourceTree = "<group>"; };

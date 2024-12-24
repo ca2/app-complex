@@ -87,7 +87,7 @@
 		9AB5229A2A4C0AD3001EB2F0 /* _____release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "_____release.xcconfig"; sourceTree = "<group>"; };
 		9ACA447A2453EAEE007277DD /* libvideo_input.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libvideo_input.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACA482A2453EEAE007277DD /* aios_audio.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = aios_audio.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9ACA486D2453FE97007277DD /* aura.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura.xcodeproj; path = ../../app/aura/aura.xcodeproj; sourceTree = "<group>"; };
+		9ACA486D2453FE97007277DD /* aura.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura.xcodeproj; path = ../../app/aura/aura.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,7 +247,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1540;
-				ORGANIZATIONNAME = "Camilo Sasuke Tsumanuma";
+				ORGANIZATIONNAME = "ca2 Software Development";
 				TargetAttributes = {
 					9ACA44792453EAEE007277DD = {
 						CreatedOnToolsVersion = 11.4.1;
@@ -255,7 +255,7 @@
 				};
 			};
 			buildConfigurationList = 9ACA44752453EAEE007277DD /* Build configuration list for PBXProject "video_input" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (

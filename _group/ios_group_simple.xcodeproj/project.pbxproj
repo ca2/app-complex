@@ -223,12 +223,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9A248A02245349F300F23D28 /* app_simple_application.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_application.xcodeproj; path = ../application/app_simple_application.xcodeproj; sourceTree = "<group>"; };
-		9A248A0E24534A0700F23D28 /* app_simple_box.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_box.xcodeproj; path = ../box/app_simple_box.xcodeproj; sourceTree = "<group>"; };
-		9A248A1A24534A3400F23D28 /* app_simple_os_drag_and_drop.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_os_drag_and_drop.xcodeproj; path = ../os_drag_and_drop/app_simple_os_drag_and_drop.xcodeproj; sourceTree = "<group>"; };
-		9A3E0AF32309FA3600B5459B /* app_simple_form.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_form.xcodeproj; path = ../form/app_simple_form.xcodeproj; sourceTree = "<group>"; };
-		9A3E0AFF2309FA3600B5459B /* app_simple_drawing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_drawing.xcodeproj; path = ../drawing/app_simple_drawing.xcodeproj; sourceTree = "<group>"; };
-		9A3E0B172309FA3600B5459B /* app_simple_notify_drawing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_notify_drawing.xcodeproj; path = ../notify_drawing/app_simple_notify_drawing.xcodeproj; sourceTree = "<group>"; };
+		9A248A02245349F300F23D28 /* app_simple_application.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_application.xcodeproj; path = ../application/app_simple_application.xcodeproj; sourceTree = SOURCE_ROOT; };
+		9A248A0E24534A0700F23D28 /* app_simple_box.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_box.xcodeproj; path = ../box/app_simple_box.xcodeproj; sourceTree = SOURCE_ROOT; };
+		9A248A1A24534A3400F23D28 /* app_simple_os_drag_and_drop.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_os_drag_and_drop.xcodeproj; path = ../os_drag_and_drop/app_simple_os_drag_and_drop.xcodeproj; sourceTree = SOURCE_ROOT; };
+		9A3E0AF32309FA3600B5459B /* app_simple_form.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_form.xcodeproj; path = ../form/app_simple_form.xcodeproj; sourceTree = SOURCE_ROOT; };
+		9A3E0AFF2309FA3600B5459B /* app_simple_drawing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_drawing.xcodeproj; path = ../drawing/app_simple_drawing.xcodeproj; sourceTree = SOURCE_ROOT; };
+		9A3E0B172309FA3600B5459B /* app_simple_notify_drawing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_notify_drawing.xcodeproj; path = ../notify_drawing/app_simple_notify_drawing.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9A415CA92473955100EF2BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9A415CAA2473955100EF2BCD /* Info-browser-def.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-browser-def.plist"; sourceTree = "<group>"; };
 		9A415CAB2473955100EF2BCD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -236,7 +236,7 @@
 		9A415CAD2473955100EF2BCD /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9A415CAE2473955100EF2BCD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A415CAF2473955100EF2BCD /* Info-browser-bot.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-browser-bot.plist"; sourceTree = "<group>"; };
-		9A5F58F82476599300179AC5 /* app_simple_app.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_app.xcodeproj; path = ../app/app_simple_app.xcodeproj; sourceTree = "<group>"; };
+		9A5F58F82476599300179AC5 /* app_simple_app.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_app.xcodeproj; path = ../app/app_simple_app.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9AFC0DD024737B8100AF47B7 /* __simple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = __simple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFC0DD124737B8100AF47B7 /* group_simple copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "group_simple copy-Info.plist"; path = "/Users/camilo/__archive/basis/app-simple/_group/group_simple copy-Info.plist"; sourceTree = "<absolute>"; };
 		9AFC0E74247385A000AF47B7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };

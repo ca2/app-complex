@@ -67,7 +67,7 @@
 
 /* Begin PBXFileReference section */
 		9A08BBDA2A8C26D90044537B /* avcapture_video_input_callback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avcapture_video_input_callback.h; sourceTree = "<group>"; };
-		9AAF63DD280868520067E73F /* video_input.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = video_input.xcodeproj; path = ../video_input/video_input.xcodeproj; sourceTree = "<group>"; };
+		9AAF63DD280868520067E73F /* video_input.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = video_input.xcodeproj; path = ../video_input/video_input.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9AAF63E82808686B0067E73F /* render.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = render.cpp; sourceTree = "<group>"; };
 		9AAF63E92808686B0067E73F /* thread.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = thread.cpp; sourceTree = "<group>"; };
 		9AAF63EB2808686B0067E73F /* _struct.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _struct.cpp; sourceTree = "<group>"; };
@@ -263,10 +263,10 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1540;
-				ORGANIZATIONNAME = "Camilo Sasuke Tsumanuma";
+				ORGANIZATIONNAME = "ca2 Software Development";
 			};
 			buildConfigurationList = 9AEB759E16F78DF10085103B /* Build configuration list for PBXProject "video_input_avfoundation" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
