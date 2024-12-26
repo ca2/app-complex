@@ -443,7 +443,7 @@
 				9AE86DDC2858A35900F88364 /* imaging_coreimage.xcodeproj */,
 				9AE871562858A49000F88364 /* node_ios.xcodeproj */,
 				9AE86DEE2858A35900F88364 /* write_text_quartz2d.xcodeproj */,
-				9AE86E2A2858A35B00F88364 /* drawing */,
+				9AE86E2A2858A35B00F88364 /* __implement */,
 				9A5752B516AAE1D2000CC4EF /* Frameworks */,
 				9A5752B316AAE1D2000CC4EF /* Products */,
 			);
@@ -596,7 +596,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9AE86E2A2858A35B00F88364 /* drawing */ = {
+		9AE86E2A2858A35B00F88364 /* __implement */ = {
 			isa = PBXGroup;
 			children = (
 				9A50CE0C2B6CBEF300FDB101 /* _static_factory_.inl */,
@@ -606,7 +606,7 @@
 				9AE86ECF2858A35D00F88364 /* _matter.zip */,
 				9AE86EDB2858A35E00F88364 /* application_main.cpp */,
 			);
-			name = drawing;
+			name = __implement;
 			sourceTree = "<group>";
 		};
 		9AE86ED52858A35E00F88364 /* ios */ = {

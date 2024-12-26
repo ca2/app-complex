@@ -19,6 +19,7 @@
 		9A50CCAC2B6CAA2600FDB101 /* libios_unac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50CCAB2B6CAA2600FDB101 /* libios_unac.a */; };
 		9A50CCAE2B6CAA2D00FDB101 /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50CCAD2B6CAA2D00FDB101 /* UniformTypeIdentifiers.framework */; };
 		9A50CDF42B6CB84C00FDB101 /* libios_archive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50CDF32B6CB84C00FDB101 /* libios_archive.a */; };
+		9AB67D442D1E089C001AB250 /* _static_factory_.inl in Resources */ = {isa = PBXBuildFile; fileRef = 9AB67D432D1E089C001AB250 /* _static_factory_.inl */; };
 		9AE8741E2858A4CF00F88364 /* application_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AE873922858A4CC00F88364 /* application_main.cpp */; };
 		9AE8741F2858A4CF00F88364 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9AE8726B2858A4C500F88364 /* _matter.zip */; };
 		9AE874252858A4CF00F88364 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE872732858A4C500F88364 /* Images.xcassets */; };
@@ -327,6 +328,7 @@
 		9A8181C41F21C33E00FDAF74 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		9A8181C61F21C35100FDAF74 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		9A986ED51D2273E3001F4C04 /* libace_ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libace_ios.a; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/basic-ios-bmuegusfgbffmoeixicbxhlnbzop/Build/Products/Debug-iphonesimulator/libace_ios.a"; sourceTree = "<group>"; };
+		9AB67D432D1E089C001AB250 /* _static_factory_.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = _static_factory_.inl; path = ../_static_factory_.inl; sourceTree = SOURCE_ROOT; };
 		9AE24EC31904E95E001AEFFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9AE8716D2858A4C100F88364 /* experience_tranquillum.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_tranquillum.xcodeproj; path = ../../../app/experience_tranquillum/experience_tranquillum.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9AE8717F2858A4C200F88364 /* write_text_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = write_text_quartz2d.xcodeproj; path = "../../../../operating_system/operating_system-apple/write_text_quartz2d/write_text_quartz2d.xcodeproj"; sourceTree = SOURCE_ROOT; };
@@ -451,7 +453,7 @@
 				9AE871A02858A4C300F88364 /* imaging_coreimage.xcodeproj */,
 				9AE8780C2858AEC400F88364 /* node_ios.xcodeproj */,
 				9AE8717F2858A4C200F88364 /* write_text_quartz2d.xcodeproj */,
-				9AE871BE2858A4C400F88364 /* form */,
+				9AE871BE2858A4C400F88364 /* __implement */,
 				9A5752B516AAE1D2000CC4EF /* Frameworks */,
 				9A5752B316AAE1D2000CC4EF /* Products */,
 			);
@@ -607,16 +609,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9AE871BE2858A4C400F88364 /* form */ = {
+		9AE871BE2858A4C400F88364 /* __implement */ = {
 			isa = PBXGroup;
 			children = (
 				9A50CC502B6CA88300FDB101 /* _____debug.xcconfig */,
 				9A50CC5D2B6CA88300FDB101 /* _____release.xcconfig */,
-				9AE8726F2858A4C500F88364 /* ios */,
-				9AE873922858A4CC00F88364 /* application_main.cpp */,
 				9AE8726B2858A4C500F88364 /* _matter.zip */,
+				9AB67D432D1E089C001AB250 /* _static_factory_.inl */,
+				9AE873922858A4CC00F88364 /* application_main.cpp */,
+				9AE8726F2858A4C500F88364 /* ios */,
 			);
-			name = form;
+			name = __implement;
 			sourceTree = "<group>";
 		};
 		9AE8726F2858A4C500F88364 /* ios */ = {
@@ -930,6 +933,7 @@
 			files = (
 				9AE874EF2858A52300F88364 /* Launch Screen.storyboard in Resources */,
 				9AE8741F2858A4CF00F88364 /* _matter.zip in Resources */,
+				9AB67D442D1E089C001AB250 /* _static_factory_.inl in Resources */,
 				9AE874252858A4CF00F88364 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
