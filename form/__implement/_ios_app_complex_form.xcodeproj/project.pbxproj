@@ -262,20 +262,6 @@
 			remoteGlobalIDString = 9AE877F52858AE3800F88364;
 			remoteInfo = ios_app_complex_form;
 		};
-		9AE878102858AEC400F88364 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AE8780C2858AEC400F88364 /* node_ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AC2D16F26542E1000CC8096;
-			remoteInfo = node_ios;
-		};
-		9AE878122858AEE800F88364 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AE8780C2858AEC400F88364 /* node_ios.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9AC2D16E26542E1000CC8096;
-			remoteInfo = node_ios;
-		};
 		9AE878142858AEE800F88364 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AE8717F2858A4C200F88364 /* write_text_quartz2d.xcodeproj */;
@@ -329,6 +315,7 @@
 		9A8181C61F21C35100FDAF74 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		9A986ED51D2273E3001F4C04 /* libace_ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libace_ios.a; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/basic-ios-bmuegusfgbffmoeixicbxhlnbzop/Build/Products/Debug-iphonesimulator/libace_ios.a"; sourceTree = "<group>"; };
 		9AD7E49E2D1E446100D91148 /* _static_factory_.inl */ = {isa = PBXFileReference; lastKnownFileType = text; path = _static_factory_.inl; sourceTree = "<group>"; };
+		9ADCC4562D1E704200099200 /* operating_ambient_ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = operating_ambient_ios.xcodeproj; path = "../../../../operating_system/operating_system-ios/operating_ambient_ios/operating_ambient_ios.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		9AE24EC31904E95E001AEFFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9AE8716D2858A4C100F88364 /* experience_tranquillum.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_tranquillum.xcodeproj; path = ../../../app/experience_tranquillum/experience_tranquillum.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9AE8717F2858A4C200F88364 /* write_text_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = write_text_quartz2d.xcodeproj; path = "../../../../operating_system/operating_system-apple/write_text_quartz2d/write_text_quartz2d.xcodeproj"; sourceTree = SOURCE_ROOT; };
@@ -364,7 +351,6 @@
 		9AE877992858ADBE00F88364 /* libios_core.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_core.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE877C02858ADFF00F88364 /* libnode_ios.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libnode_ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE877C12858ADFF00F88364 /* libwindowing_ios.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwindowing_ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AE8780C2858AEC400F88364 /* node_ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = node_ios.xcodeproj; path = "../../../../operating_system/operating_system-ios/node_ios/node_ios.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		9AE878202858B26B00F88364 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../../../../operating_system/storage-ios/iPhoneSimulator13.4-x86_64.sdk/lib/libssl.a"; sourceTree = "<group>"; };
 		9AE878212858B26C00F88364 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../../../operating_system/storage-ios/iPhoneSimulator13.4-x86_64.sdk/lib/libcrypto.a"; sourceTree = "<group>"; };
 		9AE878332858BB9D00F88364 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
@@ -451,7 +437,7 @@
 				9AE8716D2858A4C100F88364 /* experience_tranquillum.xcodeproj */,
 				9AE871AC2858A4C300F88364 /* folder_zip.xcodeproj */,
 				9AE871A02858A4C300F88364 /* imaging_coreimage.xcodeproj */,
-				9AE8780C2858AEC400F88364 /* node_ios.xcodeproj */,
+				9ADCC4562D1E704200099200 /* operating_ambient_ios.xcodeproj */,
 				9AE8717F2858A4C200F88364 /* write_text_quartz2d.xcodeproj */,
 				9AE871BE2858A4C400F88364 /* __implement */,
 				9A5752B516AAE1D2000CC4EF /* Frameworks */,
@@ -634,14 +620,6 @@
 			path = ios;
 			sourceTree = "<group>";
 		};
-		9AE8780D2858AEC400F88364 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9AE878112858AEC400F88364 /* libnode_ios.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -658,7 +636,6 @@
 			);
 			dependencies = (
 				9AE877FC2858AEB600F88364 /* PBXTargetDependency */,
-				9AE878132858AEE800F88364 /* PBXTargetDependency */,
 				9AE878152858AEE800F88364 /* PBXTargetDependency */,
 				9AE877FE2858AEB600F88364 /* PBXTargetDependency */,
 				9AE878002858AEB600F88364 /* PBXTargetDependency */,
@@ -758,10 +735,6 @@
 				{
 					ProductGroup = 9AE871A12858A4C300F88364 /* Products */;
 					ProjectRef = 9AE871A02858A4C300F88364 /* imaging_coreimage.xcodeproj */;
-				},
-				{
-					ProductGroup = 9AE8780D2858AEC400F88364 /* Products */;
-					ProjectRef = 9AE8780C2858AEC400F88364 /* node_ios.xcodeproj */;
 				},
 				{
 					ProductGroup = 9AE871802858A4C200F88364 /* Products */;
@@ -917,13 +890,6 @@
 			remoteRef = 9AE8780A2858AEB600F88364 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AE878112858AEC400F88364 /* libnode_ios.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = libnode_ios.a;
-			remoteRef = 9AE878102858AEC400F88364 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1005,11 +971,6 @@
 			isa = PBXTargetDependency;
 			name = ios_imaging_coreimage;
 			targetProxy = 9AE878072858AEB600F88364 /* PBXContainerItemProxy */;
-		};
-		9AE878132858AEE800F88364 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = node_ios;
-			targetProxy = 9AE878122858AEE800F88364 /* PBXContainerItemProxy */;
 		};
 		9AE878152858AEE800F88364 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
