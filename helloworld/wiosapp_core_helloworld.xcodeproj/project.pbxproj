@@ -255,7 +255,7 @@
 
 /* Begin PBXFileReference section */
 		0751C8551921A9DA0099706E /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = SOURCE_ROOT; };
-		0776D1CF1921740100F890ED /* app.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app.xcodeproj; path = ../../../platform/app/app.xcodeproj; sourceTree = "<group>"; };
+		0776D1CF1921740100F890ED /* app.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app.xcodeproj; path = ../../../platform/app/app.xcodeproj; sourceTree = SOURCE_ROOT; };
 		078C352F1921758500354453 /* wiosapp_core_hellomultiverse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wiosapp_core_hellomultiverse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		078C35351921758600354453 /* wiosapp_core_hellomultiverse-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "wiosapp_core_hellomultiverse-Info.plist"; sourceTree = "<group>"; };
 		078C35371921758600354453 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };

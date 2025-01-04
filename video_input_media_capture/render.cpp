@@ -76,9 +76,17 @@ namespace video_input_media_capture
 
       m_pimage->map();
 
-      ::copy_image32(m_pimage->data(), m_pimage->width(),
-         m_pimage->height(), m_pimage->scan_size(),(::image32_t *) m_memory.data(),
-         m_pimage->width() * 4);
+      if (::is_set(m_memory.data()))
+      {
+
+         m_pimage->image32()->copy(
+            m_pimage->width(),
+            m_pimage->height(),
+            m_pimage->scan_size(),
+            (::image32_t *)m_memory.data(),
+            m_pimage->width() * 4);
+
+      }
 
    }
 

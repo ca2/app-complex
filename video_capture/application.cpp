@@ -235,6 +235,19 @@ namespace app_complex_video_capture
    void application::set_current(::video_input::device * pdevice)
    {
 
+      post([this, pdevice]()
+         {
+
+            _set_current(pdevice);
+
+         });
+
+   }
+
+
+   void application::_set_current(::video_input::device * pdevice)
+   {
+
       if (::is_set(pdevice) && !m_pvideoinput->itema().contains(pdevice))
       {
 

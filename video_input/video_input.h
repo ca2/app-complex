@@ -26,7 +26,11 @@ namespace video_input
       ~video_input() override;
 
 
-      virtual void initialize(::particle * pparticle) override;
+      void initialize(::particle * pparticle) override;
+
+
+      void destroy() override;
+
 
       void close_all_devices();
 
