@@ -11,5 +11,4 @@ do(default_windowing); \
 do(experience_core); \
 do(database_sqlite3); \
 do(folder_zip); \
-do(crypto_openssl); \
-do(regular_expression_pcre2);
+do(crypto_openssl);

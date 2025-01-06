@@ -19,6 +19,11 @@
 		9A50CCAC2B6CAA2600FDB101 /* libios_unac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50CCAB2B6CAA2600FDB101 /* libios_unac.a */; };
 		9A50CCAE2B6CAA2D00FDB101 /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50CCAD2B6CAA2D00FDB101 /* UniformTypeIdentifiers.framework */; };
 		9A50CDF42B6CB84C00FDB101 /* libios_archive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50CDF32B6CB84C00FDB101 /* libios_archive.a */; };
+		9AB54D8F2D2B962E00AFBCB1 /* libios_acme_windowing_kit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB54D8E2D2B962E00AFBCB1 /* libios_acme_windowing_kit.a */; };
+		9AB54D922D2B963700AFBCB1 /* libacme_windowing_uikit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB54D912D2B963700AFBCB1 /* libacme_windowing_uikit.a */; };
+		9AB54D952D2B963F00AFBCB1 /* libinnate_ui_uikit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB54D942D2B963F00AFBCB1 /* libinnate_ui_uikit.a */; };
+		9AB54D982D2B964500AFBCB1 /* libios_nano_graphics_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB54D972D2B964500AFBCB1 /* libios_nano_graphics_quartz2d.a */; };
+		9AB54D9A2D2B965000AFBCB1 /* liboperating_ambient_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A45EF952D1E830B008CC280 /* liboperating_ambient_ios.a */; };
 		9AD7E49F2D1E446100D91148 /* _static_factory_.inl in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7E49E2D1E446100D91148 /* _static_factory_.inl */; };
 		9AE8741E2858A4CF00F88364 /* application_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AE873922858A4CC00F88364 /* application_main.cpp */; };
 		9AE8741F2858A4CF00F88364 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9AE8726B2858A4C500F88364 /* _matter.zip */; };
@@ -54,7 +59,6 @@
 		9AE878432858C0A100F88364 /* libios_folder_zip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE871B42858A4C400F88364 /* libios_folder_zip.a */; };
 		9AE878452858C12400F88364 /* libios_imaging_coreimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE871A92858A4C300F88364 /* libios_imaging_coreimage.a */; };
 		9AE878472858C14400F88364 /* libios_idn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE878462858C14400F88364 /* libios_idn.a */; };
-		9AE878482858C14400F88364 /* libios_idn.a in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AE878462858C14400F88364 /* libios_idn.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AF7614E1F8437C000FDE7CC /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B5903518866047002C6FEC /* CoreFoundation.framework */; };
 		9AF761541F84383D00FDE7CC /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8181C41F21C33E00FDAF74 /* libbz2.tbd */; };
 		9AF761551F84384500FDE7CC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8181C21F21C33500FDAF74 /* libz.tbd */; };
@@ -285,20 +289,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		9AE878492858C14500F88364 /* Embed Libraries */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				9AE878482858C14400F88364 /* libios_idn.a in Embed Libraries */,
-			);
-			name = "Embed Libraries";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		077A02081B4D5758001C85FF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		078C352F1921758500354453 /* _ios_app_complex_form.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _ios_app_complex_form.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -328,6 +318,10 @@
 		9A8181C41F21C33E00FDAF74 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		9A8181C61F21C35100FDAF74 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		9A986ED51D2273E3001F4C04 /* libace_ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libace_ios.a; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/basic-ios-bmuegusfgbffmoeixicbxhlnbzop/Build/Products/Debug-iphonesimulator/libace_ios.a"; sourceTree = "<group>"; };
+		9AB54D8E2D2B962E00AFBCB1 /* libios_acme_windowing_kit.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_acme_windowing_kit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AB54D912D2B963700AFBCB1 /* libacme_windowing_uikit.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_windowing_uikit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AB54D942D2B963F00AFBCB1 /* libinnate_ui_uikit.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libinnate_ui_uikit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AB54D972D2B964500AFBCB1 /* libios_nano_graphics_quartz2d.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_nano_graphics_quartz2d.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD7E49E2D1E446100D91148 /* _static_factory_.inl */ = {isa = PBXFileReference; lastKnownFileType = text; path = _static_factory_.inl; sourceTree = "<group>"; };
 		9ADCC4562D1E704200099200 /* operating_ambient_ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = operating_ambient_ios.xcodeproj; path = "../../../../operating_system/operating_system-ios/operating_ambient_ios/operating_ambient_ios.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		9AE24EC31904E95E001AEFFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -381,9 +375,11 @@
 				9A0E50C92BF5076C007C7253 /* SystemConfiguration.framework in Frameworks */,
 				9A50CDF42B6CB84C00FDB101 /* libios_archive.a in Frameworks */,
 				9A50CCAE2B6CAA2D00FDB101 /* UniformTypeIdentifiers.framework in Frameworks */,
+				9AB54D922D2B963700AFBCB1 /* libacme_windowing_uikit.a in Frameworks */,
 				9A50CCAC2B6CAA2600FDB101 /* libios_unac.a in Frameworks */,
 				9A50CCA42B6CAA1F00FDB101 /* libios_acme_darwin.a in Frameworks */,
 				9A50CCA62B6CAA1F00FDB101 /* libios_apex_darwin.a in Frameworks */,
+				9AB54D982D2B964500AFBCB1 /* libios_nano_graphics_quartz2d.a in Frameworks */,
 				9A50CCA82B6CAA1F00FDB101 /* libios_aura_darwin.a in Frameworks */,
 				9A50CCAA2B6CAA1F00FDB101 /* libios_darwin.a in Frameworks */,
 				9AE8783E2858BF0500F88364 /* libios_app_simple_form.a in Frameworks */,
@@ -407,9 +403,11 @@
 				9AE8779E2858ADBF00F88364 /* libacme_ios.a in Frameworks */,
 				9A41735F2000CA4C0056265A /* libcrypto.a in Frameworks */,
 				9A4173602000CA4C0056265A /* libssl.a in Frameworks */,
+				9AB54D952D2B963F00AFBCB1 /* libinnate_ui_uikit.a in Frameworks */,
 				9A4BE107200018A200DED594 /* Foundation.framework in Frameworks */,
 				9AF761561F84385800FDE7CC /* UIKit.framework in Frameworks */,
 				9AE877A82858ADBF00F88364 /* libios_apex_posix.a in Frameworks */,
+				9AB54D9A2D2B965000AFBCB1 /* liboperating_ambient_ios.a in Frameworks */,
 				9AE877BA2858ADC200F88364 /* libios_crypto_openssl.a in Frameworks */,
 				9AE877AC2858ADC000F88364 /* libios_aura.a in Frameworks */,
 				9AF7614E1F8437C000FDE7CC /* CoreFoundation.framework in Frameworks */,
@@ -428,6 +426,7 @@
 				9AE877C62858AE0000F88364 /* libios_write_text_quartz2d.a in Frameworks */,
 				9AF761541F84383D00FDE7CC /* libbz2.tbd in Frameworks */,
 				9AE877A02858ADBF00F88364 /* libios_acme_posix.a in Frameworks */,
+				9AB54D8F2D2B962E00AFBCB1 /* libios_acme_windowing_kit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +478,10 @@
 		9A5752B516AAE1D2000CC4EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AB54D972D2B964500AFBCB1 /* libios_nano_graphics_quartz2d.a */,
+				9AB54D942D2B963F00AFBCB1 /* libinnate_ui_uikit.a */,
+				9AB54D912D2B963700AFBCB1 /* libacme_windowing_uikit.a */,
+				9AB54D8E2D2B962E00AFBCB1 /* libios_acme_windowing_kit.a */,
 				9A0E50BC2BF5076C007C7253 /* SystemConfiguration.framework */,
 				9A50CDF32B6CB84C00FDB101 /* libios_archive.a */,
 				9A50CCAD2B6CAA2D00FDB101 /* UniformTypeIdentifiers.framework */,
@@ -652,7 +655,6 @@
 				078C352B1921758500354453 /* Sources */,
 				078C352C1921758500354453 /* Frameworks */,
 				078C352D1921758500354453 /* Resources */,
-				9AE878492858C14500F88364 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -1040,8 +1042,12 @@
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/ios/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Complex Form!!";
+				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2015-2023 ca2 Desenvolvimento de Software Ltda. All rights reserved.";
+				INFOPLIST_KEY_NSPrincipalClass = UIApplication;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 0.1;
 				PLATFORM_MODIFIER = ios;
@@ -1060,8 +1066,12 @@
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/ios/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Complex Form!!";
+				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2015-2023 ca2 Desenvolvimento de Software Ltda. All rights reserved.";
+				INFOPLIST_KEY_NSPrincipalClass = UIApplication;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 0.1;
 				PLATFORM_MODIFIER = ios;

@@ -20,12 +20,9 @@
 		9A50CCA02B6CA9FC00FDB101 /* libios_unac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50CC9F2B6CA9FC00FDB101 /* libios_unac.a */; };
 		9A50CCA22B6CAA0300FDB101 /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50CCA12B6CAA0300FDB101 /* UniformTypeIdentifiers.framework */; };
 		9A50CDF62B6CB87200FDB101 /* libios_archive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50CDF52B6CB87200FDB101 /* libios_archive.a */; };
-		9A8812F72D1E668E00BBEEF3 /* libios_acme_windowing_kit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8812F52D1E668E00BBEEF3 /* libios_acme_windowing_kit.a */; };
-		9A8812F92D1E668E00BBEEF3 /* libacme_windowing_uikit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8812F62D1E668E00BBEEF3 /* libacme_windowing_uikit.a */; };
-		9A8812FC2D1E669900BBEEF3 /* libinnate_ui_uikit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8812FB2D1E669900BBEEF3 /* libinnate_ui_uikit.a */; };
-		9A8813022D1E66B300BBEEF3 /* libios_nano_graphics_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8813012D1E66B300BBEEF3 /* libios_nano_graphics_quartz2d.a */; };
 		9AAC2145247571180013AB72 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAC2144247571180013AB72 /* libbz2.tbd */; };
 		9AAC214B247571E10013AB72 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEB6A0B1F81DD0400F40B32 /* libiconv.tbd */; };
+		9AB54CCC2D2B835900AFBCB1 /* liboperating_ambient_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADCC2BB2D1E6F3400099200 /* liboperating_ambient_ios.a */; };
 		9AD7E49D2D1E443200D91148 /* _static_factory_.inl in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7E49C2D1E443200D91148 /* _static_factory_.inl */; };
 		9ADCC4482D1E6FA000099200 /* libios_acme_windowing_kit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADCC4462D1E6FA000099200 /* libios_acme_windowing_kit.a */; };
 		9ADCC44A2D1E6FA000099200 /* libacme_windowing_uikit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADCC4472D1E6FA000099200 /* libacme_windowing_uikit.a */; };
@@ -371,10 +368,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AB54CCC2D2B835900AFBCB1 /* liboperating_ambient_ios.a in Frameworks */,
 				9A0E4E902BF4E877007C7253 /* SystemConfiguration.framework in Frameworks */,
 				9A50CDF62B6CB87200FDB101 /* libios_archive.a in Frameworks */,
 				9A50CCA22B6CAA0300FDB101 /* UniformTypeIdentifiers.framework in Frameworks */,
-				9A8812F92D1E668E00BBEEF3 /* libacme_windowing_uikit.a in Frameworks */,
 				9A50CCA02B6CA9FC00FDB101 /* libios_unac.a in Frameworks */,
 				9A50CC982B6CA9F300FDB101 /* libios_acme_darwin.a in Frameworks */,
 				9A50CC9A2B6CA9F300FDB101 /* libios_apex_darwin.a in Frameworks */,
@@ -401,7 +398,6 @@
 				9AE8776D2858ACFE00F88364 /* libios_base.a in Frameworks */,
 				9AE8775E2858ACFC00F88364 /* libios_apex_posix.a in Frameworks */,
 				9A4972262001905400B9C9B2 /* ImageIO.framework in Frameworks */,
-				9A8812FC2D1E669900BBEEF3 /* libinnate_ui_uikit.a in Frameworks */,
 				9A4BE107200018A200DED594 /* Foundation.framework in Frameworks */,
 				9AE8776F2858ACFE00F88364 /* libios_bred.a in Frameworks */,
 				9AE878262858B5D100F88364 /* libcrypto.a in Frameworks */,
@@ -423,12 +419,10 @@
 				9AE877662858ACFD00F88364 /* libios_aura_apple.a in Frameworks */,
 				9AF7615C1F84387F00FDE7CC /* CoreGraphics.framework in Frameworks */,
 				9AE877632858ACFD00F88364 /* libios_aqua.a in Frameworks */,
-				9A8813022D1E66B300BBEEF3 /* libios_nano_graphics_quartz2d.a in Frameworks */,
 				9AE877602858ACFC00F88364 /* libapp_complex_drawing.a in Frameworks */,
 				9AE877792858AD5C00F88364 /* libios_draw2d_quartz2d.a in Frameworks */,
 				9AE877562858ACFB00F88364 /* libios_acme_posix.a in Frameworks */,
 				9AE8777B2858AD5C00F88364 /* libios_experience_core.a in Frameworks */,
-				9A8812F72D1E668E00BBEEF3 /* libios_acme_windowing_kit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1039,8 +1033,12 @@
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/ios/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Complex Drawing!!";
+				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2015-2023 ca2 Desenvolvimento de Software Ltda. All rights reserved.";
+				INFOPLIST_KEY_NSPrincipalClass = UIApplication;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 0.1;
 				PLATFORM_MODIFIER = ios;
@@ -1059,8 +1057,12 @@
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/ios/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Complex Drawing!!";
+				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2015-2023 ca2 Desenvolvimento de Software Ltda. All rights reserved.";
+				INFOPLIST_KEY_NSPrincipalClass = UIApplication;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 0.1;
 				PLATFORM_MODIFIER = ios;

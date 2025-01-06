@@ -8,10 +8,7 @@ do(default_acme_windowing); \
 do(default_innate_ui); \
 do(default_operating_ambient); \
 do(default_windowing); \
-do(experience_core); \
+do(experience_tranquillum); \
 do(database_sqlite3); \
-do(networking_bsd); \
 do(folder_zip); \
-do(crypto_openssl); \
-do(regular_expression_pcre2); \
-do(nano_idn_libidn);
+do(crypto_openssl);
