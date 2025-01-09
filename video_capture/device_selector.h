@@ -39,7 +39,7 @@ namespace app_complex_video_capture
 
       ::user::document * get_document();
 
-      bool on_click(::item * pitem) override;
+      bool on_click(::item * pitem, ::user::mouse * pmouse) override;
 
       void on_layout(::draw2d::graphics_pointer & pgraphics) override;
 

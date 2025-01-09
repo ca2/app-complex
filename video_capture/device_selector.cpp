@@ -299,7 +299,7 @@ namespace app_complex_video_capture
    }
 
 
-   bool device_selector::on_click(::item * pitem)
+   bool device_selector::on_click(::item * pitem, ::user::mouse * pmouse)
    {
 
       auto pdevice = dynamic_cast <::video_input::device *>(pitem);
