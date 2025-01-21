@@ -6,6 +6,8 @@
 #include "acme/parallelization/synchronous_lock.h"
 #if defined(FREEBSD)
 #define __BSD_VISIBLE 1
+#elif defined(OPENBSD)
+#include "clear_cstddef"
 #endif
 #include <dirent.h>
 #include <fcntl.h>
@@ -97,7 +99,7 @@ namespace video_input_video_for_linux
 
 #endif
 
-         if (dp->d_type == DT_DIR)
+         if (dp->d_type & DT_DIR)
          {
 
             continue;

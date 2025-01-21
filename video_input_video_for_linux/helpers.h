@@ -14,7 +14,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#ifdef NETBSD
+#ifdef OPENBSD
+#include <sys/videoio.h>
+#elif defined(NETBSD)
 #include "/usr/pkgsrc/graphics/libv4l/files/videodev2.h"
 #else
 #include <linux/videodev2.h>
