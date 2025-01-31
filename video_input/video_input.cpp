@@ -310,7 +310,7 @@ namespace video_input
    void video_input::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if(ptopic->m_atom == id_video_input_device_added)
+      if(ptopic->id() == id_video_input_device_added)
       {
 
          fork([this]()
@@ -321,7 +321,7 @@ namespace video_input
          });
 
       }
-      else if(ptopic->m_atom == id_video_input_device_removed)
+      else if(ptopic->id() == id_video_input_device_removed)
       {
 
          fork([this]()

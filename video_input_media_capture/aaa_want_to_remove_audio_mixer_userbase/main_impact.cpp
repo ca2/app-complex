@@ -288,13 +288,13 @@ namespace multimedia
          //      void     mmrc;
          ::pointer<control_impact>pinteraction = create_impact < control_impact > (pimpactdata);
          ::pointer<department>user = papp->audiomixeruserbase();
-         if(pimpactdata->m_atom == user->m_atomPlaybackPane)
+         if(pimpactdata->id() == user->m_atomPlaybackPane)
          {
             pinteraction->get_data()->initialize(this);
             pinteraction->get_data()->set_new_device(0);
             pinteraction->get_data()->set_new_destination(::audio_mixer::destination_speakers);
          }
-         else if(pimpactdata->m_atom == user->m_atomRecordingPane)
+         else if(pimpactdata->id() == user->m_atomRecordingPane)
          {
             pinteraction->get_data()->initialize(this);
             pinteraction->get_data()->set_new_device(0);

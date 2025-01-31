@@ -112,7 +112,7 @@ namespace mediaplaylist
 
       control.m_bTransparent              = true;
       control.m_type                  = ::type < ::user::button >();
-      control.m_atom                        = "play_button";
+      control.id()                        = "play_button";
       control.add_function(::user::e_control_function_action);
       control.set_type(::user::e_control_type_button);
 
@@ -509,7 +509,7 @@ namespace mediaplaylist
    void list_impact::_001OnInitializeForm(::pointer<::user::interaction>pinteraction)
    {
       simple_form_list_impact::_001OnInitializeForm(pinteraction);
-      if(pinteraction->descriptor().m_atom == "play_button")
+      if(pinteraction->descriptor().id() == "play_button")
       {
          ::pointer<::user::button>pbutton = pinteraction;
          pbutton->set_button_style(::user::button::style_list);
@@ -526,7 +526,7 @@ namespace mediaplaylist
 
    void list_impact::_001OnButtonAction(::pointer<::user::interaction>pinteraction)
    {
-      if(pinteraction->descriptor().m_atom == "play_button")
+      if(pinteraction->descriptor().id() == "play_button")
       {
 
          info info;

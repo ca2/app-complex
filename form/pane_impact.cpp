@@ -126,7 +126,7 @@ namespace app_complex_form
    void pane_impact::on_create_impact(::user::impact_data * pimpactdata)
    {
 
-      string strId = pimpactdata->m_atom;
+      string strId = pimpactdata->id();
 
       if(strId.case_insensitive_begins_eat("form"))
       {
@@ -159,7 +159,7 @@ namespace app_complex_form
 
          pform->m_iId = (int)iId;
 
-         pform->m_atom = pimpactdata->m_atom;
+         pform->id() = pimpactdata->id();
 
          return;
 
@@ -185,15 +185,15 @@ namespace app_complex_form
       if (m_pdocMenu != nullptr && ptopic->is_about(m_pdocMenu->get_impact(0)))
       {
 
-         if (ptopic->m_atom == ::id_after_change_text)
+         if (ptopic->id() == ::id_after_change_text)
          {
 
 
          }
-         else if (ptopic->m_atom == ::id_set_check && ::is_set(ptopic->m_puserelement))
+         else if (ptopic->id() == ::id_set_check && ::is_set(ptopic->m_puserelement))
          {
 
-            string strCheck = ptopic->m_puserelement->user_interaction()->m_atom;
+            string strCheck = ptopic->m_puserelement->user_interaction()->id();
 
             if (strCheck.case_insensitive_begins_eat("bilbo"))
             {

@@ -86,7 +86,7 @@ namespace app_complex_video_capture
    void pane_impact::on_create_impact(::user::impact_data * pimpactdata)
    {
 
-      if (pimpactdata->m_atom == "device_selector")
+      if (pimpactdata->id() == "device_selector")
       {
 
          create_impact < device_selector >(pimpactdata);
@@ -95,7 +95,7 @@ namespace app_complex_video_capture
       else
       {
 
-         switch (pimpactdata->m_atom.as_int())
+         switch (pimpactdata->id().as_int())
          {
          case MAIN_IMPACT:
          {
@@ -128,7 +128,7 @@ namespace app_complex_video_capture
       {
 
 
-         if (ptopic->m_atom == ::id_load_form_data)
+         if (ptopic->id() == ::id_load_form_data)
          {
 
             ::user::impact * pimpact = m_pformdocumentMenu->get_impact(0);
@@ -164,7 +164,7 @@ namespace app_complex_video_capture
 
          }
 
-         if (ptopic->m_atom == ::id_set_check && ptopic->user_interaction() != nullptr)
+         if (ptopic->id() == ::id_set_check && ptopic->user_interaction() != nullptr)
          {
 
             if (ptopic->m_actioncontext.is_user_source())
@@ -205,7 +205,7 @@ namespace app_complex_video_capture
          }
 
 
-         if(ptopic->m_atom == ::id_after_change_text)
+         if(ptopic->id() == ::id_after_change_text)
          {
 
 

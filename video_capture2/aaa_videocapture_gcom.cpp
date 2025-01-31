@@ -63,7 +63,7 @@ namespace video_capture
 
       ::pointer<::message::create>pcreate(pmessage);
 
-      m_atom = "videocapture_gcom";
+      id() = "videocapture_gcom";
 
       pcreate->previous();
 

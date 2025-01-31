@@ -314,7 +314,7 @@ namespace mediaplay
 
          m_path = m_payloadFile.get_file_path();
 
-         ptopic->m_atom = id_get_topic_wave_player;
+         ptopic->id() = id_get_topic_wave_player;
 
          apply(ptopic);
 

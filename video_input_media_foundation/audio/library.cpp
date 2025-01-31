@@ -22,7 +22,7 @@ namespace audio
    //void library::on_create_impact(::user::impact_data * pimpactdata)
    //{
 
-   //   if(pimpactdata->m_atom == "impact_audio_control")
+   //   if(pimpactdata->id() == "impact_audio_control")
    //   {
    //      ::pointer<::create>cc(e_create);
    //      cc->m_puserinteractionParent = pimpactdata->m_pplaceholder;

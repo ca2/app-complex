@@ -101,7 +101,7 @@ namespace app_complex_video_capture
    void pane_impact::on_create_impact(::user::impact_data * pimpactdata)
    {
 
-      switch(pimpactdata->m_atom)
+      switch(pimpactdata->id())
       {
       case MENU_IMPACT:
       {
@@ -179,11 +179,11 @@ namespace app_complex_video_capture
       if(m_pdocMenu != nullptr && ptopic->is_about(m_pdocMenu->get_impact(0)))
       {
 
-         if(ptopic->m_atom == ::id_after_change_text)
+         if(ptopic->id() == ::id_after_change_text)
          {
 
 
-            if (ptopic->m_atom == ::id_set_check && ptopic->user_interaction() != nullptr)
+            if (ptopic->id() == ::id_set_check && ptopic->user_interaction() != nullptr)
             {
 
                string strCheck = ptopic->user_interaction_id();

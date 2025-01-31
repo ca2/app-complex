@@ -78,14 +78,14 @@ namespace app_complex_drawing
 
       }
 
-      string strId = pimpactdata->m_atom;
+      string strId = pimpactdata->id();
 
       if (strId.case_insensitive_begins_eat("drawing"))
       {
 
          auto pimpact = get_app()->create_simple_drawing_impact(this, pimpactdata);
 
-         pimpact->m_atom = pimpactdata->m_atom;
+         pimpact->id() = pimpactdata->id();
 
          pimpact->m_prender->initialize_simple_drawing(atoi(strId));
 
@@ -104,17 +104,17 @@ namespace app_complex_drawing
       if (ptopic->user_interaction() == get_color_interaction())
       {
 
-         if (ptopic->m_atom == ::id_after_change_cur_sel || ptopic->m_atom == ::id_after_change_cur_hover)
+         if (ptopic->id() == ::id_after_change_cur_sel || ptopic->id() == ::id_after_change_cur_hover)
          {
 
             m_pimpactDrawing->m_prender->m_hlsText = get_color_interaction()->get_sel_color();
 
-            if (ptopic->m_atom == ::id_after_change_cur_sel)
+            if (ptopic->id() == ::id_after_change_cur_sel)
             {
 
                string strId;
 
-               strId = m_pimpactDrawing->m_atom + ".color";
+               strId = m_pimpactDrawing->id() + ".color";
 
                auto pdocument = m_pimpactDrawing->get_document();
 
@@ -137,7 +137,7 @@ namespace app_complex_drawing
                && ptopic->user_interaction_id() == FONTSEL_IMPACT)
       {
 
-         if (ptopic->m_atom == ::id_after_change_cur_sel)
+         if (ptopic->id() == ::id_after_change_cur_sel)
          {
 
             string strFont = get_font_interaction()->get_sel_by_name();
@@ -150,7 +150,7 @@ namespace app_complex_drawing
             }
 
          }
-         else if (ptopic->m_atom == ::id_after_change_cur_hover)
+         else if (ptopic->id() == ::id_after_change_cur_hover)
          {
 
             string strFont = get_font_interaction()->get_hover_by_name();
@@ -251,7 +251,7 @@ namespace app_complex_drawing
 
       }
 
-      if (m_pimpactdataOld && !m_pimpactdataOld->m_atom.begins("drawing"))
+      if (m_pimpactdataOld && !m_pimpactdataOld->id().begins("drawing"))
       {
 
          m_pimpactdataOld->m_pplaceholder->hide();

@@ -91,7 +91,7 @@ namespace app_complex_form
 
       }
 
-      string strId = get_document()->m_pimpactsystem->m_atom;
+      string strId = get_document()->m_pimpactsystem->id();
 
       string strText;
 

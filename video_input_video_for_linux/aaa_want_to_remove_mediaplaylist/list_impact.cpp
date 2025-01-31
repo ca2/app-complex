@@ -132,7 +132,7 @@ namespace mediaplaylist
          pinteraction->m_bTransparent = true;
          pinteraction->m_type = ::type < ::user::button >();
 
-         pinteraction->m_atom = "play_button";
+         pinteraction->id() = "play_button";
          pinteraction->add_function(::user::e_control_function_action);
          pinteraction->set_control_type(::user::e_control_type_button);
 
@@ -212,13 +212,13 @@ namespace mediaplaylist
    void list_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if(ptopic->m_atom == id_initial)
+      if(ptopic->id() == id_initial)
       {
 
          set_need_redraw();
 
       }
-      else if (ptopic->m_atom == id_songs_changed)
+      else if (ptopic->id() == id_songs_changed)
       {
 
          m_listcache._001Invalidate(this);
@@ -227,7 +227,7 @@ namespace mediaplaylist
 
       }
 
-      if (ptopic->m_atom == id_ensure_visible)
+      if (ptopic->id() == id_ensure_visible)
       {
 
          m_bPendingEnsureVisible = true;
@@ -236,8 +236,8 @@ namespace mediaplaylist
 
       auto pdocument = get_document();
 
-      if (ptopic->m_atom == id_current_song_changed
-            || ptopic->m_atom == id_impact_playlist_changed)
+      if (ptopic->id() == id_current_song_changed
+            || ptopic->id() == id_impact_playlist_changed)
       {
 
          m_bPendingEnsureVisible = true;
@@ -253,14 +253,14 @@ namespace mediaplaylist
 
       }
 
-      if (ptopic->m_atom == id_playlist_list_selection_changed)
+      if (ptopic->id() == id_playlist_list_selection_changed)
       {
 
          m_bHighHighLight = pdocument->impact_playlist() == pdocument->playback_playlist();
 
       }
 
-      if(ptopic->m_atom == id_frame_down)
+      if(ptopic->id() == id_frame_down)
       {
 
          if (GetMode() == mode_normal)
@@ -277,7 +277,7 @@ namespace mediaplaylist
          }
 
       }
-      else if(ptopic->m_atom == id_frame_up)
+      else if(ptopic->id() == id_frame_up)
       {
 
          if (GetMode() == mode_minimum)
@@ -300,9 +300,9 @@ namespace mediaplaylist
       ////__update(::update)
       {
 
-         bool bAllUpdates = ptopic->m_atom == id_full;
+         bool bAllUpdates = ptopic->id() == id_full;
 
-         if (bAllUpdates || ptopic->m_atom == id_current_song)
+         if (bAllUpdates || ptopic->id() == id_current_song)
          {
 
             if (pdocument->impact_playlist() != nullptr && pdocument->play_playlist() != nullptr
@@ -315,14 +315,14 @@ namespace mediaplaylist
 
          }
 
-         if (bAllUpdates || ptopic->m_atom == id_get_attachable_impact)
+         if (bAllUpdates || ptopic->id() == id_get_attachable_impact)
          {
 
             pupdate->cast < pointer_array < ::user::impact > > (id_attachable)->add(this);
 
          }
 
-         if(ptopic->m_atom == id_pop)
+         if(ptopic->id() == id_pop)
          {
             ::pointer<::simple_frame_window>pframewnd = (::user::list::get_parent_frame());
             OnActivateFrame(WA_INACTIVE, pframewnd);
@@ -330,7 +330,7 @@ namespace mediaplaylist
             OnActivateImpact(true, this, this);
             set_need_redraw();
          }
-         else if(ptopic->m_atom == id_initial)
+         else if(ptopic->id() == id_initial)
          {
             _001UpdateColumns();
             _001OnUpdateItemCount();
@@ -713,7 +713,7 @@ namespace mediaplaylist
 
       simple_form_list_impact::_001OnInitializeControl(pinteraction);
 
-      if(pinteraction->descriptor().m_atom == "play_button")
+      if(pinteraction->descriptor().id() == "play_button")
       {
          ::pointer<::user::button>pbutton = pinteraction;
          pbutton->set_button_style(::user::button::style_list);
@@ -730,7 +730,7 @@ namespace mediaplaylist
 
    void list_impact::_001OnButtonAction(::pointer<::user::interaction>pinteraction)
    {
-      if(pinteraction->descriptor().m_atom == "play_button")
+      if(pinteraction->descriptor().id() == "play_button")
       {
 
          info info;

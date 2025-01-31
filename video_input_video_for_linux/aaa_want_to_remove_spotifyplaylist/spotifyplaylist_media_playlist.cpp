@@ -155,7 +155,7 @@ namespace mediaplaylist
       }
 
 
-      if(string(papp->m_dataid.m_atom.m_psz).find("&data_source=local&") >= 0)
+      if(string(papp->m_dataid.id().m_psz).find("&data_source=local&") >= 0)
       {
 
          str = pcontext->directory()->userdata() / papp->m_strRelativeFolder / "default.playlist";
@@ -203,7 +203,7 @@ namespace mediaplaylist
    bool media_playlist::GetFolder(::file::path & path)
    {
 
-      if(string(papp->m_dataid.m_atom.m_psz).find("&data_source=local&") >= 0)
+      if(string(papp->m_dataid.id().m_psz).find("&data_source=local&") >= 0)
       {
 
          path = pcontext->directory()->userdata() / papp->m_strRelativeFolder;

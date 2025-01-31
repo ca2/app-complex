@@ -88,7 +88,7 @@ namespace video_capture
    void font_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if(ptopic->m_atom == ::id_click)
+      if(ptopic->id() == ::id_click)
       {
 
          if(ptopic->user_interaction_id() == "switcher_toggle")
@@ -117,7 +117,7 @@ namespace video_capture
          //}
 
       }
-      else if(ptopic->m_atom == ::id_after_change_cur_sel)
+      else if(ptopic->id() == ::id_after_change_cur_sel)
       {
 
          if(m_pimpact == ptopic->user_interaction())

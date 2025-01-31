@@ -270,14 +270,14 @@ namespace app_complex_video_capture
       
       if(ptopic->m_pparticle == get_app()->m_pvideoinput)
       {
-         if(ptopic->m_atom == id_update)
+         if(ptopic->id() == id_update)
          {
             
             update_impact();
          }
          
       }
-      else if (ptopic->m_atom == id_initial_update)
+      else if (ptopic->id() == id_initial_update)
       {
 
          ::pointer<::userex::pane_tab_impact>ppaneimpact = get_typed_parent < ::userex::pane_tab_impact >();

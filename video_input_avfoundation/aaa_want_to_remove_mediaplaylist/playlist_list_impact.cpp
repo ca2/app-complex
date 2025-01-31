@@ -95,7 +95,7 @@ namespace mediaplaylist
 
          pinteraction->m_bTransparent              = true;
          pinteraction->m_type                  = ::type < ::user::button >();
-         pinteraction->m_atom                        = "play_button";
+         pinteraction->id()                        = "play_button";
          pinteraction->add_function(::user::e_control_function_action);
          pinteraction->set_control_type(::user::e_control_type_button);
 
@@ -142,13 +142,13 @@ namespace mediaplaylist
    void playlist_list_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->m_atom == id_initial)
+      if (ptopic->id() == id_initial)
       {
 
          call_subject(id_playlists_changed);
 
       }
-      else if(ptopic->m_atom == id_playlists_changed)
+      else if(ptopic->id() == id_playlists_changed)
       {
 
          __øconstruct(m_plisting);
@@ -337,7 +337,7 @@ namespace mediaplaylist
 
       simple_form_list_impact::_001OnInitializeControl(pinteraction);
 
-      if(pinteraction->descriptor().m_atom == "play_button")
+      if(pinteraction->descriptor().id() == "play_button")
       {
          ::pointer<::user::button>pbutton = pinteraction;
          pbutton->set_button_style(::user::button::style_list);
@@ -355,7 +355,7 @@ namespace mediaplaylist
    void playlist_list_impact::_001OnButtonAction(::pointer<::user::interaction>pinteraction)
    {
 
-      if(pinteraction->descriptor().m_atom == "play_button")
+      if(pinteraction->descriptor().id() == "play_button")
       {
 
          playlist_play(pinteraction->GetEditItem());

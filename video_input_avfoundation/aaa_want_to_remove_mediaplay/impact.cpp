@@ -128,13 +128,13 @@ namespace mediaplay
    void impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-         if (ptopic->m_atom == id_delete_contents)
+         if (ptopic->id() == id_delete_contents)
          {
 
             on_delete_contents();
 
          }
-         else if (ptopic->m_atom == id_pre_close_document)
+         else if (ptopic->id() == id_pre_close_document)
          {
 
             destroy();
@@ -178,21 +178,21 @@ namespace mediaplay
 
 
 
-         if(ptopic->m_atom == id_execute_stop)
+         if(ptopic->id() == id_execute_stop)
          {
 
             _ExecuteStop();
 
          }
-         else if(ptopic->m_atom == id_close_device)
+         else if(ptopic->id() == id_close_device)
          {
             CloseDevice();
          }
-         else if(ptopic->m_atom == id_do_play)
+         else if(ptopic->id() == id_do_play)
          {
             _ExecutePlay(true, ptopic->payload(id_time), false);
          }
-         else if(ptopic->m_atom == id_play_if_not_playing)
+         else if(ptopic->id() == id_play_if_not_playing)
          {
             
             if(!_ExecuteIsPlaying())
@@ -203,7 +203,7 @@ namespace mediaplay
             }
 
          }
-         else if(ptopic->m_atom == id_get_topic_wave_player && pupdate->m_pobjectTopic == nullptr)
+         else if(ptopic->id() == id_get_topic_wave_player && pupdate->m_pobjectTopic == nullptr)
          {
 
             if(get_wave_player() == nullptr)
@@ -218,7 +218,7 @@ namespace mediaplay
             pupdate->m_pobjectTopic = get_wave_player();
 
          }
-         else if(ptopic->m_atom == id_full_screen)
+         else if(ptopic->id() == id_full_screen)
          {
             
             if(ptopic->payload(id_full_screen))
@@ -231,7 +231,7 @@ namespace mediaplay
             }
 
          }
-         else if (ptopic->m_atom == id_after_open_document)
+         else if (ptopic->id() == id_after_open_document)
          {
 
 
@@ -515,7 +515,7 @@ namespace mediaplay
    void impact::_001OnUpdateImpactEncoding(::message::message * pmessage)
    {
       ::pointer<::message::command>pcommand(pmessage);
-      unsigned int dwCodePage = IdToCodePage(pcommand->m_atom);
+      unsigned int dwCodePage = IdToCodePage(pcommand->m_atomCommand);
       if(GetKaraokeCodePage(nullptr) == dwCodePage)
       {
          pcommand->set_check(::e_check_checked);
@@ -531,7 +531,7 @@ namespace mediaplay
    void impact::_001OnShowEncoding(::message::message * pmessage)
    {
       ::pointer<::message::command>pcommand(pmessage);
-      unsigned int dwCodePage = IdToCodePage(pcommand->m_atom);
+      unsigned int dwCodePage = IdToCodePage(pcommand->m_atomCommand);
       SetKaraokeCodePage(dwCodePage);
    }
 

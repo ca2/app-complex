@@ -285,7 +285,7 @@ namespace multimedia
          
          ::user::impact::handle(ptopic, pcontext);
          
-         if(ptopic->m_atom == id_new_destination)
+         if(ptopic->id() == id_new_destination)
          {
 
             //New destination set

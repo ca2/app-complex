@@ -172,7 +172,7 @@ namespace app_complex_form
    void form_002::handle(::topic * ptopic, ::context * pcontext)
    {
 
-//      if (ptopic->m_atom == ::id_click)
+//      if (ptopic->id() == ::id_click)
 //      {
 //
 //         if (ptopic->user_interaction_id() == "send_button")
