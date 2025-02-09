@@ -87,7 +87,7 @@ typedef struct video_output video_t;
 //struct video_data {
 //   unsigned char *data[max_av_planes];
 //   unsigned int linesize[max_av_planes];
-//   huge_natural timestamp;
+//   unsigned long long timestamp;
 //};
 
 struct video_output_info

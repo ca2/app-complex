@@ -38,7 +38,7 @@ EXPORT audio_resampler_t *audio_resampler_create(const struct resample_info *dst
 EXPORT void audio_resampler_destroy(audio_resampler_t *resampler);
 
 EXPORT bool audio_resampler_resample(audio_resampler_t *resampler,
-		 unsigned char *output[], unsigned int *out_frames, huge_natural *ts_offset,
+		 unsigned char *output[], unsigned int *out_frames, unsigned long long *ts_offset,
 		 const unsigned char *const input[], unsigned int in_frames);
 
 #ifdef __cplusplus

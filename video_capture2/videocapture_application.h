@@ -46,8 +46,8 @@ namespace app_complex_video_capture
 
       virtual void on_request(::request * prequest) override;
 
-      virtual huge_integer increment_reference_count();
-      virtual huge_integer decrement_reference_count();
+      virtual long long increment_reference_count();
+      virtual long long decrement_reference_count();
 
    };
 

@@ -89,7 +89,7 @@ bool HDevice::EnsureInactive(const wchar_t *func)
 
 inline void HDevice::SendToCallback(bool video,
 		unsigned char *data, size_t size,
-		huge_integer startTime, huge_integer stopTime)
+		long long startTime, long long stopTime)
 {
 	if (!int_size)
 		return;
@@ -133,7 +133,7 @@ void HDevice::Receive(bool isVideo, IMediaSample *sample)
 	if (FAILED(sample->GetPointer(&ptr)))
 		return;
 
-	huge_integer startTime, stopTime;
+	long long startTime, stopTime;
 	bool hasTime = SUCCEEDED(sample->GetTime(&startTime, &stopTime));
 
 	if (encoded) {

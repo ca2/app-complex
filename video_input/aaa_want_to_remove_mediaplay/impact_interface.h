@@ -200,10 +200,10 @@ namespace mediaplay
       virtual void get_scalar_minimum(e_scalar escalar, double & d) override;
       virtual void get_scalar(e_scalar escalar, double & d) override;
       virtual void get_scalar_maximum(e_scalar escalar, double & d) override;
-      virtual void on_set_scalar(e_scalar escalar,huge_integer iValue,int iFlags) override;
-      virtual void get_scalar_minimum(e_scalar escalar, huge_integer & iValue) override;
-      virtual void get_scalar(e_scalar escalar, huge_integer & iValue) override;
-      virtual void get_scalar_maximum(e_scalar escalar, huge_integer & iValue) override;
+      virtual void on_set_scalar(e_scalar escalar,long long iValue,int iFlags) override;
+      virtual void get_scalar_minimum(e_scalar escalar, long long & iValue) override;
+      virtual void get_scalar(e_scalar escalar, long long & iValue) override;
+      virtual void get_scalar_maximum(e_scalar escalar, long long & iValue) override;
 
       virtual ::duration KaraokeGetLyricsDelay();
 

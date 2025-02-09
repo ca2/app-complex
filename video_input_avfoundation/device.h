@@ -22,7 +22,7 @@ namespace video_input_video_avfoundation
 
 	using subtype_map = string_map < ::int_array >;
 
-	using frame_rate_map = map < huge_natural, subtype_map >;
+	using frame_rate_map = map < unsigned long long, subtype_map >;
 
 	typedef void(*emergensyStopEventCallback)(int, void *);
 

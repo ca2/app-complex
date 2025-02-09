@@ -322,7 +322,7 @@ namespace multimedia_playlist
 
    }
 
-   void playlist::set_int(const ::string & psz, huge_integer iValue)
+   void playlist::set_int(const ::string & psz, long long iValue)
    {
 
       synchronous_lock synchronouslock(papp->mediaplaylist()->mutex());
@@ -332,12 +332,12 @@ namespace multimedia_playlist
    }
 
 
-   huge_integer playlist::get_int(const ::string & psz, huge_integer iDefault)
+   long long playlist::get_int(const ::string & psz, long long iDefault)
    {
 
       synchronous_lock synchronouslock(papp->mediaplaylist()->mutex());
 
-      huge_integer iValue = iDefault;
+      long long iValue = iDefault;
 
       m_setPlaylist[m_path + "." + string(psz)] = iValue;
 

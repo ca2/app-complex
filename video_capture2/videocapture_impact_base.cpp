@@ -143,14 +143,14 @@ namespace app_complex_video_capture
       //pdcScreen->FillSolidRect(10,10,100,100,argb(184,49,184,60));
 
       //pdcScreen->Draw3dRect(200,200,100,100,argb(255,0,255,0),argb(255,0,0,255));
-      //huge_natural endTime = get_nanos();
+      //unsigned long long endTime = get_nanos();
 
-      //huge_natural microsecond = (endTime - startTime) / 1000;
+      //unsigned long long microsecond = (endTime - startTime) / 1000;
 
       //char sz[512];
 
       //informationf("impact:");
-      //::ansi_from_huge_natural(sz, microsecond, 10);
+      //::ansi_from_unsigned_long_long(sz, microsecond, 10);
       //::information(sz);
       //informationf(", ");
 

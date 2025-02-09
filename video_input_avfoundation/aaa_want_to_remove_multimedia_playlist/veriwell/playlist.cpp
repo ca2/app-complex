@@ -364,7 +364,7 @@ namespace multimedia_playlist
       }
 
 
-      void playlist::set_int(const ::string & psz, huge_integer iValue)
+      void playlist::set_int(const ::string & psz, long long iValue)
       {
 
          synchronous_lock synchronouslock(this->synchronization());
@@ -374,7 +374,7 @@ namespace multimedia_playlist
       }
 
 
-      huge_integer playlist::get_int(const ::string & psz, huge_integer iDefault)
+      long long playlist::get_int(const ::string & psz, long long iDefault)
       {
 
          synchronous_lock synchronouslock(this->synchronization());

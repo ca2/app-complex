@@ -12,7 +12,7 @@ struct DShowEncoder {
 
 	const wchar_t          *device;
 	video_format           format;
-	huge_integer              frameInterval;
+	long long              frameInterval;
 
 	bool                   first = true;
 	unsigned char *        firstPacket;
@@ -223,7 +223,7 @@ static void DestroyDShowEncoder(void *data)
 //		frame_sizes[2] = frame->linesize[1] * config.cy() / 2;
 //	}
 //
-//	huge_integer actualPTS = frame->pts * frameInterval;
+//	long long actualPTS = frame->pts * frameInterval;
 //
 //	bool success = encoder.Encode(frame_data, frame_sizes,
 //			actualPTS, actualPTS + frameInterval,

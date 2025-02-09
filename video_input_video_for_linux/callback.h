@@ -54,7 +54,7 @@ namespace video_input_video_for_linux
 
       int	m_iMemory;
 
-      huge_integer m_iTimestamp;
+      long long m_iTimestamp;
       bool        m_bCapturing;
 
 

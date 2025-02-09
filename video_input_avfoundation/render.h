@@ -30,11 +30,11 @@ namespace video_input_video_avfoundation
 
 #ifdef _DEBUG
 
-      huge_integer increment_reference_count() override
+      long long increment_reference_count() override
       {
          return ::object::increment_reference_count();
       }
-      huge_integer decrement_reference_count() override
+      long long decrement_reference_count() override
       {
          return ::object::decrement_reference_count();
       }

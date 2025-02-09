@@ -324,7 +324,7 @@ bool OutputPin::IsValidMediaType(const AM_MEDIA_TYPE *pmt) const
 
 void OutputPin::Send(unsigned char *data[DSHOW_MAX_PLANES],
 		size_t linesize[DSHOW_MAX_PLANES],
-		huge_integer timestampStart, huge_integer timestampEnd)
+		long long timestampStart, long long timestampEnd)
 {
 	ComQIPtr<IMemInputPin> memInput(connectedPin);
 	REFERENCE_TIME startTime = timestampStart;
