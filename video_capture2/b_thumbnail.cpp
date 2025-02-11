@@ -166,7 +166,7 @@ HRESULT CThumbnail::OnReadSample(
    HRESULT hrStatus,
    unsigned int /* dwStreamIndex */,
    unsigned int /* dwStreamFlags */,
-   huge_integer /* llTimestamp */,
+   long long /* llTimestamp */,
    IMFSample *pSample      // Can be nullptr
 )
 {

@@ -40,7 +40,7 @@ static inline const GUID &VideoFormatToSubType(VideoFormat format)
 }
 
 bool CreateDemuxVideoPin(IBaseFilter *demuxFilter, MediaType &mt,
-		long width, long height, huge_integer frameTime,
+		long width, long height, long long frameTime,
 		VideoFormat format)
 {
 	ComQIPtr<IMpeg2Demultiplexer> demuxer(demuxFilter);

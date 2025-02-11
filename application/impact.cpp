@@ -22,7 +22,7 @@ namespace simple_application
    }
 
 
-   huge_integer impact::increment_reference_count()
+   long long impact::increment_reference_count()
    {
 
       return ::user::impact::increment_reference_count();
@@ -30,7 +30,7 @@ namespace simple_application
    }
 
 
-   huge_integer impact::decrement_reference_count()
+   long long impact::decrement_reference_count()
    {
 
       return ::user::impact::increment_reference_count();

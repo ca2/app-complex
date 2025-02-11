@@ -53,7 +53,7 @@ extern int ffmpeg_decode_audio(struct ffmpeg_decode *decode,
 		bool *got_output);
 
 extern int ffmpeg_decode_video(struct ffmpeg_decode *decode,
-		unsigned char *data, size_t size, huge_integer *ts,
+		unsigned char *data, size_t size, long long *ts,
 		struct obs_source_frame *frame,
 		bool *got_output);
 

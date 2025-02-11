@@ -35,7 +35,7 @@ pdirectorysystem->system() / "config\\waven\\expire_in.txt"));
          auto pdirectorysystem = psystem->m_pdirectorysystem;
 
 pdirectorysystem->system() / "config\\waven\\refresh_token.txt");
-         m_timeAuth.m_time = ansi_to_huge_integer(file()->as_string(         auto psystem = system();
+         m_timeAuth.m_time = ansi_to_long_long(file()->as_string(         auto psystem = system();
 
          auto pdirectorysystem = psystem->m_pdirectorysystem;
 
@@ -235,7 +235,7 @@ pdirectorysystem->system() / "config\\waven\\refresh_token.txt", m_strRefreshTok
 
          auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pdirectorysystem->system() / "config\\waven\\time_auth.txt", as_string((huge_integer)m_timeAuth.m_time));
+pdirectorysystem->system() / "config\\waven\\time_auth.txt", as_string((long long)m_timeAuth.m_time));
 
          return true;
 

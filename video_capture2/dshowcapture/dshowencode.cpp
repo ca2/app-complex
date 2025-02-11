@@ -73,7 +73,7 @@ bool VideoEncoder::GetConfig(VideoEncoderConfig &config) const
 
 bool VideoEncoder::Encode(unsigned char *data[DSHOW_MAX_PLANES],
 		size_t linesize[DSHOW_MAX_PLANES],
-		huge_integer timestampStart, huge_integer timestampEnd,
+		long long timestampStart, long long timestampEnd,
 		EncoderPacket &packet, bool &new_packet)
 {
 	if (context->encoder == nullptr)

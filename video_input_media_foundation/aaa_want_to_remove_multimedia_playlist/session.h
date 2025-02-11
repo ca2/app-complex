@@ -67,7 +67,7 @@ namespace multimedia_playlist
       virtual ~session();
 
 
-      huge_integer increment_reference_count() override
+      long long increment_reference_count() override
       {
 
          return ::thread::increment_reference_count();
@@ -75,7 +75,7 @@ namespace multimedia_playlist
       }
 
 
-      huge_integer decrement_reference_count() override
+      long long decrement_reference_count() override
       {
 
          return ::thread::decrement_reference_count();
@@ -83,7 +83,7 @@ namespace multimedia_playlist
       }
 
 
-      huge_integer release() override
+      long long release() override
       {
 
          return ::thread::release();

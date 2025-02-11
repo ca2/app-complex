@@ -1867,7 +1867,7 @@ retry4:
             }
             prop["doc"] = this;
             prop["make_visible"] = true;
-            prop["context"] = (huge_integer) pinfo->m_context.m_esource;
+            prop["context"] = (long long) pinfo->m_context.m_esource;
 
          }
 
@@ -2198,7 +2198,7 @@ retry4:
    }
 
 
-   void impact_interface::on_set_scalar(e_scalar i,huge_integer iValue,int iFlags)
+   void impact_interface::on_set_scalar(e_scalar i,long long iValue,int iFlags)
    {
 
       __UNREFERENCED_PARAMETER(i);
@@ -2206,7 +2206,7 @@ retry4:
 
    }
 
-   void impact_interface::get_scalar_minimum(e_scalar i, huge_integer & iValue)
+   void impact_interface::get_scalar_minimum(e_scalar i, long long & iValue)
    {
 
       __UNREFERENCED_PARAMETER(i);
@@ -2214,7 +2214,7 @@ retry4:
 
    }
 
-   void impact_interface::get_scalar(e_scalar i, huge_integer & iValue)
+   void impact_interface::get_scalar(e_scalar i, long long & iValue)
    {
 
       __UNREFERENCED_PARAMETER(i);
@@ -2222,7 +2222,7 @@ retry4:
 
    }
 
-   void impact_interface::get_scalar_maximum(e_scalar i, huge_integer & iValue)
+   void impact_interface::get_scalar_maximum(e_scalar i, long long & iValue)
    {
 
       __UNREFERENCED_PARAMETER(i);
@@ -2324,9 +2324,9 @@ retry4:
                   if (get_data()->m_emode == ::mediaplay::data::mode_wave && get_wave_player() != nullptr && get_wave_player()->get_out()->get_prebuffer_millis_length() > 5000)
                   {
 
-                     huge_integer iPosition = (huge_integer) ( get_wave_player()->get_out()->out_get_time_for_synch());
+                     long long iPosition = (long long) ( get_wave_player()->get_out()->out_get_time_for_synch());
 
-                     huge_integer iLength = (huge_integer) ( get_wave_player()->get_out()->get_prebuffer_millis_length());
+                     long long iLength = (long long) ( get_wave_player()->get_out()->get_prebuffer_millis_length());
 
                      if (m_dBlend > 0.001 && iPosition - iLength >= -5000)
                      {
@@ -2369,7 +2369,7 @@ retry4:
 
                      }
 
-                     pdocument->playback_playlist()->set_int("current_song_millis", (huge_integer) time);
+                     pdocument->playback_playlist()->set_int("current_song_millis", (long long) time);
 
                      pdocument->playback_playlist()->save();
 
@@ -2450,7 +2450,7 @@ retry4:
                   m_pplaylistdoc->m_bPendingRestart = false;
                   prop["make_visible"] = pinfo->m_bMakeVisible;
                   prop["::duration"] = pinfo->m_time;
-                  prop["context"] = (huge_integer)pinfo->m_context.m_esource;
+                  prop["context"] = (long long)pinfo->m_context.m_esource;
 
                }
 
@@ -2648,7 +2648,7 @@ retry4:
             }
             info.m_bMakeVisible = prop["make_visible"];
             info.m_time = prop["::duration"].get_double();
-            info.m_context += (::e_source) (prop["context"].huge_integer());
+            info.m_context += (::e_source) (prop["context"].long_long);
             info.m_bFadeIn = prop["command"] == "StartFadeIn";
 
          }

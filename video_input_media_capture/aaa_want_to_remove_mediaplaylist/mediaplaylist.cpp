@@ -15,7 +15,7 @@
 namespace mediaplaylist
 {
 
-   static huge_natural g_usedid[] =
+   static unsigned long long g_usedid[] =
    {
 
       id_do_play,
@@ -28,7 +28,7 @@ namespace mediaplaylist
    };
 
    
-   huge_natural* usedid()
+   unsigned long long* usedid()
    {
 
       return g_usedid;

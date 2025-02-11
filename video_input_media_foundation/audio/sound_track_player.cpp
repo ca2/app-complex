@@ -231,7 +231,7 @@ namespace audio
          * m_paudiomixer->audio_get_samples_per_second()
          * m_paudiomixer->audio_get_bits_per_sample()) / 8'000'000'000.0;
 
-      auto iStartOffset = (huge_integer)d;
+      auto iStartOffset = (long long)d;
 
       pplugin->m_iStartOffset = iStartOffset;
 

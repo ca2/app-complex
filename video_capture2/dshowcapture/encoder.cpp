@@ -163,9 +163,9 @@ bool HVideoEncoder::SetupCrossbar()
 
 void HVideoEncoder::InitializeVideoFormat(MediaType &mt)
 {
-	huge_integer frameTime;
+	long long frameTime;
 	unsigned int size;
-	huge_integer bitrate;
+	long long bitrate;
 
 	frameTime = config.fpsDenominator;
 	frameTime *= 10000000;
@@ -421,7 +421,7 @@ void HVideoEncoder::Receive(IMediaSample *s)
 
 bool HVideoEncoder::Encode(unsigned char *data[DSHOW_MAX_PLANES],
 		size_t linesize[DSHOW_MAX_PLANES],
-		huge_integer timestampStart, huge_integer timestampEnd,
+		long long timestampStart, long long timestampEnd,
 		EncoderPacket &packet, bool &new_packet)
 {
 	new_packet = false;
@@ -435,7 +435,7 @@ bool HVideoEncoder::Encode(unsigned char *data[DSHOW_MAX_PLANES],
 	packetMutex.lock();
 	if (packets.size() > 0) {
 		curPacket = transfer(packets.front());
-		huge_integer ptsOut = ptsVals[0];
+		long long ptsOut = ptsVals[0];
 		packets.pop_front();
 		ptsVals.pop_front();
 

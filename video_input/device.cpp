@@ -477,7 +477,7 @@ namespace video_input
 
 		::collection::index iBest = 0;
 
-		huge_integer iScoreMax = 0;
+		long long iScoreMax = 0;
 
 		for (::collection::index i = 0; i < m_mediaformata.get_count(); i++)
 		{
@@ -495,7 +495,7 @@ namespace video_input
          if (iSampleSize == 32)
          {
 
-            huge_integer iScore = pmediaformat->m_size.area() * pmediaformat->m_uFrameRate;
+            long long iScore = pmediaformat->m_size.area() * pmediaformat->m_uFrameRate;
 
             if (iScore > iScoreMax)
             {

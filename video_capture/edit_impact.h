@@ -31,9 +31,9 @@ namespace app_complex_video_capture
 
       bool keyboard_focus_is_focusable() override;
 
-      //virtual huge_integer increment_reference_count();
+      //virtual long long increment_reference_count();
 
-      //virtual huge_integer decrement_reference_count();
+      //virtual long long decrement_reference_count();
 
       //bool is_this_visible(::user::enum_layout elayout = ::user::e_layout_design) override;
 

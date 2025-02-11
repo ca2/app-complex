@@ -2896,7 +2896,7 @@ void frame::copy_from(const frame * src)
 //          : 0.0f;
 //}
 //
-//void obs_source_set_sync_offset(obs_source_t * source, huge_integer
+//void obs_source_set_sync_offset(obs_source_t * source, long long
 //offset)
 //{
 //if (
@@ -2921,7 +2921,7 @@ void frame::copy_from(const frame * src)
 //}
 //}
 //
-//huge_integer obs_source_get_sync_offset(const obs_source_t * source)
+//long long obs_source_get_sync_offset(const obs_source_t * source)
 //{
 //   return obs_source_valid(source, "obs_source_get_sync_offset")
 //          ? source->sync_offset
@@ -4593,7 +4593,7 @@ void frame::copy_from(const frame * src)
 //   obs_source_dosignal(source, NULL, "media_previous");
 //}
 //
-//huge_integer obs_source_media_get_time(obs_source_t * source)
+//long long obs_source_media_get_time(obs_source_t * source)
 //{
 //   if (!m_data_valid(source, "obs_source_media_get_time"))
 //      return 0;
@@ -4604,7 +4604,7 @@ void frame::copy_from(const frame * src)
 //      return 0;
 //}
 //
-//huge_integer obs_source_media_get_time(obs_source_t * source)
+//long long obs_source_media_get_time(obs_source_t * source)
 //{
 //   if (!m_data_valid(source, "obs_source_media_get_time"))
 //      return 0;
@@ -4615,7 +4615,7 @@ void frame::copy_from(const frame * src)
 //      return 0;
 //}
 //
-//void obs_source_media_set_time(obs_source_t * source, huge_integer
+//void obs_source_media_set_time(obs_source_t * source, long long
 //ms)
 //{
 //if (!

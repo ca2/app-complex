@@ -22,7 +22,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   huge_integer simple_os_drag_and_drop::increment_reference_count()
+   long long simple_os_drag_and_drop::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -30,7 +30,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   huge_integer simple_os_drag_and_drop::decrement_reference_count()
+   long long simple_os_drag_and_drop::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();

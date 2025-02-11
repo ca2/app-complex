@@ -20,8 +20,8 @@ struct util_::u32128 {
 	union {
 		unsigned int int[4];
 		struct {
-			huge_natural low;
-			huge_natural high;
+			unsigned long long low;
+			unsigned long long high;
 		};
 	};
 };
@@ -31,7 +31,7 @@ typedef struct util_::u32128 util_::u32128_t;
 static inline util_::u32128_t util_add128(util_::u32128_t a, util_::u32128_t b)
 {
 	util_::u32128_t out;
-	huge_natural val;
+	unsigned long long val;
 
 	val = (a.low & 0xFFFFFFFFULL) + (b.low & 0xFFFFFFFFULL);
 	out.int[0] = (unsigned int)(val & 0xFFFFFFFFULL);
@@ -51,7 +51,7 @@ static inline util_::u32128_t util_add128(util_::u32128_t a, util_::u32128_t b)
 	return out;
 }
 
-static inline util_::u32128_t util_lshift64(huge_natural a, int num)
+static inline util_::u32128_t util_lshift64(unsigned long long a, int num)
 {
 	util_::u32128_t val;
 	val.low = a << num;
@@ -59,10 +59,10 @@ static inline util_::u32128_t util_lshift64(huge_natural a, int num)
 	return val;
 }
 
-static inline util_::u32128_t util_mul64_64(huge_natural a, huge_natural b)
+static inline util_::u32128_t util_mul64_64(unsigned long long a, unsigned long long b)
 {
 	util_::u32128_t out;
-	huge_natural m;
+	unsigned long long m;
 
 	m = (a & 0xFFFFFFFFULL) * (b & 0xFFFFFFFFULL);
 	out.low = m;
@@ -83,7 +83,7 @@ static inline util_::u32128_t util_mul64_64(huge_natural a, huge_natural b)
 static inline util_::u32128_t util_div128_32(util_::u32128_t a, unsigned int b)
 {
 	util_::u32128_t out;
-	huge_natural val = 0;
+	unsigned long long val = 0;
 
 	for (int i = 3; i >= 0; i--) {
 		val = (val << 32) | a.int[i];
