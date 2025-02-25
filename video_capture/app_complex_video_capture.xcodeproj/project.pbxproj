@@ -400,6 +400,7 @@
 				9AEB759F16F78DF10085103B /* Sources */,
 				9AEB75A016F78DF10085103B /* Frameworks */,
 				9AEB75A116F78DF10085103B /* Headers */,
+				9AE2420E2D6DCC3500502593 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -502,6 +503,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9AE2420E2D6DCC3500502593 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ". ${WorkspaceDir}/../operating_system/tool/bin/_on_after_build_dylib\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9AE24E861904CFFD001AEFFB /* Sources */ = {
