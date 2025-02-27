@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		070B8F041B6E53FA00D26137 /* Hello_Multiverse__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */; };
 		9A273D0129CF1AF100CBEB97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A273CFD29CF1AF100CBEB97 /* InfoPlist.strings */; };
+		9A50A8772D71177D00F74CE8 /* libapp_complex_video_capture.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA0D11E2D70F5D100702321 /* libapp_complex_video_capture.dylib */; };
 		9AA0DD682D71033C00702321 /* libacme.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AA0D1122D70F5D100702321 /* libacme.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AA0DD692D71033C00702321 /* libacme_apple.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AA0D1132D70F5D100702321 /* libacme_apple.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AA0DD6A2D71033C00702321 /* libacme_darwin.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AA0D1142D70F5D100702321 /* libacme_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -229,6 +230,7 @@
 				9AAF65B62808724D0067E73F /* libaxis.dylib in Frameworks */,
 				9AAF65B82808724D0067E73F /* libbase.dylib in Frameworks */,
 				9AAF65BA2808724D0067E73F /* libbred.dylib in Frameworks */,
+				9A50A8772D71177D00F74CE8 /* libapp_complex_video_capture.dylib in Frameworks */,
 				9AAF65BC2808724D0067E73F /* libcore.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

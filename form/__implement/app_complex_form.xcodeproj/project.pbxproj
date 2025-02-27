@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9A4E96E72785592F00B74C76 /* libbred.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4E96E62785592F00B74C76 /* libbred.dylib */; };
+		9A50A8762D71176D00F74CE8 /* libapp_complex_form.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA0D1972D70F63F00702321 /* libapp_complex_form.dylib */; };
 		9A8C64C62783EA0D000C8587 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C64C22783EA0D000C8587 /* Images.xcassets */; };
 		9A8C7EEA2783F7D9000C8587 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C7EE92783F7D9000C8587 /* _matter.zip */; };
 		9A9AAE452A2A5DB10075A73B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A8F49CA2A26CED200097EE1 /* InfoPlist.strings */; };
@@ -295,6 +296,7 @@
 				9AC022C82748FAE5006BEBCC /* libcore.dylib in Frameworks */,
 				9A4E96E72785592F00B74C76 /* libbred.dylib in Frameworks */,
 				9AEA1B5D26794642006F4A68 /* libacme.dylib in Frameworks */,
+				9A50A8762D71176D00F74CE8 /* libapp_complex_form.dylib in Frameworks */,
 				9AEA1B5F26794642006F4A68 /* libapex.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
