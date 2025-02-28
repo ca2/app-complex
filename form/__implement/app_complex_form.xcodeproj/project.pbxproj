@@ -10,6 +10,8 @@
 		9A50A8762D71176D00F74CE8 /* libapp_complex_form.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA0D1972D70F63F00702321 /* libapp_complex_form.dylib */; };
 		9A8C64C62783EA0D000C8587 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C64C22783EA0D000C8587 /* Images.xcassets */; };
 		9A8C7EEA2783F7D9000C8587 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C7EE92783F7D9000C8587 /* _matter.zip */; };
+		9A9FE0B82D716B720069DC7E /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA0D18B2D70F63F00702321 /* libacme.dylib */; };
+		9A9FE0B92D716B750069DC7E /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA0D1A32D70F63F00702321 /* libcore.dylib */; };
 		9AA0DD912D71034800702321 /* libacme.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AA0D18B2D70F63F00702321 /* libacme.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AA0DD922D71034800702321 /* libacme_apple.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AA0D18C2D70F63F00702321 /* libacme_apple.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AA0DD932D71034800702321 /* libacme_darwin.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AA0D18D2D70F63F00702321 /* libacme_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -162,6 +164,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A50A8762D71176D00F74CE8 /* libapp_complex_form.dylib in Frameworks */,
+				9A9FE0B82D716B720069DC7E /* libacme.dylib in Frameworks */,
+				9A9FE0B92D716B750069DC7E /* libcore.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +177,7 @@
 			children = (
 				9A7D47A72D7031FB003CF973 /* output */,
 				9A8C61C42783E9A6000C8587 /* __implement */,
+				9A9FE0B72D716B720069DC7E /* Frameworks */,
 				070B8EEB1B6E53F900D26137 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -260,6 +265,13 @@
 				9A8C64C42783EA0D000C8587 /* Info.plist */,
 			);
 			path = macos;
+			sourceTree = "<group>";
+		};
+		9A9FE0B72D716B720069DC7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
