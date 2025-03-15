@@ -24,7 +24,7 @@ namespace mediaplay
    bool record_notify_impact::create_window(::pointer<::user::interaction>pchannel, atom atom)
    {
 
-      pchannel->SetTimer((uptr) this, minimum(m_dwOnTime, m_dwOffTime) / 2, nullptr);
+      pchannel->set_timer((uptr) this, minimum(m_dwOnTime, m_dwOffTime) / 2, nullptr);
 
       return ::user::interaction::create_window(pchannel, atom);
 

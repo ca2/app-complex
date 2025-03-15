@@ -26,17 +26,17 @@ namespace  mediamanager
 
    void album_build_window::start_build()
    {
-      KillTimer(1123);
-      KillTimer(1124);
+      kill_timer(1123);
+      kill_timer(1124);
       m_iPreBuildStep = -1;
-      SetTimer(1122, 30, nullptr);
+      set_timer(1122, 30, nullptr);
    }
 
    void album_build_window::stop_build()
    {
       m_b1123 = false;
-      KillTimer(1123);
-      KillTimer(1124);
+      kill_timer(1123);
+      kill_timer(1124);
    }
 
    void album_build_window::on_timer(::timer * ptimer)
@@ -52,16 +52,16 @@ namespace  mediamanager
          if(!m_palbumbuild->PreBuild(m_iPreBuildStep, true, true))
          {
 
-            KillTimer(1122);
+            kill_timer(1122);
 
          }
 
          m_oswindowCallback->post_message(WM_USER + 1217, 0, -1);
          if(m_iPreBuildStep == -1)
          {
-            KillTimer(1122);
+            kill_timer(1122);
             m_b1123 = true;
-            SetTimer(1123, 30, nullptr);
+            set_timer(1123, 30, nullptr);
          }
       }
       else if(uEvent == 1123)
@@ -69,13 +69,13 @@ namespace  mediamanager
          //::pointer<::mediamanager::album_build>palbumbuild = album_build();
          //if(palbumbuild->m_bBuilt == true)
          //{
-         //   KillTimer(1123);
+         //   kill_timer(1123);
          //   m_b1123 = false;
          //}
          //else
          //{
 
-         //   KillTimer(1124);
+         //   kill_timer(1124);
 
          //   cslock slRead1(&palbumbuild->m_csRead1);
 
@@ -97,9 +97,9 @@ namespace  mediamanager
          //      {
          //         palbumbuild->m_pdatabase->commit_transaction();
          //      }
-         //      KillTimer(1123);
+         //      kill_timer(1123);
          //      m_b1123 = false;
-         //      SetTimer(1124, 50, nullptr);
+         //      set_timer(1124, 50, nullptr);
          //   }
 
          //   if(!palbumbuild->m_pdatabase->in_transaction())
@@ -176,9 +176,9 @@ namespace  mediamanager
          //      {
          //         palbumbuild->m_pdatabase->commit_transaction();
          //      }
-         //      KillTimer(1123);
+         //      kill_timer(1123);
          //      m_b1123 = false;
-         //      SetTimer(1124, 50, nullptr);
+         //      set_timer(1124, 50, nullptr);
          //   }
          //   if(iRemoved > 0 || iAdded > 0)
          //   {
@@ -271,7 +271,7 @@ namespace  mediamanager
          //         palbumbuild->m_pdatabase->commit_transaction();
          //      }
 
-         //      KillTimer(1124);
+         //      kill_timer(1124);
          //      palbumbuild->m_bBuilt = true;
          //      break;
          //   }

@@ -750,7 +750,7 @@ namespace mediaplay
 
             m_dBlend = 0.0;
 
-            KillTimer(ptimer->m_uTimer);
+            kill_timer(ptimer->m_uTimer);
 
             m_etimerFade = e_timer_none;
 
@@ -775,7 +775,7 @@ namespace mediaplay
 
             m_dBlend = 1.0;
 
-            KillTimer(ptimer->m_uTimer);
+            kill_timer(ptimer->m_uTimer);
 
             m_etimerFade = e_timer_none;
 
@@ -1901,17 +1901,17 @@ retry4:
    void impact_interface::StartVisualFadeOut()
    {
 
-      KillTimer(e_timer_audio_visual_fade_out);
+      kill_timer(e_timer_audio_visual_fade_out);
 
-      KillTimer(e_timer_visual_fade_out);
+      kill_timer(e_timer_visual_fade_out);
 
-      KillTimer(e_timer_audio_visual_fade_in);
+      kill_timer(e_timer_audio_visual_fade_in);
 
-      KillTimer(e_timer_visual_fade_in);
+      kill_timer(e_timer_visual_fade_in);
 
       m_durationFadeStart.Now();
 
-      SetTimer(e_timer_visual_fade_out, 50,nullptr);
+      set_timer(e_timer_visual_fade_out, 50,nullptr);
 
       m_etimerFade = e_timer_visual_fade_out;
 
@@ -1921,21 +1921,21 @@ retry4:
    void impact_interface::StartVisualFadeIn(bool bAudio)
    {
 
-      KillTimer(e_timer_audio_visual_fade_out);
-      KillTimer(e_timer_visual_fade_out);
-      KillTimer(e_timer_audio_visual_fade_in);
-      KillTimer(e_timer_visual_fade_in);
+      kill_timer(e_timer_audio_visual_fade_out);
+      kill_timer(e_timer_visual_fade_out);
+      kill_timer(e_timer_audio_visual_fade_in);
+      kill_timer(e_timer_visual_fade_in);
 
       m_durationFadeStart.Now();
 
       if(bAudio)
       {
-         SetTimer(e_timer_audio_visual_fade_in,100,nullptr);
+         set_timer(e_timer_audio_visual_fade_in,100,nullptr);
          m_etimerFade = e_timer_audio_visual_fade_in;
       }
       else
       {
-         SetTimer(e_timer_visual_fade_in,100,nullptr);
+         set_timer(e_timer_visual_fade_in,100,nullptr);
          m_etimerFade = e_timer_visual_fade_in;
       }
 
@@ -1953,12 +1953,12 @@ retry4:
 
       m_durationFadeStart.Now();
 
-      KillTimer(e_timer_audio_visual_fade_out);
-      KillTimer(e_timer_visual_fade_out);
-      KillTimer(e_timer_audio_visual_fade_in);
-      KillTimer(e_timer_visual_fade_in);
+      kill_timer(e_timer_audio_visual_fade_out);
+      kill_timer(e_timer_visual_fade_out);
+      kill_timer(e_timer_audio_visual_fade_in);
+      kill_timer(e_timer_visual_fade_in);
 
-      SetTimer(e_timer_audio_visual_fade_out, 100, nullptr);
+      set_timer(e_timer_audio_visual_fade_out, 100, nullptr);
       m_etimerFade = e_timer_audio_visual_fade_out;
 
       return true;

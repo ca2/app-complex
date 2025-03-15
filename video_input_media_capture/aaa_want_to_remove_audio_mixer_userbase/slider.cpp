@@ -231,7 +231,7 @@ namespace multimedia
 
          update_drawing_objects();
 
-         SetTimer(1317, 100, nullptr);
+         set_timer(1317, 100, nullptr);
 
       }
 
@@ -347,13 +347,13 @@ namespace multimedia
          //    {
          //        SetCapture();
          //        ScrollLineA();
-         //        SetTimer(100, 300, nullptr);
+         //        set_timer(100, 300, nullptr);
          //    }
          //    else if(m_pregionB.PtInRegion(point))
          //    {
          //        SetCapture();
          //        ScrollLineB();
-         //        SetTimer(200, 300, nullptr);
+         //        set_timer(200, 300, nullptr);
          //    }
          else if(rectanglePageA.contains(point))
          {
@@ -361,7 +361,7 @@ namespace multimedia
             {
                SetCapture();
                ScrollPageA();
-               SetTimer(300, 300, nullptr);
+               set_timer(300, 300, nullptr);
             }
          }
          else if(rectanglePageB.contains(point))
@@ -370,7 +370,7 @@ namespace multimedia
             {
                SetCapture();
                ScrollPageB();
-               SetTimer(400, 300, nullptr);
+               set_timer(400, 300, nullptr);
             }
          }
 
@@ -387,14 +387,14 @@ namespace multimedia
          ::pointer<::user::interaction>pwindow = psession->GetCapture();
          ::int_point point = pmouse->m_point;
          screen_to_client()(point);
-         KillTimer(100);
-         KillTimer(110);
-         KillTimer(200);
-         KillTimer(210);
-         KillTimer(300);
-         KillTimer(310);
-         KillTimer(400);
-         KillTimer(410);
+         kill_timer(100);
+         kill_timer(110);
+         kill_timer(200);
+         kill_timer(210);
+         kill_timer(300);
+         kill_timer(310);
+         kill_timer(400);
+         kill_timer(410);
 
          if(pwindow != nullptr && pwindow->get_handle() == get_handle())
          {
@@ -487,28 +487,28 @@ namespace multimedia
          }
          break;
          case 100:
-            KillTimer(ptimer->m_uTimer);
-            SetTimer(110, 10, nullptr);
+            kill_timer(ptimer->m_uTimer);
+            set_timer(110, 10, nullptr);
          case 110:
             ScrollLineA();
             if(m_iPos == m_iRangeMin)
             {
-               KillTimer(110);
+               kill_timer(110);
             }
             break;
          case 200:
-            KillTimer(ptimer->m_uTimer);
-            SetTimer(210, 10, nullptr);
+            kill_timer(ptimer->m_uTimer);
+            set_timer(210, 10, nullptr);
          case 210:
             ScrollLineB();
             if(m_iPos == m_iRangeMax - m_iPageSize)
             {
-               KillTimer(210);
+               kill_timer(210);
             }
             break;
          case 300:
-            KillTimer(ptimer->m_uTimer);
-            SetTimer(310, 10, nullptr);
+            kill_timer(ptimer->m_uTimer);
+            set_timer(310, 10, nullptr);
          case 310:
             GetCursorPos(&point);
             screen_to_client(&point);
@@ -517,19 +517,19 @@ namespace multimedia
             GetPageARect(rectangleX, rectangleTrack, rectangle);
             if(!rectangle.contains(point))
             {
-               KillTimer(310);
+               kill_timer(310);
                break;
             }
             if(m_iPos == m_iRangeMin)
             {
-               KillTimer(ptimer->m_uTimer);
+               kill_timer(ptimer->m_uTimer);
                break;
             }
             ScrollPageA();
             break;
          case 400:
-            KillTimer(ptimer->m_uTimer);
-            SetTimer(410, 10, nullptr);
+            kill_timer(ptimer->m_uTimer);
+            set_timer(410, 10, nullptr);
          case 410:
             GetCursorPos(&point);
             screen_to_client(&point);
@@ -538,18 +538,18 @@ namespace multimedia
             GetPageBRect(rectangleX, rectangleTrack, rectangle);
             if(!rectangle.contains(point))
             {
-               KillTimer(410);
+               kill_timer(410);
                break;
             }
             if(m_iPos == m_iRangeMax - m_iPageSize)
             {
-               KillTimer(410);
+               kill_timer(410);
                break;
             }
             ScrollPageB();
             break;
          default:
-            KillTimer(ptimer->m_uTimer);
+            kill_timer(ptimer->m_uTimer);
             break;
          }
          // trans   ::user::interaction::OnTimer(ptimer->m_uTimer);

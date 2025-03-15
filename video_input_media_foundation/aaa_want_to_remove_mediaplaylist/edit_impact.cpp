@@ -51,7 +51,7 @@ namespace mediaplaylist
       if (ptimer->m_uTimer == 123)
       {
 
-         KillTimer(123);
+         kill_timer(123);
 
          string strText;
 
@@ -81,8 +81,8 @@ namespace mediaplaylist
       //if (pimpact != nullptr)
       //{
 
-      //KillTimer(123);
-      // SetTimer(123, 3000, nullptr);
+      //kill_timer(123);
+      // set_timer(123, 3000, nullptr);
 
 
 

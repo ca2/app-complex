@@ -287,9 +287,9 @@ namespace mediaplay
       ::mediaplay::impact_interface::m_pdocument->m_pmediaplayview = this;
 
 
-      //SetTimer(e_timer_lyric, 40, nullptr); // maximum. 25 fps
-      //SetTimer(10, 784, nullptr);
-      //SetTimer(::timer::hover, 100, nullptr);
+      //set_timer(e_timer_lyric, 40, nullptr); // maximum. 25 fps
+      //set_timer(10, 784, nullptr);
+      //set_timer(::timer::hover, 100, nullptr);
 
       if (top_level_frame() != nullptr)
       {
