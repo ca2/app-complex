@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A2701102D91DDA600D20305 /* libnano2d.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A27010E2D91DD6D00D20305 /* libnano2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A273CE929CF1A9400CBEB97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A273CE529CF1A9400CBEB97 /* InfoPlist.strings */; };
 		9A4424632D72D0DE004246CC /* libacme.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A4424372D72D0CC004246CC /* libacme.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A4424642D72D0FD004246CC /* libacme_apple.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A4424382D72D0CC004246CC /* libacme_apple.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -56,7 +57,6 @@
 		9A4424902D72D12D004246CC /* libapp_complex_drawing.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4424432D72D0CC004246CC /* libapp_complex_drawing.dylib */; };
 		9A8C61C12783E981000C8587 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C61BD2783E981000C8587 /* Images.xcassets */; };
 		9A8C7EEC2783F7EC000C8587 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C7EEB2783F7EB000C8587 /* _matter.zip */; };
-		9A9D2F4A2D73C2ED00469C84 /* libnano_idn_libidn.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9D2F492D73C2ED00469C84 /* libnano_idn_libidn.dylib */; };
 		9A9D30EE2D73CD5900469C84 /* libnano_idn_libidn.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A9D2F492D73C2ED00469C84 /* libnano_idn_libidn.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AAF1FF527CFDF3200D96CB7 /* application_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF1FF427CFDF3200D96CB7 /* application_main.cpp */; };
 /* End PBXBuildFile section */
@@ -72,6 +72,7 @@
 				9A4424642D72D0FD004246CC /* libacme_apple.dylib in CopyFiles */,
 				9A4424652D72D0FD004246CC /* libacme_darwin.dylib in CopyFiles */,
 				9A4424662D72D0FD004246CC /* libacme_macos.dylib in CopyFiles */,
+				9A2701102D91DDA600D20305 /* libnano2d.dylib in CopyFiles */,
 				9A4424672D72D0FD004246CC /* libacme_posix.dylib in CopyFiles */,
 				9A4424682D72D0FD004246CC /* libacme_windowing_appkit.dylib in CopyFiles */,
 				9A4424692D72D0FD004246CC /* libacme_windowing_kit.dylib in CopyFiles */,
@@ -119,6 +120,7 @@
 
 /* Begin PBXFileReference section */
 		070B8EEA1B6E53F900D26137 /* _app_complex_drawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _app_complex_drawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A27010E2D91DD6D00D20305 /* libnano2d.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libnano2d.dylib; sourceTree = "<group>"; };
 		9A273CE629CF1A9400CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		9A4424372D72D0CC004246CC /* libacme.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = "<group>"; };
 		9A4424382D72D0CC004246CC /* libacme_apple.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libacme_apple.dylib; sourceTree = "<group>"; };
@@ -177,7 +179,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A9D2F4A2D73C2ED00469C84 /* libnano_idn_libidn.dylib in Frameworks */,
 				9A44248E2D72D121004246CC /* libacme.dylib in Frameworks */,
 				9A44248F2D72D12A004246CC /* libcore.dylib in Frameworks */,
 				9A4424902D72D12D004246CC /* libapp_complex_drawing.dylib in Frameworks */,
@@ -216,6 +217,7 @@
 		9A4424622D72D0CC004246CC /* time-macos */ = {
 			isa = PBXGroup;
 			children = (
+				9A27010E2D91DD6D00D20305 /* libnano2d.dylib */,
 				9A9D2F492D73C2ED00469C84 /* libnano_idn_libidn.dylib */,
 				9A4424372D72D0CC004246CC /* libacme.dylib */,
 				9A4424382D72D0CC004246CC /* libacme_apple.dylib */,
