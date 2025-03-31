@@ -35,7 +35,7 @@ namespace mediaplaylist
    void tree::_001OnOpenItem(::pointer<::data::tree_item>pitem, const ::action_context & context)
    {
       __UNREFERENCED_PARAMETER(pitem);
-      /*::pointer<::mediaplaylist::tree_item>pitemdata = (::pointer<::mediaplaylist::tree_item>pitem->m_pitemdata;
+      /*::pointer<::mediaplaylist::tree_item>pitem = (::pointer<::mediaplaylist::tree_item>pitem->m_pitemdata;
       if(papp->mediaplaylist::application::m_pmaillist == nullptr)
       {
       create_context cc;
@@ -66,11 +66,11 @@ namespace mediaplaylist
       papp->mediaplaylist::application::m_pmainimpact->on_layout(pgraphics);
       }
 
-      pitemdata->m_paccount->m_pop3.start();
+      pitem->m_paccount->m_pop3.start();
 
-      get_document()->set_account(pitemdata->m_paccount);
+      get_document()->set_account(pitem->m_paccount);
 
-      papp->mediaplaylist::application::m_pmaillist->open_folder(pitemdata->m_strFolder);*/
+      papp->mediaplaylist::application::m_pmaillist->open_folder(pitem->m_strFolder);*/
    }
 
    void tree::_001OnItemExpand(::data::tree_item * pdataitem, const ::action_context & context)
