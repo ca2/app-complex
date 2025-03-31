@@ -14,13 +14,13 @@ namespace mediaplaylist
    }
 
 
-   string item::data_item_get_text(object * pparticle)
+   string item::get_item_text(object * pparticle)
    {
       __UNREFERENCED_PARAMETER(pparticle);
       return m_strName;
    }
 
-   ::collection::index item::data_item_get_image(object * pparticle)
+   ::collection::index item::get_item_image(object * pparticle)
    {
 
       //if(m_ptree->is_selected(this))

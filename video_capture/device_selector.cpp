@@ -330,7 +330,7 @@ namespace app_complex_video_capture
             
             ::pointer < ::video_input::device > pdevice = pitem;
             
-            auto puseritem = user_item(pdevice);
+            auto puseritembase = user_item_base(pdevice);
             
             if (::is_set(puseritem))
             {

@@ -9,7 +9,7 @@ namespace mediaplaylist
 
 
    class CLASS_DECL_APP_CORE_AUDIO item :
-      virtual public ::data::item
+      virtual public ::item
    {
    public:
       
@@ -22,8 +22,8 @@ namespace mediaplaylist
       item(tree * ptree);
 
 
-      string data_item_get_text(object * pparticle);
-      ::collection::index data_item_get_image(object * pparticle);
+      string get_item_text(object * pparticle);
+      ::collection::index get_item_image(object * pparticle);
 
 
 
