@@ -40,7 +40,7 @@ namespace mediaplaylist
    }
 
 
-   void edit_impact::handle(::topic * ptopic, ::context * pcontext)
+   void edit_impact::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
    }

@@ -20,7 +20,7 @@
 //
 
 
-void application_main()
+void application_main(::platform::system * psystem)
 {
 
    app_complex_drawing::application application;

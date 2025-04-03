@@ -133,7 +133,7 @@ namespace video_input_media_foundation
    //}
 
 
-   void render::handle(::topic * ptopic, ::context * pcontext)
+   void render::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
       //if (eupdate == 0)

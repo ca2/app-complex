@@ -44,7 +44,7 @@ namespace video_input
 
 #endif
 
-      void handle(::topic * ptopic, ::context * pcontext) override;
+      void handle(::topic * ptopic, ::handler_context * pcontext) override;
 
       virtual bool start_capture();
 

@@ -74,7 +74,7 @@ namespace mediaplaylist
 
       virtual void _001GetItemText(::user::mesh_item * pitem) override;
       virtual count _001GetItemCount() override;
-      virtual void handle(::topic * ptopic, ::context * pcontext) override;
+      virtual void handle(::topic * ptopic, ::handler_context * pcontext) override;
       virtual bool pre_create_window(::user::system * pusersystem) override;
 //      // void assert_ok() const override;
 //      // void dump(dump_context & dumpcontext) const override;

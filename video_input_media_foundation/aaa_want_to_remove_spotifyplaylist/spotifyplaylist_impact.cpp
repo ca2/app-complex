@@ -37,7 +37,7 @@ namespace mediaplaylist
    }
 #endif //_DEBUG
 
-   void impact::handle(::topic * ptopic, ::context * pcontext)
+   void impact::handle(::topic * ptopic, ::handler_context * pcontext)
    {
       __UNREFERENCED_PARAMETER(pimpact);
       __UNREFERENCED_PARAMETER(eupdate);

@@ -198,7 +198,7 @@ namespace video_input_video_avfoundation
    //}
 
 
-   void render::handle(::topic * ptopic, ::context * pcontext)
+   void render::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
       //if (eupdate == 0)

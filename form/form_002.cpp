@@ -169,7 +169,7 @@ namespace app_complex_form
    }
 
 
-   void form_002::handle(::topic * ptopic, ::context * pcontext)
+   void form_002::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
 //      if (ptopic->id() == ::id_click)

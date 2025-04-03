@@ -139,7 +139,7 @@ namespace mediaplaylist
    }
 
 
-   void playlist_list_impact::handle(::topic * ptopic, ::context * pcontext)
+   void playlist_list_impact::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
       if (ptopic->id() == id_initial)

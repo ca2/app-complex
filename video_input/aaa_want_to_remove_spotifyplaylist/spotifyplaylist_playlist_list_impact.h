@@ -51,8 +51,8 @@ namespace mediaplaylist
 
       virtual void _001GetItemText(::user::mesh_item * pitem);
       virtual count _001GetItemCount();
-      virtual void handle(::topic * ptopic, ::context * pcontext) override;
-      virtual void handle(::topic * ptopic, ::context * pcontext) override;
+      virtual void handle(::topic * ptopic, ::handler_context * pcontext) override;
+      virtual void handle(::topic * ptopic, ::handler_context * pcontext) override;
       virtual bool WndFrameworkDownUpGetUpEnable();
       virtual bool WndFrameworkDownUpGetDownEnable();
       virtual bool TransparentFrameWndDownUpGetDownEnable();

@@ -21,7 +21,7 @@
 
 
 
-void application_main()
+void application_main(::platform::system * psystem)
 {
 
    app_complex_video_capture::application application;

@@ -48,7 +48,7 @@ namespace video_input
 
       virtual bool contains_device_with_hardware_id(const ::string & strHardwareId) const;
 
-      void handle(::topic * ptopic, ::context * pcontext) override;
+      void handle(::topic * ptopic, ::handler_context * pcontext) override;
 
 
    };

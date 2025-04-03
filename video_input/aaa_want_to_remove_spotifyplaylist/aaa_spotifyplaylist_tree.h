@@ -29,7 +29,7 @@ namespace mediaplaylist
 
       virtual void _001OnItemExpand(::data::tree_item * pitem, const ::action_context & action_context);
 
-      virtual void handle(::topic * ptopic, ::context * pcontext) override;
+      virtual void handle(::topic * ptopic, ::handler_context * pcontext) override;
 
       void update_list();
 

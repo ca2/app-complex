@@ -45,7 +45,7 @@ namespace video_input_video_for_linux
 
 		//void initDevices(IMFAttributes * pAttributes);
 
-      void handle(::topic * ptopic, ::context * pcontext) override;
+      void handle(::topic * ptopic, ::handler_context * pcontext) override;
 
 	};
 

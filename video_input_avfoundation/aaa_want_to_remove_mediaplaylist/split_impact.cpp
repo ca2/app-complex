@@ -37,7 +37,7 @@ namespace mediaplaylist
 #endif //_DEBUG
 
 
-   void main_impact::handle(::topic * ptopic, ::context * pcontext)
+   void main_impact::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
       __UNREFERENCED_PARAMETER(ptopic);
@@ -113,7 +113,7 @@ namespace mediaplaylist
 #endif //_DEBUG
 
 
-   void body_impact::handle(::topic * ptopic, ::context * pcontext)
+   void body_impact::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
       __UNREFERENCED_PARAMETER(ptopic);
@@ -189,7 +189,7 @@ namespace mediaplaylist
 #endif //_DEBUG
 
 
-   void right_impact::handle(::topic * ptopic, ::context * pcontext)
+   void right_impact::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
       __UNREFERENCED_PARAMETER(ptopic);

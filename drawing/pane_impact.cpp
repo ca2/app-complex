@@ -98,7 +98,7 @@ namespace app_complex_drawing
    }
 
 
-   void pane_impact::handle(::topic * ptopic, ::context * pcontext)
+   void pane_impact::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
       if (ptopic->user_interaction() == get_color_interaction())

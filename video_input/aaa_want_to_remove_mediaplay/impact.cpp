@@ -125,7 +125,7 @@ namespace mediaplay
    }
 
 
-   void impact::handle(::topic * ptopic, ::context * pcontext)
+   void impact::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
          if (ptopic->id() == id_delete_contents)

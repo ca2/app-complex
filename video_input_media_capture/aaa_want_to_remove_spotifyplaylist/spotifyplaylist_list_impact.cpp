@@ -158,7 +158,7 @@ namespace mediaplaylist
 
    }
 
-   void list_impact::handle(::topic * ptopic, ::context * pcontext)
+   void list_impact::handle(::topic * ptopic, ::handler_context * pcontext)
    {
       __UNREFERENCED_PARAMETER(pimpact);
       if(eupdate == 0)
@@ -237,7 +237,7 @@ namespace mediaplaylist
          {
             _001UpdateColumns();
             _001OnUpdateItemCount();
-            handle(::topic * ptopic, ::context * pcontext);
+            handle(::topic * ptopic, ::handler_context * pcontext);
          }
          break;
          }
@@ -249,10 +249,10 @@ namespace mediaplaylist
    }
 
 
-   void list_impact::handle(::topic * ptopic, ::context * pcontext)
+   void list_impact::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
-      simple_form_list_impact::handle(::topic * ptopic, ::context * pcontext);
+      simple_form_list_impact::handle(::topic * ptopic, ::handler_context * pcontext);
 
       //_001UpdateColumns();
 

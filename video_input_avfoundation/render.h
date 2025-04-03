@@ -42,7 +42,7 @@ namespace video_input_video_avfoundation
 #endif
 
 
-      void handle(::topic * ptopic, ::context * pcontext) override;
+      void handle(::topic * ptopic, ::handler_context * pcontext) override;
 
       void on_create()override;
       void destroy() override;

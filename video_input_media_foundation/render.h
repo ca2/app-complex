@@ -51,7 +51,7 @@ namespace video_input_media_foundation
       //virtual void install_message_routing(::channel* pchannel);
 
 
-      void handle(::topic * ptopic, ::context * pcontext) override;
+      void handle(::topic * ptopic, ::handler_context * pcontext) override;
 
       //::user::document* get_document();
 
