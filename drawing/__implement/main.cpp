@@ -1,33 +1,33 @@
 #include "framework.h"
-#define APPLICATION_NAMESPACE app_core_
+#define APPLICATION_NAMESPACE app_complex_drawing
 #include "acme/inline/application/main.inl"
 
 
-//app_complex_drawing::application g_app_complex_drawing;
+// //app_complex_drawing::application g_app_complex_drawing;
 
-//int __implement()
-//{
-//
-//   auto papp = ___new app_complex_drawing::application();
-//
-//   int iExitCode = papp->__implement();
-//
-//   return iExitCode;
-//
-//}
-//
-//
-//
+// //int __implement()
+// //{
+// //
+// //   auto papp = ___new app_complex_drawing::application();
+// //
+// //   int iExitCode = papp->__implement();
+// //
+// //   return iExitCode;
+// //
+// //}
+// //
+// //
+// //
 
 
-void application_main(::platform::system * psystem)
-{
+// void application_main(::platform::system * psystem)
+// {
 
-   app_complex_drawing::application application;
+//    app_complex_drawing::application application;
 
-   application.application_main();
+//    application.application_main();
 
-}
+// }
 
 
 

@@ -16,6 +16,7 @@
 //
 
 __IMPLEMENT_APPLICATION_RELEASE_TIME(app_complex_form);
+IMPLEMENT_APPLICATION_FACTORY(app_complex_form);
 
 
 namespace app_complex_form
