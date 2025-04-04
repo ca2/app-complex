@@ -183,7 +183,7 @@ namespace multimedia
 
          set_current_tab_by_id(central->m_atomPlaybackPane);
 
-         //::user::impact::handle(ptopic, pcontext);
+         //::user::impact::handle(ptopic, phandlercontext);
 
          m_bInitialized = true;
 
