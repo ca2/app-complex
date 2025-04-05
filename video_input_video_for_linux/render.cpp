@@ -194,7 +194,7 @@ namespace video_input_video_for_linux
    //}
 
 
-   void render::handle(::topic * ptopic, ::handler_context * pcontext)
+   void render::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
       //if (eupdate == 0)

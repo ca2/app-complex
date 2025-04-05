@@ -125,7 +125,7 @@ namespace mediaplaylist
 
    }
 
-   void playlist_list_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   void playlist_list_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
       __UNREFERENCED_PARAMETER(pimpact);
 
@@ -150,10 +150,10 @@ namespace mediaplaylist
    }
 
 
-   void playlist_list_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   void playlist_list_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
-      simple_form_list_impact::handle(::topic * ptopic, ::handler_context * pcontext);
+      simple_form_list_impact::handle(::topic * ptopic, ::handler_context * phandlercontext);
 
    }
 

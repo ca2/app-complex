@@ -153,7 +153,7 @@ namespace app_complex_video_capture
    }
 
 
-   void impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   void impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
       if(ptopic->id() == id_initial_update)

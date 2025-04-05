@@ -39,7 +39,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void main_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   void main_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
       ::user::split_impact::handle(ptopic, phandlercontext);

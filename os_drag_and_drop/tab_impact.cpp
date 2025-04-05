@@ -232,7 +232,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void tab_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   void tab_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
       ////__update(::update)

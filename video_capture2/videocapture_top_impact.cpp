@@ -34,7 +34,7 @@ namespace app_complex_video_capture
    }
 
 
-   void top_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   void top_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
       ::user::split_impact::handle(ptopic, phandlercontext);
    }

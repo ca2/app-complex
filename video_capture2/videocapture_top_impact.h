@@ -25,7 +25,7 @@ namespace app_complex_video_capture
 
       void on_create_split_impact();
 
-      void handle(::topic * ptopic, ::handler_context * pcontext) override;
+      void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
 
       //bool is_this_visible(::user::enum_layout elayout = ::user::e_layout_design) override;
 

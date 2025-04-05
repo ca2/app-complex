@@ -44,7 +44,7 @@ namespace app_complex_form
    //}
 
 
-   void main_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   void main_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
       if (ptopic->id() == ::id_click)
@@ -160,7 +160,7 @@ namespace app_complex_form
    }
 
 
-   //bool main_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   //bool main_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    //{
 
    //   if(ptopic->id() == ::id_click)

@@ -29,7 +29,7 @@ namespace simple_os_drag_and_drop
 
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
 
-      void handle(::topic * ptopic, ::handler_context * pcontext) override;
+      void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
 
       ::user::document * get_document();
 

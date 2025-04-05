@@ -280,7 +280,7 @@ namespace multimedia
 
 
 
-      void control_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+      void control_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
       {
          
          ::user::impact::handle(ptopic, phandlercontext);

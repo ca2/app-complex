@@ -81,7 +81,7 @@ namespace video_input
    }
 
 
-   void render::handle(::topic * ptopic, ::handler_context * pcontext)
+   void render::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
 

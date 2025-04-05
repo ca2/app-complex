@@ -25,9 +25,9 @@ namespace video_capture
 
       void on_create_split_impact();
 
-      virtual void handle(::topic * ptopic, ::handler_context * pcontext) override;
+      virtual void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
 
-      virtual void handle(::topic * ptopic, ::handler_context * pcontext);
+      virtual void handle(::topic * ptopic, ::handler_context * phandlercontext);
 
 
    };

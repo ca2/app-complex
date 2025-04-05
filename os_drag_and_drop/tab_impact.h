@@ -37,7 +37,7 @@ namespace simple_os_drag_and_drop
       bool BaseOnControlEvent(::user::form_window * pimpact,::user::control_event * pevent);
       void on_change_cur_sel() override;
 
-      void handle(::topic * ptopic, ::handler_context * pcontext) override;
+      void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
 
 
       virtual void _001OnNcDraw(::draw2d::graphics_pointer & pgraphics) override;

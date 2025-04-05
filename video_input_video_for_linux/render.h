@@ -44,7 +44,7 @@ namespace video_input_video_for_linux
 #endif
 
 
-      void handle(::topic * ptopic, ::handler_context * pcontext) override;
+      void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
 
       void on_create()override;
       void destroy() override;
