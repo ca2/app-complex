@@ -5,7 +5,7 @@ project(_${PARENT_PROJECT_NAME} CXX)
 
 
 
-list(APPEND application_source application_main.cpp)
+list(APPEND application_source main.cpp)
 
 
 if(MSVC)
