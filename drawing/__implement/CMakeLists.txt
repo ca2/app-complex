@@ -3,7 +3,7 @@ project(_app_complex_drawing CXX)
 
 
 
-list(APPEND application_source application_main.cpp)
+list(APPEND application_source main.cpp)
 
 
 if(MSVC)

@@ -19,6 +19,7 @@
 
 
 __IMPLEMENT_APPLICATION_RELEASE_TIME(app_complex_video_capture);
+IMPLEMENT_APPLICATION_FACTORY(app_complex_video_capture);
 
 
 namespace app_complex_video_capture
