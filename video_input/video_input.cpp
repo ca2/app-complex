@@ -307,7 +307,7 @@ namespace video_input
 	}
 
 
-   void video_input::handle(::topic * ptopic, ::handler_context * pcontext)
+   void video_input::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
       if(ptopic->id() == id_video_input_device_added)

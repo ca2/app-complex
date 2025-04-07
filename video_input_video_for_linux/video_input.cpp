@@ -258,10 +258,10 @@ namespace video_input_video_for_linux
 	}
 
 
-   void video_input::handle(::topic * ptopic, ::handler_context * pcontext)
+   void video_input::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
-      ::video_input::video_input::handle(ptopic, pcontext);
+      ::video_input::video_input::handle(ptopic, phandlercontext);
 
    }
 

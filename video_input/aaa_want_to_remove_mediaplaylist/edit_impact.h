@@ -17,7 +17,7 @@ namespace mediaplaylist
       virtual void _001OnAfterChangeText(const ::action_context & action_context);
       virtual void on_timer(::timer * ptimer);
 
-      void handle(::topic * ptopic, ::handler_context * pcontext);
+      void handle(::topic * ptopic, ::handler_context * phandlercontext);
 
       void install_message_routing(::channel * pchannel) override;
 

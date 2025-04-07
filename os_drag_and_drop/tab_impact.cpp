@@ -232,7 +232,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void tab_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   void tab_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
       ////__update(::update)
@@ -260,8 +260,8 @@ namespace simple_os_drag_and_drop
 
       //}
 
-//      ::userex::pane_tab_impact::handle(ptopic, pcontext);
-      ::user::tab_impact::handle(ptopic, pcontext);
+//      ::userex::pane_tab_impact::handle(ptopic, phandlercontext);
+      ::user::tab_impact::handle(ptopic, phandlercontext);
 
    }
 

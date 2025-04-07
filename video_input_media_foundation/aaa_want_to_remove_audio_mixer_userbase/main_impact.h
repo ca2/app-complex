@@ -92,7 +92,7 @@ namespace multimedia
 
 
          virtual void pre_translate_message(::message::message * pmessage) override;
-         virtual void handle(::topic * ptopic, ::handler_context * pcontext) override;
+         virtual void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
          virtual bool pre_create_window(::user::system * pusersystem) override;
          virtual bool OnNotify(::user::message * pusermessage) override;
 

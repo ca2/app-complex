@@ -263,10 +263,10 @@ namespace app_complex_video_capture
    }
 
 
-   void device_selector::handle(::topic * ptopic, ::handler_context * pcontext)
+   void device_selector::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
-      ::user::impact::handle(ptopic, pcontext);
+      ::user::impact::handle(ptopic, phandlercontext);
       
       if(ptopic->m_pparticle == get_app()->m_pvideoinput)
       {

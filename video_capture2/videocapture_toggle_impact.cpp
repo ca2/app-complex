@@ -28,10 +28,10 @@ namespace app_complex_video_capture
    }
 
 
-   void toggle_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   void toggle_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
-      ::user::impact::handle(ptopic, pcontext);
+      ::user::impact::handle(ptopic, phandlercontext);
 
    }
 

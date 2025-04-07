@@ -169,7 +169,7 @@ namespace app_complex_form
    }
 
 
-   void form_002::handle(::topic * ptopic, ::handler_context * pcontext)
+   void form_002::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
 //      if (ptopic->id() == ::id_click)
@@ -213,7 +213,7 @@ namespace app_complex_form
 //
 //      }
 
-      ::app_simple_form::form_002::handle(ptopic, pcontext);
+      ::app_simple_form::form_002::handle(ptopic, phandlercontext);
 
    }
 

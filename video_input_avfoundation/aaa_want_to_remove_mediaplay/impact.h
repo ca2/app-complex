@@ -30,7 +30,7 @@ namespace mediaplay
 
       void install_message_routing(::channel * pchannel) override;
       virtual bool pre_create_window(::user::system * pusersystem) override;
-      virtual void handle(::topic * ptopic, ::handler_context * pcontext) override;
+      virtual void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
       DECLARE_MESSAGE_HANDLER(on_http_request_response);
       // DECLARE_MESSAGE_HANDLER(on_message_size);

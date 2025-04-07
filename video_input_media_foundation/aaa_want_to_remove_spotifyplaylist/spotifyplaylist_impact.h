@@ -23,7 +23,7 @@ namespace mediaplaylist
 
       ::pointer<::mediaplaylist::document>get_document();
 
-      virtual void handle(::topic * ptopic, ::handler_context * pcontext) override;
+      virtual void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
 
 #ifdef _DEBUG
 //      // void assert_ok() const override;

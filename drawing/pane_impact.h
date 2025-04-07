@@ -32,7 +32,7 @@ namespace app_complex_drawing
 
       void on_change_cur_sel() override;
 
-      void handle(::topic * ptopic, ::handler_context * pcontext) override;
+      void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
 
 
    };
