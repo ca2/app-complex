@@ -17,7 +17,7 @@ namespace audio
       interprocess_handler(const ::string & strApp);
 
 
-      void on_interprocess_call(::payload & payload, const ::string & strObject, const ::string & strMember,property_set & set) override;
+      void on_interprocess_call(::payload & payload, const ::string & strObject, const ::string & strMember,::property_set & set) override;
 
 
       virtual void on_media_playback_start(::file::path pathOrigin, string strTitle,string_array straPerformer, string strAlbum, memory & image, string strUrl);

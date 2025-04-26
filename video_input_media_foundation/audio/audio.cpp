@@ -831,7 +831,7 @@ pdirectorysystem->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".
 
       strKey.trim();
 
-      property_set set;
+      ::property_set set;
 
       set["raw_http"] = true;
 
