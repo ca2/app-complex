@@ -25,7 +25,7 @@
 		9AB54D982D2B964500AFBCB1 /* libios_nano_graphics_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB54D972D2B964500AFBCB1 /* libios_nano_graphics_quartz2d.a */; };
 		9AB54D9A2D2B965000AFBCB1 /* liboperating_ambient_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A45EF952D1E830B008CC280 /* liboperating_ambient_ios.a */; };
 		9AD7E49F2D1E446100D91148 /* _static_factory_.inl in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7E49E2D1E446100D91148 /* _static_factory_.inl */; };
-		9AE8741E2858A4CF00F88364 /* application_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AE873922858A4CC00F88364 /* application_main.cpp */; };
+		9AE8741E2858A4CF00F88364 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AE873922858A4CC00F88364 /* main.cpp */; };
 		9AE8741F2858A4CF00F88364 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9AE8726B2858A4C500F88364 /* _matter.zip */; };
 		9AE874252858A4CF00F88364 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE872732858A4C500F88364 /* Images.xcassets */; };
 		9AE874EF2858A52300F88364 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE874EE2858A52300F88364 /* Launch Screen.storyboard */; };
@@ -338,7 +338,7 @@
 		9AE872722858A4C500F88364 /* wiosapp_core_beatmapper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "wiosapp_core_beatmapper-Info.plist"; path = "../wiosapp_core_beatmapper-Info.plist"; sourceTree = "<group>"; };
 		9AE872732858A4C500F88364 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9AE872752858A4C500F88364 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9AE873922858A4CC00F88364 /* application_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application_main.cpp; sourceTree = "<group>"; };
+		9AE873922858A4CC00F88364 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9AE874EE2858A52300F88364 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		9AE877892858ADBE00F88364 /* libios_acme.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_acme.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE8778A2858ADBE00F88364 /* libios_acme_apple.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_acme_apple.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -627,7 +627,7 @@
 				9A50CC5D2B6CA88300FDB101 /* _____release.xcconfig */,
 				9AE8726B2858A4C500F88364 /* _matter.zip */,
 				9AD7E49E2D1E446100D91148 /* _static_factory_.inl */,
-				9AE873922858A4CC00F88364 /* application_main.cpp */,
+				9AE873922858A4CC00F88364 /* main.cpp */,
 				9AE8726F2858A4C500F88364 /* ios */,
 			);
 			name = __implement;
@@ -954,7 +954,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE8741E2858A4CF00F88364 /* application_main.cpp in Sources */,
+				9AE8741E2858A4CF00F88364 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
