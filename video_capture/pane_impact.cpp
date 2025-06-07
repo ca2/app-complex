@@ -176,7 +176,7 @@ namespace app_complex_video_capture
 
                string strId;
 
-               if (strCheck.case_insensitive_begins_bitten(strId, "video_input_"))
+               if (strCheck.case_insensitive_begins_get_remainder(strId, "video_input_"))
                {
 
                   if (ptopic->user_interaction()->is_checked())
