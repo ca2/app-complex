@@ -3,7 +3,7 @@
 #include "video_input.h"
 #include "device.h"
 #include "acme/parallelization/synchronous_lock.h"
-#include "acme_windows_common/cotaskptr.h"
+#include "acme/operating_system/windows_common/com/cotaskptr.h"
 #include "acme_windows_common/hresult_exception.h"
 #include "app-complex/video_input/media_format.h"
 #include "acme/_operating_system.h"

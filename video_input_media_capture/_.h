@@ -5,7 +5,7 @@
 #include "app-complex/video_input/_.h"
 #include "acme_windows_common/_.h"
 #include "acme_windows_common/_.h"
-#include "acme_windows_common/comptr.h"
+#include "acme/operating_system/windows_common/com/comptr.h"
 #include "acme_windows_common/comptr_array.h"
 #include "acme_windows_common/prop_variant.h"
 
