@@ -9,7 +9,7 @@
 #include "acme/parallelization/synchronous_lock.h"
 #include "acme/platform/keep.h"
 #include "aura/graphics/image/image.h"
-#include "acme_windows_common/hresult_exception.h"
+#include "acme/operating_system/windows_common/com/hresult_exception.h"
 #include <Mferror.h>
 #pragma comment(lib, "mfplat")
 #pragma comment(lib, "mf")

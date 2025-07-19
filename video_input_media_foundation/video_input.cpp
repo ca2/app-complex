@@ -5,7 +5,7 @@
 #include "acme/handler/topic.h"
 #include "acme/parallelization/synchronous_lock.h"
 #include "acme/operating_system/windows_common/com/cotaskptr.h"
-#include "acme_windows_common/hresult_exception.h"
+#include "acme/operating_system/windows_common/com/hresult_exception.h"
 #include "app-complex/video_input/media_format.h"
 #include "acme/_operating_system.h"
 #include <dbt.h>
