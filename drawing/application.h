@@ -31,6 +31,8 @@ namespace app_complex_drawing
 
       void create_options_body(::user::interaction * puserinteractionParent) override;
 
+      ::string draw2d_get_default_implementation_name() override;
+
 
    };
 
