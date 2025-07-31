@@ -72,12 +72,12 @@ namespace mediaplaylist
 
          void delete_contents();
 
-         virtual void set_flag(const ::string & psz,bool bFlag);
-         virtual bool get_flag(const ::string & psz,bool bDefault);
-         virtual void set_int(const ::string & psz,long long iValue);
-         virtual long long get_int(const ::string & psz,long long iDefault);
-         virtual void set_string(const ::string & psz, const ::string & pszValue);
-         virtual string get_string(const ::string & psz, const ::string & pszValue);
+         virtual void set_flag(const ::scoped_string & scopedstr,bool bFlag);
+         virtual bool get_flag(const ::scoped_string & scopedstr,bool bDefault);
+         virtual void set_int(const ::scoped_string & scopedstr,long long iValue);
+         virtual long long get_int(const ::scoped_string & scopedstr,long long iDefault);
+         virtual void set_string(const ::scoped_string & scopedstr, const ::scoped_string & scopedstrValue);
+         virtual string get_string(const ::scoped_string & scopedstr, const ::scoped_string & scopedstrValue);
          virtual bool is_recursive();
          virtual bool is_loop();
          virtual bool is_shuffle();
@@ -126,7 +126,7 @@ namespace mediaplaylist
       ::pointer<::mediaplaylist::player>get_player();
 
 
-      virtual void set_current_playlist(const ::string & pszPath);
+      virtual void set_current_playlist(const ::scoped_string & scopedstrPath);
       virtual string get_current_playlist_path();
       virtual string get_default_playlist_path();
 
@@ -202,7 +202,7 @@ namespace mediaplaylist
 
 
 
-      bool do_save(const ::string & pszPathName, bool bReplace);
+      bool do_save(const ::scoped_string & scopedstrPathName, bool bReplace);
 
       void defer_restart_on_was_playing();
 

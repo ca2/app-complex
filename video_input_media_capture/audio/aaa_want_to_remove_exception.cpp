@@ -6,8 +6,8 @@ namespace multimedia
 {
 
 
-   ::exception(e_exception eexception, const ::e_status & estatus, const ::string & pszMessage) :
-      ::exception(pszMessage, estatus)
+   ::exception(e_exception eexception, const ::e_status & estatus, const ::scoped_string & scopedstrMessage) :
+      ::exception(scopedstrMessage, estatus)
    {
 
       m_eexception = eexception;
@@ -16,8 +16,8 @@ namespace multimedia
    }
 
 
-   //::exception(e_exception eexception, const ::e_status & estatus, void     estatusSecond, const ::string & pszMessage) :
-   //   ::exception(pszMessage, estatus)
+   //::exception(e_exception eexception, const ::e_status & estatus, void     estatusSecond, const ::scoped_string & scopedstrMessage) :
+   //   ::exception(scopedstrMessage, estatus)
    //{
 
    //   m_eexception = eexception;

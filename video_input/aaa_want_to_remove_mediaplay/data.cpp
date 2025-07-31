@@ -192,14 +192,14 @@ namespace mediaplay
             try
             {
 
-               while ((strFrame = ::str::consume_c_quoted_value(psz)).has_character())
+               while ((strFrame = ::str::consume_c_quoted_value(scopedstr)).has_character())
                {
 
                   strFrame.replace("\t", "\n");
 
                   m_straFrame.add(strFrame);
 
-                  ::str::consume_spaces(psz);
+                  ::str::consume_spaces(scopedstr);
 
                }
 
@@ -706,10 +706,10 @@ namespace mediaplay
 
    }
 
-   /*bool data::open_document_no_reserve(const ::string & pszFilePath)
+   /*bool data::open_document_no_reserve(const ::scoped_string & scopedstrFilePath)
    {
 
-   __UNREFERENCED_PARAMETER(pszFilePath);
+   __UNREFERENCED_PARAMETER(scopedstrFilePath);
 
    return false;
 

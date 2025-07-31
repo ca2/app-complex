@@ -172,7 +172,7 @@ pdirectorysystem->system() / "config\\spotify\\client_secret.txt");
 
             const char * pszResponse = strResponse;
 
-            network_payload.parse_network_payload(pszResponse);
+            network_payload.parse_network_payload(scopedstrResponse);
 
             m_strAccessToken = network_payload["access_token"];
             m_strTokenType = network_payload["token_type"];
@@ -295,7 +295,7 @@ pdirectorysystem->system() / "config\\waven\\time_auth.txt", as_string((long lon
 
             const char * pszResponse = strResponse;
 
-            network_payload.parse_network_payload(pszResponse);
+            network_payload.parse_network_payload(scopedstrResponse);
 
          }
          catch (...)

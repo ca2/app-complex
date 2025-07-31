@@ -92,7 +92,7 @@ inline HRESULT SpGetCategoryFromId(const WCHAR * pszCategoryId, ISpObjectTokenCa
 
    if (SUCCEEDED(hr))
    {
-      hr = pcategory->SetId(pszCategoryId, fCreateIfNotExist);
+      hr = pcategory->SetId(scopedstrCategoryId, fCreateIfNotExist);
    }
 
    if (SUCCEEDED(hr))
@@ -133,7 +133,7 @@ BOOL fCreateCategoryIfNotExist = true)
    HRESULT hr;
 
    comptr<ISpObjectTokenCategory> pcategory;
-   hr = SpGetCategoryFromId(pszCategoryId, &pcategory, fCreateCategoryIfNotExist);
+   hr = SpGetCategoryFromId(scopedstrCategoryId, &pcategory, fCreateCategoryIfNotExist);
 
    if (SUCCEEDED(hr))
    {
@@ -141,7 +141,7 @@ BOOL fCreateCategoryIfNotExist = true)
       hr = pcategory->GetDefaultTokenId(&pszTokenId);
       if (SUCCEEDED(hr))
       {
-         hr = SpGetTokenFromId(pszTokenId, ppToken);
+         hr = SpGetTokenFromId(scopedstrTokenId, ppToken);
 
       }
    }
@@ -162,9 +162,9 @@ BOOL fCreateCategoryIfNotExist)
 
    comptr<ISpObjectTokenCategory> pcategory;
 
-   hr = SpGetCategoryFromId(pszCategoryId, &pcategory, fCreateCategoryIfNotExist);
+   hr = SpGetCategoryFromId(scopedstrCategoryId, &pcategory, fCreateCategoryIfNotExist);
 
-   string str(pszLang);
+   string str(scopedstrLang);
 
    str.make_lower();
 
@@ -194,7 +194,7 @@ BOOL fCreateCategoryIfNotExist)
       try
       {
 
-         set.parse_network_payload(pszNetworkPayload);
+         set.parse_network_payload(scopedstrNetworkPayload);
 
       }
       catch (...)
@@ -217,7 +217,7 @@ BOOL fCreateCategoryIfNotExist)
 
    }
 
-   string strAttributes(pszAttributes);
+   string strAttributes(scopedstrAttributes);
 
    string_array straAttributes;
   
@@ -553,7 +553,7 @@ namespace windows
       // Speaks some text.
       // (The input text must not be empty.)
       //--------------------------------------------------------------------
-      bool speaker::speak(const ::string & strLangParam, const ::string & strTextParam, bool bSync)
+      bool speaker::speak(const ::scoped_string & scopedstrLangParam, const ::scoped_string & scopedstrTextParam, bool bSync)
       {
 
          string strLang(strLangParam);
@@ -772,7 +772,7 @@ namespace windows
       // Speaks some text.
       // (The input text must not be empty.)
       //--------------------------------------------------------------------
-      bool speaker::speak(const ::string & strAttributes, const ::string & strLangParam, const ::string & strTextParam, bool bSync)
+      bool speaker::speak(const ::scoped_string & scopedstrAttributes, const ::scoped_string & scopedstrLangParam, const ::scoped_string & scopedstrTextParam, bool bSync)
       {
 
          string strLang(strLangParam);

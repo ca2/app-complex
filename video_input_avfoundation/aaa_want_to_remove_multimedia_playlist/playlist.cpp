@@ -322,50 +322,50 @@ namespace multimedia_playlist
 
    }
 
-   void playlist::set_int(const ::string & psz, long long iValue)
+   void playlist::set_int(const ::scoped_string & scopedstr, long long iValue)
    {
 
       synchronous_lock synchronouslock(papp->mediaplaylist()->mutex());
 
-      m_setPlaylist[m_path + "." + string(psz)] = iValue;
+      m_setPlaylist[m_path + "." + string(scopedstr)] = iValue;
 
    }
 
 
-   long long playlist::get_int(const ::string & psz, long long iDefault)
+   long long playlist::get_int(const ::scoped_string & scopedstr, long long iDefault)
    {
 
       synchronous_lock synchronouslock(papp->mediaplaylist()->mutex());
 
       long long iValue = iDefault;
 
-      m_setPlaylist[m_path + "." + string(psz)] = iValue;
+      m_setPlaylist[m_path + "." + string(scopedstr)] = iValue;
 
       return iValue;
 
    }
 
 
-   void playlist::set_string(const ::string & psz, const ::string & pszValue)
+   void playlist::set_string(const ::scoped_string & scopedstr, const ::scoped_string & scopedstrValue)
    {
 
       synchronous_lock synchronouslock(papp->mediaplaylist()->mutex());
 
-      string strValue(pszValue);
+      string strValue(scopedstrValue);
 
-      m_setPlaylist[m_path + "." + string(psz)] = strValue;
+      m_setPlaylist[m_path + "." + string(scopedstr)] = strValue;
 
    }
 
 
-   string playlist::get_string(const ::string & psz, const ::string & pszDefault)
+   string playlist::get_string(const ::scoped_string & scopedstr, const ::scoped_string & scopedstrDefault)
    {
 
       synchronous_lock synchronouslock(papp->mediaplaylist()->mutex());
 
-      string strValue(pszDefault);
+      string strValue(scopedstrDefault);
 
-      m_setPlaylist[m_path + "." + string(psz)] = strValue;
+      m_setPlaylist[m_path + "." + string(scopedstr)] = strValue;
 
       return strValue;
 

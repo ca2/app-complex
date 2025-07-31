@@ -6,7 +6,7 @@ namespace audio
 {
 
 
-   interprocess_handler::interprocess_handler(const ::string & strApp) :
+   interprocess_handler::interprocess_handler(const ::scoped_string & scopedstrApp) :
       ::interprocess::handler(strApp)
    {
 
@@ -15,7 +15,7 @@ namespace audio
    }
 
 
-   void interprocess_handler::on_interprocess_call(::payload & payload, const ::string & strObject, const ::string & strMember, payload_array & payloada)
+   void interprocess_handler::on_interprocess_call(::payload & payload, const ::scoped_string & scopedstrObject, const ::scoped_string & scopedstrMember, payload_array & payloada)
    {
 
       if(strMember == "register_callback" && payloada.has_elements())

@@ -125,7 +125,7 @@ namespace mediaplaylist
       ::mediaplaylist::player * get_player();
 
 
-      virtual void set_current_playlist(const ::string & pszPath);
+      virtual void set_current_playlist(const ::scoped_string & scopedstrPath);
       virtual string get_current_playlist_path();
       virtual string get_default_playlist_path();
 
@@ -223,7 +223,7 @@ namespace mediaplaylist
 
 
 
-      bool do_save(const ::string & pszPathName, bool bReplace);
+      bool do_save(const ::scoped_string & scopedstrPathName, bool bReplace);
 
       void defer_restart_on_was_playing();
       void defer_check_restart();

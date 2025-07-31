@@ -335,24 +335,24 @@ namespace multimedia_playlist
 
       }
 
-      void playlist::set_flag(const ::string & psz, bool bFlag)
+      void playlist::set_flag(const ::scoped_string & scopedstr, bool bFlag)
       {
 
          synchronous_lock synchronouslock(this->synchronization());
 
-         m_pxmlplaylist->m_xmldoc.get_root()->set_attribute(psz, bFlag);
+         m_pxmlplaylist->m_xmldoc.get_root()->set_attribute(scopedstr, bFlag);
 
       }
 
 
-      bool playlist::get_flag(const ::string & psz, bool bDefault)
+      bool playlist::get_flag(const ::scoped_string & scopedstr, bool bDefault)
       {
 
          synchronous_lock synchronouslock(this->synchronization());
 
          bool bFlag;
 
-         if (!m_pxmlplaylist->m_xmldoc.get_root()->find_attribute(psz, bFlag))
+         if (!m_pxmlplaylist->m_xmldoc.get_root()->find_attribute(scopedstr, bFlag))
          {
 
             return bDefault;
@@ -364,24 +364,24 @@ namespace multimedia_playlist
       }
 
 
-      void playlist::set_int(const ::string & psz, long long iValue)
+      void playlist::set_int(const ::scoped_string & scopedstr, long long iValue)
       {
 
          synchronous_lock synchronouslock(this->synchronization());
 
-         m_pxmlplaylist->m_xmldoc.get_root()->set_attribute(psz, iValue);
+         m_pxmlplaylist->m_xmldoc.get_root()->set_attribute(scopedstr, iValue);
 
       }
 
 
-      long long playlist::get_int(const ::string & psz, long long iDefault)
+      long long playlist::get_int(const ::scoped_string & scopedstr, long long iDefault)
       {
 
          synchronous_lock synchronouslock(this->synchronization());
 
          int iValue;
 
-         if (!m_pxmlplaylist->m_xmldoc.get_root()->find_attribute(psz, iValue))
+         if (!m_pxmlplaylist->m_xmldoc.get_root()->find_attribute(scopedstr, iValue))
             return iDefault;
 
          return iValue;
@@ -389,23 +389,23 @@ namespace multimedia_playlist
       }
 
 
-      void playlist::set_string(const ::string & psz, const ::string & pszValue)
+      void playlist::set_string(const ::scoped_string & scopedstr, const ::scoped_string & scopedstrValue)
       {
 
          synchronous_lock synchronouslock(this->synchronization());
 
-         m_pxmlplaylist->m_xmldoc.get_root()->set_attribute(psz, pszValue);
+         m_pxmlplaylist->m_xmldoc.get_root()->set_attribute(scopedstr, pszValue);
 
       }
 
-      string playlist::get_string(const ::string & psz, const ::string & pszDefault)
+      string playlist::get_string(const ::scoped_string & scopedstr, const ::scoped_string & scopedstrDefault)
       {
 
          synchronous_lock synchronouslock(this->synchronization());
 
          string strValue;
 
-         if (!m_pxmlplaylist->m_xmldoc.get_root()->find_attribute(psz, strValue))
+         if (!m_pxmlplaylist->m_xmldoc.get_root()->find_attribute(scopedstr, strValue))
             return pszDefault;
 
          return strValue;

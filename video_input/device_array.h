@@ -26,8 +26,8 @@ namespace video_input
 		~device_array() override;
 
 
-		virtual device * get_device_by_id2(const ::string & pszMd5);
-		virtual device * get_device_by_name(const ::string & pszMd5);
+		virtual device * get_device_by_id2(const ::scoped_string & scopedstrMd5);
+		virtual device * get_device_by_name(const ::scoped_string & scopedstrMd5);
 
 
       virtual ::item_array & itema();

@@ -52,7 +52,7 @@
 //
 //
 //
-//      virtual LPFN_NEW_MULTIMEDIA_DECODER get_multimedia_decoder_factory(const ::string & pszTitle);
+//      virtual LPFN_NEW_MULTIMEDIA_DECODER get_multimedia_decoder_factory(const ::scoped_string & scopedstrTitle);
 //
 //      inline ::audio_mixer::department *               audiomixer              ()
 //      {

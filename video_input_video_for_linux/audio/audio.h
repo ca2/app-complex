@@ -32,7 +32,7 @@ namespace audio
       virtual void init_instance() override;
 
 
-      virtual LPFN_NEW_MULTIMEDIA_DECODER get_multimedia_decoder_factory(const ::string & pszTitle) override;
+      virtual LPFN_NEW_MULTIMEDIA_DECODER get_multimedia_decoder_factory(const ::scoped_string & scopedstrTitle) override;
 
       inline ::multimedia::file_application * multimedia_file() { return m_pmultimediafile; }
       inline ::wave::wave * audiowave() { return m_pwave; }
@@ -47,7 +47,7 @@ namespace audio
 
       virtual ::file_pointer get_rtp_file(const ::payload & payloadFile) override;
 
-      //virtual void on_song_added(const ::string & strId);
+      //virtual void on_song_added(const ::scoped_string & scopedstrId);
 
       virtual LPWAVEOUT waveout_open(int iChannel, LPAUDIOFORMAT pformat, LPWAVEOUT_CALLBACK pcallback) override;
 
@@ -57,10 +57,10 @@ namespace audio
       virtual ::pointer<::tts::speaker>tts_speaker(); // default tts speaker
       virtual ::pointer<::tts::speaker>trans_speaker(); // default trans speaker
 
-      virtual void speak(const ::string & strText) override;
-      virtual void speak(const ::string & strLang, const ::string & strText, bool bSynch) override;
-      virtual void trans_speak(const ::string & strLang, const ::string & strText, bool bSynch) override;
-      virtual void google_speak(const ::string & strLang, const ::string & strText, bool bSynch) override;
+      virtual void speak(const ::scoped_string & scopedstrText) override;
+      virtual void speak(const ::scoped_string & scopedstrLang, const ::scoped_string & scopedstrText, bool bSynch) override;
+      virtual void trans_speak(const ::scoped_string & scopedstrLang, const ::scoped_string & scopedstrText, bool bSynch) override;
+      virtual void google_speak(const ::scoped_string & scopedstrLang, const ::scoped_string & scopedstrText, bool bSynch) override;
 
 
       virtual void init_multimedia();

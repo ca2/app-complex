@@ -15,9 +15,9 @@ public:
    virtual ~ms_translator_speaker();
 
 
-   virtual bool speak(const ::string & strText);
+   virtual bool speak(const ::scoped_string & scopedstrText);
 
-   virtual bool speak(const ::string & strLang, const ::string & strText, bool bSynch = false);
+   virtual bool speak(const ::scoped_string & scopedstrLang, const ::scoped_string & scopedstrText, bool bSynch = false);
 
    virtual bool stop(string strLang);
 

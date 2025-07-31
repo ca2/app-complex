@@ -21,7 +21,7 @@ namespace multimedia
       virtual ~decoder_plugin();
 
 
-      virtual bool Load(const ::string & pszTitle);
+      virtual bool Load(const ::scoped_string & scopedstrTitle);
       virtual ::multimedia::decoder * NewDecoder();
 
       virtual string GetPluginTitle();

@@ -67,10 +67,10 @@ namespace multimedia_playlist
       virtual ::collection::count get_count();
 
 
-      virtual void set_int(const ::string & psz, long long iValue);
-      virtual long long get_int(const ::string & psz, long long iDefault);
-      virtual void set_string(const ::string & psz, const ::string & pszValue);
-      virtual string get_string(const ::string & psz, const ::string & pszValue);
+      virtual void set_int(const ::scoped_string & scopedstr, long long iValue);
+      virtual long long get_int(const ::scoped_string & scopedstr, long long iDefault);
+      virtual void set_string(const ::scoped_string & scopedstr, const ::scoped_string & scopedstrValue);
+      virtual string get_string(const ::scoped_string & scopedstr, const ::scoped_string & scopedstrValue);
 
 
 

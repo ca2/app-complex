@@ -380,7 +380,7 @@ namespace audio
    }
 
 
-   LPFN_NEW_MULTIMEDIA_DECODER audio::get_multimedia_decoder_factory(const ::string & pszTitle)
+   LPFN_NEW_MULTIMEDIA_DECODER audio::get_multimedia_decoder_factory(const ::scoped_string & scopedstrTitle)
    {
 
       return m_mapMultimediaDecoderFactory[pszTitle];
@@ -593,7 +593,7 @@ namespace audio
    }
 
 
-   void audio::trans_speak(const ::string & strLang, const ::string & strText, bool bSynch)
+   void audio::trans_speak(const ::scoped_string & scopedstrLang, const ::scoped_string & scopedstrText, bool bSynch)
    {
 
       auto pspeaker = trans_speaker();
@@ -652,7 +652,7 @@ namespace audio
       //
       //         ::payload v;
       //
-      //         v.parse_network_payload(psz);
+      //         v.parse_network_payload(scopedstr);
       //
       //         m_strTranslatorToken = v["access_token"];
       //
@@ -785,7 +785,7 @@ pdirectorysystem->system() / "translators/missing2.txt", str);
    }
 
 
-   void audio::google_speak(const ::string & strLang, const ::string & strTextParam, bool bSynch)
+   void audio::google_speak(const ::scoped_string & scopedstrLang, const ::scoped_string & scopedstrTextParam, bool bSynch)
    {
 
       string strText(strTextParam);

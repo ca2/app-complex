@@ -54,7 +54,7 @@ namespace multimedia_playlist
 
          const char * pszResponse = strResponse;
 
-         network_payload.parse_network_payload(pszResponse);
+         network_payload.parse_network_payload(scopedstrResponse);
 
       }
       catch(...)

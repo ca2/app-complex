@@ -6,10 +6,10 @@ namespace mediaplay
 {
 
 
-   single_document_template::single_document_template(const ::string & pszMatter,   ::type pDocClass,   ::type pFrameClass,   ::type pimpactClass ) :
+   single_document_template::single_document_template(const ::scoped_string & scopedstrMatter,   ::type pDocClass,   ::type pFrameClass,   ::type pimpactClass ) :
       m_pActivePlaylistDoc(nullptr),
-      ::user::impact_system(pszMatter, pDocClass, pFrameClass, pimpactClass),
-      ::user::single_document_template(pszMatter, pDocClass, pFrameClass, pimpactClass)
+      ::user::impact_system(scopedstrMatter, pDocClass, pFrameClass, pimpactClass),
+      ::user::single_document_template(scopedstrMatter, pDocClass, pFrameClass, pimpactClass)
    {
 
       load_template();

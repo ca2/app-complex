@@ -792,42 +792,42 @@ namespace mediaplaylist
 
    }
 
-   void document::data::set_flag(const ::string & psz, bool bFlag)
+   void document::data::set_flag(const ::scoped_string & scopedstr, bool bFlag)
    {
 
-      m_xmldoc.get_root()->set_attr(psz,bFlag);
+      m_xmldoc.get_root()->set_attr(scopedstr,bFlag);
 
    }
 
-   bool document::data::get_flag(const ::string & psz, bool bDefault)
+   bool document::data::get_flag(const ::scoped_string & scopedstr, bool bDefault)
    {
       bool bFlag;
-      if(!m_xmldoc.get_root()->get_attr(psz,bFlag))
+      if(!m_xmldoc.get_root()->get_attr(scopedstr,bFlag))
          return bFlag;
    }
 
-   void document::data::set_int(const ::string & psz, long long iValue)
+   void document::data::set_int(const ::scoped_string & scopedstr, long long iValue)
    {
-      m_xmldoc.get_root()->set_attr(psz, iValue);
+      m_xmldoc.get_root()->set_attr(scopedstr, iValue);
    }
 
-   long long document::data::get_int(const ::string & psz, long long iDefault)
+   long long document::data::get_int(const ::scoped_string & scopedstr, long long iDefault)
    {
       int iValue;
-      if(!m_xmldoc.get_root()->get_attr(psz,iValue))
+      if(!m_xmldoc.get_root()->get_attr(scopedstr,iValue))
          return iDefault;
       return iValue;
    }
 
-   void document::data::set_string(const ::string & psz, const ::string & pszValue)
+   void document::data::set_string(const ::scoped_string & scopedstr, const ::scoped_string & scopedstrValue)
    {
-      m_xmldoc.get_root()->set_attr(psz, pszValue);
+      m_xmldoc.get_root()->set_attr(scopedstr, pszValue);
    }
 
-   string document::data::get_string(const ::string & psz, const ::string & pszDefault)
+   string document::data::get_string(const ::scoped_string & scopedstr, const ::scoped_string & scopedstrDefault)
    {
       string strValue;
-      if(!m_xmldoc.get_root()->get_attr(psz, strValue))
+      if(!m_xmldoc.get_root()->get_attr(scopedstr, strValue))
          return pszDefault;
       return strValue;
    }
@@ -939,7 +939,7 @@ namespace mediaplaylist
    }
 
 
-   void document::set_current_playlist(const ::string & pszPath)
+   void document::set_current_playlist(const ::scoped_string & scopedstrPath)
    {
       datastream()->set("current_playlist", pszPath);
    }
@@ -1003,7 +1003,7 @@ namespace mediaplaylist
 
    }
 
-   bool document::do_save(const ::string & pszPathName, bool bReplace)
+   bool document::do_save(const ::scoped_string & scopedstrPathName, bool bReplace)
    // Save the document_interface data to a file
    // lpszPathName = path name where to save document_interface file
    // if lpszPathName is nullptr then the ::account::user will be prompted (SaveAs)
@@ -1035,7 +1035,7 @@ namespace mediaplaylist
 
       //bool bEdit;
 
-      //if(string_begins_ci(pszPathName, "uifs://") && iEditSize < iXmlSize)
+      //if(string_begins_ci(scopedstrPathName, "uifs://") && iEditSize < iXmlSize)
       //{
       //   pfile = memfileEdit;
       //   bEdit = true;
@@ -1092,7 +1092,7 @@ namespace mediaplaylist
 //
 //      if(!on_save_document(newName))
 //      {
-//         //if(pszPathName == nullptr)
+//         //if(scopedstrPathName == nullptr)
 //         //{
 //         //   // be sure to delete the file
 //         //   try

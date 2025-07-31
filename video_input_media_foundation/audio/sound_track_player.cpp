@@ -97,22 +97,22 @@ namespace audio
    }
 
 
-   string sound_track_player::sound_path(const ::string & psz)
+   string sound_track_player::sound_path(const ::scoped_string & scopedstr)
    {
 
       if (papp->m_pgame)
       {
 
-         return papp->m_pgame->sound_path(psz);
+         return papp->m_pgame->sound_path(scopedstr);
 
       }
 
-      return papp->sound_path(psz);
+      return papp->sound_path(scopedstr);
 
    }
 
 
-   file_pointer sound_track_player::sound_file(const ::string & psz)
+   file_pointer sound_track_player::sound_file(const ::scoped_string & scopedstr)
    {
 
       //file_pointer & file = m_mapFile[psz];
@@ -121,7 +121,7 @@ namespace audio
       //if(!file.is_set())
       {
 
-         file_pointer fileSrc = file()->get_file(sound_path(psz), ::file::e_open_binary | ::file::e_open_read | ::file::e_open_share_deny_write);
+         file_pointer fileSrc = file()->get_file(sound_path(scopedstr), ::file::e_open_binary | ::file::e_open_read | ::file::e_open_share_deny_write);
 
          pfile->get_memory()->set_size((memsize) fileSrc->get_size());
 
@@ -134,7 +134,7 @@ namespace audio
    }
 
 
-   ::pointer<::object>sound_track_player::sound_plugin(const ::string & psz, bool bForceCreate)
+   ::pointer<::object>sound_track_player::sound_plugin(const ::scoped_string & scopedstr, bool bForceCreate)
    {
 
       synchronous_lock synchronouslock(this->synchronization());
@@ -171,7 +171,7 @@ namespace audio
 
       ::pointer<::audio::decoder>pdecoder = m_pdecoderplugin->NewDecoder();
 
-      pdecoder->multimedia_open(sound_file(psz));
+      pdecoder->multimedia_open(sound_file(scopedstr));
 
       pdecoder->m_bLoop = false;
 
@@ -272,12 +272,12 @@ namespace audio
    }
 
 
-   void sound_track_player::mix(const ::string & psz)
+   void sound_track_player::mix(const ::scoped_string & scopedstr)
    {
 
       synchronous_lock synchronouslock(this->synchronization());
 
-      string str(psz);
+      string str(scopedstr);
 
       str.case_insensitive_begins_eat("wait:");
 

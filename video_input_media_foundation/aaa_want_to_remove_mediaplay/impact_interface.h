@@ -152,7 +152,7 @@ namespace mediaplay
       virtual void CopyLinkLocation();
 
       virtual void SetKaraokeCodePage(unsigned int dw);
-      virtual unsigned int IdToCodePage(const ::string & pszCommandId);
+      virtual unsigned int IdToCodePage(const ::scoped_string & scopedstrCommandId);
       virtual unsigned int GetKaraokeCodePage(const ::string & lpsz);
 
 

@@ -107,7 +107,7 @@ namespace video_input
 	//}
 
 
-	device * device_array::get_device_by_id2(const ::string & pszMd5)
+	device * device_array::get_device_by_id2(const ::scoped_string & scopedstrMd5)
 	{
 
 		synchronous_lock synchronouslock(this->synchronization());
@@ -117,7 +117,7 @@ namespace video_input
 
          ::pointer < ::video_input::device > pdevice = pitem;
 
-			if (pdevice->get_id2().case_insensitive_order(pszMd5) == 0)
+			if (pdevice->get_id2().case_insensitive_order(scopedstrMd5) == 0)
 			{
 
 				return pdevice;
@@ -131,7 +131,7 @@ namespace video_input
 	}
 	
 	
-	device * device_array::get_device_by_name(const ::string & pszName)
+	device * device_array::get_device_by_name(const ::scoped_string & scopedstrName)
 	{
 
 		synchronous_lock synchronouslock(this->synchronization());
@@ -142,7 +142,7 @@ namespace video_input
 
          ::pointer < ::video_input::device > pdevice = pitem;
 
-			if (pdevice->get_name().case_insensitive_order(pszName) == 0)
+			if (pdevice->get_name().case_insensitive_order(scopedstrName) == 0)
 			{
 
 				return pdevice;

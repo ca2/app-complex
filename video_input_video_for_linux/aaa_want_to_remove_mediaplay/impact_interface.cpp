@@ -950,9 +950,9 @@ namespace mediaplay
 
    }
 
-   unsigned int impact_interface::IdToCodePage(const ::string & psz)
+   unsigned int impact_interface::IdToCodePage(const ::scoped_string & scopedstr)
    {
-      __UNREFERENCED_PARAMETER(psz);
+      __UNREFERENCED_PARAMETER(scopedstr);
       ASSERT(false);
       //unsigned_int_array dwa;
       return 0xffffffff;

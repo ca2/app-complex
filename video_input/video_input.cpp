@@ -261,7 +261,7 @@ namespace video_input
    }
 
 
-	device * video_input::find_device_with_hardware_id(const ::string & strHardwareId) const
+	device * video_input::find_device_with_hardware_id(const ::scoped_string & scopedstrHardwareId) const
 	{
 
       if (!m_pitemaDevice)
@@ -290,7 +290,7 @@ namespace video_input
 	}
 
 
-	bool video_input::contains_device_with_hardware_id(const ::string & strHardwareId) const
+	bool video_input::contains_device_with_hardware_id(const ::scoped_string & scopedstrHardwareId) const
 	{
 
 		auto pdevice = find_device_with_hardware_id(strHardwareId);

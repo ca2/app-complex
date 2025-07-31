@@ -40,7 +40,7 @@
 //       virtual void init_instance() override;
 
 
-//       virtual LPFN_NEW_MULTIMEDIA_DECODER get_multimedia_decoder_factory(const ::string & pszTitle);
+//       virtual LPFN_NEW_MULTIMEDIA_DECODER get_multimedia_decoder_factory(const ::scoped_string & scopedstrTitle);
 
 //       inline ::multimedia::file_application * multimedia_file() { return m_pmultimediafile; }
 //       inline ::audio::wave * audiowave() { return m_paudiowave; }

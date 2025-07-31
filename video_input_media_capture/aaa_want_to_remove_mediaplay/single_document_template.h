@@ -17,7 +17,7 @@ namespace mediaplay
       playlist_document * m_pActivePlaylistDoc;
 
 
-      single_document_template(const ::string & pszMatter, ::type pDocClass, ::type pFrameClass, ::type pimpactClass );
+      single_document_template(const ::scoped_string & scopedstrMatter, ::type pDocClass, ::type pFrameClass, ::type pimpactClass );
       virtual ~single_document_template();
 
       

@@ -161,7 +161,7 @@ namespace video_input_video_for_linux
 		::pointer<thread>							m_pthread;
 
 
-		device(::collection::index iDevice, const ::string & strName, const ::string & strDevice, const ::string & strHardwareId);
+		device(::collection::index iDevice, const ::scoped_string & scopedstrName, const ::scoped_string & scopedstrDevice, const ::scoped_string & scopedstrHardwareId);
 		~device(void) override;
 
 

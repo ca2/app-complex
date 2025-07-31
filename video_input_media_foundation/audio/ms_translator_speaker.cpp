@@ -20,7 +20,7 @@ ms_translator_speaker::~ms_translator_speaker()
 }
 
 
-bool ms_translator_speaker::speak(const ::string & strText)
+bool ms_translator_speaker::speak(const ::scoped_string & scopedstrText)
 {
 
    bool bOk = speak("en", strText);
@@ -30,7 +30,7 @@ bool ms_translator_speaker::speak(const ::string & strText)
 }
 
 
-bool ms_translator_speaker::speak(const ::string & strLangParam, const ::string & strTextParam, bool bSynch)
+bool ms_translator_speaker::speak(const ::scoped_string & scopedstrLangParam, const ::scoped_string & scopedstrTextParam, bool bSynch)
 {
 
    string strLang(strLangParam);
@@ -165,7 +165,7 @@ retry:
 
          set["headers"]["accept"] = "application/network_payload";
          //         set["headers"]["content-type"] = "application/x-www-form-urlencoded";
-         set["headers"]["Ocp-Apim-Subscription-Key"] = string(pszKey1);
+         set["headers"]["Ocp-Apim-Subscription-Key"] = string(scopedstrKey1);
 
          //set["post"]["code"]= "# code=\"" + strCode + "\"";
          set["post"]["network_payload"] = "{body}";
@@ -178,7 +178,7 @@ retry:
 
       //::payload v;
 
-      //v.parse_network_payload(psz);
+      //v.parse_network_payload(scopedstr);
 
       //m_strTranslatorToken = v["access_token"];
 

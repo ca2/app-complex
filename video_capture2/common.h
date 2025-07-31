@@ -48,7 +48,7 @@ public:
    }
 
 
-   virtual int aura_data_get_int(const ::string & pszKey) { return 0; }
+   virtual int aura_data_get_int(const ::scoped_string & scopedstrKey) { return 0; }
 
 };
 

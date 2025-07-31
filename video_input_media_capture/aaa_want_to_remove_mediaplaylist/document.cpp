@@ -1896,7 +1896,7 @@ retry0:
    }
 
 
-   void document::set_current_playlist(const ::string & pszPath)
+   void document::set_current_playlist(const ::scoped_string & scopedstrPath)
    {
 
       set("current_playlist", pszPath);
@@ -1944,7 +1944,7 @@ retry0:
 
 
 
-   bool document::do_save(const ::string & pszPathName, bool bReplace)
+   bool document::do_save(const ::scoped_string & scopedstrPathName, bool bReplace)
    // Save the document_interface data to a file
    // lpszPathName = path name where to save document_interface file
    // if lpszPathName is nullptr then the ::account::user will be prompted (SaveAs)
@@ -1976,7 +1976,7 @@ retry0:
 
       //bool bEdit;
 
-      //if(string_begins_ci(pszPathName, "uifs://") && iEditSize < iXmlSize)
+      //if(string_begins_ci(scopedstrPathName, "uifs://") && iEditSize < iXmlSize)
       //{
       //   pfile = memfileEdit;
       //   bEdit = true;
@@ -2033,7 +2033,7 @@ retry0:
 //
 //      if(!on_save_document(newName))
 //      {
-//         //if(pszPathName == nullptr)
+//         //if(scopedstrPathName == nullptr)
 //         //{
 //         //   // be sure to delete the file
 //         //   try

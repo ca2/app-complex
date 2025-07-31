@@ -641,22 +641,22 @@ HRESULT CaptureManager::StartRecord(PCWSTR pszDestinationFile)
       return MF_E_INVALIDREQUEST;
    }
 
-   PWSTR pszExt = PathFindExtensionW(pszDestinationFile);
+   PWSTR pszExt = PathFindExtensionW(scopedstrDestinationFile);
 
    GUID guidVideoEncoding;
    GUID guidAudioEncoding;
 
-   if (wcscmp(pszExt, L".mp4") == 0)
+   if (wcscmp(scopedstrExt, L".mp4") == 0)
    {
       guidVideoEncoding = MFVideoFormat_H264;
       guidAudioEncoding = MFAudioFormat_AAC;
    }
-   else if (wcscmp(pszExt, L".wmv") == 0)
+   else if (wcscmp(scopedstrExt, L".wmv") == 0)
    {
       guidVideoEncoding = MFVideoFormat_WMV3;
       guidAudioEncoding = MFAudioFormat_WMAudioV9;
    }
-   else if (wcscmp(pszExt, L".wma") == 0)
+   else if (wcscmp(scopedstrExt, L".wma") == 0)
    {
       guidVideoEncoding = GUID_NULL;
       guidAudioEncoding = MFAudioFormat_WMAudioV9;
@@ -695,7 +695,7 @@ HRESULT CaptureManager::StartRecord(PCWSTR pszDestinationFile)
       goto done;
    }
 
-   hr = pRecord->SetOutputFileName(pszDestinationFile);
+   hr = pRecord->SetOutputFileName(scopedstrDestinationFile);
    if (FAILED(hr))
    {
       goto done;
@@ -809,7 +809,7 @@ HRESULT CaptureManager::TakePhoto(PCWSTR pszFileName)
       goto done;
    }
 
-   hr = pPhoto->SetOutputFileName(pszFileName);
+   hr = pPhoto->SetOutputFileName(scopedstrFileName);
    if (FAILED(hr))
    {
       goto done;

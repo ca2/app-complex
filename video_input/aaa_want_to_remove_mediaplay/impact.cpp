@@ -7,7 +7,7 @@
 #include <locale.h>
 
 
-double str_to_double(const ::string & str)
+double str_to_double(const ::scoped_string & scopedstr)
 {
 
    string strAlternate(str);
@@ -19,7 +19,7 @@ double str_to_double(const ::string & str)
 }
 #else
 
-double str_to_double(const ::string & str)
+double str_to_double(const ::scoped_string & scopedstr)
 {
 
    return atof(str);

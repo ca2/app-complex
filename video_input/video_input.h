@@ -44,9 +44,9 @@ namespace video_input
 
       void on_device_unplugged(::hardware::enum_device edevice) override;
 
-      virtual device * find_device_with_hardware_id(const ::string & strHardwareId) const;
+      virtual device * find_device_with_hardware_id(const ::scoped_string & scopedstrHardwareId) const;
 
-      virtual bool contains_device_with_hardware_id(const ::string & strHardwareId) const;
+      virtual bool contains_device_with_hardware_id(const ::scoped_string & scopedstrHardwareId) const;
 
       void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
 

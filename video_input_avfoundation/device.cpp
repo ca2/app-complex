@@ -13,7 +13,7 @@ namespace video_input_video_avfoundation
 
 
 
-	device::device(::collection::index iIndex, const ::string & strName, const ::string & strDevice, const ::string & strHardwareId) :
+	device::device(::collection::index iIndex, const ::scoped_string & scopedstrName, const ::scoped_string & scopedstrDevice, const ::scoped_string & scopedstrHardwareId) :
    m_iIndex(iIndex),
    m_strDevice(strDevice)
 	{

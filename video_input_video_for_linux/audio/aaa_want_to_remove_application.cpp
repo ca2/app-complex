@@ -43,7 +43,7 @@
 //   try
 //   {
 //
-//      v.parse_network_payload(pszJson);
+//      v.parse_network_payload(scopedstrJson);
 //
 //   }
 //   catch (...)
@@ -356,7 +356,7 @@
 ////   }
 ////
 ////
-////   LPFN_NEW_MULTIMEDIA_DECODER application::get_multimedia_decoder_factory(const ::string & pszTitle)
+////   LPFN_NEW_MULTIMEDIA_DECODER application::get_multimedia_decoder_factory(const ::scoped_string & scopedstrTitle)
 ////   {
 ////
 ////      return m_mapMultimediaDecoderFactory[pszTitle];
@@ -628,7 +628,7 @@
 ////      //
 ////      //         ::payload v;
 ////      //
-////      //         v.parse_network_payload(psz);
+////      //         v.parse_network_payload(scopedstr);
 ////      //
 ////      //         m_strTranslatorToken = v["access_token"];
 ////      //
