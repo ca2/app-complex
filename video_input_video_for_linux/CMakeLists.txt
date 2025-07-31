@@ -56,7 +56,7 @@ if (MSVC)
 elseif(${LINUX} OR ${__BSD__})
 
    #if(USE_PKGCONFIG)
-      pkg_check_modules(PKGCONFIG libavcodec libswscale libavformat libavutil libv4l2)
+      pkg_check_modules(${PROJECT_NAME}_PKGCONFIG libavcodec libswscale libavformat libavutil libv4l2)
    #endif()
    target_compile_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
    target_compile_options(static_${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
