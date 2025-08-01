@@ -578,7 +578,7 @@ namespace audio
    }
 
 
-   void audio::speak(const string & lang, const string & text, bool bSynch)
+   void audio::speak(const ::scoped_string & scopedstrLang, const ::scoped_string & scopedstrText, bool bSynch)
    {
 
       auto pspeaker = tts_speaker();
@@ -648,7 +648,7 @@ namespace audio
       //
       //         }
       //
-      //         const char * psz = strResponse;
+      //         const_char_pointer  psz = strResponse;
       //
       //         ::payload v;
       //
@@ -848,7 +848,7 @@ pdirectorysystem->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".
    }
 
 
-   void audio::speak(const string & text)
+   void audio::speak(const ::scoped_string & scopedstrText)
    {
 
       synchronous_lock synchronouslock(this->synchronization());

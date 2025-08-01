@@ -26,13 +26,13 @@ namespace audio
       virtual void defer_start(::wave::enum_purpose epurpose);
 
 
-      virtual ::pointer<::object>sound_plugin(const ::string &, bool bForceCreate = false);
+      virtual ::pointer<::object>sound_plugin(const ::scoped_string & scopedstr, bool bForceCreate = false);
 
-      file_pointer sound_file(const ::string &);
+      file_pointer sound_file(const ::scoped_string & scopedstr);
 
-      string sound_path(const ::string &);
+      string sound_path(const ::scoped_string & scopedstr);
 
-      void mix(const ::string &);
+      void mix(const ::scoped_string & scopedstr);
 
       void mix(::audio::plugin * pplugin);
 

@@ -52,9 +52,9 @@ static inline void EncodeDeviceId(std::string & encodedStr, const wchar_t *name_
 }
 
 static inline bool DecodeDeviceDStr(DStr &name, DStr &path,
-   const char *device_id)
+   const_char_pointer device_id)
 {
-   const char *path_str;
+   const_char_pointer path_str;
 
    if (!device_id || !*device_id)
       return false;
@@ -777,7 +777,7 @@ static bool ResolutionAvailable(const VideoDevice &dev, int cx, int cy)
 static bool DetermineResolution(int &cx, int &cy, aura_data *settings,
 		VideoDevice dev)
 {
-	const char *res = obs_data_get_autoselect_string(settings, RESOLUTION);
+	const_char_pointer res = obs_data_get_autoselect_string(settings, RESOLUTION);
 	if (obs_data_has_autoselect_value(settings, RESOLUTION) &&
 			ConvertRes(cx, cy, res) &&
 			ResolutionAvailable(dev, cx, cy))
@@ -996,7 +996,7 @@ bool DShowInput::UpdateAudioConfig(aura_data *settings)
 	if (!audioConfig.useVideoDevice)
 		blog(LOG_INFO, "\taudio device: %s", (const ::string &)name_utf8);
 
-	const char *mode = "";
+	const_char_pointer mode = "";
 
 	switch (audioConfig.mode) {
 		case AudioMode::Capture:     mode = "Capture"; break;
@@ -1025,7 +1025,7 @@ void DShowInput::SetActive(bool active_)
 inline enum video_colorspace DShowInput::GetColorSpace(
 		aura_data *settings) const
 {
-	const char *space = obs_data_get_string(settings, COLOR_SPACE);
+	const_char_pointer space = obs_data_get_string(settings, COLOR_SPACE);
 
 	if (astrcmpi(space, "709") == 0)
 		return VIDEO_CS_709;
@@ -1039,7 +1039,7 @@ inline enum video_colorspace DShowInput::GetColorSpace(
 inline enum video_range_type DShowInput::GetColorRange(
 		aura_data *settings) const
 {
-	const char *range = obs_data_get_string(settings, COLOR_RANGE);
+	const_char_pointer range = obs_data_get_string(settings, COLOR_RANGE);
 
 	return astrcmpi(range, "full") == 0 ?
 		VIDEO_RANGE_FULL : VIDEO_RANGE_PARTIAL;
@@ -1092,7 +1092,7 @@ inline void DShowInput::Deactivate()
 
 /* ------------------------------------------------------------------------- */
 
-static const char *GetDShowInputName(void*)
+static const_char_pointer GetDShowInputName(void*)
 {
 	return TEXT_INPUT_NAME;
 }
@@ -1186,7 +1186,7 @@ static long long GetOBSFPS()
 }
 
 struct FPSFormat {
-	const char *text;
+	const_char_pointer text;
 	long long  interval;
 };
 
@@ -1245,7 +1245,7 @@ static bool DeviceResolutionChanged(obs_properties_t *props, obs_property_t *p,
 	UNUSED_PARAMETER(p);
 
 	PropertiesData *data = (PropertiesData*)obs_properties_get_param(props);
-	const char *identification;
+	const_char_pointer identification;
 	VideoDevice device;
 
 	identification       = obs_data_get_string(settings, VIDEO_DEVICE_ID);
@@ -1653,7 +1653,7 @@ static bool DeviceIntervalChanged(obs_properties_t *props, obs_property_t *p,
 	long long val = obs_data_get_int(settings, FRAME_INTERVAL);
 
 	PropertiesData *data = (PropertiesData*)obs_properties_get_param(props);
-	const char *identification = obs_data_get_string(settings, VIDEO_DEVICE_ID);
+	const_char_pointer identification = obs_data_get_string(settings, VIDEO_DEVICE_ID);
 	VideoDevice device;
 
 	if (!data->GetDevice(device, identification))
@@ -1744,7 +1744,7 @@ static bool VideoFormatChanged(obs_properties_t *props, obs_property_t *p,
 		aura_data *settings)
 {
 	PropertiesData *data = (PropertiesData*)obs_properties_get_param(props);
-	const char *identification = obs_data_get_string(settings, VIDEO_DEVICE_ID);
+	const_char_pointer identification = obs_data_get_string(settings, VIDEO_DEVICE_ID);
 	VideoDevice device;
 
 	VideoFormat curFormat =
@@ -1812,7 +1812,7 @@ static obs_properties_t *GetDShowProperties(void *obj)
 	for (const VideoDevice &device : data->devices)
 		AddDevice(p, device);
 
-	const char *activateText = TEXT_ACTIVATE;
+	const_char_pointer activateText = TEXT_ACTIVATE;
 	if (input) {
 		if (input->active)
 			activateText = TEXT_DEACTIVATE;

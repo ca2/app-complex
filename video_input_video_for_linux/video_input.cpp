@@ -52,7 +52,7 @@ namespace video_input_video_for_linux
       string strDevice;
       bool cur_device_found;
       size_t cur_device_index;
-      const char *cur_device_name;
+      const_char_pointer  cur_device_name;
 
 #ifdef FREEBSD
 
@@ -175,7 +175,7 @@ namespace video_input_video_for_linux
          else
          {
 
-            auto pdev = __allocate device(iDevice++, (const char *) video_cap.card, strDevice, strHardwareId);
+            auto pdev = __allocate device(iDevice++, (const_char_pointer  ) video_cap.card, strDevice, strHardwareId);
 
             pdev->initialize(this);
 

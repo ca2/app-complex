@@ -105,7 +105,7 @@ static inline bool format_is_yuv(enum video_format format)
 	return false;
 }
 
-static inline const char *get_video_format_name(enum video_format format)
+static inline const_char_pointer get_video_format_name(enum video_format format)
 {
 	switch (format) {
 	case VIDEO_FORMAT_I420: return "I420";

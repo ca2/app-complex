@@ -127,15 +127,15 @@ bool ms_translator_speaker::speak(const ::scoped_string & scopedstrLangParam, co
 
    ::file::path pathTxt;
 
-   ::file::path pathDir =          auto psystem = system();
+   ::file::path pathFolder =          auto psystem = system();
 
          auto pdirectorysystem = psystem->m_pdirectorysystem;
 
 pdirectorysystem->system() / "speech";
 
-   pathMp3 = pathDir / strLang / strQuality / strGender / strFileRel + ".mp3";
+   pathMp3 = pathFolder / strLang / strQuality / strGender / strFileRel + ".mp3";
 
-   pathTxt = pathDir / strLang / strQuality / strGender / strFileRel + ".txt";
+   pathTxt = pathFolder / strLang / strQuality / strGender / strFileRel + ".txt";
 
    // todo... fastly check if file is mp3 file...
    if (file()->as_string(pathTxt) == strText && file()->length(pathMp3) > 100)
@@ -174,7 +174,7 @@ retry:
 
       }
 
-      //const char * psz = strResponse;
+      //const_char_pointer  psz = strResponse;
 
       //::payload v;
 

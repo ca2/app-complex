@@ -58,11 +58,11 @@ namespace windows
          // Speaks some text.
          // (The input text must not be empty.)
          //--------------------------------------------------------------------
-         virtual bool speak(const string & text) override;
+         virtual bool speak(const ::scoped_string & scopedstrText) override;
 
-         virtual bool speak(const ::scoped_string & scopedstrLang, const string & text, bool bSync = false) override;
+         virtual bool speak(const ::scoped_string & scopedstrLang, const ::scoped_string & scopedstrText, bool bSync = false) override;
 
-         virtual bool speak(const ::scoped_string & scopedstrAttributes, const ::scoped_string & scopedstrLang, const string & text, bool bSync = false) override;
+         virtual bool speak(const ::scoped_string & scopedstrAttributes, const ::scoped_string & scopedstrLang, const ::scoped_string & scopedstrText, bool bSync = false) override;
 
          virtual bool is_speaking(string strLang) override;
 

@@ -609,7 +609,7 @@ namespace video_input_video_for_linux
       }
 
       informationf("Resolution: %greekdeltax%d", m_size.cx(), m_size.cy());
-      informationf("Pixelformat: %s", ::string((const char *) &m_iPixelFormat, 5).c_str());
+      informationf("Pixelformat: %s", ::string((const_char_pointer  ) &m_iPixelFormat, 5).c_str());
       informationf("Linesize: %d Bytes", m_iLineSize);
 
       /* set framerate */
@@ -659,7 +659,7 @@ namespace video_input_video_for_linux
 
          auto pinput = __allocate input();
 
-         pinput->m_strDescription = (const char *) in.name;
+         pinput->m_strDescription = (const_char_pointer  ) in.name;
 
          pinput->m_iInput = in.index;
 
@@ -689,7 +689,7 @@ namespace video_input_video_for_linux
 
          auto pstandard = __allocate standard();
 
-         pstandard->m_strDescription = (const char *) std.name;
+         pstandard->m_strDescription = (const_char_pointer  ) std.name;
 
          pstandard->m_iStandard = std.id;
 
@@ -721,7 +721,7 @@ namespace video_input_video_for_linux
 
          ppixelformat->m_iPixFmt = fmt.pixelformat;
 
-         ppixelformat->m_strDescription = (const char *) fmt.description;
+         ppixelformat->m_strDescription = (const_char_pointer  ) fmt.description;
 
          if (fmt.flags & V4L2_FMT_FLAG_EMULATED)
          {

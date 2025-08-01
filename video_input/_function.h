@@ -29,7 +29,7 @@ static inline bool format_is_yuv(enum_video_format eformat)
    return false;
 }
 
-static inline const char *get_e_video_format_name(enum_video_format eformat)
+static inline const_char_pointer get_e_video_format_name(enum_video_format eformat)
 {
    switch (eformat) {
       case e_video_format_i420:
@@ -70,7 +70,7 @@ static inline const char *get_e_video_format_name(enum_video_format eformat)
    return "none";
 }
 
-static inline const char *get_video_colorspace_name(enum_video_colorspace ecolorspace)
+static inline const_char_pointer get_video_colorspace_name(enum_video_colorspace ecolorspace)
 {
    switch (ecolorspace) {
       case e_video_cs_default:
@@ -94,7 +94,7 @@ static inline enum_video_range_type resolve_video_range_type(enum_video_format e
    return erangetype;
 }
 
-static inline const char *get_video_range_name(enum_video_format eformat,
+static inline const_char_pointer get_video_range_name(enum_video_format eformat,
                                                enum_video_range_type erangetype)
 {
    erangetype = resolve_video_range_type(eformat, erangetype);

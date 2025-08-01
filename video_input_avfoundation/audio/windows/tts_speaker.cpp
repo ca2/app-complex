@@ -12,8 +12,8 @@ inline bool SpGetDefaultTokenFromCategoryIdAndLang(
    ::application* papp,
    const WCHAR* pszCategoryId,
    ISpObjectToken** ppToken,
-   const char* pszLang,
-   const char *pszAttributes,
+   const_char_pointer  pszLang,
+   const_char_pointer pszAttributes,
    BOOL fCreateCategoryIfNotExist = true);
 
 
@@ -153,8 +153,8 @@ inline bool SpGetDefaultTokenFromCategoryIdAndLang(
    ::application * papp,
    const WCHAR * pszCategoryId,
    ISpObjectToken ** ppToken,
-   const char * pszLang,
-   const char * pszAttributes,
+   const_char_pointer  pszLang,
+   const_char_pointer  pszAttributes,
 BOOL fCreateCategoryIfNotExist)
 {
    
@@ -189,7 +189,7 @@ BOOL fCreateCategoryIfNotExist)
 
       string strNetworkPayload = papp->file()->as_string(papp->directory()->matter("speech/windows/lang.network_payload"));
 
-      const char * pszNetworkPayload = strNetworkPayload;
+      const_char_pointer  pszNetworkPayload = strNetworkPayload;
 
       try
       {
@@ -510,7 +510,7 @@ namespace windows
       // Speaks some text.
       // (The input text must not be empty.)
       //--------------------------------------------------------------------
-      bool speaker::speak(const string & text)
+      bool speaker::speak(const ::scoped_string & scopedstrText)
       {
 
          return speak(m_strDefaultLang, text);
