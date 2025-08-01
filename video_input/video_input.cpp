@@ -276,7 +276,7 @@ namespace video_input
 
          ::pointer < ::video_input::device > pdevice = pitem;
 
-			if (pdevice->m_strHardwareId == strHardwareId)
+			if (pdevice->m_strHardwareId == scopedstrHardwareId)
 			{
 
 				return pdevice;
@@ -293,7 +293,7 @@ namespace video_input
 	bool video_input::contains_device_with_hardware_id(const ::scoped_string & scopedstrHardwareId) const
 	{
 
-		auto pdevice = find_device_with_hardware_id(strHardwareId);
+		auto pdevice = find_device_with_hardware_id(scopedstrHardwareId);
 
 		if (::is_null(pdevice))
 		{

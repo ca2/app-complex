@@ -620,7 +620,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //      }
 //
 //      informationf("Resolution: %greekdeltax%d", m_size.cx(), m_size.cy());
-//      informationf("Pixelformat: %s", ::string((const_char_pointer ) &m_iPixFmt, 5).c_str());
+//      informationf("Pixelformat: %s", ::string((const_char_pointer )&m_iPixFmt, 5).c_str());
 //      informationf("Linesize: %d Bytes", m_iLineSize);
 //
 //      /* set framerate */
@@ -670,7 +670,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //         auto pinput = __allocate input();
 //
-//         pinput->m_strDescription = (const_char_pointer ) in.name;
+//         pinput->m_strDescription = (const_char_pointer )in.name;
 //
 //         pinput->m_iInput = in.index;
 //
@@ -700,7 +700,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //         auto pstandard = __allocate standard();
 //
-//         pstandard->m_strDescription = (const_char_pointer ) std.name;
+//         pstandard->m_strDescription = (const_char_pointer )std.name;
 //
 //         pstandard->m_iStandard = std.id;
 //
@@ -730,7 +730,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //         ppixelformat->m_iPixFmt = fmt.pixelformat;
 //
-//         ppixelformat->m_strDescription = (const_char_pointer ) fmt.description;
+//         ppixelformat->m_strDescription = (const_char_pointer )fmt.description;
 //
 //         if (fmt.flags & V4L2_FMT_FLAG_EMULATED)
 //         {

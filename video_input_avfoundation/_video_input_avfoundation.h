@@ -141,8 +141,8 @@ avpixelformat_to_video_format(enum AVPixelFormat format)
 //#undef Context
 
 
-const_char_pointer  avcapture_device_unique_id(CFTypeRef typeref);
-const_char_pointer  avcapture_device_localized_name(CFTypeRef typeref);
+const_char_pointer avcapture_device_unique_id(CFTypeRef typeref);
+const_char_pointer avcapture_device_localized_name(CFTypeRef typeref);
 
 
 #include "device.h"

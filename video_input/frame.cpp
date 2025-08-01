@@ -477,7 +477,7 @@ return false;
 //   }
 //}
 //
-//static const_char_pointer  select_conversion_technique(enum_video_format format,
+//static const_char_pointer select_conversion_technique(enum_video_format format,
 //                                                bool full_range)
 //{
 //   switch (format)
@@ -534,13 +534,13 @@ return false;
 //   return NULL;
 //}
 
-//static inline void set_eparam(gs_effect_t * effect, const_char_pointer  name, float val)
+//static inline void set_eparam(gs_effect_t * effect, const_char_pointer name, float val)
 //{
 //   gs_eparam_t * param = gs_effect_get_param_by_name(effect, name);
 //   gs_effect_set_float(param, val);
 //}
 //
-//static inline void set_eparami(gs_effect_t * effect, const_char_pointer  name, int val)
+//static inline void set_eparami(gs_effect_t * effect, const_char_pointer name, int val)
 //{
 //   gs_eparam_t * param = gs_effect_get_param_by_name(effect, name);
 //   gs_effect_set_int(param, val);
@@ -561,7 +561,7 @@ return false;
 //   uint32_t cy = source->async_height;
 //
 //   gs_effect_t * conv = obs->video.conversion_effect;
-//   const_char_pointer  tech_name =
+//   const_char_pointer tech_name =
 //      select_conversion_technique(m_format, m_full_range);
 //   gs_technique_t * tech = gs_effect_get_technique(conv, tech_name);
 //
@@ -711,7 +711,7 @@ return false;
 //      effect = obs_get_base_effect(OBS_EFFECT_DEFAULT);
 //      const bool nonlinear_alpha = gs_get_linear_srgb() &&
 //                                   !source->async_linear_alpha;
-//      const_char_pointer  tech_name = nonlinear_alpha ? "DrawNonlinearAlpha"
+//      const_char_pointer tech_name = nonlinear_alpha ? "DrawNonlinearAlpha"
 //                                               : "Draw";
 //      premultiplied = nonlinear_alpha;
 //      tech = gs_effect_get_technique(effect, tech_name);
@@ -2514,7 +2514,7 @@ void frame::copy_from(const frame * src)
 //}
 //}
 //
-//const_char_pointer  obs_source_get_name(const obs_source_t * source)
+//const_char_pointer obs_source_get_name(const obs_source_t * source)
 //{
 //   return obs_source_valid(source, "obs_source_get_name")
 //          ? source->context.name
@@ -2522,7 +2522,7 @@ void frame::copy_from(const frame * src)
 //}
 //
 //void obs_source_set_name(obs_source_t * source,
-//const_char_pointer  name
+//const_char_pointer name
 //)
 //{
 //if (!
@@ -2563,13 +2563,13 @@ void frame::copy_from(const frame * src)
 //          : OBS_SOURCE_TYPE_INPUT;
 //}
 //
-//const_char_pointer  obs_source_get_id(const obs_source_t * source)
+//const_char_pointer obs_source_get_id(const obs_source_t * source)
 //{
 //   return obs_source_valid(source, "obs_source_get_id") ? source->info.id
 //                                                        : NULL;
 //}
 //
-//const_char_pointer  obs_source_get_unversioned_id(const obs_source_t * source)
+//const_char_pointer obs_source_get_unversioned_id(const obs_source_t * source)
 //{
 //   return obs_source_valid(source, "obs_source_get_unversioned_id")
 //          ? source->info.unversioned_id
@@ -2578,7 +2578,7 @@ void frame::copy_from(const frame * src)
 //
 //static inline void render_filter_bypass(obs_source_t * target,
 //                                        gs_effect_t * effect,
-//const_char_pointer  tech_name
+//const_char_pointer tech_name
 //)
 //{
 //gs_technique_t * tech = gs_effect_get_technique(effect, tech_name);
@@ -2599,7 +2599,7 @@ void frame::copy_from(const frame * src)
 //
 //static inline void render_filter_tex(gs_texture_t * tex, gs_effect_t * effect,
 //                                     uint32_t width, uint32_t height,
-//                                     const_char_pointer  tech_name)
+//                                     const_char_pointer tech_name)
 //{
 //   gs_technique_t * tech = gs_effect_get_technique(effect, tech_name);
 //   gs_eparam_t * image = gs_effect_get_param_by_name(effect, "image");
@@ -2745,7 +2745,7 @@ void frame::copy_from(const frame * src)
 //                                        gs_effect_t * effect, uint32_t
 //width,
 //uint32_t height,
-//const_char_pointer  tech_name
+//const_char_pointer tech_name
 //)
 //{
 //obs_source_t * target, * parent;
@@ -2767,7 +2767,7 @@ void frame::copy_from(const frame * src)
 //const bool previous =
 //   gs_set_linear_srgb((filter_flags & OBS_SOURCE_SRGB) != 0);
 //
-//const_char_pointer  tech = tech_name ? tech_name : "Draw";
+//const_char_pointer tech = tech_name ? tech_name : "Draw";
 //
 //if (
 //can_bypass(target, parent, filter_flags, parent_flags,
@@ -3449,7 +3449,7 @@ void frame::copy_from(const frame * src)
 //}
 //
 //obs_source_t * obs_source_get_filter_by_name(obs_source_t * source,
-//const_char_pointer  name
+//const_char_pointer name
 //)
 //{
 //obs_source_t * filter = NULL;
@@ -3569,7 +3569,7 @@ void frame::copy_from(const frame * src)
 //}
 //
 //static void source_signal_push_to_changed(obs_source_t * source,
-//const_char_pointer  signal,
+//const_char_pointer signal,
 //bool enabled
 //)
 //{
@@ -3588,7 +3588,7 @@ void frame::copy_from(const frame * src)
 //}
 //
 //static void source_signal_push_to_delay(obs_source_t * source,
-//const_char_pointer  signal, uint64_t
+//const_char_pointer signal, uint64_t
 //delay)
 //{
 //struct callm_data m_data;
@@ -4423,7 +4423,7 @@ void frame::copy_from(const frame * src)
 //}
 //
 ///* hidden/undocumented export to allow source type redefinition for scripts */
-//EXPORT void obs_enable_source_type(const_char_pointer  name, bool enable)
+//EXPORT void obs_enable_source_type(const_char_pointer name, bool enable)
 //{
 //   struct obs_source_info * info = get_source_info(name);
 //   if (!info)
@@ -4512,7 +4512,7 @@ void frame::copy_from(const frame * src)
 //          : 0;
 //}
 //
-//enum obs_icon_type obs_source_get_icon_type(const_char_pointer  id)
+//enum obs_icon_type obs_source_get_icon_type(const_char_pointer id)
 //{
 //   const struct obs_source_info * info = get_source_info(id);
 //   return (info) ? info->icon_type : OBS_ICON_TYPE_UNKNOWN;
@@ -4713,14 +4713,14 @@ void frame::copy_from(const frame * src)
 //   for (size_t i = 0; i < count; i++)
 //   {
 //      obs_m_data_t * m_data = obs_m_data_array_item(array, i);
-//      const_char_pointer  name = obs_m_data_get_string(m_data, "name");
+//      const_char_pointer name = obs_m_data_get_string(m_data, "name");
 //      obs_source_t * filter = NULL;
 //
 //      /* if backed up filter already exists, don't create */
 //      for (size_t j = 0; j < cur_filters.num; j++)
 //      {
 //         obs_source_t * cur = cur_filters.array[j];
-//         const_char_pointer  cur_name = cur->context.name;
+//         const_char_pointer cur_name = cur->context.name;
 //         if (cur_name && strcmp(cur_name, name) == 0)
 //         {
 //            filter = obs_source_get_ref(cur);

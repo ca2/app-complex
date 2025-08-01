@@ -20,8 +20,8 @@ namespace audio
       void on_interprocess_call(::payload & payload, const ::scoped_string & scopedstrObject, const ::scoped_string & scopedstrMember,::property_set & set) override;
 
 
-      virtual void on_media_playback_start(::file::path pathOrigin, string strTitle,string_array straPerformer, string strAlbum, memory & image, string strUrl);
-      virtual void on_media_playback_end(::file::path pathOrigin, string strTitle,string_array straPerformer, string strAlbum);
+      virtual void on_media_playback_start(::file::path pathOrigin, const ::scoped_string & scopedstrTitle,string_array straPerformer, const ::scoped_string & scopedstrAlbum, memory & image, const ::scoped_string & scopedstrUrl);
+      virtual void on_media_playback_end(::file::path pathOrigin, const ::scoped_string & scopedstrTitle,string_array straPerformer, const ::scoped_string & scopedstrAlbum);
 
 
    };

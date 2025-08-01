@@ -3,7 +3,7 @@
 //#include "aqua/xml.h"
 
 
-CLASS_DECL_ACME string file_friendly_transform(string str, bool bTransformSlashes = true);
+CLASS_DECL_ACME string file_friendly_transform(const ::scoped_string & scopedstr, bool bTransformSlashes = true);
 
 
 ms_translator_speaker::ms_translator_speaker()
@@ -174,7 +174,7 @@ retry:
 
       }
 
-      //const_char_pointer  psz = strResponse;
+      //const_char_pointer psz = strResponse;
 
       //::payload v;
 
@@ -317,7 +317,7 @@ play:
 }
 
 
-bool ms_translator_speaker::stop(string strLang)
+bool ms_translator_speaker::stop(const ::scoped_string & scopedstrLang)
 {
 
    return true;
@@ -325,7 +325,7 @@ bool ms_translator_speaker::stop(string strLang)
 }
 
 
-bool ms_translator_speaker::is_speaking(string strLang)
+bool ms_translator_speaker::is_speaking(const ::scoped_string & scopedstrLang)
 {
 
    return false;

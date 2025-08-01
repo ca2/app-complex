@@ -47,12 +47,12 @@ namespace windows
          speaker();
          virtual ~speaker();
 
-         virtual bool initialize(string strLang);
-         virtual bool initialize_translator(string strLang);
-         virtual bool destroy(string strLang);
-         virtual bool finalize_translator(string strLang);
+         virtual bool initialize(const ::scoped_string & scopedstrLang);
+         virtual bool initialize_translator(const ::scoped_string & scopedstrLang);
+         virtual bool destroy(const ::scoped_string & scopedstrLang);
+         virtual bool finalize_translator(const ::scoped_string & scopedstrLang);
 
-         virtual bool is_lang_ok(string strLang);
+         virtual bool is_lang_ok(const ::scoped_string & scopedstrLang);
 
          //--------------------------------------------------------------------
          // Speaks some text.
@@ -64,9 +64,9 @@ namespace windows
 
          virtual bool speak(const ::scoped_string & scopedstrAttributes, const ::scoped_string & scopedstrLang, const ::scoped_string & scopedstrText, bool bSync = false) override;
 
-         virtual bool is_speaking(string strLang) override;
+         virtual bool is_speaking(const ::scoped_string & scopedstrLang) override;
 
-         virtual bool stop(string strLang) override;
+         virtual bool stop(const ::scoped_string & scopedstrLang) override;
 
 
       };

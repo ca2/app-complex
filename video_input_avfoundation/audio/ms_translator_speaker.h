@@ -19,9 +19,9 @@ public:
 
    virtual bool speak(const ::scoped_string & scopedstrLang, const ::scoped_string & scopedstrText, bool bSynch = false);
 
-   virtual bool stop(string strLang);
+   virtual bool stop(const ::scoped_string & scopedstrLang);
 
-   virtual bool is_speaking(string strLang);
+   virtual bool is_speaking(const ::scoped_string & scopedstrLang);
 
 
 };

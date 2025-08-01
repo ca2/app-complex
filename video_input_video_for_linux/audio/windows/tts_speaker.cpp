@@ -12,7 +12,7 @@ inline bool SpGetDefaultTokenFromCategoryIdAndLang(
    ::application* papp,
    const WCHAR* pszCategoryId,
    ISpObjectToken** ppToken,
-   const_char_pointer  pszLang,
+   const_char_pointer pszLang,
    const_char_pointer pszAttributes,
    BOOL fCreateCategoryIfNotExist = true);
 
@@ -153,8 +153,8 @@ inline bool SpGetDefaultTokenFromCategoryIdAndLang(
    ::application * papp,
    const WCHAR * pszCategoryId,
    ISpObjectToken ** ppToken,
-   const_char_pointer  pszLang,
-   const_char_pointer  pszAttributes,
+   const_char_pointer pszLang,
+   const_char_pointer pszAttributes,
 BOOL fCreateCategoryIfNotExist)
 {
    
@@ -189,7 +189,7 @@ BOOL fCreateCategoryIfNotExist)
 
       string strNetworkPayload = papp->file()->as_string(papp->directory()->matter("speech/windows/lang.network_payload"));
 
-      const_char_pointer  pszNetworkPayload = strNetworkPayload;
+      const_char_pointer pszNetworkPayload = strNetworkPayload;
 
       try
       {
@@ -382,7 +382,7 @@ namespace windows
       //--------------------------------------------------------------------
       // Initializes the text speaker.
       //--------------------------------------------------------------------
-      bool speaker::initialize(string strLang)
+      bool speaker::initialize(const ::scoped_string & scopedstrLang)
       {
 
          //destroy(strLang);
@@ -462,7 +462,7 @@ namespace windows
       }
 
 
-      bool speaker::initialize_translator(string strLang)
+      bool speaker::initialize_translator(const ::scoped_string & scopedstrLang)
       {
 
          return false;
@@ -470,7 +470,7 @@ namespace windows
       }
 
 
-      bool speaker::destroy(string strLang)
+      bool speaker::destroy(const ::scoped_string & scopedstrLang)
       {
 
          //fork([&]()
@@ -498,7 +498,7 @@ namespace windows
       }
 
 
-      bool speaker::finalize_translator(string strLang)
+      bool speaker::finalize_translator(const ::scoped_string & scopedstrLang)
       {
 
          return false;
@@ -518,7 +518,7 @@ namespace windows
       }
 
 
-      bool speaker::is_lang_ok(string strLang)
+      bool speaker::is_lang_ok(const ::scoped_string & scopedstrLang)
       {
 
          bool bTts = false;
@@ -969,7 +969,7 @@ namespace windows
       }
 
 
-      bool speaker::is_speaking(string strLang)
+      bool speaker::is_speaking(const ::scoped_string & scopedstrLang)
       {
 
          if (!is_lang_ok(strLang))
@@ -1004,7 +1004,7 @@ namespace windows
       }
 
 
-      bool speaker::stop(string strLang)
+      bool speaker::stop(const ::scoped_string & scopedstrLang)
       {
 
          if (!is_lang_ok(strLang))

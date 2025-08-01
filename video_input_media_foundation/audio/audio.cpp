@@ -508,7 +508,7 @@ namespace audio
 
 
 
-   //void audio::on_song_added(string strId)
+   //void audio::on_song_added(const ::scoped_string & scopedstrId)
    //{
 
 
@@ -648,7 +648,7 @@ namespace audio
       //
       //         }
       //
-      //         const_char_pointer  psz = strResponse;
+      //         const_char_pointer psz = strResponse;
       //
       //         ::payload v;
       //
