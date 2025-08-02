@@ -226,7 +226,7 @@ namespace app_complex_video_capture
    void application::set_current_video_input_device(const ::scoped_string & scopedstrDevice)
    {
 
-      auto pvideoinputdevice = m_pvideoinput->get_device_by_id2(strDevice);
+      auto pvideoinputdevice = m_pvideoinput->get_device_by_id2(scopedstrDevice);
 
       set_current(pvideoinputdevice);
 

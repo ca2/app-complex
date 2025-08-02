@@ -1,6 +1,6 @@
 #include "framework.h"
 #define APPLICATION_NAMESPACE app_complex_video_capture
-#include "acme/inline/application/main.inl"
+#include "acme/inline/application/main_executable.inl"
 
 
 // //app_complex_video_capture::application g_app_complex_video_capture;
