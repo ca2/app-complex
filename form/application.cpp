@@ -90,7 +90,7 @@ namespace app_complex_form
 
       ::app_simple_form::application::init_instance();
 
-      //if (!::base::application::init_instance())
+      //if (!::berg::application::init_instance())
       //{
 
       //   return false;
