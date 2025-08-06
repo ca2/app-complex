@@ -6,10 +6,10 @@
 #include "acme/graphics/draw2d/_binary_stream.h"
 #include "acme/handler/topic.h"
 #include "apex/database/_binary_stream.h"
-#include "base/user/user/document.h"
+#include "berg/user/user/document.h"
 #include "app-simple/drawing/render.h"
 #include "app-simple/drawing/impact.h"
-#include "base/user/user/tab_pane.h"
+#include "berg/user/user/tab_pane.h"
 
 
 namespace app_complex_drawing

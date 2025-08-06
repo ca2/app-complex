@@ -3,7 +3,7 @@
 #include "document.h"
 #include "main_impact.h"
 #include "application.h"
-#include "base/user/user/impact_system.h"
+#include "berg/user/user/impact_system.h"
 #include "aura/graphics/draw2d/graphics.h"
 #include "aura/message/user.h"
 
