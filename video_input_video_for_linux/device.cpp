@@ -22,12 +22,12 @@ namespace video_input_video_for_linux
 
 	device::device(::collection::index iIndex, const ::scoped_string & scopedstrName, const ::scoped_string & scopedstrDevice, const ::scoped_string & scopedstrHardwareId) :
    //m_iIndex(iIndex),
-   m_strDevice(strDevice)
+   m_strDevice(scopedstrDevice)
 	{
 		m_item.m_iItem = iIndex;
 		m_item.m_eelement = e_element_item;
-      m_strHardwareId = strHardwareId;
-      m_strName = strName;
+      m_strHardwareId = scopedstrHardwareId;
+      m_strName = scopedstrName;
       m_bAutoReset = false;
 
 	}

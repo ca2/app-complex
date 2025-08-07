@@ -40,7 +40,7 @@ list(APPEND library_references
    aqua
    aura
    axis
-   base
+   berg
    bred
    core
    video_input
@@ -49,6 +49,26 @@ list(APPEND library_references
 
 add_library(${PROJECT_NAME} SHARED ${library_source})
 add_library(static_${PROJECT_NAME} STATIC ${library_source})
+
+
+
+
+if(${LINUX} OR ${__BSD__})
+
+
+   add_custom_command(
+      OUTPUT ${PROJECT_SOURCE_DIR}/.link_object/_matter.zip.o
+      COMMAND ${APPLICATION_BUILD_HELPER_BINARY} --prepare-application ${PROJECT_SOURCE_DIR}
+      COMMENT "Generating ${PROJECT_SOURCE_DIR}/.link_object/_matter.zip.o"
+   )
+
+   target_sources(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/.link_object/_matter.zip.o)
+
+endif()
+
+
+
+
 
 target_precompile_headers(${PROJECT_NAME} PRIVATE framework.h)
 target_precompile_headers(static_${PROJECT_NAME} PRIVATE framework.h)
