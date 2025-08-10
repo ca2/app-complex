@@ -34,7 +34,7 @@ namespace audio
    }
 
 
-   void interprocess_handler::on_media_playback_start(::file::path pathOrigin, const ::scoped_string & scopedstrTitle,string_array straArtist, const ::scoped_string & scopedstrAlbum, memory & memoryImage, const ::scoped_string & scopedstrUrl)
+   void interprocess_handler::on_media_playback_start(::file::path pathOrigin, const ::scoped_string & scopedstrTitle,string_array_base straArtist, const ::scoped_string & scopedstrAlbum, memory & memoryImage, const ::scoped_string & scopedstrUrl)
    {
 
 #ifdef UNIVERSAL_WINDOWS
@@ -71,7 +71,7 @@ namespace audio
    }
 
 
-   void interprocess_handler::on_media_playback_end(::file::path pathOrigin, const ::scoped_string & scopedstrTitle,string_array straArtist, const ::scoped_string & scopedstrAlbum)
+   void interprocess_handler::on_media_playback_end(::file::path pathOrigin, const ::scoped_string & scopedstrTitle,string_array_base straArtist, const ::scoped_string & scopedstrAlbum)
    {
 
 #ifdef UNIVERSAL_WINDOWS

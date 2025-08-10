@@ -14,7 +14,7 @@ namespace user
 } // namespace user
 
 
-//int video_capture_enum_encoders(string_array& straName, string_array& straPath);
+//int video_capture_enum_encoders(string_array_base& straName, string_array_base& straPath);
 
 //#include "user_font_list.h"
 

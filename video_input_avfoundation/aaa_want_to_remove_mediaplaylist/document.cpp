@@ -254,7 +254,7 @@ namespace mediaplaylist
    }
 
 
-   string_array document::get_songs(bool bEditingPlaylist)
+   string_array_base document::get_songs(bool bEditingPlaylist)
    {
 
       synchronous_lock synchronouslock(m_pmutexData);
@@ -275,12 +275,12 @@ namespace mediaplaylist
    }
 
 
-   void document::defer_update_songs(const string_array * pstraNew, const string_array * pstraDel)
+   void document::defer_update_songs(const string_array_base * pstraNew, const string_array_base * pstraDel)
    {
 
       {
 
-         string_array stra;
+         string_array_base stra;
 
          update_songs(stra, true);
 
@@ -292,7 +292,7 @@ namespace mediaplaylist
 
       {
 
-         string_array stra;
+         string_array_base stra;
 
          update_songs(stra, false);
 
@@ -388,7 +388,7 @@ processed_new:
    }
 
 
-   bool document::update_songs(string_array & stra, bool bEditingPlaylist)
+   bool document::update_songs(string_array_base & stra, bool bEditingPlaylist)
    {
 
       stra.erase_all();
@@ -420,12 +420,12 @@ processed_new:
    }
 
 
-   bool document::get_song_current_queue(string_array & stra, bool bEditingPlaylist)
+   bool document::get_song_current_queue(string_array_base & stra, bool bEditingPlaylist)
    {
 
       synchronous_lock synchronouslock(m_pmutexData);
 
-      string_array straTotal = get_songs(bEditingPlaylist);
+      string_array_base straTotal = get_songs(bEditingPlaylist);
 
       for(int i = 0; i < m_iaQueue.get_count(); i++)
       {
@@ -987,7 +987,7 @@ processed_new:
 
    }
 
-   bool document::AddSong(string_array  & stra, bool bDoPlay, bool bMakeVisible)
+   bool document::AddSong(string_array_base  & stra, bool bDoPlay, bool bMakeVisible)
    {
 
       //DBCentralInterface * pDataCentral = db();
@@ -1481,7 +1481,7 @@ processed_new:
 
       synchronous_lock synchronouslock(m_pmutexData);
 
-      string_array * pstra = nullptr;
+      string_array_base * pstra = nullptr;
 
       if(bEditingPlaylist)
       {
@@ -1518,7 +1518,7 @@ processed_new:
 
       }
 
-      string_array stra;
+      string_array_base stra;
 
       //int iTry = 0;
 
@@ -1586,7 +1586,7 @@ retry0:
       if (play_playlist() != nullptr && play_playlist()->m_bDiscard)
       {
 
-         string_array stra;
+         string_array_base stra;
 
          stra = get_songs(false);
 
@@ -1606,7 +1606,7 @@ retry0:
       else
       {
 
-         string_array stra;
+         string_array_base stra;
 
          //int iTry = 0;
 

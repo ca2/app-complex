@@ -119,9 +119,9 @@ namespace video_input_video_for_linux
    {
 
 
-      //string_array straName;
+      //string_array_base straName;
 
-      //string_array straPath;
+      //string_array_base straPath;
 
       //video_capture_enum_encoders(straName, straPath);
 

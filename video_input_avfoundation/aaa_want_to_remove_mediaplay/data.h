@@ -61,7 +61,7 @@ namespace mediaplay
       string                     m_strAsc;
       string                     m_strAscFormat;
       int                        m_iAscLineCount;
-      string_array                    m_straFrame;
+      string_array_base                    m_straFrame;
       ::int_array                  m_iaDelay;
 
 

@@ -72,7 +72,7 @@ namespace multimedia
 
          m_wndToolBarExport.SetBarStyle(m_wndToolBar.GetBarStyle() | CBRS_TOOLTIPS | CBRS_FLYBY);
 
-         string_array straIndicator;
+         string_array_base straIndicator;
          straIndicator.add("IDS_APP_TITLE");
          straIndicator.add("IDS_APP_TITLE");
 
@@ -235,7 +235,7 @@ namespace multimedia
 
 
 
-         string_array straIndicator;
+         string_array_base straIndicator;
          straIndicator.add("IDS_APP_TITLE");
          straIndicator.add("IDS_APP_TITLE");
          /*    if (!m_wndStatusBar.SetIndicators(straIndicator))

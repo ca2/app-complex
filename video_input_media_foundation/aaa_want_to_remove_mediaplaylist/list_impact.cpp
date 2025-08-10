@@ -465,7 +465,7 @@ namespace mediaplaylist
 
       get_selection(range);
 
-      string_array stra;
+      string_array_base stra;
 
       for (::collection::index i = 0; i < range.get_item_count(); i++)
       {

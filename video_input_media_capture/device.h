@@ -13,7 +13,7 @@ namespace video_input_media_capture
 
 	//class ::image::image;
 
-	using subtype_map = string_map < ::int_array >;
+	using subtype_map = string_map < ::int_array_base >;
 
 	using frame_rate_map = map < unsigned long long, subtype_map >;
 

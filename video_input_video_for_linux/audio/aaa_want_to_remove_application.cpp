@@ -15,7 +15,7 @@
 //#endif
 //
 //
-//CLASS_DECL_APP_CORE_AUDIO string_array det_l(::particle * pparticle, string str)
+//CLASS_DECL_APP_CORE_AUDIO string_array_base det_l(::particle * pparticle, string str)
 //{
 //
 //   //string strKey = file_system()->as_string("C:\\sensitive\\sensitive\\seed\\google_translate_api.txt");
@@ -52,7 +52,7 @@
 //   }
 //
 //
-//   string_array stra;
+//   string_array_base stra;
 //
 //   for (::collection::index i = 0; i < v["data"]["detections"][0].payloada().get_count(); i++)
 //   {

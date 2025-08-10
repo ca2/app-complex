@@ -9,7 +9,7 @@
 namespace video_input
 {
 
-	using subtype_map = string_map < ::int_array >;
+	using subtype_map = string_map < ::int_array_base >;
 
 	using frame_rate_map = map < unsigned long long, subtype_map >;
 

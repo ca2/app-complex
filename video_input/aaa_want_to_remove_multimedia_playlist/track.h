@@ -19,7 +19,7 @@ namespace multimedia_playlist
       string                  m_strName;
       //::duration m_durationLastUpdate;
       bool                    m_bNew;
-      string_array                 m_straArtist;
+      string_array_base                 m_straArtist;
       string                  m_strArtist;
       string                  m_strAlbum;
       string                  m_strUri;
@@ -39,7 +39,7 @@ namespace multimedia_playlist
 
       virtual string   get_name();
       virtual string   get_artist();
-      virtual string_array  get_artista();
+      virtual string_array_base  get_artista();
       virtual string   get_id();
       virtual string   get_album();
 

@@ -11,7 +11,7 @@ namespace audio
    public:
 
 
-      string_array                             m_straCallbackApp;
+      string_array_base                             m_straCallbackApp;
 
 
       interprocess_handler(const ::scoped_string & scopedstrApp);
@@ -20,8 +20,8 @@ namespace audio
       void on_interprocess_call(::payload & payload, const ::scoped_string & scopedstrObject, const ::scoped_string & scopedstrMember,::property_set & set) override;
 
 
-      virtual void on_media_playback_start(::file::path pathOrigin, const ::scoped_string & scopedstrTitle,string_array straPerformer, const ::scoped_string & scopedstrAlbum, memory & image, const ::scoped_string & scopedstrUrl);
-      virtual void on_media_playback_end(::file::path pathOrigin, const ::scoped_string & scopedstrTitle,string_array straPerformer, const ::scoped_string & scopedstrAlbum);
+      virtual void on_media_playback_start(::file::path pathOrigin, const ::scoped_string & scopedstrTitle,string_array_base straPerformer, const ::scoped_string & scopedstrAlbum, memory & image, const ::scoped_string & scopedstrUrl);
+      virtual void on_media_playback_end(::file::path pathOrigin, const ::scoped_string & scopedstrTitle,string_array_base straPerformer, const ::scoped_string & scopedstrAlbum);
 
 
    };

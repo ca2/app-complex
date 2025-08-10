@@ -123,9 +123,9 @@ namespace video_input_video_avfoundation
    {
 
 
-      //string_array straName;
+      //string_array_base straName;
 
-      //string_array straPath;
+      //string_array_base straPath;
 
       //video_capture_enum_encoders(straName, straPath);
 

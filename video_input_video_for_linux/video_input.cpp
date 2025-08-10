@@ -77,7 +77,7 @@ namespace video_input_video_for_linux
 
       ::collection::index iDevice = 0;
 
-      string_array straDevice;
+      string_array_base straDevice;
 
       while ((dp = readdir(dirp)) != nullptr)
       {

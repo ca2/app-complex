@@ -234,7 +234,7 @@ namespace mediaplaylist
       return true;
    }
 
-   bool document::get_songs(string_array & stra, bool bEditingPlaylist)
+   bool document::get_songs(string_array_base & stra, bool bEditingPlaylist)
    {
 
       if(bEditingPlaylist)
@@ -261,9 +261,9 @@ namespace mediaplaylist
       return true;
    }
 
-   bool document::get_song_current_queue(string_array & stra, bool bEditingPlaylist)
+   bool document::get_song_current_queue(string_array_base & stra, bool bEditingPlaylist)
    {
-      string_array straTotal;
+      string_array_base straTotal;
       get_songs(straTotal, bEditingPlaylist);
       for(int i = 0; i < m_iaQueue.get_count(); i++)
       {
@@ -566,7 +566,7 @@ namespace mediaplaylist
 
    }
 
-   bool document::AddSong(string_array  & stra, bool bDoPlay, bool bMakeVisible)
+   bool document::AddSong(string_array_base  & stra, bool bDoPlay, bool bMakeVisible)
    {
       //DBCentralInterface * pDataCentral = db();
       //ASSERT(pDataCentral != nullptr);
@@ -689,7 +689,7 @@ namespace mediaplaylist
 
    ::collection::count document::get_song_count(bool bEditingPlaylist)
    {
-      string_array stra;
+      string_array_base stra;
       get_songs(stra, bEditingPlaylist);
       return stra.get_size();
    }
@@ -697,7 +697,7 @@ namespace mediaplaylist
    bool document::get_song_at(::file::path & str, ::collection::index iSong, bool bEditingPlaylist)
    {
 
-      string_array stra;
+      string_array_base stra;
 
       get_songs(stra, bEditingPlaylist);
 
@@ -718,7 +718,7 @@ namespace mediaplaylist
    void document::populate_queue(::collection::index iSong)
    {
 
-      string_array stra;
+      string_array_base stra;
 
       get_songs(stra, false);
 
@@ -762,7 +762,7 @@ namespace mediaplaylist
    bool document::pick_a_song(::collection::index & iSong, string & str)
    {
 
-      string_array stra;
+      string_array_base stra;
 
       get_songs(stra, false);
 

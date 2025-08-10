@@ -165,7 +165,7 @@ namespace app_complex_video_capture
 //int c_video_capture_enum_encoders(wchar_t *** pppszName, wchar_t *** pppszPath);
 //
 //
-//int video_capture_enum_encoders(string_array & straName, string_array & straPath)
+//int video_capture_enum_encoders(string_array_base & straName, string_array_base & straPath)
 //{
 //
 //   wchar_t ** ppszName;

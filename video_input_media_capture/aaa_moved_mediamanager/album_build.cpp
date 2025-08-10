@@ -477,7 +477,7 @@ namespace mediamanager
    }
 
 
-   bool album_build::add(::file::listing & stra, time_array & timea)
+   bool album_build::add(::file::listing & stra, time_array_base & timea)
    {
 
       for(int i = 0; i < stra.get_size(); i++)
@@ -567,7 +567,7 @@ namespace mediamanager
    }
 
 
-   bool album_build::Update(::file::listing & stra, time_array & timea)
+   bool album_build::Update(::file::listing & stra, time_array_base & timea)
    {
 
       for(int i = 0; i < stra.get_size(); i++)
@@ -921,7 +921,7 @@ namespace mediamanager
    }
 
 
-   void album_build::FindFiles(::file::listing & wstraFile,time_array & timea,::file::listing & wstraFolder)
+   void album_build::FindFiles(::file::listing & wstraFile,time_array_base & timea,::file::listing & wstraFolder)
    {
 
       // bool ok = m_bFindFiles;
@@ -939,7 +939,7 @@ namespace mediamanager
 
       wstraFile.m_pprovider = get_app();
 
-      string_array wstraExtension;
+      string_array_base wstraExtension;
 
       str = m_wstrBuildAlbumExtensions;
 
@@ -966,7 +966,7 @@ namespace mediamanager
    }
 
 
-   void album_build::ZipFindFiles(::file::listing & wstraFile, time_array & timea, ::file::listing & wstraFolder)
+   void album_build::ZipFindFiles(::file::listing & wstraFile, time_array_base & timea, ::file::listing & wstraFolder)
    {
 
       __UNREFERENCED_PARAMETER(wstraFile);
@@ -989,12 +989,12 @@ namespace mediamanager
                m_iZipFindFileJStart = 0;
             }
 
-            string_array wstraExtension2;
+            string_array_base wstraExtension2;
             string str;
             str = m_wstrBuildAlbumExtensions;
             wstraExtension2.add_tokens(str, "/", false);
 
-            string_array wstraExtension;
+            string_array_base wstraExtension;
             wstraExtension.add("zip");
             string strB;
             string wstrPath;
@@ -1180,7 +1180,7 @@ namespace mediamanager
    }
 
 
-   void album_build::GetExistingFiles(::int_array & ia,  ::file::listing & straFile,   time_array & timea)
+   void album_build::GetExistingFiles(::int_array & ia,  ::file::listing & straFile,   time_array_base & timea)
    {
 
       //::pointer<::sqlite::dataset>pdataset = m_pdatasetGetExRead;
@@ -1200,7 +1200,7 @@ namespace mediamanager
    }
 
 
-   void album_build::GetExistingFiles(::pointer<::database::result_set>pset,  ::int_array & ia, ::file::listing & wstraFile, time_array & timea)
+   void album_build::GetExistingFiles(::pointer<::database::result_set>pset,  ::int_array & ia, ::file::listing & wstraFile, time_array_base & timea)
    {
 
       //::collection::count iRowCount = pset->m_rowa.get_count();
@@ -1290,16 +1290,16 @@ namespace mediamanager
       ::int_array & iaUpdate = fileinfo.m_iaUpdate;
       ::int_array & iaRemove = fileinfo.m_iaRemove;
       ::file::listing & straNew = fileinfo.m_wstraNew; // [in]  the files that must be in the album
-      time_array & timeaNew = fileinfo.m_timeaNew; // [in]  the files last write time
+      time_array_base & timeaNew = fileinfo.m_timeaNew; // [in]  the files last write time
       ::file::listing & straOld = fileinfo.m_wstraOld; // [in]  the files that are already in the album
-      time_array & timeaOld = fileinfo.m_timeaOld; // [in]  the existing files recotds last write time
+      time_array_base & timeaOld = fileinfo.m_timeaOld; // [in]  the existing files recotds last write time
       ::file::listing & straAdd = fileinfo.m_wstraAdd; // [out] files not in the album that must be in the album
-      time_array & timeaAdd = fileinfo.m_timeaAdd; // [out] their time
+      time_array_base & timeaAdd = fileinfo.m_timeaAdd; // [out] their time
       ::file::listing & straUpdate = fileinfo.m_wstraUpdate; // [out] files already in the album that must be updated
-      time_array & timeaUpdate = fileinfo.m_timeaUpdate; // [out] their time
+      time_array_base & timeaUpdate = fileinfo.m_timeaUpdate; // [out] their time
       ::file::listing & straRemove = fileinfo.m_wstraRemove; // [out] files that don't need to be in the album
 
-      time_array timeaRemove;
+      time_array_base timeaRemove;
 
       fileinfo.m_wstraAdd.erase_all();
       fileinfo.m_timeaAdd.erase_all();

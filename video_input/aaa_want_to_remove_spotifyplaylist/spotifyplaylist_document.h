@@ -96,7 +96,7 @@ namespace mediaplaylist
 
       // pre calculated values
       ::collection::count                          m_iCurrentPlaylistSongCount;
-      string_array                          m_straQueue;
+      string_array_base                          m_straQueue;
 
 
       pointer_array < listener >                    m_listenerspa;
@@ -169,12 +169,12 @@ namespace mediaplaylist
       virtual bool play(info * pinfo);
 
       virtual bool RemoveSong(::collection::index iSong, ::pointer<::user::impact>pimpact = nullptr);
-      virtual bool get_songs(string_array & stra, bool bEditingPlaylist);
-      virtual bool get_song_current_queue(string_array & stra, bool bEditingPlaylist);
+      virtual bool get_songs(string_array_base & stra, bool bEditingPlaylist);
+      virtual bool get_song_current_queue(string_array_base & stra, bool bEditingPlaylist);
       virtual void update_title();
 
 
-      virtual bool AddSong(string_array & stra, bool bDoPlay, bool bMakeVisible);
+      virtual bool AddSong(string_array_base & stra, bool bDoPlay, bool bMakeVisible);
       virtual bool AddSong(LPINT lpiaSongs, ::collection::count iSongCount, bool bDoPlay, bool bMakeVisible);
 
       virtual bool AddSong(::payload payloadFile, EAddSong eaddsong, bool bMakeVisible, bool bUpdateAllImpacts);

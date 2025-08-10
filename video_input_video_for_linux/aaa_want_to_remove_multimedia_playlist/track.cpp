@@ -94,7 +94,7 @@ namespace multimedia_playlist
 
    }
 
-   string_array track::get_artista()
+   string_array_base track::get_artista()
    {
 
       if (m_bNew)

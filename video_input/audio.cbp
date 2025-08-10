@@ -151,7 +151,7 @@
 		<Unit filename="imedia/position_array.h" />
 		<Unit filename="imedia/time.cpp" />
 		<Unit filename="imedia/time.h" />
-		<Unit filename="imedia/time_array.cpp" />
+		<Unit filename="imedia/time_array_base.cpp" />
 		<Unit filename="imedia/time_array.h" />
 		<Unit filename="ortp/avprofile.cpp" />
 		<Unit filename="ortp/b64.cpp" />

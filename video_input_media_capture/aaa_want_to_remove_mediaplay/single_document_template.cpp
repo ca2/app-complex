@@ -318,7 +318,7 @@ namespace mediaplay
    }
 
 
-   bool single_document_template::ReserveSong(string_array & stra, bool bDoPlay, bool bMakeVisible)
+   bool single_document_template::ReserveSong(string_array_base & stra, bool bDoPlay, bool bMakeVisible)
    {
 
       ::pointer<::mediaplaylist::media_playlist>mediaplaylist = papp->mediaplaylist();

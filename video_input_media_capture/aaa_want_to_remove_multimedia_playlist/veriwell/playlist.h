@@ -30,7 +30,7 @@ namespace multimedia_playlist
 
          virtual string get_name() override;
 
-         virtual string_array get_stra() override;
+         virtual string_array_base get_stra() override;
 
          virtual void on_update() override;
 

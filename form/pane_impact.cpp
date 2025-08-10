@@ -61,7 +61,7 @@ namespace app_complex_form
 
       strForm = papp->payload("tab");
 
-      string_array straForm;
+      string_array_base straForm;
 
       straForm.add("form1");
       straForm.add("form2");
@@ -89,7 +89,7 @@ namespace app_complex_form
       ::app_simple_form::tab_impact::on_change_cur_sel();
 
       string strId = get_impact_id();
-      string_array stra;
+      string_array_base stra;
 
       stra.explode("->:<-",strId);
 

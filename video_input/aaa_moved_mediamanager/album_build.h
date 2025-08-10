@@ -29,13 +29,13 @@ namespace mediamanager
          ::int_array         m_iaRemove;
 
          ::file::listing   m_wstraNew;
-         time_array        m_timeaNew;
+         time_array_base        m_timeaNew;
          ::file::listing   m_wstraOld;
-         time_array        m_timeaOld;
+         time_array_base        m_timeaOld;
          ::file::listing   m_wstraAdd;
-         time_array        m_timeaAdd;
+         time_array_base        m_timeaAdd;
          ::file::listing   m_wstraUpdate;
-         time_array        m_timeaUpdate;
+         time_array_base        m_timeaUpdate;
          ::file::listing   m_wstraRemove;
 
          void Reset();
@@ -95,15 +95,15 @@ namespace mediamanager
       void RecurseFolders(::file::listing & straFolder,::file::listing & straFolderSource);
       void RecurseFolders(::file::listing & straFolder, ::file::path & wstrFolderSource);
 
-      void FindFiles(::file::listing & straFile,time_array & array,::file::listing & straFolder);
-      void ZipFindFiles(::file::listing & straFile,time_array & timea,::file::listing & straFolder);
+      void FindFiles(::file::listing & straFile,time_array_base & array,::file::listing & straFolder);
+      void ZipFindFiles(::file::listing & straFile,time_array_base & timea,::file::listing & straFolder);
 
-      void GetExistingFiles(::int_array & ia,::file::listing & straFile,time_array & array);
-      void GetExistingFiles(::pointer<::database::result_set>pset,::int_array & ia,::file::listing & straFile,time_array & array);
+      void GetExistingFiles(::int_array & ia,::file::listing & straFile,time_array_base & array);
+      void GetExistingFiles(::pointer<::database::result_set>pset,::int_array & ia,::file::listing & straFile,time_array_base & array);
 
       void CalcFiles(file_info & fileinfo, bool bRestart);
 
-      bool add(::file::listing & straFile,time_array & array);
+      bool add(::file::listing & straFile,time_array_base & array);
       bool add(const ::file::path & lpcszFile,::earth::time & time);
       bool add(::mediamanager::album_record & record);
       bool AddAlbumRecord();
@@ -111,7 +111,7 @@ namespace mediamanager
       bool AddEmpty(::int_array & ia,::file::listing & straFile);
       int  AddEmptyFile(const ::file::path & path);
 
-      bool Update(::file::listing & straFile,time_array & array);
+      bool Update(::file::listing & straFile,time_array_base & array);
       bool Update(const ::file::path & lpcszFile,::earth::time & time,int iId = I32_MINIMUM);
       bool Update(::mediamanager::album_record & record);
       bool UpdateAlbumRecord(int iId, bool bUpdateFilePath, bool bUpdateFileName);

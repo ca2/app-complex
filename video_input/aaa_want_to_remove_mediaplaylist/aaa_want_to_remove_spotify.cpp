@@ -871,7 +871,7 @@ pdirectorysystem->system() / "config\\spotify\\pas.txt");
    }
 
 
-   void plspotify::pl::get_stra(string_array & stra)
+   void plspotify::pl::get_stra(string_array_base & stra)
    {
 
       defer_update_tracks();

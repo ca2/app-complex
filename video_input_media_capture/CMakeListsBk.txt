@@ -256,7 +256,7 @@ add_executable(audio
         imedia/position_array.h
         imedia/time.cpp
         imedia/time.h
-        imedia/time_array.cpp
+        imedia/time_array_base.cpp
         imedia/time_array.h
         ortp/_.h
         ortp/aaa_want_to_erase_ortp.cpp

@@ -192,7 +192,7 @@ namespace video_input_media_capture
 
    //   hr = MFEnumDeviceSources(pAttributes, __comptr_array(activatea));
 
-   //   string_array straHardwareId;
+   //   string_array_base straHardwareId;
 
    //   if (FAILED(hr))
    //   {

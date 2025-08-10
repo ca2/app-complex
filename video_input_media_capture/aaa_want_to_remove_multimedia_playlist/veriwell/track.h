@@ -23,7 +23,7 @@ namespace multimedia_playlist
          //string                  m_strName;
          ////::duration m_durationLastUpdate;
          //bool                    m_bNew;
-         //string_array                 m_straArtist;
+         //string_array_base                 m_straArtist;
          //string                  m_strArtist;
          string                  m_strAlbumArt;
 

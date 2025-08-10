@@ -26,7 +26,7 @@
 		9ACA46C82453EE3D007277DD /* position_array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ACA46062453EE3C007277DD /* position_array.cpp */; };
 		9ACA46C92453EE3D007277DD /* time_array.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ACA46072453EE3C007277DD /* time_array.h */; };
 		9ACA46CA2453EE3D007277DD /* position_array.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ACA46082453EE3C007277DD /* position_array.h */; };
-		9ACA46CB2453EE3D007277DD /* time_array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ACA46092453EE3C007277DD /* time_array.cpp */; };
+		9ACA46CB2453EE3D007277DD /* time_array_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ACA46092453EE3C007277DD /* time_array_base.cpp */; };
 		9ACA46CC2453EE3D007277DD /* position.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ACA460A2453EE3C007277DD /* position.h */; };
 		9ACA46CD2453EE3D007277DD /* position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ACA460B2453EE3C007277DD /* position.cpp */; };
 		9ACA46CE2453EE3D007277DD /* time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ACA460C2453EE3C007277DD /* time.cpp */; };
@@ -285,7 +285,7 @@
 		9ACA47F52453EEAE007277DD /* sampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ACA46A92453EE3D007277DD /* sampler.cpp */; };
 		9ACA47F62453EEAE007277DD /* rtpsession_inet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ACA467C2453EE3C007277DD /* rtpsession_inet.cpp */; };
 		9ACA47F72453EEAE007277DD /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ACA476C2453EE67007277DD /* _.cpp */; };
-		9ACA47FA2453EEAE007277DD /* time_array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ACA46092453EE3C007277DD /* time_array.cpp */; };
+		9ACA47FA2453EEAE007277DD /* time_array_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ACA46092453EE3C007277DD /* time_array_base.cpp */; };
 		9ACA47FB2453EEAE007277DD /* in.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ACA464A2453EE3C007277DD /* in.cpp */; };
 		9ACA47FC2453EEAE007277DD /* rtpsignaltable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ACA46892453EE3C007277DD /* rtpsignaltable.cpp */; };
 		9ACA47FD2453EEAE007277DD /* decoder_plugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ACA465E2453EE3C007277DD /* decoder_plugin.cpp */; };
@@ -378,7 +378,7 @@
 		9ACA46062453EE3C007277DD /* position_array.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = position_array.cpp; sourceTree = "<group>"; };
 		9ACA46072453EE3C007277DD /* time_array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time_array.h; sourceTree = "<group>"; };
 		9ACA46082453EE3C007277DD /* position_array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = position_array.h; sourceTree = "<group>"; };
-		9ACA46092453EE3C007277DD /* time_array.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = time_array.cpp; sourceTree = "<group>"; };
+		9ACA46092453EE3C007277DD /* time_array_base.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = time_array_base.cpp; sourceTree = "<group>"; };
 		9ACA460A2453EE3C007277DD /* position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = position.h; sourceTree = "<group>"; };
 		9ACA460B2453EE3C007277DD /* position.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = position.cpp; sourceTree = "<group>"; };
 		9ACA460C2453EE3C007277DD /* time.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = time.cpp; sourceTree = "<group>"; };
@@ -605,7 +605,7 @@
 				9ACA46062453EE3C007277DD /* position_array.cpp */,
 				9ACA46072453EE3C007277DD /* time_array.h */,
 				9ACA46082453EE3C007277DD /* position_array.h */,
-				9ACA46092453EE3C007277DD /* time_array.cpp */,
+				9ACA46092453EE3C007277DD /* time_array_base.cpp */,
 				9ACA460A2453EE3C007277DD /* position.h */,
 				9ACA460B2453EE3C007277DD /* position.cpp */,
 				9ACA460C2453EE3C007277DD /* time.cpp */,
@@ -1140,7 +1140,7 @@
 				9ACA47592453EE3E007277DD /* sampler.cpp in Sources */,
 				9ACA47352453EE3E007277DD /* rtpsession_inet.cpp in Sources */,
 				9ACA476E2453EE67007277DD /* _.cpp in Sources */,
-				9ACA46CB2453EE3D007277DD /* time_array.cpp in Sources */,
+				9ACA46CB2453EE3D007277DD /* time_array_base.cpp in Sources */,
 				9ACA47092453EE3D007277DD /* in.cpp in Sources */,
 				9ACA473F2453EE3E007277DD /* rtpsignaltable.cpp in Sources */,
 				9ACA471C2453EE3D007277DD /* decoder_plugin.cpp in Sources */,
@@ -1218,7 +1218,7 @@
 				9ACA47F52453EEAE007277DD /* sampler.cpp in Sources */,
 				9ACA47F62453EEAE007277DD /* rtpsession_inet.cpp in Sources */,
 				9ACA47F72453EEAE007277DD /* _.cpp in Sources */,
-				9ACA47FA2453EEAE007277DD /* time_array.cpp in Sources */,
+				9ACA47FA2453EEAE007277DD /* time_array_base.cpp in Sources */,
 				9ACA47FB2453EEAE007277DD /* in.cpp in Sources */,
 				9ACA47FC2453EEAE007277DD /* rtpsignaltable.cpp in Sources */,
 				9ACA47FD2453EEAE007277DD /* decoder_plugin.cpp in Sources */,

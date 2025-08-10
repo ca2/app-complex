@@ -263,7 +263,7 @@
     <ClCompile Include="imedia\time.cpp">
       <Filter>Source Files\imedia</Filter>
     </ClCompile>
-    <ClCompile Include="imedia\time_array.cpp">
+    <ClCompile Include="imedia\time_array_base.cpp">
       <Filter>Source Files\imedia</Filter>
     </ClCompile>
     <ClCompile Include="audio\library.cpp">

@@ -230,7 +230,7 @@ namespace multimedia_playlist
 
       //   synchronous_lock synchronouslock(this->synchronization());
 
-      //   string_array stra;
+      //   string_array_base stra;
 
       //   for (auto & tr : m_tra)
       //   {
@@ -282,7 +282,7 @@ namespace multimedia_playlist
    }
 
 
-   string_array playlist::get_stra()
+   string_array_base playlist::get_stra()
    {
 
       if(m_bNewTracks)

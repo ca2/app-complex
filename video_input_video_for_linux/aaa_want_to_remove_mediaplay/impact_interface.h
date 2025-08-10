@@ -92,7 +92,7 @@ namespace mediaplay
 
       ::file::path                              m_pathLastOrigin;
       string                                    m_strLastTitle;
-      string_array                                   m_straLastPerformer;
+      string_array_base                                   m_straLastPerformer;
       string                                    m_strAlbum;
 
 
@@ -241,7 +241,7 @@ namespace mediaplay
       virtual void ipi_post_new_song();
 
 
-      virtual bool get_short_title(string & strTitle, string_array & straArtist, string & strPlaylist);
+      virtual bool get_short_title(string & strTitle, string_array_base & straArtist, string & strPlaylist);
       virtual void defer_update_full_short_title();
 
    };

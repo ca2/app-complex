@@ -74,12 +74,12 @@ namespace mediaplaylist
 
       // pre calculated values
       ::collection::count                             m_iCurrentPlaylistSongCount;
-      string_array                             m_straQueue;
+      string_array_base                             m_straQueue;
 
-      string_array                             m_straImpact;
-      string_array                             m_straPlay;
-      string_array                             m_straOnAddPlay;
-      string_array                             m_straOnAddQueue;
+      string_array_base                             m_straImpact;
+      string_array_base                             m_straPlay;
+      string_array_base                             m_straOnAddPlay;
+      string_array_base                             m_straOnAddQueue;
 
 
 
@@ -148,8 +148,8 @@ namespace mediaplaylist
 
       //virtual void ensure_playlist();
 
-      virtual void defer_update_songs(const string_array * pstraNew = nullptr, const string_array * pstraDel = nullptr);
-      virtual bool update_songs(string_array & stra, bool bEditingPlaylist);
+      virtual void defer_update_songs(const string_array_base * pstraNew = nullptr, const string_array_base * pstraDel = nullptr);
+      virtual bool update_songs(string_array_base & stra, bool bEditingPlaylist);
 
 
       virtual void on_update_playlist();
@@ -190,12 +190,12 @@ namespace mediaplaylist
       virtual bool play(info * pinfo);
 
       virtual bool RemoveSong(::collection::index iSong, ::pointer<::user::impact>pimpact = nullptr, bool bUpdate = true);
-      virtual string_array get_songs(bool bEditingPlaylist);
-      virtual bool get_song_current_queue(string_array & stra, bool bEditingPlaylist);
+      virtual string_array_base get_songs(bool bEditingPlaylist);
+      virtual bool get_song_current_queue(string_array_base & stra, bool bEditingPlaylist);
       virtual void update_title();
 
 
-      virtual bool AddSong(string_array & stra, bool bDoPlay, bool bMakeVisible);
+      virtual bool AddSong(string_array_base & stra, bool bDoPlay, bool bMakeVisible);
       virtual bool AddSong(LPINT lpiaSongs, ::collection::count iSongCount, bool bDoPlay, bool bMakeVisible);
 
       virtual string AddSong(::payload payloadFile, EAddSong eaddsong, bool bMakeVisible, bool bUpdateAllImpacts, bool bAddDuplicate = true);

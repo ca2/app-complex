@@ -917,7 +917,7 @@ pdirectorysystem->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".
    //   ::aura::audio::france_exit();
 
    //}
-   //void audio::on_decoder_fill_title_info(::multimedia::decoder * pdecoder, string_array & straTitle, string_array_array & straaTitle)
+   //void audio::on_decoder_fill_title_info(::multimedia::decoder * pdecoder, string_array_base & straTitle, string_array_array_base & straaTitle)
    //{
 
    //}

@@ -49,7 +49,7 @@ namespace mediaplaylist
 
 
 
-      string_array                                      m_straPlaylistQueue;
+      string_array_base                                      m_straPlaylistQueue;
 
 
       ::pointer<user::single_document_template>          m_pimpactsystem;

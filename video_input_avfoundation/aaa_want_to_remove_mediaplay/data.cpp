@@ -80,7 +80,7 @@ namespace mediaplay
 
       string str = file()->as_string(payloadFile);
 
-      string_array stra;
+      string_array_base stra;
 
       stra.add_lines(str);
 
@@ -101,7 +101,7 @@ namespace mediaplay
 
       varFileAudio = strSong;
 
-      string_array stra2;
+      string_array_base stra2;
 
       stra2.explode(":", stra[2]);
 
@@ -215,7 +215,7 @@ namespace mediaplay
       else if (m_strAscFormat == "2")
       {
 
-         string_array straLines;
+         string_array_base straLines;
 
          straLines.add_lines(m_strAsc);
 
@@ -532,7 +532,7 @@ namespace mediaplay
 
          string str = file()->as_string(path);
 
-         string_array stra;
+         string_array_base stra;
 
          stra.add_lines(str);
 
@@ -595,7 +595,7 @@ namespace mediaplay
    string data::get_animated_title()
    {
 
-      string_array stra;
+      string_array_base stra;
 
       if(get_document()->get_title().has_character())
       {

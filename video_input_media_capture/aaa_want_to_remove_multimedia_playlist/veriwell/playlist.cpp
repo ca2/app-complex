@@ -151,7 +151,7 @@ namespace multimedia_playlist
 
          }
 
-         string_array stra;
+         string_array_base stra;
 
          stra = get_stra();
 
@@ -180,10 +180,10 @@ namespace multimedia_playlist
 
       }
 
-      string_array playlist::get_stra()
+      string_array_base playlist::get_stra()
       {
 
-         string_array stra;
+         string_array_base stra;
 
          synchronous_lock synchronouslock(this->synchronization());
 
@@ -208,7 +208,7 @@ namespace multimedia_playlist
          if (!bAddDuplicate)
          {
 
-            string_array stra;
+            string_array_base stra;
 
             m_pxmlplaylist->m_pnodePlaylist->get_child_attr_value(stra, "song", "path", is_recursive() ? -1 : 1);
 
@@ -222,7 +222,7 @@ namespace multimedia_playlist
                ::fork(get_app(), [=]()
                {
 
-                  string_array straNew;
+                  string_array_base straNew;
 
                   straNew.add(strId);
 
@@ -273,7 +273,7 @@ namespace multimedia_playlist
          ::fork(get_app(), [=]()
          {
 
-            string_array straNew;
+            string_array_base straNew;
 
             straNew.add(strId);
 

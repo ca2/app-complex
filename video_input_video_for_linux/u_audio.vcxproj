@@ -148,7 +148,7 @@
     <ClCompile Include="imedia\position.cpp" />
     <ClCompile Include="imedia\position_array.cpp" />
     <ClCompile Include="imedia\time.cpp" />
-    <ClCompile Include="imedia\time_array.cpp" />
+    <ClCompile Include="imedia\time_array_base.cpp" />
     <ClCompile Include="ortp\avprofile.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>

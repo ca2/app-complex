@@ -10,7 +10,7 @@
 #endif
 
 
-//CLASS_DECL_APP_CORE_AUDIO string_array det_l(::particle * pparticle, const ::scoped_string & scopedstr);
+//CLASS_DECL_APP_CORE_AUDIO string_array_base det_l(::particle * pparticle, const ::scoped_string & scopedstr);
 
 
 namespace wave

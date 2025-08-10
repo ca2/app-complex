@@ -1253,7 +1253,7 @@ namespace mediaplay
    }
 
 
-   bool impact_interface::get_short_title(string & strTitle, string_array & straArtist, string & strPlaylist)
+   bool impact_interface::get_short_title(string & strTitle, string_array_base & straArtist, string & strPlaylist)
    {
 
       if (get_data() != nullptr)
@@ -1337,7 +1337,7 @@ namespace mediaplay
 
       string strTitle;
 
-      string_array straArtist;
+      string_array_base straArtist;
 
       string strPlaylist;
 
@@ -1370,7 +1370,7 @@ namespace mediaplay
 
                   string strTitle;
 
-                  string_array straPerformer;
+                  string_array_base straPerformer;
 
                   int iTry = 0;
 

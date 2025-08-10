@@ -26,7 +26,7 @@ namespace multimedia_playlist
       bool                             m_bNewTracks;
       ::collection::index                            m_iIndex;
       ::collection::count                          m_c;
-      string_array                          m_stra;
+      string_array_base                          m_stra;
 
       property_set                     m_setPlaylist;
 
@@ -41,7 +41,7 @@ namespace multimedia_playlist
 
       virtual string get_name();
 
-      virtual string_array get_stra();
+      virtual string_array_base get_stra();
 
       virtual void on_update();
 
