@@ -230,7 +230,7 @@ int_fast32_t v4l2_query_all_buffers(int_fast32_t iDevice,
 /**
  * Create memory mapping for buffers
  *
- * This tries to map at least 2, preferably 4, buffers to application memory.
+ * This tries to map_base at least 2, preferably 4, buffers to application memory.
  *
  * @param iDevice handle for the v4l2 device
  * @param buf buffer data

@@ -15,7 +15,7 @@ namespace app_complex_video_capture
    {
    public:
 
-      //map < ::pointer<::video_input::device>, ::pointer<::item>> m_itemmap;
+      //map_base < ::pointer<::video_input::device>, ::pointer<::item>> m_itemmap;
 
 
       device_selector();

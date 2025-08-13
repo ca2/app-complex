@@ -29,7 +29,7 @@ namespace video_input_video_for_linux
    memory_map::memory_map(int_fast32_t iDevice)
    {
       struct v4l2_requestbuffers req;
-      struct v4l2_buffer map;
+      struct v4l2_buffer map_base;
 
       memset(&req, 0, sizeof(req));
       req.count = 4;
@@ -51,13 +51,13 @@ namespace video_input_video_for_linux
       //buf->count = req.count;
       //buf->info = ne (req.count * sizeof(struct v4l2_mmap_info));
 
-      memset(&map, 0, sizeof(map));
-      map.type = req.type;
-      map.memory = req.memory;
+      memset(&map_base, 0, sizeof(map_base));
+      map_base.type = req.type;
+      map_base.memory = req.memory;
 
-      for (map.index = 0; map.index < req.count; ++map.index)
+      for (map_base.index = 0; map_base.index < req.count; ++map_base.index)
       {
-         if (v4l2_ioctl(iDevice, VIDIOC_QUERYBUF, &map) < 0)
+         if (v4l2_ioctl(iDevice, VIDIOC_QUERYBUF, &map_base) < 0)
          {
             //blog(LOG_ERROR, "Failed to query buffer details");
             throw resource_exception("Failed to query buffer details");
@@ -65,10 +65,10 @@ namespace video_input_video_for_linux
 
          auto & info = m_itema.add_new();
 
-         info.length = map.length;
+         info.length = map_base.length;
          info.start =
-            v4l2_mmap(NULL, map.length, PROT_READ | PROT_WRITE,
-                      MAP_SHARED, iDevice, map.m.offset);
+            v4l2_mmap(NULL, map_base.length, PROT_READ | PROT_WRITE,
+                      MAP_SHARED, iDevice, map_base.m.offset);
 
          if (info.start == MAP_FAILED)
          {

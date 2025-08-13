@@ -13,9 +13,9 @@ namespace video_input_media_capture
 
 	//class ::image::image;
 
-	using subtype_map = string_map < ::int_array_base >;
+	using subtype_map = string_map_base < ::int_array_base >;
 
-	using frame_rate_map = map < unsigned long long, subtype_map >;
+	using frame_rate_map = map_base < unsigned long long, subtype_map >;
 
 	typedef void(*emergensyStopEventCallback)(int, void *);
 
@@ -46,7 +46,7 @@ namespace video_input_media_capture
 
 		//bool												m_bSetup;
 
-		//map < unsigned long long, frame_rate_map>					m_mapCaptureFormat;
+		//map_base < unsigned long long, frame_rate_map>					m_mapCaptureFormat;
 
 		////::array <::video_input::media_format >	m_mediaformata;
 

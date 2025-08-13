@@ -77,7 +77,7 @@ namespace app_complex_video_capture
       if(m_ptoggleimpact == nullptr)
       {
 
-         auto pmessagebox = __initialize_new ::message_box(nullptr,"Could not create file list ::user::impact");
+         auto pmessagebox = __initialize_new ::message_box(nullptr,"Could not create file list_base ::user::impact");
 
          pmessagebox->async();
 

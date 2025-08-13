@@ -19,7 +19,7 @@ namespace audio
       ::pointer<tts::speaker>                              m_pspeaker;
       ::pointer<tts::speaker>                              m_ptransspeaker;
       int                                                   m_iGTranslatorFile;
-      string_map < LPFN_NEW_MULTIMEDIA_DECODER >            m_mapMultimediaDecoderFactory;
+      string_map_base < LPFN_NEW_MULTIMEDIA_DECODER >            m_mapMultimediaDecoderFactory;
 
       bool                                                  m_bFadeOutAndStopOnExit;
 

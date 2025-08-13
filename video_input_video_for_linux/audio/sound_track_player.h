@@ -15,8 +15,8 @@ namespace audio
       ::pointer<::wave::player>                                      m_pwaveplayer;
       ::pointer<::audio::mixer>                               m_paudiomixer;
       ::pointer<::audio::decoder_plugin>                        m_pdecoderplugin;
-      string_map < pointer_array < ::audio::plugin > >                 m_mapPlugin;
-      string_map < file_pointer >                                       m_mapFile;
+      string_map_base < pointer_array < ::audio::plugin > >                 m_mapPlugin;
+      string_map_base < file_pointer >                                       m_mapFile;
 
 
       sound_track_player();

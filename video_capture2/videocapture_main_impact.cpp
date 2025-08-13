@@ -64,7 +64,7 @@ namespace app_complex_video_capture
       if(m_pimpact == nullptr)
       {
 
-         message_box(nullptr,"Could not create file list ::user::impact");
+         message_box(nullptr,"Could not create file list_base ::user::impact");
 
       }
 

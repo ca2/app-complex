@@ -1306,24 +1306,24 @@ static size_t AddDevice(obs_property_t *device_list, const string &identificatio
 	return obs_property_list_add_string(device_list, name, identification.c_str());
 }
 
-static bool UpdateDeviceList(obs_property_t *list, const string &identification)
+static bool UpdateDeviceList(obs_property_t *list_base, const string &identification)
 {
-	size_t size = obs_property_list_item_count(list);
+	size_t size = obs_property_list_item_count(list_base);
 	bool found = false;
 	bool disabled_unknown_found = false;
 
 	for (size_t i = 0; i < size; i++) {
-		if (obs_property_list_item_string(list, i) == identification) {
+		if (obs_property_list_item_string(list_base, i) == identification) {
 			found = true;
 			continue;
 		}
-		if (obs_property_list_item_disabled(list, i))
+		if (obs_property_list_item_disabled(list_base, i))
 			disabled_unknown_found = true;
 	}
 
 	if (!found && !disabled_unknown_found) {
-		size_t idx = AddDevice(list, identification);
-		obs_property_list_item_disable(list, idx, true);
+		size_t idx = AddDevice(list_base, identification);
+		obs_property_list_item_disable(list_base, idx, true);
 		return true;
 	}
 
@@ -1331,8 +1331,8 @@ static bool UpdateDeviceList(obs_property_t *list, const string &identification)
 		return false;
 
 	for (size_t i = 0; i < size;) {
-		if (obs_property_list_item_disabled(list, i)) {
-			obs_property_list_item_erase(list, i);
+		if (obs_property_list_item_disabled(list_base, i)) {
+			obs_property_list_item_erase(list_base, i);
 			continue;
 		}
 		i += 1;
@@ -1525,12 +1525,12 @@ static DStr GetFPSName(long long interval)
 static void UpdateFPS(VideoDevice &device, VideoFormat format,
 		long long interval, int cx, int cy, obs_properties_t *props)
 {
-	obs_property_t *list = obs_properties_get(props, FRAME_INTERVAL);
+	obs_property_t *list_base = obs_properties_get(props, FRAME_INTERVAL);
 
-	obs_property_list_clear(list);
+	obs_property_list_clear(list_base);
 
-	obs_property_list_add_int(list, TEXT_FPS_MATCHING, FPS_MATCHING);
-	obs_property_list_add_int(list, TEXT_FPS_HIGHEST,  FPS_HIGHEST);
+	obs_property_list_add_int(list_base, TEXT_FPS_MATCHING, FPS_MATCHING);
+	obs_property_list_add_int(list_base, TEXT_FPS_HIGHEST,  FPS_HIGHEST);
 
 	bool interval_added = interval == FPS_HIGHEST ||
 				interval == FPS_MATCHING;
@@ -1549,17 +1549,17 @@ static void UpdateFPS(VideoDevice &device, VideoFormat format,
 		if (interval == fps_format.interval)
 			interval_added = true;
 
-		size_t idx = obs_property_list_add_int(list, fps_format.text,
+		size_t idx = obs_property_list_add_int(list_base, fps_format.text,
 				fps_format.interval);
-		obs_property_list_item_disable(list, idx, !available);
+		obs_property_list_item_disable(list_base, idx, !available);
 	}
 
 	if (interval_added)
 		return;
 
-	size_t idx = obs_property_list_add_int(list, GetFPSName(interval),
+	size_t idx = obs_property_list_add_int(list_base, GetFPSName(interval),
 			interval);
-	obs_property_list_item_disable(list, idx, true);
+	obs_property_list_item_disable(list_base, idx, true);
 }
 
 static DStr GetVideoFormatName(VideoFormat format)
@@ -1592,8 +1592,8 @@ static void UpdateVideoFormats(VideoDevice &device, VideoFormat format_,
 			FrameRateMatcher(interval),
 			format_gatherer);
 
-	obs_property_t *list = obs_properties_get(props, VIDEO_FORMAT);
-	obs_property_list_clear(list);
+	obs_property_t *list_base = obs_properties_get(props, VIDEO_FORMAT);
+	obs_property_list_clear(list_base);
 
 	bool format_added = false;
 	for (const VideoFormatName &format : videoFormatNames) {
@@ -1605,44 +1605,44 @@ static void UpdateVideoFormats(VideoDevice &device, VideoFormat format_,
 		if (format.format == format_)
 			format_added = true;
 
-		size_t idx = obs_property_list_add_int(list,
+		size_t idx = obs_property_list_add_int(list_base,
 				obs_module_text(format.name),
 				(long long)format.format);
-		obs_property_list_item_disable(list, idx, !available);
+		obs_property_list_item_disable(list_base, idx, !available);
 	}
 
 	if (format_added)
 		return;
 
-	size_t idx = obs_property_list_add_int(list,
+	size_t idx = obs_property_list_add_int(list_base,
 			GetVideoFormatName(format_), (long long)format_);
-	obs_property_list_item_disable(list, idx, true);
+	obs_property_list_item_disable(list_base, idx, true);
 }
 
-static bool UpdateFPS(long long interval, obs_property_t *list)
+static bool UpdateFPS(long long interval, obs_property_t *list_base)
 {
-	size_t size = obs_property_list_item_count(list);
+	size_t size = obs_property_list_item_count(list_base);
 	DStr name;
 
 	for (size_t i = 0; i < size; i++) {
-		if (obs_property_list_item_int(list, i) != interval)
+		if (obs_property_list_item_int(list_base, i) != interval)
 			continue;
 
-		obs_property_list_item_disable(list, i, true);
+		obs_property_list_item_disable(list_base, i, true);
 		if (size == 1)
 			return false;
 
-		std::string_cat(name, obs_property_list_item_name(list, i));
+		std::string_cat(name, obs_property_list_item_name(list_base, i));
 		break;
 	}
 
-	obs_property_list_clear(list);
+	obs_property_list_clear(list_base);
 
 	if (!name->len)
 		name = GetFPSName(interval);
 
-	obs_property_list_add_int(list, name, interval);
-	obs_property_list_item_disable(list, 0, true);
+	obs_property_list_add_int(list_base, name, interval);
+	obs_property_list_item_disable(list_base, 0, true);
 
 	return true;
 }
@@ -1713,29 +1713,29 @@ static bool DeviceIntervalChanged(obs_properties_t *props, obs_property_t *p,
 	return true;
 }
 
-static bool UpdateVideoFormats(VideoFormat format, obs_property_t *list)
+static bool UpdateVideoFormats(VideoFormat format, obs_property_t *list_base)
 {
-	size_t size = obs_property_list_item_count(list);
+	size_t size = obs_property_list_item_count(list_base);
 	DStr name;
 
 	for (size_t i = 0; i < size; i++) {
-		if ((VideoFormat)obs_property_list_item_int(list, i) != format)
+		if ((VideoFormat)obs_property_list_item_int(list_base, i) != format)
 			continue;
 
 		if (size == 1)
 			return false;
 
-		std::string_cat(name, obs_property_list_item_name(list, i));
+		std::string_cat(name, obs_property_list_item_name(list_base, i));
 		break;
 	}
 
-	obs_property_list_clear(list);
+	obs_property_list_clear(list_base);
 
 	if (!name->len)
 		name = GetVideoFormatName(format);
 
-	obs_property_list_add_int(list, name, (long long)format);
-	obs_property_list_item_disable(list, 0, true);
+	obs_property_list_add_int(list_base, name, (long long)format);
+	obs_property_list_item_disable(list_base, 0, true);
 
 	return true;
 }

@@ -126,14 +126,14 @@ static inline bool MapPacketIDs(IBaseFilter *demuxer, ULONG video, ULONG audio)
 
 	hr = MapPinToPacketID(videoPin, video);
 	if (FAILED(hr)) {
-		WarningHR(L"Encoded Device: Failed to map demuxer video pin "
+		WarningHR(L"Encoded Device: Failed to map_base demuxer video pin "
 		          L"packet ID", hr);
 		return false;
 	}
 
 	hr = MapPinToPacketID(audioPin, audio);
 	if (FAILED(hr)) {
-		WarningHR(L"Encoded Device: Failed to map demuxer audio pin "
+		WarningHR(L"Encoded Device: Failed to map_base demuxer audio pin "
 		          L"packet ID", hr);
 		return false;
 	}

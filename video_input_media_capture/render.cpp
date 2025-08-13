@@ -74,7 +74,7 @@ namespace video_input_media_capture
    void render::prepare_image()
    {
 
-      m_pimage->map();
+      m_pimage->map_base();
 
       if (::is_set(m_memory.data()))
       {
@@ -707,7 +707,7 @@ namespace video_input_media_capture
 
                         //linesize = i + 1;
 
-                        /// m_pimage->map();
+                        /// m_pimage->map_base();
 
                         ::winrt::Windows::Foundation::IMemoryBufferReference reference = nullptr;
 

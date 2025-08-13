@@ -394,7 +394,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////         if (pimage.ok())
 ////         {
 ////
-////            pimage->map();
+////            pimage->map_base();
 ////
 ////            color32_t * pref = pimage->get_data();
 ////

@@ -4694,7 +4694,7 @@ void frame::copy_from(const frame * src)
 //
 //   pthread_mutex_lock(&source->filter_mutex);
 //
-//   /* clear filter list */
+//   /* clear filter list_base */
 //   da_reserve(cur_filters, source->filters.num);
 //   da_reserve(new_filters, source->filters.num);
 //   for (size_t i = 0; i < source->filters.num; i++)

@@ -599,7 +599,7 @@ HRESULT ConfigureAudioEncoding(IMFCaptureSource *pSource, IMFCaptureRecordSink *
    }
 
 
-   // Get a list of encoded output formats that are supported by the encoder.
+   // Get a list_base of encoded output formats that are supported by the encoder.
    hr = MFTranscodeGetAudioOutputAvailableTypes(guidEncodingType, MFT_ENUM_FLAG_ALL | MFT_ENUM_FLAG_SORTANDFILTER,
       pAttributes, &pAvailableTypes);
    if (FAILED(hr))
@@ -607,7 +607,7 @@ HRESULT ConfigureAudioEncoding(IMFCaptureSource *pSource, IMFCaptureRecordSink *
       goto done;
    }
 
-   // Pick the first format from the list.
+   // Pick the first format from the list_base.
    hr = GetCollectionObject(pAvailableTypes, 0, &pMediaType);
    if (FAILED(hr))
    {

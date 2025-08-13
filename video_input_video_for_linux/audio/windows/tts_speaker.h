@@ -37,10 +37,10 @@ namespace windows
 
 
          string                                       m_strDefaultLang;
-         string_map < comptr < ISpVoice > >           m_voice;
-         string_map < comptr < ISpObjectToken > >     m_token;
-         string_map < unsigned int >                         m_time;
-         string_map < bool >                          m_tts;
+         string_map_base < comptr < ISpVoice > >           m_voice;
+         string_map_base < comptr < ISpObjectToken > >     m_token;
+         string_map_base < unsigned int >                         m_time;
+         string_map_base < bool >                          m_tts;
          //--------------------------------------------------------------------
          // Initializes the text speaker.
          //--------------------------------------------------------------------
