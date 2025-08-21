@@ -731,7 +731,7 @@ namespace video_input_media_foundation
 
       }
 
-      m_pthread = __allocate ::video_input_media_foundation::thread(this);
+      m_pthread = øallocate ::video_input_media_foundation::thread(this);
 
       m_pthread->initialize(this);
 
@@ -996,7 +996,7 @@ namespace video_input_media_foundation
 
          }
 
-         auto pformatreader = __create_new < format_reader >();
+         auto pformatreader = øcreate_new < format_reader >();
 
          auto pmediaformat = pformatreader->Read(pmediatype);
 

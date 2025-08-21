@@ -106,7 +106,7 @@ namespace video_input
 
       }
 
-      __øconstruct(m_prender);
+      øconstruct(m_prender);
 
       m_prender->initialize_video_input_render(this);
 

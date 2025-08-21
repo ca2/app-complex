@@ -43,7 +43,7 @@ namespace audio
    void audio::init_multimedia()
    {
 
-      //auto estatus = __construct_new(m_psoundtrackplayer);
+      //auto estatus = øconstruct_new(m_psoundtrackplayer);
 
       //if (!estatus)
       //{
@@ -81,7 +81,7 @@ namespace audio
       if (!pplugin->audio_matches(sound_track()->m_paudiomixer))
       {
 
-         auto presampler = __allocate ::audio::resampler();
+         auto presampler = øallocate ::audio::resampler();
 
          presampler->m_pplugin = pplugin;
 
@@ -334,7 +334,7 @@ namespace audio
 
 #endif
 
-      __øconstruct(m_pmultimediafile, __allocate ::multimedia::file_application());
+      øconstruct(m_pmultimediafile, øallocate ::multimedia::file_application());
 
 #ifdef WINDOWS_DESKTOP
 
@@ -355,7 +355,7 @@ namespace audio
       if (!m_pwave)
       {
 
-         auto estatus = __construct_new(m_pwave);
+         auto estatus = øconstruct_new(m_pwave);
 
          if (!estatus)
          {
@@ -548,7 +548,7 @@ namespace audio
    ::pointer<::tts::speaker>audio::create_tts_speaker()
    {
 
-      auto pspeaker = __øcreate < ::tts::speaker >();
+      auto pspeaker = øcreate < ::tts::speaker >();
 
       if (pspeaker.is_set())
       {
@@ -571,7 +571,7 @@ namespace audio
    ::pointer<::tts::speaker>audio::create_trans_speaker()
    {
 
-      auto pspeaker = __create_new < ms_translator_speaker >();
+      auto pspeaker = øcreate_new < ms_translator_speaker >();
 
       return ::transfer(pspeaker);
 
@@ -926,7 +926,7 @@ pdirectorysystem->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".
    LPWAVEOUT audio::waveout_open(int iChannel, LPAUDIOFORMAT pformat, LPWAVEOUT_CALLBACK pcallback)
    {
 
-      auto pplugin = __allocate ::audio::source();
+      auto pplugin = øallocate ::audio::source();
 
       if (pplugin.is_null())
       {
@@ -953,7 +953,7 @@ pdirectorysystem->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".
 
       //::file::path path = payloadFile.get_file_path();
 
-      //auto pfile = __allocate rtp::file();
+      //auto pfile = øallocate rtp::file();
 
       //if (!pfile->rx_open(purl->get_server(path), purl->get_port(path)))
       //{

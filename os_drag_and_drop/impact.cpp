@@ -82,7 +82,7 @@ namespace simple_os_drag_and_drop
 
       }
 
-      auto estatus = __construct_new(m_psimpleosdraganddrop);
+      auto estatus = øconstruct_new(m_psimpleosdraganddrop);
 
       if (!estatus)
       {

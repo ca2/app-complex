@@ -794,7 +794,7 @@ namespace video_input_media_capture
 
       }
 
-      m_pthread = __allocate ::video_input_media_capture::thread(this);
+      m_pthread = øallocate ::video_input_media_capture::thread(this);
 
       m_pthread->initialize(this);
 
@@ -951,7 +951,7 @@ namespace video_input_media_capture
 
          ::pointer < render > prender = get_render();
 
-         __defer_construct(prender->m_pimage);
+         ødefer_construct(prender->m_pimage);
 
          prender->m_pimage->create(m_size);
 
@@ -1010,7 +1010,7 @@ namespace video_input_media_capture
       for (unsigned int uFormat = 0; uFormat < formata.Size(); uFormat++)
       {
 
-         auto pmediaformat = __allocate media_format();
+         auto pmediaformat = øallocate media_format();
 
          pmediaformat->m_mediaframeformat = formata.GetAt(uFormat);
 
@@ -1115,7 +1115,7 @@ namespace video_input_media_capture
 
       //   }
 
-      //   auto pformatreader = __create_new < format_reader >();
+      //   auto pformatreader = øcreate_new < format_reader >();
 
       //   auto pmediaformat = pformatreader->Read(pmediatype);
 

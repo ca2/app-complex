@@ -56,7 +56,7 @@ IMPLEMENT_APPLICATION_FACTORY();
                                ::type < main_frame >(),
                                ::type < impact >()));
 
-      __øconstruct(m_ptemplateSimpleDrawingMain, pdoctemplate);
+      øconstruct(m_ptemplateSimpleDrawingMain, pdoctemplate);
 
       add_document_template(pdoctemplate);
 

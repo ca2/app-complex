@@ -45,7 +45,7 @@ namespace audio
 
       }
 
-      auto estatus = __construct_new(m_psoundtrackplayer);
+      auto estatus = øconstruct_new(m_psoundtrackplayer);
 
       if (!estatus)
       {

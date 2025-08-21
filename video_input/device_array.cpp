@@ -67,7 +67,7 @@ namespace video_input
 	//			for (UINT32 i = 0; i < cCount; i++)
 	//			{
 
-	//				auto pdevice = __allocate device();
+	//				auto pdevice = øallocate device();
 
 	//				pdevice->readInfoOfDevice(ppDevices[i], i);
 

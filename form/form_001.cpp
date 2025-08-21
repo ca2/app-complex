@@ -67,15 +67,15 @@ namespace app_complex_form
 
       }
 
-//      __construct_new(m_pstill);
+//      øconstruct_new(m_pstill);
 //
-//      __construct_new(m_pedit);
+//      øconstruct_new(m_pedit);
 //
-//      __construct_new(m_pbuttonClear);
+//      øconstruct_new(m_pbuttonClear);
 //
-//      __construct_new(m_pbuttonSend);
+//      øconstruct_new(m_pbuttonSend);
 //
-//      __construct_new(m_pstillReceiver);
+//      øconstruct_new(m_pstillReceiver);
 //
 //      m_pstill->create_control(this, "still");
 //

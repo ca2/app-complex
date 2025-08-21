@@ -175,11 +175,11 @@ namespace video_input_video_for_linux
          else
          {
 
-            auto pdev = __allocate device(iDevice++, (const_char_pointer )video_cap.card, strDevice, strHardwareId);
+            auto pdev = øallocate device(iDevice++, (const_char_pointer )video_cap.card, strDevice, strHardwareId);
 
             pdev->initialize(this);
 
-            __defer_construct_new(m_pitemaDevice);
+            ødefer_construct_new(m_pitemaDevice);
 
             m_pitemaDevice->add(pdev);
 

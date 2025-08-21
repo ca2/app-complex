@@ -106,9 +106,9 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////
 ////      m_bCapturing = true;
 ////
-////      informationf("%s: __allocate< capture started", m_pdevice->m_strDevice.c_str >());
+////      informationf("%s: øallocate< capture started", m_pdevice->m_strDevice.c_str >());
 ////
-////      m_pframe = __allocate< ::video::frame(v4l2_pix_fmt_to_video_format >(m_pdevice->m_iPixFmt),
+////      m_pframe = øallocate< ::video::frame(v4l2_pix_fmt_to_video_format >(m_pdevice->m_iPixFmt),
 ////                                    m_pdevice->m_size.cx(), m_pdevice->m_size.cy());
 ////
 //////      m_pframe->video_frame_init(x);
@@ -385,7 +385,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////         if(pimage.nok())
 ////         {
 ////
-////            __øconstruct(pimage);
+////            øconstruct(pimage);
 ////
 ////         }
 ////

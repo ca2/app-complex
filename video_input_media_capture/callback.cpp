@@ -128,7 +128,7 @@ namespace video_input_media_capture
 
    //      }
 
-   //      auto pformatreader = m_pdevice->__create_new < format_reader >();
+   //      auto pformatreader = m_pdevice->øcreate_new < format_reader >();
 
    //      pmediaformat = pformatreader->Read(pCurrentType);
 

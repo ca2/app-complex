@@ -460,7 +460,7 @@ namespace video_input_media_foundation
 
       HRESULT hr = S_OK;
 
-      auto pmediaformat = __øcreate < ::video_input::media_format >();
+      auto pmediaformat = øcreate < ::video_input::media_format >();
 
       hr = pmediatype->LockStore();
 
