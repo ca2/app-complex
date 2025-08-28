@@ -402,7 +402,7 @@ namespace video_input_video_for_linux
          if (pimage.ok())
          {
 
-            pimage->map_base();
+            pimage->map();
 
             auto pref = pimage->get_data();
 
