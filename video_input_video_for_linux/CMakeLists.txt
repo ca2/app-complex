@@ -53,7 +53,7 @@ if (MSVC)
     target_link_options(${PROJECT_NAME} PRIVATE "/IMPLIB:${LIBRARY_OUTPUT_PATH}/video_input_video_for_linux.lib")
     target_link_options(${PROJECT_NAME} PRIVATE "/DEF:${CMAKE_CURRENT_SOURCE_DIR}/video_input_video_for_linux.def")
     target_link_libraries(${PROJECT_NAME} PRIVATE acme apex aqua aura Gdiplus)
-elseif(${LINUX} OR ${__BSD__})
+elseif(${LINUX} OR ${__BSD__} OR ${ANDROID})
 
    #if(${USE_PKGCONFIG})
       pkg_check_modules(${PROJECT_NAME}_PKGCONFIG libavcodec libswscale libavformat libavutil libv4l2)
