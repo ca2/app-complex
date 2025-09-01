@@ -1,6 +1,6 @@
 #include "framework.h"
 #include "form.h"
-#include "acme/constant/message.h"
+#include "acme/constant/user_message.h"
 #include "acme/filesystem/filesystem/file_context.h"
 #include "acme/prototype/geometry2d/_text_stream.h"
 #include "aura/graphics/draw2d/graphics.h"
