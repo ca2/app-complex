@@ -77,7 +77,7 @@ namespace mediaplay
 
    void record_notify_impact::install_message_routing(::channel * pchannel)
    {
-      //MESSAGE_LINK(e_message_timer, pchannel, this, &record_notify_impact::on_timer);
+      //MESSAGE_LINK(::user::e_message_timer, pchannel, this, &record_notify_impact::on_timer);
    }
 
    void record_notify_impact::GetParentClientRect(::int_rectangle * lprect)

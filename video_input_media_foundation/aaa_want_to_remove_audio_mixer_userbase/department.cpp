@@ -68,7 +68,7 @@ namespace multimedia
 
          ::user::interaction::install_message_routing(pchannel);
 
-         MESSAGE_LINK(e_message_close, pchannel, this, &department::on_message_close);
+         MESSAGE_LINK(::user::e_message_close, pchannel, this, &department::on_message_close);
 
       }
 

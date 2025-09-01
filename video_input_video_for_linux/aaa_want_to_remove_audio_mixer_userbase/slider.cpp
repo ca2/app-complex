@@ -49,12 +49,12 @@ namespace multimedia
       void slider::install_message_routing(::channel * pchannel)
       {
          ::user::interaction::install_message_routing(pchannel);
-         MESSAGE_LINK(e_message_create, pchannel, this, &slider::on_message_create);
-         MESSAGE_LINK(e_message_left_button_down, pchannel, this, &slider::on_message_left_button_down);
-         MESSAGE_LINK(e_message_left_button_up, pchannel, this, &slider::on_message_left_button_up);
-         MESSAGE_LINK(e_message_mouse_move, pchannel, this, &slider::on_message_mouse_move);
-         //MESSAGE_LINK(e_message_timer, pchannel, this, &slider::on_timer);
-         //MESSAGE_LINK(e_message_size, pchannel, this, &slider::on_message_size);
+         MESSAGE_LINK(::user::e_message_create, pchannel, this, &slider::on_message_create);
+         MESSAGE_LINK(::user::e_message_left_button_down, pchannel, this, &slider::on_message_left_button_down);
+         MESSAGE_LINK(::user::e_message_left_button_up, pchannel, this, &slider::on_message_left_button_up);
+         MESSAGE_LINK(::user::e_message_mouse_move, pchannel, this, &slider::on_message_mouse_move);
+         //MESSAGE_LINK(::user::e_message_timer, pchannel, this, &slider::on_timer);
+         //MESSAGE_LINK(::user::e_message_size, pchannel, this, &slider::on_message_size);
       }
 
 
@@ -260,7 +260,7 @@ namespace multimedia
             if(m_eorientation == e_orientation_horizontal)
             {
                pParentWnd->send_message(
-               e_message_scroll_x,
+               ::user::e_message_scroll_x,
                MAKEWPARAM(SB_THUMBTRACK, m_iTrackingPos),
                (LPARAM) (::user::interaction * )(this));
                set_need_redraw();
@@ -268,7 +268,7 @@ namespace multimedia
             else if(m_eorientation == e_orientation_vertical)
             {
                pParentWnd->send_message(
-               e_message_scroll_y,
+               ::user::e_message_scroll_y,
                MAKEWPARAM(SB_THUMBTRACK, m_iTrackingPos),
                (LPARAM) (::user::interaction * )(this));
                set_need_redraw();
@@ -407,7 +407,7 @@ namespace multimedia
             if(m_eorientation == e_orientation_horizontal)
             {
                pParentWnd->send_message(
-               e_message_scroll_x,
+               ::user::e_message_scroll_x,
                MAKEWPARAM(SB_THUMBPOSITION, m_iPos),
                (LPARAM) dynamic_cast < ::user::interaction * >(this));
                set_need_redraw();
@@ -415,7 +415,7 @@ namespace multimedia
             else if(m_eorientation == e_orientation_vertical)
             {
                pParentWnd->send_message(
-               e_message_scroll_y,
+               ::user::e_message_scroll_y,
                MAKEWPARAM(SB_THUMBPOSITION, m_iPos),
                (LPARAM) dynamic_cast < ::user::interaction * >(this));
                set_need_redraw();
@@ -669,14 +669,14 @@ namespace multimedia
          if(m_eorientation == e_orientation_horizontal)
          {
             pParentWnd->send_message(
-            e_message_scroll_x,
+            ::user::e_message_scroll_x,
             MAKEWPARAM(SB_LINELEFT, m_iPos),
             (LPARAM) dynamic_cast < ::user::interaction * >(this));
          }
          else
          {
             pParentWnd->send_message(
-            e_message_scroll_y,
+            ::user::e_message_scroll_y,
             MAKEWPARAM(SB_LINEUP, m_iPos),
             (LPARAM) dynamic_cast < ::user::interaction * >(this));
          }
@@ -696,14 +696,14 @@ namespace multimedia
          if(m_eorientation == e_orientation_horizontal)
          {
             pParentWnd->send_message(
-            e_message_scroll_x,
+            ::user::e_message_scroll_x,
             MAKEWPARAM(SB_LINERIGHT, m_iPos),
             (LPARAM) dynamic_cast < ::user::interaction * >(this));
          }
          else
          {
             pParentWnd->send_message(
-            e_message_scroll_y,
+            ::user::e_message_scroll_y,
             MAKEWPARAM(SB_LINEDOWN, m_iPos),
             (LPARAM) dynamic_cast < ::user::interaction * >(this));
          }
@@ -720,14 +720,14 @@ namespace multimedia
          if(m_eorientation == e_orientation_horizontal)
          {
             pParentWnd->send_message(
-            e_message_scroll_x,
+            ::user::e_message_scroll_x,
             MAKEWPARAM(SB_LINELEFT, m_iPos),
             (LPARAM) dynamic_cast < ::user::interaction * >(this));
          }
          else
          {
             pParentWnd->send_message(
-            e_message_scroll_y,
+            ::user::e_message_scroll_y,
             MAKEWPARAM(SB_LINEUP, m_iPos),
             (LPARAM) dynamic_cast < ::user::interaction * >(this));
          }
@@ -748,14 +748,14 @@ namespace multimedia
          if(m_eorientation == e_orientation_horizontal)
          {
             pParentWnd->send_message(
-            e_message_scroll_x,
+            ::user::e_message_scroll_x,
             MAKEWPARAM(SB_LINERIGHT, m_iPos),
             (LPARAM) dynamic_cast < ::user::interaction * >(this));
          }
          else
          {
             pParentWnd->send_message(
-            e_message_scroll_y,
+            ::user::e_message_scroll_y,
             MAKEWPARAM(SB_LINEDOWN, m_iPos),
             (LPARAM) dynamic_cast < ::user::interaction * >(this));
          }

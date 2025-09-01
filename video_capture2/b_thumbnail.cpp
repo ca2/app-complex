@@ -423,7 +423,7 @@ HRESULT CThumbnail::SetDevice(IMFActivate *pActivate)
 //  Resizes the video rectangle.
 //
 //  The application should call this method if the int_size of the video
-//  window changes; e.g., when the application receives e_message_size.
+//  window changes; e.g., when the application receives ::user::e_message_size.
 //-------------------------------------------------------------------
 
 HRESULT CThumbnail::ResizeVideo(unsigned short /*width*/, unsigned short /*height*/)
@@ -436,7 +436,7 @@ HRESULT CThumbnail::ResizeVideo(unsigned short /*width*/, unsigned short /*heigh
 
    if (FAILED(hr))
    {
-      MessageBox(nullptr, L"ResetDevice failed!", nullptr, e_message_box_ok);
+      MessageBox(nullptr, L"ResetDevice failed!", nullptr, ::user::e_message_box_ok);
    }
 
    LeaveCriticalSection(&m_critsec);

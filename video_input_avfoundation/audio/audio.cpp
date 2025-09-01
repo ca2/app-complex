@@ -94,7 +94,7 @@ namespace audio
       if(!psoundtrack)
       {
 
-         output_error_message("Sound track object is not present.", papp->get_app_user_friendly_task_bar_name(), e_message_box_icon_exclamation, nullptr);
+         output_error_message("Sound track object is not present.", papp->get_app_user_friendly_task_bar_name(), ::user::e_message_box_icon_exclamation, nullptr);
 
          return nullptr;
 
@@ -105,7 +105,7 @@ namespace audio
       if(!paudiomixer)
       {
 
-         output_error_message("Audio mixer object is not present.", papp->get_app_user_friendly_task_bar_name(), e_message_box_icon_exclamation, nullptr);
+         output_error_message("Audio mixer object is not present.", papp->get_app_user_friendly_task_bar_name(), ::user::e_message_box_icon_exclamation, nullptr);
 
          return nullptr;
 

@@ -23,7 +23,7 @@ namespace mediaplaylist
    void frame::install_message_routing(::channel * pchannel)
    {
       simple_frame_window::install_message_routing(pchannel);
-      MESSAGE_LINK(e_message_create, pchannel, this, &frame::on_message_create);
+      MESSAGE_LINK(::user::e_message_create, pchannel, this, &frame::on_message_create);
    }
 
 

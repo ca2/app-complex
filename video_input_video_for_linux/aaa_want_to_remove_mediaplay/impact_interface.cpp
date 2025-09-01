@@ -132,11 +132,11 @@ namespace mediaplay
 
       ::user::impact::install_message_routing(pchannel);
 
-      MESSAGE_LINK(e_message_create, pchannel, this, &impact_interface::on_message_create);
+      MESSAGE_LINK(::user::e_message_create, pchannel, this, &impact_interface::on_message_create);
 
       MESSAGE_LINK(WM_APP + 111, pchannel, this, &impact_interface::_001OnMessageX);
 
-      MESSAGE_LINK(e_message_destroy, pchannel, this, &impact_interface::on_message_destroy);
+      MESSAGE_LINK(::user::e_message_destroy, pchannel, this, &impact_interface::on_message_destroy);
 
    }
 

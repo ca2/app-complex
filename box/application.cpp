@@ -46,7 +46,7 @@ IMPLEMENT_APPLICATION_FACTORY();
                message_box(
                   "Simple Message Box!! (message_box).<br><br>Finish?", 
                   nullptr,
-                  e_message_box_yes_no | e_message_box_icon_information,
+                  ::user::e_message_box_yes_no | ::user::e_message_box_icon_information,
                   pcallbacks->first());
 
             }

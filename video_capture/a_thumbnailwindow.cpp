@@ -55,12 +55,12 @@ namespace ThumbnailWnd
    {
       switch (uMsg)
       {
-         HANDLE_MSG(hwnd, e_message_create, OnCreate);
-         HANDLE_MSG(hwnd, e_message_paint, OnPaint);
-         HANDLE_MSG(hwnd, e_message_size, OnSize);
-         HANDLE_MSG(hwnd, e_message_destroy, OnDestroy);
+         HANDLE_MSG(hwnd, ::user::e_message_create, OnCreate);
+         HANDLE_MSG(hwnd, ::user::e_message_paint, OnPaint);
+         HANDLE_MSG(hwnd, ::user::e_message_size, OnSize);
+         HANDLE_MSG(hwnd, ::user::e_message_destroy, OnDestroy);
 
-      case e_message_erase_background:
+      case ::user::e_message_erase_background:
          return 1;
       }
       return DefWindowProc(hwnd, uMsg, wParam, lParam);

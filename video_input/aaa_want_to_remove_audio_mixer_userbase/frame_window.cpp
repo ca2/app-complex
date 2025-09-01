@@ -38,10 +38,10 @@ namespace multimedia
       {
 
          simple_frame_window::install_message_routing(pchannel);
-         MESSAGE_LINK(e_message_create, pchannel, this, &frame_window::on_message_create);
-         MESSAGE_LINK(e_message_destroy, pchannel, this, &frame_window::on_message_destroy);
-         MESSAGE_LINK(e_message_measure_item, pchannel, this, &frame_window::_001OnMeasureItem);
-         MESSAGE_LINK(e_message_close, pchannel, this, &frame_window::on_message_close);
+         MESSAGE_LINK(::user::e_message_create, pchannel, this, &frame_window::on_message_create);
+         MESSAGE_LINK(::user::e_message_destroy, pchannel, this, &frame_window::on_message_destroy);
+         MESSAGE_LINK(::user::e_message_measure_item, pchannel, this, &frame_window::_001OnMeasureItem);
+         MESSAGE_LINK(::user::e_message_close, pchannel, this, &frame_window::on_message_close);
          MESSAGE_LINK(WM_USER, pchannel, this, &frame_window::OnUserMessage);
 
       }
@@ -266,7 +266,7 @@ namespace multimedia
 
       bool frame_window::OnMixerExit()
       {
-         post_message(e_message_close);
+         post_message(::user::e_message_close);
          return true;
       }
 
