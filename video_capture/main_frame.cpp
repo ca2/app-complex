@@ -29,7 +29,7 @@ namespace app_complex_video_capture
 
       simple_frame_window::install_message_routing(pchannel);
 
-      MESSAGE_LINK(WM_APP + 975, pchannel, this, &main_frame::_001OnCaptureEvent);
+      USER_MESSAGE_LINK(WM_APP + 975, pchannel, this, &main_frame::_001OnCaptureEvent);
 
    }
 

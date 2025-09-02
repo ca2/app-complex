@@ -42,7 +42,7 @@ namespace app_complex_video_capture
 
       ::user::impact::install_message_routing(pchannel);
 
-      MESSAGE_LINK(::user::e_message_create, pchannel, this, &impact_base::on_message_create);
+      USER_MESSAGE_LINK(::user::e_message_create, pchannel, this, &impact_base::on_message_create);
 
    }
 

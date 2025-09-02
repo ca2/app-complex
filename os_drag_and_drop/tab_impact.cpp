@@ -43,7 +43,7 @@ namespace simple_os_drag_and_drop
 
       ::user::tab_impact::install_message_routing(pchannel);
 
-      MESSAGE_LINK(::user::e_message_create, pchannel, this, &tab_impact::on_message_create);
+      USER_MESSAGE_LINK(::user::e_message_create, pchannel, this, &tab_impact::on_message_create);
 
    }
 

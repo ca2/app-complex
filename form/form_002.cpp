@@ -65,7 +65,7 @@ namespace app_complex_form
 
       form::install_message_routing(psender);
 
-      MESSAGE_LINK(::user::e_message_create, psender, this, &form_002::on_message_create);
+      USER_MESSAGE_LINK(::user::e_message_create, psender, this, &form_002::on_message_create);
 
    }
 
