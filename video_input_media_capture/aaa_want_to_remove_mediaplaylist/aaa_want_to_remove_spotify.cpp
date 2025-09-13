@@ -573,7 +573,7 @@ pdirectorysystem->system() / "config\\spotify\\pas.txt");
    void plspotify::run_spotify_step()
    {
 
-      synchronous_lock synchronouslock(m_pmutex);
+      synchronous_lock synchronouslock(m_pmutex, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       if(next_timeout == 0)
       {
@@ -619,9 +619,9 @@ pdirectorysystem->system() / "config\\spotify\\pas.txt");
    void plspotify::load_image()
    {
 
-      synchronous_lock sl2(papp->mediaplaylist()->m_pplaylistdocCurrent->m_spplayer->mutex());
+      synchronous_lock sl2(papp->mediaplaylist()->m_pplaylistdocCurrent->m_spplayer->mutex(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
-      synchronous_lock synchronouslock(m_pmutex);
+      synchronous_lock synchronouslock(m_pmutex, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       sp_album * a = sp_track_album(currenttrack);
 
@@ -651,9 +651,9 @@ pdirectorysystem->system() / "config\\spotify\\pas.txt");
    void plspotify::defer_load_image(sp_image * pimage)
    {
 
-      synchronous_lock sl2(papp->mediaplaylist()->m_pplaylistdocCurrent->m_spplayer->mutex());
+      synchronous_lock sl2(papp->mediaplaylist()->m_pplaylistdocCurrent->m_spplayer->mutex(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
-      synchronous_lock synchronouslock(m_pmutex);
+      synchronous_lock synchronouslock(m_pmutex, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       if(pimage->is_null())
       {
@@ -710,7 +710,7 @@ pdirectorysystem->system() / "config\\spotify\\pas.txt");
    void plspotify::on_update_playlist_set(sp_playlistcontainer * pc)
    {
 
-      synchronous_lock synchronouslock(m_pmutex);
+      synchronous_lock synchronouslock(m_pmutex, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       m_pla.erase_all();
 
@@ -764,7 +764,7 @@ pdirectorysystem->system() / "config\\spotify\\pas.txt");
    void plspotify::container_loaded(sp_playlistcontainer * pc)
    {
 
-      synchronous_lock synchronouslock(m_pmutex);
+      synchronous_lock synchronouslock(m_pmutex, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       on_update_playlist_set(pc);
 

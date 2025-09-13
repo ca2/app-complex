@@ -110,7 +110,7 @@ namespace video_input
 	device * device_array::get_device_by_id2(const ::scoped_string & scopedstrMd5)
 	{
 
-		synchronous_lock synchronouslock(this->synchronization());
+		synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
 		for (auto & pitem : itema())
 		{
@@ -134,7 +134,7 @@ namespace video_input
 	device * device_array::get_device_by_name(const ::scoped_string & scopedstrName)
 	{
 
-		synchronous_lock synchronouslock(this->synchronization());
+		synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
 
 		for (auto & pitem : itema())

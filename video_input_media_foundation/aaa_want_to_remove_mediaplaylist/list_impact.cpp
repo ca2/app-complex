@@ -809,7 +809,7 @@ namespace mediaplaylist
 
       }
 
-      synchronous_lock synchronouslock(pl->m_psession->mutex());
+      synchronous_lock synchronouslock(pl->m_psession->mutex(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       if (pl.is_set() && pitem->m_item.m_iItem < pl->m_tracka.get_size())
       {
@@ -985,7 +985,7 @@ namespace mediaplaylist
 
       //      {
 
-      //         synchronous_lock synchronouslock(this->synchronization());
+      //         synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       //         _001OnNcDraw(pgraphics);
 

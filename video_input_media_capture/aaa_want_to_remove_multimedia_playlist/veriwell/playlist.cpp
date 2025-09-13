@@ -101,7 +101,7 @@ namespace multimedia_playlist
       void playlist::on_update_tracks()
       {
 
-         synchronous_lock synchronouslock(this->synchronization());
+         synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          m_stra.erase_all();
 
@@ -185,7 +185,7 @@ namespace multimedia_playlist
 
          string_array_base stra;
 
-         synchronous_lock synchronouslock(this->synchronization());
+         synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          ensure_playlist();
 
@@ -203,7 +203,7 @@ namespace multimedia_playlist
       string playlist::add_song(::payload payloadFile, bool bAddDuplicate)
       {
 
-         synchronous_lock synchronouslock(this->synchronization());
+         synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          if (!bAddDuplicate)
          {
@@ -309,7 +309,7 @@ namespace multimedia_playlist
       bool playlist::is_recursive()
       {
 
-         synchronous_lock synchronouslock(this->synchronization());
+         synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          return get_flag("recursive", true);
 
@@ -319,7 +319,7 @@ namespace multimedia_playlist
       bool playlist::is_shuffle()
       {
 
-         synchronous_lock synchronouslock(this->synchronization());
+         synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          return get_flag("shuffle", false);
 
@@ -329,7 +329,7 @@ namespace multimedia_playlist
       bool playlist::is_loop()
       {
 
-         synchronous_lock synchronouslock(this->synchronization());
+         synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          return get_flag("loop", false);
 
@@ -338,7 +338,7 @@ namespace multimedia_playlist
       void playlist::set_flag(const ::scoped_string & scopedstr, bool bFlag)
       {
 
-         synchronous_lock synchronouslock(this->synchronization());
+         synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          m_pxmlplaylist->m_xmldoc.get_root()->set_attribute(scopedstr, bFlag);
 
@@ -348,7 +348,7 @@ namespace multimedia_playlist
       bool playlist::get_flag(const ::scoped_string & scopedstr, bool bDefault)
       {
 
-         synchronous_lock synchronouslock(this->synchronization());
+         synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          bool bFlag;
 
@@ -367,7 +367,7 @@ namespace multimedia_playlist
       void playlist::set_int(const ::scoped_string & scopedstr, long long iValue)
       {
 
-         synchronous_lock synchronouslock(this->synchronization());
+         synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          m_pxmlplaylist->m_xmldoc.get_root()->set_attribute(scopedstr, iValue);
 
@@ -377,7 +377,7 @@ namespace multimedia_playlist
       long long playlist::get_int(const ::scoped_string & scopedstr, long long iDefault)
       {
 
-         synchronous_lock synchronouslock(this->synchronization());
+         synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          int iValue;
 
@@ -392,7 +392,7 @@ namespace multimedia_playlist
       void playlist::set_string(const ::scoped_string & scopedstr, const ::scoped_string & scopedstrValue)
       {
 
-         synchronous_lock synchronouslock(this->synchronization());
+         synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          m_pxmlplaylist->m_xmldoc.get_root()->set_attribute(scopedstr, pszValue);
 
@@ -401,7 +401,7 @@ namespace multimedia_playlist
       string playlist::get_string(const ::scoped_string & scopedstr, const ::scoped_string & scopedstrDefault)
       {
 
-         synchronous_lock synchronouslock(this->synchronization());
+         synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          string strValue;
 
@@ -458,7 +458,7 @@ namespace multimedia_playlist
       void playlist::ensure_playlist()
       {
 
-         synchronous_lock synchronouslock(this->synchronization());
+         synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          if (m_pxmlplaylist->m_pnodeCurrent == nullptr || m_pxmlplaylist->m_pnodePlaylist == nullptr)
          {

@@ -67,7 +67,7 @@ namespace video_input_media_foundation
    void video_input::_update_device_list()
    {
 
-      synchronous_lock synchronouslock(this->synchronization());
+      synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       {
 

@@ -876,7 +876,7 @@ pdirectorysystem->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".
 ////   void application::speak(string text)
 ////   {
 ////
-////      synchronous_lock synchronouslock(this->synchronization());
+////      synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 ////
 ////      ::pointer<::tts::speaker>& pspeaker = m_pspeaker;
 ////

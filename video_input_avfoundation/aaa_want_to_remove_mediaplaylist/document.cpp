@@ -147,7 +147,7 @@ namespace mediaplaylist
    bool document::on_save_document(::payload payloadFile)
    {
 
-      synchronous_lock synchronouslock(m_pmutexData);
+      synchronous_lock synchronouslock(m_pmutexData, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       if (play_playlist() != nullptr)
       {
@@ -214,7 +214,7 @@ namespace mediaplaylist
 
       }
 
-      synchronous_lock synchronouslock(m_pmutexData);
+      synchronous_lock synchronouslock(m_pmutexData, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       impact_playlist()->load(m_pathFile);
 
@@ -226,7 +226,7 @@ namespace mediaplaylist
    bool document::has_next_song()
    {
 
-      synchronous_lock synchronouslock(m_pmutexData);
+      synchronous_lock synchronouslock(m_pmutexData, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       if(get_current_playlist_song_count() <= 0)
       {
@@ -257,7 +257,7 @@ namespace mediaplaylist
    string_array_base document::get_songs(bool bEditingPlaylist)
    {
 
-      synchronous_lock synchronouslock(m_pmutexData);
+      synchronous_lock synchronouslock(m_pmutexData, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       if(bEditingPlaylist)
       {
@@ -284,7 +284,7 @@ namespace mediaplaylist
 
          update_songs(stra, true);
 
-         synchronous_lock synchronouslock(m_pmutexData);
+         synchronous_lock synchronouslock(m_pmutexData, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          m_straImpact = stra;
 
@@ -296,7 +296,7 @@ namespace mediaplaylist
 
          update_songs(stra, false);
 
-         synchronous_lock synchronouslock(m_pmutexData);
+         synchronous_lock synchronouslock(m_pmutexData, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          m_straPlay = stra;
 
@@ -310,7 +310,7 @@ namespace mediaplaylist
          if(pstraNew->get_count() > 0)
          {
 
-            synchronous_lock synchronouslock(m_pmutexData);
+            synchronous_lock synchronouslock(m_pmutexData, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
             for (::collection::index i = 0; i < m_straOnAddPlay.get_count(); i++)
             {
@@ -423,7 +423,7 @@ processed_new:
    bool document::get_song_current_queue(string_array_base & stra, bool bEditingPlaylist)
    {
 
-      synchronous_lock synchronouslock(m_pmutexData);
+      synchronous_lock synchronouslock(m_pmutexData, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       string_array_base straTotal = get_songs(bEditingPlaylist);
 
@@ -442,7 +442,7 @@ processed_new:
    ::collection::index document::get_current_song(bool bEditingPlaylist)
    {
 
-      synchronous_lock synchronouslock(m_pmutexData);
+      synchronous_lock synchronouslock(m_pmutexData, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       if(bEditingPlaylist)
       {
@@ -569,7 +569,7 @@ processed_new:
 
             }
 
-            synchronous_lock synchronouslock(m_pmutexData);
+            synchronous_lock synchronouslock(m_pmutexData, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
             if(play_playlist()->m_setFile[str].is_empty())
             {
@@ -600,7 +600,7 @@ processed_new:
 
                   auto & pstartup = papp->mediaplaylist()->m_pstartup;
 
-                  synchronous_lock synchronouslock(papp->mediaplaylist()->mutex());
+                  synchronous_lock synchronouslock(papp->mediaplaylist()->mutex(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
                   ::file::path path = m_pathFile;
 
@@ -769,7 +769,7 @@ processed_new:
 
       //   auto & startup = papp->mediaplaylist()->m_startup;
 
-      //   synchronous_lock synchronouslock(pstartup->mutex());
+      //   synchronous_lock synchronouslock(pstartup->mutex(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       //   info.m_time = pstartup->m_set[path + ".current_song_millis"];
 
@@ -902,13 +902,13 @@ processed_new:
 
             pplaylist->initialize_multimedia_playlist_veriwell_playlist(papp->mediaplaylist()->m_psessionVeriwell);
 
-            synchronous_lock synchronouslock(m_pmutexData);
+            synchronous_lock synchronouslock(m_pmutexData, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
             impact_playlist()->load(m_pathFile);
 
          }
 
-         synchronous_lock synchronouslock(m_pmutexData);
+         synchronous_lock synchronouslock(m_pmutexData, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          strId = impact_playlist()->add_song(payloadFile, bAddDuplicate);
 
@@ -1019,7 +1019,7 @@ processed_new:
    void document::delete_contents()
    {
 
-      synchronous_lock synchronouslock(m_pmutexData);
+      synchronous_lock synchronouslock(m_pmutexData, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       m_iaQueue.erase_all();
 
@@ -1059,7 +1059,7 @@ processed_new:
 
       {
 
-         synchronous_lock synchronouslock(m_pmutexData);
+         synchronous_lock synchronouslock(m_pmutexData, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          if (pplaylist == m_pplaylistImpact)
          {
@@ -1224,7 +1224,7 @@ processed_new:
 
       {
 
-         synchronous_lock synchronouslock(m_pmutexData);
+         synchronous_lock synchronouslock(m_pmutexData, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          m_pathFile = payloadFile.get_file_path();
 
@@ -1263,7 +1263,7 @@ processed_new:
 
 //            auto & startup = papp->mediaplaylist()->m_startup;
 
-            //          synchronous_lock synchronouslock(pstartup->mutex());
+            //          synchronous_lock synchronouslock(pstartup->mutex(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
             impact_playlist()->m_iCurrentSong = impact_playlist()->get_int("current_song", 0);
 
@@ -1370,7 +1370,7 @@ processed_new:
 
       {
 
-         synchronous_lock synchronouslock(m_pmutexData);
+         synchronous_lock synchronouslock(m_pmutexData, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          m_pathFile = ppl->m_path;
 
@@ -1479,7 +1479,7 @@ processed_new:
       if(iSong < 0)
          return false;
 
-      synchronous_lock synchronouslock(m_pmutexData);
+      synchronous_lock synchronouslock(m_pmutexData, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       string_array_base * pstra = nullptr;
 
@@ -1545,7 +1545,7 @@ processed_new:
       if(iSong >= stra.get_size())
          return;
 
-      synchronous_lock synchronouslock(m_pmutexData);
+      synchronous_lock synchronouslock(m_pmutexData, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       m_iaQueue.erase_all();
 
@@ -1579,7 +1579,7 @@ processed_new:
    bool document::pick_song(::collection::index & iSong, string & str, bool bRandom, int & iLoop)
    {
 
-      synchronous_lock synchronouslock(m_pmutexData);
+      synchronous_lock synchronouslock(m_pmutexData, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
 retry0:
 
@@ -1935,7 +1935,7 @@ retry0:
    ::collection::count document::get_current_queue_song_count()
    {
 
-      synchronous_lock synchronouslock(m_pmutexData);
+      synchronous_lock synchronouslock(m_pmutexData, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       return m_straQueue.get_count();
 
@@ -2064,7 +2064,7 @@ retry0:
    void document::add_listener(listener * plistener)
    {
 
-      synchronous_lock synchronouslock(this->synchronization());
+      synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       m_listenera.add(plistener);
 
@@ -2074,7 +2074,7 @@ retry0:
    void document::erase_listener(listener * plistener)
    {
 
-      synchronous_lock synchronouslock(this->synchronization());
+      synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       m_listenera.erase(plistener);
 
@@ -2084,7 +2084,7 @@ retry0:
    void document::set_player(::mediaplaylist::player * spplayer)
    {
 
-      synchronous_lock synchronouslock(this->synchronization());
+      synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       m_pplayer = spplayer;
 

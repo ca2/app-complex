@@ -265,7 +265,7 @@ namespace mediaplay
 
       ::payload payloadFile(varFileParam);
 
-      synchronous_lock synchronouslock(this->synchronization());
+      synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       enum_type enum_type = calc_file_type(payloadFile);
 

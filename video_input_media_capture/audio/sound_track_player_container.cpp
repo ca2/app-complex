@@ -36,7 +36,7 @@ namespace audio
    void sound_track_player_container::defer_initialize_audio_playback(::wave::enum_purpose epurpose)
    {
 
-      synchronous_lock synchronouslock(this->synchronization());
+      synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       if (::is_set(m_psoundtrackplayer))
       {

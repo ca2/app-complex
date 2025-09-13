@@ -805,7 +805,7 @@ namespace video_input_media_capture
 
    //      }
 
-   //      synchronous_lock synchronouslock(m_pdevice->get_render()->synchronization());
+   //      synchronous_lock synchronouslock(m_pdevice->get_render()->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
    //   
    //   ::copy_image32(m_pdevice->get_render()->m_pimage, &p);
    //   return S_OK;

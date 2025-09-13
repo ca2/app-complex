@@ -57,7 +57,7 @@
 //    void department::defer_initialize_audio_playback(::audio::e_purpose epurpose)
 //    {
 
-//       synchronous_lock synchronouslock(this->synchronization());
+//       synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
 //       if (::is_set(m_psoundtrackplayer))
 //       {
@@ -166,7 +166,7 @@
 
 //       {
 
-//          synchronous_lock synchronouslock(sound_track()->m_paudiomixer->mutex());
+//          synchronous_lock synchronouslock(sound_track()->m_paudiomixer->mutex(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
 //          sound_track()->m_paudiomixer->m_plugina.add(pplugin);
 
@@ -1065,7 +1065,7 @@ pdirectorysystem->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".
 //    void department::speak(string text)
 //    {
 
-//       synchronous_lock synchronouslock(this->synchronization());
+//       synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
 //       ::pointer<::tts::speaker>& pspeaker = m_pspeaker;
 

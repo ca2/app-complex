@@ -378,7 +378,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////
 ////         auto prender = m_pdevice->get_render();
 ////
-////         synchronous_lock synchronouslock(prender->synchronization());
+////         synchronous_lock synchronouslock(prender->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 ////
 ////         auto & pimage = prender->m_pimage;
 ////

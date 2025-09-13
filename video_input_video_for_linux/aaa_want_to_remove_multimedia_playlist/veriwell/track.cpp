@@ -188,7 +188,7 @@ namespace multimedia_playlist
          if (ppl.is_set())
          {
 
-            synchronous_lock synchronouslock(ppl->mutex());
+            synchronous_lock synchronouslock(ppl->mutex(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
             ::xml::node * pnode = ppl->m_pxmlplaylist->m_pnodeCurrent->get_child_at("song", m_iIndex, 1);
 
@@ -280,7 +280,7 @@ namespace multimedia_playlist
             if (ppl.is_set())
             {
 
-               synchronous_lock synchronouslock(ppl->mutex());
+               synchronous_lock synchronouslock(ppl->mutex(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
                ::xml::node * pnode = ppl->m_pxmlplaylist->m_pnodeCurrent->get_child_at("song", m_iIndex, 1);
 

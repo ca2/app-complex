@@ -105,7 +105,7 @@ namespace multimedia_playlist
    bool playlist::update()
    {
 
-      //synchronous_lock synchronouslock(papp->mediaplaylist()->spotify()->mutex());
+      //synchronous_lock synchronouslock(papp->mediaplaylist()->spotify()->mutex(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       ////m_durationLastUpdate= ::duration::now();
 
@@ -175,7 +175,7 @@ namespace multimedia_playlist
 
       //{
 
-      //   synchronous_lock synchronouslock(papp->mediaplaylist()->spotify()->mutex());
+      //   synchronous_lock synchronouslock(papp->mediaplaylist()->spotify()->mutex(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       //   m_tra.erase_all();
 
@@ -228,7 +228,7 @@ namespace multimedia_playlist
 
       //{
 
-      //   synchronous_lock synchronouslock(this->synchronization());
+      //   synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       //   string_array_base stra;
 
@@ -294,7 +294,7 @@ namespace multimedia_playlist
 
       }
 
-      synchronous_lock synchronouslock(this->synchronization());
+      synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       return m_stra;
 
@@ -325,7 +325,7 @@ namespace multimedia_playlist
    void playlist::set_int(const ::scoped_string & scopedstr, long long iValue)
    {
 
-      synchronous_lock synchronouslock(papp->mediaplaylist()->mutex());
+      synchronous_lock synchronouslock(papp->mediaplaylist()->mutex(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       m_setPlaylist[m_path + "." + string(scopedstr)] = iValue;
 
@@ -335,7 +335,7 @@ namespace multimedia_playlist
    long long playlist::get_int(const ::scoped_string & scopedstr, long long iDefault)
    {
 
-      synchronous_lock synchronouslock(papp->mediaplaylist()->mutex());
+      synchronous_lock synchronouslock(papp->mediaplaylist()->mutex(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       long long iValue = iDefault;
 
@@ -349,7 +349,7 @@ namespace multimedia_playlist
    void playlist::set_string(const ::scoped_string & scopedstr, const ::scoped_string & scopedstrValue)
    {
 
-      synchronous_lock synchronouslock(papp->mediaplaylist()->mutex());
+      synchronous_lock synchronouslock(papp->mediaplaylist()->mutex(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       string strValue(scopedstrValue);
 
@@ -361,7 +361,7 @@ namespace multimedia_playlist
    string playlist::get_string(const ::scoped_string & scopedstr, const ::scoped_string & scopedstrDefault)
    {
 
-      synchronous_lock synchronouslock(papp->mediaplaylist()->mutex());
+      synchronous_lock synchronouslock(papp->mediaplaylist()->mutex(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       string strValue(scopedstrDefault);
 

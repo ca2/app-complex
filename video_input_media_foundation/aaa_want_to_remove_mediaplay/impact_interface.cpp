@@ -709,7 +709,7 @@ namespace mediaplay
       case e_timer_lyric:
       {
 
-         synchronous_lock synchronouslock(m_impactlineaStatus.mutex());
+         synchronous_lock synchronouslock(m_impactlineaStatus.mutex(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          if(m_impactlineaStatus.get_line_count() > 0 && m_impactlineaStatus.line_at(0) != nullptr)
          {
@@ -1098,7 +1098,7 @@ namespace mediaplay
          if (get_wave_player() != nullptr && get_wave_player()->plugin() != nullptr)
          {
 
-            synchronous_lock synchronouslock(papp->mutex());
+            synchronous_lock synchronouslock(papp->mutex(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
             papp->m_mapMediaCallTitle.erase_key(get_wave_player()->plugin()->multimedia_get_origin_path());
 
@@ -1116,7 +1116,7 @@ namespace mediaplay
       try
       {
 
-         synchronous_lock synchronouslock(this->synchronization());
+         synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          m_imageaAlbum.erase_all();
 
@@ -1390,7 +1390,7 @@ retry:
 
                   {
 
-                     synchronous_lock synchronouslock(papp->mutex());
+                     synchronous_lock synchronouslock(papp->mutex(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
                      strTitle = papp->m_mapMediaCallTitle[strPathOrigin];
 
@@ -1566,7 +1566,7 @@ retry4:
                   }
 
 
-                  synchronous_lock synchronouslock(this->synchronization());
+                  synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
                   if (m_bIpiPostNewSong || strTitle != m_strLastTitle || straPerformer != m_straLastPerformer || strAlbum != m_strAlbum)
                   {
@@ -1708,7 +1708,7 @@ retry4:
 
       {
 
-         synchronous_lock synchronouslock(this->synchronization());
+         synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          m_bIpiPostNewSong = true;
 
@@ -1848,7 +1848,7 @@ retry4:
 
          {
 
-            synchronous_lock synchronouslock(this->synchronization());
+            synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
             m_propertysetaBatch.erase_all();
 
@@ -2352,7 +2352,7 @@ retry4:
 
                      auto & pstartup = papp->mediaplaylist()->m_pstartup;
 
-                     synchronous_lock synchronouslock(papp->mediaplaylist());
+                     synchronous_lock synchronouslock(papp->mediaplaylist(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
                      
                      ::file::path path = pdocument->m_pathFile;
 
@@ -2432,7 +2432,7 @@ retry4:
 
                {
 
-                  synchronous_lock synchronouslock(this->synchronization());
+                  synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
                   m_propertysetaBatch.erase_all();
 
@@ -2587,7 +2587,7 @@ retry4:
    bool impact_interface::PlaylistHasBatch()
    {
 
-      synchronous_lock synchronouslock(this->synchronization());
+      synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       return m_propertysetaBatch.has_elements();
 
@@ -2602,7 +2602,7 @@ retry4:
 
       {
 
-         synchronous_lock synchronouslock(this->synchronization());
+         synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          if (!PlaylistHasBatch())
             return false;
@@ -2611,7 +2611,7 @@ retry4:
 
          {
 
-            synchronous_lock synchronouslock(this->synchronization());
+            synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
             prop = *m_propertysetaBatch[0];
 

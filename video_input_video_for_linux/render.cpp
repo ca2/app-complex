@@ -150,11 +150,11 @@ namespace video_input_video_for_linux
    //void render::on_layout(::draw2d::graphics_pointer& pgraphics)
    //{
 
-   //   synchronous_lock synchronouslock(this->synchronization());
+   //   synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
    //   {
 
-   //      synchronous_lock slText(m_pmutexText);
+   //      synchronous_lock slText(m_pmutexText, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
    //      if (m_strNewVideoCapture.is_empty())
    //      {
@@ -274,7 +274,7 @@ namespace video_input_video_for_linux
       //   string render::get_processed_videocapture()
       //   {
 
-      //      synchronous_lock slText(m_pmutexText);
+      //      synchronous_lock slText(m_pmutexText, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       //      string str = get_videocapture();
 
@@ -385,7 +385,7 @@ namespace video_input_video_for_linux
          //string render::get_videocapture()
          //{
 
-         //   synchronous_lock synchronouslock(m_pmutexText);
+         //   synchronous_lock synchronouslock(m_pmutexText, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          //   if(m_strVideoCapture != m_strNewVideoCapture)
          //   {
@@ -443,7 +443,7 @@ namespace video_input_video_for_linux
          //   if (m_prender != nullptr)
          //   {
 
-         //      synchronous_lock synchronouslock(m_pmutexText);
+         //      synchronous_lock synchronouslock(m_pmutexText, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          //      if (get_processed_videocapture() != m_prender->m_strVideoCapture)
          //      {
@@ -490,7 +490,7 @@ namespace video_input_video_for_linux
          //void render::defer_update_bilbo()
          //{
 
-         //   synchronous_lock synchronouslock(this->synchronization());
+         //   synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
          //   for (auto & bilbo : m_bilboa)
          //   {
@@ -566,7 +566,7 @@ namespace video_input_video_for_linux
 //
 //      {
 //
-//         synchronous_lock synchronouslock(this->synchronization());
+//         synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 //
 //         if (m_pimage->is_null() || m_pimage->get_data() == nullptr)
 //         {

@@ -23,7 +23,7 @@ namespace audio
    void sound_track_player::defer_start(::wave::enum_purpose epurpose)
    {
 
-      synchronous_lock synchronouslock(this->synchronization());
+      synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       if (::is_set(m_pwaveplayer))
       {
@@ -137,7 +137,7 @@ namespace audio
    ::pointer<::object>sound_track_player::sound_plugin(const ::scoped_string & scopedstr, bool bForceCreate)
    {
 
-      synchronous_lock synchronouslock(this->synchronization());
+      synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       pointer_array < ::audio::plugin > & plugina = m_mapPlugin[psz];
 
@@ -275,7 +275,7 @@ namespace audio
    void sound_track_player::mix(const ::scoped_string & scopedstr)
    {
 
-      synchronous_lock synchronouslock(this->synchronization());
+      synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       string str(scopedstr);
 

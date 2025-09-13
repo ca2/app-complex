@@ -136,7 +136,7 @@ namespace app_complex_video_capture
 
       m_prender = pvideoinputdevice->get_render();
 
-      synchronous_lock synchronouslock(m_prender->synchronization());
+      synchronous_lock synchronouslock(m_prender->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       m_prender->prepare_image();
 

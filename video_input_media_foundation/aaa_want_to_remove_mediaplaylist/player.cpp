@@ -188,7 +188,7 @@ namespace mediaplaylist
    void player::set_album_art(pointer_array < ::image::image > & imagea)
    {
 
-      synchronous_lock sl2(mutex());
+      synchronous_lock sl2(mutex(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       ::papaya::array::copy(m_imageaAlbum, imagea);
 

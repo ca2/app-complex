@@ -60,7 +60,7 @@ namespace video_input_video_avfoundation
 	void video_input::_update_device_list()
 	{
 
-		synchronous_lock synchronouslock(this->synchronization());
+		synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       CFTypeRef * ptyperef = nullptr;
       

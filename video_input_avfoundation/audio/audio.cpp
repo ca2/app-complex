@@ -153,7 +153,7 @@ namespace audio
 
       //{
 
-      //   synchronous_lock synchronouslock(sound_track()->m_paudiomixer->synchronization());
+      //   synchronous_lock synchronouslock(sound_track()->m_paudiomixer->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       //   sound_track()->m_paudiomixer->m_plugina.add(pplugin);
 
@@ -851,7 +851,7 @@ pdirectorysystem->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".
    void audio::speak(const ::scoped_string & scopedstrText)
    {
 
-      synchronous_lock synchronouslock(this->synchronization());
+      synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       ::pointer<::tts::speaker>& pspeaker = m_pspeaker;
 

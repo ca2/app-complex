@@ -62,7 +62,7 @@ namespace video_input
 	void video_input::update_device_list()
 	{
 
-		synchronous_lock synchronouslock(this->synchronization());
+		synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
 		_update_device_list();
 

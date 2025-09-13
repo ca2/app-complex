@@ -805,7 +805,7 @@ namespace video_input_media_foundation
 
       }
 
-      synchronous_lock synchronouslock(m_pdevice->get_render()->synchronization());
+      synchronous_lock synchronouslock(m_pdevice->get_render()->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       m_pdevice->get_render()->m_pimage->copy(& p);
       return S_OK;

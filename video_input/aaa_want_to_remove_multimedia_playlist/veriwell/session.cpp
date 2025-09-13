@@ -169,7 +169,7 @@ namespace multimedia_playlist
 
       ::multimedia_playlist::playlist * session::open_playlist(::payload payloadFile)
       {
-         synchronous_lock synchronouslock(this->synchronization());
+         synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
          auto pFind = -1;
          for (::collection::index i = 0; i < m_pla.get_count(); i++)
          {

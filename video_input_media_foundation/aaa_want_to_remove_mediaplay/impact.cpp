@@ -434,7 +434,7 @@ namespace mediaplay
 
          {
 
-            synchronous_lock synchronouslock(papp->mediaplaylist()->mutex());
+            synchronous_lock synchronouslock(papp->mediaplaylist()->mutex(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
             str = papp->mediaplaylist()->m_pstartup->set("wave_player.audio_volume").as_string().c_str();
 
@@ -460,7 +460,7 @@ namespace mediaplay
 
             {
 
-               synchronous_lock synchronouslock(papp->mediaplaylist()->mutex());
+               synchronous_lock synchronouslock(papp->mediaplaylist()->mutex(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
                papp->mediaplaylist()->m_pstartup->set("wave_player.audio_volume") = str;
 
