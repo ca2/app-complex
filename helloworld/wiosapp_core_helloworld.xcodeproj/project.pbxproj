@@ -18,7 +18,7 @@
 		078C35481921758600354453 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24EC51904E95E001AEFFB /* UIKit.framework */; };
 		078C35501921758600354453 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 078C354E1921758600354453 /* InfoPlist.strings */; };
 		078C35521921758600354453 /* wiosapp_core_hellomultiverseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C35511921758600354453 /* wiosapp_core_hellomultiverseTests.m */; };
-		078C35B91921766F00354453 /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07011FAF190CA31000C08335 /* libbase.dylib */; };
+		078C35B91921766F00354453 /* libberg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07011FAF190CA31000C08335 /* libberg.dylib */; };
 		078C35BA1921766F00354453 /* libbasefreeimage.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A6C9B3190C90C500859288 /* libbasefreeimage.dylib */; };
 		078C35BB1921766F00354453 /* libbasefreetype.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A6CA29190C90C600859288 /* libbasefreetype.dylib */; };
 		078C35BC1921766F00354453 /* libbasemysql.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 078001D2190C9F17000DA332 /* libbasemysql.dylib */; };
@@ -276,7 +276,7 @@
 		9AA6A370190759B1000A1F4A /* libbasefreetype_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreetype_ios.dylib; path = "../../app/thirdparty/freetype/build/Debug-iphoneos/libbasefreetype_ios.dylib"; sourceTree = "<group>"; };
 		9AA6A371190759B1000A1F4A /* libbasemysql_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasemysql_ios.dylib; path = "../../app/thirdparty/mysql/build/Debug-iphoneos/libbasemysql_ios.dylib"; sourceTree = "<group>"; };
 		9AA6A372190759B1000A1F4A /* libcore_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore_ios.dylib; path = "../../app/aura/build/Debug-iphoneos/libcore_ios.dylib"; sourceTree = "<group>"; };
-		9AA6A44D1907B5BD000A1F4A /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../app/base/build/Release-iphoneos/libbase.dylib"; sourceTree = "<group>"; };
+		9AA6A44D1907B5BD000A1F4A /* libberg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libberg.dylib; path = "../../app/base/build/Release-iphoneos/libberg.dylib"; sourceTree = "<group>"; };
 		9AA6A44E1907B5BD000A1F4A /* libbasefreeimage.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreeimage.dylib; path = "../../app/thirdparty/freeimage/build/Debug-iphoneos/libbasefreeimage.dylib"; sourceTree = "<group>"; };
 		9AA6A44F1907B5BD000A1F4A /* libbasefreetype.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreetype.dylib; path = "../../app/thirdparty/freetype/build/Debug-iphoneos/libbasefreetype.dylib"; sourceTree = "<group>"; };
 		9AA6A4501907B5BD000A1F4A /* libbasemysql.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasemysql.dylib; path = "../../app/thirdparty/mysql/build/Debug-iphoneos/libbasemysql.dylib"; sourceTree = "<group>"; };
@@ -300,7 +300,7 @@
 				078C35321921758500354453 /* UIKit.framework in Frameworks */,
 				078C35311921758500354453 /* CoreGraphics.framework in Frameworks */,
 				078C35301921758500354453 /* Foundation.framework in Frameworks */,
-				078C35B91921766F00354453 /* libbase.dylib in Frameworks */,
+				078C35B91921766F00354453 /* libberg.dylib in Frameworks */,
 				078C35BA1921766F00354453 /* libbasefreeimage.dylib in Frameworks */,
 				078C35BB1921766F00354453 /* libbasefreetype.dylib in Frameworks */,
 				078C35BC1921766F00354453 /* libbasemysql.dylib in Frameworks */,
@@ -325,8 +325,8 @@
 		07011F9C190CA30F00C08335 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				07011FAD190CA31000C08335 /* libbase.dylib */,
-				07011FAF190CA31000C08335 /* libbase.dylib */,
+				07011FAD190CA31000C08335 /* libberg.dylib */,
+				07011FAF190CA31000C08335 /* libberg.dylib */,
 				07011FB1190CA31000C08335 /* base_iosTests.xctest */,
 			);
 			name = Products;
@@ -468,7 +468,7 @@
 		9A5752B516AAE1D2000CC4EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9AA6A44D1907B5BD000A1F4A /* libbase.dylib */,
+				9AA6A44D1907B5BD000A1F4A /* libberg.dylib */,
 				9AA6A44E1907B5BD000A1F4A /* libbasefreeimage.dylib */,
 				9AA6A44F1907B5BD000A1F4A /* libbasefreetype.dylib */,
 				9AA6A4501907B5BD000A1F4A /* libbasemysql.dylib */,
@@ -613,17 +613,17 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		07011FAD190CA31000C08335 /* libbase.dylib */ = {
+		07011FAD190CA31000C08335 /* libberg.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libbase.dylib;
+			path = libberg.dylib;
 			remoteRef = 07011FAC190CA31000C08335 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		07011FAF190CA31000C08335 /* libbase.dylib */ = {
+		07011FAF190CA31000C08335 /* libberg.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libbase.dylib;
+			path = libberg.dylib;
 			remoteRef = 07011FAE190CA31000C08335 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};

@@ -98,7 +98,7 @@
 			<Add option="-laqua" />
 			<Add option="-laura" />
 			<Add option="-laxis" />
-			<Add option="-lbase" />
+			<Add option="-lberg" />
 			<Add option="-lbred" />
 			<Add option="-lcore" />
 			<Add option="-lapp_simple_drawing" />

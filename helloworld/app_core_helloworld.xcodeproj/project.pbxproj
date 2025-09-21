@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0722ED9F1926263D003E99F4 /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A97056A1915E22900032B50 /* libbase.dylib */; };
+		0722ED9F1926263D003E99F4 /* libberg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A97056A1915E22900032B50 /* libberg.dylib */; };
 		0722EDA31926263D003E99F4 /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 078AEED3191547110091C065 /* libcore.dylib */; };
 		078AEF6119158B190091C065 /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 078AEED5191547110091C065 /* libcore.dylib */; };
 		07A684EC17F0E06700C41DE6 /* hellomultiverse_application.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A684E617F0E06700C41DE6 /* hellomultiverse_application.h */; };
@@ -24,7 +24,7 @@
 		07B65524190F3001002DAADE /* hellomultiverse_pane_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75CC16F78E600085103B /* hellomultiverse_pane_impact.cpp */; };
 		07B65525190F3001002DAADE /* hellomultiverse_impact_update_startnt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75CD16F78E600085103B /* hellomultiverse_impact_update_startnt.cpp */; };
 		07B65526190F3001002DAADE /* hellomultiverse_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75CE16F78E600085103B /* hellomultiverse_impact.cpp */; };
-		9A9705A11915E2C100032B50 /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A97056C1915E22900032B50 /* libbase.dylib */; };
+		9A9705A11915E2C100032B50 /* libberg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A97056C1915E22900032B50 /* libberg.dylib */; };
 		9AA1008E19971FCE004F84BD /* hellomultiverse_edit_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1008A19971FCE004F84BD /* hellomultiverse_edit_impact.cpp */; };
 		9AA1008F19971FCE004F84BD /* hellomultiverse_edit_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AA1008B19971FCE004F84BD /* hellomultiverse_edit_impact.h */; };
 		9AA1009019971FCE004F84BD /* hellomultiverse_main_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1008C19971FCE004F84BD /* hellomultiverse_main_impact.cpp */; };
@@ -340,7 +340,7 @@
 		0778A147199FEDE700206CA1 /* basefreetype.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = basefreetype.xcodeproj; path = /ca2/platform/seed/metaseed/../../app/base/freetype/basefreetype.xcodeproj; sourceTree = "<absolute>"; };
 		0778A14A199FEDE700206CA1 /* basemysql.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = basemysql.xcodeproj; path = /ca2/platform/seed/metaseed/../../app/base/mysql/basemysql.xcodeproj; sourceTree = "<absolute>"; };
 		0778A14D199FEDE700206CA1 /* baseopenssl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = baseopenssl.xcodeproj; path = /ca2/platform/seed/metaseed/../../app/base/openssl/baseopenssl.xcodeproj; sourceTree = "<absolute>"; };
-		078AEF6219158B190091C065 /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../app/base/build/Debug-iphoneos/libbase.dylib"; sourceTree = "<group>"; };
+		078AEF6219158B190091C065 /* libberg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libberg.dylib; path = "../../app/base/build/Debug-iphoneos/libberg.dylib"; sourceTree = "<group>"; };
 		07A684E617F0E06700C41DE6 /* hellomultiverse_application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_application.h; sourceTree = "<group>"; };
 		07A684E717F0E06700C41DE6 /* hellomultiverse_document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_document.h; sourceTree = "<group>"; };
 		07A684E817F0E06700C41DE6 /* hellomultiverse_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_frame.h; sourceTree = "<group>"; };
@@ -349,7 +349,7 @@
 		07A684EB17F0E06700C41DE6 /* hellomultiverse_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_impact.h; sourceTree = "<group>"; };
 		07B65416190F2C0F002DAADE /* aura.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura.xcodeproj; path = ../../app/aura/.xcodeproj; sourceTree = SOURCE_ROOT; };
 		07B65428190F2C1A002DAADE /* berg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = berg.xcodeproj; path = ../../app/berg/berg.xcodeproj; sourceTree = SOURCE_ROOT; };
-		07B65527190F301F002DAADE /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../app/base/build/Debug-iphoneos/libbase.dylib"; sourceTree = "<group>"; };
+		07B65527190F301F002DAADE /* libberg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libberg.dylib; path = "../../app/base/build/Debug-iphoneos/libberg.dylib"; sourceTree = "<group>"; };
 		07B65528190F301F002DAADE /* libbasefreeimage.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreeimage.dylib; path = "../../app/thirdparty/freeimage/build/Debug-iphoneos/libbasefreeimage.dylib"; sourceTree = "<group>"; };
 		07B65529190F301F002DAADE /* libbasefreetype.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreetype.dylib; path = "../../app/thirdparty/freetype/build/Debug-iphoneos/libbasefreetype.dylib"; sourceTree = "<group>"; };
 		07B6552A190F301F002DAADE /* libbasemysql.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasemysql.dylib; path = "../../app/thirdparty/mysql/build/Debug-iphoneos/libbasemysql.dylib"; sourceTree = "<group>"; };
@@ -366,7 +366,7 @@
 		9AA6A2A0190710F3000A1F4A /* libbasefreeimage_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreeimage_ios.dylib; path = "../../app/thirdparty/freeimage/build/Debug-iphoneos/libbasefreeimage_ios.dylib"; sourceTree = "<group>"; };
 		9AA6A2A1190710F3000A1F4A /* libbasefreetype_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreetype_ios.dylib; path = "../../app/thirdparty/freetype/build/Debug-iphoneos/libbasefreetype_ios.dylib"; sourceTree = "<group>"; };
 		9AA6A2A2190710F3000A1F4A /* libbasemysql_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasemysql_ios.dylib; path = "../../app/thirdparty/mysql/build/Debug-iphoneos/libbasemysql_ios.dylib"; sourceTree = "<group>"; };
-		9AAE862717E99A9900F0512E /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/all-dlckdugtwkhfjkdbgurajmehstei/Build/Products/Debug/libbase.dylib"; sourceTree = "<group>"; };
+		9AAE862717E99A9900F0512E /* libberg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libberg.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/all-dlckdugtwkhfjkdbgurajmehstei/Build/Products/Debug/libberg.dylib"; sourceTree = "<group>"; };
 		9AAE862817E99A9900F0512E /* libbasefreeimage.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreeimage.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/all-dlckdugtwkhfjkdbgurajmehstei/Build/Products/Debug/libbasefreeimage.dylib"; sourceTree = "<group>"; };
 		9AAE862917E99A9900F0512E /* libbasefreetype.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreetype.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/all-dlckdugtwkhfjkdbgurajmehstei/Build/Products/Debug/libbasefreetype.dylib"; sourceTree = "<group>"; };
 		9AAE862A17E99A9900F0512E /* libbasemysql.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasemysql.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/all-dlckdugtwkhfjkdbgurajmehstei/Build/Products/Debug/libbasemysql.dylib"; sourceTree = "<group>"; };
@@ -398,7 +398,7 @@
 			files = (
 				9AE24E8D1904CFFD001AEFFB /* Foundation.framework in Frameworks */,
 				078AEF6119158B190091C065 /* libcore.dylib in Frameworks */,
-				9A9705A11915E2C100032B50 /* libbase.dylib in Frameworks */,
+				9A9705A11915E2C100032B50 /* libberg.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07B2768F19A0456500E822E1 /* libbasefreetype.dylib in Frameworks */,
-				0722ED9F1926263D003E99F4 /* libbase.dylib in Frameworks */,
+				0722ED9F1926263D003E99F4 /* libberg.dylib in Frameworks */,
 				0722EDA31926263D003E99F4 /* libcore.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,8 +509,8 @@
 		9A9705601915E22900032B50 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A97056A1915E22900032B50 /* libbase.dylib */,
-				9A97056C1915E22900032B50 /* libbase.dylib */,
+				9A97056A1915E22900032B50 /* libberg.dylib */,
+				9A97056C1915E22900032B50 /* libberg.dylib */,
 				9A97056E1915E22900032B50 /* base_iosTests.xctest */,
 			);
 			name = Products;
@@ -519,8 +519,8 @@
 		9AE24E8B1904CFFD001AEFFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				078AEF6219158B190091C065 /* libbase.dylib */,
-				07B65527190F301F002DAADE /* libbase.dylib */,
+				078AEF6219158B190091C065 /* libberg.dylib */,
+				07B65527190F301F002DAADE /* libberg.dylib */,
 				07B65528190F301F002DAADE /* libbasefreeimage.dylib */,
 				07B65529190F301F002DAADE /* libbasefreetype.dylib */,
 				07B6552A190F301F002DAADE /* libbasemysql.dylib */,
@@ -571,7 +571,7 @@
 				9AE24EA21904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */,
 				9AE24E8B1904CFFD001AEFFB /* Frameworks */,
 				9AEB75A416F78DF10085103B /* Products */,
-				9AAE862717E99A9900F0512E /* libbase.dylib */,
+				9AAE862717E99A9900F0512E /* libberg.dylib */,
 				9AAE862817E99A9900F0512E /* libbasefreeimage.dylib */,
 				9AAE862917E99A9900F0512E /* libbasefreetype.dylib */,
 				9AAE862A17E99A9900F0512E /* libbasemysql.dylib */,
@@ -941,17 +941,17 @@
 			remoteRef = 07FF29FE190B57540005EA46 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A97056A1915E22900032B50 /* libbase.dylib */ = {
+		9A97056A1915E22900032B50 /* libberg.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libbase.dylib;
+			path = libberg.dylib;
 			remoteRef = 9A9705691915E22900032B50 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A97056C1915E22900032B50 /* libbase.dylib */ = {
+		9A97056C1915E22900032B50 /* libberg.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libbase.dylib;
+			path = libberg.dylib;
 			remoteRef = 9A97056B1915E22900032B50 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};

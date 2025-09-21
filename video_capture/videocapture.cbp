@@ -80,7 +80,7 @@
 			<Add option="-laxisfreeimage" />
 			<Add option="-lfreetype" />
 			<Add option="-laxis" />
-			<Add option="-lbase" />
+			<Add option="-lberg" />
 			<Add option="-lgcom" />
 			<Add option="-Wl,-z,defs" />
 			<Add directory="$(WORKSPACEDIR)/../../../time-$(#platform_modifier)/x64/$(TARGET_NAME)" />

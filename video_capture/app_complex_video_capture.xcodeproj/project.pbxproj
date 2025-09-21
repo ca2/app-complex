@@ -46,7 +46,7 @@
 		9AAF65932808709D0067E73F /* libaqua.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF65922808709D0067E73F /* libaqua.dylib */; };
 		9AAF65952808709D0067E73F /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF65942808709D0067E73F /* libaura.dylib */; };
 		9AAF65972808709D0067E73F /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF65962808709D0067E73F /* libaxis.dylib */; };
-		9AAF65992808709D0067E73F /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF65982808709D0067E73F /* libbase.dylib */; };
+		9AAF65992808709D0067E73F /* libberg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF65982808709D0067E73F /* libberg.dylib */; };
 		9AAF659B2808709D0067E73F /* libbred.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF659A2808709D0067E73F /* libbred.dylib */; };
 		9AAF659C2808709D0067E73F /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF62CC280865E60067E73F /* libcore.dylib */; };
 		9AE24EA11904CFFD001AEFFB /* libapp_complex_video_capture.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libapp_complex_video_capture.dylib */; };
@@ -164,7 +164,7 @@
 		9AAF65922808709D0067E73F /* libaqua.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaqua.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAF65942808709D0067E73F /* libaura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAF65962808709D0067E73F /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AAF65982808709D0067E73F /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AAF65982808709D0067E73F /* libberg.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libberg.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAF659A2808709D0067E73F /* libbred.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbred.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E8A1904CFFD001AEFFB /* libapp_complex_video_capture.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libapp_complex_video_capture.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E991904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = app_core_hellomultiverse_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,7 +200,7 @@
 				9AAF65932808709D0067E73F /* libaqua.dylib in Frameworks */,
 				9AAF65952808709D0067E73F /* libaura.dylib in Frameworks */,
 				9AAF65972808709D0067E73F /* libaxis.dylib in Frameworks */,
-				9AAF65992808709D0067E73F /* libbase.dylib in Frameworks */,
+				9AAF65992808709D0067E73F /* libberg.dylib in Frameworks */,
 				9AAF659B2808709D0067E73F /* libbred.dylib in Frameworks */,
 				9AAF659C2808709D0067E73F /* libcore.dylib in Frameworks */,
 			);
@@ -280,7 +280,7 @@
 				9AAF65922808709D0067E73F /* libaqua.dylib */,
 				9AAF65942808709D0067E73F /* libaura.dylib */,
 				9AAF65962808709D0067E73F /* libaxis.dylib */,
-				9AAF65982808709D0067E73F /* libbase.dylib */,
+				9AAF65982808709D0067E73F /* libberg.dylib */,
 				9AAF659A2808709D0067E73F /* libbred.dylib */,
 			);
 			name = Frameworks;

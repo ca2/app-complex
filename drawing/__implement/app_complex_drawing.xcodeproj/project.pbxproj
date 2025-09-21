@@ -31,7 +31,7 @@
 		9A4424762D72D0FD004246CC /* libaura_macos.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A44244A2D72D0CC004246CC /* libaura_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A4424772D72D0FD004246CC /* libaura_posix.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A44244B2D72D0CC004246CC /* libaura_posix.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A4424782D72D0FD004246CC /* libaxis.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A44244C2D72D0CC004246CC /* libaxis.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A4424792D72D0FD004246CC /* libbase.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A44244D2D72D0CC004246CC /* libbase.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A4424792D72D0FD004246CC /* libberg.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A44244D2D72D0CC004246CC /* libberg.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A44247A2D72D0FD004246CC /* libbred.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A44244E2D72D0CC004246CC /* libbred.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A44247B2D72D0FD004246CC /* libcore.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A44244F2D72D0CC004246CC /* libcore.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A44247C2D72D0FD004246CC /* libcrypto.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A4424502D72D0CC004246CC /* libcrypto.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -91,7 +91,7 @@
 				9A4424762D72D0FD004246CC /* libaura_macos.dylib in CopyFiles */,
 				9A4424772D72D0FD004246CC /* libaura_posix.dylib in CopyFiles */,
 				9A4424782D72D0FD004246CC /* libaxis.dylib in CopyFiles */,
-				9A4424792D72D0FD004246CC /* libbase.dylib in CopyFiles */,
+				9A4424792D72D0FD004246CC /* libberg.dylib in CopyFiles */,
 				9A44247A2D72D0FD004246CC /* libbred.dylib in CopyFiles */,
 				9A44247B2D72D0FD004246CC /* libcore.dylib in CopyFiles */,
 				9A44247C2D72D0FD004246CC /* libcrypto.dylib in CopyFiles */,
@@ -144,7 +144,7 @@
 		9A44244A2D72D0CC004246CC /* libaura_macos.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libaura_macos.dylib; sourceTree = "<group>"; };
 		9A44244B2D72D0CC004246CC /* libaura_posix.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libaura_posix.dylib; sourceTree = "<group>"; };
 		9A44244C2D72D0CC004246CC /* libaxis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = "<group>"; };
-		9A44244D2D72D0CC004246CC /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = "<group>"; };
+		9A44244D2D72D0CC004246CC /* libberg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libberg.dylib; sourceTree = "<group>"; };
 		9A44244E2D72D0CC004246CC /* libbred.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libbred.dylib; sourceTree = "<group>"; };
 		9A44244F2D72D0CC004246CC /* libcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcore.dylib; sourceTree = "<group>"; };
 		9A4424502D72D0CC004246CC /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcrypto.dylib; sourceTree = "<group>"; };
@@ -241,7 +241,7 @@
 				9A44244A2D72D0CC004246CC /* libaura_macos.dylib */,
 				9A44244B2D72D0CC004246CC /* libaura_posix.dylib */,
 				9A44244C2D72D0CC004246CC /* libaxis.dylib */,
-				9A44244D2D72D0CC004246CC /* libbase.dylib */,
+				9A44244D2D72D0CC004246CC /* libberg.dylib */,
 				9A44244E2D72D0CC004246CC /* libbred.dylib */,
 				9A44244F2D72D0CC004246CC /* libcore.dylib */,
 				9A4424502D72D0CC004246CC /* libcrypto.dylib */,
@@ -458,20 +458,16 @@
 				USER_HEADER_SEARCH_PATHS = (
 					.,
 					"$(WorkspaceDir)/source",
-					"$(WorkspaceDir)/source/include",
 					"$(WorkspaceDir)/source/app",
-					"$(WorkspaceDir)/source/app/include",
+					"$(WorkspaceDir)/source/app/_include",
 					"$(WorkspaceDir)/operating_system",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include/configuration_selection/$(CONFIGURATION)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration_selection/$(CONFIGURATION)",
 					"$(WorkspaceDir)/port/_",
-					"$(WorkspaceDir)/port/include",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/..",
 					"$(PROJECT_DIR)/../..",
 					"$(HOME)/sensitive/sensitive/include",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include/configuration_selection/$(CONFIGURATION)",
 				);
 				USE_HEADERMAP = NO;
 				WorkspaceDir = "$(SRCROOT)/../../../..";
@@ -546,20 +542,16 @@
 				USER_HEADER_SEARCH_PATHS = (
 					.,
 					"$(WorkspaceDir)/source",
-					"$(WorkspaceDir)/source/include",
 					"$(WorkspaceDir)/source/app",
-					"$(WorkspaceDir)/source/app/include",
+					"$(WorkspaceDir)/source/app/_include",
 					"$(WorkspaceDir)/operating_system",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include/configuration_selection/$(CONFIGURATION)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration_selection/$(CONFIGURATION)",
 					"$(WorkspaceDir)/port/_",
-					"$(WorkspaceDir)/port/include",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/..",
 					"$(PROJECT_DIR)/../..",
 					"$(HOME)/sensitive/sensitive/include",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include/configuration_selection/$(CONFIGURATION)",
 				);
 				USE_HEADERMAP = NO;
 				WorkspaceDir = "$(SRCROOT)/../../../..";

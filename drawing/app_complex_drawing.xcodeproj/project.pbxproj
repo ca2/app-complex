@@ -19,7 +19,7 @@
 		9A42DB9326667D560011645D /* libaqua.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42DB9226667D560011645D /* libaqua.dylib */; };
 		9A42DB9526667D560011645D /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42DB9426667D560011645D /* libaura.dylib */; };
 		9A42DB9726667D560011645D /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42DB9626667D560011645D /* libaxis.dylib */; };
-		9A42DB9926667D560011645D /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42DB9826667D560011645D /* libbase.dylib */; };
+		9A42DB9926667D560011645D /* libberg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42DB9826667D560011645D /* libberg.dylib */; };
 		9A42DB9B26667D7F0011645D /* libbred.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42DB9A26667D7F0011645D /* libbred.dylib */; };
 		9A42DB9D26667E510011645D /* libapp_simple_drawing.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42DB7826667CF60011645D /* libapp_simple_drawing.dylib */; };
 		9A7F401F274D777000D914CC /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7F401E274D777000D914CC /* libcore.dylib */; };
@@ -110,7 +110,7 @@
 		9A42DB9226667D560011645D /* libaqua.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaqua.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A42DB9426667D560011645D /* libaura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A42DB9626667D560011645D /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A42DB9826667D560011645D /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A42DB9826667D560011645D /* libberg.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libberg.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A42DB9A26667D7F0011645D /* libbred.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbred.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7F401E274D777000D914CC /* libcore.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libcore.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7F4024274D80C400D914CC /* core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = core.xcodeproj; path = ../../app/core/core.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -129,7 +129,7 @@
 				9A42DB9D26667E510011645D /* libapp_simple_drawing.dylib in Frameworks */,
 				9A42DB9526667D560011645D /* libaura.dylib in Frameworks */,
 				9A42DB9726667D560011645D /* libaxis.dylib in Frameworks */,
-				9A42DB9926667D560011645D /* libbase.dylib in Frameworks */,
+				9A42DB9926667D560011645D /* libberg.dylib in Frameworks */,
 				9A42DB9B26667D7F0011645D /* libbred.dylib in Frameworks */,
 				9A42DB8F26667D560011645D /* libacme.dylib in Frameworks */,
 				9A42DB9126667D560011645D /* libapex.dylib in Frameworks */,
@@ -198,7 +198,7 @@
 				9A42DB9226667D560011645D /* libaqua.dylib */,
 				9A42DB9426667D560011645D /* libaura.dylib */,
 				9A42DB9626667D560011645D /* libaxis.dylib */,
-				9A42DB9826667D560011645D /* libbase.dylib */,
+				9A42DB9826667D560011645D /* libberg.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
