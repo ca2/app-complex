@@ -62,7 +62,7 @@ namespace mediaplay
 
       m_flagNonClient.erase(e_non_client_background);
       m_flagNonClient.erase(e_non_client_focus_rect);
-      m_impactlineaStatus.m_linea.add(__allocate xfplayer_impact_line(&m_impactlineaStatus));
+      m_impactlineaStatus.m_linea.add(øallocate xfplayer_impact_line(&m_impactlineaStatus));
       papp->m_pmediaplayview = this;
 
       return estatus;
@@ -75,10 +75,10 @@ namespace mediaplay
       ::user::impact::install_message_routing(pchannel);
       ::mediaplay::impact_interface::install_message_routing(pchannel);
 
-      //MESSAGE_LINK(::user::e_message_size        , pchannel, this, &impact::on_message_size);
-      MESSAGE_LINK(::user::e_message_create, pchannel, this, &impact::on_message_create);
-      MESSAGE_LINK(::user::e_message_context_menu, pchannel, this, &impact::on_message_context_menu);
-      //MESSAGE_LINK(::user::e_message_set_cursor, pchannel, this, &impact::on_message_set_cursor);
+      //USER_MESSAGE_LINK(::user::e_message_size        , pchannel, this, &impact::on_message_size);
+      USER_MESSAGE_LINK(::user::e_message_create, pchannel, this, &impact::on_message_create);
+      USER_MESSAGE_LINK(::user::e_message_context_menu, pchannel, this, &impact::on_message_context_menu);
+      //USER_MESSAGE_LINK(::user::e_message_set_cursor, pchannel, this, &impact::on_message_set_cursor);
 
       add_command_prober("execute_previous", &impact::_001OnUpdateExecutePrevious);
       add_command_handler("execute_previous", &impact::_001OnExecutePrevious);

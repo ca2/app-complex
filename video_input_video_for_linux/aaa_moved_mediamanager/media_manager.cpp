@@ -32,7 +32,7 @@ namespace mediamanager
 
       }
 
-      estatus = __construct_new(m_palbumbuild);
+      estatus = øconstruct_new(m_palbumbuild);
 
       if(!estatus)
       {

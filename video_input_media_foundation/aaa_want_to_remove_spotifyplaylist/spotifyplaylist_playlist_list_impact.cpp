@@ -27,10 +27,10 @@ namespace mediaplaylist
    {
       simple_form_list_impact::install_message_routing(pchannel);
 
-      MESSAGE_LINK(::user::e_message_left_button_double_click,pchannel,this,&playlist_list_impact::on_message_left_button_double_click);
-      MESSAGE_LINK(::user::e_message_context_menu,pchannel,this,&playlist_list_impact::on_message_context_menu);
-      MESSAGE_LINK(::user::e_message_size,pchannel,this,&playlist_list_impact::on_message_size);
-      MESSAGE_LINK(::user::e_message_create,pchannel,this,&playlist_list_impact::on_message_create);
+      USER_MESSAGE_LINK(::user::e_message_left_button_double_click,pchannel,this,&playlist_list_impact::on_message_left_button_double_click);
+      USER_MESSAGE_LINK(::user::e_message_context_menu,pchannel,this,&playlist_list_impact::on_message_context_menu);
+      USER_MESSAGE_LINK(::user::e_message_size,pchannel,this,&playlist_list_impact::on_message_size);
+      USER_MESSAGE_LINK(::user::e_message_create,pchannel,this,&playlist_list_impact::on_message_create);
 
       add_command_handler("edit_delete",&playlist_list_impact::_001OnEditRemove);
       add_command_prober("edit_delete",&playlist_list_impact::_001OnUpdateEditRemove);

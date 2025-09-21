@@ -31,9 +31,9 @@ namespace mediaplaylist
 
       simple_form_list_impact::install_message_routing(pchannel);
 
-      MESSAGE_LINK(::user::e_message_left_button_double_click,pchannel,this,&playlist_list_impact::on_message_left_button_double_click);
-      MESSAGE_LINK(::user::e_message_context_menu,pchannel,this,&playlist_list_impact::on_message_context_menu);
-      MESSAGE_LINK(::user::e_message_create,pchannel,this,&playlist_list_impact::on_message_create);
+      USER_MESSAGE_LINK(::user::e_message_left_button_double_click,pchannel,this,&playlist_list_impact::on_message_left_button_double_click);
+      USER_MESSAGE_LINK(::user::e_message_context_menu,pchannel,this,&playlist_list_impact::on_message_context_menu);
+      USER_MESSAGE_LINK(::user::e_message_create,pchannel,this,&playlist_list_impact::on_message_create);
 
       add_command_handler("edit_delete",&playlist_list_impact::_001OnEditRemove);
       add_command_prober("edit_delete",&playlist_list_impact::_001OnUpdateEditRemove);
@@ -91,7 +91,7 @@ namespace mediaplaylist
 
       {
 
-         auto pinteraction = __allocate ::user::control_descriptor();
+         auto pinteraction = øallocate ::user::control_descriptor();
 
          pinteraction->m_bTransparent              = true;
          pinteraction->m_type                  = ::type < ::user::button >();
@@ -151,7 +151,7 @@ namespace mediaplaylist
       else if(ptopic->id() == id_playlists_changed)
       {
 
-         __øconstruct(m_plisting);
+         øconstruct(m_plisting);
 
          papp->mediaplaylist()->GetPath(*m_plisting);
 
@@ -417,9 +417,9 @@ namespace mediaplaylist
 
       get_parent_frame()->set_frame_title("Playlist");
 
-      m_pimagelistSubItemHover   = __allocate image_list();
-      m_pimagelistNormal         = __allocate image_list();
-      m_pimagelistItemHover      = __allocate image_list();
+      m_pimagelistSubItemHover   = øallocate image_list();
+      m_pimagelistNormal         = øallocate image_list();
+      m_pimagelistItemHover      = øallocate image_list();
 
       m_pimagelistSubItemHover->create(16,16,0,10,10);
       m_pimagelistSubItemHover->add_file("matter://mediaplaylist/execute_play_16.png");
@@ -440,7 +440,7 @@ namespace mediaplaylist
       rgb(220,220,215),
       127);
 
-      m_pimagelistGroupHover = __allocate image_list();
+      m_pimagelistGroupHover = øallocate image_list();
 
       m_pimagelistGroupHover->create(96,96,0,10,10);
       m_pimagelistGroupHover->add_file("matter://mediaplaylist/playlist_96.png");
@@ -466,7 +466,7 @@ namespace mediaplaylist
 
       papp->mediaplaylist()->m_pplaylistlistview = this;
 
-//      papp->mediaplaylist()->m_pspotify = __allocate ::multimedia_playlist::session(this);
+//      papp->mediaplaylist()->m_pspotify = øallocate ::multimedia_playlist::session(this);
 
       //#else
 

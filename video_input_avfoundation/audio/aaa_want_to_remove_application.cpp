@@ -123,7 +123,7 @@
 ////      if (m_pmultimedia.is_null())
 ////      {
 ////
-////         __construct_new(m_pmultimedia);
+////         øconstruct_new(m_pmultimedia);
 ////
 ////      }
 ////
@@ -172,7 +172,7 @@
 ////
 ////#endif
 ////
-////      m_pmultimediafile = __allocate ::multimedia::file_application();
+////      m_pmultimediafile = øallocate ::multimedia::file_application();
 ////
 ////#ifdef WINDOWS_DESKTOP
 ////
@@ -214,7 +214,7 @@
 ////      if (!m_paudiomixer)
 ////      {
 ////
-////         auto estatus = __construct_new(m_paudiomixer);
+////         auto estatus = øconstruct_new(m_paudiomixer);
 ////
 ////         if (!estatus)
 ////         {
@@ -250,7 +250,7 @@
 ////      if (!m_paudiomixeruserbase)
 ////      {
 ////
-////         auto estatus = __construct_new(m_paudiomixeruserbase);
+////         auto estatus = øconstruct_new(m_paudiomixeruserbase);
 ////
 ////         if (!estatus)
 ////         {
@@ -288,7 +288,7 @@
 ////      if (!m_paudiowave)
 ////      {
 ////
-////         auto estatus = __construct_new(m_paudiowave);
+////         auto estatus = øconstruct_new(m_paudiowave);
 ////
 ////         if (!estatus)
 ////         {
@@ -302,7 +302,7 @@
 ////      if (m_pmediamanager.is_null())
 ////      {
 ////
-////         auto estatus = __construct_new(m_pmediamanager);
+////         auto estatus = øconstruct_new(m_pmediamanager);
 ////
 ////         if (!estatus)
 ////         {
@@ -317,14 +317,14 @@
 ////      }
 ////
 ////      // xxx TODO
-////      //add_library(__allocate ::multimedia::library());
+////      //add_library(øallocate ::multimedia::library());
 ////
-////      m_pmediaplay = __allocate ::mediaplay::mediaplay();
+////      m_pmediaplay = øallocate ::mediaplay::mediaplay();
 ////
 ////      if (m_pmediaplay == nullptr)
 ////         return false;
 ////
-////      m_pmediaplaylist = __allocate ::mediaplaylist::media_playlist();
+////      m_pmediaplaylist = øallocate ::mediaplaylist::media_playlist();
 ////
 ////
 ////      if (m_pmediaplaylist.is_null())
@@ -524,7 +524,7 @@
 ////   ::pointer<::tts::speaker>application::create_tts_speaker()
 ////   {
 ////
-////      auto pspeaker = __øcreate < ::tts::speaker > ();
+////      auto pspeaker = øcreate < ::tts::speaker > ();
 ////
 ////      if (pspeaker.is_set())
 ////      {
@@ -549,7 +549,7 @@
 ////
 ////      ::pointer<::tts::speaker>pspeaker;
 ////
-////      pspeaker = __allocate ms_translator_speaker();
+////      pspeaker = øallocate ms_translator_speaker();
 ////
 ////      return pspeaker;
 ////
@@ -947,7 +947,7 @@ pdirectorysystem->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".
 ////   LPWAVEOUT application::waveout_open(int iChannel, LPAUDIOFORMAT pformat, LPWAVEOUT_CALLBACK pcallback)
 ////   {
 ////
-////      auto pplugin = __allocate ::audio_plugin::source();
+////      auto pplugin = øallocate ::audio_plugin::source();
 ////
 ////      if (pplugin.is_null())
 ////      {

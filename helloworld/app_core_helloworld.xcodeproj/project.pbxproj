@@ -64,7 +64,7 @@
 		};
 		0722ED8319262629003E99F4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 07B65428190F2C1A002DAADE /* base.xcodeproj */;
+			containerPortal = 07B65428190F2C1A002DAADE /* berg.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 9A98A6031771D67E000AE16E;
 			remoteInfo = base;
@@ -288,28 +288,28 @@
 		};
 		9A9705691915E22900032B50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 07B65428190F2C1A002DAADE /* base.xcodeproj */;
+			containerPortal = 07B65428190F2C1A002DAADE /* berg.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9A98A6151771D67E000AE16E;
 			remoteInfo = base;
 		};
 		9A97056B1915E22900032B50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 07B65428190F2C1A002DAADE /* base.xcodeproj */;
+			containerPortal = 07B65428190F2C1A002DAADE /* berg.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9AE24D341904CEFE001AEFFB;
 			remoteInfo = base_ios;
 		};
 		9A97056D1915E22900032B50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 07B65428190F2C1A002DAADE /* base.xcodeproj */;
+			containerPortal = 07B65428190F2C1A002DAADE /* berg.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9AE24D431904CEFE001AEFFB;
 			remoteInfo = base_iosTests;
 		};
 		9A97059F1915E28100032B50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 07B65428190F2C1A002DAADE /* base.xcodeproj */;
+			containerPortal = 07B65428190F2C1A002DAADE /* berg.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 9AE24D331904CEFE001AEFFB;
 			remoteInfo = base_ios;
@@ -348,7 +348,7 @@
 		07A684EA17F0E06700C41DE6 /* hellomultiverse_pane_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_pane_impact.h; sourceTree = "<group>"; };
 		07A684EB17F0E06700C41DE6 /* hellomultiverse_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_impact.h; sourceTree = "<group>"; };
 		07B65416190F2C0F002DAADE /* aura.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura.xcodeproj; path = ../../app/aura/.xcodeproj; sourceTree = SOURCE_ROOT; };
-		07B65428190F2C1A002DAADE /* base.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = base.xcodeproj; path = ../../app/base/base.xcodeproj; sourceTree = SOURCE_ROOT; };
+		07B65428190F2C1A002DAADE /* berg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = berg.xcodeproj; path = ../../app/berg/berg.xcodeproj; sourceTree = SOURCE_ROOT; };
 		07B65527190F301F002DAADE /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../app/base/build/Debug-iphoneos/libbase.dylib"; sourceTree = "<group>"; };
 		07B65528190F301F002DAADE /* libbasefreeimage.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreeimage.dylib; path = "../../app/thirdparty/freeimage/build/Debug-iphoneos/libbasefreeimage.dylib"; sourceTree = "<group>"; };
 		07B65529190F301F002DAADE /* libbasefreetype.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreetype.dylib; path = "../../app/thirdparty/freetype/build/Debug-iphoneos/libbasefreetype.dylib"; sourceTree = "<group>"; };
@@ -565,7 +565,7 @@
 				0778A144199FEDE700206CA1 /* basefreeimage.xcodeproj */,
 				0778A147199FEDE700206CA1 /* basefreetype.xcodeproj */,
 				0778A14A199FEDE700206CA1 /* basemysql.xcodeproj */,
-				07B65428190F2C1A002DAADE /* base.xcodeproj */,
+				07B65428190F2C1A002DAADE /* berg.xcodeproj */,
 				0778A14D199FEDE700206CA1 /* baseopenssl.xcodeproj */,
 				9AEB75AA16F78E600085103B /* hellomultiverse */,
 				9AE24EA21904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */,
@@ -736,7 +736,7 @@
 				},
 				{
 					ProductGroup = 9A9705601915E22900032B50 /* Products */;
-					ProjectRef = 07B65428190F2C1A002DAADE /* base.xcodeproj */;
+					ProjectRef = 07B65428190F2C1A002DAADE /* berg.xcodeproj */;
 				},
 				{
 					ProductGroup = 0778A145199FEDE700206CA1 /* Products */;

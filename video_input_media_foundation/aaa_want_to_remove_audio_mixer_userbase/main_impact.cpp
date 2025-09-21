@@ -59,13 +59,13 @@ namespace multimedia
       void main_impact::install_message_routing(::channel * pchannel)
       {
          ::userex::pane_tab_impact::install_message_routing(pchannel);
-         //MESSAGE_LINK(::user::e_message_size, pchannel, this, &main_impact::on_message_size);
-         MESSAGE_LINK(::user::e_message_destroy, pchannel, this, &main_impact::on_message_destroy);
-         MESSAGE_LINK(::user::e_message_create, pchannel, this, &main_impact::on_message_create);
-         //   //MESSAGE_LINK(::user::e_message_timer, pchannel, this, &main_impact::on_timer);
-         // MESSAGE_LINK(::user::e_message_context_menu, pchannel, this, &main_impact::on_message_context_menu);
-         //   MESSAGE_LINK(::user::e_message_scroll_y, pchannel, this, &main_impact::on_message_scroll_y);
-         //      MESSAGE_LINK(WM_CTLCOLOR, pchannel, this, &main_impact::_001OnCtlColor);
+         //USER_MESSAGE_LINK(::user::e_message_size, pchannel, this, &main_impact::on_message_size);
+         USER_MESSAGE_LINK(::user::e_message_destroy, pchannel, this, &main_impact::on_message_destroy);
+         USER_MESSAGE_LINK(::user::e_message_create, pchannel, this, &main_impact::on_message_create);
+         //   //USER_MESSAGE_LINK(::user::e_message_timer, pchannel, this, &main_impact::on_timer);
+         // USER_MESSAGE_LINK(::user::e_message_context_menu, pchannel, this, &main_impact::on_message_context_menu);
+         //   USER_MESSAGE_LINK(::user::e_message_scroll_y, pchannel, this, &main_impact::on_message_scroll_y);
+         //      USER_MESSAGE_LINK(WM_CTLCOLOR, pchannel, this, &main_impact::_001OnCtlColor);
 
          //   IGUI_WIN_ON_NOTIFY(LVN_COLUMNCLICK  , IDC_LIST, this, this, &main_impact::_001OnColumnclickList);
          // IGUI_WIN_ON_NOTIFY(NM_DBLCLK        , IDC_LIST, this, this, &main_impact::_001OnDblclkList);

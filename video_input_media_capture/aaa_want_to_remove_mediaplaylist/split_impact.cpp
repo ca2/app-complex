@@ -21,7 +21,7 @@ namespace mediaplaylist
    void main_impact::install_message_routing(::channel * pchannel)
    {
       ::user::split_impact::install_message_routing(pchannel);
-      MESSAGE_LINK(::user::e_message_create, pchannel, this, &main_impact::on_message_create);
+      USER_MESSAGE_LINK(::user::e_message_create, pchannel, this, &main_impact::on_message_create);
    }
 
 #ifdef _DEBUG
@@ -97,7 +97,7 @@ namespace mediaplaylist
    void body_impact::install_message_routing(::channel * pchannel)
    {
       ::user::split_impact::install_message_routing(pchannel);
-      MESSAGE_LINK(::user::e_message_create, pchannel, this, &body_impact::on_message_create);
+      USER_MESSAGE_LINK(::user::e_message_create, pchannel, this, &body_impact::on_message_create);
    }
 
 #ifdef _DEBUG
@@ -173,7 +173,7 @@ namespace mediaplaylist
    void right_impact::install_message_routing(::channel * pchannel)
    {
       ::user::split_impact::install_message_routing(pchannel);
-      MESSAGE_LINK(::user::e_message_create, pchannel, this, &right_impact::on_message_create);
+      USER_MESSAGE_LINK(::user::e_message_create, pchannel, this, &right_impact::on_message_create);
    }
 
 #ifdef _DEBUG

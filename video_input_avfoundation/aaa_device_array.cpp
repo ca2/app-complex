@@ -65,7 +65,7 @@ namespace video_input_video_avfoundation
 				for (UINT32 i = 0; i < cCount; i++)
 				{
 
-					auto pdevice = __allocate device();
+					auto pdevice = øallocate device();
 
 					pdevice->readInfoOfDevice(ppDevices[i], i);
 

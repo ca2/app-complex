@@ -50,7 +50,7 @@
       location = "group:../../third/idn/axisidn.xcodeproj">
    </FileRef>
    <FileRef
-      location = "container:../../app/base/base.xcodeproj">
+      location = "container:../../app/berg/berg.xcodeproj">
    </FileRef>
    <FileRef
       location = "container:../../app/aura/.xcodeproj">

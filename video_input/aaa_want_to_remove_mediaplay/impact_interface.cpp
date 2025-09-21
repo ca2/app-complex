@@ -53,7 +53,7 @@ namespace mediaplay
 
    //   m_etimerFade                  = e_timer_none;
 
-   //   m_precordnotifyview           = __allocate ::mediaplay::record_notify_impact();
+   //   m_precordnotifyview           = øallocate ::mediaplay::record_notify_impact();
 
    //   m_spgraphics->CreateCompatibleDC(nullptr);
 
@@ -94,7 +94,7 @@ namespace mediaplay
 
       m_etimerFade = e_timer_none;
 
-      m_precordnotifyview = __allocate ::mediaplay::record_notify_impact();
+      m_precordnotifyview = øallocate ::mediaplay::record_notify_impact();
 
       m_spgraphics->CreateCompatibleDC(nullptr);
 
@@ -132,11 +132,11 @@ namespace mediaplay
 
       ::user::impact::install_message_routing(pchannel);
 
-      MESSAGE_LINK(::user::e_message_create, pchannel, this, &impact_interface::on_message_create);
+      USER_MESSAGE_LINK(::user::e_message_create, pchannel, this, &impact_interface::on_message_create);
 
-      MESSAGE_LINK(WM_APP + 111, pchannel, this, &impact_interface::_001OnMessageX);
+      USER_MESSAGE_LINK(WM_APP + 111, pchannel, this, &impact_interface::_001OnMessageX);
 
-      MESSAGE_LINK(::user::e_message_destroy, pchannel, this, &impact_interface::on_message_destroy);
+      USER_MESSAGE_LINK(::user::e_message_destroy, pchannel, this, &impact_interface::on_message_destroy);
 
    }
 
@@ -1852,7 +1852,7 @@ retry4:
 
             m_propertysetaBatch.erase_all();
 
-            m_propertysetaBatch.add(__allocate property_set());
+            m_propertysetaBatch.add(øallocate property_set());
 
             auto & prop = m_propertysetaBatch.last();
 
@@ -2436,7 +2436,7 @@ retry4:
 
                   m_propertysetaBatch.erase_all();
 
-                  m_propertysetaBatch.add(__allocate property_set());
+                  m_propertysetaBatch.add(øallocate property_set());
 
                   property_set & prop = m_propertysetaBatch.last();
 

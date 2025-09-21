@@ -1084,9 +1084,9 @@ namespace mediaplaylist
 //      {
 //         string strName = newName.get_string();
 //         newName["url"] = strName;
-//         newName["xmledit"] = __allocate ::memory_file(*memfileEdit);
+//         newName["xmledit"] = øallocate ::memory_file(*memfileEdit);
 ////         newName["xmledit"].cast < ::memory_file >()->release();
-//         newName["xml"] = __allocate ::memory_file(*memfileXml);
+//         newName["xml"] = øallocate ::memory_file(*memfileXml);
 //  //       newName["xml"].cast < ::memory_file >()->release();
 //      }
 //

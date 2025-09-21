@@ -26,7 +26,7 @@ namespace multimedia
       void audio_mixer::initialize(::particle * pparticle)
       {
 
-         auto estatus = __øconstruct(m_pdevice);
+         auto estatus = øconstruct(m_pdevice);
 
          if (!estatus)
          {

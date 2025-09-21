@@ -85,7 +85,7 @@ namespace mediaplaylist
 
       }
 
-      __øconstruct(m_pstartup);
+      øconstruct(m_pstartup);
 
       if (IS_ID_USED(songs_changed))
       {

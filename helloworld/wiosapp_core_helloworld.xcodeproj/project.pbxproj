@@ -29,21 +29,21 @@
 /* Begin PBXContainerItemProxy section */
 		07011FAC190CA31000C08335 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9AA6A4571907B5F0000A1F4A /* base.xcodeproj */;
+			containerPortal = 9AA6A4571907B5F0000A1F4A /* berg.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9A98A6151771D67E000AE16E;
 			remoteInfo = base;
 		};
 		07011FAE190CA31000C08335 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9AA6A4571907B5F0000A1F4A /* base.xcodeproj */;
+			containerPortal = 9AA6A4571907B5F0000A1F4A /* berg.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9AE24D341904CEFE001AEFFB;
 			remoteInfo = base_ios;
 		};
 		07011FB0190CA31000C08335 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9AA6A4571907B5F0000A1F4A /* base.xcodeproj */;
+			containerPortal = 9AA6A4571907B5F0000A1F4A /* berg.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9AE24D431904CEFE001AEFFB;
 			remoteInfo = base_iosTests;
@@ -134,7 +134,7 @@
 		};
 		078C35A81921762700354453 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9AA6A4571907B5F0000A1F4A /* base.xcodeproj */;
+			containerPortal = 9AA6A4571907B5F0000A1F4A /* berg.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 9AE24D331904CEFE001AEFFB;
 			remoteInfo = base_ios;
@@ -281,7 +281,7 @@
 		9AA6A44F1907B5BD000A1F4A /* libbasefreetype.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreetype.dylib; path = "../../app/thirdparty/freetype/build/Debug-iphoneos/libbasefreetype.dylib"; sourceTree = "<group>"; };
 		9AA6A4501907B5BD000A1F4A /* libbasemysql.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasemysql.dylib; path = "../../app/thirdparty/mysql/build/Debug-iphoneos/libbasemysql.dylib"; sourceTree = "<group>"; };
 		9AA6A4511907B5BD000A1F4A /* libcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore.dylib; path = "../../app/aura/build/Debug-iphoneos/libcore.dylib"; sourceTree = "<group>"; };
-		9AA6A4571907B5F0000A1F4A /* base.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = base.xcodeproj; path = ../../app/base/base.xcodeproj; sourceTree = SOURCE_ROOT; };
+		9AA6A4571907B5F0000A1F4A /* berg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = berg.xcodeproj; path = ../../app/berg/berg.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9AA6A4631907B608000A1F4A /* basefreetype.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = basefreetype.xcodeproj; path = ../../app/thirdparty/freetype/basefreetype.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9AA6A46F1907B615000A1F4A /* basefreeimage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = basefreeimage.xcodeproj; path = ../../app/thirdparty/freeimage/basefreeimage.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9AA6A47B1907B61C000A1F4A /* basemysql.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = basemysql.xcodeproj; path = ../../app/thirdparty/mysql/basemysql.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -444,7 +444,7 @@
 				0776D1CF1921740100F890ED /* app.xcodeproj */,
 				07F502DA1918E4940079A8D9 /* app_core_hellomultiverse.xcodeproj */,
 				07F5029C1918E39A0079A8D9 /* draw2d_quartz2d.xcodeproj */,
-				9AA6A4571907B5F0000A1F4A /* base.xcodeproj */,
+				9AA6A4571907B5F0000A1F4A /* berg.xcodeproj */,
 				9AA6A4631907B608000A1F4A /* basefreetype.xcodeproj */,
 				9AA6A46F1907B615000A1F4A /* basefreeimage.xcodeproj */,
 				9AA6A47B1907B61C000A1F4A /* basemysql.xcodeproj */,
@@ -581,7 +581,7 @@
 				},
 				{
 					ProductGroup = 07011F9C190CA30F00C08335 /* Products */;
-					ProjectRef = 9AA6A4571907B5F0000A1F4A /* base.xcodeproj */;
+					ProjectRef = 9AA6A4571907B5F0000A1F4A /* berg.xcodeproj */;
 				},
 				{
 					ProductGroup = 07A6C987190C5F4300859288 /* Products */;

@@ -52,8 +52,8 @@ namespace video_capture
       impact_base::install_message_routing(pchannel);
       ::backimpact::user::impact::install_message_routing(pchannel);
 
-      MESSAGE_LINK(::user::e_message_create, pchannel, this, &gcom::on_message_create);
-      MESSAGE_LINK(::user::e_message_destroy, pchannel, this, &gcom::on_message_destroy);
+      USER_MESSAGE_LINK(::user::e_message_create, pchannel, this, &gcom::on_message_create);
+      USER_MESSAGE_LINK(::user::e_message_destroy, pchannel, this, &gcom::on_message_destroy);
 
    }
 

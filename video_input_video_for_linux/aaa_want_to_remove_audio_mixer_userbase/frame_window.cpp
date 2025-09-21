@@ -38,11 +38,11 @@ namespace multimedia
       {
 
          simple_frame_window::install_message_routing(pchannel);
-         MESSAGE_LINK(::user::e_message_create, pchannel, this, &frame_window::on_message_create);
-         MESSAGE_LINK(::user::e_message_destroy, pchannel, this, &frame_window::on_message_destroy);
-         MESSAGE_LINK(::user::e_message_measure_item, pchannel, this, &frame_window::_001OnMeasureItem);
-         MESSAGE_LINK(::user::e_message_close, pchannel, this, &frame_window::on_message_close);
-         MESSAGE_LINK(WM_USER, pchannel, this, &frame_window::OnUserMessage);
+         USER_MESSAGE_LINK(::user::e_message_create, pchannel, this, &frame_window::on_message_create);
+         USER_MESSAGE_LINK(::user::e_message_destroy, pchannel, this, &frame_window::on_message_destroy);
+         USER_MESSAGE_LINK(::user::e_message_measure_item, pchannel, this, &frame_window::_001OnMeasureItem);
+         USER_MESSAGE_LINK(::user::e_message_close, pchannel, this, &frame_window::on_message_close);
+         USER_MESSAGE_LINK(WM_USER, pchannel, this, &frame_window::OnUserMessage);
 
       }
 

@@ -49,7 +49,7 @@ namespace multimedia
       void thread::install_message_routing(::channel * pchannel)
       {
 
-         MESSAGE_LINK(::message_thread, pchannel, this, &thread::_001OnThreadMessage);
+         USER_MESSAGE_LINK(::message_thread, pchannel, this, &thread::_001OnThreadMessage);
 
       }
 

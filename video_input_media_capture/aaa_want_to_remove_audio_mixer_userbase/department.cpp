@@ -68,7 +68,7 @@ namespace multimedia
 
          ::user::interaction::install_message_routing(pchannel);
 
-         MESSAGE_LINK(::user::e_message_close, pchannel, this, &department::on_message_close);
+         USER_MESSAGE_LINK(::user::e_message_close, pchannel, this, &department::on_message_close);
 
       }
 
@@ -114,7 +114,7 @@ namespace multimedia
 
          }
 
-         __øconstruct(m_pthread, __allocate thread());
+         øconstruct(m_pthread, øallocate thread());
 
          if (m_pthread == nullptr)
          {

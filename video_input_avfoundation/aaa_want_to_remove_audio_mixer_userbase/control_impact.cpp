@@ -57,16 +57,16 @@ namespace multimedia
       void control_impact::install_message_routing(::channel * pchannel)
       {
          ::user::impact::install_message_routing(pchannel);
-         MESSAGE_LINK(::user::e_message_size, pchannel, this, &control_impact::on_message_size);
-         MESSAGE_LINK(::user::e_message_destroy, pchannel, this, &control_impact::on_message_destroy);
-         MESSAGE_LINK(::user::e_message_create, pchannel, this, &control_impact::on_message_create);
-         //   //MESSAGE_LINK(::user::e_message_timer, pchannel, this, &control_impact::on_timer);
-         //   MESSAGE_LINK(::user::e_message_context_menu, pchannel, this, &control_impact::on_message_context_menu);
-         MESSAGE_LINK(::user::e_message_scroll_y, pchannel, this, &control_impact::on_message_scroll_y);
+         USER_MESSAGE_LINK(::user::e_message_size, pchannel, this, &control_impact::on_message_size);
+         USER_MESSAGE_LINK(::user::e_message_destroy, pchannel, this, &control_impact::on_message_destroy);
+         USER_MESSAGE_LINK(::user::e_message_create, pchannel, this, &control_impact::on_message_create);
+         //   //USER_MESSAGE_LINK(::user::e_message_timer, pchannel, this, &control_impact::on_timer);
+         //   USER_MESSAGE_LINK(::user::e_message_context_menu, pchannel, this, &control_impact::on_message_context_menu);
+         USER_MESSAGE_LINK(::user::e_message_scroll_y, pchannel, this, &control_impact::on_message_scroll_y);
 #ifdef WINDOWS
-         MESSAGE_LINK(WM_CTLCOLOR, pchannel, this, &control_impact::_001OnCtlColor);
+         USER_MESSAGE_LINK(WM_CTLCOLOR, pchannel, this, &control_impact::_001OnCtlColor);
 #endif
-         MESSAGE_LINK(::user::e_message_scroll_x, pchannel, this, &control_impact::on_message_scroll_x);
+         USER_MESSAGE_LINK(::user::e_message_scroll_x, pchannel, this, &control_impact::on_message_scroll_x);
 
          add_command_handler(IDC_BUTTON_RESERVE, &control_impact::_001OnButtonReserve);
          connect_command_probe(ID_VIEW_UPDATE, &control_impact::_001OnUpdateImpactUpdate);
@@ -359,7 +359,7 @@ namespace multimedia
             
             ::double_rectangle rectangle(0, 0, 0, 0);
             
-            auto pst = __allocate simple_static();
+            auto pst = øallocate simple_static();
 
             pst->create_window(this, pSource->get_source_name());
 
