@@ -546,7 +546,7 @@
 				);
 				USE_HEADERMAP = NO;
 				VALIDATE_PRODUCT = YES;
-				WorkspaceDir = "$(SRCROOT)/../../../..";
+				WorkspaceDir = "$(SRCROOT)/../../..";
 			};
 			name = Debug;
 		};
@@ -667,7 +667,7 @@
 				);
 				USE_HEADERMAP = NO;
 				VALIDATE_PRODUCT = YES;
-				WorkspaceDir = "$(SRCROOT)/../../../..";
+				WorkspaceDir = "$(SRCROOT)/../../..";
 			};
 			name = Release;
 		};
