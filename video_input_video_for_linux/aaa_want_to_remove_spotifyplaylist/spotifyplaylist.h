@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "app-core/multimedia/imediamanager/imediamanager.h"
+#include "app-multimedia/multimedia/imediamanager/imediamanager.h"
 
 
 #include "mediaplaylist_enum.h"

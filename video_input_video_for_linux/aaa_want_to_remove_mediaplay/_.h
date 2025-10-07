@@ -1,10 +1,10 @@
 #pragma once
 
-#include "app-core/multimedia/mediaplaylist/_.h"
-#include "app-core/multimedia/audio/_.h"
+#include "app-multimedia/multimedia/mediaplaylist/_.h"
+#include "app-multimedia/multimedia/audio/_.h"
 #include "audio-system/audio_mixer/_.h"
-#include "app-core/multimedia/audio_mixer_user_base/_.h"
-#include "app-core/multimedia/mediamanager/_.h"
+#include "app-multimedia/multimedia/audio_mixer_user_base/_.h"
+#include "app-multimedia/multimedia/mediamanager/_.h"
 
 
 

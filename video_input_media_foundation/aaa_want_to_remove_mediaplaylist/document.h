@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "app-core/multimedia/imedia/_.h"
+#include "app-multimedia/multimedia/imedia/_.h"
 
 
 namespace mediaplaylist

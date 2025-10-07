@@ -1,7 +1,7 @@
 #include "framework.h"
 
 // #include "aqua/xml.h"
-// #include "app-core/multimedia/audio_plugin/track.h"
+// #include "app-multimedia/multimedia/audio_plugin/track.h"
 
 
 // #ifdef WINDOWS_DESKTOP
@@ -396,7 +396,7 @@
 
 //       //}
 
-//       //add_matter_locator("app-core/multimedia");
+//       //add_matter_locator("app-multimedia/multimedia");
 
 //       //INFORMATION(".1");
 

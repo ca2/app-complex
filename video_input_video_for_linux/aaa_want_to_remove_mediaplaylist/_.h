@@ -1,8 +1,8 @@
 #pragma once
 
 
-#include "app-core/multimedia/imediamanager/_.h"
-#include "app-core/multimedia/multimedia_playlist/_.h"
+#include "app-multimedia/multimedia/imediamanager/_.h"
+#include "app-multimedia/multimedia/multimedia_playlist/_.h"
 
 
 namespace userex
