@@ -132,7 +132,7 @@ IMPLEMENT_APPLICATION_FACTORY();
 
       }
 
-      informationf("\nfinished notify_drawing::on_request");
+      informationf("----> finished notify_drawing::on_request");
 
    }
 

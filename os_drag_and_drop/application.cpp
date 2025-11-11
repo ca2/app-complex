@@ -156,7 +156,7 @@ IMPLEMENT_APPLICATION_FACTORY();
 
       }
 
-      informationf("\nfinished simple_os_drag_and_drop::on_request");
+      informationf("----> finished simple_os_drag_and_drop::on_request");
 
    }
 
