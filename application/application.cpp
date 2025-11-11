@@ -103,7 +103,7 @@ IMPLEMENT_APPLICATION_FACTORY();
 
       }
 
-      informationf("\nfinished simple_application::on_request");
+      informationf("----> finished simple_application::on_request");
 
    }
 
