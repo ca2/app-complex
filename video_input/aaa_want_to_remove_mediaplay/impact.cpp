@@ -256,13 +256,13 @@ namespace mediaplay
       this->rectangle(rectangleX);
       ::double_rectangle rectangle = rectangleX;
 
-      rectangle.top() = rectangle.bottom() - 24;
+      rectangle.top = rectangle.bottom - 24;
       m_impactlineaStatus.m_pinteraction = this;
       m_impactlineaStatus.Prepare();
       m_impactlineaStatus.line_at(0)->SetPlacement(rectangle);
 
 
-      m_rectangleKaraokeImpact.bottom() -= 16;
+      m_rectangleKaraokeImpact.bottom -= 16;
 
 
    }
@@ -328,7 +328,7 @@ namespace mediaplay
                ASSERT(pPopup != nullptr);
                frame_window * pframe = get_parent_frame();
                pPopup->TrackPopupMenu(
-                  point.x(), point.y(),
+                  point.x, point.y,
                   (::windowing::window *) pframe);
             }
          }
@@ -341,7 +341,7 @@ namespace mediaplay
                ASSERT(pPopup != nullptr);
                frame_window * pframe = get_parent_frame();
                pPopup->TrackPopupMenu(
-                  point.x(), point.y(),
+                  point.x, point.y,
                   (::windowing::window *) pframe);
             }
          }*/

@@ -47,12 +47,12 @@ HRESULT GetDefaultStride(IMFMediaType *pType, int *plStride);
 
 inline int Width(const ::int_rectangle &r)
 {
-   return rectangle.right() - rectangle.left();
+   return rectangle.right - rectangle.left;
 }
 
 inline int Height(const ::int_rectangle &r)
 {
-   return rectangle.bottom() - rectangle.top();
+   return rectangle.bottom - rectangle.top;
 }
 
 
@@ -523,10 +523,10 @@ HRESULT DrawDevice::DrawFrame(IMFMediaBuffer *pBuffer)
 
 
    ::int_rectangle int_rectangle;
-   rectangle.bottom() = 1040;
-   rectangle.left() = 0;
-   rectangle.right() = 690;
-   rectangle.top() = 0;
+   rectangle.bottom = 1040;
+   rectangle.left = 0;
+   rectangle.right = 690;
+   rectangle.top = 0;
 
    m_pDevice->BeginScene();
    D3DXCreateSprite(m_pDevice, &textSprite);
@@ -537,16 +537,16 @@ HRESULT DrawDevice::DrawFrame(IMFMediaBuffer *pBuffer)
    textSprite->Begin(D3DXSPRITE_ALPHABLEND);
 
 
-   imagepos.x() = 0.0f; //coord x of our sprite
-   imagepos.y() = 18.0f; //coord y of out sprite
+   imagepos.x = 0.0f; //coord x of our sprite
+   imagepos.y = 18.0f; //coord y of out sprite
    imagepos.z = 0.0f; //coord z of out sprite	
    textSprite->Draw(imagetex, nullptr, nullptr, &imagepos, 0xFFFFFFFF);
    textSprite->End();
 
    m_pDevice->SetRenderTarget(0, pSurf);
    ::int_point p;
-   p.x() = 0;
-   p.y() = 0;
+   p.x = 0;
+   p.y = 0;
    // then use UpdateSurface to copy the drawn text surface to the texture's surface
 
 
@@ -937,8 +937,8 @@ void TransformImage_NV12(
 
    ::int_rectangle rc;
 
-   int left = rcDst.left() + ((iDstWidth - iDstLBWidth) / 2);
-   int top = rcDst.top() + ((iDstHeight - iDstLBHeight) / 2);
+   int left = rcDst.left + ((iDstWidth - iDstLBWidth) / 2);
+   int top = rcDst.top + ((iDstHeight - iDstLBHeight) / 2);
 
    SetRect(&rc, left, top, left + iDstLBWidth, top + iDstLBHeight);
 
@@ -959,7 +959,7 @@ void TransformImage_NV12(
 ::int_rectangle CorrectAspectRatio(const ::int_rectangle &src, const MFRatio& srcPAR)
 {
    // Start with a int_rectangle the same int_size as src, but offset to the origin (0,0).
-   ::int_rectangle rc = { 0, 0, src.right() - src.left(), src.bottom() - src.top() };
+   ::int_rectangle rc = { 0, 0, src.right - src.left, src.bottom - src.top };
 
    if ((srcPAR.Numerator != 1) || (srcPAR.Denominator != 1))
    {
@@ -968,12 +968,12 @@ void TransformImage_NV12(
       if (srcPAR.Numerator > srcPAR.Denominator)
       {
          // The source has "wide" pixels, so stretch the width.
-         rc.right() = MulDiv(rc.right(), srcPAR.Numerator, srcPAR.Denominator);
+         rc.right = MulDiv(rc.right, srcPAR.Numerator, srcPAR.Denominator);
       }
       else if (srcPAR.Numerator < srcPAR.Denominator)
       {
          // The source has "tall" pixels, so stretch the height.
-         rc.bottom() = MulDiv(rc.bottom(), srcPAR.Denominator, srcPAR.Numerator);
+         rc.bottom = MulDiv(rc.bottom, srcPAR.Denominator, srcPAR.Numerator);
       }
       // else: PAR is 1:1, which is a no-op.
    }

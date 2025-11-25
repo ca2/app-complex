@@ -356,7 +356,7 @@ namespace mediaplaylist
                   ASSERT(pPopup != nullptr);
                   frame_window * pframe = get_parent_frame();
                   pPopup->TrackPopupMenu(
-                     point.x(), point.y(),
+                     point.x, point.y,
                      (::windowing::window *) pframe);
                }*/
       }
@@ -369,7 +369,7 @@ namespace mediaplaylist
                   ASSERT(pPopup != nullptr);
                   frame_window * pframe = get_parent_frame();
                   pPopup->TrackPopupMenu(
-                     point.x(), point.y(),
+                     point.x, point.y,
                      (::windowing::window *) pframe);
                }*/
       }
@@ -451,10 +451,10 @@ namespace mediaplaylist
             pgraphics->get_clip_box(rectangleUpdate);
             CBaseRect rectangleMeta;
 
-            rectangleMeta.left() = 0;
-            rectangleMeta.top() = 0;
-            rectangleMeta.right() = m_emh.rclBounds.right() - m_emh.rclBounds.left();
-            rectangleMeta.bottom() = m_emh.rclBounds.bottom() - m_emh.rclBounds.top();
+            rectangleMeta.left = 0;
+            rectangleMeta.top = 0;
+            rectangleMeta.right = m_emh.rclBounds.right - m_emh.rclBounds.left;
+            rectangleMeta.bottom = m_emh.rclBounds.bottom - m_emh.rclBounds.top;
             rectangleMeta.FitOnCenterOf(rectangleThis);
 
             m_gimageuffer.GetBuffer()->PlayMetaFile(m_enhmetafile, rectangleMeta);
@@ -462,13 +462,13 @@ namespace mediaplaylist
             class imaging & imaging = psystem->imaging();
             imaging.bitmap_blend(
                pgraphics,
-               rectangleUpdate.left(),
-               rectangleUpdate.top(),
+               rectangleUpdate.left,
+               rectangleUpdate.top,
                rectangleUpdate.width(),
                rectangleUpdate.height(),
                m_gimageuffer.GetBuffer(),
-               rectangleUpdate.left(),
-               rectangleUpdate.top(),
+               rectangleUpdate.left,
+               rectangleUpdate.top,
                96);
          }*/
 

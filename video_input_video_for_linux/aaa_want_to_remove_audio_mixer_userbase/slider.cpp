@@ -434,17 +434,17 @@ namespace multimedia
       {
          if(m_eorientation == e_orientation_horizontal)
          {
-            lpRect->left() = lpRectClient->left() + GetSystemMetrics(SM_CXHSCROLL);
-            lpRect->top() = lpRectTrack->top();
-            lpRect->right() = lpRectTrack->left();
-            lpRect->bottom() = lpRectTrack->bottom();
+            lpRect->left = lpRectClient->left + GetSystemMetrics(SM_CXHSCROLL);
+            lpRect->top = lpRectTrack->top;
+            lpRect->right = lpRectTrack->left;
+            lpRect->bottom = lpRectTrack->bottom;
          }
          else if(m_eorientation == e_orientation_vertical)
          {
-            lpRect->left() = lpRectTrack->left();
-            lpRect->top() = lpRectClient->top() + GetSystemMetrics(SM_CYVSCROLL);
-            lpRect->right() = lpRectTrack->right();
-            lpRect->bottom() = lpRectTrack->top();
+            lpRect->left = lpRectTrack->left;
+            lpRect->top = lpRectClient->top + GetSystemMetrics(SM_CYVSCROLL);
+            lpRect->right = lpRectTrack->right;
+            lpRect->bottom = lpRectTrack->top;
          }
          return true;
       }
@@ -453,17 +453,17 @@ namespace multimedia
       {
          if(m_eorientation == e_orientation_horizontal)
          {
-            lpRect->left() = lpRectTrack->right();
-            lpRect->top() = lpRectTrack->top();
-            lpRect->right() = lpRectClient->right() - GetSystemMetrics(SM_CXHSCROLL);
-            lpRect->bottom() = lpRectTrack->bottom();
+            lpRect->left = lpRectTrack->right;
+            lpRect->top = lpRectTrack->top;
+            lpRect->right = lpRectClient->right - GetSystemMetrics(SM_CXHSCROLL);
+            lpRect->bottom = lpRectTrack->bottom;
          }
          else if(m_eorientation == e_orientation_vertical)
          {
-            lpRect->left() = lpRectTrack->left();
-            lpRect->top() = lpRectTrack->bottom();
-            lpRect->right() = lpRectTrack->right();
-            lpRect->bottom() = lpRectClient->bottom() - GetSystemMetrics(SM_CYVSCROLL);
+            lpRect->left = lpRectTrack->left;
+            lpRect->top = lpRectTrack->bottom;
+            lpRect->right = lpRectTrack->right;
+            lpRect->bottom = lpRectClient->bottom - GetSystemMetrics(SM_CYVSCROLL);
          }
          return true;
       }
@@ -582,25 +582,25 @@ namespace multimedia
          ::double_rectangle rectangleThumb;
          if(m_eorientation == e_orientation_horizontal)
          {
-            lpRect->left() = ((int) dPos) - 4;
-            lpRect->right() = lpRect->left() + 10;
-            lpRect->top() = rectangleX.top();
-            lpRect->bottom() = rectangleX.bottom() + 1;;
+            lpRect->left = ((int) dPos) - 4;
+            lpRect->right = lpRect->left + 10;
+            lpRect->top = rectangleX.top;
+            lpRect->bottom = rectangleX.bottom + 1;;
          }
          else if(m_eorientation == e_orientation_vertical)
          {
-            lpRect->left() = rectangleX.left();
-            lpRect->right() = rectangleX.right() + 1 ;
-            lpRect->top() = ((int) dPos) - 4;
-            lpRect->bottom() = lpRect->top() + 10;
+            lpRect->left = rectangleX.left;
+            lpRect->right = rectangleX.right + 1 ;
+            lpRect->top = ((int) dPos) - 4;
+            lpRect->bottom = lpRect->top + 10;
             //        int iHeight = rectangleX.height() - GetSystemMetrics(SM_CYVSCROLL) * 2 - sizeTrack.cy() - 1;
             //      if(m_iRangeMax - m_iRangeMin - m_iPageSize == 0)
-            //        lpRect->top() = 0;
+            //        lpRect->top = 0;
             //  else
-            //    lpRect->top() = GetSystemMetrics(SM_CYVSCROLL) + 1 + (iPos - m_iRangeMin) * iHeight / (m_iRangeMax - m_iRangeMin - m_iPageSize);
-            //        lpRect->bottom() = lpRect->top() + sizeTrack.cy();
-            //      lpRect->left() = rectangleX.left() + 1;
-            //    lpRect->right() = lpRect->left() + sizeTrack.cx();
+            //    lpRect->top = GetSystemMetrics(SM_CYVSCROLL) + 1 + (iPos - m_iRangeMin) * iHeight / (m_iRangeMax - m_iRangeMin - m_iPageSize);
+            //        lpRect->bottom = lpRect->top + sizeTrack.cy();
+            //      lpRect->left = rectangleX.left + 1;
+            //    lpRect->right = lpRect->left + sizeTrack.cx();
          }
          return true;
       }
@@ -621,7 +621,7 @@ namespace multimedia
          if(m_eorientation == e_orientation_horizontal)
          {
             int iWidth = rectangleX.width() - m_iMargin * 2;
-            nPos = point.x() - m_sizeTrackOffset.x();
+            nPos = point.x - m_sizeTrackOffset.x;
             nPos -= m_iMargin - 4;
             nPos *= m_iRangeMax - m_iRangeMin;
             nPos /= iWidth;
@@ -631,7 +631,7 @@ namespace multimedia
          else if(m_eorientation == e_orientation_vertical)
          {
             int iHeight = rectangleX.height() -  m_iMargin * 2;
-            nPos = point.y() - m_sizeTrackOffset.y();
+            nPos = point.y - m_sizeTrackOffset.y;
             nPos -= m_iMargin - 4;
             nPos *= (m_iRangeMax - m_iRangeMin);
             nPos /= iHeight;
@@ -806,10 +806,10 @@ namespace multimedia
          rectangleDraw.intersect(rectangleClip, rectangleX);
 
          informationf("slider:OnPaint\n");
-         informationf("rectangle.left()  : %d, ", rectangleDraw.left());
-         informationf("rectangle.top()   : %d, ", rectangleDraw.top());
-         informationf("rectangle.right() : %d, ", rectangleDraw.right());
-         informationf("rectangle.bottom(): %d\n", rectangleDraw.bottom());
+         informationf("rectangle.left  : %d, ", rectangleDraw.left);
+         informationf("rectangle.top   : %d, ", rectangleDraw.top);
+         informationf("rectangle.right : %d, ", rectangleDraw.right);
+         informationf("rectangle.bottom: %d\n", rectangleDraw.bottom);
 
 //         ::double_rectangle rectangleSrcClipBox = rectangleDraw;
 
