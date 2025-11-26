@@ -14,10 +14,10 @@ namespace mediaplay
    public:
 
 
-      ::type_atom                            m_typeatomDocument;
-      ::type_atom                            m_typeatomFrameWnd;
-      ::type_atom                            m_typeatomImpact;
-      ::type_atom                            m_typeatomIPFrame;
+      ::type                            m_typeatomDocument;
+      ::type                            m_typeatomFrameWnd;
+      ::type                            m_typeatomImpact;
+      ::type                            m_typeatomIPFrame;
 
       string                                 m_strMatter;
       ::pointer<single_document_template>   m_pimpactsystem;

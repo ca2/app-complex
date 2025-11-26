@@ -91,9 +91,9 @@ namespace multimedia
 
             m_pimpactsystem = __initialize_new ::user::multiple_document_template(
                                   "audio_mixer_user_base/audio_mixer",
-                                  ::type < document >(),
-                                  ::type < frame_window >(),
-                                  ::type < main_impact >()));
+                                  ::as_type < document >(),
+                                  ::as_type < frame_window >(),
+                                  ::as_type < main_impact >()));
 
             papp->add_document_template(m_pimpactsystem);
 

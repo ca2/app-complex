@@ -25,7 +25,7 @@ namespace mediamanager
 
 
       //m_pthread = (album_build_thread *) __begin_thread(
-      // ::type < album_build_thread >(),
+      // ::as_type < album_build_thread >(),
       //THREAD_PRIORITY_IDLE);
 
       m_pthread = nullptr;

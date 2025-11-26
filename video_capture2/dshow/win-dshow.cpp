@@ -516,12 +516,12 @@ void DShowInput::OnVideoData(const VideoConfig &config,
 		return;
 	}
 
-	const int cx = config.cx();
-	const int cy = config.cy();
+	const int cx = config.cx;
+	const int cy = config.cy;
 
 	frame.timestamp  = (unsigned long long)startTime * 100;
-	frame.width      = config.cx();
-	frame.height     = config.cy();
+	frame.width      = config.cx;
+	frame.height     = config.cy;
 	frame.format     = ConvertVideoFormat(config.format);
 	frame.flip       = (config.format == VideoFormat::XRGB ||
 	                    config.format == VideoFormat::argb);
@@ -892,8 +892,8 @@ bool DShowInput::UpdateVideoConfig(aura_data *settings)
 	videoConfig.name             = identification.name.c_str();
 	videoConfig.path             = identification.path.c_str();
 	videoConfig.useDefaultConfig = resType == ResType_Preferred;
-	videoConfig.cx()               = cx;
-	videoConfig.cy()               = cy;
+	videoConfig.cx               = cx;
+	videoConfig.cy               = cy;
 	videoConfig.frameInterval    = interval;
 	videoConfig.internalFormat   = format;
 
@@ -946,7 +946,7 @@ bool DShowInput::UpdateVideoConfig(aura_data *settings)
 			obs_source_get_name(source),
 			(const ::string &)name_utf8,
 			(const ::string &)path_utf8,
-			videoConfig.cx(), videoConfig.cy(),
+			videoConfig.cx, videoConfig.cy,
 			fps, videoConfig.frameInterval,
 			formatName->array);
 
@@ -1150,16 +1150,16 @@ static void InsertResolution(vector<Resolution> &resolutions, int cx, int cy)
 
 	for (; idx < resolutions.size(); idx++) {
 		const Resolution &res = resolutions[idx];
-		if (res.cx() > cx)
+		if (res.cx > cx)
 			break;
 
-		if (res.cx() == cx) {
-			if (res.cy() == cy)
+		if (res.cx == cx) {
+			if (res.cy == cy)
 				return;
 
 			if (!bestCY)
-				bestCY = res.cy();
-			else if (res.cy() > bestCY)
+				bestCY = res.cy;
+			else if (res.cy > bestCY)
 				break;
 		}
 	}
@@ -1366,9 +1366,9 @@ static bool DeviceSelectionChanged(obs_properties_t *props, obs_property_t *p,
 		const Resolution &res = resolutions[idx-1];
 
 		string strRes;
-		strRes += to_string(res.cx());
+		strRes += to_string(res.cx);
 		strRes += "x";
-		strRes += to_string(res.cy());
+		strRes += to_string(res.cy);
 
 		obs_property_list_add_string(p, strRes.c_str(), strRes.c_str());
 	}

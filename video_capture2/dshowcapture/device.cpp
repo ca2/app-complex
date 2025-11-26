@@ -168,8 +168,8 @@ void HDevice::ConvertVideoSettings()
 	if (bmih) {
 		Debug(L"Video media type changed");
 
-		videoConfig.cx()            = bmih->biWidth;
-		videoConfig.cy()            = bmih->biHeight;
+		videoConfig.cx            = bmih->biWidth;
+		videoConfig.cy            = bmih->biHeight;
 		videoConfig.frameInterval = vih->AvgTimePerFrame;
 
 		bool same = videoConfig.internalFormat == videoConfig.format;

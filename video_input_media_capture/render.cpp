@@ -60,11 +60,11 @@ namespace video_input_media_capture
       }
 
          m_pswscontext = sws_getContext(
-       m_pdevice->m_size.cx(),
-       m_pdevice->m_size.cy(),
+       m_pdevice->m_size.cx,
+       m_pdevice->m_size.cy,
        AV_PIX_FMT_YUYV422,
-       m_pdevice->m_size.cx(),
-       m_pdevice->m_size.cy(),
+       m_pdevice->m_size.cx,
+       m_pdevice->m_size.cy,
        AV_PIX_FMT_BGRA,
        SWS_BICUBIC, NULL, NULL, NULL);
 
@@ -462,8 +462,8 @@ namespace video_input_media_capture
 
          //      //m_bFirstDone = true;
 
-         //      ::int_rectangle rectangleWork(0, 0, m_prender->m_pimageWork->get_size()->cx(), m_prender->m_pimageWork->get_size()->cy());
-         //      ::int_rectangle rectangleImage(0, 0, m_prender->m_pimageImage->get_size()->cx(), m_prender->m_pimageImage->get_size()->cy());
+         //      ::int_rectangle rectangleWork(0, 0, m_prender->m_pimageWork->get_size()->cx, m_prender->m_pimageWork->get_size()->cy);
+         //      ::int_rectangle rectangleImage(0, 0, m_prender->m_pimageImage->get_size()->cx, m_prender->m_pimageImage->get_size()->cy);
 
          //      rectangleImage.FitOnCenterOf(rectangleWork);
 
@@ -471,8 +471,8 @@ namespace video_input_media_capture
 
          //      m_pimagePost->get_graphics()->StretchBlt(rectangleImage.left, rectangleImage->top, rectangleImage->width(), rectangleImage->height(),
          //                                             m_prender->m_pimagepimage->g(), 0, 0,
-         //                                             m_prender->m_pimageImage->get_size()->cx(),
-         //                                             m_prender->m_pimageImage->get_size()->cy());
+         //                                             m_prender->m_pimageImage->get_size()->cx,
+         //                                             m_prender->m_pimageImage->get_size()->cy);
 
 
          //   }

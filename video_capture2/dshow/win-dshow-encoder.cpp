@@ -97,8 +97,8 @@ inline bool DShowEncoder::Update(video_data *settings)
 	config.fpsDenominator         = context->video_enc_get_fps_den();
 	config.bitrate                = bitrate;
 	config.keyframeInterval       = keyint;
-	config.cx()                     = width;
-	config.cy()                     = height;
+	config.cx                     = width;
+	config.cy                     = height;
 	config.name                   = identification.name;
 	config.path                   = identification.path;
 
@@ -218,9 +218,9 @@ static void DestroyDShowEncoder(void *data)
 //		frame_data[0] = frame->data[0];
 //		frame_data[1] = frame->data[2];
 //		frame_data[2] = frame->data[1];
-//		frame_sizes[0] = frame->linesize[0] * config.cy();
-//		frame_sizes[1] = frame->linesize[2] * config.cy() / 2;
-//		frame_sizes[2] = frame->linesize[1] * config.cy() / 2;
+//		frame_sizes[0] = frame->linesize[0] * config.cy;
+//		frame_sizes[1] = frame->linesize[2] * config.cy / 2;
+//		frame_sizes[2] = frame->linesize[1] * config.cy / 2;
 //	}
 //
 //	long long actualPTS = frame->pts * frameInterval;

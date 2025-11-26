@@ -171,21 +171,21 @@ void HVideoEncoder::InitializeVideoFormat(MediaType &mt)
 	frameTime *= 10000000;
 	frameTime /= config.fpsNumerator;
 
-	size = config.cx() * config.cy();
+	size = config.cx * config.cy;
 	size += size / 2;
 
 	bitrate = int_size * config.fpsNumerator / config.fpsDenominator;
 
 	VIDEOINFOHEADER *vih           = mt.AllocFormat<VIDEOINFOHEADER>();
 	vih->bmiHeader.biSize          = sizeof(vih->bmiHeader);
-	vih->bmiHeader.biWidth         = config.cx();
-	vih->bmiHeader.biHeight        = config.cy();
+	vih->bmiHeader.biWidth         = config.cx;
+	vih->bmiHeader.biHeight        = config.cy;
 	vih->bmiHeader.biPlanes        = 1;
 	vih->bmiHeader.biBitCount      = 12;
 	vih->bmiHeader.biSizeImage     = size;
 	vih->bmiHeader.biCompression   = MAKEFOURCC('Y', 'V', '1', '2');
-	vih->rcSource.right            = config.cx();
-	vih->rcSource.bottom           = config.cy();
+	vih->rcSource.right            = config.cx;
+	vih->rcSource.bottom           = config.cy;
 	vih->rcTarget                  = vih->rcSource;
 	vih->dwBitRate                 = (unsigned int)(bitrate * 8);
 	vih->AvgTimePerFrame           = frameTime;
@@ -247,8 +247,8 @@ bool HVideoEncoder::SetupEncoder(IBaseFilter *filter)
 	PinOutputInfo outputInfo;
 	outputInfo.expectedMajorType   = mtRaw->majortype;
 	outputInfo.expectedSubType     = mtRaw->subtype;
-	outputInfo.cx()                  = config.cx();
-	outputInfo.cy()                  = config.cy();
+	outputInfo.cx                  = config.cx;
+	outputInfo.cy                  = config.cy;
 
 	InitializeVideoFormat(outputInfo.mt);
 
@@ -323,7 +323,7 @@ bool SetAvermediaEncoderConfig(IBaseFilter *encoder, VideoEncoderConfig &config)
 
 	hr = SetAVMEncoderSetting(propertySet,
 			AVER_PARAMETER_CURRENT_RESOLUTION,
-			ULONG(config.cx()), ULONG(config.cy()));
+			ULONG(config.cx), ULONG(config.cy));
 	if (FAILED(hr)) {
 		WarningHR(L"Failed to set Avermedia encoder current res", hr);
 		return false;
@@ -331,7 +331,7 @@ bool SetAvermediaEncoderConfig(IBaseFilter *encoder, VideoEncoderConfig &config)
 
 	hr = SetAVMEncoderSetting(propertySet,
 			AVER_PARAMETER_ENCODE_RESOLUTION,
-			ULONG(config.cx()), ULONG(config.cy()));
+			ULONG(config.cx), ULONG(config.cy));
 	if (FAILED(hr)) {
 		WarningHR(L"Failed to set Avermedia encoder res", hr);
 		return false;

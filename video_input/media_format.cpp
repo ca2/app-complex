@@ -25,9 +25,9 @@ namespace video_input
 
 		m_eformat = e_format_none;
 
-		m_size.cx() = 0;
+		m_size.cx = 0;
 
-		m_size.cy() = 0;
+		m_size.cy = 0;
 
 		m_uFrameRate = 0;
 

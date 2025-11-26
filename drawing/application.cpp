@@ -45,10 +45,10 @@ namespace app_complex_drawing
    }
 
 
-   ::type_atom application::get_pane_impact_type() const
+   ::type application::get_pane_impact_type() const
    {
 
-      return ::type < pane_impact >();
+      return ::as_type < pane_impact >();
 
    }
 

@@ -68,8 +68,8 @@ namespace video_input_video_avfoundation
       int h = 0;
       avcapture_device_set_best_format_001(m_ptyperefAVCaptureDevice, &w, &h);
       
-      m_size.cx() = w;
-      m_size.cy() = h;
+      m_size.cx = w;
+      m_size.cy = h;
       
       øconstruct(m_prender);
       
@@ -154,7 +154,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 		if (m_bSetup)
 		{
 
-			return m_size.cx();
+			return m_size.cx;
 
 		}
 		else
@@ -173,7 +173,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 		if (m_bSetup)
 		{
 
-			return m_size.cy();
+			return m_size.cy;
 
 		}
 		else
@@ -571,8 +571,8 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //         }
 //
-//         m_size.cx()  = -1;
-//         m_size.cy()  = -1;
+//         m_size.cx  = -1;
+//         m_size.cy  = -1;
 //         m_iFrameRateDenominator = -1;
 //         m_iFrameRateNumerator = -1;
 //
@@ -591,15 +591,15 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //         }
 //
-//         m_size.cx()  = -1;
-//         m_size.cy()  = -1;
+//         m_size.cx  = -1;
+//         m_size.cy  = -1;
 //         m_iFrameRateDenominator = -1;
 //         m_iFrameRateNumerator = -1;
 //
 //      }
 //
 //      /* set pixel format and resolution */
-//      if (v4l2_set_format(m_iDevice, &m_size.cx(), &m_size.cy(), &m_iPixFmt, &m_iLineSize) < 0)
+//      if (v4l2_set_format(m_iDevice, &m_size.cx, &m_size.cy, &m_iPixFmt, &m_iLineSize) < 0)
 //      {
 //
 //         auto cerrornumber = c_error_number();
@@ -619,7 +619,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //      }
 //
-//      informationf("Resolution: %greekdeltax%d", m_size.cx(), m_size.cy());
+//      informationf("Resolution: %greekdeltax%d", m_size.cx, m_size.cy);
 //      informationf("Pixelformat: %s", ::string((const_char_pointer )&m_iPixFmt, 5).c_str());
 //      informationf("Linesize: %d Bytes", m_iLineSize);
 //
@@ -795,11 +795,11 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //            auto presolution = øallocate resolution();
 //
-//            presolution->m_size.cx() = frmsize.discrete.width;
+//            presolution->m_size.cx = frmsize.discrete.width;
 //
-//            presolution->m_size.cy() = frmsize.discrete.height;
+//            presolution->m_size.cy = frmsize.discrete.height;
 //
-//            presolution->m_strDescription.formatf("%greekdeltax%d", presolution->m_size.cx(), presolution->m_size.cy());
+//            presolution->m_strDescription.formatf("%greekdeltax%d", presolution->m_size.cx, presolution->m_size.cy);
 //
 //            m_resolutiona.add(presolution);
 //
@@ -818,11 +818,11 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //            auto presolution = øallocate resolution();
 //
-//            presolution->m_size.cx() = second_unsigned_short(*packed);
+//            presolution->m_size.cx = second_unsigned_short(*packed);
 //
-//            presolution->m_size.cy() = first_unsigned_short(*packed);
+//            presolution->m_size.cy = first_unsigned_short(*packed);
 //
-//            presolution->m_strDescription.formatf("%greekdeltax%d", presolution->m_size.cx(), presolution->m_size.cy());
+//            presolution->m_strDescription.formatf("%greekdeltax%d", presolution->m_size.cx, presolution->m_size.cy);
 //
 //            m_resolutiona.add(presolution);
 //
@@ -915,9 +915,9 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //      frmival.pixel_format = ppixelformat->m_iPixFmt;
 //
-//      frmival.width = m_size.cx();
+//      frmival.width = m_size.cx;
 //
-//      frmival.height = m_size.cy();
+//      frmival.height = m_size.cy;
 //
 //      frmival.index = 0;
 //

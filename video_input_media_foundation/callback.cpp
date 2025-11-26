@@ -776,7 +776,7 @@ namespace video_input_media_foundation
 
       pixmap p;
 
-      p.initialize(m_pdevice->m_size, (image32_t *)pSampleBuffer, m_pdevice->m_size.cx() * 4);
+      p.initialize(m_pdevice->m_size, (image32_t *)pSampleBuffer, m_pdevice->m_size.cx * 4);
 
       if (!m_pdevice->get_render()->m_pimage)
       {
@@ -787,14 +787,14 @@ namespace video_input_media_foundation
 
       }
 
-      for (int iLine = 0; iLine < m_pdevice->m_size.cy(); iLine++)
+      for (int iLine = 0; iLine < m_pdevice->m_size.cy; iLine++)
       {
 
-         auto pline = ((unsigned char *)pSampleBuffer) + m_pdevice->m_size.cx() * 4 * iLine;
+         auto pline = ((unsigned char *)pSampleBuffer) + m_pdevice->m_size.cx * 4 * iLine;
 
          pline += 3;
 
-         for (int x = 0; x < m_pdevice->m_size.cx(); x++)
+         for (int x = 0; x < m_pdevice->m_size.cx; x++)
          {
 
             *pline = 255;

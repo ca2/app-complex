@@ -74,9 +74,9 @@ namespace app_complex_video_capture
         
       add_impact_system("main", __initialize_new ::user::single_document_template(
                           "main",
-                          ::type < ::user::document >(),
-                          ::type < main_frame >(),
-                          ::type < pane_impact >()));
+                          ::as_type < ::user::document >(),
+                          ::as_type < main_frame >(),
+                          ::as_type < pane_impact >()));
 
       //add_document_template(pDocTemplate);
 
@@ -85,9 +85,9 @@ namespace app_complex_video_capture
       add_impact_system(
          "impact", __initialize_new ::user::single_document_template(
                           "main",
-                          ::type < document >(),
-                          ::type < frame >(),
-                          ::type < main_impact >()));
+                          ::as_type < document >(),
+                          ::as_type < frame >(),
+                          ::as_type < main_impact >()));
 
       //add_document_template(pDocTemplate);
       //

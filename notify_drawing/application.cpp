@@ -51,9 +51,9 @@ IMPLEMENT_APPLICATION_FACTORY();
 
       auto pdoctemplate = __initialize_new ::user::single_document_template(
                                "main",
-                               ::type < simple_drawing::document >(),
-                               ::type < main_frame >(),
-                               ::type < simple_drawing::tab_impact >()));
+                               ::as_type < simple_drawing::document >(),
+                               ::as_type < main_frame >(),
+                               ::as_type < simple_drawing::tab_impact >()));
       m_ptemplateNotifyDrawingMain = pdoctemplate;
       add_document_template(pdoctemplate);
 
@@ -61,9 +61,9 @@ IMPLEMENT_APPLICATION_FACTORY();
 //      pdoctemplate = __initialize_new ::user::single_document_template(
 //                          this,
 //                          "main",
-//                          ::type < simple_drawing::document >(),
-//                          ::type < simple_drawing::frame >(),
-//                          ::type < simple_drawing::main_impact >()));
+//                          ::as_type < simple_drawing::document >(),
+//                          ::as_type < simple_drawing::frame >(),
+//                          ::as_type < simple_drawing::main_impact >()));
 //
 //      m_ptemplateNotifyDrawingImpact = pdoctemplate;
 //

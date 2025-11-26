@@ -126,8 +126,8 @@ STDMETHODIMP OutputPin::Connect(IPin *pReceivePin, const AM_MEDIA_TYPE *pmt)
 	if (FAILED(hr))
 		return E_FAIL;
 
-	int cx = outputInfo.cx();
-	int cy = outputInfo.cy();
+	int cx = outputInfo.cx;
+	int cy = outputInfo.cy;
 
 	bufSize = cx * cy + cx * cy / 2;
 

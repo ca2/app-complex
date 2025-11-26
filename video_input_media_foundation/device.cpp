@@ -421,7 +421,7 @@ namespace video_input_media_foundation
       if (m_bSetup)
       {
 
-         return m_size.cx();
+         return m_size.cx;
       }
       else
       {
@@ -439,7 +439,7 @@ namespace video_input_media_foundation
       if (m_bSetup)
       {
 
-         return m_size.cy();
+         return m_size.cy;
 
       }
       else

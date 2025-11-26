@@ -593,14 +593,14 @@ namespace multimedia
             lpRect->right = rectangleX.right + 1 ;
             lpRect->top = ((int) dPos) - 4;
             lpRect->bottom = lpRect->top + 10;
-            //        int iHeight = rectangleX.height() - GetSystemMetrics(SM_CYVSCROLL) * 2 - sizeTrack.cy() - 1;
+            //        int iHeight = rectangleX.height() - GetSystemMetrics(SM_CYVSCROLL) * 2 - sizeTrack.cy - 1;
             //      if(m_iRangeMax - m_iRangeMin - m_iPageSize == 0)
             //        lpRect->top = 0;
             //  else
             //    lpRect->top = GetSystemMetrics(SM_CYVSCROLL) + 1 + (iPos - m_iRangeMin) * iHeight / (m_iRangeMax - m_iRangeMin - m_iPageSize);
-            //        lpRect->bottom = lpRect->top + sizeTrack.cy();
+            //        lpRect->bottom = lpRect->top + sizeTrack.cy;
             //      lpRect->left = rectangleX.left + 1;
-            //    lpRect->right = lpRect->left + sizeTrack.cx();
+            //    lpRect->right = lpRect->left + sizeTrack.cx;
          }
          return true;
       }
@@ -616,8 +616,8 @@ namespace multimedia
          //    GetThumbSize(sizeTrack);
          ::double_rectangle rectangleX;
          this->rectangle(rectangleX);
-         sizeTrack.cx() = 10;
-         sizeTrack.cy() = rectangleX.height();
+         sizeTrack.cx = 10;
+         sizeTrack.cy = rectangleX.height();
          if(m_eorientation == e_orientation_horizontal)
          {
             int iWidth = rectangleX.width() - m_iMargin * 2;

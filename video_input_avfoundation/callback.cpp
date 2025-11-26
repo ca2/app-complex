@@ -19,8 +19,8 @@ void ffmpeg_free_frame(AVFrame **framep);
 //      m_pframePicture = nullptr;
 //      m_pframe = nullptr;
 //      m_psws = nullptr;
-//      m_sizeSwsDest.cx() = -1;
-//      m_sizeSwsDest.cy() = -1;
+//      m_sizeSwsDest.cx = -1;
+//      m_sizeSwsDest.cy = -1;
 //      m_pdevice = pdevice;
 //      m_bStopCapture = false;
 //      m_bCapturing = false;
@@ -98,8 +98,8 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////         //if (v4l2_start_capture(m_pdevice->m_iDevice, &data->buffers) < 0)
 ////           // goto exit;
 ////
-////      m_sizeSwsDest.cx() = -1;
-////      m_sizeSwsDest.cy() = -1;
+////      m_sizeSwsDest.cx = -1;
+////      m_sizeSwsDest.cy = -1;
 ////      m_pframePicture = nullptr;
 ////
 ////      m_pdevice->_start_capture();
@@ -109,7 +109,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////      informationf("%s: øallocate< capture started", m_pdevice->m_strDevice.c_str >());
 ////
 ////      m_pframe = øallocate< ::video::frame(v4l2_pix_fmt_to_video_format >(m_pdevice->m_iPixFmt),
-////                                    m_pdevice->m_size.cx(), m_pdevice->m_size.cy());
+////                                    m_pdevice->m_size.cx, m_pdevice->m_size.cy);
 ////
 //////      m_pframe->video_frame_init(x);
 ////
@@ -118,21 +118,21 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////         case V4L2_PIX_FMT_NV12:
 ////            linesize[0] = m_pframe->m_linesize[0];
 ////            linesize[1] = m_pframe->m_linesize[0] / 2;
-////            plane_offsets[1] = m_pframe->m_linesize[0] * m_pdevice->m_size.cy();
+////            plane_offsets[1] = m_pframe->m_linesize[0] * m_pdevice->m_size.cy;
 ////            break;
 ////         case V4L2_PIX_FMT_YVU420:
 ////            linesize[0] = m_pframe->m_linesize[0];
 ////            linesize[1] = m_pframe->m_linesize[0] / 2;
 ////            linesize[2] = m_pframe->m_linesize[0] / 2;
-////            plane_offsets[1] = m_pframe->m_linesize[0] * m_pdevice->m_size.cy() * 5 / 4;
-////            plane_offsets[2] = m_pframe->m_linesize[0] * m_pdevice->m_size.cy();
+////            plane_offsets[1] = m_pframe->m_linesize[0] * m_pdevice->m_size.cy * 5 / 4;
+////            plane_offsets[2] = m_pframe->m_linesize[0] * m_pdevice->m_size.cy;
 ////            break;
 ////         case V4L2_PIX_FMT_YUV420:
 ////            linesize[0] = m_pframe->m_linesize[0];
 ////            linesize[1] = m_pframe->m_linesize[0] / 2;
 ////            linesize[2] = m_pframe->m_linesize[0] / 2;
-////            plane_offsets[1] = m_pframe->m_linesize[0] * m_pdevice->m_size.cy();
-////            plane_offsets[2] = m_pframe->m_linesize[0] * m_pdevice->m_size.cy()* 5 / 4;
+////            plane_offsets[1] = m_pframe->m_linesize[0] * m_pdevice->m_size.cy;
+////            plane_offsets[2] = m_pframe->m_linesize[0] * m_pdevice->m_size.cy* 5 / 4;
 ////            break;
 ////         default:
 ////            linesize[0] = m_pframe->m_linesize[0];
@@ -270,7 +270,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////
 ////            auto eformat = v4l2_pix_fmt_to_video_format(m_pdevice->m_iPixFmt);
 ////
-////            int cy = m_pdevice->m_size.cy();
+////            int cy = m_pdevice->m_size.cy;
 ////
 ////            switch (eformat) {
 ////               case e_video_format_none:
@@ -328,8 +328,8 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////
 ////         ::int_size s;
 ////
-////         s.cx() = m_pdevice->m_size.cx();
-////         s.cy() = m_pdevice->m_size.cy();
+////         s.cx = m_pdevice->m_size.cx;
+////         s.cy = m_pdevice->m_size.cy;
 ////
 ////         if (m_sizeSwsDest.area() <= 0 || m_sizeSwsDest != s || m_psws == nullptr)
 ////         {
@@ -362,14 +362,14 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////
 ////            auto avpixelformat = video_format_to_avpixelformat(evideoformat);
 ////
-////            m_psws = sws_getContext(m_pdevice->m_size.cx(),
-////                                    m_pdevice->m_size.cy(),
+////            m_psws = sws_getContext(m_pdevice->m_size.cx,
+////                                    m_pdevice->m_size.cy,
 ////                                    avpixelformat,
-////                                    m_sizeSwsDest.cx(),
-////                                    m_sizeSwsDest.cy(), FFMPEG_DST_PIXEL_FORMAT, iFlags,
+////                                    m_sizeSwsDest.cx,
+////                                    m_sizeSwsDest.cy, FFMPEG_DST_PIXEL_FORMAT, iFlags,
 ////                                    nullptr, nullptr, nullptr);
 ////
-////            ffmpeg_init_frame(&m_pframePicture, m_sizeSwsDest.cx(), m_sizeSwsDest.cy());
+////            ffmpeg_init_frame(&m_pframePicture, m_sizeSwsDest.cx, m_sizeSwsDest.cy);
 ////
 ////         }
 ////
@@ -400,17 +400,17 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////
 ////#if defined(MACOS)
 ////
-////            ::vertical_swap_copy_image32(pref,m_pdecoder->m_sizeSwsDest.cx(), m_pdecoder->m_sizeSwsDest.cy(),
+////            ::vertical_swap_copy_image32(pref,m_pdecoder->m_sizeSwsDest.cx, m_pdecoder->m_sizeSwsDest.cy,
 ////                                                   pimage->scan_size(), (color32_t *)m_ppic->data[0], m_ppic->linesize[0]);
 ////
 ////#elif defined(APPLE_IOS)
 ////
-////            ::draw2d::vertical_swap_copy_image32_swap_red_blue(m_pdecoder->m_sizeSwsDest.cx(), m_pdecoder.m_sizeSwsDest.cy(),
+////            ::draw2d::vertical_swap_copy_image32_swap_red_blue(m_pdecoder->m_sizeSwsDest.cx, m_pdecoder.m_sizeSwsDest.cy,
 ////                  pref, pimage->m_iScan, (color32_t *)m_ppic->data[0], m_ppic->linesize[0]);
 ////
 ////#else
 ////
-////            ::copy_image32(pref, m_sizeSwsDest.cx(), m_sizeSwsDest.cy(),
+////            ::copy_image32(pref, m_sizeSwsDest.cx, m_sizeSwsDest.cy,
 ////                            pimage->scan_size(), (color32_t *) m_pframePicture->data[0],
 ////                            m_pframePicture->linesize[0]);
 ////

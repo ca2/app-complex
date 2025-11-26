@@ -39,9 +39,9 @@ namespace video_input_video_for_linux
 
 	//	m_uFrameSize = 0;
 
-	//	m_size.cx() = 0;
+	//	m_size.cx = 0;
 
-	//	m_size.cy() = 0;
+	//	m_size.cy = 0;
 
 	//	m_uYuvMatrix = 0;
 

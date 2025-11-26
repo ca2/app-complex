@@ -101,10 +101,10 @@ static bool Get_FORMAT_VideoInfo_Data(VideoInfo &info,
 	if (vscc) {
 		info.minInterval = vscc->MinFrameInterval;
 		info.maxInterval = vscc->MaxFrameInterval;
-		info.minCX       = vscc->MinOutputSize.cx();
-		info.minCY       = vscc->MinOutputSize.cy();
-		info.maxCX       = vscc->MaxOutputSize.cx();
-		info.maxCY       = vscc->MaxOutputSize.cy();
+		info.minCX       = vscc->MinOutputSize.cx;
+		info.minCY       = vscc->MinOutputSize.cy;
+		info.maxCX       = vscc->MaxOutputSize.cx;
+		info.maxCY       = vscc->MaxOutputSize.cy;
 
 		if (!info.minCX || !info.minCY ||
 		    !info.maxCX || !info.maxCY) {
@@ -210,15 +210,15 @@ static bool ClosestVideoMTCallback(ClosestVideoData &data,
 	int                 formatVal = 0;
 	long long           frameVal  = 0;
 
-	if (data.config.cx() < info.minCX)
-		xVal = info.minCX - data.config.cx();
-	else if (data.config.cx() > info.maxCX)
-		xVal = data.config.cx() - info.maxCX;
+	if (data.config.cx < info.minCX)
+		xVal = info.minCX - data.config.cx;
+	else if (data.config.cx > info.maxCX)
+		xVal = data.config.cx - info.maxCX;
 
-	if (data.config.cy() < info.minCY)
-		yVal = info.minCY - data.config.cy();
-	else if (data.config.cy() > info.maxCY)
-		yVal = data.config.cy() - info.maxCY;
+	if (data.config.cy < info.minCY)
+		yVal = info.minCY - data.config.cy;
+	else if (data.config.cy > info.maxCY)
+		yVal = data.config.cy - info.maxCY;
 
 	if (data.config.frameInterval < info.minInterval)
 		frameVal = info.minInterval - data.config.frameInterval;
@@ -231,13 +231,13 @@ static bool ClosestVideoMTCallback(ClosestVideoData &data,
 
 	if (!data.found || data.bestVal > totalVal) {
 		if (xVal == 0) {
-			bmih->biWidth = data.config.cx();
+			bmih->biWidth = data.config.cx;
 			ClampToGranularity(bmih->biWidth, info.minCX,
 					info.granularityCX);
 		}
 
 		if (yVal == 0) {
-			bmih->biHeight = data.config.cy();
+			bmih->biHeight = data.config.cy;
 			ClampToGranularity(bmih->biHeight, info.minCY,
 					info.granularityCY);
 		}

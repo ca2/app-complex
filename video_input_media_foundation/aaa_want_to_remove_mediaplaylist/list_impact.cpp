@@ -37,7 +37,7 @@ namespace mediaplaylist
       //SetCacheInterface(&m_listcache);
 
       m_emode = mode_normal;
-      //::type typeinfo = ::type < list_impact >();
+      //::type typeinfo = ::as_type < list_impact >();
       //m_dataid = typeinfo->name();
       //m_bGroup = true;
       //m_bLateralGroup = true;
@@ -130,7 +130,7 @@ namespace mediaplaylist
          auto pinteraction = øallocate ::user::control_descriptor();
 
          pinteraction->m_bTransparent = true;
-         pinteraction->m_type = ::type < ::user::button >();
+         pinteraction->m_type = ::as_type < ::user::button >();
 
          pinteraction->id() = "play_button";
          pinteraction->add_function(::user::e_control_function_action);

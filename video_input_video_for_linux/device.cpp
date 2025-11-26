@@ -146,7 +146,7 @@ namespace video_input_video_for_linux
 		if (m_bSetup)
 		{
 
-			return m_size.cx();
+			return m_size.cx;
 
 		}
 		else
@@ -165,7 +165,7 @@ namespace video_input_video_for_linux
 		if (m_bSetup)
 		{
 
-			return m_size.cy();
+			return m_size.cy;
 
 		}
 		else
@@ -560,8 +560,8 @@ namespace video_input_video_for_linux
 
          }
 
-         m_size.cx()  = -1;
-         m_size.cy()  = -1;
+         m_size.cx  = -1;
+         m_size.cy  = -1;
          m_iFrameRateDenominator = -1;
          m_iFrameRateNumerator = -1;
 
@@ -580,15 +580,15 @@ namespace video_input_video_for_linux
 
          }
 
-         m_size.cx()  = -1;
-         m_size.cy()  = -1;
+         m_size.cx  = -1;
+         m_size.cy  = -1;
          m_iFrameRateDenominator = -1;
          m_iFrameRateNumerator = -1;
 
       }
 
       /* set pixel format and resolution */
-      if (v4l2_set_format(m_iDevice, &m_size.cx(), &m_size.cy(), &m_iPixelFormat, &m_iLineSize) < 0)
+      if (v4l2_set_format(m_iDevice, &m_size.cx, &m_size.cy, &m_iPixelFormat, &m_iLineSize) < 0)
       {
 
          auto cerrornumber = c_error_number();
@@ -608,7 +608,7 @@ namespace video_input_video_for_linux
 
       }
 
-      informationf("Resolution: %greekdeltax%d", m_size.cx(), m_size.cy());
+      informationf("Resolution: %greekdeltax%d", m_size.cx, m_size.cy);
       informationf("Pixelformat: %s", ::string((const_char_pointer )&m_iPixelFormat, 5).c_str());
       informationf("Linesize: %d Bytes", m_iLineSize);
 
@@ -786,11 +786,11 @@ namespace video_input_video_for_linux
 
             auto presolution = øallocate resolution();
 
-            presolution->m_size.cx() = frmsize.discrete.width;
+            presolution->m_size.cx = frmsize.discrete.width;
 
-            presolution->m_size.cy() = frmsize.discrete.height;
+            presolution->m_size.cy = frmsize.discrete.height;
 
-            presolution->m_strDescription.formatf("%greekdeltax%d", presolution->m_size.cx(), presolution->m_size.cy());
+            presolution->m_strDescription.formatf("%greekdeltax%d", presolution->m_size.cx, presolution->m_size.cy);
 
             m_resolutiona.add(presolution);
 
@@ -809,11 +809,11 @@ namespace video_input_video_for_linux
 
             auto presolution = øallocate resolution();
 
-            presolution->m_size.cx() = upper_unsigned_short(*packed);
+            presolution->m_size.cx = upper_unsigned_short(*packed);
 
-            presolution->m_size.cy() = lower_unsigned_short(*packed);
+            presolution->m_size.cy = lower_unsigned_short(*packed);
 
-            presolution->m_strDescription.formatf("%greekdeltax%d", presolution->m_size.cx(), presolution->m_size.cy());
+            presolution->m_strDescription.formatf("%greekdeltax%d", presolution->m_size.cx, presolution->m_size.cy);
 
             m_resolutiona.add(presolution);
 
@@ -906,9 +906,9 @@ namespace video_input_video_for_linux
 
       frmival.pixel_format = ppixelformat->m_iPixFmt;
 
-      frmival.width = m_size.cx();
+      frmival.width = m_size.cx;
 
-      frmival.height = m_size.cy();
+      frmival.height = m_size.cy;
 
       frmival.index = 0;
 
