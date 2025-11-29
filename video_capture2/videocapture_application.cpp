@@ -98,7 +98,7 @@ namespace app_complex_video_capture
       
       auto pDocTemplate = __initialize_new ::user::single_document_template(
                           "main",
-                          typeid(document ),
+                          typeid(document),
                           typeid(main_frame ),
                           typeid(pane_impact )));
 
@@ -108,8 +108,8 @@ namespace app_complex_video_capture
 
       pDocTemplate = __initialize_new ::user::single_document_template(
                           "main",
-                          typeid(document ),
-                          typeid(frame ),
+                          typeid(document),
+                          typeid(frame),
                           typeid(main_impact )));
       add_document_template(pDocTemplate);
       

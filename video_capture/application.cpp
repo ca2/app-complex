@@ -74,7 +74,7 @@ namespace app_complex_video_capture
         
       add_impact_system("main", __initialize_new ::user::single_document_template(
                           "main",
-                          typeid(::user::document ),
+                          typeid(::user::document),
                           typeid(main_frame ),
                           typeid(pane_impact )));
 
@@ -85,8 +85,8 @@ namespace app_complex_video_capture
       add_impact_system(
          "impact", __initialize_new ::user::single_document_template(
                           "main",
-                          typeid(document ),
-                          typeid(frame ),
+                          typeid(document),
+                          typeid(frame),
                           typeid(main_impact )));
 
       //add_document_template(pDocTemplate);

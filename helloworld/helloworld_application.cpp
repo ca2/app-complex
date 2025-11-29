@@ -42,9 +42,9 @@ namespace helloworld
       pdocumenttemplate = ___new ::user::single_document_template(
          this,
 		   "main",
-         typeid(::helloworld::document ),
-		   typeid(::helloworld::frame ),
-		   typeid(::helloworld::impact ));
+         typeid(::helloworld::document),
+		   typeid(::helloworld::frame),
+		   typeid(::helloworld::impact));
 
       add_document_template(pdocumenttemplate);
 
