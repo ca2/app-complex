@@ -60,9 +60,9 @@ namespace mediaplaylist
 
       m_plistview = nullptr;
 
-      m_typeatomFrameWnd = ::as_type < ::mediaplaylist::frame >();
+      m_typeatomFrameWnd = typeid(::mediaplaylist::frame );
 
-      m_typeatomImpact = ::as_type < ::mediaplaylist::main_impact >();
+      m_typeatomImpact = typeid(::mediaplaylist::main_impact );
 
    }
 
@@ -454,7 +454,7 @@ namespace mediaplaylist
 
       m_pimpactsystem = __initialize_new user::single_document_template(
                             m_strMatter,
-                            ::as_type < ::mediaplaylist::document >(),
+                            typeid(::mediaplaylist::document ),
                             m_typeatomFrameWnd, // custom MDI child frame
                             m_typeatomImpact));
 

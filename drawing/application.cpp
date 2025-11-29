@@ -48,7 +48,7 @@ namespace app_complex_drawing
    ::type application::get_pane_impact_type() const
    {
 
-      return ::as_type < pane_impact >();
+      return typeid(pane_impact );
 
    }
 

@@ -33,7 +33,7 @@ namespace mediaplaylist
       SetCacheInterface(&m_listcache);
 
       m_emode = mode_normal;
-      //::type typeinfo = ::as_type < list_impact >();
+      //::type typeinfo = typeid(list_impact );
       //m_dataid = typeinfo->name();
       //m_bGroup = true;
       //m_bLateralGroup = true;
@@ -111,7 +111,7 @@ namespace mediaplaylist
       class ::user::control_descriptor control;
 
       control.m_bTransparent              = true;
-      control.m_type                  = ::as_type < ::user::button >();
+      control.m_type                  = typeid(::user::button );
       control.id()                        = "play_button";
       control.add_function(::user::e_control_function_action);
       control.set_type(::user::e_control_type_button);

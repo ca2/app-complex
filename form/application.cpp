@@ -100,9 +100,9 @@ namespace app_complex_form
       
       add_impact_system("main", __initialize_new ::user::single_document_template(
                                "main",
-                               ::as_type < document >(),
-                               ::as_type < main_frame >(),
-                               ::as_type < pane_impact >()));
+                               typeid(document ),
+                               typeid(main_frame ),
+                               typeid(pane_impact )));
       //m_ptemplateBeatMapperMain = pdoctemplate;
       //add_document_template(m_ptemplateAppSimpleFormMain);
 
@@ -110,9 +110,9 @@ namespace app_complex_form
       add_impact_system(
          "impact", __initialize_new ::user::single_document_template(
                           "main",
-                          ::as_type < document >(),
-                          ::as_type < frame >(),
-                          ::as_type < main_impact >()));
+                          typeid(document ),
+                          typeid(frame ),
+                          typeid(main_impact )));
       // m_ptemplateBeatMapperImpact = pdoctemplate;
       //add_document_template(m_ptemplateAppSimpleFormImpact);
 

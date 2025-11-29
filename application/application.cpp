@@ -52,9 +52,9 @@ IMPLEMENT_APPLICATION_FACTORY();
 
       auto pdoctemplate = __initialize_new ::user::single_document_template(
                                "main",
-                               ::as_type < document >(),
-                               ::as_type < main_frame >(),
-                               ::as_type < impact >()));
+                               typeid(document ),
+                               typeid(main_frame ),
+                               typeid(impact )));
 
       øconstruct(m_ptemplateSimpleDrawingMain, pdoctemplate);
 
