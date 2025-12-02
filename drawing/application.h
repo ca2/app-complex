@@ -23,7 +23,7 @@ namespace app_complex_drawing
 
 
 
-      ::type get_pane_impact_type() const override;
+      ::platform::type get_pane_impact_type() const override;
 
 
       void init_instance() override;
