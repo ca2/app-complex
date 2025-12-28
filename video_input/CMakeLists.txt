@@ -44,7 +44,7 @@ target_precompile_headers(static_${PROJECT_NAME} PRIVATE framework.h)
 
 set_target_properties(video_input PROPERTIES LINKER_LANGUAGE CXX)
 
-if (MSVC)
+if(${WIN32})
     target_compile_options(video_input PRIVATE "/MD$<$<CONFIG:Debug>:d>")
     target_link_options(video_input PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
     target_link_options(video_input PRIVATE "/SUBSYSTEM:WINDOWS")

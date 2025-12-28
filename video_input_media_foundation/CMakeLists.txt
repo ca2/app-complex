@@ -37,7 +37,7 @@ target_precompile_headers(static_${PROJECT_NAME} PRIVATE framework.h)
 
 set_target_properties(draw2d_gdiplus PROPERTIES LINKER_LANGUAGE CXX)
 
-if (MSVC)
+if(${WIN32})
     target_compile_options(draw2d_gdiplus PRIVATE "/MD$<$<CONFIG:Debug>:d>")
     target_link_options(draw2d_gdiplus PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
     target_link_options(draw2d_gdiplus PRIVATE "/IMPLIB:${LIBRARY_OUTPUT_PATH}/draw2d_gdiplus.lib")
