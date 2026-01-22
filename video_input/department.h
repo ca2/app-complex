@@ -9,7 +9,7 @@ namespace video_input
 
 
    class CLASS_DECL_VIDEO_INPUT department :
-      virtual public ::acme::department
+      virtual public ::platform::department
    {
 
    public:

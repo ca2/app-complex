@@ -83,7 +83,7 @@ namespace app_complex_drawing
    }
 
 
-   void application::create_options_body(::user::interaction * puserinteractionParent)
+   void application::create_options_body(const ::atom & atom, ::user::interaction * puserinteractionParent)
    {
 
       auto pstillTitle = create_label<::user::still>(puserinteractionParent, "Complex Drawing Options");

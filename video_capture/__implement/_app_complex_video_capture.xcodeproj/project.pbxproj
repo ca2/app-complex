@@ -304,7 +304,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A499D412D1A61C200FB4C3D /* operating_ambient_macos.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 9A1CC36B2CF2BE37004A00CB;
+			remoteGlobalIDString = 9A6FBA322EBD3C15003BBE61;
 			remoteInfo = operating_ambient_macos;
 		};
 /* End PBXContainerItemProxy section */
@@ -366,7 +366,7 @@
 
 /* Begin PBXFileReference section */
 		070B8EEA1B6E53F900D26137 /* _app_complex_video_capture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _app_complex_video_capture.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		070B8EFD1B6E53FA00D26137 /* Hello Multiverse!!Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hello Multiverse!!Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		070B8EFD1B6E53FA00D26137 /* _app_complex_video_capture_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = _app_complex_video_capture_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		070B8F021B6E53FA00D26137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hello_Multiverse__Tests.m; sourceTree = "<group>"; };
 		9A273CFE29CF1AF100CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -477,7 +477,7 @@
 			isa = PBXGroup;
 			children = (
 				070B8EEA1B6E53F900D26137 /* _app_complex_video_capture.app */,
-				070B8EFD1B6E53FA00D26137 /* Hello Multiverse!!Tests.xctest */,
+				070B8EFD1B6E53FA00D26137 /* _app_complex_video_capture_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -698,9 +698,9 @@
 			productReference = 070B8EEA1B6E53F900D26137 /* _app_complex_video_capture.app */;
 			productType = "com.apple.product-type.application";
 		};
-		070B8EFC1B6E53FA00D26137 /* Hello Multiverse!!Tests */ = {
+		070B8EFC1B6E53FA00D26137 /* _app_complex_video_capture_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 070B8F0A1B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "Hello Multiverse!!Tests" */;
+			buildConfigurationList = 070B8F0A1B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "_app_complex_video_capture_Tests" */;
 			buildPhases = (
 				070B8EF91B6E53FA00D26137 /* Sources */,
 				070B8EFA1B6E53FA00D26137 /* Frameworks */,
@@ -711,9 +711,9 @@
 			dependencies = (
 				070B8EFF1B6E53FA00D26137 /* PBXTargetDependency */,
 			);
-			name = "Hello Multiverse!!Tests";
+			name = _app_complex_video_capture_Tests;
 			productName = "Hello Multiverse!!Tests";
-			productReference = 070B8EFD1B6E53FA00D26137 /* Hello Multiverse!!Tests.xctest */;
+			productReference = 070B8EFD1B6E53FA00D26137 /* _app_complex_video_capture_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -793,7 +793,7 @@
 			projectRoot = "";
 			targets = (
 				070B8EE91B6E53F900D26137 /* _app_complex_video_capture */,
-				070B8EFC1B6E53FA00D26137 /* Hello Multiverse!!Tests */,
+				070B8EFC1B6E53FA00D26137 /* _app_complex_video_capture_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -1147,7 +1147,6 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1233,7 +1232,6 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1375,7 +1373,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		070B8F0A1B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "Hello Multiverse!!Tests" */ = {
+		070B8F0A1B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "_app_complex_video_capture_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				070B8F0B1B6E53FA00D26137 /* Debug */,
