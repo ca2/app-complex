@@ -43,7 +43,7 @@
 		9AE877AF2858ADC000F88364 /* libaura_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877942858ADBE00F88364 /* libaura_ios.a */; };
 		9AE877B12858ADC000F88364 /* libios_aura_posix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877952858ADBE00F88364 /* libios_aura_posix.a */; };
 		9AE877B22858ADC100F88364 /* libios_axis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877962858ADBE00F88364 /* libios_axis.a */; };
-		9AE877B42858ADC100F88364 /* libios_base.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877972858ADBE00F88364 /* libios_base.a */; };
+		9AE877B42858ADC100F88364 /* libios_berg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877972858ADBE00F88364 /* libios_berg.a */; };
 		9AE877B62858ADC100F88364 /* libios_bred.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877982858ADBE00F88364 /* libios_bred.a */; };
 		9AE877B82858ADC100F88364 /* libios_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877992858ADBE00F88364 /* libios_core.a */; };
 		9AE877BA2858ADC200F88364 /* libios_crypto_openssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE871962858A4C300F88364 /* libios_crypto_openssl.a */; };
@@ -354,7 +354,7 @@
 		9AE877942858ADBE00F88364 /* libaura_ios.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura_ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE877952858ADBE00F88364 /* libios_aura_posix.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libios_aura_posix.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE877962858ADBE00F88364 /* libios_axis.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_axis.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AE877972858ADBE00F88364 /* libios_base.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_base.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE877972858ADBE00F88364 /* libios_berg.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_berg.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE877982858ADBE00F88364 /* libios_bred.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_bred.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE877992858ADBE00F88364 /* libios_core.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_core.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE877C02858ADFF00F88364 /* libnode_ios.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libnode_ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -393,7 +393,7 @@
 				9AE877A42858ADBF00F88364 /* libios_apex_apple.a in Frameworks */,
 				9AE877AA2858ADC000F88364 /* libios_aqua.a in Frameworks */,
 				9AE877C22858ADFF00F88364 /* libnode_ios.a in Frameworks */,
-				9AE877B42858ADC100F88364 /* libios_base.a in Frameworks */,
+				9AE877B42858ADC100F88364 /* libios_berg.a in Frameworks */,
 				9AE8779A2858ADBE00F88364 /* libios_acme.a in Frameworks */,
 				9A4972262001905400B9C9B2 /* ImageIO.framework in Frameworks */,
 				9AE878452858C12400F88364 /* libios_imaging_coreimage.a in Frameworks */,
@@ -511,7 +511,7 @@
 				9AE877942858ADBE00F88364 /* libaura_ios.a */,
 				9AE877952858ADBE00F88364 /* libios_aura_posix.a */,
 				9AE877962858ADBE00F88364 /* libios_axis.a */,
-				9AE877972858ADBE00F88364 /* libios_base.a */,
+				9AE877972858ADBE00F88364 /* libios_berg.a */,
 				9AE877982858ADBE00F88364 /* libios_bred.a */,
 				9AE877992858ADBE00F88364 /* libios_core.a */,
 				9A4972272001907B00B9C9B2 /* MobileCoreServices.framework */,
@@ -1180,7 +1180,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating_system",
-					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/$(ARCHS)/library",
+					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/$(ARCH_MODIFIER)/library",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1258,7 +1258,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating_system",
-					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/$(ARCHS)/library",
+					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/$(ARCH_MODIFIER)/library",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

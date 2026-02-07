@@ -1019,7 +1019,7 @@
 		076A24861B6E772400BF6C7D /* libios_base.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_base.a;
+			path = libios_berg.a;
 			remoteRef = 076A24851B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};

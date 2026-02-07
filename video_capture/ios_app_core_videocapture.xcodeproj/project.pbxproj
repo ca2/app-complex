@@ -28,7 +28,7 @@
 		9A8087931DE117F200F70A07 /* libios_axispng.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A2112211D8271C6000C4336 /* libios_axispng.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8087941DE117F200F70A07 /* libios_axisidn.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A2112471D8271E3000C4336 /* libios_axisidn.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8087951DE117F200F70A07 /* libdraw2d_quartz2d.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07473E3F1B504F20004688C5 /* libdraw2d_quartz2d.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A8087961DE117F200F70A07 /* libios_base.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07E25E2D1B4FF98000752DE1 /* libios_base.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A8087961DE117F200F70A07 /* libios_berg.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07E25E2D1B4FF98000752DE1 /* libios_berg.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8087971DE117F200F70A07 /* libios_core.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07E25E361B4FF98000752DE1 /* libios_core.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8087981DE117F200F70A07 /* libios_experience_lite.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07703CC81B6FF23D009026EA /* libios_experience_lite.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A986ED81D2273EF001F4C04 /* libios_axisidn.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A986ED71D2273EF001F4C04 /* libios_axisidn.dylib */; };
@@ -507,7 +507,7 @@
 				9A8087931DE117F200F70A07 /* libios_axispng.dylib in CopyFiles */,
 				9A8087941DE117F200F70A07 /* libios_axisidn.dylib in CopyFiles */,
 				9A8087951DE117F200F70A07 /* libdraw2d_quartz2d.a in CopyFiles */,
-				9A8087961DE117F200F70A07 /* libios_base.a in CopyFiles */,
+				9A8087961DE117F200F70A07 /* libios_berg.a in CopyFiles */,
 				9A8087971DE117F200F70A07 /* libios_core.a in CopyFiles */,
 				9A8087981DE117F200F70A07 /* libios_experience_lite.a in CopyFiles */,
 			);
@@ -640,7 +640,7 @@
 			isa = PBXGroup;
 			children = (
 				07E25E2B1B4FF98000752DE1 /* libberg.dylib */,
-				07E25E2D1B4FF98000752DE1 /* libios_base.a */,
+				07E25E2D1B4FF98000752DE1 /* libios_berg.a */,
 				07E25E2F1B4FF98000752DE1 /* base_iosTests.xctest */,
 			);
 			name = Products;
@@ -1097,10 +1097,10 @@
 			remoteRef = 07E25E2A1B4FF98000752DE1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		07E25E2D1B4FF98000752DE1 /* libios_base.a */ = {
+		07E25E2D1B4FF98000752DE1 /* libios_berg.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_base.a;
+			path = libios_berg.a;
 			remoteRef = 07E25E2C1B4FF98000752DE1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};

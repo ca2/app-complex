@@ -20,6 +20,8 @@
 		9A50CCA02B6CA9FC00FDB101 /* libios_unac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50CC9F2B6CA9FC00FDB101 /* libios_unac.a */; };
 		9A50CCA22B6CAA0300FDB101 /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50CCA12B6CAA0300FDB101 /* UniformTypeIdentifiers.framework */; };
 		9A50CDF62B6CB87200FDB101 /* libios_archive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50CDF52B6CB87200FDB101 /* libios_archive.a */; };
+		9A8EC30D2F36205F001EAC80 /* libios_nano2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8EC30C2F36205F001EAC80 /* libios_nano2d.a */; };
+		9A8EC30E2F36205F001EAC80 /* libios_nano2d.a in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8EC30C2F36205F001EAC80 /* libios_nano2d.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AAC2145247571180013AB72 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAC2144247571180013AB72 /* libbz2.tbd */; };
 		9AAC214B247571E10013AB72 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEB6A0B1F81DD0400F40B32 /* libiconv.tbd */; };
 		9AB54CCC2D2B835900AFBCB1 /* liboperating_ambient_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADCC2BB2D1E6F3400099200 /* liboperating_ambient_ios.a */; };
@@ -41,14 +43,14 @@
 		9AE8775A2858ACFC00F88364 /* libios_apex_apple.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877442858ACFB00F88364 /* libios_apex_apple.a */; };
 		9AE8775C2858ACFC00F88364 /* libapex_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877452858ACFB00F88364 /* libapex_ios.a */; };
 		9AE8775E2858ACFC00F88364 /* libios_apex_posix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877462858ACFB00F88364 /* libios_apex_posix.a */; };
-		9AE877602858ACFC00F88364 /* libapp_complex_drawing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE871512858A45E00F88364 /* libapp_complex_drawing.a */; };
+		9AE877602858ACFC00F88364 /* libios_app_complex_drawing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE871512858A45E00F88364 /* libios_app_complex_drawing.a */; };
 		9AE877632858ACFD00F88364 /* libios_aqua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877472858ACFB00F88364 /* libios_aqua.a */; };
 		9AE877652858ACFD00F88364 /* libios_aura.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877482858ACFB00F88364 /* libios_aura.a */; };
 		9AE877662858ACFD00F88364 /* libios_aura_apple.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE877492858ACFB00F88364 /* libios_aura_apple.a */; };
 		9AE877682858ACFD00F88364 /* libaura_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8774A2858ACFB00F88364 /* libaura_ios.a */; };
 		9AE8776A2858ACFE00F88364 /* libios_aura_posix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8774B2858ACFB00F88364 /* libios_aura_posix.a */; };
 		9AE8776B2858ACFE00F88364 /* libios_axis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8774C2858ACFB00F88364 /* libios_axis.a */; };
-		9AE8776D2858ACFE00F88364 /* libios_base.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8774D2858ACFB00F88364 /* libios_base.a */; };
+		9AE8776D2858ACFE00F88364 /* libios_berg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8774D2858ACFB00F88364 /* libios_berg.a */; };
 		9AE8776F2858ACFE00F88364 /* libios_bred.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8774E2858ACFB00F88364 /* libios_bred.a */; };
 		9AE877712858ACFF00F88364 /* libios_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8774F2858ACFB00F88364 /* libios_core.a */; };
 		9AE877752858AD5B00F88364 /* libios_crypto_openssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE86E172858A35A00F88364 /* libios_crypto_openssl.a */; };
@@ -282,6 +284,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9A8EC30F2F36205F001EAC80 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9A8EC30E2F36205F001EAC80 /* libios_nano2d.a in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		077A02081B4D5758001C85FF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		078C352F1921758500354453 /* _ios_complex_drawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _ios_complex_drawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -316,6 +332,7 @@
 		9A8812FE2D1E66A600BBEEF3 /* libios_nano_idn_libidn.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_nano_idn_libidn.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8813012D1E66B300BBEEF3 /* libios_nano_graphics_quartz2d.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_nano_graphics_quartz2d.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8813042D1E692E00BBEEF3 /* operating_ambient_ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = operating_ambient_ios.xcodeproj; path = "../../../../operating_system/operating_system-ios/operating_ambient_ios/operating_ambient_ios.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		9A8EC30C2F36205F001EAC80 /* libios_nano2d.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_nano2d.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAC2144247571180013AB72 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		9AD7E49C2D1E443200D91148 /* _static_factory_.inl */ = {isa = PBXFileReference; lastKnownFileType = text; path = _static_factory_.inl; sourceTree = "<group>"; };
 		9ADCC4462D1E6FA000099200 /* libios_acme_windowing_kit.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_acme_windowing_kit.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -352,7 +369,7 @@
 		9AE8774A2858ACFB00F88364 /* libaura_ios.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura_ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE8774B2858ACFB00F88364 /* libios_aura_posix.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libios_aura_posix.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE8774C2858ACFB00F88364 /* libios_axis.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_axis.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AE8774D2858ACFB00F88364 /* libios_base.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_base.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE8774D2858ACFB00F88364 /* libios_berg.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_berg.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE8774E2858ACFB00F88364 /* libios_bred.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_bred.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE8774F2858ACFB00F88364 /* libios_core.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_core.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE877732858AD5B00F88364 /* libios_idn.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_idn.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -385,6 +402,7 @@
 				9AE877502858ACFB00F88364 /* libios_acme.a in Frameworks */,
 				9AAC2145247571180013AB72 /* libbz2.tbd in Frameworks */,
 				9AE877582858ACFC00F88364 /* libios_apex.a in Frameworks */,
+				9A8EC30D2F36205F001EAC80 /* libios_nano2d.a in Frameworks */,
 				9AE878292858B8B600F88364 /* libios_app_simple_drawing.a in Frameworks */,
 				9AE877652858ACFD00F88364 /* libios_aura.a in Frameworks */,
 				9AE877712858ACFF00F88364 /* libios_core.a in Frameworks */,
@@ -395,7 +413,7 @@
 				9A2F609C2474F2CC00D392E8 /* libsqlite3.tbd in Frameworks */,
 				9A2F609B2474F2C400D392E8 /* libz.tbd in Frameworks */,
 				9AE877752858AD5B00F88364 /* libios_crypto_openssl.a in Frameworks */,
-				9AE8776D2858ACFE00F88364 /* libios_base.a in Frameworks */,
+				9AE8776D2858ACFE00F88364 /* libios_berg.a in Frameworks */,
 				9AE8775E2858ACFC00F88364 /* libios_apex_posix.a in Frameworks */,
 				9A4972262001905400B9C9B2 /* ImageIO.framework in Frameworks */,
 				9A4BE107200018A200DED594 /* Foundation.framework in Frameworks */,
@@ -419,7 +437,7 @@
 				9AE877662858ACFD00F88364 /* libios_aura_apple.a in Frameworks */,
 				9AF7615C1F84387F00FDE7CC /* CoreGraphics.framework in Frameworks */,
 				9AE877632858ACFD00F88364 /* libios_aqua.a in Frameworks */,
-				9AE877602858ACFC00F88364 /* libapp_complex_drawing.a in Frameworks */,
+				9AE877602858ACFC00F88364 /* libios_app_complex_drawing.a in Frameworks */,
 				9AE877792858AD5C00F88364 /* libios_draw2d_quartz2d.a in Frameworks */,
 				9AE877562858ACFB00F88364 /* libios_acme_posix.a in Frameworks */,
 				9AE8777B2858AD5C00F88364 /* libios_experience_core.a in Frameworks */,
@@ -466,6 +484,7 @@
 		9A5752B516AAE1D2000CC4EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A8EC30C2F36205F001EAC80 /* libios_nano2d.a */,
 				9ADCC4532D1E6FD400099200 /* libnode_ios.a */,
 				9ADCC4502D1E6FC700099200 /* libios_nano_graphics_quartz2d.a */,
 				9ADCC44D2D1E6FB300099200 /* libinnate_ui_uikit.a */,
@@ -503,7 +522,7 @@
 				9AE8774A2858ACFB00F88364 /* libaura_ios.a */,
 				9AE8774B2858ACFB00F88364 /* libios_aura_posix.a */,
 				9AE8774C2858ACFB00F88364 /* libios_axis.a */,
-				9AE8774D2858ACFB00F88364 /* libios_base.a */,
+				9AE8774D2858ACFB00F88364 /* libios_berg.a */,
 				9AE8774E2858ACFB00F88364 /* libios_bred.a */,
 				9AE8774F2858ACFB00F88364 /* libios_core.a */,
 				9AAC2144247571180013AB72 /* libbz2.tbd */,
@@ -585,7 +604,7 @@
 			isa = PBXGroup;
 			children = (
 				9AE86E0E2858A35A00F88364 /* libapp_complex_drawing.dylib */,
-				9AE871512858A45E00F88364 /* libapp_complex_drawing.a */,
+				9AE871512858A45E00F88364 /* libios_app_complex_drawing.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -653,6 +672,7 @@
 				078C352B1921758500354453 /* Sources */,
 				078C352C1921758500354453 /* Frameworks */,
 				078C352D1921758500354453 /* Resources */,
+				9A8EC30F2F36205F001EAC80 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -910,10 +930,10 @@
 			remoteRef = 9AE86E282858A35B00F88364 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AE871512858A45E00F88364 /* libapp_complex_drawing.a */ = {
+		9AE871512858A45E00F88364 /* libios_app_complex_drawing.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libapp_complex_drawing.a;
+			path = libios_app_complex_drawing.a;
 			remoteRef = 9AE871502858A45E00F88364 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1171,7 +1191,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating_system",
-					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/$(ARCHS)/library",
+					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/$(ARCH_MODIFIER)/library",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1249,7 +1269,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating_system",
-					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/$(ARCHS)/library",
+					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/$(ARCH_MODIFIER)/library",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
