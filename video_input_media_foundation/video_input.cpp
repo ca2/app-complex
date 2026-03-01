@@ -2,6 +2,7 @@
 #include "framework.h"
 #include "video_input.h"
 #include "device.h"
+#include "acme/constant/id.h"
 #include "acme/handler/topic.h"
 #include "acme/parallelization/synchronous_lock.h"
 #include "acme/operating_system/windows_common/com/cotaskptr.h"
