@@ -2,6 +2,7 @@
 #include "device_selector.h"
 #include "application.h"
 #include "pane_impact.h"
+#include "acme/constant/id.h"
 #include "acme/handler/item.h"
 #include "acme/user/user/content.h"
 #include "acme/handler/topic.h"
