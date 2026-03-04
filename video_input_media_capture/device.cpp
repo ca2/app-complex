@@ -794,7 +794,7 @@ namespace video_input_media_capture
 
       }
 
-      m_pthread = øallocate ::video_input_media_capture::thread(this);
+      m_pthread = allocateø ::video_input_media_capture::thread(this);
 
       m_pthread->initialize(this);
 
@@ -1010,7 +1010,7 @@ namespace video_input_media_capture
       for (unsigned int uFormat = 0; uFormat < formata.Size(); uFormat++)
       {
 
-         auto pmediaformat = øallocate media_format();
+         auto pmediaformat = allocateø media_format();
 
          pmediaformat->m_mediaframeformat = formata.GetAt(uFormat);
 

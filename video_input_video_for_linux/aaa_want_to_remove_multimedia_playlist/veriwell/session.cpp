@@ -28,14 +28,14 @@ namespace multimedia_playlist
       ::pointer<::multimedia_playlist::playlist>session::new_playlist()
       {
 
-         return øallocate playlist();
+         return allocateø playlist();
 
       }
 
       ::pointer<::multimedia_playlist::track>session::new_track()
       {
 
-         return øallocate track();
+         return allocateø track();
 
       }
 
@@ -188,7 +188,7 @@ namespace multimedia_playlist
          if (::is_null(pFind))
          {
 
-            auto ppl = øallocate ::multimedia_playlist::veriwell::playlist();
+            auto ppl = allocateø ::multimedia_playlist::veriwell::playlist();
 
             ppl->load(payloadFile);
 

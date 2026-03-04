@@ -65,7 +65,7 @@ namespace video_input_media_foundation
 				for (UINT32 i = 0; i < cCount; i++)
 				{
 
-					auto pdevice = øallocate device();
+					auto pdevice = allocateø device();
 
 					pdevice->readInfoOfDevice(ppDevices[i], i);
 

@@ -50,7 +50,7 @@ namespace mediamanager
 
       }
 
-      m_pdatabase = øallocate ::sqlite::database(this);
+      m_pdatabase = allocateø ::sqlite::database(this);
 
       ::file::path str = pcontext->directory()->appdata() / "musical_players";
 

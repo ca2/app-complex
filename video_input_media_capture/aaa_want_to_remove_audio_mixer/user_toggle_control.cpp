@@ -17,7 +17,7 @@ namespace multimedia
          toggle_control::toggle_control()
          {
 
-            øconstruct(m_pdata, øallocate ::audio_mixer::control_data_switch());
+            constructø(m_pdata, allocateø ::audio_mixer::control_data_switch());
 
          }
 

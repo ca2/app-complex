@@ -16,7 +16,7 @@ namespace multimedia
          level_control::level_control()
          {
 
-            øconstruct(m_pdata, øallocate ::audio_mixer::control_data_volume());
+            constructø(m_pdata, allocateø ::audio_mixer::control_data_volume());
 
          }
 

@@ -781,7 +781,7 @@ namespace video_input_media_foundation
       if (!m_pdevice->get_render()->m_pimage)
       {
 
-         m_pdevice->øconstruct(m_pdevice->get_render()->m_pimage);
+         m_pdevice->constructø(m_pdevice->get_render()->m_pimage);
 
          m_pdevice->get_render()->m_pimage->create(m_pdevice->m_size);
 

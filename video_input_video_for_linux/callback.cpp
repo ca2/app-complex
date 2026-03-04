@@ -393,7 +393,7 @@ namespace video_input_video_for_linux
          if(pimage.nok())
          {
 
-            øconstruct(pimage);
+            constructø(pimage);
 
          }
 

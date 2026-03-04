@@ -359,7 +359,7 @@ namespace multimedia
             
             ::double_rectangle rectangle(0, 0, 0, 0);
             
-            auto pst = øallocate simple_static();
+            auto pst = allocateø simple_static();
 
             pst->create_window(this, pSource->get_source_name());
 

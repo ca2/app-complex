@@ -45,7 +45,7 @@ namespace mediaplay
    ::pointer<::mediaplay::data>document::create_new_mediaplay_data()
    {
 
-      return øallocate ::mediaplay::data();
+      return allocateø ::mediaplay::data();
 
    }
 

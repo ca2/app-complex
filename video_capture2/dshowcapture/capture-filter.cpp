@@ -387,7 +387,7 @@ public:
 CaptureFilter::CaptureFilter(const PinCaptureInfo &info)
 	: refCount (0),
 	  state    (State_Stopped),
-	  pin      (øallocate< CapturePin >(this, info)),
+	  pin      (allocateø< CapturePin >(this, info)),
 	  misc     (memory_new MiscFlagsHandler)
 {
 }

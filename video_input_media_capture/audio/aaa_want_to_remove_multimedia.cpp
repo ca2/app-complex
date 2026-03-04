@@ -34,7 +34,7 @@
 //    void department::init_multimedia()
 //    {
 
-//       //auto estatus = øconstruct_new(m_psoundtrackplayer);
+//       //auto estatus = construct_newø(m_psoundtrackplayer);
 
 //       //if (!estatus)
 //       //{
@@ -66,7 +66,7 @@
 
 //       }
 
-//       auto estatus = øconstruct_new(m_psoundtrackplayer);
+//       auto estatus = construct_newø(m_psoundtrackplayer);
 
 //       if (!estatus)
 //       {
@@ -116,7 +116,7 @@
 //       if (!pplugin->audio_plugin_matches(sound_track()->m_paudiomixer))
 //       {
 
-//          auto presampler = øallocate ::audio_plugin::resampler();
+//          auto presampler = allocateø ::audio_plugin::resampler();
 
 //          presampler->m_pplugin = pplugin;
 
@@ -312,7 +312,7 @@
 //       //if (m_pmultimedia.is_null())
 //       //{
 
-//       //   øconstruct_new(m_pmultimedia);
+//       //   construct_newø(m_pmultimedia);
 
 //       //}
 
@@ -361,7 +361,7 @@
 
 // #endif
 
-//       m_pmultimediafile = øallocate ::multimedia::file_application();
+//       m_pmultimediafile = allocateø ::multimedia::file_application();
 
 // #ifdef WINDOWS_DESKTOP
 
@@ -403,7 +403,7 @@
 //       //if (!m_paudiomixer)
 //       //{
 
-//       //   auto estatus = øconstruct_new(m_paudiomixer);
+//       //   auto estatus = construct_newø(m_paudiomixer);
 
 //       //   if (!estatus)
 //       //   {
@@ -439,7 +439,7 @@
 //       //if (!m_paudiomixeruserbase)
 //       //{
 
-//       //   auto estatus = øconstruct_new(m_paudiomixeruserbase);
+//       //   auto estatus = construct_newø(m_paudiomixeruserbase);
 
 //       //   if (!estatus)
 //       //   {
@@ -477,7 +477,7 @@
 //       if (!m_paudiowave)
 //       {
 
-//          auto estatus = øconstruct_new(m_paudiowave);
+//          auto estatus = construct_newø(m_paudiowave);
 
 //          if (!estatus)
 //          {
@@ -491,7 +491,7 @@
 //       //if (m_pmediamanager.is_null())
 //       //{
 
-//       //   auto estatus = øconstruct_new(m_pmediamanager);
+//       //   auto estatus = construct_newø(m_pmediamanager);
 
 //       //   if (!estatus)
 //       //   {
@@ -506,14 +506,14 @@
 //       //}
 
 //       //// xxx TODO
-//       ////add_library(øallocate ::multimedia::library());
+//       ////add_library(allocateø ::multimedia::library());
 
-//       //m_pmediaplay = øallocate ::mediaplay::mediaplay();
+//       //m_pmediaplay = allocateø ::mediaplay::mediaplay();
 
 //       //if (m_pmediaplay == nullptr)
 //       //   return false;
 
-//       //m_pmediaplaylist = øallocate ::mediaplaylist::media_playlist();
+//       //m_pmediaplaylist = allocateø ::mediaplaylist::media_playlist();
 
 
 //       //if (m_pmediaplaylist.is_null())
@@ -738,7 +738,7 @@
 
 //       ::pointer<::tts::speaker>pspeaker;
 
-//       pspeaker = øallocate ms_translator_speaker();
+//       pspeaker = allocateø ms_translator_speaker();
 
 //       return pspeaker;
 
@@ -1139,7 +1139,7 @@ pdirectorysystem->system() / "gtranslators" / as_string(m_iGTranslatorFile) + ".
 //    LPWAVEOUT department::waveout_open(int iChannel, LPAUDIOFORMAT pformat, LPWAVEOUT_CALLBACK pcallback)
 //    {
 
-//       auto pplugin = øallocate ::audio_plugin::source();
+//       auto pplugin = allocateø ::audio_plugin::source();
 
 //       if (pplugin.is_null())
 //       {

@@ -113,7 +113,7 @@ namespace app_complex_video_capture
 
       pfactory->merge_to_global_factory();
 
-      øconstruct(m_pvideoinput);
+      constructø(m_pvideoinput);
 
       m_pvideoinput->update_device_list();
 

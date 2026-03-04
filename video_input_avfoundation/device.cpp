@@ -71,9 +71,9 @@ namespace video_input_video_avfoundation
       m_size.cx = w;
       m_size.cy = h;
       
-      øconstruct(m_prender);
+      constructø(m_prender);
       
-      øconstruct(m_prender->m_pimage);
+      constructø(m_prender->m_pimage);
 //
       m_bSetup = true;
 //
@@ -365,7 +365,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 
 		}
 
-		m_pthread = øallocate ::video_input_video_avfoundation::thread(this);
+		m_pthread = allocateø ::video_input_video_avfoundation::thread(this);
 
 		m_pthread->initialize(this);
 
@@ -635,9 +635,9 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //      informationf("Framerate: %.2f fps", (float)m_iFrameRateDenominator / m_iFrameRateNumerator);
 //
-//      m_pmemorymap = øallocate memory_map(m_iDevice);
+//      m_pmemorymap = allocateø memory_map(m_iDevice);
 //
-//      øconstruct_new(m_pmjpegdecoder);
+//      construct_newø(m_pmjpegdecoder);
 //
 //      return;
 //
@@ -668,7 +668,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //      while (ioctl(VIDIOC_ENUMINPUT, &in) == 0)
 //      {
 //
-//         auto pinput = øallocate input();
+//         auto pinput = allocateø input();
 //
 //         pinput->m_strDescription = (const_char_pointer )in.name;
 //
@@ -698,7 +698,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //      while (ioctl( VIDIOC_ENUMSTD, &std) == 0)
 //      {
 //
-//         auto pstandard = øallocate standard();
+//         auto pstandard = allocateø standard();
 //
 //         pstandard->m_strDescription = (const_char_pointer )std.name;
 //
@@ -726,7 +726,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //      while (ioctl(VIDIOC_ENUM_FMT, &fmt) == 0)
 //      {
 //
-//         auto ppixelformat = øallocate pixel_format();
+//         auto ppixelformat = allocateø pixel_format();
 //
 //         ppixelformat->m_iPixFmt = fmt.pixelformat;
 //
@@ -793,7 +793,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //         while (pdevice->ioctl(VIDIOC_ENUM_FRAMESIZES, &frmsize) == 0)
 //         {
 //
-//            auto presolution = øallocate resolution();
+//            auto presolution = allocateø resolution();
 //
 //            presolution->m_size.cx = frmsize.discrete.width;
 //
@@ -816,7 +816,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //         for (const int *packed = v4l2_framesizes; *packed; ++packed)
 //         {
 //
-//            auto presolution = øallocate resolution();
+//            auto presolution = allocateø resolution();
 //
 //            presolution->m_size.cx = second_unsigned_short(*packed);
 //
@@ -929,7 +929,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //         while (pdevice->ioctl(VIDIOC_ENUM_FRAMEINTERVALS, &frmival) == 0)
 //         {
 //
-//            auto pframerate = øallocate frame_rate();
+//            auto pframerate = allocateø frame_rate();
 //
 //            pframerate->m_iDenominator = frmival.discrete.denominator;
 //
@@ -954,7 +954,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //         for (const int *packed = v4l2_framerates; *packed; ++packed)
 //         {
 //
-//            auto pframerate = øallocate frame_rate();
+//            auto pframerate = allocateø frame_rate();
 //
 //            pframerate->m_iDenominator = first_unsigned_short(*packed);
 //

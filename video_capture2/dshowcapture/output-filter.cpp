@@ -422,7 +422,7 @@ public:
 OutputFilter::OutputFilter(const PinOutputInfo &info)
 	: refCount (0),
 	  state    (State_Stopped),
-	  pin      (øallocate< OutputPin >(this, info)),
+	  pin      (allocateø< OutputPin >(this, info)),
 	  misc     (___new SourceMiscFlags)
 {
 }

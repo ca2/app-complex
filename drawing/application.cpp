@@ -156,15 +156,15 @@ namespace app_complex_drawing
 
       }
 
-      //auto pstill = øallocate ::user::still();
+      //auto pstill = allocateø ::user::still();
 
-      //øconstruct_new(m_pedit);
+      //construct_newø(m_pedit);
 
-      //øconstruct_new(m_pbuttonClear);
+      //construct_newø(m_pbuttonClear);
 
-      //øconstruct_new(m_pbuttonSend);
+      //construct_newø(m_pbuttonSend);
 
-      //øconstruct_new(m_pstillReceiver);
+      //construct_newø(m_pstillReceiver);
 
       //m_pstill->create_control(this, "still");
 
