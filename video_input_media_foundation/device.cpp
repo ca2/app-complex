@@ -996,7 +996,7 @@ namespace video_input_media_foundation
 
          }
 
-         auto pformatreader = øcreate_new < format_reader >();
+         auto pformatreader = create_newø < format_reader >();
 
          auto pmediaformat = pformatreader->Read(pmediatype);
 

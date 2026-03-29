@@ -990,7 +990,7 @@ namespace video_input_video_for_linux
             for (auto & pframerate: presolution->m_frameratea)
             {
 
-               auto pmediaformat = øcreate_new < ::video_input::media_format >();
+               auto pmediaformat = create_newø < ::video_input::media_format >();
 
                pmediaformat->m_iPixFmt = ppixelformat->m_iPixFmt;
                pmediaformat->m_size = presolution->m_size;

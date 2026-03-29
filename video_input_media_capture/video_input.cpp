@@ -68,7 +68,7 @@ namespace video_input_media_capture
 
       synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
-      auto pitemaDeviceNew = øcreate_new < ::item_array>();
+      auto pitemaDeviceNew = create_newø < ::item_array>();
 
       ::winrt::Windows::Foundation::Collections::IVectorView<::winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup> sourcegroupa(nullptr);
 
@@ -92,7 +92,7 @@ namespace video_input_media_capture
                 && sourcekind == ::winrt::Windows::Media::Capture::Frames::MediaFrameSourceKind::Color)
             {
 
-               auto pdevice = øcreate_new< class device>();
+               auto pdevice = create_newø< class device>();
 
                pdevice->m_strHardwareId = sourcegroup.Id().begin();
 
@@ -237,7 +237,7 @@ namespace video_input_media_capture
 
    //      }
 
-   //      auto pdevice = øcreate_new< device>();
+   //      auto pdevice = create_newø< device>();
 
    //      pdevice->m_strHardwareId = strHardwareId;
 

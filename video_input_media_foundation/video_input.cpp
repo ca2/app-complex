@@ -186,7 +186,7 @@ namespace video_input_media_foundation
 
          }
 
-         auto pdevice = øcreate_new< device>();
+         auto pdevice = create_newø< device>();
 
          pdevice->m_strHardwareId = strHardwareId;
 

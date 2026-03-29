@@ -951,7 +951,7 @@ namespace video_input_media_capture
 
          ::pointer < render > prender = get_render();
 
-         ødefer_construct(prender->m_pimage);
+         defer_constructø(prender->m_pimage);
 
          prender->m_pimage->create(m_size);
 
@@ -1115,7 +1115,7 @@ namespace video_input_media_capture
 
       //   }
 
-      //   auto pformatreader = øcreate_new < format_reader >();
+      //   auto pformatreader = create_newø < format_reader >();
 
       //   auto pmediaformat = pformatreader->Read(pmediatype);
 

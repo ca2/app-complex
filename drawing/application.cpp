@@ -88,7 +88,7 @@ namespace app_complex_drawing
 
       auto pstillTitle = create_label<::user::still>(puserinteractionParent, "Complex Drawing Options");
 
-      ødefer_construct(pstillTitle->m_pfont);
+      defer_constructø(pstillTitle->m_pfont);
 
       pstillTitle->m_pfont->create_font(e_font_sans_ui, 24_pt);
 

@@ -524,7 +524,7 @@
 ////   ::pointer<::tts::speaker>application::create_tts_speaker()
 ////   {
 ////
-////      auto pspeaker = øcreate < ::tts::speaker > ();
+////      auto pspeaker = createø < ::tts::speaker > ();
 ////
 ////      if (pspeaker.is_set())
 ////      {

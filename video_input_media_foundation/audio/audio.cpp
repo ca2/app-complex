@@ -548,7 +548,7 @@ namespace audio
    ::pointer<::tts::speaker>audio::create_tts_speaker()
    {
 
-      auto pspeaker = øcreate < ::tts::speaker >();
+      auto pspeaker = createø < ::tts::speaker >();
 
       if (pspeaker.is_set())
       {
@@ -571,7 +571,7 @@ namespace audio
    ::pointer<::tts::speaker>audio::create_trans_speaker()
    {
 
-      auto pspeaker = øcreate_new < ms_translator_speaker >();
+      auto pspeaker = create_newø < ms_translator_speaker >();
 
       return ::transfer(pspeaker);
 
