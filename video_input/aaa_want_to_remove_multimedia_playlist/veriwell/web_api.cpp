@@ -76,7 +76,7 @@ pdirectorysystem->system() / "config\\spotify\\client_id.txt");
 
             set["raw_http"] = true;
 
-            strUrl = "https://api.ca2.network/account/spotify_register";
+            strUrl = "https://api.ca2.site/account/spotify_register";
 
             strState = http()->get(strUrl, set);
 
@@ -92,7 +92,7 @@ pdirectorysystem->system() / "config\\spotify\\client_id.txt");
 
          }
 
-         string strRedirectUri = "https://ca2.network/spotify_redirect";
+         string strRedirectUri = "https://ca2.site/spotify_redirect";
 
          //string strScope = "user-read-private user-read-email";
 
@@ -116,7 +116,7 @@ pdirectorysystem->system() / "config\\spotify\\client_id.txt");
 
                set["raw_http"] = true;
 
-               strUrl = "https://api.ca2.network/account/spotify_response?state=" + strState;
+               strUrl = "https://api.ca2.site/account/spotify_response?state=" + strState;
 
                strResponse = http()->get(strUrl, set);
 
