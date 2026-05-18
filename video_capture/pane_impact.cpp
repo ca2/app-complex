@@ -95,7 +95,7 @@ namespace app_complex_video_capture
       else
       {
 
-         switch (pimpactdata->id().as_int())
+         switch (pimpactdata->id().as_i32())
          {
          case MAIN_IMPACT:
          {
