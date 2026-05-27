@@ -954,7 +954,7 @@ namespace mediaplay
    {
       __UNREFERENCED_PARAMETER(scopedstr);
       ASSERT(false);
-      //unsigned_int_array dwa;
+      //u32_array dwa;
       return 0xffffffff;
    }
 
