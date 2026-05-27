@@ -31,7 +31,7 @@ namespace mediaplaylist
 
       simple_form_list_impact::install_message_routing(pchannel);
 
-      USER_MESSAGE_LINK(::user::e_message_left_button_f64_click,pchannel,this,&playlist_list_impact::on_message_left_button_f64_click);
+      USER_MESSAGE_LINK(::user::e_message_left_button_double_click,pchannel,this,&playlist_list_impact::on_message_left_button_double_click);
       USER_MESSAGE_LINK(::user::e_message_context_menu,pchannel,this,&playlist_list_impact::on_message_context_menu);
       USER_MESSAGE_LINK(::user::e_message_create,pchannel,this,&playlist_list_impact::on_message_create);
 
@@ -202,7 +202,7 @@ namespace mediaplaylist
    }
 
 
-   void playlist_list_impact::on_message_left_button_f64_click(::message::message * pmessage)
+   void playlist_list_impact::on_message_left_button_double_click(::message::message * pmessage)
    {
 
       auto pmouse = pmessage->m_union.m_pmouse;

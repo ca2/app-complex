@@ -59,7 +59,7 @@ namespace mediaplaylist
       virtual bool TransparentFrameWndDownUpGetUpEnable();
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
-      DECLARE_MESSAGE_HANDLER(on_message_left_button_f64_click);
+      DECLARE_MESSAGE_HANDLER(on_message_left_button_double_click);
       DECLARE_MESSAGE_HANDLER(on_message_context_menu);
       DECLARE_MESSAGE_HANDLER(_001OnEditRemove);
       DECLARE_MESSAGE_HANDLER(_001OnUpdateEditRemove);
