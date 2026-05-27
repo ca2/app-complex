@@ -18,10 +18,10 @@
 
 struct util_::u32128 {
 	union {
-		unsigned int int[4];
+		::u32 int[4];
 		struct {
-			unsigned long long low;
-			unsigned long long high;
+			::u64 low;
+			::u64 high;
 		};
 	};
 };
@@ -31,27 +31,27 @@ typedef struct util_::u32128 util_::u32128_t;
 static inline util_::u32128_t util_add128(util_::u32128_t a, util_::u32128_t b)
 {
 	util_::u32128_t out;
-	unsigned long long val;
+	::u64 val;
 
 	val = (a.low & 0xFFFFFFFFULL) + (b.low & 0xFFFFFFFFULL);
-	out.int[0] = (unsigned int)(val & 0xFFFFFFFFULL);
+	out.int[0] = (::u32)(val & 0xFFFFFFFFULL);
 	val >>= 32;
 
 	val += (a.low >> 32) + (b.low >> 32);
-	out.int[1] = (unsigned int)val;
+	out.int[1] = (::u32)val;
 	val >>= 32;
 
 	val += (a.high & 0xFFFFFFFFULL) + (b.high & 0xFFFFFFFFULL);
-	out.int[2] = (unsigned int)(val & 0xFFFFFFFFULL);
+	out.int[2] = (::u32)(val & 0xFFFFFFFFULL);
 	val >>= 32;
 
 	val += (a.high >> 32) + (b.high >> 32);
-	out.int[3] = (unsigned int)val;
+	out.int[3] = (::u32)val;
 
 	return out;
 }
 
-static inline util_::u32128_t util_lshift64(unsigned long long a, int num)
+static inline util_::u32128_t util_lshift64(::u64 a, int num)
 {
 	util_::u32128_t val;
 	val.low = a << num;
@@ -59,10 +59,10 @@ static inline util_::u32128_t util_lshift64(unsigned long long a, int num)
 	return val;
 }
 
-static inline util_::u32128_t util_mul64_64(unsigned long long a, unsigned long long b)
+static inline util_::u32128_t util_mul64_64(::u64 a, ::u64 b)
 {
 	util_::u32128_t out;
-	unsigned long long m;
+	::u64 m;
 
 	m = (a & 0xFFFFFFFFULL) * (b & 0xFFFFFFFFULL);
 	out.low = m;
@@ -80,10 +80,10 @@ static inline util_::u32128_t util_mul64_64(unsigned long long a, unsigned long 
 	return out;
 }
 
-static inline util_::u32128_t util_div128_32(util_::u32128_t a, unsigned int b)
+static inline util_::u32128_t util_div128_32(util_::u32128_t a, ::u32 b)
 {
 	util_::u32128_t out;
-	unsigned long long val = 0;
+	::u64 val = 0;
 
 	for (int i = 3; i >= 0; i--) {
 		val = (val << 32) | a.int[i];
@@ -92,7 +92,7 @@ static inline util_::u32128_t util_div128_32(util_::u32128_t a, unsigned int b)
 			continue;
 		}
 
-		out.int[i] = (unsigned int)(val / b);
+		out.int[i] = (::u32)(val / b);
 		val = val % b;
 	}
 

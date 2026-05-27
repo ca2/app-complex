@@ -29,7 +29,7 @@ namespace video_input
 
 	}
 
-	HRESULT image_grabber_thread::CreateInstance(image_grabber_thread ** ppIGT, IMFMediaSource * pSource, unsigned int deviceID, void(*func)(int, void *))
+	HRESULT image_grabber_thread::CreateInstance(image_grabber_thread ** ppIGT, IMFMediaSource * pSource, ::u32 deviceID, void(*func)(int, void *))
 	{
 		
 		debug_print_out * pdebugprintout = &debug_print_out::get_instance();
@@ -56,7 +56,7 @@ namespace video_input
 	}
 
 
-	image_grabber_thread::image_grabber_thread(IMFMediaSource * pSource, unsigned int deviceID, void(*func)(int, void *)) 
+	image_grabber_thread::image_grabber_thread(IMFMediaSource * pSource, ::u32 deviceID, void(*func)(int, void *)) 
 		: m_bStop(false)
 	{
 
@@ -149,7 +149,7 @@ namespace video_input
 		begin();
 		//m_handle = CreateThread(
 		//	NULL,                   // default security attributes
-		//	0,                      // use default stack int_size  
+		//	0,                      // use default stack i32_size  
 		//	MainThreadFunction,       // thread function name
 		//	this,          // argument to thread function 
 		//	0,                      // use default creation flags 

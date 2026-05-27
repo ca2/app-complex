@@ -111,10 +111,10 @@ avpixelformat_to_video_format(enum AVPixelFormat format)
 #define V4L2_DATA(voidptr) struct v4l2_data *data = voidptr;
 
 #define timeval2ns(tv) \
-	(((unsigned long long)tv.tv_sec * 1000000000) + ((unsigned long long)tv.tv_usec * 1000))
+	(((::u64)tv.tv_sec * 1000000000) + ((::u64)tv.tv_usec * 1000))
 
 #define V4L2_FOURCC_STR(code)                                         \
-	(char[5])                                                     \
+	(::i8[5])                                                     \
 	{                                                             \
 		code & 0xFF, (code >> 8) & 0xFF, (code >> 16) & 0xFF, \
 			(code >> 24) & 0xFF, 0                        \

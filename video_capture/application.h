@@ -37,8 +37,8 @@ namespace app_complex_video_capture
 
       void on_request(::request * prequest) override;
 
-      long long increment_reference_count() override;
-      long long decrement_reference_count() override;
+      ::i64 increment_reference_count() override;
+      ::i64 decrement_reference_count() override;
 
 
       string prepare_impact_options_main_body() override;

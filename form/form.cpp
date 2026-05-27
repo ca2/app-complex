@@ -31,7 +31,7 @@ namespace app_complex_form
 #ifdef _DEBUG
 
 
-   long long form::increment_reference_count()
+   ::i64 form::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -39,7 +39,7 @@ namespace app_complex_form
    }
 
 
-   long long form::decrement_reference_count()
+   ::i64 form::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();

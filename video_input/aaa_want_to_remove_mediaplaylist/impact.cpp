@@ -67,7 +67,7 @@ namespace mediaplaylist
    void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      ::double_rectangle rectangleX;
+      ::f64_rectangle rectangleX;
 
       this->rectangle(rectangleX);
 

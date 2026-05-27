@@ -94,7 +94,7 @@ namespace mediamanager
 
    bool album_record::FillFileInfo(
    ::pointer<::mediamanager::album_build>build,
-   const char * lpcsz)
+   const ::i8 * lpcsz)
    {
 
       throw todo();
@@ -154,7 +154,7 @@ namespace mediamanager
       //   unzReadCurrentFile(
       //   pf,
       //   m_storage.get_data(),
-      //   (unsigned int) m_storage.get_size());
+      //   (::u32) m_storage.get_size());
 
       //   iResult = unzCloseCurrentFile(pf);
 
@@ -234,7 +234,7 @@ namespace mediamanager
    }
 
    //string album_record::GetFileName(
-   //   const char * lpcsz)
+   //   const ::i8 * lpcsz)
    //{
    //   string str(lpcsz);
 
@@ -492,7 +492,7 @@ namespace mediamanager
    }
 
 
-   bool album_build::AddEmpty(::int_array & ia, ::file::listing & stra)
+   bool album_build::AddEmpty(::i32_array & ia, ::file::listing & stra)
    {
 
       ::pointer<::sqlite::database>pdb   = m_pdatabase;
@@ -639,7 +639,7 @@ namespace mediamanager
    }
 
 
-   bool album_build::erase(::int_array & ia)
+   bool album_build::erase(::i32_array & ia)
    {
 
       int iGroup = 30;
@@ -897,7 +897,7 @@ namespace mediamanager
 
       ::file::path str;
 
-      //unsigned int dw = ::_getmbcp();
+      //::u32 dw = ::_getmbcp();
 
       for(i = 0; i < wstraFolderSource.get_size(); i++)
       {
@@ -1036,14 +1036,14 @@ namespace mediamanager
                               if(unzOpenCurrentFile(pf) == UNZ_OK)
                               {
                                  const int BUFSIZE = 4096;
-         //                        char szTempName[MAX_PATH];
-         //                        char buffer[BUFSIZE];
+         //                        ::i8 szTempName[MAX_PATH];
+         //                        ::i8 buffer[BUFSIZE];
                                  WCHAR lpPathBuffer[BUFSIZE];
                                  GetTempPathW(BUFSIZE,   // length of the buffer
                                     lpPathBuffer);      // buffer for path
 
 
-                                  char szTitle[_MAX_PATH];
+                                  ::i8 szTitle[_MAX_PATH];
 
                                  unz_file_info file_info;
                                  unzGetCurrentFileInfo(
@@ -1180,7 +1180,7 @@ namespace mediamanager
    }
 
 
-   void album_build::GetExistingFiles(::int_array & ia,  ::file::listing & straFile,   time_array_base & timea)
+   void album_build::GetExistingFiles(::i32_array & ia,  ::file::listing & straFile,   time_array_base & timea)
    {
 
       //::pointer<::sqlite::dataset>pdataset = m_pdatasetGetExRead;
@@ -1200,7 +1200,7 @@ namespace mediamanager
    }
 
 
-   void album_build::GetExistingFiles(::pointer<::database::result_set>pset,  ::int_array & ia, ::file::listing & wstraFile, time_array_base & timea)
+   void album_build::GetExistingFiles(::pointer<::database::result_set>pset,  ::i32_array & ia, ::file::listing & wstraFile, time_array_base & timea)
    {
 
       //::collection::count iRowCount = pset->m_rowa.get_count();
@@ -1220,7 +1220,7 @@ namespace mediamanager
 //      int iSecond;
       ::file::path wstrFile;
 
-//      char * lpszTime;
+//      ::i8 * lpszTime;
 
 //      ia.set_size(iRowCount);
 //      wstraFile.set_size(iRowCount);
@@ -1244,7 +1244,7 @@ namespace mediamanager
 //
 //         if(strTime.length() == 19)
 //         {
-//            lpszTime = (char *) (const ::string &) strTime;
+//            lpszTime = (::i8 *) (const ::string &) strTime;
 //            lpszTime[4] = '\0';
 //            lpszTime[7] = '\0';
 //            lpszTime[10] = '\0';
@@ -1286,9 +1286,9 @@ namespace mediamanager
 
    void album_build::CalcFiles(file_info & fileinfo, bool bRestart)
    {
-      ::int_array & iaOld    = fileinfo.m_iaOld;
-      ::int_array & iaUpdate = fileinfo.m_iaUpdate;
-      ::int_array & iaRemove = fileinfo.m_iaRemove;
+      ::i32_array & iaOld    = fileinfo.m_iaOld;
+      ::i32_array & iaUpdate = fileinfo.m_iaUpdate;
+      ::i32_array & iaRemove = fileinfo.m_iaRemove;
       ::file::listing & straNew = fileinfo.m_wstraNew; // [in]  the files that must be in the album
       time_array_base & timeaNew = fileinfo.m_timeaNew; // [in]  the files last write time
       ::file::listing & straOld = fileinfo.m_wstraOld; // [in]  the files that are already in the album
@@ -1398,7 +1398,7 @@ namespace mediamanager
    }
 
 
-   ::int_array & album_build::GetPriorityArray()
+   ::i32_array & album_build::GetPriorityArray()
    {
       return m_iaPriority;
    }

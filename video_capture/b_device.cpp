@@ -1,56 +1,56 @@
 #include "Common.h"
 //#include "BufferLock.h"
 
-const unsigned int NUM_BACK_BUFFERS = 2;
+const ::u32 NUM_BACK_BUFFERS = 2;
 
 void TransformImage_RGB24(
-   unsigned char*       pDest,
+   ::u8*       pDest,
    int        lDestStride,
-   const unsigned char* pSrc,
+   const ::u8* pSrc,
    int        lSrcStride,
-   unsigned int       dwWidthInPixels,
-   unsigned int       dwHeightInPixels
+   ::u32       dwWidthInPixels,
+   ::u32       dwHeightInPixels
 );
 
 void TransformImage_RGB32(
-   unsigned char*       pDest,
+   ::u8*       pDest,
    int        lDestStride,
-   const unsigned char* pSrc,
+   const ::u8* pSrc,
    int        lSrcStride,
-   unsigned int       dwWidthInPixels,
-   unsigned int       dwHeightInPixels
+   ::u32       dwWidthInPixels,
+   ::u32       dwHeightInPixels
 );
 
 void TransformImage_YUY2(
-   unsigned char*       pDest,
+   ::u8*       pDest,
    int        lDestStride,
-   const unsigned char* pSrc,
+   const ::u8* pSrc,
    int        lSrcStride,
-   unsigned int       dwWidthInPixels,
-   unsigned int       dwHeightInPixels
+   ::u32       dwWidthInPixels,
+   ::u32       dwHeightInPixels
 );
 
 void TransformImage_NV12(
-   unsigned char* pDst,
+   ::u8* pDst,
    int dstStride,
-   const unsigned char* pSrc,
+   const ::u8* pSrc,
    int srcStride,
-   unsigned int dwWidthInPixels,
-   unsigned int dwHeightInPixels
+   ::u32 dwWidthInPixels,
+   ::u32 dwHeightInPixels
 );
 
 
-::int_rectangle    LetterBoxRect(const ::int_rectangle &rcSrc, const ::int_rectangle &rcDst);
-::int_rectangle    CorrectAspectRatio(const ::int_rectangle &src, const MFRatio& srcPAR);
+::i32_rectangle    LetterBoxRect(const ::i32_rectangle &rcSrc, const ::i32_rectangle &rcDst);
+::i32_rectangle    CorrectAspectRatio(const ::i32_rectangle &src, const MFRatio& srcPAR);
 HRESULT GetDefaultStride(IMFMediaType *pType, int *plStride);
 
 
-inline int Width(const ::int_rectangle &r)
+inline int Width(const ::i32_rectangle &r)
 {
    return rectangle.right - rectangle.left;
 }
 
-inline int Height(const ::int_rectangle &r)
+inline int Height(const ::i32_rectangle &r)
 {
    return rectangle.bottom - rectangle.top;
 }
@@ -72,7 +72,7 @@ ConversionFunction   g_FormatConversions[] =
    { MFVideoFormat_NV12,  TransformImage_NV12 }
 };
 
-const unsigned int   g_cFormats = ARRAYSIZE(g_FormatConversions);
+const ::u32   g_cFormats = ARRAYSIZE(g_FormatConversions);
 
 
 //-------------------------------------------------------------------
@@ -113,7 +113,7 @@ DrawDevice::~DrawDevice()
 // Get a supported output format by index.
 //-------------------------------------------------------------------
 
-HRESULT DrawDevice::GetFormat(unsigned int index, GUID *pSubtype) const
+HRESULT DrawDevice::GetFormat(::u32 index, GUID *pSubtype) const
 {
    if (index < g_cFormats)
    {
@@ -132,7 +132,7 @@ HRESULT DrawDevice::GetFormat(unsigned int index, GUID *pSubtype) const
 
 BOOL DrawDevice::IsFormatSupported(REFGUID subtype) const
 {
-   for (unsigned int i = 0; i < g_cFormats; i++)
+   for (::u32 i = 0; i < g_cFormats; i++)
    {
       if (subtype == g_FormatConversions[i].subtype)
       {
@@ -225,7 +225,7 @@ HRESULT DrawDevice::SetConversionFunction(REFGUID subtype)
 {
    m_convertFn = nullptr;
 
-   for (unsigned int i = 0; i < g_cFormats; i++)
+   for (::u32 i = 0; i < g_cFormats; i++)
    {
       if (g_FormatConversions[i].subtype == subtype)
       {
@@ -288,7 +288,7 @@ HRESULT DrawDevice::SetVideoType(IMFMediaType *pType)
 
 
    // Get the interlace mode. Default: assume progressive.
-   m_interlace = (MFVideoInterlaceMode)MFGetAttributeunsigned int(
+   m_interlace = (MFVideoInterlaceMode)MFGetAttribute::u32(
       pType,
       MF_MT_INTERLACE_MODE,
       MFVideoInterlace_Progressive
@@ -308,8 +308,8 @@ HRESULT DrawDevice::SetVideoType(IMFMediaType *pType)
    hr = MFGetAttributeRatio(
       pType,
       MF_MT_PIXEL_ASPECT_RATIO,
-      (unsigned int*)&PAR.Numerator,
-      (unsigned int*)&PAR.Denominator
+      (::u32*)&PAR.Numerator,
+      (::u32*)&PAR.Denominator
    );
 
    if (SUCCEEDED(hr))
@@ -335,7 +335,7 @@ HRESULT DrawDevice::SetVideoType(IMFMediaType *pType)
    }
 
 
-   // Update the destination int_rectangle for the correct
+   // Update the destination i32_rectangle for the correct
    // aspect ratio.
 
    UpdateDestinationRect();
@@ -348,15 +348,15 @@ HRESULT DrawDevice::SetVideoType(IMFMediaType *pType)
 //-------------------------------------------------------------------
 //  UpdateDestinationRect
 //
-//  Update the destination int_rectangle for the current window size.
-//  The destination int_rectangle is letterboxed to preserve the 
+//  Update the destination i32_rectangle for the current window size.
+//  The destination i32_rectangle is letterboxed to preserve the 
 //  aspect ratio of the video pimage->
 //-------------------------------------------------------------------
 
 void DrawDevice::UpdateDestinationRect()
 {
-   ::int_rectangle rcClient;
-   ::int_rectangle rcSrc = { 0, 0, m_width, m_height };
+   ::i32_rectangle rcClient;
+   ::i32_rectangle rcSrc = { 0, 0, m_width, m_height };
 
    this->rectangle(m_hwnd, &rcClient);
 
@@ -416,7 +416,7 @@ HRESULT DrawDevice::DrawFrame(IMFMediaBuffer *pBuffer)
    }
 
    HRESULT hr = S_OK;
-   unsigned char *pbScanline0 = nullptr;
+   ::u8 *pbScanline0 = nullptr;
    int lStride = 0;
    D3DLOCKED_RECT lr;
 
@@ -475,7 +475,7 @@ HRESULT DrawDevice::DrawFrame(IMFMediaBuffer *pBuffer)
    // Convert the frame. This also copies it to the Direct3D surface.
 
    m_convertFn(
-      (unsigned char*)lr.pBits,
+      (::u8*)lr.pBits,
       lr.Pitch,
       pbScanline0,
       lStride,
@@ -522,7 +522,7 @@ HRESULT DrawDevice::DrawFrame(IMFMediaBuffer *pBuffer)
    m_pDevice->CreateOffscreenPlainSurface(1040, 690, D3DFMT_A8R8G8B8, D3DPOOL_SYSTEMMEM, &pRenderTarget, 0);
 
 
-   ::int_rectangle int_rectangle;
+   ::i32_rectangle i32_rectangle;
    rectangle.bottom = 1040;
    rectangle.left = 0;
    rectangle.right = 690;
@@ -544,7 +544,7 @@ HRESULT DrawDevice::DrawFrame(IMFMediaBuffer *pBuffer)
    textSprite->End();
 
    m_pDevice->SetRenderTarget(0, pSurf);
-   ::int_point p;
+   ::i32_point p;
    p.x = 0;
    p.y = 0;
    // then use UpdateSurface to copy the drawn text surface to the texture's surface
@@ -694,9 +694,9 @@ void DrawDevice::DestroyDevice()
 //
 //-------------------------------------------------------------------
 
-__forceinline unsigned char Clip(int clr)
+__forceinline ::u8 Clip(int clr)
 {
-   return (unsigned char)(clr < 0 ? 0 : (clr > 255 ? 255 : clr));
+   return (::u8)(clr < 0 ? 0 : (clr > 255 ? 255 : clr));
 }
 
 __forceinline RGBQUAD ConvertYCrCbToRGB(
@@ -726,20 +726,20 @@ __forceinline RGBQUAD ConvertYCrCbToRGB(
 //-------------------------------------------------------------------
 
 void TransformImage_RGB24(
-   unsigned char*       pDest,
+   ::u8*       pDest,
    int        lDestStride,
-   const unsigned char* pSrc,
+   const ::u8* pSrc,
    int        lSrcStride,
-   unsigned int       dwWidthInPixels,
-   unsigned int       dwHeightInPixels
+   ::u32       dwWidthInPixels,
+   ::u32       dwHeightInPixels
 )
 {
-   for (unsigned int y = 0; y < dwHeightInPixels; y++)
+   for (::u32 y = 0; y < dwHeightInPixels; y++)
    {
       RGBTRIPLE *pSrcPel = (RGBTRIPLE*)pSrc;
-      unsigned int *pDestPel = (unsigned int*)pDest;
+      ::u32 *pDestPel = (::u32*)pDest;
 
-      for (unsigned int x = 0; x < dwWidthInPixels; x++)
+      for (::u32 x = 0; x < dwWidthInPixels; x++)
       {
          pDestPel[x] = D3DCOLOR_XRGB(
             pSrcPel[x].rgbtRed,
@@ -763,12 +763,12 @@ void TransformImage_RGB24(
 //-------------------------------------------------------------------
 
 void TransformImage_RGB32(
-   unsigned char*       pDest,
+   ::u8*       pDest,
    int        lDestStride,
-   const unsigned char* pSrc,
+   const ::u8* pSrc,
    int        lSrcStride,
-   unsigned int       dwWidthInPixels,
-   unsigned int       dwHeightInPixels
+   ::u32       dwWidthInPixels,
+   ::u32       dwHeightInPixels
 )
 {
    MFCopyImage(pDest, lDestStride, pSrc, lSrcStride, dwWidthInPixels * 4, dwHeightInPixels);
@@ -781,20 +781,20 @@ void TransformImage_RGB32(
 //-------------------------------------------------------------------
 
 void TransformImage_YUY2(
-   unsigned char*       pDest,
+   ::u8*       pDest,
    int        lDestStride,
-   const unsigned char* pSrc,
+   const ::u8* pSrc,
    int        lSrcStride,
-   unsigned int       dwWidthInPixels,
-   unsigned int       dwHeightInPixels
+   ::u32       dwWidthInPixels,
+   ::u32       dwHeightInPixels
 )
 {
-   for (unsigned int y = 0; y < dwHeightInPixels; y++)
+   for (::u32 y = 0; y < dwHeightInPixels; y++)
    {
       RGBQUAD *pDestPel = (RGBQUAD*)pDest;
-      unsigned short    *pSrcPel = (unsigned short*)pSrc;
+      ::u16    *pSrcPel = (::u16*)pSrc;
 
-      for (unsigned int x = 0; x < dwWidthInPixels; x += 2)
+      for (::u32 x = 0; x < dwWidthInPixels; x += 2)
       {
          // Byte order is U0 Y0 V0 Y1
 
@@ -821,29 +821,29 @@ void TransformImage_YUY2(
 //-------------------------------------------------------------------
 
 void TransformImage_NV12(
-   unsigned char* pDst,
+   ::u8* pDst,
    int dstStride,
-   const unsigned char* pSrc,
+   const ::u8* pSrc,
    int srcStride,
-   unsigned int dwWidthInPixels,
-   unsigned int dwHeightInPixels
+   ::u32 dwWidthInPixels,
+   ::u32 dwHeightInPixels
 )
 {
-   const unsigned char* lpBitsY = pSrc;
-   const unsigned char* lpBitsCb = lpBitsY + (dwHeightInPixels * srcStride);;
-   const unsigned char* lpBitsCr = lpBitsCb + 1;
+   const ::u8* lpBitsY = pSrc;
+   const ::u8* lpBitsCb = lpBitsY + (dwHeightInPixels * srcStride);;
+   const ::u8* lpBitsCr = lpBitsCb + 1;
 
-   for (unsigned int y = 0; y < dwHeightInPixels; y += 2)
+   for (::u32 y = 0; y < dwHeightInPixels; y += 2)
    {
-      const unsigned char* lpLineY1 = lpBitsY;
-      const unsigned char* lpLineY2 = lpBitsY + srcStride;
-      const unsigned char* lpLineCr = lpBitsCr;
-      const unsigned char* lpLineCb = lpBitsCb;
+      const ::u8* lpLineY1 = lpBitsY;
+      const ::u8* lpLineY2 = lpBitsY + srcStride;
+      const ::u8* lpLineCr = lpBitsCr;
+      const ::u8* lpLineCb = lpBitsCb;
 
       LPBYTE lpDibLine1 = pDst;
       LPBYTE lpDibLine2 = pDst + dstStride;
 
-      for (unsigned int x = 0; x < dwWidthInPixels; x += 2)
+      for (::u32 x = 0; x < dwWidthInPixels; x += 2)
       {
          int  y0 = (int)lpLineY1[0];
          int  y1 = (int)lpLineY1[1];
@@ -896,8 +896,8 @@ void TransformImage_NV12(
 //-------------------------------------------------------------------
 // LetterBoxDstRect
 //
-// Takes a src int_rectangle and constructs the largest possible 
-// destination int_rectangle within the specifed destination int_rectangle 
+// Takes a src i32_rectangle and constructs the largest possible 
+// destination i32_rectangle within the specifed destination i32_rectangle 
 // such thatthe video maintains its current shape.
 //
 // This function assumes that pels are the same shape within both the 
@@ -905,7 +905,7 @@ void TransformImage_NV12(
 //
 //-------------------------------------------------------------------
 
-::int_rectangle    LetterBoxRect(const ::int_rectangle &rcSrc, const ::int_rectangle &rcDst)
+::i32_rectangle    LetterBoxRect(const ::i32_rectangle &rcSrc, const ::i32_rectangle &rcDst)
 {
    // figure out src/dest scale ratios
    int iSrcWidth = Width(rcSrc);
@@ -933,9 +933,9 @@ void TransformImage_NV12(
    }
 
 
-   // Create a centered int_rectangle within the current destination int_rectangle
+   // Create a centered i32_rectangle within the current destination i32_rectangle
 
-   ::int_rectangle rc;
+   ::i32_rectangle rc;
 
    int left = rcDst.left + ((iDstWidth - iDstLBWidth) / 2);
    int top = rcDst.top + ((iDstHeight - iDstLBHeight) / 2);
@@ -949,17 +949,17 @@ void TransformImage_NV12(
 //-----------------------------------------------------------------------------
 // CorrectAspectRatio
 //
-// Converts a int_rectangle from the source's pixel aspect ratio (PAR) to 1:1 PAR.
+// Converts a i32_rectangle from the source's pixel aspect ratio (PAR) to 1:1 PAR.
 // Returns the corrected rectangle.
 //
-// For example, a 720 x 486 int_rectangle with a PAR of 9:10, when converted to 1x1 PAR,  
+// For example, a 720 x 486 i32_rectangle with a PAR of 9:10, when converted to 1x1 PAR,  
 // is stretched to 720 x 540. 
 //-----------------------------------------------------------------------------
 
-::int_rectangle CorrectAspectRatio(const ::int_rectangle &src, const MFRatio& srcPAR)
+::i32_rectangle CorrectAspectRatio(const ::i32_rectangle &src, const MFRatio& srcPAR)
 {
-   // Start with a int_rectangle the same int_size as src, but offset to the origin (0,0).
-   ::int_rectangle rc = { 0, 0, src.right - src.left, src.bottom - src.top };
+   // Start with a i32_rectangle the same i32_size as src, but offset to the origin (0,0).
+   ::i32_rectangle rc = { 0, 0, src.right - src.left, src.bottom - src.top };
 
    if ((srcPAR.Numerator != 1) || (srcPAR.Denominator != 1))
    {
@@ -993,14 +993,14 @@ HRESULT GetDefaultStride(IMFMediaType *pType, int *plStride)
    int lStride = 0;
 
    // Try to get the default stride from the media type.
-   HRESULT hr = pType->Getunsigned int(MF_MT_DEFAULT_STRIDE, (unsigned int*)&lStride);
+   HRESULT hr = pType->Get::u32(MF_MT_DEFAULT_STRIDE, (::u32*)&lStride);
    if (FAILED(hr))
    {
       // Attribute not set. Try to calculate the default stride.
       GUID subtype = GUID_NULL;
 
-      unsigned int width = 0;
-      unsigned int height = 0;
+      ::u32 width = 0;
+      ::u32 height = 0;
 
       // Get the subtype and the image size.
       hr = pType->GetGUID(MF_MT_SUBTYPE, &subtype);
@@ -1016,7 +1016,7 @@ HRESULT GetDefaultStride(IMFMediaType *pType, int *plStride)
       // Set the attribute for later object.
       if (SUCCEEDED(hr))
       {
-         (void)pType->Setunsigned int(MF_MT_DEFAULT_STRIDE, unsigned int(lStride));
+         (void)pType->Set::u32(MF_MT_DEFAULT_STRIDE, ::u32(lStride));
       }
    }
 

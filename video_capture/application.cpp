@@ -164,7 +164,7 @@ namespace app_complex_video_capture
       //set_current_video_input_device(strDevice);
 
 
-      //int_rectangle r(20, 20, 20, 20);
+      //i32_rectangle r(20, 20, 20, 20);
 
       //ClipCursor(rectangle);
 
@@ -174,14 +174,14 @@ namespace app_complex_video_capture
 
 
 
-   long long application::increment_reference_count()
+   ::i64 application::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
 
    }
 
-   long long application::decrement_reference_count()
+   ::i64 application::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();

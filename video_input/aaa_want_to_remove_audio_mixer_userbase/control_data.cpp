@@ -64,7 +64,7 @@ namespace multimedia
       }
 
 
-      void     control_data::set_new_device(unsigned int uiMixerID)
+      void     control_data::set_new_device(::u32 uiMixerID)
       {
 
          void     mmrc;

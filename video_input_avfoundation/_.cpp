@@ -9,16 +9,16 @@ namespace video_input_video_avfoundation
 {
 
 
-	void processPixels(color32_t* src, color32_t* dst, unsigned int width, unsigned int height, unsigned int bpp, bool bRGB, bool bFlip)
+	void processPixels(color32_t* src, color32_t* dst, ::u32 width, ::u32 height, ::u32 bpp, bool bRGB, bool bFlip)
 	{
 
-		unsigned int widthInBytes = width * bpp;
+		::u32 widthInBytes = width * bpp;
 
-		unsigned int numBytes = widthInBytes * height;
+		::u32 numBytes = widthInBytes * height;
 
-		//unsigned int numInts = numBytes >> 2;
+		//::u32 numInts = numBytes >> 2;
 
-		//unsigned int widthInInts = widthInBytes >> 2;
+		//::u32 widthInInts = widthInBytes >> 2;
 
 		int* dstInt, * srcInt;
 
@@ -46,7 +46,7 @@ namespace video_input_video_avfoundation
 
 				memcpy(dst, src, numBytes);
 
-				unsigned char* pbyteDst = (unsigned char*)dst;
+				::u8* pbyteDst = (::u8*)dst;
 
 				pbyteDst += 3;
 
@@ -70,7 +70,7 @@ namespace video_input_video_avfoundation
 				int y = (height - 1) * widthInBytes;
 				src += y;
 
-				for (unsigned int i = 0; i < numBytes; i += 4)
+				for (::u32 i = 0; i < numBytes; i += 4)
 				{
 					if (x >= width)
 					{
@@ -93,7 +93,7 @@ namespace video_input_video_avfoundation
 			}
 			else
 			{
-				for (unsigned int i = 0; i < numBytes; i += 4)
+				for (::u32 i = 0; i < numBytes; i += 4)
 				{
 					*dst = *(src + 3);
 					dst++;

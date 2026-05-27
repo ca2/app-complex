@@ -91,7 +91,7 @@
 //      virtual void term_instance() override;
 //
 //#ifdef LINUX
-//      inline unsigned int multimedia_get_time()
+//      inline ::u32 multimedia_get_time()
 //      {
 //         return ::get_tick();
 //      }

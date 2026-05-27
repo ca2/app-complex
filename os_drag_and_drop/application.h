@@ -31,8 +31,8 @@ namespace simple_os_drag_and_drop
       virtual void on_request(::request * prequest) override;
 
 #ifdef _DEBUG
-      virtual long long increment_reference_count() override;
-      virtual long long decrement_reference_count() override;
+      virtual ::i64 increment_reference_count() override;
+      virtual ::i64 decrement_reference_count() override;
 #endif
 
       virtual ::pointer<impact>create_simple_os_drag_and_drop_impact(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);

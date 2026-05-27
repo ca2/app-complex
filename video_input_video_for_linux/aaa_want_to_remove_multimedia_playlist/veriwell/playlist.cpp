@@ -364,7 +364,7 @@ namespace multimedia_playlist
       }
 
 
-      void playlist::set_int(const ::scoped_string & scopedstr, long long iValue)
+      void playlist::set_int(const ::scoped_string & scopedstr, ::i64 iValue)
       {
 
          synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
@@ -374,7 +374,7 @@ namespace multimedia_playlist
       }
 
 
-      long long playlist::get_int(const ::scoped_string & scopedstr, long long iDefault)
+      ::i64 playlist::get_int(const ::scoped_string & scopedstr, ::i64 iDefault)
       {
 
          synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);

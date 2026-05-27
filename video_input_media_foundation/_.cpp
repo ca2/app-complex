@@ -6,7 +6,7 @@ namespace video_input_media_foundation
 {
 
 
-	void processPixels(color32_t* src, color32_t* dst, int width, int height, unsigned int bpp, bool bRGB, bool bFlip)
+	void processPixels(color32_t* src, color32_t* dst, int width, int height, ::u32 bpp, bool bRGB, bool bFlip)
 	{
 
 		int widthInBytes = width * bpp;
@@ -43,7 +43,7 @@ namespace video_input_media_foundation
 
 				memcpy(dst, src, numBytes);
 
-				unsigned char* pbyteDst = (unsigned char*)dst;
+				::u8* pbyteDst = (::u8*)dst;
 
 				pbyteDst += 3;
 

@@ -1,6 +1,6 @@
 #pragma once
 
 
-#define ::duration double // ::duration
+#define ::duration ::f64 // ::duration
 
 

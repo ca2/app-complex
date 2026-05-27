@@ -714,7 +714,7 @@ namespace mediaplay
          if(m_impactlineaStatus.get_line_count() > 0 && m_impactlineaStatus.line_at(0) != nullptr)
          {
 
-            int_rectangle_array recta;
+            i32_rectangle_array recta;
 
             m_impactlineaStatus.line_at(0)->OnTimerAnimate(nullptr, recta);
 
@@ -768,7 +768,7 @@ namespace mediaplay
 
          ::duration tickPeriod = 5_s; // Fade out completely time.
 
-         double dBlend = m_durationFadeStart.period_rate(tickPeriod);
+         ::f64 dBlend = m_durationFadeStart.period_rate(tickPeriod);
 
          if(dBlend >= 1.0)
          {
@@ -815,7 +815,7 @@ namespace mediaplay
          if(m_durationLastUpdate.elapsed() > 100)
          {
 
-            int_rectangle_array recta;
+            i32_rectangle_array recta;
 
             UpdateScreen(recta, 0);
 
@@ -832,7 +832,7 @@ namespace mediaplay
    }
 
 
-   bool impact_interface::UpdateScreen(int_rectangle_array & recta, unsigned int uiRedraw)
+   bool impact_interface::UpdateScreen(i32_rectangle_array & recta, ::u32 uiRedraw)
    {
 
       __UNREFERENCED_PARAMETER(uiRedraw);
@@ -850,7 +850,7 @@ namespace mediaplay
 
       }
 
-      unsigned int dwElapseOptimization = 83;
+      ::u32 dwElapseOptimization = 83;
 
       if(tickNow - m_durationLastUpdate < dwElapseOptimization)
       {
@@ -883,7 +883,7 @@ namespace mediaplay
    void impact_interface::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      ::double_rectangle rectangleX;
+      ::f64_rectangle rectangleX;
 
       this->rectangle(rectangleX);
 
@@ -941,7 +941,7 @@ namespace mediaplay
    }
 
 
-   unsigned int impact_interface::GetKaraokeCodePage(const ::string & lpsz)
+   ::u32 impact_interface::GetKaraokeCodePage(const ::string & lpsz)
    {
 
       __UNREFERENCED_PARAMETER(lpsz);
@@ -950,7 +950,7 @@ namespace mediaplay
 
    }
 
-   unsigned int impact_interface::IdToCodePage(const ::scoped_string & scopedstr)
+   ::u32 impact_interface::IdToCodePage(const ::scoped_string & scopedstr)
    {
       __UNREFERENCED_PARAMETER(scopedstr);
       ASSERT(false);
@@ -958,7 +958,7 @@ namespace mediaplay
       return 0xffffffff;
    }
 
-   void impact_interface::SetKaraokeCodePage(unsigned int dw)
+   void impact_interface::SetKaraokeCodePage(::u32 dw)
    {
       __UNREFERENCED_PARAMETER(dw);
       /*     CVmsDataServerInterface & db = ((CVmpLightApp *) System)->GetVmsDataServerInterface();
@@ -1000,7 +1000,7 @@ namespace mediaplay
          UnicodeToACP(str, m_wstrCurrentLink);
 
          HGLOBAL hglbCopy = GlobalAlloc(GMEM_MOVEABLE,
-                  (str.length() + 1) * sizeof(char));
+                  (str.length() + 1) * sizeof(::i8));
               if (hglbCopy == nullptr)
               {
                   CloseClipboard();
@@ -1009,10 +1009,10 @@ namespace mediaplay
 
               // lock the handle and copy the text to the buffer.
 
-              char * lptstrCopy = (char *) GlobalLock(hglbCopy);
+              ::i8 * lptstrCopy = (::i8 *) GlobalLock(hglbCopy);
               ::memory_copy(lptstrCopy, (const ::string &) str,
-                  str.length() * sizeof(char));
-              lptstrCopy[str.length()] = (char) 0;    // nullptr character
+                  str.length() * sizeof(::i8));
+              lptstrCopy[str.length()] = (::i8) 0;    // nullptr character
               GlobalUnlock(hglbCopy);
          // ...
          // get the currently selected data
@@ -1818,7 +1818,7 @@ retry4:
       if(pusermessage->m_wparam == 1)
       {
 
-         int_rectangle_array * precta = (int_rectangle_array *) pusermessage->m_lparam.m_lparam;
+         i32_rectangle_array * precta = (i32_rectangle_array *) pusermessage->m_lparam.m_lparam;
 
          UpdateScreen(*precta, RDW_INVALIDATE );
 
@@ -1867,7 +1867,7 @@ retry4:
             }
             prop["doc"] = this;
             prop["make_visible"] = true;
-            prop["context"] = (long long) pinfo->m_context.m_esource;
+            prop["context"] = (::i64) pinfo->m_context.m_esource;
 
          }
 
@@ -2173,32 +2173,32 @@ retry4:
       // datastream()->set("General.AutoRecord", m_bAutoRecord);
    }
 
-   void impact_interface::on_set_scalar(e_scalar i,double d,int iFlags)
+   void impact_interface::on_set_scalar(e_scalar i,::f64 d,int iFlags)
    {
       __UNREFERENCED_PARAMETER(i);
       __UNREFERENCED_PARAMETER(d);
    }
 
-   void impact_interface::get_scalar_minimum(e_scalar i, double & d)
+   void impact_interface::get_scalar_minimum(e_scalar i, ::f64 & d)
    {
       __UNREFERENCED_PARAMETER(i);
       d = 0.0;
    }
 
-   void impact_interface::get_scalar(e_scalar i, double & d)
+   void impact_interface::get_scalar(e_scalar i, ::f64 & d)
    {
       __UNREFERENCED_PARAMETER(i);
       d = 0.0;
    }
 
-   void impact_interface::get_scalar_maximum(e_scalar i, double & d)
+   void impact_interface::get_scalar_maximum(e_scalar i, ::f64 & d)
    {
       __UNREFERENCED_PARAMETER(i);
       d = 0.0;
    }
 
 
-   void impact_interface::on_set_scalar(e_scalar i,long long iValue,int iFlags)
+   void impact_interface::on_set_scalar(e_scalar i,::i64 iValue,int iFlags)
    {
 
       __UNREFERENCED_PARAMETER(i);
@@ -2206,7 +2206,7 @@ retry4:
 
    }
 
-   void impact_interface::get_scalar_minimum(e_scalar i, long long & iValue)
+   void impact_interface::get_scalar_minimum(e_scalar i, ::i64 & iValue)
    {
 
       __UNREFERENCED_PARAMETER(i);
@@ -2214,7 +2214,7 @@ retry4:
 
    }
 
-   void impact_interface::get_scalar(e_scalar i, long long & iValue)
+   void impact_interface::get_scalar(e_scalar i, ::i64 & iValue)
    {
 
       __UNREFERENCED_PARAMETER(i);
@@ -2222,7 +2222,7 @@ retry4:
 
    }
 
-   void impact_interface::get_scalar_maximum(e_scalar i, long long & iValue)
+   void impact_interface::get_scalar_maximum(e_scalar i, ::i64 & iValue)
    {
 
       __UNREFERENCED_PARAMETER(i);
@@ -2324,9 +2324,9 @@ retry4:
                   if (get_data()->m_emode == ::mediaplay::data::mode_wave && get_wave_player() != nullptr && get_wave_player()->get_out()->get_prebuffer_millis_length() > 5000)
                   {
 
-                     long long iPosition = (long long) ( get_wave_player()->get_out()->out_get_time_for_synch());
+                     ::i64 iPosition = (::i64) ( get_wave_player()->get_out()->out_get_time_for_synch());
 
-                     long long iLength = (long long) ( get_wave_player()->get_out()->get_prebuffer_millis_length());
+                     ::i64 iLength = (::i64) ( get_wave_player()->get_out()->get_prebuffer_millis_length());
 
                      if (m_dBlend > 0.001 && iPosition - iLength >= -5000)
                      {
@@ -2369,7 +2369,7 @@ retry4:
 
                      }
 
-                     pdocument->playback_playlist()->set_int("current_song_millis", (long long) time);
+                     pdocument->playback_playlist()->set_int("current_song_millis", (::i64) time);
 
                      pdocument->playback_playlist()->save();
 
@@ -2450,7 +2450,7 @@ retry4:
                   m_pplaylistdoc->m_bPendingRestart = false;
                   prop["make_visible"] = pinfo->m_bMakeVisible;
                   prop["::duration"] = pinfo->m_time;
-                  prop["context"] = (long long)pinfo->m_context.m_esource;
+                  prop["context"] = (::i64)pinfo->m_context.m_esource;
 
                }
 
@@ -2647,8 +2647,8 @@ retry4:
                m_pplaylistdoc->m_bPendingRestart = true;
             }
             info.m_bMakeVisible = prop["make_visible"];
-            info.m_time = prop["::duration"].get_double();
-            info.m_context += (::e_source) (prop["context"].long_long);
+            info.m_time = prop["::duration"].get_f64();
+            info.m_context += (::e_source) (prop["context"].i64);
             info.m_bFadeIn = prop["command"] == "StartFadeIn";
 
          }
@@ -2754,7 +2754,7 @@ retry4:
 
 
 
-   double impact_interface::get_alpha(::user::interaction * puiTarget)
+   ::f64 impact_interface::get_alpha(::user::interaction * puiTarget)
    {
 
       if (m_etimerFade != e_timer_none)

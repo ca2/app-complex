@@ -98,8 +98,8 @@ HRESULT CreatePhotoMediaType(IMFMediaType *pSrcMediaType, IMFMediaType **ppPhoto
 {
    *ppPhotoMediaType = nullptr;
 
-   const unsigned int uiFrameRateNumerator = 30;
-   const unsigned int uiFrameRateDenominator = 1;
+   const ::u32 uiFrameRateNumerator = 30;
+   const ::u32 uiFrameRateDenominator = 1;
 
    IMFMediaType *pPhotoMediaType = nullptr;
 
@@ -152,7 +152,7 @@ send(pmessageboxpayload);
 }
 
 
-void ShowError(HWND hwnd, unsigned int identification, HRESULT hr)
+void ShowError(HWND hwnd, ::u32 identification, HRESULT hr)
 {
    wchar_t msg[256];
 
@@ -164,7 +164,7 @@ void ShowError(HWND hwnd, unsigned int identification, HRESULT hr)
 
 
 
-void SetMenuItemText(HMENU hMenu, unsigned int utem, _In_ PWSTR pszText)
+void SetMenuItemText(HMENU hMenu, ::u32 utem, _In_ PWSTR pszText)
 {
    MENUITEMINFOW mii = {};
    mii.cbSize = sizeof(mii);

@@ -23,7 +23,7 @@
 
 namespace DShow {
 
-static inline unsigned int VideoFormatToFourCC(VideoFormat format)
+static inline ::u32 VideoFormatToFourCC(VideoFormat format)
 {
 	if (format == VideoFormat::H264)
 		return MAKEFOURCC('H', '2', '6', '4');
@@ -40,7 +40,7 @@ static inline const GUID &VideoFormatToSubType(VideoFormat format)
 }
 
 bool CreateDemuxVideoPin(IBaseFilter *demuxFilter, MediaType &mt,
-		long width, long height, long long frameTime,
+		long width, long height, ::i64 frameTime,
 		VideoFormat format)
 {
 	ComQIPtr<IMpeg2Demultiplexer> demuxer(demuxFilter);
@@ -85,7 +85,7 @@ bool CreateDemuxVideoPin(IBaseFilter *demuxFilter, MediaType &mt,
 	return true;
 }
 
-static inline unsigned short AudioFormatToFormatTag(AudioFormat format)
+static inline ::u16 AudioFormatToFormatTag(AudioFormat format)
 {
 	if (format == AudioFormat::AAC)
 		return WAVE_FORMAT_RAW_AAC1;
@@ -110,7 +110,7 @@ static inline const GUID &AudioFormatToSubType(AudioFormat format)
 }
 
 bool CreateDemuxAudioPin(IBaseFilter *demuxFilter, MediaType &mt,
-		unsigned int samplesPerSec, unsigned short bitsPerSample, unsigned short channels,
+		::u32 samplesPerSec, ::u16 bitsPerSample, ::u16 channels,
 		AudioFormat format)
 {
 	ComQIPtr<IMpeg2Demultiplexer> demuxer(demuxFilter);

@@ -7,7 +7,7 @@
 #include <locale.h>
 
 
-double str_to_double(const ::scoped_string & scopedstr)
+::f64 str_to_f64(const ::scoped_string & scopedstr)
 {
 
    string strAlternate(str);
@@ -19,7 +19,7 @@ double str_to_double(const ::scoped_string & scopedstr)
 }
 #else
 
-double str_to_double(const ::scoped_string & scopedstr)
+::f64 str_to_f64(const ::scoped_string & scopedstr)
 {
 
    return atof(str);
@@ -252,9 +252,9 @@ namespace mediaplay
       this->rectangle(m_rectangleKaraokeImpact);
 
 
-      ::double_rectangle rectangleX;
+      ::f64_rectangle rectangleX;
       this->rectangle(rectangleX);
-      ::double_rectangle rectangle = rectangleX;
+      ::f64_rectangle rectangle = rectangleX;
 
       rectangle.top = rectangle.bottom - 24;
       m_impactlineaStatus.m_pinteraction = this;
@@ -310,9 +310,9 @@ namespace mediaplay
    void impact::on_message_context_menu(::message::message * pmessage)
    {
       ::pointer<::message::context_menu>pcontextmenu(pmessage);
-      ::int_point point = pcontextmenu->GetPoint();
+      ::i32_point point = pcontextmenu->GetPoint();
 //      ::karaoke::lyric_impact_lines & lyriclines = GetLyricLines();
-      ::int_point pointCursor;
+      ::i32_point pointCursor;
       pointCursor = point;
       screen_to_client(&pointCursor);
       /* linux   if(m_lyrictemplatelines.hit_test(pointCursor, iLine, iToken, iChar)
@@ -470,7 +470,7 @@ namespace mediaplay
          else
          {
 
-            double dVolume = str_to_double(str);
+            ::f64 dVolume = str_to_f64(str);
 
             pplayer->m_pwaveout->m_dVolume = dVolume;
 
@@ -515,7 +515,7 @@ namespace mediaplay
    void impact::_001OnUpdateImpactEncoding(::message::message * pmessage)
    {
       ::pointer<::message::command>pcommand(pmessage);
-      unsigned int dwCodePage = IdToCodePage(pcommand->m_atomCommand);
+      ::u32 dwCodePage = IdToCodePage(pcommand->m_atomCommand);
       if(GetKaraokeCodePage(nullptr) == dwCodePage)
       {
          pcommand->set_check(::e_check_checked);
@@ -531,7 +531,7 @@ namespace mediaplay
    void impact::_001OnShowEncoding(::message::message * pmessage)
    {
       ::pointer<::message::command>pcommand(pmessage);
-      unsigned int dwCodePage = IdToCodePage(pcommand->m_atomCommand);
+      ::u32 dwCodePage = IdToCodePage(pcommand->m_atomCommand);
       SetKaraokeCodePage(dwCodePage);
    }
 

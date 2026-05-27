@@ -47,13 +47,13 @@ namespace multimedia
             UpdateStateUpdating = 2
          };
 
-         unsigned int                       m_uiUpdateTimer;
-         unsigned int                       m_uiUpdateState;
+         ::u32                       m_uiUpdateTimer;
+         ::u32                       m_uiUpdateState;
          //HANDLE                     m_hThreadContextMenu;
-         //unsigned int                      m_dwThreadIdContextMenu;
+         //::u32                      m_dwThreadIdContextMenu;
          bool                       m_bInitialized;
-         unsigned int                       m_uiNextSliderID;
-         unsigned int                      m_dwUpdateTime;
+         ::u32                       m_uiNextSliderID;
+         ::u32                      m_dwUpdateTime;
          string                     m_strSearch;
          color32_t                   m_colorForeground;
          color32_t                   m_colorBackground;

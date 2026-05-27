@@ -8,7 +8,7 @@ string GetGUIDNameNew(const GUID & guid);
 HRESULT LogAttributeValueByIndexNew(IMFAttributes *pAttr, DWORD index);
 HRESULT SpecialCaseAttributeValueNew(GUID guid, const prop_variant& var, ::video_input::media_format &out);
 
-unsigned int *GetParametr(GUID guid, ::video_input::media_format &out)
+::u32 *GetParametr(GUID guid, ::video_input::media_format &out)
 {
 	if(guid == MF_MT_YUV_MATRIX) 
 		return &(out.m_uYuvMatrix);
@@ -75,7 +75,7 @@ HRESULT LogAttributeValueByIndexNew(IMFAttributes *pAttr, DWORD index, ::video_i
 
     hr = SpecialCaseAttributeValueNew(guid, var, out);
 
-	unsigned int *p;
+	::u32 *p;
 
     if (FAILED(hr))
     {
@@ -204,9 +204,9 @@ void LogUINT32AsUINT64New(const prop_variant& var, UINT32 &uHigh, UINT32 &uLow)
 
 }
 
-float OffsetToFloatNew(const MFOffset& offset)
+::f32 OffsetToFloatNew(const MFOffset& offset)
 {
-    return offset.value + (static_cast<float>(offset.fract) / 65536.0f);
+    return offset.value + (static_cast<::f32>(offset.fract) / 65536.0f);
 }
 
 HRESULT LogVideoAreaNew(const prop_variant& var)

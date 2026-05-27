@@ -22,7 +22,7 @@ namespace app_complex_form
 #ifdef _DEBUG
 
 
-   long long form_001::increment_reference_count()
+   ::i64 form_001::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -30,7 +30,7 @@ namespace app_complex_form
    }
 
 
-   long long form_001::decrement_reference_count()
+   ::i64 form_001::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();
@@ -119,9 +119,9 @@ namespace app_complex_form
 
       ::app_simple_form::form_001::on_layout(pgraphics);
 
-//      double iLeft = 100.;
+//      ::f64 iLeft = 100.;
 //
-//      double y = 100.;
+//      ::f64 y = 100.;
 //
 //      auto sizeStill = m_pstill->_001CalculateAdjustedFittingSize(pgraphics);
 //
@@ -129,7 +129,7 @@ namespace app_complex_form
 //
 //      y += rectangleStillMargin.top;
 //
-//      m_pstill->display_child(::double_rectangle_dimension(iLeft, y, sizeStill.cx, sizeStill.cy));
+//      m_pstill->display_child(::f64_rectangle_dimension(iLeft, y, sizeStill.cx, sizeStill.cy));
 //
 //      y += sizeStill.cy;
 //
@@ -141,7 +141,7 @@ namespace app_complex_form
 //
 //      y += rectangleEditMargin.top;
 //
-//      m_pedit->display_child(::double_rectangle_dimension(iLeft, y, 600, sizeEdit.cy));
+//      m_pedit->display_child(::f64_rectangle_dimension(iLeft, y, 600, sizeEdit.cy));
 //
 //      y += sizeEdit.cy;
 //
@@ -161,13 +161,13 @@ namespace app_complex_form
 //
 //      auto button_height = maximum(sizeButtonClear.cy, sizeButtonSend.cy);
 //
-//      m_pbuttonClear->display_child(::double_rectangle_dimension(iLeft, y, button_width, button_height));
+//      m_pbuttonClear->display_child(::f64_rectangle_dimension(iLeft, y, button_width, button_height));
 //
-//      m_pbuttonSend->display_child(::double_rectangle_dimension(iLeft + button_width + 32, y, button_width, button_height));
+//      m_pbuttonSend->display_child(::f64_rectangle_dimension(iLeft + button_width + 32, y, button_width, button_height));
 //
 //      y += button_height + 20;
 //
-//      m_pstillReceiver->display_child(::double_rectangle_dimension(iLeft, y, 600, sizeEdit.cy * 5));
+//      m_pstillReceiver->display_child(::f64_rectangle_dimension(iLeft, y, 600, sizeEdit.cy * 5));
 
    }
 

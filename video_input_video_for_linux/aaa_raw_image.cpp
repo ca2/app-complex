@@ -3,11 +3,11 @@
 
 
 
-::image::image(unsigned int int_size): ri_new(false), ri_pixels(NULL)
+::image::image(::u32 i32_size): ri_new(false), ri_pixels(NULL)
 {
 	ri_size = size;
 
-	ri_pixels.reset(aaa_primitive_new unsigned char[int_size]);
+	ri_pixels.reset(aaa_primitive_new ::u8[i32_size]);
 
 	memset((void *)ri_pixels.get(),0,ri_size);
 }
@@ -17,7 +17,7 @@ bool ::image::image::isNew()
 	return ri_new;
 }
 
-unsigned int ::image::image::getSize()
+::u32 ::image::image::getSize()
 {
 	return ri_size;
 }
@@ -26,7 +26,7 @@ unsigned int ::image::image::getSize()
 {
 }
 
-long ::image::image::CreateInstance(::image::image **ppRImage,unsigned int int_size)
+long ::image::image::CreateInstance(::image::image **ppRImage,::u32 i32_size)
 {
 	*ppRImage = aaa_primitive_new (std::nothrow) ::image::image(size);
 
@@ -51,7 +51,7 @@ void ::image::image::fastCopy(const BYTE * pSampleBuffer)
 
 	int *dst = (int *)ri_pixels.get();
 
-	unsigned int buffersize = ri_size;
+	::u32 buffersize = ri_size;
 
 	memcpy(dst, bsrc, buffersize);
 
@@ -59,7 +59,7 @@ void ::image::image::fastCopy(const BYTE * pSampleBuffer)
 
 }
 
-unsigned char * ::image::image::get_data()
+::u8 * ::image::image::get_data()
 {
 	return ri_pixels.get();
 

@@ -11,8 +11,8 @@ namespace mediaplay
    public:
       
       
-      unsigned int       m_dwOnTime;
-      unsigned int       m_dwOffTime;
+      ::u32       m_dwOnTime;
+      ::u32       m_dwOffTime;
 
       
       record_notify_impact();
@@ -23,13 +23,13 @@ namespace mediaplay
       using ::user::interaction::create_window;
       bool create_window(::pointer<::user::interaction>pinterface,atom atom);
 
-      virtual void GetParentClientRect(::int_rectangle * lprect);
+      virtual void GetParentClientRect(::i32_rectangle * lprect);
    
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics);
       virtual void on_timer(::timer * ptimer);
 
 
-      static void CALLBACK TimerProc(oswindow, unsigned int, uptr, unsigned int);
+      static void CALLBACK TimerProc(oswindow, ::u32, uptr, ::u32);
 
    };
 

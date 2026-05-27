@@ -93,13 +93,13 @@ static inline enum audio_format convert_sample_format(int f)
 	return AUDIO_FORMAT_UNKNOWN;
 }
 
-static inline void copy_data(struct ffmpeg_decode *decode, unsigned char *data,
+static inline void copy_data(struct ffmpeg_decode *decode, ::u8 *data,
 		size_t size)
 {
 	size_t new_size = size + FF_INPUT_BUFFER_PADDING_SIZE;
 
 	if (decode->packet_size < new_size) {
-		decode->packet_buffer = (unsigned char *) realloc(decode->packet_buffer,
+		decode->packet_buffer = (::u8 *) realloc(decode->packet_buffer,
 				new_size);
 	}
 
@@ -108,7 +108,7 @@ static inline void copy_data(struct ffmpeg_decode *decode, unsigned char *data,
 }
 
 int ffmpeg_decode_audio(struct ffmpeg_decode *decode,
-		unsigned char *data, size_t size,
+		::u8 *data, size_t size,
 		struct obs_source_audio *audio,
 		bool *got_output)
 {
@@ -122,7 +122,7 @@ int ffmpeg_decode_audio(struct ffmpeg_decode *decode,
 
 	av_init_packet(&packet);
 	packet.data = decode->packet_buffer;
-	packet.size = (int)int_size;
+	packet.size = (int)i32_size;
 
 	if (!decode->frame) {
 		decode->frame = av_frame_alloc();
@@ -158,7 +158,7 @@ int ffmpeg_decode_audio(struct ffmpeg_decode *decode,
 }
 
 int ffmpeg_decode_video(struct ffmpeg_decode *decode,
-		unsigned char *data, size_t size, long long *ts,
+		::u8 *data, size_t size, ::i64 *ts,
 		struct obs_source_frame *frame,
 		bool *got_output)
 {
@@ -173,7 +173,7 @@ int ffmpeg_decode_video(struct ffmpeg_decode *decode,
 
 	av_init_packet(&packet);
 	packet.data     = decode->packet_buffer;
-	packet.int_size     = (int)int_size;
+	packet.i32_size     = (int)i32_size;
 	packet.pts      = *ts;
 
 //	if (decode->codec->identification == AV_CODEC_ID_H264 &&

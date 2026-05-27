@@ -134,7 +134,7 @@ namespace video_input_media_capture
 
    //   }
 
-   //   unsigned int sizeRawImage = 0;
+   //   ::u32 sizeRawImage = 0;
 
    //   if (VideoFormat == MFVideoFormat_RGB24)
    //   {
@@ -721,7 +721,7 @@ namespace video_input_media_capture
    //   return S_OK;
    //}
 
-   //STDMETHODIMP callback::OnClockSetRate(MFTIME hnsSystemTime, float flRate)
+   //STDMETHODIMP callback::OnClockSetRate(MFTIME hnsSystemTime, ::f32 flRate)
    //{
    //   return S_OK;
    //}
@@ -790,7 +790,7 @@ namespace video_input_media_capture
    //      for (int iLine = 0; iLine < m_pdevice->m_size.cy; iLine++)
    //      {
 
-   //         auto pline = ((unsigned char *)pSampleBuffer) + m_pdevice->m_size.cx * 4 * iLine;
+   //         auto pline = ((::u8 *)pSampleBuffer) + m_pdevice->m_size.cx * 4 * iLine;
 
    //         pline += 3;
 

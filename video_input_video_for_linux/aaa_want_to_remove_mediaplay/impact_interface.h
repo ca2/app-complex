@@ -46,8 +46,8 @@ namespace mediaplay
       virtual public ::wave::player::listener,
       virtual public ::audio::wave_recorder_container,
       virtual public ::mediaplaylist::player,
-      virtual public double_scalar_source,
-      virtual public int_scalar_source,
+      virtual public f64_scalar_source,
+      virtual public i32_scalar_source,
       virtual public ::user::alpha_source
    {
    public:
@@ -64,7 +64,7 @@ namespace mediaplay
       ::pointer<::mediaplay::record_notify_impact>      m_precordnotifyview;
       atom                                        m_atomPopup;
       atom                                        m_atomPopupLink;
-      ::double_rectangle                                    m_rectangleKaraokeImpact;
+      ::f64_rectangle                                    m_rectangleKaraokeImpact;
       file_pointer                           m_spfileRecord;
       ::mediaplay::document *                   m_pdocument;
       xfplayer_impact_linea                       m_impactlineaStatus;
@@ -74,10 +74,10 @@ namespace mediaplay
       bool                                      m_bDestroy;
       ::duration                                      m_tick100Timer;
       string                                    m_strCurrentLink;
-      int_rectangle_array                                m_rectangleaUpdate;
+      i32_rectangle_array                                m_rectangleaUpdate;
       ::duration                                      m_durationLastUpdate;
-      double                                    m_dBlend;
-      double                                    m_dAudioBlend;
+      ::f64                                    m_dBlend;
+      ::f64                                    m_dAudioBlend;
       ::duration                                      m_durationFadeStart;
       EExecute                                  m_eexecuteAfterFadeOut;
       bool                                      m_bAutoRecord;
@@ -96,8 +96,8 @@ namespace mediaplay
       string                                    m_strAlbum;
 
 
-      double_scalar                             m_scalarTime;
-      double_scalar                             m_scalarVolume;
+      f64_scalar                             m_scalarTime;
+      f64_scalar                             m_scalarVolume;
       //::task_pointer                              m_pthreadSaveSongPosition;
       string                                    m_strFullShortTitle;
 
@@ -151,9 +151,9 @@ namespace mediaplay
       virtual void KaraokeGradualFilling();
       virtual void CopyLinkLocation();
 
-      virtual void SetKaraokeCodePage(unsigned int dw);
-      virtual unsigned int IdToCodePage(const ::scoped_string & scopedstrCommandId);
-      virtual unsigned int GetKaraokeCodePage(const ::string & lpsz);
+      virtual void SetKaraokeCodePage(::u32 dw);
+      virtual ::u32 IdToCodePage(const ::scoped_string & scopedstrCommandId);
+      virtual ::u32 GetKaraokeCodePage(const ::string & lpsz);
 
 
       virtual void attach_playlist(::mediaplaylist::document * pdocument);
@@ -166,7 +166,7 @@ namespace mediaplay
       virtual void StartMusicRendering();
       
       //   virtual void data_on_after_change(int iConfigurationId, int iLine, int iColumn, CVmsDataUpdateHint * pupdate);
-      virtual bool UpdateScreen(int_rectangle_array & recta, unsigned int uiRedraw);
+      virtual bool UpdateScreen(i32_rectangle_array & recta, ::u32 uiRedraw);
 
       virtual void on_delete_contents();
 
@@ -196,14 +196,14 @@ namespace mediaplay
 
       void install_message_routing(::channel * pchannel) override;
 
-      virtual void on_set_scalar(e_scalar escalar, double d, int iFlags) override;
-      virtual void get_scalar_minimum(e_scalar escalar, double & d) override;
-      virtual void get_scalar(e_scalar escalar, double & d) override;
-      virtual void get_scalar_maximum(e_scalar escalar, double & d) override;
-      virtual void on_set_scalar(e_scalar escalar,long long iValue,int iFlags) override;
-      virtual void get_scalar_minimum(e_scalar escalar, long long & iValue) override;
-      virtual void get_scalar(e_scalar escalar, long long & iValue) override;
-      virtual void get_scalar_maximum(e_scalar escalar, long long & iValue) override;
+      virtual void on_set_scalar(e_scalar escalar, ::f64 d, int iFlags) override;
+      virtual void get_scalar_minimum(e_scalar escalar, ::f64 & d) override;
+      virtual void get_scalar(e_scalar escalar, ::f64 & d) override;
+      virtual void get_scalar_maximum(e_scalar escalar, ::f64 & d) override;
+      virtual void on_set_scalar(e_scalar escalar,::i64 iValue,int iFlags) override;
+      virtual void get_scalar_minimum(e_scalar escalar, ::i64 & iValue) override;
+      virtual void get_scalar(e_scalar escalar, ::i64 & iValue) override;
+      virtual void get_scalar_maximum(e_scalar escalar, ::i64 & iValue) override;
 
       virtual ::duration KaraokeGetLyricsDelay();
 
@@ -234,7 +234,7 @@ namespace mediaplay
       virtual bool PlaylistDeferBatch();
 
 
-      virtual double get_alpha(::user::interaction * puiTarget) override;
+      virtual ::f64 get_alpha(::user::interaction * puiTarget) override;
       virtual void on_alpha_target_initial_frame_position() override;
 
 

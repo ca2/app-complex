@@ -39,8 +39,8 @@ public:
 
    HRESULT LockBuffer(
       int  lDefaultStride,    // Minimum stride (with no padding).
-      unsigned int dwHeightInPixels,  // Height of the image, in pixels.
-      unsigned char  **ppbScanLine0,    // Receives a pointer to the start of scan line 0.
+      ::u32 dwHeightInPixels,  // Height of the image, in pixels.
+      ::u8  **ppbScanLine0,    // Receives a pointer to the start of scan line 0.
       int  *plStride          // Receives the actual stride.
    )
    {
@@ -54,7 +54,7 @@ public:
       else
       {
          // Use non-2D version.
-         unsigned char *pData = nullptr;
+         ::u8 *pData = nullptr;
 
          hr = m_pBuffer->Lock(&pData, nullptr, nullptr);
          if (SUCCEEDED(hr))

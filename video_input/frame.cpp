@@ -111,7 +111,7 @@ frame::~frame()
             offsets[1] = size;
             size += quarter_area;
             ALIGN_SIZE(size, alignment);
-            m_data[0] =(unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
+            m_data[0] =(::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
             m_data[1] = (uint8_t *)m_data[0] + offsets[0];
             m_data[2] = (uint8_t *)m_data[0] + offsets[1];
             m_linesize[0] = width;
@@ -127,7 +127,7 @@ frame::~frame()
             const uint32_t cbcr_width = (width + 1) & (UINT32_MAX - 1);
             size += cbcr_width * ((height + 1) / 2);
             ALIGN_SIZE(size, alignment);
-            m_data[0] = (unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
+            m_data[0] = (::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
             m_data[1] = (uint8_t *)m_data[0] + offsets[0];
             m_linesize[0] = width;
             m_linesize[1] = cbcr_width;
@@ -137,19 +137,19 @@ frame::~frame()
          case e_video_format_y800:
             size = width * height;
             ALIGN_SIZE(size, alignment);
-            m_data[0] = (unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
+            m_data[0] = (::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
             m_linesize[0] = width;
             break;
 
          case e_video_format_yvyu:
          case e_video_format_yuy2:
          case e_video_format_uyvy: {
-            const uint32_t double_width =
+            const uint32_t f64_width =
                ((width + 1) & (UINT32_MAX - 1)) * 2;
-            size = double_width * height;
+            size = f64_width * height;
             ALIGN_SIZE(size, alignment);
-            m_data[0] =(unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
-            m_linesize[0] = double_width;
+            m_data[0] =(::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
+            m_linesize[0] = f64_width;
             break;
          }
 
@@ -159,14 +159,14 @@ frame::~frame()
          case e_video_format_ayuv:
             size = width * height * 4;
             ALIGN_SIZE(size, alignment);
-            m_data[0] =(unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
+            m_data[0] =(::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
             m_linesize[0] = width * 4;
             break;
 
          case e_video_format_i444:
             size = width * height;
             ALIGN_SIZE(size, alignment);
-            m_data[0] =(unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size * 3, nullptr, alignment);
+            m_data[0] =(::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size * 3, nullptr, alignment);
             m_data[1] = (uint8_t *)m_data[0] + size;
             m_data[2] = (uint8_t *)m_data[1] + size;
             m_linesize[0] = width;
@@ -177,7 +177,7 @@ frame::~frame()
          case e_video_format_bgr3:
             size = width * height * 3;
             ALIGN_SIZE(size, alignment);
-            m_data[0] =(unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
+            m_data[0] =(::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
             m_linesize[0] = width * 3;
             break;
 
@@ -192,7 +192,7 @@ frame::~frame()
             offsets[1] = size;
             size += half_area;
             ALIGN_SIZE(size, alignment);
-            m_data[0] =(unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
+            m_data[0] =(::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
             m_data[1] = (uint8_t *)m_data[0] + offsets[0];
             m_data[2] = (uint8_t *)m_data[0] + offsets[1];
             m_linesize[0] = width;
@@ -216,7 +216,7 @@ frame::~frame()
             offsets[2] = size;
             size += width * height;
             ALIGN_SIZE(size, alignment);
-            m_data[0] =(unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
+            m_data[0] =(::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
             m_data[1] = (uint8_t *)m_data[0] + offsets[0];
             m_data[2] = (uint8_t *)m_data[0] + offsets[1];
             m_data[3] = (uint8_t *)m_data[0] + offsets[2];
@@ -241,7 +241,7 @@ frame::~frame()
             offsets[2] = size;
             size += width * height;
             ALIGN_SIZE(size, alignment);
-            m_data[0] =(unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
+            m_data[0] =(::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
             m_data[1] = (uint8_t *)m_data[0] + offsets[0];
             m_data[2] = (uint8_t *)m_data[0] + offsets[1];
             m_data[3] = (uint8_t *)m_data[0] + offsets[2];
@@ -264,7 +264,7 @@ frame::~frame()
             offsets[2] = size;
             size += width * height;
             ALIGN_SIZE(size, alignment);
-            m_data[0] =(unsigned char *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
+            m_data[0] =(::u8 *) ::system()->m_pheapmanagement->memory(::heap::e_memory_secondary)->aligned_allocate(size, nullptr, alignment);
             m_data[1] = (uint8_t *)m_data[0] + offsets[0];
             m_data[2] = (uint8_t *)m_data[0] + offsets[1];
             m_data[3] = (uint8_t *)m_data[0] + offsets[2];
@@ -534,10 +534,10 @@ return false;
 //   return NULL;
 //}
 
-//static inline void set_eparam(gs_effect_t * effect, const_char_pointer name, float val)
+//static inline void set_eparam(gs_effect_t * effect, const_char_pointer name, ::f32 val)
 //{
 //   gs_eparam_t * param = gs_effect_get_param_by_name(effect, name);
-//   gs_effect_set_float(param, val);
+//   gs_effect_set_f32(param, val);
 //}
 //
 //static inline void set_eparami(gs_effect_t * effect, const_char_pointer name, int val)
@@ -590,11 +590,11 @@ return false;
 //         gs_effect_set_texture(
 //            gs_effect_get_param_by_name(conv, "image3"),
 //            tex[3]);
-//      set_eparam(conv, "width", (float) cx);
-//      set_eparam(conv, "height", (float) cy);
-//      set_eparam(conv, "width_d2", (float) cx * 0.5f);
-//      set_eparam(conv, "height_d2", (float) cy * 0.5f);
-//      set_eparam(conv, "width_x2_i", 0.5f / (float) cx);
+//      set_eparam(conv, "width", (::f32) cx);
+//      set_eparam(conv, "height", (::f32) cy);
+//      set_eparam(conv, "width_d2", (::f32) cx * 0.5f);
+//      set_eparam(conv, "height_d2", (::f32) cy * 0.5f);
+//      set_eparam(conv, "width_x2_i", 0.5f / (::f32) cx);
 //
 //      struct vec4 vec0, vec1, vec2;
 //      vec4_set(&vec0, m_color_matrix[0], m_color_matrix[1],
@@ -614,11 +614,11 @@ return false;
 //         gs_eparam_t * min_param = gs_effect_get_param_by_name(
 //            conv, "color_range_min");
 //         gs_effect_set_val(min_param, m_color_range_min,
-//                           sizeof(float) * 3);
+//                           sizeof(::f32) * 3);
 //         gs_eparam_t * max_param = gs_effect_get_param_by_name(
 //            conv, "color_range_max");
 //         gs_effect_set_val(max_param, m_color_range_max,
-//                           sizeof(float) * 3);
+//                           sizeof(::f32) * 3);
 //      }
 //
 //      gs_draw(GS_TRIS, 0, 3);
@@ -809,25 +809,25 @@ return false;
 //static void rotate_async_video(obs_source_t * source, long
 //rotation)
 //{
-//float x = 0;
-//float y = 0;
+//::f32 x = 0;
+//::f32 y = 0;
 //
 //switch (rotation) {
 //case 90:
-//y = (float) source->async_width;
+//y = (::f32) source->async_width;
 //break;
 //case 270:
 //case -90:
-//x = (float) source->async_height;
+//x = (::f32) source->async_height;
 //break;
 //case 180:
-//x = (float) source->async_width;
-//y = (float) source->async_height;
+//x = (::f32) source->async_width;
+//y = (::f32) source->async_height;
 //}
 //
 //gs_matrix_translate3f(x, y,
 //0);
-//gs_matrix_rotaa4f(0.0f, 0.0f, -1.0f, RAD((float)rotation));
+//gs_matrix_rotaa4f(0.0f, 0.0f, -1.0f, RAD((::f32)rotation));
 //}
 //
 //static inline void obs_source_render_async_video(obs_source_t * source)
@@ -1419,10 +1419,10 @@ void frame::copy_frame_data(const frame * src)
    m_flags = src->m_flags;
    m_full_range = src->m_full_range;
    m_timestamp = src->m_timestamp;
-   memory_copy(m_color_matrix, src->m_color_matrix, sizeof(float) * 16);
+   memory_copy(m_color_matrix, src->m_color_matrix, sizeof(::f32) * 16);
    if (!m_full_range)
    {
-      size_t const size = sizeof(float) * 3;
+      size_t const size = sizeof(::f32) * 3;
       memory_copy(m_color_range_min, src->m_color_range_min, size);
       memory_copy(m_color_range_max, src->m_color_range_max, size);
    }
@@ -2129,8 +2129,8 @@ void frame::copy_from(const frame * src)
 //static void downmix_to_mono_planar(struct obs_source * source, uint32_t frames)
 //{
 //   size_t channels = audio_output_get_channels(obs->audio.audio);
-//   const float channels_i = 1.0f / (float) channels;
-//   float ** m_data = (float **) source->audio_m_data.m_data;
+//   const ::f32 channels_i = 1.0f / (::f32) channels;
+//   ::f32 ** m_data = (::f32 **) source->audio_m_data.m_data;
 //
 //   for (size_t channel = 1; channel < channels; channel++)
 //   {
@@ -2149,9 +2149,9 @@ void frame::copy_from(const frame * src)
 //}
 //
 //static void process_audio_balancing(struct obs_source * source, uint32_t frames,
-//                                    float balance, enum obs_balance_type type)
+//                                    ::f32 balance, enum obs_balance_type type)
 //{
-//   float ** m_data = (float **) source->audio_m_data.m_data;
+//   ::f32 ** m_data = (::f32 **) source->audio_m_data.m_data;
 //
 //   switch (type)
 //   {
@@ -2534,7 +2534,7 @@ void frame::copy_from(const frame * src)
 //strcmp(name, source
 //->context.name) != 0) {
 //struct callm_data m_data;
-//char * prev_name = bstrdup(source->context.name);
+//::i8 * prev_name = bstrdup(source->context.name);
 //obs_context_m_data_setname(& source
 //->context, name);
 //
@@ -2726,7 +2726,7 @@ void frame::copy_from(const frame * src)
 //vec4_zero(& clear_color);
 //gs_clear(GS_CLEAR_COLOR, & clear_color,
 //0.0f, 0);
-//gs_ortho(0.0f, (float)cx, 0.0f, (float)cy, -100.0f, 100.0f);
+//gs_ortho(0.0f, (::f32)cx, 0.0f, (::f32)cy, -100.0f, 100.0f);
 //
 //if (target == parent && !custom_draw && !async)
 //obs_source_default_render(target);
@@ -2848,7 +2848,7 @@ void frame::copy_from(const frame * src)
 //          : NULL;
 //}
 //
-//void obs_source_set_volume(obs_source_t * source, float
+//void obs_source_set_volume(obs_source_t * source, ::f32
 //volume)
 //{
 //if (
@@ -2865,7 +2865,7 @@ void frame::copy_from(const frame * src)
 //sizeof(stack));
 //callm_data_set_ptr(& m_data,
 //"source", source);
-//callm_data_set_float(& m_data,
+//callm_data_set_f32(& m_data,
 //"volume", volume);
 //
 //signal_handler_signal(source
@@ -2875,7 +2875,7 @@ void frame::copy_from(const frame * src)
 //->signals, "source_volume",
 //&m_data);
 //
-//volume = (float) callm_data_float(&m_data, "volume");
+//volume = (::f32) callm_data_f32(&m_data, "volume");
 //
 //pthread_mutex_lock(& source
 //->audio_actions_mutex);
@@ -2889,14 +2889,14 @@ void frame::copy_from(const frame * src)
 //}
 //}
 //
-//float obs_source_get_volume(const obs_source_t * source)
+//::f32 obs_source_get_volume(const obs_source_t * source)
 //{
 //   return obs_source_valid(source, "obs_source_get_volume")
 //          ? source->user_volume
 //          : 0.0f;
 //}
 //
-//void obs_source_set_sync_offset(obs_source_t * source, long long
+//void obs_source_set_sync_offset(obs_source_t * source, ::i64
 //offset)
 //{
 //if (
@@ -2921,7 +2921,7 @@ void frame::copy_from(const frame * src)
 //}
 //}
 //
-//long long obs_source_get_sync_offset(const obs_source_t * source)
+//::i64 obs_source_get_sync_offset(const obs_source_t * source)
 //{
 //   return obs_source_valid(source, "obs_source_get_sync_offset")
 //          ? source->sync_offset
@@ -3339,8 +3339,8 @@ void frame::copy_from(const frame * src)
 //   range_max = gs_effect_get_param_by_name(effect, "color_range_max");
 //
 //   gs_effect_set_matrix4(matrix, color_matrix);
-//   gs_effect_set_val(range_min, color_range_min, sizeof(float) * 3);
-//   gs_effect_set_val(range_max, color_range_max, sizeof(float) * 3);
+//   gs_effect_set_val(range_min, color_range_min, sizeof(::f32) * 3);
+//   gs_effect_set_val(range_max, color_range_max, sizeof(::f32) * 3);
 //}
 //
 //void obs_source_draw(gs_texture_t * texture, int x, int y, uint32_t cx,
@@ -3371,7 +3371,7 @@ void frame::copy_from(const frame * src)
 //   if (change_pos)
 //   {
 //      gs_matrix_push();
-//      gs_matrix_translate3f((float) x, (float) y, 0.0f);
+//      gs_matrix_translate3f((::f32) x, (::f32) y, 0.0f);
 //   }
 //
 //   gs_draw_sprite(texture, flip ? GS_FLIP_V : 0, cx, cy);
@@ -3768,7 +3768,7 @@ void frame::copy_from(const frame * src)
 //          : NULL;
 //}
 //
-//static float get_source_volume(obs_source_t * source, uint64_t
+//static ::f32 get_source_volume(obs_source_t * source, uint64_t
 //os_time)
 //{
 //if (source->
@@ -3795,11 +3795,11 @@ void frame::copy_from(const frame * src)
 //             (source->push_to_talk_enabled && !push_to_talk_active);
 //
 //if (muted ||
-//close_float(source
+//close_f32(source
 //->volume, 0.0f, 0.0001f))
 //return 0.0f;
 //if (
-//close_float(source
+//close_f32(source
 //->volume, 1.0f, 0.0001f))
 //return 1.0f;
 //
@@ -3810,11 +3810,11 @@ void frame::copy_from(const frame * src)
 //static inline void multiply_output_audio(obs_source_t * source, size_t
 //mix,
 //size_t channels,
-//float vol
+//::f32 vol
 //)
 //{
-//register float * out = source->audio_output_buf[mix][0];
-//register float * end = out + AUDIO_OUTPUT_FRAMES * channels;
+//register ::f32 * out = source->audio_output_buf[mix][0];
+//register ::f32 * end = out + AUDIO_OUTPUT_FRAMES * channels;
 //
 //while (out<end)
 //*(out++) *=
@@ -3824,16 +3824,16 @@ void frame::copy_from(const frame * src)
 //static inline void multiply_vol_m_data(obs_source_t * source, size_t
 //mix,
 //size_t channels,
-//float * vol_m_data
+//::f32 * vol_m_data
 //)
 //{
 //for (
 //size_t ch = 0;
 //ch<channels;
 //ch++) {
-//register float * out = source->audio_output_buf[mix][ch];
-//register float * end = out + AUDIO_OUTPUT_FRAMES;
-//register float * vol = vol_m_data;
+//register ::f32 * out = source->audio_output_buf[mix][ch];
+//register ::f32 * end = out + AUDIO_OUTPUT_FRAMES;
+//register ::f32 * vol = vol_m_data;
 //
 //while (out<end)
 //*(out++) *= *(vol++);
@@ -3869,8 +3869,8 @@ void frame::copy_from(const frame * src)
 //size_t sample_rate
 //)
 //{
-//float vol_m_data[AUDIO_OUTPUT_FRAMES];
-//float cur_vol = get_source_volume(source, source->audio_ts);
+//::f32 vol_m_data[AUDIO_OUTPUT_FRAMES];
+//::f32 cur_vol = get_source_volume(source, source->audio_ts);
 //size_t frame_num = 0;
 //
 //pthread_mutex_lock(& source
@@ -3937,7 +3937,7 @@ void frame::copy_from(const frame * src)
 //{
 //struct audio_action action;
 //bool actions_pending;
-//float vol;
+//::f32 vol;
 //
 //pthread_mutex_lock(& source
 //->audio_actions_mutex);
@@ -3967,7 +3967,7 @@ void frame::copy_from(const frame * src)
 //if (vol == 0.0f || mixers == 0) {
 //memory_set(source
 //->audio_output_buf[0][0], 0,
-//AUDIO_OUTPUT_FRAMES * sizeof(float) *
+//AUDIO_OUTPUT_FRAMES * sizeof(::f32) *
 //MAX_AUDIO_CHANNELS * MAX_AUDIO_MIXES
 //);
 //return;
@@ -4015,7 +4015,7 @@ void frame::copy_from(const frame * src)
 //& (1 << mix)) != 0) {
 //memory_set(source
 //->audio_output_buf[mix][0], 0,
-//sizeof(float) *
+//sizeof(::f32) *
 //AUDIO_OUTPUT_FRAMES * channels
 //);
 //}
@@ -4048,7 +4048,7 @@ void frame::copy_from(const frame * src)
 //) == 0) {
 //memory_set(source
 //->audio_output_buf[mix][0], 0,
-//sizeof(float) *
+//sizeof(::f32) *
 //AUDIO_OUTPUT_FRAMES * channels
 //);
 //}
@@ -4077,7 +4077,7 @@ void frame::copy_from(const frame * src)
 //
 //memory_set(source
 //->audio_mix_buf[0], 0,
-//sizeof(float) *
+//sizeof(::f32) *
 //AUDIO_OUTPUT_FRAMES * channels
 //);
 //
@@ -4443,7 +4443,7 @@ void frame::copy_from(const frame * src)
 //   return source->sample_info.speakers;
 //}
 //
-//void obs_source_set_balance_value(obs_source_t * source, float
+//void obs_source_set_balance_value(obs_source_t * source, ::f32
 //balance)
 //{
 //if (
@@ -4456,7 +4456,7 @@ void frame::copy_from(const frame * src)
 //sizeof(stack));
 //callm_data_set_ptr(& m_data,
 //"source", source);
-//callm_data_set_float(& m_data,
+//callm_data_set_f32(& m_data,
 //"balance", balance);
 //
 //signal_handler_signal(source
@@ -4464,11 +4464,11 @@ void frame::copy_from(const frame * src)
 //&m_data);
 //
 //source->
-//balance = (float) callm_data_float(&m_data, "balance");
+//balance = (::f32) callm_data_f32(&m_data, "balance");
 //}
 //}
 //
-//float obs_source_get_balance_value(const obs_source_t * source)
+//::f32 obs_source_get_balance_value(const obs_source_t * source)
 //{
 //   return obs_source_valid(source, "obs_source_get_balance_value")
 //          ? source->balance
@@ -4593,7 +4593,7 @@ void frame::copy_from(const frame * src)
 //   obs_source_dosignal(source, NULL, "media_previous");
 //}
 //
-//long long obs_source_media_get_time(obs_source_t * source)
+//::i64 obs_source_media_get_time(obs_source_t * source)
 //{
 //   if (!m_data_valid(source, "obs_source_media_get_time"))
 //      return 0;
@@ -4604,7 +4604,7 @@ void frame::copy_from(const frame * src)
 //      return 0;
 //}
 //
-//long long obs_source_media_get_time(obs_source_t * source)
+//::i64 obs_source_media_get_time(obs_source_t * source)
 //{
 //   if (!m_data_valid(source, "obs_source_media_get_time"))
 //      return 0;
@@ -4615,7 +4615,7 @@ void frame::copy_from(const frame * src)
 //      return 0;
 //}
 //
-//void obs_source_media_set_time(obs_source_t * source, long long
+//void obs_source_media_set_time(obs_source_t * source, ::i64
 //ms)
 //{
 //if (!

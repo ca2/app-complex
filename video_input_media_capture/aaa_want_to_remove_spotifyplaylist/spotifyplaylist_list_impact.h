@@ -47,7 +47,7 @@ namespace mediaplaylist
       virtual void _001OnButtonAction(::pointer<user::interaction>pinteraction);
       virtual void _001OnInitializeForm(::pointer<user::interaction>pinteraction);
       virtual void on_insert_columns();
-      virtual void _001DrawBackground(::draw2d::graphics *pdc, ::int_rectangle * lprect);
+      virtual void _001DrawBackground(::draw2d::graphics *pdc, ::i32_rectangle * lprect);
       virtual bool _001OnRemoveItem(iptr iItem);
       void _001OnDraw(::draw2d::graphics_pointer & pgraphics);
       void update_drawing_objects();
@@ -69,7 +69,7 @@ namespace mediaplaylist
       virtual bool TransparentFrameWndDownUpGetUpEnable();
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
-      DECLARE_MESSAGE_HANDLER(on_message_left_button_double_click);
+      DECLARE_MESSAGE_HANDLER(on_message_left_button_f64_click);
       DECLARE_MESSAGE_HANDLER(on_message_context_menu);
       DECLARE_MESSAGE_HANDLER(on_message_size);
       DECLARE_MESSAGE_HANDLER(_001OnEditRemove);

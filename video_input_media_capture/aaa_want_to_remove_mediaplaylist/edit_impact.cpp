@@ -119,11 +119,11 @@ namespace mediaplaylist
    }
 
 
-   long long edit_impact::increment_reference_count()
+   ::i64 edit_impact::increment_reference_count()
    {
    return ::object::increment_reference_count();
    }
-   long long edit_impact::decrement_reference_count()
+   ::i64 edit_impact::decrement_reference_count()
    {
    return ::object::decrement_reference_count();
    }

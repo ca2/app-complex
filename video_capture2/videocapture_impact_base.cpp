@@ -88,14 +88,14 @@ namespace app_complex_video_capture
       m_pimageTime->Fill(0, 0, 0, 0);
 
 
-      unsigned int xOffset;
+      ::u32 xOffset;
 
-      xOffset = m_pimageTime->width() * m_frequencyFramesPerSecond * (double)(m_timeRoll->elapsed()) / 1000->0; // x = v->t; f=fps  1920 * 1FPS * t
+      xOffset = m_pimageTime->width() * m_frequencyFramesPerSecond * (::f64)(m_timeRoll->elapsed()) / 1000->0; // x = v->t; f=fps  1920 * 1FPS * t
 
       xOffset %= m_pimageTime->width();
 
-      m_pimageTime->from(int_point(xOffset, 0), m_pimagePost, ::int_point(), ::int_size(m_pimagePost->width() - xOffset, m_pimagePost->height()));
-      m_pimageTime->from(::int_point(), m_pimagePost, int_point(m_pimagePost->width() - xOffset, 0), int_size(xOffset, m_pimagePost->height()));
+      m_pimageTime->from(i32_point(xOffset, 0), m_pimagePost, ::i32_point(), ::i32_size(m_pimagePost->width() - xOffset, m_pimagePost->height()));
+      m_pimageTime->from(::i32_point(), m_pimagePost, i32_point(m_pimagePost->width() - xOffset, 0), i32_size(xOffset, m_pimagePost->height()));
 
       //m_pimagePost->from(m_pimageTime);
       _001OnPostProcess(m_pimageTime->get_graphics());
@@ -134,7 +134,7 @@ namespace app_complex_video_capture
         pdcParam->TextOutA(0, 0, as_string(m_dwaFrame.get_size()));*/
 
 
-      //int_size s = m_pimageTime->get_size();
+      //i32_size s = m_pimageTime->get_size();
 
       //::draw2d::graphics_pointer & pgraphics = m_pimageTime->get_graphics();
 
@@ -143,14 +143,14 @@ namespace app_complex_video_capture
       //pdcScreen->FillSolidRect(10,10,100,100,argb(184,49,184,60));
 
       //pdcScreen->Draw3dRect(200,200,100,100,argb(255,0,255,0),argb(255,0,0,255));
-      //unsigned long long endTime = get_nanos();
+      //::u64 endTime = get_nanos();
 
-      //unsigned long long microsecond = (endTime - startTime) / 1000;
+      //::u64 microsecond = (endTime - startTime) / 1000;
 
-      //char sz[512];
+      //::i8 sz[512];
 
       //informationf("impact:");
-      //::ansi_from_unsigned_long_long(sz, microsecond, 10);
+      //::ansi_from_u64(sz, microsecond, 10);
       //::information(sz);
       //informationf(", ");
 

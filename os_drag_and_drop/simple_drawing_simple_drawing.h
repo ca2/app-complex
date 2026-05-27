@@ -11,7 +11,7 @@ namespace simple_drag_and_drop
    public:
 
 
-      int_rectangle                                m_rectangle;
+      i32_rectangle                                m_rectangle;
       ::user::impact *                    m_pimpact;
       string                              m_strFont;
       int                                 m_iDrawing;
@@ -22,11 +22,11 @@ namespace simple_drag_and_drop
       virtual ~simple_drag_and_drop();
 
 
-      virtual long long increment_reference_count()
+      virtual ::i64 increment_reference_count()
       {
          return ::object::increment_reference_count();
       }
-      virtual long long decrement_reference_count()
+      virtual ::i64 decrement_reference_count()
       {
          return ::object::decrement_reference_count();
       }
@@ -37,7 +37,7 @@ namespace simple_drag_and_drop
 
       virtual void _001OnDrawArcs(::draw2d::graphics_pointer & pgraphics, bool bPath);
 
-      virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, int_rectangle & r, double dStart, double dAngle, bool bPath);
+      virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, i32_rectangle & r, ::f64 dStart, ::f64 dAngle, bool bPath);
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
 

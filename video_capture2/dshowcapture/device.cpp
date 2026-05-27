@@ -88,10 +88,10 @@ bool HDevice::EnsureInactive(const wchar_t *func)
 }
 
 inline void HDevice::SendToCallback(bool video,
-		unsigned char *data, size_t size,
-		long long startTime, long long stopTime)
+		::u8 *data, size_t size,
+		::i64 startTime, ::i64 stopTime)
 {
-	if (!int_size)
+	if (!i32_size)
 		return;
 
 	if (video)
@@ -104,7 +104,7 @@ inline void HDevice::SendToCallback(bool video,
 
 void HDevice::Receive(bool isVideo, IMediaSample *sample)
 {
-	unsigned char *ptr;
+	::u8 *ptr;
 	MediaTypePtr mt;
 	bool encoded = isVideo ?
 		((int)videoConfig.format >= 400) :
@@ -127,13 +127,13 @@ void HDevice::Receive(bool isVideo, IMediaSample *sample)
 	}
 
 	int size = sample->GetActualDataLength();
-	if (!int_size)
+	if (!i32_size)
 		return;
 
 	if (FAILED(sample->GetPointer(&ptr)))
 		return;
 
-	long long startTime, stopTime;
+	::i64 startTime, stopTime;
 	bool hasTime = SUCCEEDED(sample->GetTime(&startTime, &stopTime));
 
 	if (encoded) {
@@ -152,8 +152,8 @@ void HDevice::Receive(bool isVideo, IMediaSample *sample)
 		}
 
 		data.bytes.insert(data.bytes.end(),
-				(unsigned char*)ptr,
-				(unsigned char*)ptr + size);
+				(::u8*)ptr,
+				(::u8*)ptr + size);
 
 	} else if (hasTime) {
 		SendToCallback(isVideo, ptr, size, startTime, stopTime);

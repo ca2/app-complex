@@ -37,7 +37,7 @@
 //
 //   string strJson = App(pparticle).http()->get(strUrl, set);
 //
-//   const char * pszJson = strJson;
+//   const ::i8 * pszJson = strJson;
 //   ::payload v;
 //
 //   try
@@ -624,7 +624,7 @@
 ////      //
 ////      //         }
 ////      //
-////      //         const char * psz = strResponse;
+////      //         const ::i8 * psz = strResponse;
 ////      //
 ////      //         ::payload v;
 ////      //

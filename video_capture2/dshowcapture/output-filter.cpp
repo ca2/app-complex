@@ -295,7 +295,7 @@ STDMETHODIMP OutputPin::EndFlush()
 }
 
 STDMETHODIMP OutputPin::NewSegment(REFERENCE_TIME tStart,
-		REFERENCE_TIME tStop, double dRate)
+		REFERENCE_TIME tStop, ::f64 dRate)
 {
 	PrintFunc(L"OutputPin::NewSegment");
 
@@ -322,16 +322,16 @@ bool OutputPin::IsValidMediaType(const AM_MEDIA_TYPE *pmt) const
 	return true;
 }
 
-void OutputPin::Send(unsigned char *data[DSHOW_MAX_PLANES],
+void OutputPin::Send(::u8 *data[DSHOW_MAX_PLANES],
 		size_t linesize[DSHOW_MAX_PLANES],
-		long long timestampStart, long long timestampEnd)
+		::i64 timestampStart, ::i64 timestampEnd)
 {
 	ComQIPtr<IMemInputPin> memInput(connectedPin);
 	REFERENCE_TIME startTime = timestampStart;
 	REFERENCE_TIME endTime = timestampEnd;
 	ComPtr<IMediaSample> sample;
 	HRESULT hr;
-	unsigned char *ptr;
+	::u8 *ptr;
 
 	if (!memInput || !allocator)
 		return;
@@ -479,7 +479,7 @@ STDMETHODIMP OutputFilter::GetClassID(CLSID *pClsID)
 }
 
 // IMediaFilter methods
-STDMETHODIMP OutputFilter::GetState(unsigned int dwMSecs, FILTER_STATE *State)
+STDMETHODIMP OutputFilter::GetState(::u32 dwMSecs, FILTER_STATE *State)
 {
 	PrintFunc(L"OutputFilter::GetState");
 
@@ -620,7 +620,7 @@ STDMETHODIMP_(ULONG) OutputEnumPins::Release()
 // IEnumPins
 STDMETHODIMP OutputEnumPins::Next(ULONG cPins, IPin **ppPins, ULONG *pcFetched)
 {
-	unsigned int nFetched = 0;
+	::u32 nFetched = 0;
 
 	if (curPin == 0 && cPins > 0) {
 		IPin *pPin = filter->GetPin();
@@ -699,7 +699,7 @@ STDMETHODIMP OutputEnumMediaTypes::Next(ULONG cMediaTypes,
 {
 	PrintFunc(L"OutputEnumMediaTypes::Next");
 
-	unsigned int nFetched = 0;
+	::u32 nFetched = 0;
 
 	if (curMT == 0 && cMediaTypes > 0) {
 		*ppMediaTypes = pin->outputInfo.mt.Duplicate();

@@ -17,7 +17,7 @@ namespace video_input_video_for_linux
 {
 
 
-   callback::callback(device * pdevice, unsigned int deviceID) :
+   callback::callback(device * pdevice, ::u32 deviceID) :
       m_cRef(1), m_uDevice(deviceID), m_iMemory(0), m_bClose(false),
       m_pframe(nullptr)
    {
@@ -86,14 +86,14 @@ namespace video_input_video_for_linux
          //struct obs_source_frame out;
          size_t plane_offsets[MAX_AV_PLANES]={};
          size_t linesize[MAX_AV_PLANES]={};
-         float ffps;
+         ::f32 ffps;
          uint64_t timeout_usec;
 
          //informationf("%s: ___new capture thread", m_pdevice->m_iDeviceice_id);
          //os_set_thread_name("v4l2: capture");
 
          /* Get framerate and calculate appropriate select timeout value. */
-         ffps = (float)m_pdevice->m_iFrameRateDenominator / (float) m_pdevice->m_iFrameRateNumerator;
+         ffps = (::f32)m_pdevice->m_iFrameRateDenominator / (::f32) m_pdevice->m_iFrameRateNumerator;
          informationf("%s: framerate: %.2f fps", m_pdevice->m_strDevice.c_str(), ffps);
          /* Timeout set to 5 frame periods. */
          timeout_usec = (1000000 * m_pdevice->m_iTimeoutFrames) / ffps;
@@ -334,7 +334,7 @@ namespace video_input_video_for_linux
 
          //obs_source_output_video(m_pdevice->m_iSource, &out);
 
-         ::int_size s;
+         ::i32_size s;
 
          s.cx = m_pdevice->m_size.cx;
          s.cy = m_pdevice->m_size.cy;

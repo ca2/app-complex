@@ -227,11 +227,11 @@ namespace audio
 
       }
 
-      double d = (get_nanos() * m_paudiomixer->audio_get_channel_count()
+      ::f64 d = (get_nanos() * m_paudiomixer->audio_get_channel_count()
          * m_paudiomixer->audio_get_samples_per_second()
          * m_paudiomixer->audio_get_bits_per_sample()) / 8'000'000'000.0;
 
-      auto iStartOffset = (long long)d;
+      auto iStartOffset = (::i64)d;
 
       pplugin->m_iStartOffset = iStartOffset;
 

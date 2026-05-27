@@ -182,7 +182,7 @@
 
 
 
-const char * g_pszSecret = "b5741e50c9a04d25947732c81e201eca";
+const ::i8 * g_pszSecret = "b5741e50c9a04d25947732c81e201eca";
 
 
 

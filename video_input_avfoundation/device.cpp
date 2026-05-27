@@ -148,7 +148,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //   }
 //
 
-   unsigned int device::get_width()
+   ::u32 device::get_width()
 	{
 
 		if (m_bSetup)
@@ -167,7 +167,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 	}
 
 
-	unsigned int device::get_height()
+	::u32 device::get_height()
 	{
 
 		if (m_bSetup)
@@ -186,7 +186,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 	}
 
 
-	::int_size device::get_size()
+	::i32_size device::get_size()
 	{
 
 		if (m_bSetup)
@@ -205,7 +205,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 	}
 
 
-	int device::findType(unsigned int size, unsigned int frameRate)
+	int device::findType(::u32 size, ::u32 frameRate)
 	{
 
 		if (m_mapCaptureFormat.size() == 0)
@@ -224,7 +224,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 
 		}
 
-		unsigned int frameRateMax = 0;  
+		::u32 frameRateMax = 0;  
 		
 		subtype_map * psubtypemap = nullptr;
 
@@ -237,7 +237,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 				if (pair.element1() >= frameRateMax)
 				{
 
-					frameRateMax = (unsigned int) pair.element1();
+					frameRateMax = (::u32) pair.element1();
 
 					psubtypemap = &pair.element2();
 
@@ -258,7 +258,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 					if (frameRate > pair.element1())
 					{
 
-						frameRateMax = (unsigned int) pair.element1();
+						frameRateMax = (::u32) pair.element1();
 
 						psubtypemap = &pair.element2();
 
@@ -296,9 +296,9 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 	void device::buildLibraryofTypes()
 	{
 
-		unsigned int size;
+		::u32 size;
 
-		unsigned int framerate;
+		::u32 framerate;
 
 		int m_cCount = 0;
 
@@ -323,7 +323,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 
 			//FRM[framerate] = STM;
 
-			//m_mapCaptureFormat[int_size] = FRM;
+			//m_mapCaptureFormat[i32_size] = FRM;
 
 			m_cCount++;
 
@@ -423,7 +423,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 
 		bool success = false;
 
-		unsigned int bytes = 4;
+		::u32 bytes = 4;
 
 		//debug_print_out * pdebugprintout = &debug_print_out::get_instance();
 
@@ -442,11 +442,11 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 		if (pmemory)
 		{
 
-			unsigned int height = get_height();
+			::u32 height = get_height();
 
-			unsigned int width = get_width();
+			::u32 width = get_width();
 
-			unsigned int size = bytes * width * height;
+			::u32 size = bytes * width * height;
 
 			if (size == pmemory->size())
 			{
@@ -633,7 +633,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //      }
 //
-//      informationf("Framerate: %.2f fps", (float)m_iFrameRateDenominator / m_iFrameRateNumerator);
+//      informationf("Framerate: %.2f fps", (::f32)m_iFrameRateDenominator / m_iFrameRateNumerator);
 //
 //      m_pmemorymap = allocateø memory_map(m_iDevice);
 //
@@ -935,7 +935,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //            pframerate->m_iNumerator = frmival.discrete.numerator;
 //
-//            pframerate->m_fFps = (float) pframerate->m_iDenominator / (float) pframerate->m_iNumerator;
+//            pframerate->m_fFps = (::f32) pframerate->m_iDenominator / (::f32) pframerate->m_iNumerator;
 //
 //            pframerate->m_strDescription.formatf("%.2f", pframerate->m_fFps);
 //
@@ -960,7 +960,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 //
 //            pframerate->m_iNumerator = second_unsigned_short(*packed);
 //
-//            pframerate->m_fFps = (float) pframerate->m_iDenominator / (float) pframerate->m_iNumerator;
+//            pframerate->m_fFps = (::f32) pframerate->m_iDenominator / (::f32) pframerate->m_iNumerator;
 //
 //            pframerate->m_strDescription.formatf("%.2f", pframerate->m_fFps);
 //

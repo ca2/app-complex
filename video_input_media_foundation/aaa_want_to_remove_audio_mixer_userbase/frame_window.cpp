@@ -60,7 +60,7 @@ namespace multimedia
 
 
 
-         ::double_rectangle rectangleWnd;
+         ::f64_rectangle rectangleWnd;
          m_wndToolBar.window_rectangle(rectangleWnd);
          ::size size;
          m_wndToolBar.set_window_position(zorder_none, 0, 0, size.cx, size.cy, SWP_NOMOVE | SWP_NOZORDER);
@@ -201,7 +201,7 @@ namespace multimedia
          bool bResult = true;
 
          string str;
-         ::double_rectangle rectangleWnd;
+         ::f64_rectangle rectangleWnd;
          m_wndToolBar.window_rectangle(rectangleWnd);
          ::size size;
 
@@ -282,7 +282,7 @@ namespace multimedia
 
       }
 
-      bool frame_window::GetToolButtonText(string & str, unsigned int uiCmd)
+      bool frame_window::GetToolButtonText(string & str, ::u32 uiCmd)
       {
          __UNREFERENCED_PARAMETER(str);
          __UNREFERENCED_PARAMETER(uiCmd);

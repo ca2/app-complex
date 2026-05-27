@@ -235,7 +235,7 @@ namespace video_input_video_avfoundation
    //void render::on_layout(::draw2d::graphics_pointer& pgraphics)
    //{
 
-   //   ::int_rectangle rectangleX;
+   //   ::i32_rectangle rectangleX;
 
    //   this->rectangle(rectangleX);
 
@@ -474,8 +474,8 @@ namespace video_input_video_avfoundation
 
          //      //m_bFirstDone = true;
 
-         //      ::int_rectangle rectangleWork(0, 0, m_prender->m_pimageWork->get_size()->cx, m_prender->m_pimageWork->get_size()->cy);
-         //      ::int_rectangle rectangleImage(0, 0, m_prender->m_pimageImage->get_size()->cx, m_prender->m_pimageImage->get_size()->cy);
+         //      ::i32_rectangle rectangleWork(0, 0, m_prender->m_pimageWork->get_size()->cx, m_prender->m_pimageWork->get_size()->cy);
+         //      ::i32_rectangle rectangleImage(0, 0, m_prender->m_pimageImage->get_size()->cx, m_prender->m_pimageImage->get_size()->cy);
 
          //      rectangleImage.FitOnCenterOf(rectangleWork);
 
@@ -557,7 +557,7 @@ namespace video_input_video_avfoundation
 //
 //      }
 //
-//      unsigned char * p = nullptr;
+//      ::u8 * p = nullptr;
 //
 //      hr = pBuffer->Lock(&p, nullptr, nullptr);
 //

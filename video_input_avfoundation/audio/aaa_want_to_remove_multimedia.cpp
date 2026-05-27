@@ -813,7 +813,7 @@
 //       //
 //       //         }
 //       //
-//       //         const char * psz = strResponse;
+//       //         const ::i8 * psz = strResponse;
 //       //
 //       //         ::payload v;
 //       //

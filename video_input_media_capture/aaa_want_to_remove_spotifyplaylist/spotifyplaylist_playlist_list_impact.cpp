@@ -27,7 +27,7 @@ namespace mediaplaylist
    {
       simple_form_list_impact::install_message_routing(pchannel);
 
-      USER_MESSAGE_LINK(::user::e_message_left_button_double_click,pchannel,this,&playlist_list_impact::on_message_left_button_double_click);
+      USER_MESSAGE_LINK(::user::e_message_left_button_f64_click,pchannel,this,&playlist_list_impact::on_message_left_button_f64_click);
       USER_MESSAGE_LINK(::user::e_message_context_menu,pchannel,this,&playlist_list_impact::on_message_context_menu);
       USER_MESSAGE_LINK(::user::e_message_size,pchannel,this,&playlist_list_impact::on_message_size);
       USER_MESSAGE_LINK(::user::e_message_create,pchannel,this,&playlist_list_impact::on_message_create);
@@ -182,7 +182,7 @@ namespace mediaplaylist
    }
 
 
-   void playlist_list_impact::on_message_left_button_double_click(::message::message * pmessage)
+   void playlist_list_impact::on_message_left_button_f64_click(::message::message * pmessage)
    {
 
       auto pmouse = pmessage->m_union.m_pmouse;
@@ -218,9 +218,9 @@ namespace mediaplaylist
    void playlist_list_impact::on_message_context_menu(::message::message * pmessage)
    {
       ::pointer<::message::context_menu>pcontextmenu(pmessage);
-      ::int_point point = pcontextmenu->GetPoint();
+      ::i32_point point = pcontextmenu->GetPoint();
       ::collection::index iItem;
-      ::int_point ptClient = point;
+      ::i32_point ptClient = point;
       screen_to_client(&ptClient);
       if(_001HitTest_(ptClient,iItem))
       {

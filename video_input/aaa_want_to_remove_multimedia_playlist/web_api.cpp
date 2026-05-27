@@ -52,7 +52,7 @@ namespace multimedia_playlist
       try
       {
 
-         const char * pszResponse = strResponse;
+         const ::i8 * pszResponse = strResponse;
 
          network_payload.parse_network_payload(scopedstrResponse);
 

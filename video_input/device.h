@@ -11,7 +11,7 @@ namespace video_input
 
 	using subtype_map = string_map_base < ::i32_array_base >;
 
-	using frame_rate_map = map_base < unsigned long long, subtype_map >;
+	using frame_rate_map = map_base < ::u64, subtype_map >;
 
 	typedef void(*emergensyStopEventCallback)(int, void *);
 
@@ -42,13 +42,13 @@ namespace video_input
 
 		camera_parameters							m_cameraparametersPrevious;
 
-		::int_size									m_size;
+		::i32_size									m_size;
 
-		//unsigned int										m_uCurrentNumber;
+		//::u32										m_uCurrentNumber;
 
 		bool										m_bSetup;
 
-		map_base < unsigned long long, frame_rate_map>					m_mapCaptureFormat;
+		map_base < ::u64, frame_rate_map>					m_mapCaptureFormat;
 
 		pointer_array < media_format > 			m_mediaformata;
 
@@ -74,11 +74,11 @@ namespace video_input
 
 		
 
-		virtual unsigned int get_width();
+		virtual ::u32 get_width();
 
-		virtual unsigned int get_height();
+		virtual ::u32 get_height();
 
-		virtual ::int_size get_size();
+		virtual ::i32_size get_size();
 
 		virtual ::pointer<media_format>get_media_format(::collection::index i);
 
@@ -86,7 +86,7 @@ namespace video_input
 
 		virtual ::collection::index find_argb_32_format();
 
-		virtual ::collection::index find_format(unsigned int w, unsigned int h, unsigned int idealFramerate = 0);
+		virtual ::collection::index find_format(::u32 w, ::u32 h, ::u32 idealFramerate = 0);
 
 		virtual void set_format(::collection::index iIndex);
 
@@ -110,7 +110,7 @@ namespace video_input
 
 		virtual void buildLibraryofTypes();
 
-		virtual int findType(unsigned int size, unsigned int frameRate = 0);
+		virtual int findType(::u32 size, ::u32 frameRate = 0);
 
 		virtual void initialize_device();
 

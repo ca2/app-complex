@@ -26,7 +26,7 @@ namespace video_input_video_for_linux
 {
 
 
-   memory_map::memory_map(int_fast32_t iDevice)
+   memory_map::memory_map(i32_fast32_t iDevice)
    {
       struct v4l2_requestbuffers req;
       struct v4l2_buffer map_base;
@@ -106,7 +106,7 @@ namespace video_input_video_for_linux
 
 
 
-int_fast32_t v4l2_set_input(int_fast32_t iDevice, int *input)
+i32_fast32_t v4l2_set_input(i32_fast32_t iDevice, int *input)
 {
 	if (!iDevice || !input)
 		return -1;
@@ -115,7 +115,7 @@ int_fast32_t v4l2_set_input(int_fast32_t iDevice, int *input)
 			      : v4l2_ioctl(iDevice, VIDIOC_S_INPUT, input);
 }
 
-int_fast32_t v4l2_get_input_caps(int_fast32_t iDevice, int input, uint32_t *caps)
+i32_fast32_t v4l2_get_input_caps(i32_fast32_t iDevice, int input, uint32_t *caps)
 {
 	if (!iDevice || !caps)
 		return -1;
@@ -136,7 +136,7 @@ int_fast32_t v4l2_get_input_caps(int_fast32_t iDevice, int input, uint32_t *caps
 	return 0;
 }
 
-int_fast32_t v4l2_set_format(int_fast32_t iDevice, int *pwidth, int *pheight,
+i32_fast32_t v4l2_set_format(i32_fast32_t iDevice, int *pwidth, int *pheight,
 			     int *ppixelformat, int *pbytesperline)
 {
 	bool set = false;
@@ -174,7 +174,7 @@ int_fast32_t v4l2_set_format(int_fast32_t iDevice, int *pwidth, int *pheight,
 	return 0;
 }
 
-int_fast32_t v4l2_set_framerate(int_fast32_t iDevice, int *pdenominator, int * pnumerator)
+i32_fast32_t v4l2_set_framerate(i32_fast32_t iDevice, int *pdenominator, int * pnumerator)
 {
 	bool set = false;
 	struct v4l2_streamparm par;
@@ -207,7 +207,7 @@ int_fast32_t v4l2_set_framerate(int_fast32_t iDevice, int *pdenominator, int * p
 }
 
 
-int_fast32_t v4l2_set_standard(int_fast32_t iDevice, int *standard)
+i32_fast32_t v4l2_set_standard(i32_fast32_t iDevice, int *standard)
 {
 	if (!iDevice || !standard)
 		return -1;
@@ -223,7 +223,7 @@ int_fast32_t v4l2_set_standard(int_fast32_t iDevice, int *standard)
 	return 0;
 }
 
-int_fast32_t v4l2_enum_dv_timing(int_fast32_t iDevice, struct v4l2_dv_timings *dvt,
+i32_fast32_t v4l2_enum_dv_timing(i32_fast32_t iDevice, struct v4l2_dv_timings *dvt,
 				 int index)
 {
 #if !defined(VIDIOC_ENUM_DV_TIMINGS) || !defined(V4L2_IN_CAP_DV_TIMINGS)
@@ -248,7 +248,7 @@ int_fast32_t v4l2_enum_dv_timing(int_fast32_t iDevice, struct v4l2_dv_timings *d
 #endif
 }
 
-int_fast32_t v4l2_set_dv_timing(int_fast32_t iDevice, int *timing)
+i32_fast32_t v4l2_set_dv_timing(i32_fast32_t iDevice, int *timing)
 {
 	if (!iDevice || !timing)
 		return -1;

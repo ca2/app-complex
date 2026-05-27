@@ -5,20 +5,20 @@ extern "C" {
 #endif
 
 struct media_frames_per_second {
-	unsigned int numerator;
-	unsigned int denominator;
+	::u32 numerator;
+	::u32 denominator;
 };
 
-static inline double media_frames_per_second_to_frame_interval(
+static inline ::f64 media_frames_per_second_to_frame_interval(
 		struct media_frames_per_second fps)
 {
-	return (double)fps.denominator / fps.numerator;
+	return (::f64)fps.denominator / fps.numerator;
 }
 
-static inline double media_frames_per_second_to_per_second(
+static inline ::f64 media_frames_per_second_to_per_second(
 		struct media_frames_per_second fps)
 {
-	return (double)fps.numerator / fps.denominator;
+	return (::f64)fps.numerator / fps.denominator;
 }
 
 static inline bool media_frames_per_second_is_valid(

@@ -14,7 +14,7 @@ namespace video_input_video_for_linux
 
 	using subtype_map = string_map_base < ::i32_array_base >;
 
-	using frame_rate_map = map_base < unsigned long long, subtype_map >;
+	using frame_rate_map = map_base < ::u64, subtype_map >;
 
 	typedef void(*emergensyStopEventCallback)(int, void *);
 
@@ -30,7 +30,7 @@ namespace video_input_video_for_linux
 
       int                     m_iNumerator;
       int                     m_iDenominator;
-      float                   m_fFps;
+      ::f32                   m_fFps;
 
       string                  m_strDescription;
 
@@ -45,7 +45,7 @@ namespace video_input_video_for_linux
    public:
 
 
-      ::int_size              m_size;
+      ::i32_size              m_size;
       string                  m_strDescription;
 
       pointer_array < frame_rate >    m_frameratea;
@@ -115,7 +115,7 @@ namespace video_input_video_for_linux
       //::collection::index m_iIndex;
       string m_strDevice;
       //string m_strId;
-      int_fast32_t m_iDevice;
+      i32_fast32_t m_iDevice;
 
       int m_iInput;
       int m_iStandard;
@@ -143,13 +143,13 @@ namespace video_input_video_for_linux
 
 		//::video_input::camera_parameters			m_cameraparametersPrevious;
 
-		//::int_size										m_size;
+		//::i32_size										m_size;
 
-		//unsigned int												m_uCurrentNumber;
+		//::u32												m_uCurrentNumber;
 
 		//bool												m_bSetup;
 
-		//map_base < unsigned long long, frame_rate_map>					m_mapCaptureFormat;
+		//map_base < ::u64, frame_rate_map>					m_mapCaptureFormat;
 
 		////::array <::video_input::media_format >	m_mediaformata;
 
@@ -186,21 +186,21 @@ namespace video_input_video_for_linux
 
 		void set_emergency_stop_event(void(*func)(int, void *));
 
-		//virtual long readInfoOfDevice(IMFActivate * pActivate, unsigned int Num);
+		//virtual long readInfoOfDevice(IMFActivate * pActivate, ::u32 Num);
 
 		string get_name() override;
 
 		//int get_format_count() override;
 
-		unsigned int get_width() override;
+		::u32 get_width() override;
 
-		unsigned int get_height() override;
+		::u32 get_height() override;
 
-		::int_size get_size() override;
+		::i32_size get_size() override;
 
 		//::video_input::media_format get_format(::collection::index iIndex) override;
 
-		//::collection::index find_format(unsigned int w, unsigned int h, unsigned int idealFramerate = 0) override;
+		//::collection::index find_format(::u32 w, ::u32 h, ::u32 idealFramerate = 0) override;
 
 		void set_format(::collection::index iIndex) override;
 
@@ -224,7 +224,7 @@ namespace video_input_video_for_linux
 
 		void buildLibraryofTypes() override;
 
-		int findType(unsigned int size, unsigned int frameRate = 0) override;
+		int findType(::u32 size, ::u32 frameRate = 0) override;
 
 		//virtual long resetDevice(IMFActivate * pActivate);
 

@@ -1,7 +1,7 @@
 #include <d3d9.h>
 #include <Windows.h>
-#undef int_x
-#undef int_y
+#undef i32_x
+#undef i32_y
 #include <WindowsX.h>
 #include <mfapi.h>
 #include <mfidl.h>

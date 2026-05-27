@@ -357,7 +357,7 @@ namespace multimedia
          if(bHasControls)
          {
             
-            ::double_rectangle rectangle(0, 0, 0, 0);
+            ::f64_rectangle rectangle(0, 0, 0, 0);
             
             auto pst = allocateø simple_static();
 
@@ -381,7 +381,7 @@ namespace multimedia
 
          m_labelmap.erase_all();
 
-         //unsigned int dwKey;
+         //::u32 dwKey;
 
          //simple_static * pst;
 
@@ -473,11 +473,11 @@ namespace multimedia
 
          }
 
-         //::double_rectangle rectangle(0, 0, iEndX, iEndY);
+         //::f64_rectangle rectangle(0, 0, iEndX, iEndY);
          //::AdjustWindowRectEx(&rectangle, GetStyle(), false,
          //      GetExStyle());
          //set_window_position(0, 0, 0, rectangle.width(), rectangle.height(), SWP_NOMOVE | SWP_NOACTIVATE);
-         //::double_rectangle rectangleX;
+         //::f64_rectangle rectangleX;
          //this->rectangle(rectangleX);
 
          set_need_redraw();
@@ -631,7 +631,7 @@ namespace multimedia
          ::audio_mixer::control * pControl;
          if(get_mixer()->m_pdevice->m_mapDlgItemIDToControl.lookup(pusercontrol->GetDlgCtrlId(), pControl))
          {
-            pControl->OnVHScroll(pscroll->m_nSBCode, (unsigned int) pscroll->m_nPos, pscroll->m_pScrollBar);
+            pControl->OnVHScroll(pscroll->m_nSBCode, (::u32) pscroll->m_nPos, pscroll->m_pScrollBar);
          }
       }
 

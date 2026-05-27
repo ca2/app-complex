@@ -58,7 +58,7 @@ namespace mediaplay
 //      pgraphics->SetBkMode(TRANSPARENT);
       pgraphics->set_text_color(rgb(0, 0, 0));
       //   pgraphics->set(m_pfont);
-      ::double_rectangle rectangle;
+      ::f64_rectangle rectangle;
       this->rectangle(rectangle);
       pgraphics->color_blend(rectangle,
       rgb(255, 0, 0),
@@ -80,7 +80,7 @@ namespace mediaplay
       //USER_MESSAGE_LINK(::user::e_message_timer, pchannel, this, &record_notify_impact::on_timer);
    }
 
-   void record_notify_impact::GetParentClientRect(::int_rectangle * lprect)
+   void record_notify_impact::GetParentClientRect(::i32_rectangle * lprect)
    {
       m_puserinteractionParent->rectangle(lprect);
    }

@@ -29,19 +29,19 @@ namespace video
    {
    public:
 
-      unsigned char * m_data[MAX_AV_PLANES];
-      unsigned int m_linesize[MAX_AV_PLANES];
-      unsigned int m_width;
-      unsigned int m_height;
-      unsigned long long m_timestamp;
+      ::u8 * m_data[MAX_AV_PLANES];
+      ::u32 m_linesize[MAX_AV_PLANES];
+      ::u32 m_width;
+      ::u32 m_height;
+      ::u64 m_timestamp;
 
       enum_video_format m_eformat;
-      float m_color_matrix[16];
+      ::f32 m_color_matrix[16];
       bool m_full_range;
-      float m_color_range_min[3];
-      float m_color_range_max[3];
+      ::f32 m_color_range_min[3];
+      ::f32 m_color_range_max[3];
       bool m_flip;
-      unsigned char m_flags;
+      ::u8 m_flags;
 
       /* used internally by video */
       volatile long m_refs;
@@ -271,19 +271,19 @@ namespace video
 
    struct frame2
    {
-      unsigned char * m_data[MAX_AV_PLANES];
-      unsigned int m_linesize[MAX_AV_PLANES];
-      unsigned int m_width;
-      unsigned int m_height;
-      unsigned long long m_timestamp;
+      ::u8 * m_data[MAX_AV_PLANES];
+      ::u32 m_linesize[MAX_AV_PLANES];
+      ::u32 m_width;
+      ::u32 m_height;
+      ::u64 m_timestamp;
 
       enum_video_format m_eformat;
       enum_video_range_type m_erangetype;
-      float m_color_matrix[16];
-      float m_color_range_min[3];
-      float m_color_range_max[3];
+      ::f32 m_color_matrix[16];
+      ::f32 m_color_range_min[3];
+      ::f32 m_color_range_max[3];
       bool m_flip;
-      unsigned char m_flags;
+      ::u8 m_flags;
    };
 
 

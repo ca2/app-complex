@@ -22,7 +22,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   long long simple_os_drag_and_drop::increment_reference_count()
+   ::i64 simple_os_drag_and_drop::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -30,7 +30,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   long long simple_os_drag_and_drop::decrement_reference_count()
+   ::i64 simple_os_drag_and_drop::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();
@@ -93,7 +93,7 @@ namespace simple_os_drag_and_drop
 
       ppen->create_solid(4.0, argb(255, 50, 180, 255));
 
-      int_rectangle rectangle;
+      i32_rectangle rectangle;
 
       int iSize = minimum(m_rectangle.width(), m_rectangle.height());
 
@@ -129,7 +129,7 @@ namespace simple_os_drag_and_drop
       if(m_iDragAndDrop >= 2)
       {
 
-         ::int_rectangle rectangleText(rectangle);
+         ::i32_rectangle rectangleText(rectangle);
 
          rectangleText.inflate(100, 100);
 
@@ -192,9 +192,9 @@ namespace simple_os_drag_and_drop
 
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-      double_array daStart;
+      f64_array daStart;
 
-      double_array daAngle;
+      f64_array daAngle;
 
       daStart.add(0.0);
       daAngle.add(100.0);
@@ -245,13 +245,13 @@ namespace simple_os_drag_and_drop
       daStart.add(45.0);
       daAngle.add(-100.0);
 
-      ::int_rectangle rClient(m_rectangle);
+      ::i32_rectangle rClient(m_rectangle);
 
       pgraphics->fill_rectangle(rClient, argb(255, 192, 192, 185));
 
       int iColumnCount = 8;
 
-      int_rectangle r;
+      i32_rectangle r;
 
       r.top = 0;
 
@@ -294,7 +294,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void simple_os_drag_and_drop::draw_arc(::draw2d::graphics_pointer & pgraphics, int_rectangle & r, double dStart, double dAngle, bool bPath)
+   void simple_os_drag_and_drop::draw_arc(::draw2d::graphics_pointer & pgraphics, i32_rectangle & r, ::f64 dStart, ::f64 dAngle, bool bPath)
    {
 
 

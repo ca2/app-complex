@@ -28,7 +28,7 @@ struct audio_resampler;
 typedef struct audio_resampler audio_resampler_t;
 
 struct resample_info {
-	unsigned int            samples_per_sec;
+	::u32            samples_per_sec;
 	enum audio_format   format;
 	enum speaker_layout speakers;
 };
@@ -38,8 +38,8 @@ EXPORT audio_resampler_t *audio_resampler_create(const struct resample_info *dst
 EXPORT void audio_resampler_destroy(audio_resampler_t *resampler);
 
 EXPORT bool audio_resampler_resample(audio_resampler_t *resampler,
-		 unsigned char *output[], unsigned int *out_frames, unsigned long long *ts_offset,
-		 const unsigned char *const input[], unsigned int in_frames);
+		 ::u8 *output[], ::u32 *out_frames, ::u64 *ts_offset,
+		 const ::u8 *const input[], ::u32 in_frames);
 
 #ifdef __cplusplus
 }

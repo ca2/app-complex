@@ -36,8 +36,8 @@ string extract_mccdi(string str)
       if (FAILED(pIWMSyncReader->QueryInterface(&pIWMHeaderInfo3))) break;
 
       WMT_ATTR_DATATYPE wmtDataType = WMT_TYPE_STRING;
-      unsigned short wStreamNum = 0;
-      unsigned short wLength = 0;
+      ::u16 wStreamNum = 0;
+      ::u16 wLength = 0;
       if (FAILED(pIWMHeaderInfo3->GetAttributeByName(
                  &wStreamNum, g_wszWMMCDI, &wmtDataType, nullptr, &wLength))) break;
       if (FAILED(pIWMHeaderInfo3->GetAttributeByName(
@@ -49,7 +49,7 @@ string extract_mccdi(string str)
       mem.set_size(wLength);
 
       if (FAILED(pIWMHeaderInfo3->GetAttributeByName(
-                 &wStreamNum, g_wszWMMCDI, &wmtDataType, (unsigned char*)mem.get_data(), &wLength))) break;
+                 &wStreamNum, g_wszWMMCDI, &wmtDataType, (::u8*)mem.get_data(), &wLength))) break;
 
       bOK = true;
 

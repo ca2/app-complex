@@ -48,9 +48,9 @@ namespace multimedia
 
 
          void update_drawing_objects();
-         bool GetPageARect(::int_rectangle * lpRectClient, ::int_rectangle * lpRectTrack,  ::int_rectangle * lpRect);
-         bool GetPageBRect(::int_rectangle * lpRectClient, ::int_rectangle * lpRectTrack,  ::int_rectangle * lpRect);
-         bool GetThumbRect(::int_rectangle * lpRect);
+         bool GetPageARect(::i32_rectangle * lpRectClient, ::i32_rectangle * lpRectTrack,  ::i32_rectangle * lpRect);
+         bool GetPageBRect(::i32_rectangle * lpRectClient, ::i32_rectangle * lpRectTrack,  ::i32_rectangle * lpRect);
+         bool GetThumbRect(::i32_rectangle * lpRect);
 
          bool IsHover();
          void DoHoverSmartUpdate();
@@ -58,8 +58,8 @@ namespace multimedia
 
          virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
          virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
-         double GetRate() const;
-         void SetRate(double rate);
+         ::f64 GetRate() const;
+         void SetRate(::f64 rate);
          void  SetPos(int iPos) override;
          int   GetPos() const override;
          void  SetRange(int iMin, int iMax, bool bRedraw);
@@ -80,7 +80,7 @@ namespace multimedia
          int   ScrollPageA();
 
 
-         int SetTrackingPos(::int_point point);
+         int SetTrackingPos(::i32_point point);
 
 
          DECLARE_MESSAGE_HANDLER(on_message_create);

@@ -165,7 +165,7 @@ namespace multimedia
 
          auto pgraphics = create_memory_graphics();
 
-         ::double_rectangle rectangleX;
+         ::f64_rectangle rectangleX;
 
          this->rectangle(rectangleX);
 
@@ -249,7 +249,7 @@ namespace multimedia
       void slider::on_message_mouse_move(::message::message * pmessage)
       {
          auto pmouse = pmessage->m_union.m_pmouse;
-         ::int_point point = pmouse->m_point;
+         ::i32_point point = pmouse->m_point;
          screen_to_client()(point);
          if(m_bTracking)
          {
@@ -286,7 +286,7 @@ namespace multimedia
                SetCapture();
             }
 
-            ::double_rectangle rectangleThumb;
+            ::f64_rectangle rectangleThumb;
             GetThumbRect(rectangleThumb);
 
             if(rectangleThumb.contains(point))
@@ -306,7 +306,7 @@ namespace multimedia
                }
             }
 
-            ::double_rectangle rectangleX;
+            ::f64_rectangle rectangleX;
             this->rectangle(rectangleX);
             if(!rectangleX.contains(point))
             {
@@ -323,22 +323,22 @@ namespace multimedia
       void slider::on_message_left_button_down(::message::message * pmessage)
       {
          auto pmouse = pmessage->m_union.m_pmouse;
-         ::int_point point = pmouse->m_point;
+         ::i32_point point = pmouse->m_point;
          screen_to_client()(point);
-         ::double_rectangle rectangleTrack;
+         ::f64_rectangle rectangleTrack;
          GetThumbRect(rectangleTrack);
-         ::double_rectangle rectanglePageA;
-         ::double_rectangle rectangleX;
+         ::f64_rectangle rectanglePageA;
+         ::f64_rectangle rectangleX;
          this->rectangle(rectangleX);
          GetPageARect(rectangleX, rectangleTrack, rectanglePageA);
-         ::double_rectangle rectanglePageB;
+         ::f64_rectangle rectanglePageB;
          GetPageBRect(rectangleX, rectangleTrack, rectanglePageB);
          if(rectangleTrack.contains(point))
          {
             SetCapture();
             m_iTrackingPos = m_iPos;
             m_bTracking = true;
-            ::int_point pointTrackOffset;
+            ::i32_point pointTrackOffset;
             pointTrackOffset = point;
             pointTrackOffset -= rectangleTrack.top_left();
             m_sizeTrackOffset = pointTrackOffset;
@@ -385,7 +385,7 @@ namespace multimedia
       {
          auto pmouse = pmessage->m_union.m_pmouse;
          ::pointer<::user::interaction>pwindow = psession->GetCapture();
-         ::int_point point = pmouse->m_point;
+         ::i32_point point = pmouse->m_point;
          screen_to_client()(point);
          kill_timer(100);
          kill_timer(110);
@@ -430,7 +430,7 @@ namespace multimedia
          // trans   ::user::interaction::OnLButtonUp(pmouse->m_nFlags, point);
       }
 
-      bool slider::GetPageARect(::int_rectangle * lpRectClient,::int_rectangle * lpRectTrack, ::int_rectangle * lpRect)
+      bool slider::GetPageARect(::i32_rectangle * lpRectClient,::i32_rectangle * lpRectTrack, ::i32_rectangle * lpRect)
       {
          if(m_eorientation == e_orientation_horizontal)
          {
@@ -449,7 +449,7 @@ namespace multimedia
          return true;
       }
 
-      bool slider::GetPageBRect(::int_rectangle * lpRectClient,::int_rectangle * lpRectTrack, ::int_rectangle * lpRect)
+      bool slider::GetPageBRect(::i32_rectangle * lpRectClient,::i32_rectangle * lpRectTrack, ::i32_rectangle * lpRect)
       {
          if(m_eorientation == e_orientation_horizontal)
          {
@@ -472,10 +472,10 @@ namespace multimedia
       void slider::on_timer(::timer * ptimer)
       {
          ::audio_mixer_user::level_control::on_timer(ptimer);
-         ::int_point point;
-         ::double_rectangle rectangle;
-         ::double_rectangle rectangleTrack;
-         ::double_rectangle rectangleX;
+         ::i32_point point;
+         ::f64_rectangle rectangle;
+         ::f64_rectangle rectangleTrack;
+         ::f64_rectangle rectangleX;
          switch(ptimer->m_uTimer)
          {
          case 1317:
@@ -555,20 +555,20 @@ namespace multimedia
          // trans   ::user::interaction::OnTimer(ptimer->m_uTimer);
       }
 
-      bool slider::GetThumbRect(::int_rectangle * lpRect)
+      bool slider::GetThumbRect(::i32_rectangle * lpRect)
       {
-         ::double_rectangle rectangleX;
+         ::f64_rectangle rectangleX;
          this->rectangle(rectangleX);
-         double dInc;
-         double dPos;
+         ::f64 dInc;
+         ::f64 dPos;
          if(m_eorientation == e_orientation_horizontal)
          {
-            dInc = ((double) rectangleX.width() - (m_iMargin * 2)) / (m_iRangeMax - m_iRangeMin);
+            dInc = ((::f64) rectangleX.width() - (m_iMargin * 2)) / (m_iRangeMax - m_iRangeMin);
             dPos = m_iMargin;
          }
          else if(m_eorientation == e_orientation_vertical)
          {
-            dInc = ((double) rectangleX.height() - (m_iMargin * 2)) / (m_iRangeMax - m_iRangeMin);
+            dInc = ((::f64) rectangleX.height() - (m_iMargin * 2)) / (m_iRangeMax - m_iRangeMin);
             dPos = m_iMargin;
          }
          if(m_bTracking)
@@ -579,7 +579,7 @@ namespace multimedia
          {
             dPos += dInc * (m_iPos - m_iRangeMin);
          }
-         ::double_rectangle rectangleThumb;
+         ::f64_rectangle rectangleThumb;
          if(m_eorientation == e_orientation_horizontal)
          {
             lpRect->left = ((int) dPos) - 4;
@@ -608,13 +608,13 @@ namespace multimedia
 
 
 
-      int slider::SetTrackingPos(::int_point point)
+      int slider::SetTrackingPos(::i32_point point)
       {
-         double nPos;
+         ::f64 nPos;
          ::size sizeTrack;
 
          //    GetThumbSize(sizeTrack);
-         ::double_rectangle rectangleX;
+         ::f64_rectangle rectangleX;
          this->rectangle(rectangleX);
          sizeTrack.cx = 10;
          sizeTrack.cy = rectangleX.height();
@@ -762,7 +762,7 @@ namespace multimedia
          return true;
       }
 
-      void slider::SetRate(double dRate)
+      void slider::SetRate(::f64 dRate)
       {
          if(dRate > 1.0)
             dRate = 1.0;
@@ -774,9 +774,9 @@ namespace multimedia
 
       }
 
-      double slider::GetRate() const
+      ::f64 slider::GetRate() const
       {
-         return (((double) GetPos()) - m_iRangeMin) / (((double)m_iRangeMax) - m_iRangeMin);
+         return (((::f64) GetPos()) - m_iRangeMin) / (((::f64)m_iRangeMax) - m_iRangeMin);
       }
 
       void slider::on_layout(::draw2d::graphics_pointer & pgraphics)
@@ -797,12 +797,12 @@ namespace multimedia
 
          ::aura::savings & savings = session()->savings();
 
-         ::double_rectangle rectangleX;
+         ::f64_rectangle rectangleX;
          this->rectangle(rectangleX);
 
-         ::double_rectangle rectangleClip = rectangleX;
+         ::f64_rectangle rectangleClip = rectangleX;
 
-         ::double_rectangle rectangleDraw;
+         ::f64_rectangle rectangleDraw;
          rectangleDraw.intersect(rectangleClip, rectangleX);
 
          informationf("slider:OnPaint\n");
@@ -811,7 +811,7 @@ namespace multimedia
          informationf("rectangle.right : %d, ", rectangleDraw.right);
          informationf("rectangle.bottom: %d\n", rectangleDraw.bottom);
 
-//         ::double_rectangle rectangleSrcClipBox = rectangleDraw;
+//         ::f64_rectangle rectangleSrcClipBox = rectangleDraw;
 
          if(savings.is_trying_to_save(::e_resource_processing))
          {
@@ -822,10 +822,10 @@ namespace multimedia
             pgraphics->fill_rectangle(rectangleDraw, argb(127, 255,255,255));
          }
 
-//         ::double_rectangle rectangleD = rectangleX;
+//         ::f64_rectangle rectangleD = rectangleX;
 
 
-         ::double_rectangle rectangleThumb;
+         ::f64_rectangle rectangleThumb;
          GetThumbRect(rectangleThumb);
 
          pgraphics->set(m_pbrush);
@@ -878,11 +878,11 @@ namespace multimedia
 
       bool slider::IsHover()
       {
-         ::int_point point;
+         ::i32_point point;
          psession->get_cursor_position(&point);
          screen_to_client(&point);
 
-         ::double_rectangle rectangleX;
+         ::f64_rectangle rectangleX;
          this->rectangle(rectangleX);
          return rectangleX.contains(point) != 0;
 

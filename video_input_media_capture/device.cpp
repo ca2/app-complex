@@ -54,7 +54,7 @@ namespace video_input_media_capture
       //   if (m_pmediasource)
       //   {
 
-      //      unsigned int shift = sizeof(::video_input::parameter);
+      //      ::u32 shift = sizeof(::video_input::parameter);
 
       //      ::video_input::parameter * pParametr = (::video_input::parameter *)(&parameters);
 
@@ -66,7 +66,7 @@ namespace video_input_media_capture
       //      if (SUCCEEDED(hr))
       //      {
 
-      //         for (unsigned int i = 0; i < 10; i++)
+      //         for (::u32 i = 0; i < 10; i++)
       //         {
 
       //            if (pPrevParametr[i].m_lCurrentValue != pParametr[i].m_lCurrentValue || pPrevParametr[i].m_lFlag != pParametr[i].m_lFlag)
@@ -87,7 +87,7 @@ namespace video_input_media_capture
       //      if (SUCCEEDED(hr))
       //      {
 
-      //         for (unsigned int i = 0; i < 7; i++)
+      //         for (::u32 i = 0; i < 7; i++)
       //         {
 
       //            if (pPrevParametr[10 + i].m_lCurrentValue != pParametr[10 + i].m_lCurrentValue || pPrevParametr[10 + i].m_lFlag != pParametr[10 + i].m_lFlag)
@@ -122,7 +122,7 @@ namespace video_input_media_capture
       //   if (m_pmediasource)
       //   {
 
-      //      unsigned int shift = sizeof(::video_input::parameter);
+      //      ::u32 shift = sizeof(::video_input::parameter);
 
       //      ::video_input::parameter * pParametr = (::video_input::parameter *)(&out);
 
@@ -133,7 +133,7 @@ namespace video_input_media_capture
       //      if (SUCCEEDED(hr))
       //      {
 
-      //         for (unsigned int i = 0; i < 10; i++)
+      //         for (::u32 i = 0; i < 10; i++)
       //         {
 
       //            ::video_input::parameter temp;
@@ -164,7 +164,7 @@ namespace video_input_media_capture
       //      if (SUCCEEDED(hr))
       //      {
 
-      //         for (unsigned int i = 0; i < 7; i++)
+      //         for (::u32 i = 0; i < 7; i++)
       //         {
 
       //            ::video_input::parameter temp;
@@ -449,7 +449,7 @@ namespace video_input_media_capture
    }
 
 
-   unsigned int device::get_width()
+   ::u32 device::get_width()
    {
 
       if (m_bSetup)
@@ -467,7 +467,7 @@ namespace video_input_media_capture
    }
 
 
-   unsigned int device::get_height()
+   ::u32 device::get_height()
    {
 
       if (m_bSetup)
@@ -486,7 +486,7 @@ namespace video_input_media_capture
    }
 
 
-   ::int_size device::get_size()
+   ::i32_size device::get_size()
    {
 
       if (m_bSetup)
@@ -524,7 +524,7 @@ namespace video_input_media_capture
    //}
 
 
-   int device::findType(unsigned int size, unsigned int frameRate)
+   int device::findType(::u32 size, ::u32 frameRate)
    {
 
       if (m_mapCaptureFormat.size() == 0)
@@ -543,7 +543,7 @@ namespace video_input_media_capture
 
       }
 
-      unsigned int frameRateMax = 0;
+      ::u32 frameRateMax = 0;
 
       subtype_map * psubtypemap = nullptr;
 
@@ -556,7 +556,7 @@ namespace video_input_media_capture
             if (pair.element1() >= frameRateMax)
             {
 
-               frameRateMax = (unsigned int)pair.element1();
+               frameRateMax = (::u32)pair.element1();
 
                psubtypemap = &pair.element2();
 
@@ -577,7 +577,7 @@ namespace video_input_media_capture
                if (frameRate > pair.element1())
                {
 
-                  frameRateMax = (unsigned int)pair.element1();
+                  frameRateMax = (::u32)pair.element1();
 
                   psubtypemap = &pair.element2();
 
@@ -615,9 +615,9 @@ namespace video_input_media_capture
    void device::buildLibraryofTypes()
    {
 
-      unsigned int size;
+      ::u32 size;
 
-      unsigned int framerate;
+      ::u32 framerate;
 
       int m_cCount = 0;
 
@@ -644,7 +644,7 @@ namespace video_input_media_capture
 
          //FRM[framerate] = STM;
 
-         //m_mapCaptureFormat[int_size] = FRM;
+         //m_mapCaptureFormat[i32_size] = FRM;
 
          m_cCount++;
 
@@ -849,7 +849,7 @@ namespace video_input_media_capture
    {
       bool success = false;
 
-      unsigned int bytes = 4;
+      ::u32 bytes = 4;
 
       //debug_print_out * pdebugprintout = &debug_print_out::get_instance();
 
@@ -868,11 +868,11 @@ namespace video_input_media_capture
       if (pmemory)
       {
 
-         unsigned int height = get_height();
+         ::u32 height = get_height();
 
-         unsigned int width = get_width();
+         ::u32 width = get_width();
 
-         unsigned int size = bytes * width * height;
+         ::u32 size = bytes * width * height;
 
          if (size == pmemory->size())
          {
@@ -980,10 +980,10 @@ namespace video_input_media_capture
    }
 
 
-   //bool device::setup_device(unsigned int w, unsigned int h, unsigned int idealFramerate)
+   //bool device::setup_device(::u32 w, ::u32 h, ::u32 idealFramerate)
    //{
    //	
-   //	unsigned int atom = findType(w * h, idealFramerate);
+   //	::u32 atom = findType(w * h, idealFramerate);
 
    //	return setup_device(atom);
 
@@ -1007,7 +1007,7 @@ namespace video_input_media_capture
 
       auto formata = m_mediaframesource.SupportedFormats();
 
-      for (unsigned int uFormat = 0; uFormat < formata.Size(); uFormat++)
+      for (::u32 uFormat = 0; uFormat < formata.Size(); uFormat++)
       {
 
          auto pmediaformat = allocateø media_format();

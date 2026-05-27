@@ -52,11 +52,11 @@
 #ifndef __off_t_defined
 #define __off_t_defined
 #if _FILE_OFFSET_BITS == 64
-typedef long long off_t;
+typedef ::i64 off_t;
 #else
 typedef long off_t;
 #endif
-typedef long long off64_t;
+typedef ::i64 off64_t;
 #endif /* __off_t_defined */
 
 #define SIZE_T_FORMAT "%u"

@@ -31,13 +31,13 @@ static inline void decode_string(std::string  & str)
    str.replace("#22", "#");
 }
 
-char * c_utf8_str(wchar_t * str);
-wchar_t * c_wide_str(char * str);
+::i8 * c_utf8_str(wchar_t * str);
+wchar_t * c_wide_str(::i8 * str);
 
 static inline void EncodeDeviceId(std::string & encodedStr, const wchar_t *name_str, const wchar_t *path_str)
 {
-   char * n = c_utf8_str(name_str);
-   char * p = c_utf8_str(path_str);
+   ::i8 * n = c_utf8_str(name_str);
+   ::i8 * p = c_utf8_str(path_str);
    std::string name(n);
    std::string path(p);
    free(n);
@@ -161,7 +161,7 @@ enum ResType {
 	ResType_Custom
 };
 
-enum class BufferingType : long long {
+enum class BufferingType : ::i64 {
 	Auto,
 	On,
 	Off
@@ -236,7 +236,7 @@ enum class Action {
 	ConfigCrossbar2,
 };
 
-static unsigned int CALLBACK DShowThread(LPVOID ptr);
+static ::u32 CALLBACK DShowThread(LPVOID ptr);
 
 struct DShowInput {
 	video_enc *source;
@@ -306,16 +306,16 @@ struct DShowInput {
 	}
 
 	void OnEncodedVideoData(enum AVCodecID identification,
-			unsigned char *data, size_t size, long long ts);
+			::u8 *data, size_t size, ::i64 ts);
 	void OnEncodedAudioData(enum AVCodecID identification,
-			unsigned char *data, size_t size, long long ts);
+			::u8 *data, size_t size, ::i64 ts);
 
 	void OnVideoData(const VideoConfig &config,
-			unsigned char *data, size_t size,
-			long long startTime, long long endTime);
+			::u8 *data, size_t size,
+			::i64 startTime, ::i64 endTime);
 	void OnAudioData(const AudioConfig &config,
-			unsigned char *data, size_t size,
-			long long startTime, long long endTime);
+			::u8 *data, size_t size,
+			::i64 startTime, ::i64 endTime);
 
 	bool UpdateVideoConfig(aura_data *settings);
 	bool UpdateAudioConfig(aura_data *settings);
@@ -330,7 +330,7 @@ struct DShowInput {
 	void DShowLoop();
 };
 
-static unsigned int CALLBACK DShowThread(LPVOID ptr)
+static ::u32 CALLBACK DShowThread(LPVOID ptr)
 {
 	DShowInput *dshowInput = (DShowInput*)ptr;
 
@@ -355,7 +355,7 @@ static inline void ProcessMessages()
 void DShowInput::DShowLoop()
 {
 	while (true) {
-		//unsigned int ret = MsgWaitForMultipleObjects(1, &semaphore, false,
+		//::u32 ret = MsgWaitForMultipleObjects(1, &semaphore, false,
 		//		U32_INFINITE_TIMEOUT, QS_ALLINPUT);
 		//if (ret == (WAIT_OBJECT_0 + 1)) {
 		//	ProcessMessages();
@@ -432,7 +432,7 @@ static bool ResolutionAvailable(const VideoInfo &cap, int cx, int cy)
 
 #define DEVICE_INTERVAL_DIFF_LIMIT 20
 
-static bool FrameRateAvailable(const VideoInfo &cap, long long interval)
+static bool FrameRateAvailable(const VideoInfo &cap, ::i64 interval)
 {
 	return interval == FPS_HIGHEST || interval == FPS_MATCHING ||
 		between(cap.minInterval - DEVICE_INTERVAL_DIFF_LIMIT,
@@ -440,8 +440,8 @@ static bool FrameRateAvailable(const VideoInfo &cap, long long interval)
 				cap.maxInterval + DEVICE_INTERVAL_DIFF_LIMIT);
 }
 
-static long long FrameRateInterval(const VideoInfo &cap,
-		long long desired_interval)
+static ::i64 FrameRateInterval(const VideoInfo &cap,
+		::i64 desired_interval)
 {
 	return desired_interval < cap.minInterval ?
 		cap.minInterval :
@@ -479,7 +479,7 @@ static inline audio_format ConvertAudioFormat(AudioFormat format)
 //#define LOG_ENCODED_AUDIO_TS 1
 
 void DShowInput::OnEncodedVideoData(enum AVCodecID identification,
-		unsigned char *data, size_t size, long long ts)
+		::u8 *data, size_t size, ::i64 ts)
 {
 	if (!ffmpeg_decode_valid(video_decoder)) {
 		if (ffmpeg_decode_init(video_decoder, identification) < 0) {
@@ -497,7 +497,7 @@ void DShowInput::OnEncodedVideoData(enum AVCodecID identification,
 	}
 
 	if (got_output) {
-		frame.timestamp = (unsigned long long)ts * 100;
+		frame.timestamp = (::u64)ts * 100;
 		if (flip)
 			frame.flip = !frame.flip;
 #if LOG_ENCODED_VIDEO_TS
@@ -508,8 +508,8 @@ void DShowInput::OnEncodedVideoData(enum AVCodecID identification,
 }
 
 void DShowInput::OnVideoData(const VideoConfig &config,
-		unsigned char *data, size_t size,
-		long long startTime, long long endTime)
+		::u8 *data, size_t size,
+		::i64 startTime, ::i64 endTime)
 {
 	if (videoConfig.format == VideoFormat::H264) {
 		OnEncodedVideoData(AV_CODEC_ID_H264, data, size, startTime);
@@ -519,7 +519,7 @@ void DShowInput::OnVideoData(const VideoConfig &config,
 	const int cx = config.cx;
 	const int cy = config.cy;
 
-	frame.timestamp  = (unsigned long long)startTime * 100;
+	frame.timestamp  = (::u64)startTime * 100;
 	frame.width      = config.cx;
 	frame.height     = config.cy;
 	frame.format     = ConvertVideoFormat(config.format);
@@ -579,7 +579,7 @@ void DShowInput::OnVideoData(const VideoConfig &config,
 }
 
 void DShowInput::OnEncodedAudioData(enum AVCodecID identification,
-		unsigned char *data, size_t size, long long ts)
+		::u8 *data, size_t size, ::i64 ts)
 {
 	if (!ffmpeg_decode_valid(audio_decoder)) {
 		if (ffmpeg_decode_init(audio_decoder, identification) < 0) {
@@ -597,7 +597,7 @@ void DShowInput::OnEncodedAudioData(enum AVCodecID identification,
 	}
 
 	if (got_output) {
-		audio.timestamp = (unsigned long long)ts * 100;
+		audio.timestamp = (::u64)ts * 100;
 #if LOG_ENCODED_AUDIO_TS
 		blog(LOG_DEBUG, "audio ts: %llu", audio.timestamp);
 #endif
@@ -606,8 +606,8 @@ void DShowInput::OnEncodedAudioData(enum AVCodecID identification,
 }
 
 void DShowInput::OnAudioData(const AudioConfig &config,
-		unsigned char *data, size_t size,
-		long long startTime, long long endTime)
+		::u8 *data, size_t size,
+		::i64 startTime, ::i64 endTime)
 {
 	size_t block_size;
 
@@ -624,14 +624,14 @@ void DShowInput::OnAudioData(const AudioConfig &config,
 
 	audio.speakers        = (enum speaker_layout)config.channels;
 	audio.format          = ConvertAudioFormat(config.format);
-	audio.samples_per_sec = (unsigned int)config.sampleRate;
+	audio.samples_per_sec = (::u32)config.sampleRate;
 	audio.data[0]         = data;
 
 	block_size = get_audio_bytes_per_channel(audio.format) *
 		get_audio_channels(audio.speakers);
 
-	audio.frames          = (unsigned int)(size / block_size);
-	audio.timestamp       = (unsigned long long)startTime * 100;
+	audio.frames          = (::u32)(size / block_size);
+	audio.timestamp       = (::u64)startTime * 100;
 
 //	if (audio.format != AUDIO_FORMAT_UNKNOWN)
 	//	obs_source_output_audio(source, &audio);
@@ -713,10 +713,10 @@ static inline bool MatcherMatchVideoFormat(VideoFormat format,
 	return match;
 }
 
-static inline bool MatcherClosestFrameRateSelector(long long interval,
-		long long &best_match, const VideoInfo &info)
+static inline bool MatcherClosestFrameRateSelector(::i64 interval,
+		::i64 &best_match, const VideoInfo &info)
 {
-	long long current = FrameRateInterval(info, interval);
+	::i64 current = FrameRateInterval(info, interval);
 	if (llabs(interval - best_match) > llabs(interval - current))
 		best_match = current;
 	return true;
@@ -731,7 +731,7 @@ auto ResolutionMatcher = [](int cx, int cy)
 	};
 };
 
-auto FrameRateMatcher = [](long long interval)
+auto FrameRateMatcher = [](::i64 interval)
 {
 	return [interval](const VideoInfo &info)
 	{
@@ -747,7 +747,7 @@ auto VideoFormatMatcher = [](VideoFormat format, bool &did_match)
 	};
 };
 
-auto ClosestFrameRateSelector = [](long long interval, long long &best_match)
+auto ClosestFrameRateSelector = [](::i64 interval, ::i64 &best_match)
 {
 	return [interval, &best_match](const VideoInfo &info) mutable -> bool
 	{
@@ -794,7 +794,7 @@ static bool DetermineResolution(int &cx, int &cy, aura_data *settings,
 	return false;
 }
 
-static long long GetOBSFPS();
+static ::i64 GetOBSFPS();
 
 static inline bool IsEncoded(const VideoConfig &config)
 {
@@ -806,7 +806,7 @@ static inline bool IsEncoded(const VideoConfig &config)
 inline void DShowInput::SetupBuffering(aura_data *settings)
 {
 	BufferingType bufType;
-	unsigned int flags = obs_source_get_flags(source);
+	::u32 flags = obs_source_get_flags(source);
 	bool useBuffering;
 
 	bufType = (BufferingType)obs_data_get_int(settings, BUFFERING_VAL);
@@ -850,7 +850,7 @@ bool DShowInput::UpdateVideoConfig(aura_data *settings)
 
 	int resType = (int)obs_data_get_int(settings, RES_TYPE);
 	int cx = 0, cy = 0;
-	long long interval = 0;
+	::i64 interval = 0;
 	VideoFormat format = VideoFormat::Any;
 
 	if (resType == ResType_Custom) {
@@ -873,7 +873,7 @@ bool DShowInput::UpdateVideoConfig(aura_data *settings)
 
 		format = (VideoFormat)obs_data_get_int(settings, VIDEO_FORMAT);
 
-		long long best_interval = numeric_limits<long long>::maximum();
+		::i64 best_interval = numeric_limits<::i64>::maximum();
 		bool video_format_match = false;
 		bool caps_match = CapsMatch(dev, ResolutionMatcher(cx, cy),
 				VideoFormatMatcher(format, video_format_match),
@@ -924,13 +924,13 @@ bool DShowInput::UpdateVideoConfig(aura_data *settings)
 
 	DStr formatName = GetVideoFormatName(videoConfig.internalFormat);
 
-	double fps = 0.0;
+	::f64 fps = 0.0;
 
 	if (videoConfig.frameInterval)
-		fps = 10000000.0 / double(videoConfig.frameInterval);
+		fps = 10000000.0 / ::f64(videoConfig.frameInterval);
 
-	BPtr<char> name_utf8;
-	BPtr<char> path_utf8;
+	BPtr<::i8> name_utf8;
+	BPtr<::i8> path_utf8;
 	os_wcs_to_utf8_ptr(videoConfig.name.c_str(), videoConfig.name.size(),
 			&name_utf8);
 	os_wcs_to_utf8_ptr(videoConfig.path.c_str(), videoConfig.path.size(),
@@ -986,7 +986,7 @@ bool DShowInput::UpdateAudioConfig(aura_data *settings)
 	if (!success)
 		return false;
 
-	BPtr<char> name_utf8;
+	BPtr<::i8> name_utf8;
 	os_wcs_to_utf8_ptr(audioConfig.name.c_str(), audioConfig.name.size(),
 			&name_utf8);
 
@@ -1176,7 +1176,7 @@ static inline void AddCap(vector<Resolution> &resolutions, const VideoInfo &cap)
 #define MAKE_DSHOW_FPS(fps)                 (10000000LL/(fps))
 #define MAKE_DSHOW_FRACTIONAL_FPS(den, num) ((num)*10000000LL/(den))
 
-static long long GetOBSFPS()
+static ::i64 GetOBSFPS()
 {
 	obs_video_info ovi;
 	if (!obs_get_video_info(&ovi))
@@ -1187,7 +1187,7 @@ static long long GetOBSFPS()
 
 struct FPSFormat {
 	const_char_pointer text;
-	long long  interval;
+	::i64  interval;
 };
 
 static const FPSFormat validFPSFormats[] = {
@@ -1266,7 +1266,7 @@ static bool DeviceResolutionChanged(obs_properties_t *props, obs_property_t *p,
 
 struct VideoFormatName {
 	VideoFormat format;
-	const char  *name;
+	const ::i8  *name;
 };
 
 static const VideoFormatName videoFormatNames[] = {
@@ -1496,7 +1496,7 @@ static bool ResTypeChanged(obs_properties_t *props, obs_property_t *p,
 	return true;
 }
 
-static DStr GetFPSName(long long interval)
+static DStr GetFPSName(::i64 interval)
 {
 	DStr name;
 
@@ -1523,7 +1523,7 @@ static DStr GetFPSName(long long interval)
 }
 
 static void UpdateFPS(VideoDevice &device, VideoFormat format,
-		long long interval, int cx, int cy, obs_properties_t *props)
+		::i64 interval, int cx, int cy, obs_properties_t *props)
 {
 	obs_property_t *list_base = obs_properties_get(props, FRAME_INTERVAL);
 
@@ -1536,7 +1536,7 @@ static void UpdateFPS(VideoDevice &device, VideoFormat format,
 				interval == FPS_MATCHING;
 	for (const FPSFormat &fps_format : validFPSFormats) {
 		bool video_format_match = false;
-		long long format_interval = fps_format.interval;
+		::i64 format_interval = fps_format.interval;
 
 		bool available = CapsMatch(device,
 				ResolutionMatcher(cx, cy),
@@ -1573,12 +1573,12 @@ static DStr GetVideoFormatName(VideoFormat format)
 	}
 
 	std::string_cat(name, TEXT_FORMAT_UNKNOWN);
-	std::string_replace(name, "%1", std::to_string((long long)format).c_str());
+	std::string_replace(name, "%1", std::to_string((::i64)format).c_str());
 	return name;
 }
 
 static void UpdateVideoFormats(VideoDevice &device, VideoFormat format_,
-		int cx, int cy, long long interval, obs_properties_t *props)
+		int cx, int cy, ::i64 interval, obs_properties_t *props)
 {
 	set<VideoFormat> formats = { VideoFormat::Any };
 	auto format_gatherer = [&formats](const VideoInfo &info) mutable -> bool
@@ -1607,7 +1607,7 @@ static void UpdateVideoFormats(VideoDevice &device, VideoFormat format_,
 
 		size_t idx = obs_property_list_add_int(list_base,
 				obs_module_text(format.name),
-				(long long)format.format);
+				(::i64)format.format);
 		obs_property_list_item_disable(list_base, idx, !available);
 	}
 
@@ -1615,11 +1615,11 @@ static void UpdateVideoFormats(VideoDevice &device, VideoFormat format_,
 		return;
 
 	size_t idx = obs_property_list_add_int(list_base,
-			GetVideoFormatName(format_), (long long)format_);
+			GetVideoFormatName(format_), (::i64)format_);
 	obs_property_list_item_disable(list_base, idx, true);
 }
 
-static bool UpdateFPS(long long interval, obs_property_t *list_base)
+static bool UpdateFPS(::i64 interval, obs_property_t *list_base)
 {
 	size_t size = obs_property_list_item_count(list_base);
 	DStr name;
@@ -1650,7 +1650,7 @@ static bool UpdateFPS(long long interval, obs_property_t *list_base)
 static bool DeviceIntervalChanged(obs_properties_t *props, obs_property_t *p,
 		aura_data *settings)
 {
-	long long val = obs_data_get_int(settings, FRAME_INTERVAL);
+	::i64 val = obs_data_get_int(settings, FRAME_INTERVAL);
 
 	PropertiesData *data = (PropertiesData*)obs_properties_get_param(props);
 	const_char_pointer identification = obs_data_get_string(settings, VIDEO_DEVICE_ID);
@@ -1677,7 +1677,7 @@ static bool DeviceIntervalChanged(obs_properties_t *props, obs_property_t *p,
 							VIDEO_FORMAT);
 
 	bool video_format_matches = false;
-	long long best_interval = numeric_limits<long long>::maximum();
+	::i64 best_interval = numeric_limits<::i64>::maximum();
 	bool frameRateSupported = CapsMatch(device,
 			ResolutionMatcher(cx, cy),
 			VideoFormatMatcher(format, video_format_matches),
@@ -1687,9 +1687,9 @@ static bool DeviceIntervalChanged(obs_properties_t *props, obs_property_t *p,
 	if (video_format_matches &&
 			!frameRateSupported &&
 			best_interval != val) {
-		long long listed_val = 0;
+		::i64 listed_val = 0;
 		for (const FPSFormat &format : validFPSFormats) {
-			long long diff = llabs(format.interval - best_interval);
+			::i64 diff = llabs(format.interval - best_interval);
 			if (diff < DEVICE_INTERVAL_DIFF_LIMIT) {
 				listed_val = format.interval;
 				break;
@@ -1734,7 +1734,7 @@ static bool UpdateVideoFormats(VideoFormat format, obs_property_t *list_base)
 	if (!name->len)
 		name = GetVideoFormatName(format);
 
-	obs_property_list_add_int(list_base, name, (long long)format);
+	obs_property_list_add_int(list_base, name, (::i64)format);
 	obs_property_list_item_disable(list_base, 0, true);
 
 	return true;
@@ -1760,7 +1760,7 @@ static bool VideoFormatChanged(obs_properties_t *props, obs_property_t *p,
 		return true;
 	}
 
-	long long interval = obs_data_get_int(settings, FRAME_INTERVAL);
+	::i64 interval = obs_data_get_int(settings, FRAME_INTERVAL);
 
 	UpdateVideoFormats(device, curFormat, cx, cy, interval, props);
 	UpdateFPS(device, curFormat, interval, cx, cy, props);
@@ -1867,11 +1867,11 @@ static obs_properties_t *GetDShowProperties(void *obj)
 	p = obs_properties_add_list(ppts, BUFFERING_VAL, TEXT_BUFFERING,
 			OBS_COMBO_TYPE_LIST, OBS_COMBO_FORMAT_INT);
 	obs_property_list_add_int(p, TEXT_BUFFERING_AUTO,
-			(long long)BufferingType::Auto);
+			(::i64)BufferingType::Auto);
 	obs_property_list_add_int(p, TEXT_BUFFERING_ON,
-			(long long)BufferingType::On);
+			(::i64)BufferingType::On);
 	obs_property_list_add_int(p, TEXT_BUFFERING_OFF,
-			(long long)BufferingType::Off);
+			(::i64)BufferingType::Off);
 
 	obs_properties_add_bool(ppts, FLIP_IMAGE, TEXT_FLIP_IMAGE);
 
@@ -1883,11 +1883,11 @@ static obs_properties_t *GetDShowProperties(void *obj)
 	p = obs_properties_add_list(ppts, AUDIO_OUTPUT_MODE, TEXT_AUDIO_MODE,
 			OBS_COMBO_TYPE_LIST, OBS_COMBO_FORMAT_INT);
 	obs_property_list_add_int(p, TEXT_MODE_CAPTURE,
-			(long long)AudioMode::Capture);
+			(::i64)AudioMode::Capture);
 	obs_property_list_add_int(p, TEXT_MODE_DSOUND,
-			(long long)AudioMode::DirectSound);
+			(::i64)AudioMode::DirectSound);
 	obs_property_list_add_int(p, TEXT_MODE_WAVEOUT,
-			(long long)AudioMode::WaveOut);
+			(::i64)AudioMode::WaveOut);
 
 	if (!data->audioDevices.size())
 		return ppts;

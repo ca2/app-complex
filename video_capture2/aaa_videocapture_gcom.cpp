@@ -101,7 +101,7 @@ namespace video_capture
    {
 
 
-      ::int_rectangle rectangleX;
+      ::i32_rectangle rectangleX;
 
       this->rectangle(rectangleX);
 

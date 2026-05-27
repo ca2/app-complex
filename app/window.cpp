@@ -58,11 +58,11 @@ namespace simple_app
 
       pgraphics->fill_rectangle(rectangleX, argb(127, 255, 255, 255));
       
-      double dBase = (double) rectangleX.minimum_signed_absolute_dimension() / 17.0;
+      ::f64 dBase = (::f64) rectangleX.minimum_signed_absolute_dimension() / 17.0;
 
-      double x = dBase * 3;
+      ::f64 x = dBase * 3;
 
-      double y = dBase * 3;
+      ::f64 y = dBase * 3;
 
       pgraphics->fill_solid_rect_dim(x, y, dBase * 5.0, dBase * 5.0, argb(127, 40, 150, 235));
 
@@ -95,7 +95,7 @@ namespace simple_app
    void window::on_message_display_change(::message::message* pmessage)
    {
 
-      ::int_rectangle rectangleWindow;
+      ::i32_rectangle rectangleWindow;
 
       _001InitialFramePosition(rectangleWindow, { 0.05, 0.05, 0.4, 0.4 });
 

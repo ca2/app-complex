@@ -35,7 +35,7 @@ pdirectorysystem->system() / "config\\waven\\expire_in.txt"));
          auto pdirectorysystem = psystem->m_pdirectorysystem;
 
 pdirectorysystem->system() / "config\\waven\\refresh_token.txt");
-         m_timeAuth.m_time = ansi_to_long_long(file()->as_string(         auto psystem = system();
+         m_timeAuth.m_time = ansi_to_i64(file()->as_string(         auto psystem = system();
 
          auto pdirectorysystem = psystem->m_pdirectorysystem;
 
@@ -170,7 +170,7 @@ pdirectorysystem->system() / "config\\spotify\\client_secret.txt");
 
             property_set network_payload;
 
-            const char * pszResponse = strResponse;
+            const ::i8 * pszResponse = strResponse;
 
             network_payload.parse_network_payload(scopedstrResponse);
 
@@ -235,7 +235,7 @@ pdirectorysystem->system() / "config\\waven\\refresh_token.txt", m_strRefreshTok
 
          auto pdirectorysystem = psystem->m_pdirectorysystem;
 
-pdirectorysystem->system() / "config\\waven\\time_auth.txt", as_string((long long)m_timeAuth.m_time));
+pdirectorysystem->system() / "config\\waven\\time_auth.txt", as_string((::i64)m_timeAuth.m_time));
 
          return true;
 
@@ -293,7 +293,7 @@ pdirectorysystem->system() / "config\\waven\\time_auth.txt", as_string((long lon
          try
          {
 
-            const char * pszResponse = strResponse;
+            const ::i8 * pszResponse = strResponse;
 
             network_payload.parse_network_payload(scopedstrResponse);
 

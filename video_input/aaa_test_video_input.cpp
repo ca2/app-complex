@@ -50,7 +50,7 @@ int _tmain(int argc, TCHAR * argv[])
             {
                if (VI->is_frame_new(i - 1))
                {
-                  VI->get_pixels(i - 1, (unsigned char *)frame->imageData);
+                  VI->get_pixels(i - 1, (::u8 *)frame->imageData);
 
                   cvShowImage("VideoTest", frame);
 
@@ -59,7 +59,7 @@ int _tmain(int argc, TCHAR * argv[])
                else
                   countLeftFrames++;
 
-               char c = cvWaitKey(33);
+               ::i8 c = cvWaitKey(33);
 
                if (c == 27)
                   break;
@@ -105,14 +105,14 @@ int _tmain(int argc, TCHAR * argv[])
          {
             if (VI->is_frame_new(i - 1))
             {
-               VI->get_pixels(i - 1, (unsigned char *)frame->imageData, false);
+               VI->get_pixels(i - 1, (::u8 *)frame->imageData, false);
                cvShowImage("VideoTest1", frame);
                countLeftFrames = 0;
             }
             else
                countLeftFrames++;
 
-            char c = cvWaitKey(33);
+            ::i8 c = cvWaitKey(33);
 
             if (c == 27)
                break;

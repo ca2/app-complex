@@ -104,7 +104,7 @@ auto tickStart = ::duration::now();
       {
 auto tickEnd = ::duration::now();
 
-         double d = __double(tickEnd - tickStart) / (double)(iTest);
+         ::f64 d = __f64(tickEnd - tickStart) / (::f64)(iTest);
 
          str.formatf("%0.3f ms", d);
 

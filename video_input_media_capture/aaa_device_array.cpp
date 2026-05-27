@@ -27,7 +27,7 @@ namespace video_input_media_capture
 		//clearDevices();
 	}
 
-	//device * device_array::get_device(unsigned int i)
+	//device * device_array::get_device(::u32 i)
 	//{
 	//	if (i >= m_deviceptra.size())
 	//	{

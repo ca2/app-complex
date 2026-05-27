@@ -10,16 +10,16 @@
 //#if defined(__midl)
 //typedef struct {
 //	unsigned long  Data1;
-//	unsigned short Data2;
-//	unsigned short Data3;
-//	unsigned char           Data4[8];
+//	::u16 Data2;
+//	::u16 Data3;
+//	::u8           Data4[8];
 //} GUID;
 //#else
 //typedef struct _GUID {
 //	unsigned long  Data1;
-//	unsigned short Data2;
-//	unsigned short Data3;
-//	unsigned char  Data4[8];
+//	::u16 Data2;
+//	::u16 Data3;
+//	::u8  Data4[8];
 //} GUID;
 //#endif
 //#endif
@@ -85,9 +85,9 @@ typedef struct video_output video_t;
 
 
 //struct video_data {
-//   unsigned char *data[max_av_planes];
-//   unsigned int linesize[max_av_planes];
-//   unsigned long long timestamp;
+//   ::u8 *data[max_av_planes];
+//   ::u32 linesize[max_av_planes];
+//   ::u64 timestamp;
 //};
 
 struct video_output_info
@@ -96,9 +96,9 @@ struct video_output_info
 	string m_strName;
 
    enum_video_format m_eformat;
-   unsigned int m_uFpsNumerator;
-   unsigned int m_uFpsDenominator;
-	::int_size m_size;
+   ::u32 m_uFpsNumerator;
+   ::u32 m_uFpsDenominator;
+	::i32_size m_size;
    memsize m_memsizeCache;
 
    enum_video_colorspace m_ecolorspace;
@@ -110,7 +110,7 @@ struct video_output_info
 
 struct e_video_scale_info {
    enum_video_format m_eformat;
-   ::int_size m_size;
+   ::i32_size m_size;
    enum_video_range_type m_erangetype;
    enum_video_colorspace m_ecolorspace;
 };

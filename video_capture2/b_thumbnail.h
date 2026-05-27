@@ -1,6 +1,6 @@
 #pragma once
 
-const unsigned int WM_APP_PREVIEW_ERROR = WM_APP + 1;    // wparam = HRESULT
+const ::u32 WM_APP_PREVIEW_ERROR = WM_APP + 1;    // wparam = HRESULT
 
 class CThumbnail : public IMFSourceReaderCallback
 {
@@ -21,25 +21,25 @@ public:
    // IMFSourceReaderCallback methods
    STDMETHODIMP OnReadSample(
       HRESULT hrStatus,
-      unsigned int dwStreamIndex,
-      unsigned int dwStreamFlags,
-      long long llTimestamp,
+      ::u32 dwStreamIndex,
+      ::u32 dwStreamFlags,
+      ::i64 llTimestamp,
       IMFSample *pSample
    );
 
-   STDMETHODIMP OnHappening(unsigned int, IMFMediaEvent *)
+   STDMETHODIMP OnHappening(::u32, IMFMediaEvent *)
    {
       return S_OK;
    }
 
-   STDMETHODIMP OnFlush(unsigned int)
+   STDMETHODIMP OnFlush(::u32)
    {
       return S_OK;
    }
 
    HRESULT       SetDevice(IMFActivate *pActivate);
    HRESULT       CloseDevice();
-   HRESULT       ResizeVideo(unsigned short width, unsigned short height);
+   HRESULT       ResizeVideo(::u16 width, ::u16 height);
    HRESULT       CheckDeviceLost(DEV_BROADCAST_HDR *pHdr, BOOL *pbDeviceLost);
 
 protected:
@@ -65,7 +65,7 @@ protected:
 
 
    WCHAR                   *m_pwszSymbolicLink;
-   unsigned int                  m_cchSymbolicLink;
+   ::u32                  m_cchSymbolicLink;
 };
 
 

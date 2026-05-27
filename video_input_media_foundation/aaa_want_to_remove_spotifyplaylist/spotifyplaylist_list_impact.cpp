@@ -49,7 +49,7 @@ namespace mediaplaylist
    {
       simple_form_list_impact::install_message_routing(pchannel);
 
-      USER_MESSAGE_LINK(::user::e_message_left_button_double_click, pchannel, this, &list_impact::on_message_left_button_double_click);
+      USER_MESSAGE_LINK(::user::e_message_left_button_f64_click, pchannel, this, &list_impact::on_message_left_button_f64_click);
       USER_MESSAGE_LINK(::user::e_message_context_menu, pchannel, this, &list_impact::on_message_context_menu);
       USER_MESSAGE_LINK(::user::e_message_size, pchannel, this, &list_impact::on_message_size);
       USER_MESSAGE_LINK(::user::e_message_create, pchannel, this, &list_impact::on_message_create);
@@ -297,12 +297,12 @@ namespace mediaplaylist
    }
 
 
-   void list_impact::on_message_left_button_double_click(::message::message * pmessage)
+   void list_impact::on_message_left_button_f64_click(::message::message * pmessage)
    {
 
       auto pmouse = pmessage->m_union.m_pmouse;
 
-      ::int_point point(pmouse->m_point);
+      ::i32_point point(pmouse->m_point);
 
       screen_to_client()(point);
 
@@ -343,9 +343,9 @@ namespace mediaplaylist
    void list_impact::on_message_context_menu(::message::message * pmessage)
    {
       ::pointer<::message::context_menu>pcontextmenu(pmessage);
-      ::int_point point = pcontextmenu->GetPoint();
+      ::i32_point point = pcontextmenu->GetPoint();
       ::collection::index iItem;
-      ::int_point ptClient = point;
+      ::i32_point ptClient = point;
       screen_to_client(&ptClient);
       if(_001HitTest_(ptClient, iItem))
       {
@@ -438,16 +438,16 @@ namespace mediaplaylist
    /* return nullptr;
    }*/
 
-   void list_impact::_001DrawBackground(::draw2d::graphics *graphics, ::int_rectangle * lprect)
+   void list_impact::_001DrawBackground(::draw2d::graphics *graphics, ::i32_rectangle * lprect)
    {
-      ::double_rectangle rectangleThis;
+      ::f64_rectangle rectangleThis;
       this->rectangle(rectangleThis);
 
 //      ::user::list::_001DrawBackground(pgraphics, lprect);
 
       /*   if(m_enhmetafile != nullptr)
          {
-            ::double_rectangle rectangleUpdate;
+            ::f64_rectangle rectangleUpdate;
             pgraphics->get_clip_box(rectangleUpdate);
             CBaseRect rectangleMeta;
 

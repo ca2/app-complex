@@ -89,7 +89,7 @@ namespace video_input_media_foundation
 		STDMETHODIMP OnClockStop(MFTIME hnsSystemTime);
 		STDMETHODIMP OnClockPause(MFTIME hnsSystemTime);
 		STDMETHODIMP OnClockRestart(MFTIME hnsSystemTime);
-		STDMETHODIMP OnClockSetRate(MFTIME hnsSystemTime, float flRate);
+		STDMETHODIMP OnClockSetRate(MFTIME hnsSystemTime, ::f32 flRate);
 		// END IMFClockStateSink methods
 
 

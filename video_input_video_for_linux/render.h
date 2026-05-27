@@ -31,12 +31,12 @@ namespace video_input_video_for_linux
 
 #ifdef _DEBUG
 
-      long long increment_reference_count() override
+      ::i64 increment_reference_count() override
       {
          return ::object::increment_reference_count();
       }
 
-      long long decrement_reference_count() override
+      ::i64 decrement_reference_count() override
       {
          return ::object::decrement_reference_count();
       }

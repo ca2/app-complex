@@ -54,9 +54,9 @@ public:
 
 struct obs_source_frame
 {
-   unsigned long long timestamp;
+   ::u64 timestamp;
    int flip;
-   unsigned char * data[MAX_AV_PLANES];
+   ::u8 * data[MAX_AV_PLANES];
    int linesize[MAX_AV_PLANES];
    video_format format;
    int full_range;
@@ -67,8 +67,8 @@ struct obs_source_frame
 
 struct obs_source_audio
 {
-   unsigned long long timestamp;
-   unsigned char * data[MAX_AV_PLANES];
+   ::u64 timestamp;
+   ::u8 * data[MAX_AV_PLANES];
    int samples_per_sec;
    speaker_layout speakers;
    audio_format format;

@@ -25,8 +25,8 @@ namespace app_complex_form
       void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
 
 #ifdef _DEBUG
-      long long increment_reference_count() override;
-      long long decrement_reference_count() override;
+      ::i64 increment_reference_count() override;
+      ::i64 decrement_reference_count() override;
 #endif
 
       void install_message_routing(::channel * psender) override;

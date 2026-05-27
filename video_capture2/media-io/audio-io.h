@@ -66,23 +66,23 @@ enum speaker_layout {
 };
 
 struct audio_data {
-	unsigned char             *data[MAX_AV_PLANES];
-	unsigned int            frames;
-	unsigned long long            timestamp;
+	::u8             *data[MAX_AV_PLANES];
+	::u32            frames;
+	::u64            timestamp;
 };
 
 struct audio_output_data {
-	float               *data[MAX_AUDIO_CHANNELS];
+	::f32               *data[MAX_AUDIO_CHANNELS];
 };
 
 typedef bool (*audio_input_callback_t)(void *param,
-		unsigned long long start_ts, unsigned long long end_ts, unsigned long long *new_ts,
-		unsigned int active_mixers, struct audio_output_data *mixes);
+		::u64 start_ts, ::u64 end_ts, ::u64 *new_ts,
+		::u32 active_mixers, struct audio_output_data *mixes);
 
 struct audio_output_info {
-	const char          *name;
+	const ::i8          *name;
 
-	unsigned int            samples_per_sec;
+	::u32            samples_per_sec;
 	enum audio_format   format;
 	enum speaker_layout speakers;
 
@@ -91,12 +91,12 @@ struct audio_output_info {
 };
 
 struct audio_convert_info {
-	unsigned int            samples_per_sec;
+	::u32            samples_per_sec;
 	enum audio_format   format;
 	enum speaker_layout speakers;
 };
 
-static inline unsigned int get_audio_channels(enum speaker_layout speakers)
+static inline ::u32 get_audio_channels(enum speaker_layout speakers)
 {
 	switch (speakers) {
 	case SPEAKERS_MONO:             return 1;
@@ -168,7 +168,7 @@ static inline size_t get_audio_planes(enum audio_format format,
 }
 
 static inline size_t get_audio_size(enum audio_format format,
-		enum speaker_layout speakers, unsigned int frames)
+		enum speaker_layout speakers, ::u32 frames)
 {
 	bool planar = is_audio_planar(format);
 
@@ -177,17 +177,17 @@ static inline size_t get_audio_size(enum audio_format format,
 	       frames;
 }
 
-static inline unsigned long long audio_frames_to_ns(size_t sample_rate,
-		unsigned long long frames)
+static inline ::u64 audio_frames_to_ns(size_t sample_rate,
+		::u64 frames)
 {
 	util_::u32128_t val;
 	val = util_mul64_64(frames, 1000000000ULL);
-	val = util_div128_32(val, (unsigned int)sample_rate);
+	val = util_div128_32(val, (::u32)sample_rate);
 	return val.low;
 }
 
-static inline unsigned long long ns_to_audio_frames(size_t sample_rate,
-		unsigned long long frames)
+static inline ::u64 ns_to_audio_frames(size_t sample_rate,
+		::u64 frames)
 {
 	util_::u32128_t val;
 	val = util_mul64_64(frames, sample_rate);
@@ -216,7 +216,7 @@ EXPORT bool audio_output_active(const audio_t *audio);
 EXPORT size_t audio_output_get_block_size(const audio_t *audio);
 EXPORT size_t audio_output_get_planes(const audio_t *audio);
 EXPORT size_t audio_output_get_channels(const audio_t *audio);
-EXPORT unsigned int audio_output_get_sample_rate(const audio_t *audio);
+EXPORT ::u32 audio_output_get_sample_rate(const audio_t *audio);
 EXPORT const struct audio_output_info *audio_output_get_info(
 		const audio_t *audio);
 

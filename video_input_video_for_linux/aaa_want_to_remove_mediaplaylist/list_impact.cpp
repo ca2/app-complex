@@ -10,7 +10,7 @@ namespace mediaplaylist
    list_impact::list_impact()
    {
 
-      create_int(::user::int_list_item_draw_text_flags, e_align_left_center | DT_SINGLELINE | DT_END_ELLIPSIS);
+      create_int(::user::i32_list_item_draw_text_flags, e_align_left_center | DT_SINGLELINE | DT_END_ELLIPSIS);
 
       m_bPendingEnsureVisible = false;
 
@@ -619,16 +619,16 @@ namespace mediaplaylist
    /* return nullptr;
    }*/
 
-   void list_impact::_001DrawBackground(::draw2d::graphics *graphics, ::int_rectangle * lprect)
+   void list_impact::_001DrawBackground(::draw2d::graphics *graphics, ::i32_rectangle * lprect)
    {
-      ::double_rectangle rectangleThis;
+      ::f64_rectangle rectangleThis;
       this->rectangle(rectangleThis);
 
 //      ::user::list::_001DrawBackground(pgraphics, lprect);
 
       /*   if(m_enhmetafile != nullptr)
          {
-            ::double_rectangle rectangleUpdate;
+            ::f64_rectangle rectangleUpdate;
             pgraphics->get_clip_box(rectangleUpdate);
             CBaseRect rectangleMeta;
 
@@ -993,7 +993,7 @@ namespace mediaplaylist
 
       //      _001OnClip(pgraphics);
 
-      //      ::double_rectangle rectangleTest1(100, 100, 200, 200);
+      //      ::f64_rectangle rectangleTest1(100, 100, 200, 200);
 
       //      pgraphics->fill_rectangle(rectangleTest1, argb(255, 255, 255, 0));
 

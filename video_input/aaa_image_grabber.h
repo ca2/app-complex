@@ -30,7 +30,7 @@ namespace video_input
 		::memory * get_memory();
 
 		// Function of creation of the instance of the class
-		static HRESULT CreateInstance(image_grabber ** ppIG, unsigned int deviceID);
+		static HRESULT CreateInstance(image_grabber ** ppIG, ::u32 deviceID);
 
 	private:
 
@@ -38,7 +38,7 @@ namespace video_input
 
 		long m_cRef;
 
-		unsigned int m_uDevice;
+		::u32 m_uDevice;
 
 		comptr < IMFMediaSource > m_pmediasource;
 
@@ -55,7 +55,7 @@ namespace video_input
 
 
 
-		image_grabber(unsigned int deviceID);
+		image_grabber(::u32 deviceID);
 
 		HRESULT CreateTopology(IMFMediaSource * pSource, IMFActivate * pSinkActivate, IMFTopology ** ppTopo);
 
@@ -78,7 +78,7 @@ namespace video_input
 		STDMETHODIMP OnClockStop(MFTIME hnsSystemTime);
 		STDMETHODIMP OnClockPause(MFTIME hnsSystemTime);
 		STDMETHODIMP OnClockRestart(MFTIME hnsSystemTime);
-		STDMETHODIMP OnClockSetRate(MFTIME hnsSystemTime, float flRate);
+		STDMETHODIMP OnClockSetRate(MFTIME hnsSystemTime, ::f32 flRate);
 
 		// IMFSampleGrabberSinkCallback methods
 		STDMETHODIMP OnSetPresentationClock(IMFPresentationClock * pClock);

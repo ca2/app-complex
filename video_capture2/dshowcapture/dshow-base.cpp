@@ -146,7 +146,7 @@ static bool PinConfigHasMajorType(IPin *pin, const GUID &type)
 	if (FAILED(hr))
 		return false;
 
-	vector<unsigned char> caps;
+	vector<::u8> caps;
 	caps.resize(size);
 
 	for (int i = 0; i < count; i++) {
@@ -197,7 +197,7 @@ static HRESULT GetPinCategory(IPin *pin, GUID &category)
 		return E_POINTER;
 
 	ComQIPtr<IKsPropertySet>  propertySet(pin);
-	unsigned int                     size;
+	::u32                     size;
 
 	if (propertySet == nullptr)
 		return E_NOINTERFACE;
@@ -349,7 +349,7 @@ bool GetFilterByMedium(const CLSID &identification, REGPINMEDIUM &medium,
 	ComPtr<ICreateDevEnum>  deviceEnum;
 	ComPtr<IEnumMoniker>    enumMoniker;
 	ComPtr<IMoniker>        moniker;
-	unsigned int                   count = 0;
+	::u32                   count = 0;
 	HRESULT                 hr;
 
 	hr = CoCreateInstance(CLSID_SystemDeviceEnum, nullptr,

@@ -15,7 +15,7 @@
 namespace mediaplaylist
 {
 
-   static unsigned long long g_usedid[] =
+   static ::u64 g_usedid[] =
    {
 
       id_do_play,
@@ -28,7 +28,7 @@ namespace mediaplaylist
    };
 
    
-   unsigned long long* usedid()
+   ::u64* usedid()
    {
 
       return g_usedid;

@@ -42,7 +42,7 @@ namespace multimedia
       }
 
 
-      void     device::open(unsigned int uiMixerId, UINT_PTR dwCallback, unsigned int dwInstance, unsigned int fdwOpen)
+      void     device::open(::u32 uiMixerId, UINT_PTR dwCallback, ::u32 dwInstance, ::u32 fdwOpen)
       {
 
          return error_failed;
@@ -95,7 +95,7 @@ namespace multimedia
       {
       }
 
-      void device::OnMixerLineChange(unsigned int dwLineID)
+      void device::OnMixerLineChange(::u32 dwLineID)
       {
          ::audio_mixer::source * pSource;
          if(m_mapIDToLine.lookup(dwLineID, pSource))
@@ -104,7 +104,7 @@ namespace multimedia
          }
       }
 
-      void device::OnMixerControlChange(unsigned int dwControlID)
+      void device::OnMixerControlChange(::u32 dwControlID)
       {
          ::audio_mixer::control * pControl;
          if(m_mapIDToControl.lookup(dwControlID, pControl))

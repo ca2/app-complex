@@ -140,7 +140,7 @@ namespace video_input_video_for_linux
    }
 
 
-   unsigned int device::get_width()
+   ::u32 device::get_width()
 	{
 
 		if (m_bSetup)
@@ -159,7 +159,7 @@ namespace video_input_video_for_linux
 	}
 
 
-	unsigned int device::get_height()
+	::u32 device::get_height()
 	{
 
 		if (m_bSetup)
@@ -178,7 +178,7 @@ namespace video_input_video_for_linux
 	}
 
 
-	::int_size device::get_size()
+	::i32_size device::get_size()
 	{
 
 		if (m_bSetup)
@@ -197,7 +197,7 @@ namespace video_input_video_for_linux
 	}
 
 
-	int device::findType(unsigned int size, unsigned int frameRate)
+	int device::findType(::u32 size, ::u32 frameRate)
 	{
 
 		if (m_mapCaptureFormat.size() == 0)
@@ -216,7 +216,7 @@ namespace video_input_video_for_linux
 
 		}
 
-		unsigned int frameRateMax = 0;  
+		::u32 frameRateMax = 0;  
 		
 		subtype_map * psubtypemap = nullptr;
 
@@ -229,7 +229,7 @@ namespace video_input_video_for_linux
 				if (pair.element1() >= frameRateMax)
 				{
 
-					frameRateMax = (unsigned int) pair.element1();
+					frameRateMax = (::u32) pair.element1();
 
 					psubtypemap = &pair.element2();
 
@@ -250,7 +250,7 @@ namespace video_input_video_for_linux
 					if (frameRate > pair.element1())
 					{
 
-						frameRateMax = (unsigned int) pair.element1();
+						frameRateMax = (::u32) pair.element1();
 
 						psubtypemap = &pair.element2();
 
@@ -288,9 +288,9 @@ namespace video_input_video_for_linux
 	void device::buildLibraryofTypes()
 	{
 
-		unsigned int size;
+		::u32 size;
 
-		unsigned int framerate;
+		::u32 framerate;
 
 		int m_cCount = 0;
 
@@ -315,7 +315,7 @@ namespace video_input_video_for_linux
 
 			//FRM[framerate] = STM;
 
-			//m_mapCaptureFormat[int_size] = FRM;
+			//m_mapCaptureFormat[i32_size] = FRM;
 
 			m_cCount++;
 
@@ -412,7 +412,7 @@ namespace video_input_video_for_linux
 
 		bool success = false;
 
-		unsigned int bytes = 4;
+		::u32 bytes = 4;
 
 		//debug_print_out * pdebugprintout = &debug_print_out::get_instance();
 
@@ -431,11 +431,11 @@ namespace video_input_video_for_linux
 		if (pmemory)
 		{
 
-			unsigned int height = get_height();
+			::u32 height = get_height();
 
-			unsigned int width = get_width();
+			::u32 width = get_width();
 
-			unsigned int size = bytes * width * height;
+			::u32 size = bytes * width * height;
 
 			if (size == pmemory->size())
 			{
@@ -622,7 +622,7 @@ namespace video_input_video_for_linux
 
       }
 
-      informationf("Framerate: %.2f fps", (float)m_iFrameRateDenominator / m_iFrameRateNumerator);
+      informationf("Framerate: %.2f fps", (::f32)m_iFrameRateDenominator / m_iFrameRateNumerator);
 
       m_pmemorymap = allocateø memory_map(m_iDevice);
 
@@ -926,7 +926,7 @@ namespace video_input_video_for_linux
 
             pframerate->m_iNumerator = frmival.discrete.numerator;
 
-            pframerate->m_fFps = (float) pframerate->m_iDenominator / (float) pframerate->m_iNumerator;
+            pframerate->m_fFps = (::f32) pframerate->m_iDenominator / (::f32) pframerate->m_iNumerator;
 
             pframerate->m_strDescription.formatf("%.2f", pframerate->m_fFps);
 
@@ -951,7 +951,7 @@ namespace video_input_video_for_linux
 
             pframerate->m_iNumerator = upper_unsigned_short(*packed);
 
-            pframerate->m_fFps = (float) pframerate->m_iDenominator / (float) pframerate->m_iNumerator;
+            pframerate->m_fFps = (::f32) pframerate->m_iDenominator / (::f32) pframerate->m_iNumerator;
 
             pframerate->m_strDescription.formatf("%.2f", pframerate->m_fFps);
 

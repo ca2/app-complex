@@ -21,7 +21,7 @@
 #include "aura/os/macos/macos.h"
 
 
-int main(int argc, char *argv[])
+int main(int argc, ::i8 *argv[])
 {
    
    if(!defer_core_init())

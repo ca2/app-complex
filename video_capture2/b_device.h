@@ -3,12 +3,12 @@
 // Function pointer for the function that transforms the pimage->
 
 typedef void(*IMAGE_TRANSFORM_FN)(
-   unsigned char*       pDest,
+   ::u8*       pDest,
    int        lDestStride,
-   const unsigned char* pSrc,
+   const ::u8* pSrc,
    int        lSrcStride,
-   unsigned int       dwWidthInPixels,
-   unsigned int       dwHeightInPixels
+   ::u32       dwWidthInPixels,
+   ::u32       dwHeightInPixels
    );
 
 
@@ -31,7 +31,7 @@ private:
    int                    m_lDefaultStride;
    MFRatio                 m_PixelAR;
    MFVideoInterlaceMode    m_interlace;
-   ::int_rectangle                    m_rcDest;       // Destination int_rectangle
+   ::i32_rectangle                    m_rcDest;       // Destination i32_rectangle
 
                                            // Drawing
    IMAGE_TRANSFORM_FN      m_convertFn;    // Function to convert the video to RGB32
@@ -45,10 +45,10 @@ private:
 
 public:
    bool saveframe;
-   unsigned int                    m_width;
-   unsigned int                    m_height;
-   unsigned int                    width;
-   unsigned int                    height;
+   ::u32                    m_width;
+   ::u32                    m_height;
+   ::u32                    width;
+   ::u32                    height;
    DrawDevice();
    virtual ~DrawDevice();
 
@@ -61,7 +61,7 @@ public:
 
    // What video formats we accept
    BOOL     IsFormatSupported(REFGUID subtype) const;
-   HRESULT  GetFormat(unsigned int index, GUID *pSubtype)  const;
+   HRESULT  GetFormat(::u32 index, GUID *pSubtype)  const;
 };
 
 

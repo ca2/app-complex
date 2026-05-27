@@ -60,7 +60,7 @@ namespace audio
 #endif
 
 #ifndef WINDOWS
-unsigned int time_get_time();
+::u32 time_get_time();
 #define MMSYSERR_NOERROR 0
 #define MMSYSERR_ERROR 1
 

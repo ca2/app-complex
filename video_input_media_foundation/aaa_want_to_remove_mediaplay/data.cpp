@@ -185,7 +185,7 @@ namespace mediaplay
          if (::is_set(pFind))
          {
 
-            const char * psz = &m_strAsc.c_str()[iFind];
+            const ::i8 * psz = &m_strAsc.c_str()[iFind];
 
             string strFrame;
 

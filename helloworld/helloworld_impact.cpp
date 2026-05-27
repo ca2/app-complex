@@ -72,7 +72,7 @@ namespace helloworld
    void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      int_rectangle rectangleX;
+      i32_rectangle rectangleX;
 
       GetClientRect(rectangleX);
 

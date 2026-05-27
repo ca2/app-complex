@@ -65,19 +65,19 @@ enum video_range_type {
 };
 
 struct video_data {
-	unsigned char           *data[MAX_AV_PLANES];
-	unsigned int          linesize[MAX_AV_PLANES];
-	unsigned long long          timestamp;
+	::u8           *data[MAX_AV_PLANES];
+	::u32          linesize[MAX_AV_PLANES];
+	::u64          timestamp;
 };
 
 struct video_output_info {
-	const char        *name;
+	const ::i8        *name;
 
 	enum video_format format;
-	unsigned int          fps_num;
-	unsigned int          fps_den;
-	unsigned int          width;
-	unsigned int          height;
+	::u32          fps_num;
+	::u32          fps_den;
+	::u32          width;
+	::u32          height;
 	size_t            cache_size;
 
 	enum video_colorspace colorspace;
@@ -134,17 +134,17 @@ enum video_scale_type {
 
 struct video_scale_info {
 	enum video_format     format;
-	unsigned int              width;
-	unsigned int              height;
+	::u32              width;
+	::u32              height;
 	enum video_range_type range;
 	enum video_colorspace colorspace;
 };
 
-EXPORT enum video_format video_format_from_fourcc(unsigned int fourcc);
+EXPORT enum video_format video_format_from_fourcc(::u32 fourcc);
 
 EXPORT bool video_format_get_parameters(enum video_colorspace color_space,
-		enum video_range_type range, float matrix[16],
-		float min_range[3], float max_range[3]);
+		enum video_range_type range, ::f32 matrix[16],
+		::f32 min_range[3], ::f32 max_range[3]);
 
 #define VIDEO_OUTPUT_SUCCESS       0
 #define VIDEO_OUTPUT_INVALIDPARAM -1
@@ -166,19 +166,19 @@ EXPORT bool video_output_active(const video_t *video);
 EXPORT const struct video_output_info *video_output_get_info(
 		const video_t *video);
 EXPORT bool video_output_lock_frame(video_t *video, struct video_frame *frame,
-		int count, unsigned long long timestamp);
+		int count, ::u64 timestamp);
 EXPORT void video_output_unlock_frame(video_t *video);
-EXPORT unsigned long long video_output_get_frame_time(const video_t *video);
+EXPORT ::u64 video_output_get_frame_time(const video_t *video);
 EXPORT void video_output_stop(video_t *video);
 EXPORT bool video_output_stopped(video_t *video);
 
 EXPORT enum video_format video_output_get_format(const video_t *video);
-EXPORT unsigned int video_output_get_width(const video_t *video);
-EXPORT unsigned int video_output_get_height(const video_t *video);
-EXPORT double video_output_get_frame_rate(const video_t *video);
+EXPORT ::u32 video_output_get_width(const video_t *video);
+EXPORT ::u32 video_output_get_height(const video_t *video);
+EXPORT ::f64 video_output_get_frame_rate(const video_t *video);
 
-EXPORT unsigned int video_output_get_skipped_frames(const video_t *video);
-EXPORT unsigned int video_output_get_total_frames(const video_t *video);
+EXPORT ::u32 video_output_get_skipped_frames(const video_t *video);
+EXPORT ::u32 video_output_get_total_frames(const video_t *video);
 
 
 #ifdef __cplusplus

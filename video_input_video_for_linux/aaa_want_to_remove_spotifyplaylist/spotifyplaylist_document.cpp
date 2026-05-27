@@ -806,12 +806,12 @@ namespace mediaplaylist
          return bFlag;
    }
 
-   void document::data::set_int(const ::scoped_string & scopedstr, long long iValue)
+   void document::data::set_int(const ::scoped_string & scopedstr, ::i64 iValue)
    {
       m_xmldoc.get_root()->set_attr(scopedstr, iValue);
    }
 
-   long long document::data::get_int(const ::scoped_string & scopedstr, long long iDefault)
+   ::i64 document::data::get_int(const ::scoped_string & scopedstr, ::i64 iDefault)
    {
       int iValue;
       if(!m_xmldoc.get_root()->get_attr(scopedstr,iValue))

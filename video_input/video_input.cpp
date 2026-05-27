@@ -112,16 +112,16 @@ namespace video_input
 {
 
 
-	void processPixels(color32_t* src, color32_t* dst, unsigned int width, unsigned int height, unsigned int bpp, bool bRGB, bool bFlip)
+	void processPixels(color32_t* src, color32_t* dst, ::u32 width, ::u32 height, ::u32 bpp, bool bRGB, bool bFlip)
 	{
 
-		unsigned int widthInBytes = width * bpp;
+		::u32 widthInBytes = width * bpp;
 
-		unsigned int numBytes = widthInBytes * height;
+		::u32 numBytes = widthInBytes * height;
 
-		//unsigned int numInts = numBytes >> 2;
+		//::u32 numInts = numBytes >> 2;
 
-		//unsigned int widthInInts = widthInBytes >> 2;
+		//::u32 widthInInts = widthInBytes >> 2;
 
 		int* dstInt, * srcInt;
 
@@ -134,7 +134,7 @@ namespace video_input
 			if (bFlip)
 			{
 
-				for (unsigned int y = 0; y < height; y++)
+				for (::u32 y = 0; y < height; y++)
 				{
 
 					dstInt = (int*)(dst + (y * widthInBytes));
@@ -151,11 +151,11 @@ namespace video_input
 
 				memory_copy(dst, src, numBytes);
 
-				unsigned char* pbyteDst = (unsigned char*)dst;
+				::u8* pbyteDst = (::u8*)dst;
 
 				pbyteDst += 3;
 
-				for (unsigned int u = 0; u < numBytes; u += 4)
+				for (::u32 u = 0; u < numBytes; u += 4)
 				{
 
 					pbyteDst[0] = 255;
@@ -171,13 +171,13 @@ namespace video_input
 			if (bFlip)
 			{
 
-				unsigned int x = 0;
+				::u32 x = 0;
 				int y = (height - 1) * widthInBytes;
 				src += y;
 
 				auto w2 = widthInBytes * 2;
 
-				for (unsigned int i = 0; i < numBytes; i += 4)
+				for (::u32 i = 0; i < numBytes; i += 4)
 				{
 
 					if (x >= width)
@@ -208,7 +208,7 @@ namespace video_input
 			else
 			{
 
-				for (unsigned int u = 0; u < numBytes; u += 4)
+				for (::u32 u = 0; u < numBytes; u += 4)
 				{
 
 					*dst = *(src + 3);

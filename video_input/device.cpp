@@ -42,7 +42,7 @@ namespace video_input
 			//if (m_pmediasource)
 			//{
 
-			//	unsigned int shift = sizeof(parameter);
+			//	::u32 shift = sizeof(parameter);
 
 			//	parameter * pParametr = (parameter *)(&parameters);
 
@@ -54,7 +54,7 @@ namespace video_input
 			//	if (SUCCEEDED(hr))
 			//	{
 
-			//		for (unsigned int i = 0; i < 10; i++)
+			//		for (::u32 i = 0; i < 10; i++)
 			//		{
 
 			//			if (pPrevParametr[i].m_lCurrentValue != pParametr[i].m_lCurrentValue || pPrevParametr[i].m_lFlag != pParametr[i].m_lFlag)
@@ -75,7 +75,7 @@ namespace video_input
 			//	if (SUCCEEDED(hr))
 			//	{
 
-			//		for (unsigned int i = 0; i < 7; i++)
+			//		for (::u32 i = 0; i < 7; i++)
 			//		{
 
 			//			if (pPrevParametr[10 + i].m_lCurrentValue != pParametr[10 + i].m_lCurrentValue || pPrevParametr[10 + i].m_lFlag != pParametr[10 + i].m_lFlag)
@@ -109,7 +109,7 @@ namespace video_input
 		//	if (m_pmediasource)
 		//	{
 
-		//		unsigned int shift = sizeof(parameter);
+		//		::u32 shift = sizeof(parameter);
 
 		//		parameter * pParametr = (parameter *)(&out);
 
@@ -120,7 +120,7 @@ namespace video_input
 		//		if (SUCCEEDED(hr))
 		//		{
 
-		//			for (unsigned int i = 0; i < 10; i++)
+		//			for (::u32 i = 0; i < 10; i++)
 		//			{
 
 		//				parameter temp;
@@ -151,7 +151,7 @@ namespace video_input
 		//		if (SUCCEEDED(hr))
 		//		{
 
-		//			for (unsigned int i = 0; i < 7; i++)
+		//			for (::u32 i = 0; i < 7; i++)
 		//			{
 
 		//				parameter temp;
@@ -229,7 +229,7 @@ namespace video_input
 
 	//}
 
-	//long device::readInfoOfDevice(IMFActivate * pActivate, unsigned int Num)
+	//long device::readInfoOfDevice(IMFActivate * pActivate, ::u32 Num)
 	//{
 	//	HRESULT hr = -1;
 
@@ -416,7 +416,7 @@ namespace video_input
 	}
 
 
-	unsigned int device::get_width()
+	::u32 device::get_width()
 	{
 
 		if (m_bSetup)
@@ -434,7 +434,7 @@ namespace video_input
 	}
 
 
-	unsigned int device::get_height()
+	::u32 device::get_height()
 	{
 
 		if (m_bSetup)
@@ -453,7 +453,7 @@ namespace video_input
 	}
 
 
-	::int_size device::get_size()
+	::i32_size device::get_size()
 	{
 
 		if (m_bSetup)
@@ -477,7 +477,7 @@ namespace video_input
 
 		::collection::index iBest = 0;
 
-		long long iScoreMax = 0;
+		::i64 iScoreMax = 0;
 
 		for (::collection::index i = 0; i < m_mediaformata.get_count(); i++)
 		{
@@ -495,7 +495,7 @@ namespace video_input
          if (iSampleSize == 32)
          {
 
-            long long iScore = pmediaformat->m_size.area() * pmediaformat->m_uFrameRate;
+            ::i64 iScore = pmediaformat->m_size.area() * pmediaformat->m_uFrameRate;
 
             if (iScore > iScoreMax)
             {
@@ -534,7 +534,7 @@ namespace video_input
 	//}
 
 
-	int device::findType(unsigned int size, unsigned int frameRate)
+	int device::findType(::u32 size, ::u32 frameRate)
 	{
 
 		if (m_mapCaptureFormat.size() == 0)
@@ -546,7 +546,7 @@ namespace video_input
 
 		return 0;
 
-		//auto & FRM = m_mapCaptureFormat[int_size];
+		//auto & FRM = m_mapCaptureFormat[i32_size];
 
 		//if (FRM.size() == 0)
 		//{
@@ -555,7 +555,7 @@ namespace video_input
 
 		//}
 
-		//unsigned int frameRateMax = 0;  
+		//::u32 frameRateMax = 0;  
 		//
 		//subtype_map * psubtypemap = nullptr;
 
@@ -627,9 +627,9 @@ namespace video_input
 	void device::buildLibraryofTypes()
 	{
 
-		//unsigned int size;
+		//::u32 size;
 
-		//unsigned int framerate;
+		//::u32 framerate;
 
 		//int m_cCount = 0;
 
@@ -640,7 +640,7 @@ namespace video_input
 
 		//	framerate = mediatype.m_uFrameRate;
 
-		//	auto & FRM = m_mapCaptureFormat[int_size];
+		//	auto & FRM = m_mapCaptureFormat[i32_size];
 
 		//	auto & STM = FRM[framerate];
 
@@ -654,7 +654,7 @@ namespace video_input
 
 		//	//FRM[framerate] = STM;
 
-		//	//m_mapCaptureFormat[int_size] = FRM;
+		//	//m_mapCaptureFormat[i32_size] = FRM;
 
 		//	m_cCount++;
 
@@ -809,7 +809,7 @@ namespace video_input
 	{
 		bool success = false;
 
-		unsigned int bytes = 4;
+		::u32 bytes = 4;
 
 		if (!is_raw_data_source())
 		{
@@ -823,10 +823,10 @@ namespace video_input
 
 		if (pmemory)
 		{
-			unsigned int height = get_height();
-			unsigned int width = get_width();
+			::u32 height = get_height();
+			::u32 width = get_width();
 
-			unsigned int size = bytes * width * height;
+			::u32 size = bytes * width * height;
 
 			if (size == pmemory->size())
 			{
@@ -911,10 +911,10 @@ namespace video_input
 	}
 
 
-	::collection::index device::find_format(unsigned int w, unsigned int h, unsigned int idealFramerate)
+	::collection::index device::find_format(::u32 w, ::u32 h, ::u32 idealFramerate)
 	{
 
-		//unsigned int atom = findType(w * h, idealFramerate);
+		//::u32 atom = findType(w * h, idealFramerate);
 
 		//return setup_device(atom);
 

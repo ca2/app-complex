@@ -16,7 +16,7 @@ namespace userex
 namespace mediaplaylist
 {
    
-   unsigned long long* usedid();
+   ::u64* usedid();
 
    class playlist_list_impact;
    class list_impact;
