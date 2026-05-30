@@ -45,10 +45,10 @@ namespace mediaplaylist
 
    }
 
-   void edit_impact::on_timer(::timer * ptimer)
+   void edit_impact::operator()(::timer * ptimer)
    {
 
-      if (ptimer->m_uTimer == 123)
+      if (ptimer->m_etimer == 123)
       {
 
          kill_timer(123);

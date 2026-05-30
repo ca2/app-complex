@@ -469,14 +469,14 @@ namespace multimedia
       }
 
 
-      void slider::on_timer(::timer * ptimer)
+      void slider::operator()(::timer * ptimer)
       {
-         ::audio_mixer_user::level_control::on_timer(ptimer);
+         ::audio_mixer_user::level_control::operator()(ptimer);
          ::i32_point point;
          ::f64_rectangle rectangle;
          ::f64_rectangle rectangleTrack;
          ::f64_rectangle rectangleX;
-         switch(ptimer->m_uTimer)
+         switch(ptimer->m_etimer)
          {
          case 1317:
          {
@@ -487,7 +487,7 @@ namespace multimedia
          }
          break;
          case 100:
-            kill_timer(ptimer->m_uTimer);
+            kill_timer(ptimer->m_etimer);
             set_timer(110, 10, nullptr);
          case 110:
             ScrollLineA();
@@ -497,7 +497,7 @@ namespace multimedia
             }
             break;
          case 200:
-            kill_timer(ptimer->m_uTimer);
+            kill_timer(ptimer->m_etimer);
             set_timer(210, 10, nullptr);
          case 210:
             ScrollLineB();
@@ -507,7 +507,7 @@ namespace multimedia
             }
             break;
          case 300:
-            kill_timer(ptimer->m_uTimer);
+            kill_timer(ptimer->m_etimer);
             set_timer(310, 10, nullptr);
          case 310:
             GetCursorPos(&point);
@@ -522,13 +522,13 @@ namespace multimedia
             }
             if(m_iPos == m_iRangeMin)
             {
-               kill_timer(ptimer->m_uTimer);
+               kill_timer(ptimer->m_etimer);
                break;
             }
             ScrollPageA();
             break;
          case 400:
-            kill_timer(ptimer->m_uTimer);
+            kill_timer(ptimer->m_etimer);
             set_timer(410, 10, nullptr);
          case 410:
             GetCursorPos(&point);
@@ -549,10 +549,10 @@ namespace multimedia
             ScrollPageB();
             break;
          default:
-            kill_timer(ptimer->m_uTimer);
+            kill_timer(ptimer->m_etimer);
             break;
          }
-         // trans   ::user::interaction::OnTimer(ptimer->m_uTimer);
+         // trans   ::user::interaction::OnTimer(ptimer->m_etimer);
       }
 
       bool slider::GetThumbRect(::i32_rectangle * lpRect)

@@ -31,12 +31,12 @@ namespace mediaplay
    }
 
 
-   void record_notify_impact::on_timer(::timer * ptimer)
+   void record_notify_impact::operator()(::timer * ptimer)
    {
 
-      ::user::interaction::on_timer(ptimer);
+      ::user::interaction::operator()(ptimer);
 
-      if(ptimer->m_uTimer == ((uptr) this))
+      if(ptimer->m_etimer == ((uptr) this))
       {
 
          set_need_redraw();

@@ -2,7 +2,7 @@
 #include "framework.h"
 #include "video_input.h"
 #include "device.h"
-#include "acme/operating_system/shared_posix/c_error_number.h"
+#include "acme/operating_system/shared_posix/c_errno.h"
 #include "acme/parallelization/synchronous_lock.h"
 #if defined(FREEBSD)
 #define __BSD_VISIBLE 1
@@ -111,7 +111,7 @@ namespace video_input_video_for_linux
          if ((fd = v4l2_open(strDevice, O_RDWR | O_NONBLOCK)) == -1)
          {
 
-            auto cerrornumber = c_error_number();
+            auto cerrornumber = c_errno();
 
             auto strErrorDescription = cerrornumber.get_error_description();
 

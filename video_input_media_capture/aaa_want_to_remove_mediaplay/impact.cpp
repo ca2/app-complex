@@ -60,8 +60,8 @@ namespace mediaplay
 
       m_bFranceExit = false;
 
-      m_flagNonClient.erase(e_non_client_background);
-      m_flagNonClient.erase(e_non_client_focus_rect);
+      m_enonclient.erase(::user::e_non_client_background);
+      m_enonclient.erase(::user::e_non_client_focus_rect);
       m_impactlineaStatus.m_linea.add(allocateø xfplayer_impact_line(&m_impactlineaStatus));
       papp->m_pmediaplayview = this;
 

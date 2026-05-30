@@ -6,7 +6,7 @@
 #include "callback.h"
 #include "app-complex/video_input/media_format.h"
 #include "acme/include/_c_swap.h"
-#include "acme/operating_system/shared_posix/c_error_number.h"
+#include "acme/operating_system/shared_posix/c_errno.h"
 #include "acme/prototype/prototype/memory.h"
 #include "acme/crypto/crypto.h"
 #include "apex/platform/system.h"
@@ -71,7 +71,7 @@ namespace video_input_video_for_linux
       if (m_iDevice == -1)
       {
 
-         auto cerrornumber = c_error_number();
+         auto cerrornumber = c_errno();
 
          auto estatus = cerrornumber.estatus();
 
@@ -591,7 +591,7 @@ namespace video_input_video_for_linux
       if (v4l2_set_format(m_iDevice, &m_size.cx, &m_size.cy, &m_iPixelFormat, &m_iLineSize) < 0)
       {
 
-         auto cerrornumber = c_error_number();
+         auto cerrornumber = c_errno();
 
          errorf("Unable to set format");
 
@@ -1039,7 +1039,7 @@ namespace video_input_video_for_linux
       if (v4l2_ioctl(m_iDevice, VIDIOC_STREAMON, &type) < 0)
       {
 
-         auto cerrornumber = c_error_number();
+         auto cerrornumber = c_errno();
 
          //blog(LOG_ERROR, "unable to start stream");
 
@@ -1063,7 +1063,7 @@ namespace video_input_video_for_linux
       if (v4l2_ioctl(m_iDevice, VIDIOC_STREAMOFF, &type) < 0)
       {
 
-         auto cerrornumber = c_error_number();
+         auto cerrornumber = c_errno();
 
          if(cerrornumber != ENODEV)
          {

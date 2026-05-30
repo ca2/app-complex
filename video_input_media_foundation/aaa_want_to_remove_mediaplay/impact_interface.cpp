@@ -696,15 +696,15 @@ namespace mediaplay
    }
 
 
-   void impact_interface::on_timer(::timer * ptimer)
+   void impact_interface::operator()(::timer * ptimer)
    {
 
-      ::user::interaction::on_timer(ptimer);
+      ::user::interaction::operator()(ptimer);
 
       //::duration tickNow= ::duration::now();
 
 
-      switch(ptimer->m_uTimer)
+      switch(ptimer->m_etimer)
       {
       case e_timer_lyric:
       {
@@ -750,7 +750,7 @@ namespace mediaplay
 
             m_dBlend = 0.0;
 
-            kill_timer(ptimer->m_uTimer);
+            kill_timer(ptimer->m_etimer);
 
             m_etimerFade = e_timer_none;
 
@@ -775,7 +775,7 @@ namespace mediaplay
 
             m_dBlend = 1.0;
 
-            kill_timer(ptimer->m_uTimer);
+            kill_timer(ptimer->m_etimer);
 
             m_etimerFade = e_timer_none;
 

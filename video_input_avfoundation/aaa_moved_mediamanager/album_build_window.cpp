@@ -39,12 +39,12 @@ namespace  mediamanager
       kill_timer(1124);
    }
 
-   void album_build_window::on_timer(::timer * ptimer)
+   void album_build_window::operator()(::timer * ptimer)
    {
 
-      ::user::interaction::on_timer(ptimer);
+      ::user::interaction::operator()(ptimer);
 
-      auto uEvent = ptimer->m_uTimer;
+      auto uEvent = ptimer->m_etimer;
 
       if(uEvent == 1122)
       {

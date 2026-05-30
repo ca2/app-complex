@@ -26,7 +26,7 @@ namespace mediaplay
       virtual void GetParentClientRect(::i32_rectangle * lprect);
    
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics);
-      virtual void on_timer(::timer * ptimer);
+      void operator()(::timer * ptimer) override;
 
 
       static void CALLBACK TimerProc(oswindow, ::u32, uptr, ::u32);
