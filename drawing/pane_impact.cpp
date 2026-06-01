@@ -199,7 +199,7 @@ namespace app_complex_drawing
          if (ptabpaneFileManager != nullptr && ptabpaneFileManager->m_pplaceholder != nullptr)
          {
 
-            ptabpaneFileManager->m_pplaceholder->hide();
+            ptabpaneFileManager->m_pplaceholder->display(e_display_hide, {});
 
          }
 
@@ -208,7 +208,7 @@ namespace app_complex_drawing
          if (ptabpaneFontSel != nullptr && ptabpaneFontSel->m_pplaceholder != nullptr)
          {
 
-            ptabpaneFontSel->m_pplaceholder->hide();
+            ptabpaneFontSel->m_pplaceholder->display(e_display_hide, {});
 
          }
 
@@ -217,7 +217,7 @@ namespace app_complex_drawing
          if (::is_set(pimpactOldDrawing))
          {
 
-            pimpactOldDrawing->get_parent()->hide();
+            pimpactOldDrawing->get_parent()->display(e_display_hide, {});
 
          }
 
@@ -254,7 +254,7 @@ namespace app_complex_drawing
       if (m_pimpactdataOld && !m_pimpactdataOld->id().begins("drawing"))
       {
 
-         m_pimpactdataOld->m_pplaceholder->hide();
+         m_pimpactdataOld->m_pplaceholder->display(e_display_hide, {});
 
       }
 

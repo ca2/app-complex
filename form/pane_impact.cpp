@@ -102,7 +102,7 @@ namespace app_complex_form
                && ptabpaneFileManager->m_pplaceholder != nullptr)
          {
 
-            ptabpaneFileManager->m_pplaceholder->hide();
+            ptabpaneFileManager->m_pplaceholder->display(e_display_hide, {});
 
          }
 
@@ -112,7 +112,7 @@ namespace app_complex_form
                && ptabpaneFontSel->m_pplaceholder != nullptr)
          {
 
-            ptabpaneFontSel->m_pplaceholder->hide();
+            ptabpaneFontSel->m_pplaceholder->display(e_display_hide, {});
 
          }
 
