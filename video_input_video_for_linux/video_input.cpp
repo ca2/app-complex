@@ -111,9 +111,9 @@ namespace video_input_video_for_linux
          if ((fd = v4l2_open(strDevice, O_RDWR | O_NONBLOCK)) == -1)
          {
 
-            auto cerrornumber = c_errno();
+            auto cerrno = c_errno();
 
-            auto strErrorDescription = cerrornumber.get_error_description();
+            auto strErrorDescription = cerrno.get_error_description();
 
             informationf("Unable to open %s - %s", strDevice.c_str(), strErrorDescription.c_str());
 
