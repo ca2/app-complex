@@ -125,7 +125,7 @@ namespace video_input_video_avfoundation
       ::collection::index m_iIndex;
       string m_strDevice;
       //string m_strId;
-      i32_fast32_t m_iDevice;
+      int_fast32_t m_iDevice;
 
       int m_iInput;
       int m_iStandard;

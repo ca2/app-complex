@@ -59,7 +59,7 @@ virtual public ::matter
       /** memory info for mapped buffers */
       array<memory_map_item> m_itema;
 
-      memory_map(i32_fast32_t iDevice);
+      memory_map(int_fast32_t iDevice);
       ~memory_map();
 
    };
@@ -188,7 +188,7 @@ static void v4l2_unpack_tuple(int *a, int *b, int packed)
  *
  * @return negative on failure
  */
-i32_fast32_t v4l2_start_capture(i32_fast32_t iDevice, struct v4l2_buffer_data *buf);
+int_fast32_t v4l2_start_capture(int_fast32_t iDevice, struct v4l2_buffer_data *buf);
 
 /**
  * Stop the video capture on the device.
@@ -197,7 +197,7 @@ i32_fast32_t v4l2_start_capture(i32_fast32_t iDevice, struct v4l2_buffer_data *b
  *
  * @return negative on failure
  */
-i32_fast32_t v4l2_stop_capture(i32_fast32_t iDevice);
+int_fast32_t v4l2_stop_capture(int_fast32_t iDevice);
 
 /**
  * Resets video capture on the device.
@@ -211,7 +211,7 @@ i32_fast32_t v4l2_stop_capture(i32_fast32_t iDevice);
  *
  * @return negative on failure
  */
-i32_fast32_t v4l2_reset_capture(i32_fast32_t iDevice, struct v4l2_buffer_data *buf);
+int_fast32_t v4l2_reset_capture(int_fast32_t iDevice, struct v4l2_buffer_data *buf);
 
 #ifdef _DEBUG
 /**
@@ -223,7 +223,7 @@ i32_fast32_t v4l2_reset_capture(i32_fast32_t iDevice, struct v4l2_buffer_data *b
  *
  * @return negative on failure
  */
-i32_fast32_t v4l2_query_all_buffers(i32_fast32_t iDevice,
+int_fast32_t v4l2_query_all_buffers(int_fast32_t iDevice,
 				    struct v4l2_buffer_data *buf_data);
 #endif
 
@@ -237,7 +237,7 @@ i32_fast32_t v4l2_query_all_buffers(i32_fast32_t iDevice,
  *
  * @return negative on failure
  */
-i32_fast32_t v4l2_create_mmap(i32_fast32_t iDevice, struct v4l2_buffer_data *buf);
+int_fast32_t v4l2_create_mmap(int_fast32_t iDevice, struct v4l2_buffer_data *buf);
 
 /**
  * Destroy the memory mapping for buffers
@@ -246,7 +246,7 @@ i32_fast32_t v4l2_create_mmap(i32_fast32_t iDevice, struct v4l2_buffer_data *buf
  *
  * @return negative on failure
  */
-i32_fast32_t v4l2_destroy_mmap(struct v4l2_buffer_data *buf);
+int_fast32_t v4l2_destroy_mmap(struct v4l2_buffer_data *buf);
 
 /**
  * Set the video input on the device.
@@ -258,7 +258,7 @@ i32_fast32_t v4l2_destroy_mmap(struct v4l2_buffer_data *buf);
  *
  * @return negative on failure
  */
-i32_fast32_t v4l2_set_input(i32_fast32_t iDevice, int *input);
+int_fast32_t v4l2_set_input(int_fast32_t iDevice, int *input);
 
 /**
  * Get capabilities for an input.
@@ -269,7 +269,7 @@ i32_fast32_t v4l2_set_input(i32_fast32_t iDevice, int *input);
  *
  * @return negative on failure
  */
-i32_fast32_t v4l2_get_input_caps(i32_fast32_t iDevice, int input, uint32_t *caps);
+int_fast32_t v4l2_get_input_caps(int_fast32_t iDevice, int input, uint32_t *caps);
 
 /**
  * Set the video format on the device.
@@ -284,7 +284,7 @@ i32_fast32_t v4l2_get_input_caps(i32_fast32_t iDevice, int input, uint32_t *caps
  *
  * @return negative on failure
  */
-i32_fast32_t v4l2_set_format(i32_fast32_t iDevice, int *pwidth, int *pheight,
+int_fast32_t v4l2_set_format(int_fast32_t iDevice, int *pwidth, int *pheight,
                              int *ppixelformat, int *pbytesperline);
 
 /**
@@ -297,7 +297,7 @@ i32_fast32_t v4l2_set_format(i32_fast32_t iDevice, int *pwidth, int *pheight,
  *
  * @return negative on failure
  */
-i32_fast32_t v4l2_set_framerate(i32_fast32_t iDevice, int * pdenominator, int * pnumerator);
+int_fast32_t v4l2_set_framerate(int_fast32_t iDevice, int * pdenominator, int * pnumerator);
 
 /**
  * Set a video standard on the device.
@@ -309,7 +309,7 @@ i32_fast32_t v4l2_set_framerate(i32_fast32_t iDevice, int * pdenominator, int * 
  *
  * @return negative on failure
  */
-i32_fast32_t v4l2_set_standard(i32_fast32_t iDevice, int *standard);
+int_fast32_t v4l2_set_standard(int_fast32_t iDevice, int *standard);
 
 /**
  * Get the dv timing for an input with a specified index
@@ -320,7 +320,7 @@ i32_fast32_t v4l2_set_standard(i32_fast32_t iDevice, int *standard);
  *
  * @return negative on failure
  */
-i32_fast32_t v4l2_enum_dv_timing(i32_fast32_t iDevice, struct v4l2_dv_timings *dvt,
+int_fast32_t v4l2_enum_dv_timing(int_fast32_t iDevice, struct v4l2_dv_timings *dvt,
 				 int index);
 /**
  * Set a dv timing on the device
@@ -332,7 +332,7 @@ i32_fast32_t v4l2_enum_dv_timing(i32_fast32_t iDevice, struct v4l2_dv_timings *d
  *
  * @return negative on failure
  */
-i32_fast32_t v4l2_set_dv_timing(i32_fast32_t iDevice, int *timing);
+int_fast32_t v4l2_set_dv_timing(int_fast32_t iDevice, int *timing);
 
 //#ifdef __cplusplus
 //}
