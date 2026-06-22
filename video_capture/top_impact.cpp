@@ -64,9 +64,9 @@ namespace app_complex_video_capture
       if(m_peditimpact == nullptr)
       {
 
-         auto pmessageboxpayload = __initialize_new ::message_box_payload(nullptr,"Could not create folder edit impact");
+         auto pmessagebox = __initialize_new ::acme::user::message_box("Could not create folder edit impact");
 
-         post(pmessageboxpayload);
+         pmessagebox->display(e_display_normal, {});
 
       }
 
@@ -77,9 +77,9 @@ namespace app_complex_video_capture
       if(m_ptoggleimpact == nullptr)
       {
 
-         auto pmessageboxpayload = __initialize_new ::message_box_payload(nullptr,"Could not create file list_base ::user::impact");
+         auto pmessagebox = __initialize_new ::acme::user::message_box("Could not create file list_base ::user::impact");
 
-         post(pmessageboxpayload);
+         pmessagebox->display(e_display_normal, {});
 
       }
 
@@ -92,6 +92,5 @@ namespace app_complex_video_capture
 
 
 } // namespace app_complex_video_capture
-
 
 

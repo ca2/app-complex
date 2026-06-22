@@ -143,9 +143,11 @@ void ShowError(HWND hwnd, PCWSTR szMessage, HRESULT hr)
    if (SUCCEEDED(StringCchPrintfW(msg, ARRAYSIZE(msg), L"%s (hr = 0x%X)", szMessage, hr)))
    {
 
-      auto pmessageboxpayload = __initialize_new ::message_box_payload(hwnd, msg, nullptr, ::user::e_message_box_ok | MB_ICONERROR);
+      auto pmessagebox = __initialize_new ::acme::user::message_box(msg, nullptr, ::user::e_message_box_ok | MB_ICONERROR);
 
-send(pmessageboxpayload);
+      pmessagebox->display(e_display_normal, {});
+
+      pmessagebox->wait_dialog_response();
 
    }
 
