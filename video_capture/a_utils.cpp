@@ -143,7 +143,8 @@ void ShowError(HWND hwnd, PCWSTR szMessage, HRESULT hr)
    if (SUCCEEDED(StringCchPrintfW(msg, ARRAYSIZE(msg), L"%s (hr = 0x%X)", szMessage, hr)))
    {
 
-      auto pmessagebox = __initialize_new ::acme::user::message_box(msg, nullptr, ::user::e_message_box_ok | MB_ICONERROR);
+      auto pmessagebox = createø < ::user_interface::message_box >();
+      pmessagebox->initialize_message_box(msg, nullptr, ::user::e_message_box_ok | MB_ICONERROR);
 
       pmessagebox->display(e_display_normal, {});
 

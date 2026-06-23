@@ -4,6 +4,7 @@
 #include "edit_impact.h"
 #include "application.h"
 //#include "acme/platform/sequencer.h"
+#include "acme/user/interface/message_box.h"
 //#include "acme/user/nano/nano.h"
 #include "apex/database/_binary_stream.h"
 
@@ -71,7 +72,8 @@ namespace app_complex_video_capture
       if(m_pimpact == nullptr)
       {
 
-         auto pmessagebox = __initialize_new ::acme::user::message_box("Could not create file list_base ::user::impact");
+         auto pmessagebox = createø < ::user_interface::message_box >();
+         pmessagebox->initialize_message_box("Could not create file list_base ::user::impact");
 
          pmessagebox->display(e_display_normal, {});
 

@@ -3,6 +3,7 @@
 #include "edit_impact.h"
 #include "toggle_impact.h"
 //#include "acme/platform/sequencer.h"
+#include "acme/user/interface/message_box.h"
 //#include "acme/user/nano/nano.h"
 
 
@@ -64,7 +65,8 @@ namespace app_complex_video_capture
       if(m_peditimpact == nullptr)
       {
 
-         auto pmessagebox = __initialize_new ::acme::user::message_box("Could not create folder edit impact");
+         auto pmessagebox = createø < ::user_interface::message_box >();
+         pmessagebox->initialize_message_box("Could not create folder edit impact");
 
          pmessagebox->display(e_display_normal, {});
 
@@ -77,7 +79,8 @@ namespace app_complex_video_capture
       if(m_ptoggleimpact == nullptr)
       {
 
-         auto pmessagebox = __initialize_new ::acme::user::message_box("Could not create file list_base ::user::impact");
+         auto pmessagebox = createø < ::user_interface::message_box >();
+         pmessagebox->initialize_message_box("Could not create file list_base ::user::impact");
 
          pmessagebox->display(e_display_normal, {});
 
