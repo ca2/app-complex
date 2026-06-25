@@ -14,7 +14,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "070B8EE91B6E53F900D26137"
+            BlueprintIdentifier = "85E701E2987DDB68A627827C"
             BuildableName = "group_simple.app"
             BlueprintName = "group_simple"
             ReferencedContainer = "container:group_simple.xcodeproj">
@@ -37,7 +37,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9AFC0DB524737B8100AF47B7"
+            BlueprintIdentifier = "E61E3D599D5AE4FFFF047AD4"
             BuildableName = "__simple.app"
             BlueprintName = "ios_group_simple"
             ReferencedContainer = "container:ios_group_simple.xcodeproj">
@@ -53,7 +53,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9AFC0DB524737B8100AF47B7"
+            BlueprintIdentifier = "E61E3D599D5AE4FFFF047AD4"
             BuildableName = "__simple.app"
             BlueprintName = "ios_group_simple"
             ReferencedContainer = "container:ios_group_simple.xcodeproj">

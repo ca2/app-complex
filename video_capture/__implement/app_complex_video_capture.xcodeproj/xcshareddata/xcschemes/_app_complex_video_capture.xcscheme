@@ -15,7 +15,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "070B8EE91B6E53F900D26137"
+               BlueprintIdentifier = "6AF1F0ED70B42088AC2D4DE9"
                BuildableName = "_app_complex_video_capture.app"
                BlueprintName = "_app_complex_video_capture"
                ReferencedContainer = "container:app_complex_video_capture.xcodeproj">
@@ -44,7 +44,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "070B8EE91B6E53F900D26137"
+            BlueprintIdentifier = "6AF1F0ED70B42088AC2D4DE9"
             BuildableName = "_app_complex_video_capture.app"
             BlueprintName = "_app_complex_video_capture"
             ReferencedContainer = "container:app_complex_video_capture.xcodeproj">
@@ -61,7 +61,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "070B8EE91B6E53F900D26137"
+            BlueprintIdentifier = "6AF1F0ED70B42088AC2D4DE9"
             BuildableName = "_app_complex_video_capture.app"
             BlueprintName = "_app_complex_video_capture"
             ReferencedContainer = "container:app_complex_video_capture.xcodeproj">

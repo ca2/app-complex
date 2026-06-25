@@ -7,159 +7,159 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		070214941C5158F900DB16A7 /* user_font_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 070561E81C412B59004085DF /* user_font_list.cpp */; };
-		070214A21C516ADC00DB16A7 /* hellomultiverse_font_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 070561E41C412AFA004085DF /* hellomultiverse_font_impact.cpp */; };
-		070533EF1C90B2CF00F31B3F /* libgcom.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 070533E61C90B2A100F31B3F /* libgcom.dylib */; };
-		070561E61C412AFA004085DF /* hellomultiverse_font_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 070561E41C412AFA004085DF /* hellomultiverse_font_impact.cpp */; };
-		070561E71C412AFA004085DF /* hellomultiverse_font_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 070561E51C412AFA004085DF /* hellomultiverse_font_impact.h */; };
-		070561EA1C412B59004085DF /* user_font_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 070561E81C412B59004085DF /* user_font_list.cpp */; };
-		070561EB1C412B59004085DF /* user_font_list.h in Headers */ = {isa = PBXBuildFile; fileRef = 070561E91C412B59004085DF /* user_font_list.h */; };
-		07473E5A1B504F7B004688C5 /* libios_core.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A34A501B4DA61400CC3FD9 /* libios_core.dylib */; };
-		07473E601B5050B8004688C5 /* hellomultiverse_switcher_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 076D09F11A3FC72C007432B6 /* hellomultiverse_switcher_impact.cpp */; };
-		07473E611B5050B8004688C5 /* hellomultiverse_toggle_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 076D09F31A3FC72C007432B6 /* hellomultiverse_toggle_impact.cpp */; };
-		07473E621B5050B8004688C5 /* hellomultiverse_top_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 076D09F51A3FC72C007432B6 /* hellomultiverse_top_impact.cpp */; };
-		07473E631B5050B8004688C5 /* hellomultiverse_edit_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1008A19971FCE004F84BD /* hellomultiverse_edit_impact.cpp */; };
-		07473E641B5050B8004688C5 /* hellomultiverse_main_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1008C19971FCE004F84BD /* hellomultiverse_main_impact.cpp */; };
-		076D09FB1A3FC72C007432B6 /* hellomultiverse_switcher_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 076D09F11A3FC72C007432B6 /* hellomultiverse_switcher_impact.cpp */; };
-		076D09FC1A3FC72C007432B6 /* hellomultiverse_switcher_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 076D09F21A3FC72C007432B6 /* hellomultiverse_switcher_impact.h */; };
-		076D09FD1A3FC72C007432B6 /* hellomultiverse_toggle_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 076D09F31A3FC72C007432B6 /* hellomultiverse_toggle_impact.cpp */; };
-		076D09FE1A3FC72C007432B6 /* hellomultiverse_toggle_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 076D09F41A3FC72C007432B6 /* hellomultiverse_toggle_impact.h */; };
-		076D09FF1A3FC72C007432B6 /* hellomultiverse_top_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 076D09F51A3FC72C007432B6 /* hellomultiverse_top_impact.cpp */; };
-		076D0A001A3FC72C007432B6 /* hellomultiverse_top_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 076D09F61A3FC72C007432B6 /* hellomultiverse_top_impact.h */; };
-		07A34AB31B4DAAC000CC3FD9 /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A34A4E1B4DA61400CC3FD9 /* libcore.dylib */; };
-		07A4B1371B76469200DA5C57 /* hellomultiverse_render.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07FB1AA21B744E8800F3FCC1 /* hellomultiverse_render.cpp */; };
-		07A684EC17F0E06700C41DE6 /* hellomultiverse_application.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A684E617F0E06700C41DE6 /* hellomultiverse_application.h */; };
-		07A684ED17F0E06700C41DE6 /* hellomultiverse_document.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A684E717F0E06700C41DE6 /* hellomultiverse_document.h */; };
-		07A684EE17F0E06700C41DE6 /* hellomultiverse_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A684E817F0E06700C41DE6 /* hellomultiverse_frame.h */; };
-		07A684EF17F0E06700C41DE6 /* aaa_want_to_erase_hellomultiverse_impact_update_hint.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A684E917F0E06700C41DE6 /* aaa_want_to_erase_hellomultiverse_impact_update_hint.h */; };
-		07A684F017F0E06700C41DE6 /* hellomultiverse_pane_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A684EA17F0E06700C41DE6 /* hellomultiverse_pane_impact.h */; };
-		07A684F117F0E06700C41DE6 /* hellomultiverse_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A684EB17F0E06700C41DE6 /* hellomultiverse_impact.h */; };
-		07AE494E1CC7A83F00959A6F /* hellomultiverse_gcom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07AE494A1CC7A83F00959A6F /* hellomultiverse_gcom.cpp */; };
-		07AE494F1CC7A83F00959A6F /* hellomultiverse_gcom.h in Headers */ = {isa = PBXBuildFile; fileRef = 07AE494B1CC7A83F00959A6F /* hellomultiverse_gcom.h */; };
-		07AE49501CC7A83F00959A6F /* hellomultiverse_impact_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07AE494C1CC7A83F00959A6F /* hellomultiverse_impact_base.cpp */; };
-		07AE49511CC7A83F00959A6F /* hellomultiverse_impact_base.h in Headers */ = {isa = PBXBuildFile; fileRef = 07AE494D1CC7A83F00959A6F /* hellomultiverse_impact_base.h */; };
-		07B65520190F3001002DAADE /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75BE16F78E600085103B /* framework.cpp */; };
-		07B65521190F3001002DAADE /* hellomultiverse_application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75C916F78E600085103B /* hellomultiverse_application.cpp */; };
-		07B65522190F3001002DAADE /* hellomultiverse_document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75CA16F78E600085103B /* hellomultiverse_document.cpp */; };
-		07B65523190F3001002DAADE /* hellomultiverse_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75CB16F78E600085103B /* hellomultiverse_frame.cpp */; };
-		07B65524190F3001002DAADE /* hellomultiverse_pane_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75CC16F78E600085103B /* hellomultiverse_pane_impact.cpp */; };
-		07B65525190F3001002DAADE /* aaa_want_to_erase_hellomultiverse_impact_update_hint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75CD16F78E600085103B /* aaa_want_to_erase_hellomultiverse_impact_update_hint.cpp */; };
-		07B65526190F3001002DAADE /* hellomultiverse_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75CE16F78E600085103B /* hellomultiverse_impact.cpp */; };
-		07FB1AA41B744E8800F3FCC1 /* hellomultiverse_render.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07FB1AA21B744E8800F3FCC1 /* hellomultiverse_render.cpp */; };
-		07FB1AA51B744E8800F3FCC1 /* hellomultiverse_render.h in Headers */ = {isa = PBXBuildFile; fileRef = 07FB1AA31B744E8800F3FCC1 /* hellomultiverse_render.h */; };
-		9A6716AA1D1558DB0069A961 /* libios_gcom.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 070533E81C90B2A100F31B3F /* libios_gcom.dylib */; };
-		9A6716B61D155B860069A961 /* hellomultiverse_main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A72594A1D1403E6001F56B4 /* hellomultiverse_main_frame.cpp */; };
-		9A6716B71D155B860069A961 /* hellomultiverse_gcom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07AE494A1CC7A83F00959A6F /* hellomultiverse_gcom.cpp */; };
-		9A6716B81D155B860069A961 /* hellomultiverse_impact_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07AE494C1CC7A83F00959A6F /* hellomultiverse_impact_base.cpp */; };
-		9A72594C1D1403E6001F56B4 /* hellomultiverse_main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A72594A1D1403E6001F56B4 /* hellomultiverse_main_frame.cpp */; };
-		9A72594D1D1403E6001F56B4 /* hellomultiverse_main_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A72594B1D1403E6001F56B4 /* hellomultiverse_main_frame.h */; };
-		9A986CDF1D22629C001F4C04 /* libios_base.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A986CDE1D22629C001F4C04 /* libios_base.dylib */; };
-		9A986CE11D2262BA001F4C04 /* libios_axis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A986CE01D2262BA001F4C04 /* libios_axis.dylib */; };
-		9A986CE31D2262CB001F4C04 /* libios_aura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A986CE21D2262CB001F4C04 /* libios_aura.dylib */; };
-		9AA1008E19971FCE004F84BD /* hellomultiverse_edit_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1008A19971FCE004F84BD /* hellomultiverse_edit_impact.cpp */; };
-		9AA1008F19971FCE004F84BD /* hellomultiverse_edit_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AA1008B19971FCE004F84BD /* hellomultiverse_edit_impact.h */; };
-		9AA1009019971FCE004F84BD /* hellomultiverse_main_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1008C19971FCE004F84BD /* hellomultiverse_main_impact.cpp */; };
-		9AA1009119971FCE004F84BD /* hellomultiverse_main_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AA1008D19971FCE004F84BD /* hellomultiverse_main_impact.h */; };
-		9ACE47D61D2041A300A1E0AD /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACE47D51D2041A300A1E0AD /* libaura.dylib */; };
-		9ACE47DA1D2041AE00A1E0AD /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACE47D91D2041AE00A1E0AD /* libaxis.dylib */; };
-		9ACE47DC1D2041B800A1E0AD /* libberg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACE47DB1D2041B800A1E0AD /* libberg.dylib */; };
-		9ACE47DE1D2041E400A1E0AD /* libpcre.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACE47DD1D2041E400A1E0AD /* libpcre.dylib */; };
-		9AE24EA11904CFFD001AEFFB /* libapp_core_hellomultiverse.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libapp_core_hellomultiverse.dylib */; };
-		9AE24EA71904CFFD001AEFFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AE24EA51904CFFD001AEFFB /* InfoPlist.strings */; };
-		9AE24EA91904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE24EA81904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m */; };
-		9AEB75DD16F78E600085103B /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75BE16F78E600085103B /* framework.cpp */; };
-		9AEB75DE16F78E600085103B /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AEB75BF16F78E600085103B /* framework.h */; };
-		9AEB75E016F78E600085103B /* hellomultiverse.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AEB75C316F78E600085103B /* hellomultiverse.h */; };
-		9AEB75E116F78E600085103B /* hellomultiverse_application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75C916F78E600085103B /* hellomultiverse_application.cpp */; };
-		9AEB75E216F78E600085103B /* hellomultiverse_document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75CA16F78E600085103B /* hellomultiverse_document.cpp */; };
-		9AEB75E316F78E600085103B /* hellomultiverse_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75CB16F78E600085103B /* hellomultiverse_frame.cpp */; };
-		9AEB75E416F78E600085103B /* hellomultiverse_pane_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75CC16F78E600085103B /* hellomultiverse_pane_impact.cpp */; };
-		9AEB75E516F78E600085103B /* aaa_want_to_erase_hellomultiverse_impact_update_hint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75CD16F78E600085103B /* aaa_want_to_erase_hellomultiverse_impact_update_hint.cpp */; };
-		9AEB75E616F78E600085103B /* hellomultiverse_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75CE16F78E600085103B /* hellomultiverse_impact.cpp */; };
+		1F1E63371B0CDCB9A0F54F1F /* user_font_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5977171A5FDDA6F876B8354E /* user_font_list.cpp */; };
+		0E76E66CB9B40E34A4E9E496 /* hellomultiverse_font_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5754C252046A68ADC3E76102 /* hellomultiverse_font_impact.cpp */; };
+		CD8444207316BAE6C4B5F91B /* libgcom.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B4C3937D94E357CB67AD6D6 /* libgcom.dylib */; };
+		F7818F9A0DCE1F41388B1105 /* hellomultiverse_font_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5754C252046A68ADC3E76102 /* hellomultiverse_font_impact.cpp */; };
+		C87BBE65DDBEB75156D30709 /* hellomultiverse_font_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 47F49DDC5BBFB6BB7F0D2D4D /* hellomultiverse_font_impact.h */; };
+		6D6CE61D163B949C6E4E1ADE /* user_font_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5977171A5FDDA6F876B8354E /* user_font_list.cpp */; };
+		1BE1B7F88235A86A77C28684 /* user_font_list.h in Headers */ = {isa = PBXBuildFile; fileRef = F565493F808AC26B3732680C /* user_font_list.h */; };
+		0C62BF85FFC1381693F5D8A3 /* libios_core.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 48D040BA406ABA02F78D8681 /* libios_core.dylib */; };
+		DB9345A581BB57427336DF8D /* hellomultiverse_switcher_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3C449851E5EB910ACD3699E /* hellomultiverse_switcher_impact.cpp */; };
+		E2F4AC64F3D1F19A3BDD7281 /* hellomultiverse_toggle_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 260BF0A6E263429601FC8566 /* hellomultiverse_toggle_impact.cpp */; };
+		062CE05B879970C45E84C5CA /* hellomultiverse_top_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF0C0218D7BF73FB495EBB /* hellomultiverse_top_impact.cpp */; };
+		552765A1B615602A8AE6248B /* hellomultiverse_edit_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D6F691C91369EB520AA59C2 /* hellomultiverse_edit_impact.cpp */; };
+		141CF29B070EC4E92A13DFFB /* hellomultiverse_main_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 789802CF5E13E1D05124F476 /* hellomultiverse_main_impact.cpp */; };
+		A0EE3321FFAB471A45C0FA3D /* hellomultiverse_switcher_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3C449851E5EB910ACD3699E /* hellomultiverse_switcher_impact.cpp */; };
+		4AF85BD4226552ACD262629A /* hellomultiverse_switcher_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D08D060E01026F1CF036E82 /* hellomultiverse_switcher_impact.h */; };
+		B6ECA14EDA86BD89336E6372 /* hellomultiverse_toggle_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 260BF0A6E263429601FC8566 /* hellomultiverse_toggle_impact.cpp */; };
+		24D2A3128161BCA31779BDA4 /* hellomultiverse_toggle_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = E72021A0D47F7032FE50F123 /* hellomultiverse_toggle_impact.h */; };
+		21C128EDB826C90D263F4A98 /* hellomultiverse_top_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF0C0218D7BF73FB495EBB /* hellomultiverse_top_impact.cpp */; };
+		034F951FE74D547DB2EDEE1B /* hellomultiverse_top_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 072AE137D91B3E17D8EF4AA8 /* hellomultiverse_top_impact.h */; };
+		9E31DDF5CA1F598BBB0953D5 /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5ACF32D0E7EB2CC646A73F /* libcore.dylib */; };
+		27ACC0762DE38AF3823D2607 /* hellomultiverse_render.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DED05FF0498D67D72A3391F3 /* hellomultiverse_render.cpp */; };
+		196F9D4AF03CA076C1943670 /* hellomultiverse_application.h in Headers */ = {isa = PBXBuildFile; fileRef = 499364D791F154BE775B1ACE /* hellomultiverse_application.h */; };
+		815FB797473E7EC64E291E09 /* hellomultiverse_document.h in Headers */ = {isa = PBXBuildFile; fileRef = B20862E510B1E3B7A28317E8 /* hellomultiverse_document.h */; };
+		6F0CF99D99A88E0E118C1BC9 /* hellomultiverse_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 002A540092BA425B027C6C1D /* hellomultiverse_frame.h */; };
+		3194DE0F8246D445FB214B27 /* aaa_want_to_erase_hellomultiverse_impact_update_hint.h in Headers */ = {isa = PBXBuildFile; fileRef = CAC85B3E02BC3901D9BB0B1A /* aaa_want_to_erase_hellomultiverse_impact_update_hint.h */; };
+		3798D156336370C81ED52074 /* hellomultiverse_pane_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 503D2ABF797AA67D04CCC9EC /* hellomultiverse_pane_impact.h */; };
+		D62EE0C0E9716CEEE81EF74D /* hellomultiverse_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 74789486C00D3D4858B2BFF1 /* hellomultiverse_impact.h */; };
+		0E3126D06E99C3923EB50DB8 /* hellomultiverse_gcom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B838697C728A710A3BBA6980 /* hellomultiverse_gcom.cpp */; };
+		B8824E2F8797C5620B914468 /* hellomultiverse_gcom.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D42FF9F0C3286D202E35FB3 /* hellomultiverse_gcom.h */; };
+		9E28E45B7EE26C4C6FBD95BF /* hellomultiverse_impact_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25A49AC9B299F4F157848E24 /* hellomultiverse_impact_base.cpp */; };
+		9A167C84F0329988DC5A612C /* hellomultiverse_impact_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C7B738593139B2F6B8433E94 /* hellomultiverse_impact_base.h */; };
+		2FD922DC3B2FD727998F9BEE /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC031BCF983E5594827A77FF /* framework.cpp */; };
+		CC5902616392DF27F15C2020 /* hellomultiverse_application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D37075242AABDA9B33AD0CD /* hellomultiverse_application.cpp */; };
+		8217FD5461DA5DE24AB199B3 /* hellomultiverse_document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F88824D3BA8F9F1AB2C9213 /* hellomultiverse_document.cpp */; };
+		9F55F391B843F5D49DE8856F /* hellomultiverse_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36B758E770D0458371BA420F /* hellomultiverse_frame.cpp */; };
+		AEBF9AC6BCD9FC8D44CF99CA /* hellomultiverse_pane_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19424B79A614210304CF8A6C /* hellomultiverse_pane_impact.cpp */; };
+		8EBC1C9D5F60B9B03FEBD574 /* aaa_want_to_erase_hellomultiverse_impact_update_hint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04FC349077C914E4BEE10378 /* aaa_want_to_erase_hellomultiverse_impact_update_hint.cpp */; };
+		30AA3F384C2F37C55EF9E161 /* hellomultiverse_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 417FF59A054DF8F86DC46473 /* hellomultiverse_impact.cpp */; };
+		0DB0230B287F7F57E4654558 /* hellomultiverse_render.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DED05FF0498D67D72A3391F3 /* hellomultiverse_render.cpp */; };
+		CC7A4F7172242CEE573A2ED7 /* hellomultiverse_render.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA30010D69ADF60672B2F95 /* hellomultiverse_render.h */; };
+		77A20A76FBE91BDD253CF5C2 /* libios_gcom.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BDF515A5960755F7CB66E92 /* libios_gcom.dylib */; };
+		850EDF439A5E7626D24CF16B /* hellomultiverse_main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C1C835924300000890FE842 /* hellomultiverse_main_frame.cpp */; };
+		B49D9C9BF77F4D6D585BD59E /* hellomultiverse_gcom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B838697C728A710A3BBA6980 /* hellomultiverse_gcom.cpp */; };
+		37A2F5A6ABB0AE5306EC2346 /* hellomultiverse_impact_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25A49AC9B299F4F157848E24 /* hellomultiverse_impact_base.cpp */; };
+		8E9708CFB941D92ECE27EC0E /* hellomultiverse_main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C1C835924300000890FE842 /* hellomultiverse_main_frame.cpp */; };
+		20A99FA28D780E7CBECD6D6C /* hellomultiverse_main_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 39803E012220458A76B9D421 /* hellomultiverse_main_frame.h */; };
+		A44F8A899256AA23E7FB6356 /* libios_base.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B13D6FE6F7A1CF7A76257D1 /* libios_base.dylib */; };
+		6AD07B3EB43EEDEFE27F1460 /* libios_axis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 816023457B92B42EC9C30536 /* libios_axis.dylib */; };
+		1A5B977A14FA14FD1B368C60 /* libios_aura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49077C1DDA1B2E3AD6CCCF96 /* libios_aura.dylib */; };
+		D6B85FD406DD688DDAC0FE58 /* hellomultiverse_edit_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D6F691C91369EB520AA59C2 /* hellomultiverse_edit_impact.cpp */; };
+		53FF6BAA2854CBC6EB440786 /* hellomultiverse_edit_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = F8E525EBD06DAC5F1C7E760E /* hellomultiverse_edit_impact.h */; };
+		6B5C556D8129B37245C876FC /* hellomultiverse_main_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 789802CF5E13E1D05124F476 /* hellomultiverse_main_impact.cpp */; };
+		E13B7D342169A7347E1B57A0 /* hellomultiverse_main_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = C0602844BDFA4F041ECAE466 /* hellomultiverse_main_impact.h */; };
+		1873EF854D5EADD36C3C9A80 /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CED0112BF6A0C5C40BEC6EA /* libaura.dylib */; };
+		8DA6D98A784D419F00EAC070 /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7DA4CA064CC457F349CE67 /* libaxis.dylib */; };
+		18F93D3C0C386230BBB3EC4D /* libberg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 620C2EA3F13A5C45C158BA2D /* libberg.dylib */; };
+		3AB02D01A30E1555ED91684F /* libpcre.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FADC6DA51F6BE44A6BBB9DD /* libpcre.dylib */; };
+		10B47216BB03F6327EE86E65 /* libapp_core_hellomultiverse.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 95CFEE5CEE93DE03BA8D9D6C /* libapp_core_hellomultiverse.dylib */; };
+		B5AE9A4EF284617E56828877 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA0A1F7C5CEFC30B9743E227 /* InfoPlist.strings */; };
+		012AF2757054B8314D51FDDE /* app_core_hellomultiverse_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 720478E94CD08658F98CEFFE /* app_core_hellomultiverse_iosTests.m */; };
+		55DF2E41B5EDEFFF6CC0425B /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC031BCF983E5594827A77FF /* framework.cpp */; };
+		5AFF21B87D82ED831C11B053 /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D9423E637214FB19E38851B /* framework.h */; };
+		FA6DE77B80D014FA7C6D9031 /* hellomultiverse.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F22D6C4746ACF0774099CB4 /* hellomultiverse.h */; };
+		4D745F0C5E1821D3746F53F8 /* hellomultiverse_application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D37075242AABDA9B33AD0CD /* hellomultiverse_application.cpp */; };
+		610155FD32AFC6F3A4EF6B27 /* hellomultiverse_document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F88824D3BA8F9F1AB2C9213 /* hellomultiverse_document.cpp */; };
+		1E8C5C7525FC0CCB7A665C3C /* hellomultiverse_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36B758E770D0458371BA420F /* hellomultiverse_frame.cpp */; };
+		8B4159B94B1939268662A343 /* hellomultiverse_pane_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19424B79A614210304CF8A6C /* hellomultiverse_pane_impact.cpp */; };
+		C22B916EC0984F3E06173C7D /* aaa_want_to_erase_hellomultiverse_impact_update_hint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04FC349077C914E4BEE10378 /* aaa_want_to_erase_hellomultiverse_impact_update_hint.cpp */; };
+		2D172A67A9EDBAD72F2018A5 /* hellomultiverse_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 417FF59A054DF8F86DC46473 /* hellomultiverse_impact.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		070533E51C90B2A100F31B3F /* PBXContainerItemProxy */ = {
+		F2697F0D66CD18E0F76DB1B1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 070533CB1C90B2A100F31B3F /* gcom.xcodeproj */;
+			containerPortal = 69E813028B8A6D0A89F05819 /* gcom.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
 			remoteInfo = gcom;
 		};
-		070533E71C90B2A100F31B3F /* PBXContainerItemProxy */ = {
+		804D91713B2E4A2FC66F304D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 070533CB1C90B2A100F31B3F /* gcom.xcodeproj */;
+			containerPortal = 69E813028B8A6D0A89F05819 /* gcom.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9AE24E8A1904CFFD001AEFFB;
 			remoteInfo = ios_gcom;
 		};
-		070533E91C90B2A100F31B3F /* PBXContainerItemProxy */ = {
+		B9B61527A3EAAC232A648EBD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 070533CB1C90B2A100F31B3F /* gcom.xcodeproj */;
+			containerPortal = 69E813028B8A6D0A89F05819 /* gcom.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9AE24E991904CFFD001AEFFB;
 			remoteInfo = gcom_iosTests;
 		};
-		070533ED1C90B2B900F31B3F /* PBXContainerItemProxy */ = {
+		F809C8ADFFD0F7092E9432AF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 070533CB1C90B2A100F31B3F /* gcom.xcodeproj */;
+			containerPortal = 69E813028B8A6D0A89F05819 /* gcom.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
 			remoteInfo = gcom;
 		};
-		07A34A4D1B4DA61400CC3FD9 /* PBXContainerItemProxy */ = {
+		AD7EC9000B4096D721BF5AA7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 07B65416190F2C0F002DAADE /* aura.xcodeproj */;
+			containerPortal = A4BC8EFFE22F86AB5C5EDA79 /* aura.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9A19A1A519C6F50B0018DF7D;
 			remoteInfo = aura;
 		};
-		07A34A4F1B4DA61400CC3FD9 /* PBXContainerItemProxy */ = {
+		B1B28A0D4B1BEDA4956DAC9D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 07B65416190F2C0F002DAADE /* aura.xcodeproj */;
+			containerPortal = A4BC8EFFE22F86AB5C5EDA79 /* aura.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9AE24DDC1904CF6E001AEFFB;
 			remoteInfo = core_ios;
 		};
-		07A34A511B4DA61400CC3FD9 /* PBXContainerItemProxy */ = {
+		663E7B5D57A362C48EA4BB40 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 07B65416190F2C0F002DAADE /* aura.xcodeproj */;
+			containerPortal = A4BC8EFFE22F86AB5C5EDA79 /* aura.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9AE24DEB1904CF6E001AEFFB;
 			remoteInfo = core_iosTests;
 		};
-		07A34AB11B4DAAAF00CC3FD9 /* PBXContainerItemProxy */ = {
+		91B3F933310112258846A5C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 07B65416190F2C0F002DAADE /* aura.xcodeproj */;
+			containerPortal = A4BC8EFFE22F86AB5C5EDA79 /* aura.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 9A19A1A419C6F50B0018DF7D;
 			remoteInfo = aura;
 		};
-		9A259E1A1D25D9B40044727D /* PBXContainerItemProxy */ = {
+		B4F2D0103FE7B0EF05CBDFBC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 07B65416190F2C0F002DAADE /* aura.xcodeproj */;
+			containerPortal = A4BC8EFFE22F86AB5C5EDA79 /* aura.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 9AE24DDB1904CF6E001AEFFB;
 			remoteInfo = ios_core;
 		};
-		9A259E1C1D25D9B40044727D /* PBXContainerItemProxy */ = {
+		0FA8B6ABB9A623FA31BD531F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 070533CB1C90B2A100F31B3F /* gcom.xcodeproj */;
+			containerPortal = 69E813028B8A6D0A89F05819 /* gcom.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 9AE24E891904CFFD001AEFFB;
 			remoteInfo = ios_gcom;
 		};
-		9AE24E9F1904CFFD001AEFFB /* PBXContainerItemProxy */ = {
+		BA623A143276E1DEAC092E2F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9AEB759B16F78DF10085103B /* Project object */;
+			containerPortal = EFF1C61EE474C07481BEA371 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9AE24E891904CFFD001AEFFB;
+			remoteGlobalIDString = 4AC97A777E1C9CCD09B6BC30;
 			remoteInfo = app_core_hellomultiverse_ios;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9AE24E881904CFFD001AEFFB /* CopyFiles */ = {
+		8F2954C867195E478091923F /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
@@ -171,211 +171,211 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		070533CB1C90B2A100F31B3F /* gcom.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gcom.xcodeproj; path = ../gcom/gcom.xcodeproj; sourceTree = SOURCE_ROOT; };
-		070561E41C412AFA004085DF /* hellomultiverse_font_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_font_impact.cpp; sourceTree = "<group>"; };
-		070561E51C412AFA004085DF /* hellomultiverse_font_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_font_impact.h; sourceTree = "<group>"; };
-		070561E81C412B59004085DF /* user_font_list.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = user_font_list.cpp; sourceTree = "<group>"; };
-		070561E91C412B59004085DF /* user_font_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = user_font_list.h; sourceTree = "<group>"; };
-		076D09F11A3FC72C007432B6 /* hellomultiverse_switcher_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_switcher_impact.cpp; sourceTree = "<group>"; };
-		076D09F21A3FC72C007432B6 /* hellomultiverse_switcher_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_switcher_impact.h; sourceTree = "<group>"; };
-		076D09F31A3FC72C007432B6 /* hellomultiverse_toggle_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_toggle_impact.cpp; sourceTree = "<group>"; };
-		076D09F41A3FC72C007432B6 /* hellomultiverse_toggle_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_toggle_impact.h; sourceTree = "<group>"; };
-		076D09F51A3FC72C007432B6 /* hellomultiverse_top_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_top_impact.cpp; sourceTree = "<group>"; };
-		076D09F61A3FC72C007432B6 /* hellomultiverse_top_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_top_impact.h; sourceTree = "<group>"; };
-		07A684E617F0E06700C41DE6 /* hellomultiverse_application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_application.h; sourceTree = "<group>"; };
-		07A684E717F0E06700C41DE6 /* hellomultiverse_document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_document.h; sourceTree = "<group>"; };
-		07A684E817F0E06700C41DE6 /* hellomultiverse_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_frame.h; sourceTree = "<group>"; };
-		07A684E917F0E06700C41DE6 /* aaa_want_to_erase_hellomultiverse_impact_update_hint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aaa_want_to_erase_hellomultiverse_impact_update_hint.h; sourceTree = "<group>"; };
-		07A684EA17F0E06700C41DE6 /* hellomultiverse_pane_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_pane_impact.h; sourceTree = "<group>"; };
-		07A684EB17F0E06700C41DE6 /* hellomultiverse_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_impact.h; sourceTree = "<group>"; };
-		07AE494A1CC7A83F00959A6F /* hellomultiverse_gcom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_gcom.cpp; sourceTree = "<group>"; };
-		07AE494B1CC7A83F00959A6F /* hellomultiverse_gcom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_gcom.h; sourceTree = "<group>"; };
-		07AE494C1CC7A83F00959A6F /* hellomultiverse_impact_base.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_impact_base.cpp; sourceTree = "<group>"; };
-		07AE494D1CC7A83F00959A6F /* hellomultiverse_impact_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_impact_base.h; sourceTree = "<group>"; };
-		07B65416190F2C0F002DAADE /* aura.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura.xcodeproj; path = ../../app/aura/.xcodeproj; sourceTree = SOURCE_ROOT; };
-		07FB1AA21B744E8800F3FCC1 /* hellomultiverse_render.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_render.cpp; sourceTree = "<group>"; };
-		07FB1AA31B744E8800F3FCC1 /* hellomultiverse_render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_render.h; sourceTree = "<group>"; };
-		9A72594A1D1403E6001F56B4 /* hellomultiverse_main_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_main_frame.cpp; sourceTree = "<group>"; };
-		9A72594B1D1403E6001F56B4 /* hellomultiverse_main_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_main_frame.h; sourceTree = "<group>"; };
-		9A986CDE1D22629C001F4C04 /* libios_base.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_base.dylib; path = "../../app/base/build/Debug-iphoneos/libios_base.dylib"; sourceTree = "<group>"; };
-		9A986CE01D2262BA001F4C04 /* libios_axis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_axis.dylib; path = "../../app/axis/build/Debug-iphoneos/libios_axis.dylib"; sourceTree = "<group>"; };
-		9A986CE21D2262CB001F4C04 /* libios_aura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_aura.dylib; path = "../../app/aura/build/Debug-iphoneos/libios_aura.dylib"; sourceTree = "<group>"; };
-		9AA1008A19971FCE004F84BD /* hellomultiverse_edit_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_edit_impact.cpp; sourceTree = "<group>"; };
-		9AA1008B19971FCE004F84BD /* hellomultiverse_edit_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_edit_impact.h; sourceTree = "<group>"; };
-		9AA1008C19971FCE004F84BD /* hellomultiverse_main_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_main_impact.cpp; sourceTree = "<group>"; };
-		9AA1008D19971FCE004F84BD /* hellomultiverse_main_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_main_impact.h; sourceTree = "<group>"; };
-		9AC62E941D20C12200A4AC0A /* libaura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaura.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/basic-ios-bmuegusfgbffmoeixicbxhlnbzop/Build/Products/Debug-iphonesimulator/libaura.dylib"; sourceTree = "<group>"; };
-		9AC62E981D20C12800A4AC0A /* libaxis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaxis.dylib; path = "../../app/axis/build/Debug-iphoneos/libaxis.dylib"; sourceTree = "<group>"; };
-		9AC62E9A1D20C12F00A4AC0A /* libberg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libberg.dylib; path = "../../app/base/build/Debug-iphoneos/libberg.dylib"; sourceTree = "<group>"; };
-		9AC62E9C1D20C14600A4AC0A /* libios_pcre.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_pcre.dylib; path = "../../app/pcre/build/Debug-iphoneos/libios_pcre.dylib"; sourceTree = "<group>"; };
-		9ACE47D51D2041A300A1E0AD /* libaura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaura.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/aura-mac-ekqwiewkpeyhdudtxguywfqohhby/Build/Products/Debug/libaura.dylib"; sourceTree = "<group>"; };
-		9ACE47D91D2041AE00A1E0AD /* libaxis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaxis.dylib; path = ../../app/axis/build/Debug/libaxis.dylib; sourceTree = "<group>"; };
-		9ACE47DB1D2041B800A1E0AD /* libberg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libberg.dylib; path = ../../app/base/build/Debug/libberg.dylib; sourceTree = "<group>"; };
-		9ACE47DD1D2041E400A1E0AD /* libpcre.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcre.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/aura-mac-ekqwiewkpeyhdudtxguywfqohhby/Build/Products/Debug/libpcre.dylib"; sourceTree = "<group>"; };
-		9AE24E8A1904CFFD001AEFFB /* libapp_core_hellomultiverse.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libapp_core_hellomultiverse.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AE24E991904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = app_core_hellomultiverse_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AE24EA41904CFFD001AEFFB /* app_core_hellomultiverse_iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "app_core_hellomultiverse_iosTests-Info.plist"; sourceTree = "<group>"; };
-		9AE24EA61904CFFD001AEFFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9AE24EA81904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = app_core_hellomultiverse_iosTests.m; sourceTree = "<group>"; };
-		9AEB75A316F78DF10085103B /* libapp_core_hellomultiverse.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapp_core_hellomultiverse.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AEB75BE16F78E600085103B /* framework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
-		9AEB75BF16F78E600085103B /* framework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
-		9AEB75C316F78E600085103B /* hellomultiverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse.h; sourceTree = "<group>"; };
-		9AEB75C916F78E600085103B /* hellomultiverse_application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_application.cpp; sourceTree = "<group>"; };
-		9AEB75CA16F78E600085103B /* hellomultiverse_document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_document.cpp; sourceTree = "<group>"; };
-		9AEB75CB16F78E600085103B /* hellomultiverse_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_frame.cpp; sourceTree = "<group>"; };
-		9AEB75CC16F78E600085103B /* hellomultiverse_pane_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_pane_impact.cpp; sourceTree = "<group>"; };
-		9AEB75CD16F78E600085103B /* aaa_want_to_erase_hellomultiverse_impact_update_hint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = aaa_want_to_erase_hellomultiverse_impact_update_hint.cpp; sourceTree = "<group>"; };
-		9AEB75CE16F78E600085103B /* hellomultiverse_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_impact.cpp; sourceTree = "<group>"; };
+		69E813028B8A6D0A89F05819 /* gcom.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gcom.xcodeproj; path = ../gcom/gcom.xcodeproj; sourceTree = SOURCE_ROOT; };
+		5754C252046A68ADC3E76102 /* hellomultiverse_font_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_font_impact.cpp; sourceTree = "<group>"; };
+		47F49DDC5BBFB6BB7F0D2D4D /* hellomultiverse_font_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_font_impact.h; sourceTree = "<group>"; };
+		5977171A5FDDA6F876B8354E /* user_font_list.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = user_font_list.cpp; sourceTree = "<group>"; };
+		F565493F808AC26B3732680C /* user_font_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = user_font_list.h; sourceTree = "<group>"; };
+		D3C449851E5EB910ACD3699E /* hellomultiverse_switcher_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_switcher_impact.cpp; sourceTree = "<group>"; };
+		3D08D060E01026F1CF036E82 /* hellomultiverse_switcher_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_switcher_impact.h; sourceTree = "<group>"; };
+		260BF0A6E263429601FC8566 /* hellomultiverse_toggle_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_toggle_impact.cpp; sourceTree = "<group>"; };
+		E72021A0D47F7032FE50F123 /* hellomultiverse_toggle_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_toggle_impact.h; sourceTree = "<group>"; };
+		5BFF0C0218D7BF73FB495EBB /* hellomultiverse_top_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_top_impact.cpp; sourceTree = "<group>"; };
+		072AE137D91B3E17D8EF4AA8 /* hellomultiverse_top_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_top_impact.h; sourceTree = "<group>"; };
+		499364D791F154BE775B1ACE /* hellomultiverse_application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_application.h; sourceTree = "<group>"; };
+		B20862E510B1E3B7A28317E8 /* hellomultiverse_document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_document.h; sourceTree = "<group>"; };
+		002A540092BA425B027C6C1D /* hellomultiverse_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_frame.h; sourceTree = "<group>"; };
+		CAC85B3E02BC3901D9BB0B1A /* aaa_want_to_erase_hellomultiverse_impact_update_hint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aaa_want_to_erase_hellomultiverse_impact_update_hint.h; sourceTree = "<group>"; };
+		503D2ABF797AA67D04CCC9EC /* hellomultiverse_pane_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_pane_impact.h; sourceTree = "<group>"; };
+		74789486C00D3D4858B2BFF1 /* hellomultiverse_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_impact.h; sourceTree = "<group>"; };
+		B838697C728A710A3BBA6980 /* hellomultiverse_gcom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_gcom.cpp; sourceTree = "<group>"; };
+		0D42FF9F0C3286D202E35FB3 /* hellomultiverse_gcom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_gcom.h; sourceTree = "<group>"; };
+		25A49AC9B299F4F157848E24 /* hellomultiverse_impact_base.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_impact_base.cpp; sourceTree = "<group>"; };
+		C7B738593139B2F6B8433E94 /* hellomultiverse_impact_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_impact_base.h; sourceTree = "<group>"; };
+		A4BC8EFFE22F86AB5C5EDA79 /* aura.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura.xcodeproj; path = ../../app/aura/.xcodeproj; sourceTree = SOURCE_ROOT; };
+		DED05FF0498D67D72A3391F3 /* hellomultiverse_render.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_render.cpp; sourceTree = "<group>"; };
+		7AA30010D69ADF60672B2F95 /* hellomultiverse_render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_render.h; sourceTree = "<group>"; };
+		1C1C835924300000890FE842 /* hellomultiverse_main_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_main_frame.cpp; sourceTree = "<group>"; };
+		39803E012220458A76B9D421 /* hellomultiverse_main_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_main_frame.h; sourceTree = "<group>"; };
+		5B13D6FE6F7A1CF7A76257D1 /* libios_base.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_base.dylib; path = "../../app/base/build/Debug-iphoneos/libios_base.dylib"; sourceTree = "<group>"; };
+		816023457B92B42EC9C30536 /* libios_axis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_axis.dylib; path = "../../app/axis/build/Debug-iphoneos/libios_axis.dylib"; sourceTree = "<group>"; };
+		49077C1DDA1B2E3AD6CCCF96 /* libios_aura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_aura.dylib; path = "../../app/aura/build/Debug-iphoneos/libios_aura.dylib"; sourceTree = "<group>"; };
+		1D6F691C91369EB520AA59C2 /* hellomultiverse_edit_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_edit_impact.cpp; sourceTree = "<group>"; };
+		F8E525EBD06DAC5F1C7E760E /* hellomultiverse_edit_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_edit_impact.h; sourceTree = "<group>"; };
+		789802CF5E13E1D05124F476 /* hellomultiverse_main_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_main_impact.cpp; sourceTree = "<group>"; };
+		C0602844BDFA4F041ECAE466 /* hellomultiverse_main_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse_main_impact.h; sourceTree = "<group>"; };
+		B66E020C2E4876369C83B543 /* libaura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaura.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/basic-ios-bmuegusfgbffmoeixicbxhlnbzop/Build/Products/Debug-iphonesimulator/libaura.dylib"; sourceTree = "<group>"; };
+		C0474B29F0C8E4165E0C1589 /* libaxis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaxis.dylib; path = "../../app/axis/build/Debug-iphoneos/libaxis.dylib"; sourceTree = "<group>"; };
+		D95EC48C2F5649C3A94FF4BA /* libberg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libberg.dylib; path = "../../app/base/build/Debug-iphoneos/libberg.dylib"; sourceTree = "<group>"; };
+		0F067A41D31B7CF9B59995A4 /* libios_pcre.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_pcre.dylib; path = "../../app/pcre/build/Debug-iphoneos/libios_pcre.dylib"; sourceTree = "<group>"; };
+		9CED0112BF6A0C5C40BEC6EA /* libaura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaura.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/aura-mac-ekqwiewkpeyhdudtxguywfqohhby/Build/Products/Debug/libaura.dylib"; sourceTree = "<group>"; };
+		FA7DA4CA064CC457F349CE67 /* libaxis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaxis.dylib; path = ../../app/axis/build/Debug/libaxis.dylib; sourceTree = "<group>"; };
+		620C2EA3F13A5C45C158BA2D /* libberg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libberg.dylib; path = ../../app/base/build/Debug/libberg.dylib; sourceTree = "<group>"; };
+		0FADC6DA51F6BE44A6BBB9DD /* libpcre.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcre.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/aura-mac-ekqwiewkpeyhdudtxguywfqohhby/Build/Products/Debug/libpcre.dylib"; sourceTree = "<group>"; };
+		95CFEE5CEE93DE03BA8D9D6C /* libapp_core_hellomultiverse.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libapp_core_hellomultiverse.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C879895D390D819F4109123 /* app_core_hellomultiverse_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = app_core_hellomultiverse_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF82F95F49FFA750E711AFED /* app_core_hellomultiverse_iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "app_core_hellomultiverse_iosTests-Info.plist"; sourceTree = "<group>"; };
+		14E4B65DA935811EA9FE4B12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		720478E94CD08658F98CEFFE /* app_core_hellomultiverse_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = app_core_hellomultiverse_iosTests.m; sourceTree = "<group>"; };
+		D998E09B04B03ECC735AE664 /* libapp_core_hellomultiverse.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapp_core_hellomultiverse.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC031BCF983E5594827A77FF /* framework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
+		9D9423E637214FB19E38851B /* framework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
+		9F22D6C4746ACF0774099CB4 /* hellomultiverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hellomultiverse.h; sourceTree = "<group>"; };
+		7D37075242AABDA9B33AD0CD /* hellomultiverse_application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_application.cpp; sourceTree = "<group>"; };
+		9F88824D3BA8F9F1AB2C9213 /* hellomultiverse_document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_document.cpp; sourceTree = "<group>"; };
+		36B758E770D0458371BA420F /* hellomultiverse_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_frame.cpp; sourceTree = "<group>"; };
+		19424B79A614210304CF8A6C /* hellomultiverse_pane_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_pane_impact.cpp; sourceTree = "<group>"; };
+		04FC349077C914E4BEE10378 /* aaa_want_to_erase_hellomultiverse_impact_update_hint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = aaa_want_to_erase_hellomultiverse_impact_update_hint.cpp; sourceTree = "<group>"; };
+		417FF59A054DF8F86DC46473 /* hellomultiverse_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellomultiverse_impact.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9AE24E871904CFFD001AEFFB /* Frameworks */ = {
+		7A3BC2F2BF95271BD0D55974 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A986CE31D2262CB001F4C04 /* libios_aura.dylib in Frameworks */,
-				9A986CE11D2262BA001F4C04 /* libios_axis.dylib in Frameworks */,
-				9A986CDF1D22629C001F4C04 /* libios_base.dylib in Frameworks */,
-				9A6716AA1D1558DB0069A961 /* libios_gcom.dylib in Frameworks */,
-				07473E5A1B504F7B004688C5 /* libios_core.dylib in Frameworks */,
+				1A5B977A14FA14FD1B368C60 /* libios_aura.dylib in Frameworks */,
+				6AD07B3EB43EEDEFE27F1460 /* libios_axis.dylib in Frameworks */,
+				A44F8A899256AA23E7FB6356 /* libios_base.dylib in Frameworks */,
+				77A20A76FBE91BDD253CF5C2 /* libios_gcom.dylib in Frameworks */,
+				0C62BF85FFC1381693F5D8A3 /* libios_core.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9AE24E961904CFFD001AEFFB /* Frameworks */ = {
+		4C17103989B14D1E494BC7FF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE24EA11904CFFD001AEFFB /* libapp_core_hellomultiverse.dylib in Frameworks */,
+				10B47216BB03F6327EE86E65 /* libapp_core_hellomultiverse.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9AEB75A016F78DF10085103B /* Frameworks */ = {
+		5D4735F82150A242A92D40B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9ACE47DE1D2041E400A1E0AD /* libpcre.dylib in Frameworks */,
-				9ACE47DC1D2041B800A1E0AD /* libberg.dylib in Frameworks */,
-				9ACE47DA1D2041AE00A1E0AD /* libaxis.dylib in Frameworks */,
-				9ACE47D61D2041A300A1E0AD /* libaura.dylib in Frameworks */,
-				070533EF1C90B2CF00F31B3F /* libgcom.dylib in Frameworks */,
-				07A34AB31B4DAAC000CC3FD9 /* libcore.dylib in Frameworks */,
+				3AB02D01A30E1555ED91684F /* libpcre.dylib in Frameworks */,
+				18F93D3C0C386230BBB3EC4D /* libberg.dylib in Frameworks */,
+				8DA6D98A784D419F00EAC070 /* libaxis.dylib in Frameworks */,
+				1873EF854D5EADD36C3C9A80 /* libaura.dylib in Frameworks */,
+				CD8444207316BAE6C4B5F91B /* libgcom.dylib in Frameworks */,
+				9E31DDF5CA1F598BBB0953D5 /* libcore.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		070533CC1C90B2A100F31B3F /* Products */ = {
+		32D11B275325A0DC23F866BD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				070533E61C90B2A100F31B3F /* libgcom.dylib */,
-				070533E81C90B2A100F31B3F /* libios_gcom.dylib */,
-				070533EA1C90B2A100F31B3F /* gcom_iosTests.xctest */,
+				6B4C3937D94E357CB67AD6D6 /* libgcom.dylib */,
+				2BDF515A5960755F7CB66E92 /* libios_gcom.dylib */,
+				92634AA549A09E1FDAA24D47 /* gcom_iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		07A34A331B4DA61400CC3FD9 /* Products */ = {
+		82E45F58C4AE30644A0C3843 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				07A34A4E1B4DA61400CC3FD9 /* libcore.dylib */,
-				07A34A501B4DA61400CC3FD9 /* libios_core.dylib */,
-				07A34A521B4DA61400CC3FD9 /* core_iosTests.xctest */,
+				FD5ACF32D0E7EB2CC646A73F /* libcore.dylib */,
+				48D040BA406ABA02F78D8681 /* libios_core.dylib */,
+				756D09A2CCD140520189871A /* core_iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9AE24EA21904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */ = {
+		BD003293C66EFE91C3D29863 /* app_core_hellomultiverse_iosTests */ = {
 			isa = PBXGroup;
 			children = (
-				9AE24EA81904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m */,
-				9AE24EA31904CFFD001AEFFB /* Supporting Files */,
+				720478E94CD08658F98CEFFE /* app_core_hellomultiverse_iosTests.m */,
+				6464FC6368FE5D76F2DF8C84 /* Supporting Files */,
 			);
 			path = app_core_hellomultiverse_iosTests;
 			sourceTree = "<group>";
 		};
-		9AE24EA31904CFFD001AEFFB /* Supporting Files */ = {
+		6464FC6368FE5D76F2DF8C84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9AE24EA41904CFFD001AEFFB /* app_core_hellomultiverse_iosTests-Info.plist */,
-				9AE24EA51904CFFD001AEFFB /* InfoPlist.strings */,
+				EF82F95F49FFA750E711AFED /* app_core_hellomultiverse_iosTests-Info.plist */,
+				CA0A1F7C5CEFC30B9743E227 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9AEB759A16F78DF10085103B = {
+		F1D6EE7AA95350AA9752F751 = {
 			isa = PBXGroup;
 			children = (
-				9A986CE21D2262CB001F4C04 /* libios_aura.dylib */,
-				9A986CE01D2262BA001F4C04 /* libios_axis.dylib */,
-				9A986CDE1D22629C001F4C04 /* libios_base.dylib */,
-				9AC62E9C1D20C14600A4AC0A /* libios_pcre.dylib */,
-				9AC62E9A1D20C12F00A4AC0A /* libberg.dylib */,
-				9AC62E981D20C12800A4AC0A /* libaxis.dylib */,
-				9AC62E941D20C12200A4AC0A /* libaura.dylib */,
-				9ACE47DD1D2041E400A1E0AD /* libpcre.dylib */,
-				9ACE47DB1D2041B800A1E0AD /* libberg.dylib */,
-				9ACE47D91D2041AE00A1E0AD /* libaxis.dylib */,
-				9ACE47D51D2041A300A1E0AD /* libaura.dylib */,
-				07B65416190F2C0F002DAADE /* aura.xcodeproj */,
-				070533CB1C90B2A100F31B3F /* gcom.xcodeproj */,
-				9AEB75AA16F78E600085103B /* hellomultiverse */,
-				9AE24EA21904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */,
-				9AEB75A416F78DF10085103B /* Products */,
+				49077C1DDA1B2E3AD6CCCF96 /* libios_aura.dylib */,
+				816023457B92B42EC9C30536 /* libios_axis.dylib */,
+				5B13D6FE6F7A1CF7A76257D1 /* libios_base.dylib */,
+				0F067A41D31B7CF9B59995A4 /* libios_pcre.dylib */,
+				D95EC48C2F5649C3A94FF4BA /* libberg.dylib */,
+				C0474B29F0C8E4165E0C1589 /* libaxis.dylib */,
+				B66E020C2E4876369C83B543 /* libaura.dylib */,
+				0FADC6DA51F6BE44A6BBB9DD /* libpcre.dylib */,
+				620C2EA3F13A5C45C158BA2D /* libberg.dylib */,
+				FA7DA4CA064CC457F349CE67 /* libaxis.dylib */,
+				9CED0112BF6A0C5C40BEC6EA /* libaura.dylib */,
+				A4BC8EFFE22F86AB5C5EDA79 /* aura.xcodeproj */,
+				69E813028B8A6D0A89F05819 /* gcom.xcodeproj */,
+				A62FFC6CC0647ECCFC72FD50 /* hellomultiverse */,
+				BD003293C66EFE91C3D29863 /* app_core_hellomultiverse_iosTests */,
+				C8095644D673112DC4559FE4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9AEB75A416F78DF10085103B /* Products */ = {
+		C8095644D673112DC4559FE4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AEB75A316F78DF10085103B /* libapp_core_hellomultiverse.dylib */,
-				9AE24E8A1904CFFD001AEFFB /* libapp_core_hellomultiverse.dylib */,
-				9AE24E991904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.xctest */,
+				D998E09B04B03ECC735AE664 /* libapp_core_hellomultiverse.dylib */,
+				95CFEE5CEE93DE03BA8D9D6C /* libapp_core_hellomultiverse.dylib */,
+				9C879895D390D819F4109123 /* app_core_hellomultiverse_iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9AEB75AA16F78E600085103B /* hellomultiverse */ = {
+		A62FFC6CC0647ECCFC72FD50 /* hellomultiverse */ = {
 			isa = PBXGroup;
 			children = (
-				9A72594A1D1403E6001F56B4 /* hellomultiverse_main_frame.cpp */,
-				9A72594B1D1403E6001F56B4 /* hellomultiverse_main_frame.h */,
-				07AE494A1CC7A83F00959A6F /* hellomultiverse_gcom.cpp */,
-				07AE494B1CC7A83F00959A6F /* hellomultiverse_gcom.h */,
-				07AE494C1CC7A83F00959A6F /* hellomultiverse_impact_base.cpp */,
-				07AE494D1CC7A83F00959A6F /* hellomultiverse_impact_base.h */,
-				070561E81C412B59004085DF /* user_font_list.cpp */,
-				070561E91C412B59004085DF /* user_font_list.h */,
-				070561E41C412AFA004085DF /* hellomultiverse_font_impact.cpp */,
-				070561E51C412AFA004085DF /* hellomultiverse_font_impact.h */,
-				9AEB75C316F78E600085103B /* hellomultiverse.h */,
-				076D09F11A3FC72C007432B6 /* hellomultiverse_switcher_impact.cpp */,
-				076D09F21A3FC72C007432B6 /* hellomultiverse_switcher_impact.h */,
-				076D09F31A3FC72C007432B6 /* hellomultiverse_toggle_impact.cpp */,
-				076D09F41A3FC72C007432B6 /* hellomultiverse_toggle_impact.h */,
-				076D09F51A3FC72C007432B6 /* hellomultiverse_top_impact.cpp */,
-				076D09F61A3FC72C007432B6 /* hellomultiverse_top_impact.h */,
-				9AA1008A19971FCE004F84BD /* hellomultiverse_edit_impact.cpp */,
-				9AA1008B19971FCE004F84BD /* hellomultiverse_edit_impact.h */,
-				9AA1008C19971FCE004F84BD /* hellomultiverse_main_impact.cpp */,
-				9AA1008D19971FCE004F84BD /* hellomultiverse_main_impact.h */,
-				9AEB75BE16F78E600085103B /* framework.cpp */,
-				9AEB75BF16F78E600085103B /* framework.h */,
-				9AEB75C916F78E600085103B /* hellomultiverse_application.cpp */,
-				07A684E617F0E06700C41DE6 /* hellomultiverse_application.h */,
-				9AEB75CA16F78E600085103B /* hellomultiverse_document.cpp */,
-				07A684E717F0E06700C41DE6 /* hellomultiverse_document.h */,
-				9AEB75CB16F78E600085103B /* hellomultiverse_frame.cpp */,
-				07A684E817F0E06700C41DE6 /* hellomultiverse_frame.h */,
-				9AEB75CC16F78E600085103B /* hellomultiverse_pane_impact.cpp */,
-				07A684EA17F0E06700C41DE6 /* hellomultiverse_pane_impact.h */,
-				9AEB75CD16F78E600085103B /* aaa_want_to_erase_hellomultiverse_impact_update_hint.cpp */,
-				07A684E917F0E06700C41DE6 /* aaa_want_to_erase_hellomultiverse_impact_update_hint.h */,
-				07FB1AA21B744E8800F3FCC1 /* hellomultiverse_render.cpp */,
-				07FB1AA31B744E8800F3FCC1 /* hellomultiverse_render.h */,
-				9AEB75CE16F78E600085103B /* hellomultiverse_impact.cpp */,
-				07A684EB17F0E06700C41DE6 /* hellomultiverse_impact.h */,
+				1C1C835924300000890FE842 /* hellomultiverse_main_frame.cpp */,
+				39803E012220458A76B9D421 /* hellomultiverse_main_frame.h */,
+				B838697C728A710A3BBA6980 /* hellomultiverse_gcom.cpp */,
+				0D42FF9F0C3286D202E35FB3 /* hellomultiverse_gcom.h */,
+				25A49AC9B299F4F157848E24 /* hellomultiverse_impact_base.cpp */,
+				C7B738593139B2F6B8433E94 /* hellomultiverse_impact_base.h */,
+				5977171A5FDDA6F876B8354E /* user_font_list.cpp */,
+				F565493F808AC26B3732680C /* user_font_list.h */,
+				5754C252046A68ADC3E76102 /* hellomultiverse_font_impact.cpp */,
+				47F49DDC5BBFB6BB7F0D2D4D /* hellomultiverse_font_impact.h */,
+				9F22D6C4746ACF0774099CB4 /* hellomultiverse.h */,
+				D3C449851E5EB910ACD3699E /* hellomultiverse_switcher_impact.cpp */,
+				3D08D060E01026F1CF036E82 /* hellomultiverse_switcher_impact.h */,
+				260BF0A6E263429601FC8566 /* hellomultiverse_toggle_impact.cpp */,
+				E72021A0D47F7032FE50F123 /* hellomultiverse_toggle_impact.h */,
+				5BFF0C0218D7BF73FB495EBB /* hellomultiverse_top_impact.cpp */,
+				072AE137D91B3E17D8EF4AA8 /* hellomultiverse_top_impact.h */,
+				1D6F691C91369EB520AA59C2 /* hellomultiverse_edit_impact.cpp */,
+				F8E525EBD06DAC5F1C7E760E /* hellomultiverse_edit_impact.h */,
+				789802CF5E13E1D05124F476 /* hellomultiverse_main_impact.cpp */,
+				C0602844BDFA4F041ECAE466 /* hellomultiverse_main_impact.h */,
+				CC031BCF983E5594827A77FF /* framework.cpp */,
+				9D9423E637214FB19E38851B /* framework.h */,
+				7D37075242AABDA9B33AD0CD /* hellomultiverse_application.cpp */,
+				499364D791F154BE775B1ACE /* hellomultiverse_application.h */,
+				9F88824D3BA8F9F1AB2C9213 /* hellomultiverse_document.cpp */,
+				B20862E510B1E3B7A28317E8 /* hellomultiverse_document.h */,
+				36B758E770D0458371BA420F /* hellomultiverse_frame.cpp */,
+				002A540092BA425B027C6C1D /* hellomultiverse_frame.h */,
+				19424B79A614210304CF8A6C /* hellomultiverse_pane_impact.cpp */,
+				503D2ABF797AA67D04CCC9EC /* hellomultiverse_pane_impact.h */,
+				04FC349077C914E4BEE10378 /* aaa_want_to_erase_hellomultiverse_impact_update_hint.cpp */,
+				CAC85B3E02BC3901D9BB0B1A /* aaa_want_to_erase_hellomultiverse_impact_update_hint.h */,
+				DED05FF0498D67D72A3391F3 /* hellomultiverse_render.cpp */,
+				7AA30010D69ADF60672B2F95 /* hellomultiverse_render.h */,
+				417FF59A054DF8F86DC46473 /* hellomultiverse_impact.cpp */,
+				74789486C00D3D4858B2BFF1 /* hellomultiverse_impact.h */,
 			);
 			name = hellomultiverse;
 			sourceTree = "<group>";
@@ -383,284 +383,284 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		9AEB75A116F78DF10085103B /* Headers */ = {
+		478896014B046CCC4A121013 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AEB75DE16F78E600085103B /* framework.h in Headers */,
-				07FB1AA51B744E8800F3FCC1 /* hellomultiverse_render.h in Headers */,
-				9AEB75E016F78E600085103B /* hellomultiverse.h in Headers */,
-				07A684F117F0E06700C41DE6 /* hellomultiverse_impact.h in Headers */,
-				9AA1009119971FCE004F84BD /* hellomultiverse_main_impact.h in Headers */,
-				07AE49511CC7A83F00959A6F /* hellomultiverse_impact_base.h in Headers */,
-				076D09FE1A3FC72C007432B6 /* hellomultiverse_toggle_impact.h in Headers */,
-				9A72594D1D1403E6001F56B4 /* hellomultiverse_main_frame.h in Headers */,
-				070561EB1C412B59004085DF /* user_font_list.h in Headers */,
-				07A684EF17F0E06700C41DE6 /* aaa_want_to_erase_hellomultiverse_impact_update_hint.h in Headers */,
-				07A684ED17F0E06700C41DE6 /* hellomultiverse_document.h in Headers */,
-				9AA1008F19971FCE004F84BD /* hellomultiverse_edit_impact.h in Headers */,
-				07A684F017F0E06700C41DE6 /* hellomultiverse_pane_impact.h in Headers */,
-				07AE494F1CC7A83F00959A6F /* hellomultiverse_gcom.h in Headers */,
-				07A684EE17F0E06700C41DE6 /* hellomultiverse_frame.h in Headers */,
-				076D09FC1A3FC72C007432B6 /* hellomultiverse_switcher_impact.h in Headers */,
-				07A684EC17F0E06700C41DE6 /* hellomultiverse_application.h in Headers */,
-				076D0A001A3FC72C007432B6 /* hellomultiverse_top_impact.h in Headers */,
-				070561E71C412AFA004085DF /* hellomultiverse_font_impact.h in Headers */,
+				5AFF21B87D82ED831C11B053 /* framework.h in Headers */,
+				CC7A4F7172242CEE573A2ED7 /* hellomultiverse_render.h in Headers */,
+				FA6DE77B80D014FA7C6D9031 /* hellomultiverse.h in Headers */,
+				D62EE0C0E9716CEEE81EF74D /* hellomultiverse_impact.h in Headers */,
+				E13B7D342169A7347E1B57A0 /* hellomultiverse_main_impact.h in Headers */,
+				9A167C84F0329988DC5A612C /* hellomultiverse_impact_base.h in Headers */,
+				24D2A3128161BCA31779BDA4 /* hellomultiverse_toggle_impact.h in Headers */,
+				20A99FA28D780E7CBECD6D6C /* hellomultiverse_main_frame.h in Headers */,
+				1BE1B7F88235A86A77C28684 /* user_font_list.h in Headers */,
+				3194DE0F8246D445FB214B27 /* aaa_want_to_erase_hellomultiverse_impact_update_hint.h in Headers */,
+				815FB797473E7EC64E291E09 /* hellomultiverse_document.h in Headers */,
+				53FF6BAA2854CBC6EB440786 /* hellomultiverse_edit_impact.h in Headers */,
+				3798D156336370C81ED52074 /* hellomultiverse_pane_impact.h in Headers */,
+				B8824E2F8797C5620B914468 /* hellomultiverse_gcom.h in Headers */,
+				6F0CF99D99A88E0E118C1BC9 /* hellomultiverse_frame.h in Headers */,
+				4AF85BD4226552ACD262629A /* hellomultiverse_switcher_impact.h in Headers */,
+				196F9D4AF03CA076C1943670 /* hellomultiverse_application.h in Headers */,
+				034F951FE74D547DB2EDEE1B /* hellomultiverse_top_impact.h in Headers */,
+				C87BBE65DDBEB75156D30709 /* hellomultiverse_font_impact.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9AE24E891904CFFD001AEFFB /* ios_app_core_hellomultiverse */ = {
+		4AC97A777E1C9CCD09B6BC30 /* ios_app_core_hellomultiverse */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9AE24EBA1904CFFD001AEFFB /* Build configuration list for PBXNativeTarget "ios_app_core_hellomultiverse" */;
+			buildConfigurationList = 21BDCCB2732F6263FE4D2ABA /* Build configuration list for PBXNativeTarget "ios_app_core_hellomultiverse" */;
 			buildPhases = (
-				9AE24E861904CFFD001AEFFB /* Sources */,
-				9AE24E871904CFFD001AEFFB /* Frameworks */,
-				9AE24E881904CFFD001AEFFB /* CopyFiles */,
+				8FD8B7FD6F8D3F51FAA6311D /* Sources */,
+				7A3BC2F2BF95271BD0D55974 /* Frameworks */,
+				8F2954C867195E478091923F /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9A259E1B1D25D9B40044727D /* PBXTargetDependency */,
-				9A259E1D1D25D9B40044727D /* PBXTargetDependency */,
+				CA99746CE51A423E210DA543 /* PBXTargetDependency */,
+				4A9F9E5E1C888BD91E4CB90A /* PBXTargetDependency */,
 			);
 			name = ios_app_core_hellomultiverse;
 			productName = app_core_hellomultiverse_ios;
-			productReference = 9AE24E8A1904CFFD001AEFFB /* libapp_core_hellomultiverse.dylib */;
+			productReference = 95CFEE5CEE93DE03BA8D9D6C /* libapp_core_hellomultiverse.dylib */;
 			productType = "com.apple.product-type.library.static";
 		};
-		9AE24E981904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */ = {
+		2DAA5EA8B74AF8110A9B1A14 /* app_core_hellomultiverse_iosTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9AE24EBB1904CFFD001AEFFB /* Build configuration list for PBXNativeTarget "app_core_hellomultiverse_iosTests" */;
+			buildConfigurationList = 14D143349A9008C5F67ABA4D /* Build configuration list for PBXNativeTarget "app_core_hellomultiverse_iosTests" */;
 			buildPhases = (
-				9AE24E951904CFFD001AEFFB /* Sources */,
-				9AE24E961904CFFD001AEFFB /* Frameworks */,
-				9AE24E971904CFFD001AEFFB /* Resources */,
+				186B95B531529D2BF7F91E40 /* Sources */,
+				4C17103989B14D1E494BC7FF /* Frameworks */,
+				CE152B4244366F2B107AB3BF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9AE24EA01904CFFD001AEFFB /* PBXTargetDependency */,
+				B34A4AD3BF1D5D6876FEC0D1 /* PBXTargetDependency */,
 			);
 			name = app_core_hellomultiverse_iosTests;
 			productName = app_core_hellomultiverse_iosTests;
-			productReference = 9AE24E991904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.xctest */;
+			productReference = 9C879895D390D819F4109123 /* app_core_hellomultiverse_iosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9AEB75A216F78DF10085103B /* app_core_hellomultiverse */ = {
+		39E9E15785CAD75BD7CA1D15 /* app_core_hellomultiverse */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9AEB75A716F78DF10085103B /* Build configuration list for PBXNativeTarget "app_core_hellomultiverse" */;
+			buildConfigurationList = 5359278963F62D9D9D88EB18 /* Build configuration list for PBXNativeTarget "app_core_hellomultiverse" */;
 			buildPhases = (
-				9AEB759F16F78DF10085103B /* Sources */,
-				9AEB75A016F78DF10085103B /* Frameworks */,
-				9AEB75A116F78DF10085103B /* Headers */,
+				35D4A71BB92C905710424719 /* Sources */,
+				5D4735F82150A242A92D40B1 /* Frameworks */,
+				478896014B046CCC4A121013 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				070533EE1C90B2B900F31B3F /* PBXTargetDependency */,
-				07A34AB21B4DAAAF00CC3FD9 /* PBXTargetDependency */,
+				9117586E3F7D5E2052328E42 /* PBXTargetDependency */,
+				80D446EBDFAE9EE52950C275 /* PBXTargetDependency */,
 			);
 			name = app_core_hellomultiverse;
 			productName = app_core_hellomultiverse;
-			productReference = 9AEB75A316F78DF10085103B /* libapp_core_hellomultiverse.dylib */;
+			productReference = D998E09B04B03ECC735AE664 /* libapp_core_hellomultiverse.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9AEB759B16F78DF10085103B /* Project object */ = {
+		EFF1C61EE474C07481BEA371 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Camilo Sasuke Tsumanuma";
 				TargetAttributes = {
-					9AE24E981904CFFD001AEFFB = {
-						TestTargetID = 9AEB75A216F78DF10085103B;
+					2DAA5EA8B74AF8110A9B1A14 = {
+						TestTargetID = 39E9E15785CAD75BD7CA1D15;
 					};
 				};
 			};
-			buildConfigurationList = 9AEB759E16F78DF10085103B /* Build configuration list for PBXProject "app_core_hellomultiverse" */;
+			buildConfigurationList = D3B96924C794E5E52005C271 /* Build configuration list for PBXProject "app_core_hellomultiverse" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 9AEB759A16F78DF10085103B;
-			productRefGroup = 9AEB75A416F78DF10085103B /* Products */;
+			mainGroup = F1D6EE7AA95350AA9752F751;
+			productRefGroup = C8095644D673112DC4559FE4 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 07A34A331B4DA61400CC3FD9 /* Products */;
-					ProjectRef = 07B65416190F2C0F002DAADE /* aura.xcodeproj */;
+					ProductGroup = 82E45F58C4AE30644A0C3843 /* Products */;
+					ProjectRef = A4BC8EFFE22F86AB5C5EDA79 /* aura.xcodeproj */;
 				},
 				{
-					ProductGroup = 070533CC1C90B2A100F31B3F /* Products */;
-					ProjectRef = 070533CB1C90B2A100F31B3F /* gcom.xcodeproj */;
+					ProductGroup = 32D11B275325A0DC23F866BD /* Products */;
+					ProjectRef = 69E813028B8A6D0A89F05819 /* gcom.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				9AEB75A216F78DF10085103B /* app_core_hellomultiverse */,
-				9AE24E891904CFFD001AEFFB /* ios_app_core_hellomultiverse */,
-				9AE24E981904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */,
+				39E9E15785CAD75BD7CA1D15 /* app_core_hellomultiverse */,
+				4AC97A777E1C9CCD09B6BC30 /* ios_app_core_hellomultiverse */,
+				2DAA5EA8B74AF8110A9B1A14 /* app_core_hellomultiverse_iosTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		070533E61C90B2A100F31B3F /* libgcom.dylib */ = {
+		6B4C3937D94E357CB67AD6D6 /* libgcom.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
 			path = libgcom.dylib;
-			remoteRef = 070533E51C90B2A100F31B3F /* PBXContainerItemProxy */;
+			remoteRef = F2697F0D66CD18E0F76DB1B1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		070533E81C90B2A100F31B3F /* libios_gcom.dylib */ = {
+		2BDF515A5960755F7CB66E92 /* libios_gcom.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libios_gcom.dylib;
-			remoteRef = 070533E71C90B2A100F31B3F /* PBXContainerItemProxy */;
+			remoteRef = 804D91713B2E4A2FC66F304D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		070533EA1C90B2A100F31B3F /* gcom_iosTests.xctest */ = {
+		92634AA549A09E1FDAA24D47 /* gcom_iosTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = gcom_iosTests.xctest;
-			remoteRef = 070533E91C90B2A100F31B3F /* PBXContainerItemProxy */;
+			remoteRef = B9B61527A3EAAC232A648EBD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		07A34A4E1B4DA61400CC3FD9 /* libcore.dylib */ = {
+		FD5ACF32D0E7EB2CC646A73F /* libcore.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
 			path = libcore.dylib;
-			remoteRef = 07A34A4D1B4DA61400CC3FD9 /* PBXContainerItemProxy */;
+			remoteRef = AD7EC9000B4096D721BF5AA7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		07A34A501B4DA61400CC3FD9 /* libios_core.dylib */ = {
+		48D040BA406ABA02F78D8681 /* libios_core.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libios_core.dylib;
-			remoteRef = 07A34A4F1B4DA61400CC3FD9 /* PBXContainerItemProxy */;
+			remoteRef = B1B28A0D4B1BEDA4956DAC9D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		07A34A521B4DA61400CC3FD9 /* core_iosTests.xctest */ = {
+		756D09A2CCD140520189871A /* core_iosTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = core_iosTests.xctest;
-			remoteRef = 07A34A511B4DA61400CC3FD9 /* PBXContainerItemProxy */;
+			remoteRef = 663E7B5D57A362C48EA4BB40 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9AE24E971904CFFD001AEFFB /* Resources */ = {
+		CE152B4244366F2B107AB3BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE24EA71904CFFD001AEFFB /* InfoPlist.strings in Resources */,
+				B5AE9A4EF284617E56828877 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9AE24E861904CFFD001AEFFB /* Sources */ = {
+		8FD8B7FD6F8D3F51FAA6311D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A6716B61D155B860069A961 /* hellomultiverse_main_frame.cpp in Sources */,
-				9A6716B71D155B860069A961 /* hellomultiverse_gcom.cpp in Sources */,
-				9A6716B81D155B860069A961 /* hellomultiverse_impact_base.cpp in Sources */,
-				070214A21C516ADC00DB16A7 /* hellomultiverse_font_impact.cpp in Sources */,
-				070214941C5158F900DB16A7 /* user_font_list.cpp in Sources */,
-				07A4B1371B76469200DA5C57 /* hellomultiverse_render.cpp in Sources */,
-				07473E641B5050B8004688C5 /* hellomultiverse_main_impact.cpp in Sources */,
-				07473E601B5050B8004688C5 /* hellomultiverse_switcher_impact.cpp in Sources */,
-				07B65520190F3001002DAADE /* framework.cpp in Sources */,
-				07B65521190F3001002DAADE /* hellomultiverse_application.cpp in Sources */,
-				07B65522190F3001002DAADE /* hellomultiverse_document.cpp in Sources */,
-				07473E611B5050B8004688C5 /* hellomultiverse_toggle_impact.cpp in Sources */,
-				07B65523190F3001002DAADE /* hellomultiverse_frame.cpp in Sources */,
-				07B65524190F3001002DAADE /* hellomultiverse_pane_impact.cpp in Sources */,
-				07473E631B5050B8004688C5 /* hellomultiverse_edit_impact.cpp in Sources */,
-				07B65525190F3001002DAADE /* aaa_want_to_erase_hellomultiverse_impact_update_hint.cpp in Sources */,
-				07473E621B5050B8004688C5 /* hellomultiverse_top_impact.cpp in Sources */,
-				07B65526190F3001002DAADE /* hellomultiverse_impact.cpp in Sources */,
+				850EDF439A5E7626D24CF16B /* hellomultiverse_main_frame.cpp in Sources */,
+				B49D9C9BF77F4D6D585BD59E /* hellomultiverse_gcom.cpp in Sources */,
+				37A2F5A6ABB0AE5306EC2346 /* hellomultiverse_impact_base.cpp in Sources */,
+				0E76E66CB9B40E34A4E9E496 /* hellomultiverse_font_impact.cpp in Sources */,
+				1F1E63371B0CDCB9A0F54F1F /* user_font_list.cpp in Sources */,
+				27ACC0762DE38AF3823D2607 /* hellomultiverse_render.cpp in Sources */,
+				141CF29B070EC4E92A13DFFB /* hellomultiverse_main_impact.cpp in Sources */,
+				DB9345A581BB57427336DF8D /* hellomultiverse_switcher_impact.cpp in Sources */,
+				2FD922DC3B2FD727998F9BEE /* framework.cpp in Sources */,
+				CC5902616392DF27F15C2020 /* hellomultiverse_application.cpp in Sources */,
+				8217FD5461DA5DE24AB199B3 /* hellomultiverse_document.cpp in Sources */,
+				E2F4AC64F3D1F19A3BDD7281 /* hellomultiverse_toggle_impact.cpp in Sources */,
+				9F55F391B843F5D49DE8856F /* hellomultiverse_frame.cpp in Sources */,
+				AEBF9AC6BCD9FC8D44CF99CA /* hellomultiverse_pane_impact.cpp in Sources */,
+				552765A1B615602A8AE6248B /* hellomultiverse_edit_impact.cpp in Sources */,
+				8EBC1C9D5F60B9B03FEBD574 /* aaa_want_to_erase_hellomultiverse_impact_update_hint.cpp in Sources */,
+				062CE05B879970C45E84C5CA /* hellomultiverse_top_impact.cpp in Sources */,
+				30AA3F384C2F37C55EF9E161 /* hellomultiverse_impact.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9AE24E951904CFFD001AEFFB /* Sources */ = {
+		186B95B531529D2BF7F91E40 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE24EA91904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m in Sources */,
+				012AF2757054B8314D51FDDE /* app_core_hellomultiverse_iosTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9AEB759F16F78DF10085103B /* Sources */ = {
+		35D4A71BB92C905710424719 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AA1009019971FCE004F84BD /* hellomultiverse_main_impact.cpp in Sources */,
-				9AEB75DD16F78E600085103B /* framework.cpp in Sources */,
-				07AE494E1CC7A83F00959A6F /* hellomultiverse_gcom.cpp in Sources */,
-				9A72594C1D1403E6001F56B4 /* hellomultiverse_main_frame.cpp in Sources */,
-				070561EA1C412B59004085DF /* user_font_list.cpp in Sources */,
-				070561E61C412AFA004085DF /* hellomultiverse_font_impact.cpp in Sources */,
-				076D09FD1A3FC72C007432B6 /* hellomultiverse_toggle_impact.cpp in Sources */,
-				076D09FF1A3FC72C007432B6 /* hellomultiverse_top_impact.cpp in Sources */,
-				076D09FB1A3FC72C007432B6 /* hellomultiverse_switcher_impact.cpp in Sources */,
-				07FB1AA41B744E8800F3FCC1 /* hellomultiverse_render.cpp in Sources */,
-				9AA1008E19971FCE004F84BD /* hellomultiverse_edit_impact.cpp in Sources */,
-				9AEB75E116F78E600085103B /* hellomultiverse_application.cpp in Sources */,
-				07AE49501CC7A83F00959A6F /* hellomultiverse_impact_base.cpp in Sources */,
-				9AEB75E216F78E600085103B /* hellomultiverse_document.cpp in Sources */,
-				9AEB75E316F78E600085103B /* hellomultiverse_frame.cpp in Sources */,
-				9AEB75E416F78E600085103B /* hellomultiverse_pane_impact.cpp in Sources */,
-				9AEB75E516F78E600085103B /* aaa_want_to_erase_hellomultiverse_impact_update_hint.cpp in Sources */,
-				9AEB75E616F78E600085103B /* hellomultiverse_impact.cpp in Sources */,
+				6B5C556D8129B37245C876FC /* hellomultiverse_main_impact.cpp in Sources */,
+				55DF2E41B5EDEFFF6CC0425B /* framework.cpp in Sources */,
+				0E3126D06E99C3923EB50DB8 /* hellomultiverse_gcom.cpp in Sources */,
+				8E9708CFB941D92ECE27EC0E /* hellomultiverse_main_frame.cpp in Sources */,
+				6D6CE61D163B949C6E4E1ADE /* user_font_list.cpp in Sources */,
+				F7818F9A0DCE1F41388B1105 /* hellomultiverse_font_impact.cpp in Sources */,
+				B6ECA14EDA86BD89336E6372 /* hellomultiverse_toggle_impact.cpp in Sources */,
+				21C128EDB826C90D263F4A98 /* hellomultiverse_top_impact.cpp in Sources */,
+				A0EE3321FFAB471A45C0FA3D /* hellomultiverse_switcher_impact.cpp in Sources */,
+				0DB0230B287F7F57E4654558 /* hellomultiverse_render.cpp in Sources */,
+				D6B85FD406DD688DDAC0FE58 /* hellomultiverse_edit_impact.cpp in Sources */,
+				4D745F0C5E1821D3746F53F8 /* hellomultiverse_application.cpp in Sources */,
+				9E28E45B7EE26C4C6FBD95BF /* hellomultiverse_impact_base.cpp in Sources */,
+				610155FD32AFC6F3A4EF6B27 /* hellomultiverse_document.cpp in Sources */,
+				1E8C5C7525FC0CCB7A665C3C /* hellomultiverse_frame.cpp in Sources */,
+				8B4159B94B1939268662A343 /* hellomultiverse_pane_impact.cpp in Sources */,
+				C22B916EC0984F3E06173C7D /* aaa_want_to_erase_hellomultiverse_impact_update_hint.cpp in Sources */,
+				2D172A67A9EDBAD72F2018A5 /* hellomultiverse_impact.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		070533EE1C90B2B900F31B3F /* PBXTargetDependency */ = {
+		9117586E3F7D5E2052328E42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = gcom;
-			targetProxy = 070533ED1C90B2B900F31B3F /* PBXContainerItemProxy */;
+			targetProxy = F809C8ADFFD0F7092E9432AF /* PBXContainerItemProxy */;
 		};
-		07A34AB21B4DAAAF00CC3FD9 /* PBXTargetDependency */ = {
+		80D446EBDFAE9EE52950C275 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = aura;
-			targetProxy = 07A34AB11B4DAAAF00CC3FD9 /* PBXContainerItemProxy */;
+			targetProxy = 91B3F933310112258846A5C9 /* PBXContainerItemProxy */;
 		};
-		9A259E1B1D25D9B40044727D /* PBXTargetDependency */ = {
+		CA99746CE51A423E210DA543 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ios_core;
-			targetProxy = 9A259E1A1D25D9B40044727D /* PBXContainerItemProxy */;
+			targetProxy = B4F2D0103FE7B0EF05CBDFBC /* PBXContainerItemProxy */;
 		};
-		9A259E1D1D25D9B40044727D /* PBXTargetDependency */ = {
+		4A9F9E5E1C888BD91E4CB90A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ios_gcom;
-			targetProxy = 9A259E1C1D25D9B40044727D /* PBXContainerItemProxy */;
+			targetProxy = 0FA8B6ABB9A623FA31BD531F /* PBXContainerItemProxy */;
 		};
-		9AE24EA01904CFFD001AEFFB /* PBXTargetDependency */ = {
+		B34A4AD3BF1D5D6876FEC0D1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9AE24E891904CFFD001AEFFB /* ios_app_core_hellomultiverse */;
-			targetProxy = 9AE24E9F1904CFFD001AEFFB /* PBXContainerItemProxy */;
+			target = 4AC97A777E1C9CCD09B6BC30 /* ios_app_core_hellomultiverse */;
+			targetProxy = BA623A143276E1DEAC092E2F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9AE24EA51904CFFD001AEFFB /* InfoPlist.strings */ = {
+		CA0A1F7C5CEFC30B9743E227 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9AE24EA61904CFFD001AEFFB /* en */,
+				14E4B65DA935811EA9FE4B12 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -668,7 +668,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		9AE24EAA1904CFFD001AEFFB /* Debug */ = {
+		1712BD9A4077B534EE17F8FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_EXTENSION = dylib;
@@ -679,7 +679,7 @@
 			};
 			name = Debug;
 		};
-		9AE24EAB1904CFFD001AEFFB /* Release */ = {
+		4912E40E70EF39D361A223A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_EXTENSION = dylib;
@@ -690,7 +690,7 @@
 			};
 			name = Release;
 		};
-		9AE24EAC1904CFFD001AEFFB /* Debug */ = {
+		AFC804A7A78D683EFE0E2973 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -725,7 +725,7 @@
 			};
 			name = Debug;
 		};
-		9AE24EAD1904CFFD001AEFFB /* Release */ = {
+		A5B9B32668BBA77E2E696498 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -758,7 +758,7 @@
 			};
 			name = Release;
 		};
-		9AEB75A516F78DF10085103B /* Debug */ = {
+		05883F608D2472458931042B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
@@ -821,7 +821,7 @@
 			};
 			name = Debug;
 		};
-		9AEB75A616F78DF10085103B /* Release */ = {
+		B88676A918CD392D30B9DDE8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
@@ -876,7 +876,7 @@
 			};
 			name = Release;
 		};
-		9AEB75A816F78DF10085103B /* Debug */ = {
+		D3273DEC873DAA70E8118D1C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -885,7 +885,7 @@
 			};
 			name = Debug;
 		};
-		9AEB75A916F78DF10085103B /* Release */ = {
+		8A89CCC3663B7118A69F791E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -897,43 +897,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9AE24EBA1904CFFD001AEFFB /* Build configuration list for PBXNativeTarget "ios_app_core_hellomultiverse" */ = {
+		21BDCCB2732F6263FE4D2ABA /* Build configuration list for PBXNativeTarget "ios_app_core_hellomultiverse" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9AE24EAA1904CFFD001AEFFB /* Debug */,
-				9AE24EAB1904CFFD001AEFFB /* Release */,
+				1712BD9A4077B534EE17F8FF /* Debug */,
+				4912E40E70EF39D361A223A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9AE24EBB1904CFFD001AEFFB /* Build configuration list for PBXNativeTarget "app_core_hellomultiverse_iosTests" */ = {
+		14D143349A9008C5F67ABA4D /* Build configuration list for PBXNativeTarget "app_core_hellomultiverse_iosTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9AE24EAC1904CFFD001AEFFB /* Debug */,
-				9AE24EAD1904CFFD001AEFFB /* Release */,
+				AFC804A7A78D683EFE0E2973 /* Debug */,
+				A5B9B32668BBA77E2E696498 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9AEB759E16F78DF10085103B /* Build configuration list for PBXProject "app_core_hellomultiverse" */ = {
+		D3B96924C794E5E52005C271 /* Build configuration list for PBXProject "app_core_hellomultiverse" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9AEB75A516F78DF10085103B /* Debug */,
-				9AEB75A616F78DF10085103B /* Release */,
+				05883F608D2472458931042B /* Debug */,
+				B88676A918CD392D30B9DDE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9AEB75A716F78DF10085103B /* Build configuration list for PBXNativeTarget "app_core_hellomultiverse" */ = {
+		5359278963F62D9D9D88EB18 /* Build configuration list for PBXNativeTarget "app_core_hellomultiverse" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9AEB75A816F78DF10085103B /* Debug */,
-				9AEB75A916F78DF10085103B /* Release */,
+				D3273DEC873DAA70E8118D1C /* Debug */,
+				8A89CCC3663B7118A69F791E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9AEB759B16F78DF10085103B /* Project object */;
+	rootObject = EFF1C61EE474C07481BEA371 /* Project object */;
 }

@@ -37,7 +37,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "078C352E1921758500354453"
+            BlueprintIdentifier = "DF29484B91A75FC0D4D0B486"
             BuildableName = "_ios_complex_drawing.app"
             BlueprintName = "_ios_complex_drawing"
             ReferencedContainer = "container:_ios_app_complex_drawing.xcodeproj">
@@ -53,7 +53,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "078C352E1921758500354453"
+            BlueprintIdentifier = "DF29484B91A75FC0D4D0B486"
             BuildableName = "_ios_complex_drawing.app"
             BlueprintName = "_ios_complex_drawing"
             ReferencedContainer = "container:_ios_app_complex_drawing.xcodeproj">

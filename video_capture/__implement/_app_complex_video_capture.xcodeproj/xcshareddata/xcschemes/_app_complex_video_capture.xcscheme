@@ -53,7 +53,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "070B8EE91B6E53F900D26137"
+            BlueprintIdentifier = "B5DBEDD9DAAF2932D8CEA1BF"
             BuildableName = "_app_complex_video_capture.app"
             BlueprintName = "_app_complex_video_capture"
             ReferencedContainer = "container:_app_complex_video_capture.xcodeproj">

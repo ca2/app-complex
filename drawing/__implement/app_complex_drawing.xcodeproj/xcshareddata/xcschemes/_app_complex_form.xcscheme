@@ -15,7 +15,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "070B8EE91B6E53F900D26137"
+               BlueprintIdentifier = "A7D017985F0BF029FCDD5D29"
                BuildableName = "_app_complex_form.app"
                BlueprintName = "_app_complex_form"
                ReferencedContainer = "container:../../form/__implement/app_complex_form.xcodeproj">
@@ -44,7 +44,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "070B8EE91B6E53F900D26137"
+            BlueprintIdentifier = "A7D017985F0BF029FCDD5D29"
             BuildableName = "_app_complex_form.app"
             BlueprintName = "_app_complex_form"
             ReferencedContainer = "container:../../form/__implement/app_complex_form.xcodeproj">
@@ -60,7 +60,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "070B8EE91B6E53F900D26137"
+            BlueprintIdentifier = "A7D017985F0BF029FCDD5D29"
             BuildableName = "_app_complex_form.app"
             BlueprintName = "_app_complex_form"
             ReferencedContainer = "container:../../form/__implement/app_complex_form.xcodeproj">

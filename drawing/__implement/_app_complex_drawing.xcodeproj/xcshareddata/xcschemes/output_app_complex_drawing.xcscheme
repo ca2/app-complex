@@ -15,7 +15,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "070B8EE91B6E53F900D26137"
+               BlueprintIdentifier = "DA35B5FD5F796A5612F84C84"
                BuildableName = "_app_complex_drawing.app"
                BlueprintName = "_app_complex_drawing"
                ReferencedContainer = "container:_app_complex_drawing.xcodeproj">
@@ -45,7 +45,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "070B8EE91B6E53F900D26137"
+            BlueprintIdentifier = "DA35B5FD5F796A5612F84C84"
             BuildableName = "_app_complex_drawing.app"
             BlueprintName = "_app_complex_drawing"
             ReferencedContainer = "container:_app_complex_drawing.xcodeproj">
@@ -62,7 +62,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "070B8EE91B6E53F900D26137"
+            BlueprintIdentifier = "DA35B5FD5F796A5612F84C84"
             BuildableName = "_app_complex_drawing.app"
             BlueprintName = "_app_complex_drawing"
             ReferencedContainer = "container:_app_complex_drawing.xcodeproj">
