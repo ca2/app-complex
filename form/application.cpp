@@ -88,7 +88,7 @@ namespace app_complex_form
       factory()->add_factory_item <::app_complex_form::form_001 >();
       factory()->add_factory_item <::app_complex_form::form_002 >();
 
-      ::app_simple_form::application::init_instance();
+      ::berg::application::init_instance();
 
       //if (!::berg::application::init_instance())
       //{
