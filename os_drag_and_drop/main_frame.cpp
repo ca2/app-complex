@@ -16,7 +16,7 @@ namespace simple_os_drag_and_drop
 
       window_enable_full_screen();
 
-      //m_bWindowFrame = !papp->m_bExperienceMainFrame;
+      //m_bWindowFrame = !papp->m_emainuserinterface;
 
       //if (papp->has_property("opaque"))
       //{
