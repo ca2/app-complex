@@ -36,7 +36,7 @@ IMPLEMENT_APPLICATION_FACTORY();
 
       ::aura::session * pcoression = &Session;
 
-      pcoression->will_use_impact_hint(FONTSEL_IMPACT);
+      pcoression->will_use_impact_hint("font_selection_impact");
 
       add_factory_item <::simple_os_drag_and_drop::document >();
       add_factory_item <::simple_os_drag_and_drop::frame >();

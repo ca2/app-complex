@@ -57,9 +57,9 @@ namespace app_complex_drawing
       set_tab("text://app-simple/drawing/:circle path", "drawing5");
       set_tab("text://app-simple/drawing/:arcs", "drawing6");
       set_tab("text://app-simple/drawing/:arcpths", "drawing7");
-      set_tab("Font", FONTSEL_IMPACT);
-      set_tab("Color", COLORSEL_IMPACT);
-      set_tab("Open", FILEMANAGER_IMPACT);
+      set_tab("Font", "font_selection_impact");
+      set_tab("Color", "color_selection_impact");
+      set_tab("Open", "file_manager_impact");
 
       set_current_tab_by_id("drawing1");
 
@@ -134,7 +134,7 @@ namespace app_complex_drawing
 
       }
       else if (ptopic->m_puserelement
-               && ptopic->user_interaction_id() == FONTSEL_IMPACT)
+               && ptopic->user_interaction_id() == "font_selection_impact")
       {
 
          if (ptopic->id() == ::id_after_change_cur_sel)
@@ -194,7 +194,7 @@ namespace app_complex_drawing
       if (get_impact_id().begins("drawing"))
       {
 
-         auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
+         auto ptabpaneFileManager = get_tab_by_id("file_manager_impact");
 
          if (ptabpaneFileManager != nullptr && ptabpaneFileManager->m_pplaceholder != nullptr)
          {
@@ -203,7 +203,7 @@ namespace app_complex_drawing
 
          }
 
-         auto ptabpaneFontSel = get_tab_by_id(FONTSEL_IMPACT);
+         auto ptabpaneFontSel = get_tab_by_id("font_selection_impact");
 
          if (ptabpaneFontSel != nullptr && ptabpaneFontSel->m_pplaceholder != nullptr)
          {
@@ -222,7 +222,7 @@ namespace app_complex_drawing
          }
 
       }
-      else if (get_impact_id() == FONTSEL_IMPACT)
+      else if (get_impact_id() == "font_selection_impact")
       {
 
          if (m_pimpactDrawing != nullptr)
@@ -239,7 +239,7 @@ namespace app_complex_drawing
          }
 
       }
-      else if (get_impact_id() == COLORSEL_IMPACT)
+      else if (get_impact_id() == "color_selection_impact")
       {
 
          if (m_pimpactDrawing != nullptr && get_color_interaction())

@@ -35,7 +35,7 @@ IMPLEMENT_APPLICATION_FACTORY();
 
       ::aura::session * pcoression = &Session;
 
-      puser->will_use_impact_hint(FONTSEL_IMPACT);
+      puser->will_use_impact_hint("font_selection_impact");
 
       add_factory_item <::notify_drawing::main_frame >();
       add_factory_item <::notify_drawing::impact >();

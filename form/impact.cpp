@@ -15,7 +15,7 @@ namespace app_complex_form
    impact::impact()
    {
 
-      payload(FONTSEL_IMPACT) = true;
+      payload("font_selection_impact") = true;
 
       m_enonclient.erase(::user::e_non_client_background);
       m_enonclient.erase(::user::e_non_client_focus_rect);

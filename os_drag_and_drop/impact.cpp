@@ -9,7 +9,7 @@ namespace simple_os_drag_and_drop
    impact::impact()
    {
 
-      payload(FONTSEL_IMPACT) = true;
+      payload("font_selection_impact") = true;
 
       m_enonclient.erase(::user::e_non_client_background);
 

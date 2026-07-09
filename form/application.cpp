@@ -76,7 +76,7 @@ namespace app_complex_form
 
       //set_local_data();
 
-      //puser->will_use_impact_hint(FONTSEL_IMPACT);
+      //puser->will_use_impact_hint("font_selection_impact");
 
       factory()->add_factory_item <::app_complex_form::document >();
       factory()->add_factory_item <::app_complex_form::frame >();

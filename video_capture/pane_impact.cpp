@@ -67,7 +67,7 @@ namespace app_complex_video_capture
 
       set_tab("Select Device","device_selector");
       set_tab("app_complex_video_capture", MAIN_IMPACT);
-      set_tab("Open", FILEMANAGER_IMPACT);
+      set_tab("Open", "file_manager_impact");
 
       set_current_tab_by_id(MAIN_IMPACT);
 

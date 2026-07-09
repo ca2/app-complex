@@ -61,7 +61,7 @@ namespace app_complex_drawing
 
       auto puser = user();
 
-      puser->will_use_impact_hint(FONTSEL_IMPACT);
+      puser->will_use_impact_hint("font_selection_impact");
 
       factory()->add_factory_item <::app_complex_drawing::pane_impact >();
 
