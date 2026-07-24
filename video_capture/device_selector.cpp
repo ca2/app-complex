@@ -9,6 +9,7 @@
 #include "app-complex/video_input/video_input.h"
 #include "app-complex/video_input/device.h"
 #include "aura/graphics/draw2d/graphics.h"
+#include "aura/graphics/draw2d/graphics_pointer.h"
 #include "aura/graphics/image/drawing.h"
 #include "aura/message/user.h"
 

@@ -80,7 +80,7 @@ namespace app_complex_video_capture
 
 /*      ::image::image_pointer pimage = m_pimagePost;
 
-/*      _006OnDraw(pimage->g());
+/*      _006OnDraw(pgraphicsImage);
 
 
 /*      m_pimageTime = create_image(m_pimagePost->get_size());
@@ -158,7 +158,7 @@ namespace app_complex_video_capture
 
       //d->create(rectangleX.size());
 
-      //d->get_graphics()->BitBlt(rectangleX, pimage->g());
+      //d->get_graphics()->BitBlt(rectangleX, pgraphicsImage);
 
       //d.save_to_file(         auto psystem = system();
 
