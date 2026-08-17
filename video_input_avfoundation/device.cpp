@@ -1,4 +1,4 @@
-#include "framework.h"
+#include "platform.h"
 #include "acme/parallelization/synchronous_lock.h"
 #include "acme/include/_c_swap.h"
 #include "apex/platform/system.h"
@@ -126,7 +126,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 {
    synchronous_lock synchronouslock(m_prender->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
    
-   m_prender->m_pimage->create({width, height});
+   m_prender->m_pimage->create_as_descriptor({width, height});
    m_prender->m_pimage->image32()->vertical_swap_copy(
                            minimum(width,m_prender->m_pimage->width()),
                            minimum(height,m_prender->m_pimage->height()),

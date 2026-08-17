@@ -17,7 +17,7 @@
 		16AB9C67F7A4355F1069DDAC /* device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B83D85E52B827C8C9F8EDA9F /* device.cpp */; };
 		5E277EAC12DC8420BD3EC5C0 /* format_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9181505D3F790E1F1848EE /* format_reader.cpp */; };
 		9ED3435C67E8903D13B3130E /* frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CE2B6EAE2CE3BA4FFE6F94F /* frame.cpp */; };
-		7CF4402FD8537091CFC02C7C /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 886130F9DA6720CA650452B3 /* framework.cpp */; };
+		7CF4402FD8537091CFC02C7C /* platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 886130F9DA6720CA650452B3 /* platform.cpp */; };
 		23853EB8ECB23D1EE3F9EEA4 /* media_format.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 879771C2C59041C42E1B96F2 /* media_format.cpp */; };
 		A2DEC3B6FE67B36903E0BF3B /* render.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E13799B60B34F0E37FBF8A6 /* render.cpp */; };
 		7DAB4D77BBEDEADB280CD7A7 /* video_input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F711868BED87CC89E6FA1EC4 /* video_input.cpp */; };
@@ -66,7 +66,7 @@
 		7CE2B6EAE2CE3BA4FFE6F94F /* frame.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = frame.cpp; sourceTree = "<group>"; };
 		EB4F709834DFBFD7F8B2BEC3 /* device.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = device.h; sourceTree = "<group>"; };
 		3C9181505D3F790E1F1848EE /* format_reader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = format_reader.cpp; sourceTree = "<group>"; };
-		886130F9DA6720CA650452B3 /* framework.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
+		886130F9DA6720CA650452B3 /* platform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = platform.cpp; sourceTree = "<group>"; };
 		13F6C45B6367E1A95B5DA717 /* frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = frame.h; sourceTree = "<group>"; };
 		B83D85E52B827C8C9F8EDA9F /* device.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = device.cpp; sourceTree = "<group>"; };
 		62AFE89CE0FEA6AF40BE3C12 /* device_array.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = device_array.h; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		4C01B500ACFA4EBEDE1020E4 /* _.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _.cpp; sourceTree = "<group>"; };
 		27C1934C4403DC69486E64FF /* department.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = department.h; sourceTree = "<group>"; };
 		E39E4D0E335E7DD951CF800D /* debug_print_out.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = debug_print_out.h; sourceTree = "<group>"; };
-		EF76DC7ADE28BD3B70E9D568 /* framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
+		EF76DC7ADE28BD3B70E9D568 /* platform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = platform.h; sourceTree = "<group>"; };
 		ED209E54CC67862FC7F5D7F8 /* render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = render.h; sourceTree = "<group>"; };
 		13CC8B296DD08FA115B06165 /* device_array.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = device_array.cpp; sourceTree = "<group>"; };
 		5CFE4FD503398537E138E108 /* _.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
@@ -133,8 +133,8 @@
 				FDA294E6AEE3A1826157950C /* format_reader.h */,
 				7CE2B6EAE2CE3BA4FFE6F94F /* frame.cpp */,
 				13F6C45B6367E1A95B5DA717 /* frame.h */,
-				886130F9DA6720CA650452B3 /* framework.cpp */,
-				EF76DC7ADE28BD3B70E9D568 /* framework.h */,
+				886130F9DA6720CA650452B3 /* platform.cpp */,
+				EF76DC7ADE28BD3B70E9D568 /* platform.h */,
 				879771C2C59041C42E1B96F2 /* media_format.cpp */,
 				C921471107C034FA6D58715F /* media_format.h */,
 				5E13799B60B34F0E37FBF8A6 /* render.cpp */,
@@ -339,7 +339,7 @@
 				16AB9C67F7A4355F1069DDAC /* device.cpp in Sources */,
 				5E277EAC12DC8420BD3EC5C0 /* format_reader.cpp in Sources */,
 				9ED3435C67E8903D13B3130E /* frame.cpp in Sources */,
-				7CF4402FD8537091CFC02C7C /* framework.cpp in Sources */,
+				7CF4402FD8537091CFC02C7C /* platform.cpp in Sources */,
 				23853EB8ECB23D1EE3F9EEA4 /* media_format.cpp in Sources */,
 				A2DEC3B6FE67B36903E0BF3B /* render.cpp in Sources */,
 				7DAB4D77BBEDEADB280CD7A7 /* video_input.cpp in Sources */,
@@ -412,7 +412,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = framework.h;
+				GCC_PREFIX_HEADER = platform.h;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					_DEBUG,
 					"$(inherited)",
@@ -507,7 +507,7 @@
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = framework.h;
+				GCC_PREFIX_HEADER = platform.h;
 				GCC_VERSION = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;

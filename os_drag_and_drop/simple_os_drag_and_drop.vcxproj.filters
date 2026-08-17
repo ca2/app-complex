@@ -31,7 +31,7 @@
     <ClCompile Include="impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="framework.cpp">
+    <ClCompile Include="platform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="simple_os_drag_and_drop.cpp">
@@ -60,7 +60,7 @@
     <ClInclude Include="impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="framework.h">
+    <ClInclude Include="platform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="_.h">

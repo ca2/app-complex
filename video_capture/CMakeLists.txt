@@ -17,8 +17,8 @@ list(APPEND library_source
    edit_impact.h
    frame.cpp
    frame.h
-   framework.cpp
-   framework.h
+   platform.cpp
+   platform.h
    impact.cpp
    impact.h
    main_frame.cpp
@@ -70,8 +70,8 @@ add_library(static_${PROJECT_NAME} STATIC ${library_source})
 
 
 
-target_precompile_headers(${PROJECT_NAME} PRIVATE framework.h)
-target_precompile_headers(static_${PROJECT_NAME} PRIVATE framework.h)
+target_precompile_headers(${PROJECT_NAME} PRIVATE platform.h)
+target_precompile_headers(static_${PROJECT_NAME} PRIVATE platform.h)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 

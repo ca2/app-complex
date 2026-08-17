@@ -1,6 +1,6 @@
 //https://winplatform.wordpress.com/2015/01/20/winrt-mediacapture-tips/
 //https://learn.microsoft.com/en-us/windows/uwp/audio-video-camera/process-media-frames-with-mediaframereader
-#include "framework.h"
+#include "platform.h"
 #include "device.h"
 #include "thread.h"
 #include "render.h"
@@ -953,7 +953,7 @@ namespace video_input_media_capture
 
          defer_constructø(prender->m_pimage);
 
-         prender->m_pimage->create(m_size);
+         prender->m_pimage->create_as_descriptor(m_size);
 
          prender->on_set_format();
 

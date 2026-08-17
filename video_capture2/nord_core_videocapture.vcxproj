@@ -159,7 +159,7 @@
     <ClCompile Include="_hellomultiverse.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h" />
+    <ClInclude Include="platform.h" />
     <ClInclude Include="hellomultiverse.h" />
     <ClInclude Include="hellomultiverse_application.h" />
     <ClInclude Include="hellomultiverse_document.h" />

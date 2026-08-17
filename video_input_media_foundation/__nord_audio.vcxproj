@@ -76,7 +76,7 @@
     <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_section.h" />
     <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_slider.h" />
     <ClInclude Include="audio_mixer_userbase\audio_mixer_userbase_thread.h" />
-    <ClInclude Include="framework.h" />
+    <ClInclude Include="platform.h" />
     <ClInclude Include="iaudio\iaudio.h" />
     <ClInclude Include="iaudio\iaudio_wave_stream_effect.h" />
     <ClInclude Include="iaudio\iaudio_wave_stream_effect_chain.h" />
@@ -531,7 +531,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x86'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="audio_plugin\_audio_plugin.cpp" />
-    <ClCompile Include="framework.cpp" />
+    <ClCompile Include="platform.cpp" />
     <ClCompile Include="iaudio\iaudio_wave_stream_effect.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>

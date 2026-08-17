@@ -7,7 +7,7 @@
 
 
 // Miscellaneous helper functions.
-#include "framework.h"
+#include "platform.h"
 //#include "Capture.h"
 #include <wincodec.h>
 

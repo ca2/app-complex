@@ -239,7 +239,7 @@
     <ClCompile Include="_simple_message_box.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h" />
+    <ClInclude Include="platform.h" />
     <ClInclude Include="simple_message_box.h" />
     <ClInclude Include="application.h" />
     <ClInclude Include="document.h" />

@@ -223,10 +223,10 @@
 		<Unit filename="/home/camilo/solution/basis/source/app-complex/drawing/application.h">
 			<Option target="app_complex_drawing"/>
 		</Unit>
-		<Unit filename="/home/camilo/solution/basis/source/app-complex/drawing/framework.cpp">
+		<Unit filename="/home/camilo/solution/basis/source/app-complex/drawing/platform.cpp">
 			<Option target="app_complex_drawing"/>
 		</Unit>
-		<Unit filename="/home/camilo/solution/basis/source/app-complex/drawing/framework.h">
+		<Unit filename="/home/camilo/solution/basis/source/app-complex/drawing/platform.h">
 			<Option target="app_complex_drawing"/>
 		</Unit>
 		<Unit filename="/home/camilo/solution/basis/source/app-complex/drawing/pane_impact.cpp">

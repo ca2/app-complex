@@ -1,4 +1,4 @@
-#include "framework.h"
+#include "platform.h"
 
 //void throw_a_::exception::exception_through_one_single_function_boundary(const ::scoped_string & scopedstr)
 //{

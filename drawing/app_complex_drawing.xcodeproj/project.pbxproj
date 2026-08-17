@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E7AAF2675C57DC0AF34ED03 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E909A0674F9429B8097662E0 /* framework.cpp */; };
+		5E7AAF2675C57DC0AF34ED03 /* platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E909A0674F9429B8097662E0 /* platform.cpp */; };
 		AD5DC1DA717FE575D9210BF0 /* application.h in Headers */ = {isa = PBXBuildFile; fileRef = D82FF2D9FBC10F12554DCFEB /* application.h */; };
 		5945B30347497536162C116F /* pane_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = E628B916164E72665DA9A9A4 /* pane_impact.h */; };
-		12346F65AFEC8315AA8990EB /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = EB92A7DA079D1E7CB8188850 /* framework.h */; };
+		12346F65AFEC8315AA8990EB /* platform.h in Headers */ = {isa = PBXBuildFile; fileRef = EB92A7DA079D1E7CB8188850 /* platform.h */; };
 		2A9968387D957C8A0685FA86 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A88C4A55E8DA826EB037CD3 /* application.cpp */; };
 		AFC6D9A8ADA85AA5C6914470 /* pane_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C49A843D69E0052874F89C21 /* pane_impact.cpp */; };
 		5FFCD0E256935E404330178B /* _.h in Headers */ = {isa = PBXBuildFile; fileRef = A15F3B665C042DD4E449944F /* _.h */; };
@@ -25,9 +25,9 @@
 		7B5BCB69BAF7FCBC19DB9834 /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B04FDEE3791785C08B6A66 /* libcore.dylib */; };
 		61A70D64D228F793D36E4A00 /* application.h in Headers */ = {isa = PBXBuildFile; fileRef = D82FF2D9FBC10F12554DCFEB /* application.h */; };
 		21DFC4F5323B4AD13CFD59CC /* _.h in Headers */ = {isa = PBXBuildFile; fileRef = A15F3B665C042DD4E449944F /* _.h */; };
-		26F5782DED8F4FC468F2FFE8 /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = EB92A7DA079D1E7CB8188850 /* framework.h */; };
+		26F5782DED8F4FC468F2FFE8 /* platform.h in Headers */ = {isa = PBXBuildFile; fileRef = EB92A7DA079D1E7CB8188850 /* platform.h */; };
 		AD53AFCF3FFA82018987F717 /* pane_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = E628B916164E72665DA9A9A4 /* pane_impact.h */; };
-		B5BB03F8D10A1A237A7D0F9B /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E909A0674F9429B8097662E0 /* framework.cpp */; };
+		B5BB03F8D10A1A237A7D0F9B /* platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E909A0674F9429B8097662E0 /* platform.cpp */; };
 		59B82466FB8F236F23C52916 /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0963369D30F2A3B728669035 /* _.cpp */; };
 		8E61AAE8A90F0339612DFC25 /* pane_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C49A843D69E0052874F89C21 /* pane_impact.cpp */; };
 		8A046E6A195A73D482FB582C /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A88C4A55E8DA826EB037CD3 /* application.cpp */; };
@@ -97,10 +97,10 @@
 
 /* Begin PBXFileReference section */
 		43161A35FA5D6BDF1527A817 /* libapp_complex_drawing.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapp_complex_drawing.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		E909A0674F9429B8097662E0 /* framework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
+		E909A0674F9429B8097662E0 /* platform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = platform.cpp; sourceTree = "<group>"; };
 		D82FF2D9FBC10F12554DCFEB /* application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
 		E628B916164E72665DA9A9A4 /* pane_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pane_impact.h; sourceTree = "<group>"; };
-		EB92A7DA079D1E7CB8188850 /* framework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
+		EB92A7DA079D1E7CB8188850 /* platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform.h; sourceTree = "<group>"; };
 		2A88C4A55E8DA826EB037CD3 /* application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
 		C49A843D69E0052874F89C21 /* pane_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pane_impact.cpp; sourceTree = "<group>"; };
 		A15F3B665C042DD4E449944F /* _.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
@@ -171,8 +171,8 @@
 				A895DE0F2CDFB20044500B85 /* _factory.cpp */,
 				2A88C4A55E8DA826EB037CD3 /* application.cpp */,
 				D82FF2D9FBC10F12554DCFEB /* application.h */,
-				E909A0674F9429B8097662E0 /* framework.cpp */,
-				EB92A7DA079D1E7CB8188850 /* framework.h */,
+				E909A0674F9429B8097662E0 /* platform.cpp */,
+				EB92A7DA079D1E7CB8188850 /* platform.h */,
 				C49A843D69E0052874F89C21 /* pane_impact.cpp */,
 				E628B916164E72665DA9A9A4 /* pane_impact.h */,
 			);
@@ -221,7 +221,7 @@
 			files = (
 				AD5DC1DA717FE575D9210BF0 /* application.h in Headers */,
 				5FFCD0E256935E404330178B /* _.h in Headers */,
-				12346F65AFEC8315AA8990EB /* framework.h in Headers */,
+				12346F65AFEC8315AA8990EB /* platform.h in Headers */,
 				5945B30347497536162C116F /* pane_impact.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,7 +232,7 @@
 			files = (
 				61A70D64D228F793D36E4A00 /* application.h in Headers */,
 				21DFC4F5323B4AD13CFD59CC /* _.h in Headers */,
-				26F5782DED8F4FC468F2FFE8 /* framework.h in Headers */,
+				26F5782DED8F4FC468F2FFE8 /* platform.h in Headers */,
 				AD53AFCF3FFA82018987F717 /* pane_impact.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,7 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E7AAF2675C57DC0AF34ED03 /* framework.cpp in Sources */,
+				5E7AAF2675C57DC0AF34ED03 /* platform.cpp in Sources */,
 				C741B40C6DBA8423F923BC8D /* _.cpp in Sources */,
 				AFC6D9A8ADA85AA5C6914470 /* pane_impact.cpp in Sources */,
 				4F13611DBD716E3DB24283C3 /* _factory.cpp in Sources */,
@@ -393,7 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5BB03F8D10A1A237A7D0F9B /* framework.cpp in Sources */,
+				B5BB03F8D10A1A237A7D0F9B /* platform.cpp in Sources */,
 				59B82466FB8F236F23C52916 /* _.cpp in Sources */,
 				8E61AAE8A90F0339612DFC25 /* pane_impact.cpp in Sources */,
 				9841A50DCB66707905D0F0A4 /* _factory.cpp in Sources */,
@@ -493,7 +493,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = framework.h;
+				GCC_PREFIX_HEADER = platform.h;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_REUSE_STRINGS = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -615,7 +615,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = framework.h;
+				GCC_PREFIX_HEADER = platform.h;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_REUSE_STRINGS = YES;
 				GCC_VERSION = "";

@@ -3,7 +3,7 @@
 
  Directory of C:\nordroid\app-core\simple_message_box
 
-17/04/2016  03:31                24 framework.cpp
+17/04/2016  03:31                24 platform.cpp
 17/04/2016  03:31               573 simple_message_box.cpp
 24/04/2016  11:53            27.642 application.cpp
 17/04/2016  03:31             2.435 document.cpp

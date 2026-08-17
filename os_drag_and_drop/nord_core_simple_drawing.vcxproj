@@ -239,7 +239,7 @@
     <ClCompile Include="_simple_drag_and_drop.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h" />
+    <ClInclude Include="platform.h" />
     <ClInclude Include="simple_drag_and_drop.h" />
     <ClInclude Include="simple_drag_and_drop_application.h" />
     <ClInclude Include="simple_drag_and_drop_document.h" />

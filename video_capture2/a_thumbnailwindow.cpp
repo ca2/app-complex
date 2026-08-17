@@ -5,7 +5,7 @@
 //
 // Copyright (c) Microsoft Corporation. All rights reserved.
 
-#include "framework.h"
+#include "platform.h"
 //#include "Capture.h"
 
 

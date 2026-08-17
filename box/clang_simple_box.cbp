@@ -72,7 +72,7 @@
 		<Compiler>
 			<Add option="-fPIC" />
 			<Add option="-std=c++17" />
-			<Add option='-include &quot;framework.h&quot;' />
+			<Add option='-include &quot;platform.h&quot;' />
 			<Add option="-fexceptions" />
 			<Add option="-fnon-call-exceptions" />
 			<Add option="-fno-pie" />
@@ -113,7 +113,7 @@
 		<Unit filename="_.h" />
 		<Unit filename="application.cpp" />
 		<Unit filename="application.h" />
-		<Unit filename="framework.h">
+		<Unit filename="platform.h">
 			<Option compile="1" />
 			<Option weight="0" />
 		</Unit>

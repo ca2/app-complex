@@ -132,10 +132,10 @@
 		<Unit filename="/home/camilo/solution/basis/source/app-core/video_input_video_for_linux/device.h">
 			<Option target="video_input_video_for_linux"/>
 		</Unit>
-		<Unit filename="/home/camilo/solution/basis/source/app-core/video_input_video_for_linux/framework.cpp">
+		<Unit filename="/home/camilo/solution/basis/source/app-core/video_input_video_for_linux/platform.cpp">
 			<Option target="video_input_video_for_linux"/>
 		</Unit>
-		<Unit filename="/home/camilo/solution/basis/source/app-core/video_input_video_for_linux/framework.h">
+		<Unit filename="/home/camilo/solution/basis/source/app-core/video_input_video_for_linux/platform.h">
 			<Option target="video_input_video_for_linux"/>
 		</Unit>
 		<Unit filename="/home/camilo/solution/basis/source/app-core/video_input_video_for_linux/helpers.cpp">

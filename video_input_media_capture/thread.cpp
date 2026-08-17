@@ -1,5 +1,5 @@
 // https://www.codeproject.com/Tips/559437/Capturing-Video-from-Web-camera_parameters-on-Windows-and-by
-#include "framework.h"
+#include "platform.h"
 #include "thread.h"
 #include "callback.h"
 #include "app-complex/video_input/media_format.h"

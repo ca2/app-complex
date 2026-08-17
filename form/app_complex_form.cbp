@@ -250,10 +250,10 @@
 		<Unit filename="/home/camilo/solution/basis/source/app-complex/form/frame.h">
 			<Option target="app_complex_form"/>
 		</Unit>
-		<Unit filename="/home/camilo/solution/basis/source/app-complex/form/framework.cpp">
+		<Unit filename="/home/camilo/solution/basis/source/app-complex/form/platform.cpp">
 			<Option target="app_complex_form"/>
 		</Unit>
-		<Unit filename="/home/camilo/solution/basis/source/app-complex/form/framework.h">
+		<Unit filename="/home/camilo/solution/basis/source/app-complex/form/platform.h">
 			<Option target="app_complex_form"/>
 		</Unit>
 		<Unit filename="/home/camilo/solution/basis/source/app-complex/form/impact.cpp">

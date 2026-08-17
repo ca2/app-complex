@@ -1,4 +1,4 @@
-#include "framework.h"
+#include "platform.h"
 #include <math.h>
 
 CLASS_DECL_AURA color32_t dk_red(); // <3 tbs
@@ -152,7 +152,7 @@ namespace simple_os_drag_and_drop
 
                   ::image::image_pointer pimpl = pimage->clone();
 
-                  ::image::image_pointer imageClone = pimpl;
+                  ::image::image_pointer pimageClone = pimpl;
 
                   m_pimagemap["pat1grayed"] = imageClone;
 

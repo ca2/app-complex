@@ -247,10 +247,10 @@
 		<Unit filename="/home/camilo/solution/basis/source/app-complex/video_capture/frame.h">
 			<Option target="app_complex_video_capture"/>
 		</Unit>
-		<Unit filename="/home/camilo/solution/basis/source/app-complex/video_capture/framework.cpp">
+		<Unit filename="/home/camilo/solution/basis/source/app-complex/video_capture/platform.cpp">
 			<Option target="app_complex_video_capture"/>
 		</Unit>
-		<Unit filename="/home/camilo/solution/basis/source/app-complex/video_capture/framework.h">
+		<Unit filename="/home/camilo/solution/basis/source/app-complex/video_capture/platform.h">
 			<Option target="app_complex_video_capture"/>
 		</Unit>
 		<Unit filename="/home/camilo/solution/basis/source/app-complex/video_capture/impact.cpp">

@@ -16,7 +16,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301
  *  USA
  */
-#include "framework.h"
+#include "platform.h"
 #include "capture-filter.hpp"
 #include "log.hpp"
 

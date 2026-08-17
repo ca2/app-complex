@@ -147,10 +147,10 @@
 		<Unit filename="/home/camilo/solution/basis/source/app-core/video_input/frame.h">
 			<Option target="video_input"/>
 		</Unit>
-		<Unit filename="/home/camilo/solution/basis/source/app-core/video_input/framework.cpp">
+		<Unit filename="/home/camilo/solution/basis/source/app-core/video_input/platform.cpp">
 			<Option target="video_input"/>
 		</Unit>
-		<Unit filename="/home/camilo/solution/basis/source/app-core/video_input/framework.h">
+		<Unit filename="/home/camilo/solution/basis/source/app-core/video_input/platform.h">
 			<Option target="video_input"/>
 		</Unit>
 		<Unit filename="/home/camilo/solution/basis/source/app-core/video_input/graphics.h">

@@ -1,7 +1,7 @@
 //
 // Created by camilo on 2021-07-07 15:15 BRT <3 Thomas Borregaard Soerensen __!!
 //
-#include "framework.h"
+#include "platform.h"
 #include "acme/_application_library.h"
 #include "acme/platform/release_time.h"
 #define APPLICATION_NAMESPACE app_complex_video_capture

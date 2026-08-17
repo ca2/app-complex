@@ -16,7 +16,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301
  *  USA
  */
-#include "framework.h"
+#include "platform.h"
 #include "encoder.hpp"
 #include "log.hpp"
 #include "avermedia-encode.h"

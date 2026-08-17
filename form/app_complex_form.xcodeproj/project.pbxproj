@@ -26,9 +26,9 @@
 		A23166833FA09BAA29D5C85A /* _.h in Headers */ = {isa = PBXBuildFile; fileRef = 00D82C6060AF5AEF1D2F1482 /* _.h */; };
 		B1E98317969F84B59E7B3F62 /* frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CC1E4F6155B669836FA9A90 /* frame.cpp */; };
 		2BB5A33F7349779BF1D77F90 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C437F6E5D37B2CB65DB8C2F /* application.cpp */; };
-		2EF143556FCC83725E863851 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACBFDC3DDE2136F7EDC60090 /* framework.cpp */; };
+		2EF143556FCC83725E863851 /* platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACBFDC3DDE2136F7EDC60090 /* platform.cpp */; };
 		B7B04D8B22A75C61027D2FCB /* main_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16AF3BDFBD3C5594BCBE3683 /* main_impact.cpp */; };
-		45DE89C8633347585FF959B9 /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = D0751F4A0D318E821DB92C7D /* framework.h */; };
+		45DE89C8633347585FF959B9 /* platform.h in Headers */ = {isa = PBXBuildFile; fileRef = D0751F4A0D318E821DB92C7D /* platform.h */; };
 		9BA87E7C83C18987B1E73331 /* impact.h in Headers */ = {isa = PBXBuildFile; fileRef = D33958CEB995950FD6620554 /* impact.h */; };
 		1B8599EA858BF645FCBA4EAC /* main_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C2B317C719C2780A61AA812 /* main_impact.h */; };
 		158362D2E02E7D4A0D6B81DA /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 132F0698D4ABF30709BF4D8B /* document.cpp */; };
@@ -46,7 +46,7 @@
 		89B6EE0127BC8D8C12FC4495 /* document.h in Headers */ = {isa = PBXBuildFile; fileRef = C8AD9A87A5B9A4F33AB65F1F /* document.h */; };
 		AF5881689217D83B759F44BE /* form_002.h in Headers */ = {isa = PBXBuildFile; fileRef = DB1C5289418181C9768075EB /* form_002.h */; };
 		E2B8F3C0E69A72B8E77D553A /* _.h in Headers */ = {isa = PBXBuildFile; fileRef = 00D82C6060AF5AEF1D2F1482 /* _.h */; };
-		47F6F943749ECC36AFA798D7 /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = D0751F4A0D318E821DB92C7D /* framework.h */; };
+		47F6F943749ECC36AFA798D7 /* platform.h in Headers */ = {isa = PBXBuildFile; fileRef = D0751F4A0D318E821DB92C7D /* platform.h */; };
 		9979D21F9C74ABC3F44B76CC /* form.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B26B35A356C59FF6DAFE61D /* form.h */; };
 		D32231DADA87B25A8BB59948 /* pane_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 90D6AD0E588CC4C46E276F81 /* pane_impact.h */; };
 		348C2820C465C2EA5D707591 /* _app_complex_form.h in Headers */ = {isa = PBXBuildFile; fileRef = 08169C3F36E903E6BC3DC5C2 /* _app_complex_form.h */; };
@@ -56,7 +56,7 @@
 		D875646419ACDA28EAC72930 /* main_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = FCDBDA49EBA6289A9A10017F /* main_frame.h */; };
 		8F5FE0C74D00B705EDBFC18E /* main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 424742AE7BF41CB8435F6012 /* main_frame.cpp */; };
 		7A298FE940D8CE983D9F15E4 /* form_001.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E43D349850C2EEBBF68516D /* form_001.cpp */; };
-		C2E5809D3C3C8AEABC1F2EE3 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACBFDC3DDE2136F7EDC60090 /* framework.cpp */; };
+		C2E5809D3C3C8AEABC1F2EE3 /* platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACBFDC3DDE2136F7EDC60090 /* platform.cpp */; };
 		EF07A1F6513670BFD06EA09D /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C437F6E5D37B2CB65DB8C2F /* application.cpp */; };
 		1484C4F2EF71118E855823A5 /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B96D1227688D6BB94A5A57E4 /* _.cpp */; };
 		C33B5BD72B4FC6B0AD898186 /* impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBECB0F000D83E3A02F28399 /* impact.cpp */; };
@@ -161,9 +161,9 @@
 		50168620FEB51E1DCCBBA48F /* app_simple_form.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_form.xcodeproj; path = "../../app-simple/form/app_simple_form.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		5CC1E4F6155B669836FA9A90 /* frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = frame.cpp; sourceTree = "<group>"; };
 		1C437F6E5D37B2CB65DB8C2F /* application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
-		ACBFDC3DDE2136F7EDC60090 /* framework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
+		ACBFDC3DDE2136F7EDC60090 /* platform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = platform.cpp; sourceTree = "<group>"; };
 		16AF3BDFBD3C5594BCBE3683 /* main_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main_impact.cpp; sourceTree = "<group>"; };
-		D0751F4A0D318E821DB92C7D /* framework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
+		D0751F4A0D318E821DB92C7D /* platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform.h; sourceTree = "<group>"; };
 		D33958CEB995950FD6620554 /* impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = impact.h; sourceTree = "<group>"; };
 		1C2B317C719C2780A61AA812 /* main_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main_impact.h; sourceTree = "<group>"; };
 		132F0698D4ABF30709BF4D8B /* document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = document.cpp; sourceTree = "<group>"; };
@@ -246,8 +246,8 @@
 				9B26B35A356C59FF6DAFE61D /* form.h */,
 				5CC1E4F6155B669836FA9A90 /* frame.cpp */,
 				6A9EF91D8C5D8B39C31E3B62 /* frame.h */,
-				ACBFDC3DDE2136F7EDC60090 /* framework.cpp */,
-				D0751F4A0D318E821DB92C7D /* framework.h */,
+				ACBFDC3DDE2136F7EDC60090 /* platform.cpp */,
+				D0751F4A0D318E821DB92C7D /* platform.h */,
 				CBECB0F000D83E3A02F28399 /* impact.cpp */,
 				D33958CEB995950FD6620554 /* impact.h */,
 				424742AE7BF41CB8435F6012 /* main_frame.cpp */,
@@ -305,7 +305,7 @@
 				521216E6DBA585623B09B8A3 /* document.h in Headers */,
 				0683688242E4AF63BC0D9876 /* form_002.h in Headers */,
 				A23166833FA09BAA29D5C85A /* _.h in Headers */,
-				45DE89C8633347585FF959B9 /* framework.h in Headers */,
+				45DE89C8633347585FF959B9 /* platform.h in Headers */,
 				C93F8E2D20F0EEA2B63E84DD /* form.h in Headers */,
 				824AC05B23EE7B3A01D69F8F /* pane_impact.h in Headers */,
 				35CA9CE07A389D9A879EC23D /* _app_complex_form.h in Headers */,
@@ -325,7 +325,7 @@
 				89B6EE0127BC8D8C12FC4495 /* document.h in Headers */,
 				AF5881689217D83B759F44BE /* form_002.h in Headers */,
 				E2B8F3C0E69A72B8E77D553A /* _.h in Headers */,
-				47F6F943749ECC36AFA798D7 /* framework.h in Headers */,
+				47F6F943749ECC36AFA798D7 /* platform.h in Headers */,
 				9979D21F9C74ABC3F44B76CC /* form.h in Headers */,
 				D32231DADA87B25A8BB59948 /* pane_impact.h in Headers */,
 				348C2820C465C2EA5D707591 /* _app_complex_form.h in Headers */,
@@ -491,7 +491,7 @@
 				214B0512301E0D52A9D2CE66 /* main_frame.cpp in Sources */,
 				F2F68A34063C51E3B96151F1 /* form_001.cpp in Sources */,
 				5FA88B815D75407151CC5A0D /* _factory.cpp in Sources */,
-				2EF143556FCC83725E863851 /* framework.cpp in Sources */,
+				2EF143556FCC83725E863851 /* platform.cpp in Sources */,
 				2BB5A33F7349779BF1D77F90 /* application.cpp in Sources */,
 				C08293522A6545BEAE9597B3 /* _.cpp in Sources */,
 				2024F8D11159C55EE873DCF9 /* impact.cpp in Sources */,
@@ -511,7 +511,7 @@
 				8F5FE0C74D00B705EDBFC18E /* main_frame.cpp in Sources */,
 				7A298FE940D8CE983D9F15E4 /* form_001.cpp in Sources */,
 				5A7B146505E55A2E6BADA5CA /* _factory.cpp in Sources */,
-				C2E5809D3C3C8AEABC1F2EE3 /* framework.cpp in Sources */,
+				C2E5809D3C3C8AEABC1F2EE3 /* platform.cpp in Sources */,
 				EF07A1F6513670BFD06EA09D /* application.cpp in Sources */,
 				1484C4F2EF71118E855823A5 /* _.cpp in Sources */,
 				C33B5BD72B4FC6B0AD898186 /* impact.cpp in Sources */,
@@ -602,7 +602,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = framework.h;
+				GCC_PREFIX_HEADER = platform.h;
 				GCC_PREPROCESSOR_DEFINITIONS = _DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -699,7 +699,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = framework.h;
+				GCC_PREFIX_HEADER = platform.h;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

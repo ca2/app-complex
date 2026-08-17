@@ -1258,7 +1258,7 @@
     <ClCompile Include="document.cpp" />
     <ClCompile Include="edit_impact.cpp" />
     <ClCompile Include="frame.cpp" />
-    <ClCompile Include="framework.cpp">
+    <ClCompile Include="platform.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='StaticDebug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -1288,7 +1288,7 @@
     <ClInclude Include="dshowcapture.hpp" />
     <ClInclude Include="edit_impact.h" />
     <ClInclude Include="frame.h" />
-    <ClInclude Include="framework.h" />
+    <ClInclude Include="platform.h" />
     <ClInclude Include="main_frame.h" />
     <ClInclude Include="main_impact.h" />
     <ClInclude Include="pane_impact.h" />

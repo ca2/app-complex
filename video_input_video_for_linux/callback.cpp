@@ -1,4 +1,4 @@
-#include "framework.h"
+#include "platform.h"
 #include "callback.h"
 #include "device.h"
 #include "render.h"
@@ -397,7 +397,7 @@ namespace video_input_video_for_linux
 
          }
 
-         pimage->create(m_sizeSwsDest);
+         pimage->create_as_descriptor(m_sizeSwsDest);
 
          if (pimage.ok())
          {

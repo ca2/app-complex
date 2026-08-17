@@ -133,8 +133,8 @@
 		<Unit filename="decode/encoder_plugin.h" />
 		<Unit filename="decode/encoder_plugin_set.cpp" />
 		<Unit filename="decode/encoder_plugin_set.h" />
-		<Unit filename="framework.cpp" />
-		<Unit filename="framework.h" />
+		<Unit filename="platform.cpp" />
+		<Unit filename="platform.h" />
 		<Unit filename="iaudio/_.h" />
 		<Unit filename="iaudio/wave_stream_effect.cpp" />
 		<Unit filename="iaudio/wave_stream_effect.h" />

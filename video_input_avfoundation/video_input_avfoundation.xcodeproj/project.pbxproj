@@ -17,7 +17,7 @@
 		CDE79BD233A215B80B0F76C9 /* _struct.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBE0CEE410B0E4F4F68D7460 /* _struct.cpp */; };
 		AEAF3E52413149E9BBCC297B /* callback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C86018064ED845A3E8E247D /* callback.cpp */; };
 		DB1AAFC4E2B602C1D15BB6C7 /* device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C48CCB73C080760CDDF3F9C4 /* device.cpp */; };
-		A200889E471A6B00989634C5 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BD08A085CAC9CC0D71E9F0B /* framework.cpp */; };
+		A200889E471A6B00989634C5 /* platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BD08A085CAC9CC0D71E9F0B /* platform.cpp */; };
 		861D85893D27DF61992D7BCD /* render.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 214BA6E8C644E3455C3A30D4 /* render.cpp */; };
 		58B2FD9316D5FB007CBE4D9B /* thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC8C04B7F1B7A24994C6B639 /* thread.cpp */; };
 		923FEED4E3FE70ADDF66F01E /* video_input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5D582EEDD1450FA264726E5C /* video_input.cpp */; };
@@ -73,13 +73,13 @@
 		EBE0CEE410B0E4F4F68D7460 /* _struct.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _struct.cpp; sourceTree = "<group>"; };
 		42DD7F96D9DA6DFBA95A346F /* device.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = device.h; sourceTree = "<group>"; };
 		4C86018064ED845A3E8E247D /* callback.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = callback.cpp; sourceTree = "<group>"; };
-		7BD08A085CAC9CC0D71E9F0B /* framework.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
+		7BD08A085CAC9CC0D71E9F0B /* platform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = platform.cpp; sourceTree = "<group>"; };
 		C48CCB73C080760CDDF3F9C4 /* device.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = device.cpp; sourceTree = "<group>"; };
 		F1801305B5DF9682265CD11F /* video_input.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = video_input.h; sourceTree = "<group>"; };
 		5D582EEDD1450FA264726E5C /* video_input.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = video_input.cpp; sourceTree = "<group>"; };
 		C11454A967432897E8590B7C /* thread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = thread.h; sourceTree = "<group>"; };
 		9C23E045BE171905F899D8F6 /* _.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _.cpp; sourceTree = "<group>"; };
-		9C6C137004178E8F22371059 /* framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
+		9C6C137004178E8F22371059 /* platform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = platform.h; sourceTree = "<group>"; };
 		4CBE35C9AD037513A5456694 /* avcapture_device_callback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avcapture_device_callback.h; sourceTree = "<group>"; };
 		DDB230FBC899B3C15DAF0E92 /* _factory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _factory.cpp; sourceTree = "<group>"; };
 		2B6BD784CA4805B1E48B0E3F /* render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = render.h; sourceTree = "<group>"; };
@@ -176,8 +176,8 @@
 				4C86018064ED845A3E8E247D /* callback.cpp */,
 				C48CCB73C080760CDDF3F9C4 /* device.cpp */,
 				42DD7F96D9DA6DFBA95A346F /* device.h */,
-				7BD08A085CAC9CC0D71E9F0B /* framework.cpp */,
-				9C6C137004178E8F22371059 /* framework.h */,
+				7BD08A085CAC9CC0D71E9F0B /* platform.cpp */,
+				9C6C137004178E8F22371059 /* platform.h */,
 				214BA6E8C644E3455C3A30D4 /* render.cpp */,
 				2B6BD784CA4805B1E48B0E3F /* render.h */,
 				BC8C04B7F1B7A24994C6B639 /* thread.cpp */,
@@ -348,7 +348,7 @@
 				CDE79BD233A215B80B0F76C9 /* _struct.cpp in Sources */,
 				AEAF3E52413149E9BBCC297B /* callback.cpp in Sources */,
 				DB1AAFC4E2B602C1D15BB6C7 /* device.cpp in Sources */,
-				A200889E471A6B00989634C5 /* framework.cpp in Sources */,
+				A200889E471A6B00989634C5 /* platform.cpp in Sources */,
 				861D85893D27DF61992D7BCD /* render.cpp in Sources */,
 				58B2FD9316D5FB007CBE4D9B /* thread.cpp in Sources */,
 				923FEED4E3FE70ADDF66F01E /* video_input.cpp in Sources */,
@@ -437,7 +437,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = framework.h;
+				GCC_PREFIX_HEADER = platform.h;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					_DEBUG,
 					"$(inherited)",
@@ -532,7 +532,7 @@
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = framework.h;
+				GCC_PREFIX_HEADER = platform.h;
 				GCC_VERSION = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;

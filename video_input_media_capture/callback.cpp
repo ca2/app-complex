@@ -1,5 +1,5 @@
 // https://www.codeproject.com/Tips/559437/Capturing-Video-from-Web-camera_parameters-on-Windows-and-by
-#include "framework.h"
+#include "platform.h"
 #include "callback.h"
 #include "device.h"
 #include "format_reader.h"
@@ -783,7 +783,7 @@ namespace video_input_media_capture
    //         m_pdevice->get_render()->m_pimage.create(m_pdevice.m_p);
 
 
-   //         m_pdevice->get_render()->m_pimage->create(m_pdevice->m_size);
+   //         m_pdevice->get_render()->m_pimage->create_as_descriptor(m_pdevice->m_size);
 
    //      }
 

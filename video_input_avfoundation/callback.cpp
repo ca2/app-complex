@@ -1,4 +1,4 @@
-#include "framework.h"
+#include "platform.h"
 
 //#include "aura/graphics/draw2d/_component.h"
 
@@ -389,7 +389,7 @@ void ffmpeg_free_frame(AVFrame **framep);
 ////
 ////         }
 ////
-////         pimage->create(m_sizeSwsDest);
+////         pimage->create_as_descriptor(m_sizeSwsDest);
 ////
 ////         if (pimage.ok())
 ////         {

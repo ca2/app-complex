@@ -1,6 +1,6 @@
 // Created on 2021-07-07 by camilo 14:11 BRT <3ThomasBorregaardSorensen!!
 
-#include "framework.h"
+#include "platform.h"
 
 #include <math.h>
 //#include "aura/graphics/draw2d/_component.h"
@@ -482,7 +482,7 @@ namespace video_input_video_avfoundation
          //      m_pimagePost->get_graphics()->set_alpha_mode(::draw2d::e_alpha_mode_set);
 
          //      m_pimagePost->get_graphics()->StretchBlt(rectangleImage.left, rectangleImage->top, rectangleImage->width(), rectangleImage->height(),
-         //                                             m_prender->m_pimagepimage->g(), 0, 0,
+         //                                             m_prender->m_pgraphicsImagepimage->, 0, 0,
          //                                             m_prender->m_pimageImage->get_size()->cx,
          //                                             m_prender->m_pimageImage->get_size()->cy);
 

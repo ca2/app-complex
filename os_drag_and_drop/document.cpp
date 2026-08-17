@@ -1,4 +1,4 @@
-#include "framework.h"
+#include "platform.h"
 
 
 namespace simple_os_drag_and_drop

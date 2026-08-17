@@ -1,5 +1,5 @@
 // https://www.codeproject.com/Tips/559437/Capturing-Video-from-Web-camera_parameters-on-Windows-and-by
-#include "framework.h"
+#include "platform.h"
 
 
 CFTypeRef avdevice_capture_create(CFTypeRef typerefAVCaptureDevice, int w, int h, avcapture_device_callback * pcallback);

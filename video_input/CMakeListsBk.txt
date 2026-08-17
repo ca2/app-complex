@@ -379,5 +379,5 @@ add_executable(audio
         _.cpp
         _.h
         audio_wave_base.cpp
-        framework.cpp
-        framework.h)
+        platform.cpp
+        platform.h)
