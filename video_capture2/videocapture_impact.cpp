@@ -97,13 +97,13 @@ namespace app_complex_video_capture
    }
 
 
-   void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void impact::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       if (m_prender)
       {
 
-         m_prender->on_layout(pgraphics);
+         m_prender->on_layout(pdraw2dgraphics);
 
       }
 
@@ -120,7 +120,7 @@ namespace app_complex_video_capture
    }
 
 
-   void impact::on_draw_image_layer(::draw2d::graphics_pointer & pgraphics)
+   void impact::on_draw_image_layer(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
    }

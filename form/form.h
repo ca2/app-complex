@@ -22,7 +22,7 @@ namespace app_complex_form
 //      // void dump(dump_context & dumpcontext) const override;
 
 
-      void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
+      void _001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics) override;
 
 #ifdef _DEBUG
       ::i64 increment_reference_count() override;
@@ -35,7 +35,7 @@ namespace app_complex_form
       DECLARE_MESSAGE_HANDLER(on_message_context_menu);
 
 
-      void on_layout(::draw2d::graphics_pointer & pgraphics) override;
+      void on_layout(::draw2d::graphics_pointer & pdraw2dgraphics) override;
 
 
    };

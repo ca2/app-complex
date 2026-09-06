@@ -95,27 +95,27 @@ namespace app_complex_video_capture
    }
 
 
-   void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void impact::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
-      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+      pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
       auto rectangleX = this->rectangle();
 
       auto pvideoinputdevice = get_app()->m_pvideoinputdevice;
 
-      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+      pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
       if (!pvideoinputdevice)
       {
 
-         pgraphics->set_font(this);
+         pdraw2dgraphics->set_font(this);
 
-         pgraphics->set_text_color(::color::white);
+         pdraw2dgraphics->set_solid_color(::color::white);
 
-         pgraphics->fill_inset_rectangle(rectangleX, argb(127, 0, 0, 0));
+         pdraw2dgraphics->fill_inset_rectangle(rectangleX, argb(127, 0, 0, 0));
 
-         pgraphics->text_out(10, 10, "No video input device selected.");
+         pdraw2dgraphics->text_out(10, 10, "No video input device selected.");
 
          return;
 
@@ -124,13 +124,13 @@ namespace app_complex_video_capture
       if (pvideoinputdevice->m_edevicestate == ::video_input::e_device_state_already_in_use_by_other_client)
       {
 
-         pgraphics->set_font(this);
+         pdraw2dgraphics->set_font(this);
 
-         pgraphics->set_text_color(::color::white);
+         pdraw2dgraphics->set_solid_color(::color::white);
 
-         pgraphics->fill_inset_rectangle(rectangleX, argb(127, 0, 0, 0));
+         pdraw2dgraphics->fill_inset_rectangle(rectangleX, argb(127, 0, 0, 0));
 
-         pgraphics->text_out(10, 10, "Webcam is in use by other application.");
+         pdraw2dgraphics->text_out(10, 10, "Webcam is in use by other application.");
 
          return;
 
@@ -148,9 +148,9 @@ namespace app_complex_video_capture
 
       ::image::image_drawing imagedrawing(imagedrawingoptions, imagesource);
 
-      pgraphics->m_bUseImageMipMapsOrResizedImages = false;
+      pdraw2dgraphics->m_bUseImageMipMapsOrResizedImages = false;
 
-      pgraphics->draw(imagedrawing);
+      pdraw2dgraphics->draw(imagedrawing);
 
    }
 
@@ -180,13 +180,13 @@ namespace app_complex_video_capture
    }
 
 
-   void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void impact::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       if (m_prender)
       {
 
-         m_prender->on_layout(pgraphics);
+         m_prender->on_layout(pdraw2dgraphics);
 
       }
 
@@ -203,7 +203,7 @@ namespace app_complex_video_capture
    }
 
 
-   void impact::on_draw_image_layer(::draw2d::graphics_pointer & pgraphics)
+   void impact::on_draw_image_layer(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
    }

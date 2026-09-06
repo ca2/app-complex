@@ -19,7 +19,7 @@ namespace notify_drawing
 
       virtual void install_message_routing(::channel * psender);
 
-      virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
+      virtual void on_layout(::draw2d::graphics_pointer & pdraw2dgraphics);
 
    };
 

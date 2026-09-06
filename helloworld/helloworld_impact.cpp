@@ -69,7 +69,7 @@ namespace helloworld
    }
 
 
-   void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void impact::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       i32_rectangle rectangleX;
@@ -80,9 +80,9 @@ namespace helloworld
 
       pfont->create_point_font(pnode->font_name(e_font_sans), minimum(rectangleX.height() / 5.0, rectangleX.width() / 10.0), 800);
 
-      pgraphics->SelectObject(font);
+      pdraw2dgraphics->SelectObject(font);
 
-      pgraphics->draw_text("Hello World!!", rectangleX, e_align_center);
+      pdraw2dgraphics->draw_text("Hello World!!", rectangleX, e_align_center);
 
    }
 

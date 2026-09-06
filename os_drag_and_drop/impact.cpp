@@ -139,15 +139,15 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void impact::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
-      m_psimpleosdraganddrop->_001OnDraw(pgraphics);
+      m_psimpleosdraganddrop->_001OnDraw(pdraw2dgraphics);
 
    }
 
 
-   void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void impact::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       auto rectangleX = this->rectangle();

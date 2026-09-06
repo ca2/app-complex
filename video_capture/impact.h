@@ -43,15 +43,15 @@ namespace app_complex_video_capture
 
       ::user::document * get_document();
 
-      void on_layout(::draw2d::graphics_pointer & pgraphics) override;
+      void on_layout(::draw2d::graphics_pointer & pdraw2dgraphics) override;
 
-      void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
+      void _001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics) override;
       
       DECLARE_MESSAGE_HANDLER(on_message_create);
       DECLARE_MESSAGE_HANDLER(on_message_destroy);
 
       virtual void defer_check_on_draw_layout();
-      virtual void on_draw_image_layer(::draw2d::graphics_pointer & pgraphics);
+      virtual void on_draw_image_layer(::draw2d::graphics_pointer & pdraw2dgraphics);
 
       // IUnknown
       //STDMETHODIMP QueryInterface(REFIID riid, void** ppv);

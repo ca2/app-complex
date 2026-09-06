@@ -131,34 +131,34 @@ namespace app_complex_form
    }
 
 
-   void form_002::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void form_002::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
-      ::app_simple_form::form_002::on_layout(pgraphics);
+      ::app_simple_form::form_002::on_layout(pdraw2dgraphics);
 
 //      ::f64 iLeft = 100.;
 //
 //      ::f64 y = 100.;
 //
-//      auto sizeStill = m_pstill->_001CalculateAdjustedFittingSize(pgraphics);
+//      auto sizeStill = m_pstill->_001CalculateAdjustedFittingSize(pdraw2dgraphics);
 //
 //      m_pstill->display_child(::f64_rectangle_dimension(iLeft, y, 200, sizeStill.cy));
 //
 //      y += sizeStill.cy * 1.25;
 //
-//      auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
+//      auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pdraw2dgraphics);
 //
 //      m_pedit->display_child(::f64_rectangle_dimension(iLeft, y, 200.0, sizeEdit.cy));
 //
 //      y += sizeEdit.cy * 1.25;
 //
-//      auto sizeCombo = m_pcombobox->_001CalculateAdjustedFittingSize(pgraphics);
+//      auto sizeCombo = m_pcombobox->_001CalculateAdjustedFittingSize(pdraw2dgraphics);
 //
 //      m_pcombobox->display_child(::f64_rectangle_dimension(iLeft, y, 200., sizeCombo.cy));
 //
 //      y += sizeCombo.cy * 1.25;
 //
-//      auto sizeButton = m_pbutton->_001CalculateAdjustedFittingSize(pgraphics);
+//      auto sizeButton = m_pbutton->_001CalculateAdjustedFittingSize(pdraw2dgraphics);
 //
 //      m_pbutton->display_child(::f64_rectangle_dimension(iLeft, y, 200., sizeButton.cy));
 //

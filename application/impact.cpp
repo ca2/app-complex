@@ -106,25 +106,25 @@ namespace simple_application
    }
 
 
-   void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void impact::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
-      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+      pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
       ::color::color color_dk(dk_red());
 
       color_dk.m_iA = 127;
 
-      pgraphics->set_text_color(color_dk);
+      pdraw2dgraphics->set_solid_color(color_dk);
 
-      pgraphics->set(m_pfontThomasBS_);
+      pdraw2dgraphics->set(m_pfontThomasBS_);
 
-      pgraphics->text_out({ 10, 10 }, "psimpleapplication->m_pimpact->_001OnDraw(pgraphics);");
+      pdraw2dgraphics->text_out({ 10, 10 }, "psimpleapplication->m_pimpact->_001OnDraw(pdraw2dgraphics);");
 
    }
 
 
-   void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void impact::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       auto rectangleX = this->rectangle();
@@ -136,7 +136,7 @@ namespace simple_application
 
       }
 
-      ::user::impact::on_layout(pgraphics);
+      ::user::impact::on_layout(pdraw2dgraphics);
 
    }
 

@@ -38,7 +38,7 @@ namespace app_complex_form
       DECLARE_MESSAGE_HANDLER(on_message_context_menu);
 
 
-      void on_layout(::draw2d::graphics_pointer & pgraphics) override;
+      void on_layout(::draw2d::graphics_pointer & pdraw2dgraphics) override;
 
       void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
 

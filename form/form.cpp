@@ -62,12 +62,12 @@ namespace app_complex_form
    }
 
 
-   void form::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void form::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       auto rectangleX = this->rectangle();
 
-      pgraphics->fill_rectangle(rectangleX, argb(127, 245, 250, 255));
+      pdraw2dgraphics->fill_rectangle(rectangleX, argb(127, 245, 250, 255));
 
    }
 
@@ -120,10 +120,10 @@ namespace app_complex_form
    }
 
 
-   void form::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void form::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
-      ::user::form_impact::on_layout(pgraphics);
+      ::user::form_impact::on_layout(pdraw2dgraphics);
 
    }
 

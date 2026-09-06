@@ -103,18 +103,18 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void main_impact::_001OnNcDraw(::draw2d::graphics_pointer & pgraphics)
+   void main_impact::_001OnNcDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
-      ::user::split_impact::_001OnNcDraw(pgraphics);
+      ::user::split_impact::_001OnNcDraw(pdraw2dgraphics);
 
    }
 
 
-   void main_impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void main_impact::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
-      ::user::split_impact::_001OnDraw(pgraphics);
+      ::user::split_impact::_001OnDraw(pdraw2dgraphics);
 
    }
 

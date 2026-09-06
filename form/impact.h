@@ -28,13 +28,13 @@ namespace app_complex_form
 
       void install_message_routing(::channel * psender) override;
 
-      void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
+      void _001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics) override;
 
       void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
 
       ::user::document * get_document();
 
-      void on_layout(::draw2d::graphics_pointer & pgraphics) override;
+      void on_layout(::draw2d::graphics_pointer & pdraw2dgraphics) override;
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
 

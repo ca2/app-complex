@@ -151,7 +151,7 @@ namespace video_input_video_avfoundation
    }
 
 
-   //void render::on_layout(::draw2d::graphics_pointer& pgraphics)
+   //void render::on_layout(::draw2d::graphics_pointer& pdraw2dgraphics)
    //{
 
    //   synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
@@ -191,7 +191,7 @@ namespace video_input_video_avfoundation
    //   else
    //   {
 
-   //      on_layout(pgraphics);
+   //      on_layout(pdraw2dgraphics);
 
    //   }
 
@@ -232,7 +232,7 @@ namespace video_input_video_avfoundation
    //}
 
 
-   //void render::on_layout(::draw2d::graphics_pointer& pgraphics)
+   //void render::on_layout(::draw2d::graphics_pointer& pdraw2dgraphics)
    //{
 
    //   ::i32_rectangle rectangleX;
@@ -465,7 +465,7 @@ namespace video_input_video_avfoundation
          //}
 
 
-         //void render::on_draw_image_layer(::draw2d::graphics_pointer & pgraphics)
+         //void render::on_draw_image_layer(::draw2d::graphics_pointer & pdraw2dgraphics)
          //{
 
          //   if (m_prender->m_bImageEnable && m_prender->m_pimageImage->is_set() && m_prender->m_pimageImage->area() > 0)

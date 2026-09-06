@@ -77,7 +77,7 @@ namespace video_input_media_capture
 
       bool start_capture() override;
       void on_set_format();
-      //virtual void on_layout(::draw2d::graphics_pointer& pgraphics);
+      //virtual void on_layout(::draw2d::graphics_pointer& pdraw2dgraphics);
 
       //virtual void defer_update_bilbo();
 
@@ -94,7 +94,7 @@ namespace video_input_media_capture
 
 
       //virtual void defer_check_on_draw_layout();
-      //virtual void on_draw_image_layer(::draw2d::graphics_pointer& pgraphics);
+      //virtual void on_draw_image_layer(::draw2d::graphics_pointer& pdraw2dgraphics);
 
       // IUnknown
       //STDMETHODIMP QueryInterface(REFIID riid, void** ppv);

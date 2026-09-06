@@ -199,10 +199,10 @@ namespace app_complex_video_capture
    }
 
 
-   void device_selector::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void device_selector::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
-      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+      pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
       ::i32_rectangle rectItem;
       
@@ -225,13 +225,13 @@ namespace app_complex_video_capture
                   if (m_pitemHover == pdevice)
                   {
                      
-                     pgraphics->fill_inset_rectangle(puseritem->m_rectangle2, argb(127, 80, 180, 230));
+                     pdraw2dgraphics->fill_inset_rectangle(puseritem->m_rectangle2, argb(127, 80, 180, 230));
                      
                   }
                   else
                   {
                      
-                     pgraphics->fill_inset_rectangle(puseritem->m_rectangle2, argb(127, 50, 150, 200));
+                     pdraw2dgraphics->fill_inset_rectangle(puseritem->m_rectangle2, argb(127, 50, 150, 200));
                      
                   }
                   
@@ -242,19 +242,19 @@ namespace app_complex_video_capture
                   if (m_pitemHover == pdevice)
                   {
                      
-                     pgraphics->fill_inset_rectangle(puseritem->m_rectangle2, argb(127, 100, 200, 255));
+                     pdraw2dgraphics->fill_inset_rectangle(puseritem->m_rectangle2, argb(127, 100, 200, 255));
                      
                   }
                   else
                   {
                      
-                     pgraphics->fill_inset_rectangle(puseritem->m_rectangle2, argb(127, 0, 0, 0));
+                     pdraw2dgraphics->fill_inset_rectangle(puseritem->m_rectangle2, argb(127, 0, 0, 0));
                      
                   }
                   
                }
                
-               pgraphics->draw_text(pdevice->m_strName, puseritem->m_rectangle2, e_align_left_center);
+               pdraw2dgraphics->draw_text(pdevice->m_strName, puseritem->m_rectangle2, e_align_left_center);
                
             }
             
@@ -313,7 +313,7 @@ namespace app_complex_video_capture
    }
 
 
-   void device_selector::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void device_selector::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       auto rectangleX = this->rectangle();

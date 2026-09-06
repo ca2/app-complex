@@ -29,15 +29,15 @@ namespace simple_os_drag_and_drop
 
       virtual void initialize_drag_and_drop(int iDragAndDrop);
 
-      virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics);
+      virtual void _001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics);
 
-      virtual void _001OnDraw1Through3(::draw2d::graphics_pointer & pgraphics);
+      virtual void _001OnDraw1Through3(::draw2d::graphics_pointer & pdraw2dgraphics);
 
-      virtual void _001OnDrawArcs(::draw2d::graphics_pointer & pgraphics, bool bPath);
+      virtual void _001OnDrawArcs(::draw2d::graphics_pointer & pdraw2dgraphics, bool bPath);
 
-      virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, i32_rectangle & r, ::f64 dStart, ::f64 dAngle, bool bPath);
+      virtual void draw_arc(::draw2d::graphics_pointer & pdraw2dgraphics, i32_rectangle & r, ::f64 dStart, ::f64 dAngle, bool bPath);
 
-      virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
+      virtual void on_layout(::draw2d::graphics_pointer & pdraw2dgraphics);
 
    };
 

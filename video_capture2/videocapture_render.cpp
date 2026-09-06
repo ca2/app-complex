@@ -72,7 +72,7 @@ namespace app_complex_video_capture
    }
 
 
-   void render::videocapture_render(::draw2d::graphics_pointer & pgraphics)
+   void render::videocapture_render(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
 

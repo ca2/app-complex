@@ -32,9 +32,9 @@ namespace app_complex_video_capture
 
       void install_message_routing(::channel * pchannel) override;
 
-      virtual void _006OnDraw(::draw2d::graphics_pointer & pgraphics);
-      virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics);
-      virtual void on_draw_image_layer(::draw2d::graphics_pointer & pgraphics);
+      virtual void _006OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics);
+      virtual void _001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics);
+      virtual void on_draw_image_layer(::draw2d::graphics_pointer & pdraw2dgraphics);
 
       virtual void defer_check_on_draw_layout();
 

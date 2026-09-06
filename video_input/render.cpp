@@ -75,7 +75,7 @@ namespace video_input
    }
 
 
-   void render::on_layout(::draw2d::graphics_pointer& pgraphics)
+   void render::on_layout(::draw2d::graphics_pointer& pdraw2dgraphics)
    {
 
    }

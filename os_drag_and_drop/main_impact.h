@@ -30,8 +30,8 @@ namespace simple_os_drag_and_drop
       virtual bool BaseOnControlEvent(::user::control_event * pevent);
 
 
-      virtual void _001OnNcDraw(::draw2d::graphics_pointer & pgraphics) override;
-      virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
+      virtual void _001OnNcDraw(::draw2d::graphics_pointer & pdraw2dgraphics) override;
+      virtual void _001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics) override;
 
 
 

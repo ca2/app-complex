@@ -114,18 +114,18 @@ namespace app_complex_form
    }
 
 
-   void form_001::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void form_001::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
-      ::app_simple_form::form_001::on_layout(pgraphics);
+      ::app_simple_form::form_001::on_layout(pdraw2dgraphics);
 
 //      ::f64 iLeft = 100.;
 //
 //      ::f64 y = 100.;
 //
-//      auto sizeStill = m_pstill->_001CalculateAdjustedFittingSize(pgraphics);
+//      auto sizeStill = m_pstill->_001CalculateAdjustedFittingSize(pdraw2dgraphics);
 //
-//      auto rectangleStillMargin = m_pstill->get_margin(m_pstill->get_style(pgraphics));
+//      auto rectangleStillMargin = m_pstill->get_margin(m_pstill->get_style(pdraw2dgraphics));
 //
 //      y += rectangleStillMargin.top;
 //
@@ -135,9 +135,9 @@ namespace app_complex_form
 //
 //      y += rectangleStillMargin.bottom;
 //
-//      auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
+//      auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pdraw2dgraphics);
 //
-//      auto rectangleEditMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics), ::e_element_none);
+//      auto rectangleEditMargin = m_pedit->get_margin(m_pedit->get_style(pdraw2dgraphics), ::e_element_none);
 //
 //      y += rectangleEditMargin.top;
 //
@@ -147,13 +147,13 @@ namespace app_complex_form
 //
 //      y += rectangleEditMargin.bottom;
 //
-//      auto sizeButtonClear = m_pbuttonClear->_001CalculateAdjustedFittingSize(pgraphics);
+//      auto sizeButtonClear = m_pbuttonClear->_001CalculateAdjustedFittingSize(pdraw2dgraphics);
 //
-//      auto sizeButtonSend = m_pbuttonSend->_001CalculateAdjustedFittingSize(pgraphics);
+//      auto sizeButtonSend = m_pbuttonSend->_001CalculateAdjustedFittingSize(pdraw2dgraphics);
 //
-//      auto sizeButtonMarginClear = m_pbuttonClear->get_margin(m_pedit->get_style(pgraphics));
+//      auto sizeButtonMarginClear = m_pbuttonClear->get_margin(m_pedit->get_style(pdraw2dgraphics));
 //
-//      auto sizeButtonMarginSend = m_pbuttonSend->get_margin(m_pedit->get_style(pgraphics));
+//      auto sizeButtonMarginSend = m_pbuttonSend->get_margin(m_pedit->get_style(pdraw2dgraphics));
 //
 //      y += maximum(sizeButtonMarginClear.top, sizeButtonMarginSend.top);
 //

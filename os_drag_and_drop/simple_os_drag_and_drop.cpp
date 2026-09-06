@@ -44,14 +44,14 @@ namespace simple_os_drag_and_drop
 
    }
 
-   void simple_os_drag_and_drop::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void simple_os_drag_and_drop::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
 
    }
 
 
-   void simple_os_drag_and_drop::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void simple_os_drag_and_drop::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       //informationf("simple_os_drag_and_drop::_001OnDraw (%d, %d)", m_rectangle.width(), m_rectangle.height());
@@ -59,26 +59,26 @@ namespace simple_os_drag_and_drop
       if(m_iDragAndDrop <= 3)
       {
 
-         _001OnDraw1Through3(pgraphics);
+         _001OnDraw1Through3(pdraw2dgraphics);
 
       }
       else if(m_iDragAndDrop == 4)
       {
 
-         _001OnDrawArcs(pgraphics, false);
+         _001OnDrawArcs(pdraw2dgraphics, false);
 
       }
       else
       {
 
-         _001OnDrawArcs(pgraphics, true);
+         _001OnDrawArcs(pdraw2dgraphics, true);
 
       }
 
    }
 
 
-   void simple_os_drag_and_drop::_001OnDraw1Through3(::draw2d::graphics_pointer & pgraphics)
+   void simple_os_drag_and_drop::_001OnDraw1Through3(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       auto ppen = createø < ::draw2d::pen > ();
@@ -89,7 +89,7 @@ namespace simple_os_drag_and_drop
 
       pfont->create_pixel_font(pnode->font_name(e_font_sans_ex), 100.0, 800);
 
-      pgraphics->set(pfont);
+      pdraw2dgraphics->set(pfont);
 
       ppen->create_solid(4.0, argb(255, 50, 180, 255));
 
@@ -120,11 +120,11 @@ namespace simple_os_drag_and_drop
 
       }
 
-      pgraphics->set(ppen);
+      pdraw2dgraphics->set(ppen);
 
-      pgraphics->set(pbrush);
+      pdraw2dgraphics->set(pbrush);
 
-      pgraphics->ellipse(rectangle);
+      pdraw2dgraphics->ellipse(rectangle);
 
       if(m_iDragAndDrop >= 2)
       {
@@ -133,7 +133,7 @@ namespace simple_os_drag_and_drop
 
          rectangleText.inflate(100, 100);
 
-         pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+         pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
          if(m_iDragAndDrop == 3)
          {
@@ -178,19 +178,19 @@ namespace simple_os_drag_and_drop
 
          }
 
-         pgraphics->set(pbrush);
+         pdraw2dgraphics->set(pbrush);
 
-         //pgraphics->draw_text("Simple Drawing", rectangleText, e_align_center);
+         //pdraw2dgraphics->draw_text("Simple Drawing", rectangleText, e_align_center);
 
       }
 
    }
 
 
-   void simple_os_drag_and_drop::_001OnDrawArcs(::draw2d::graphics_pointer & pgraphics, bool bPath)
+   void simple_os_drag_and_drop::_001OnDrawArcs(::draw2d::graphics_pointer & pdraw2dgraphics, bool bPath)
    {
 
-      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+      pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
       f64_array daStart;
 
@@ -247,7 +247,7 @@ namespace simple_os_drag_and_drop
 
       ::i32_rectangle rClient(m_rectangle);
 
-      pgraphics->fill_rectangle(rClient, argb(255, 192, 192, 185));
+      pdraw2dgraphics->fill_rectangle(rClient, argb(255, 192, 192, 185));
 
       int iColumnCount = 8;
 
@@ -268,7 +268,7 @@ namespace simple_os_drag_and_drop
 
          r.right = r.left + iColumnWidth;
 
-         draw_arc(pgraphics, r, daStart[i], daAngle[i], bPath);
+         draw_arc(pdraw2dgraphics, r, daStart[i], daAngle[i], bPath);
 
          r.left = r.right;
 
@@ -285,7 +285,7 @@ namespace simple_os_drag_and_drop
 
          r.right = r.left + iColumnWidth;
 
-         draw_arc(pgraphics, r, daStart[i], daAngle[i], bPath);
+         draw_arc(pdraw2dgraphics, r, daStart[i], daAngle[i], bPath);
 
          r.left = r.right;
 
@@ -294,7 +294,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void simple_os_drag_and_drop::draw_arc(::draw2d::graphics_pointer & pgraphics, i32_rectangle & r, ::f64 dStart, ::f64 dAngle, bool bPath)
+   void simple_os_drag_and_drop::draw_arc(::draw2d::graphics_pointer & pdraw2dgraphics, i32_rectangle & r, ::f64 dStart, ::f64 dAngle, bool bPath)
    {
 
 
@@ -302,19 +302,19 @@ namespace simple_os_drag_and_drop
 
       pfont->create_point_font(pnode->font_name(e_font_sans), 14.0, FW_LIGHT);
 
-      pgraphics->set_text_color(argb(255, 0, 0, 0));
+      pdraw2dgraphics->set_solid_color(argb(255, 0, 0, 0));
 
-      pgraphics->set(pfont);
+      pdraw2dgraphics->set(pfont);
 
       string str;
 
       str.formatf("Start: %d", dStart);
 
-      pgraphics->text_out(r.left, r.top, str);
+      pdraw2dgraphics->text_out(r.left, r.top, str);
 
       str.formatf("Angle: %d", dAngle);
 
-      pgraphics->text_out(r.left, r.top + 20, str);
+      pdraw2dgraphics->text_out(r.left, r.top + 20, str);
 
       auto ppen = createø < ::draw2d::pen > ();
 
@@ -354,9 +354,9 @@ namespace simple_os_drag_and_drop
 
       }
 
-      pgraphics->set(ppen);
+      pdraw2dgraphics->set(ppen);
 
-      pgraphics->arc(r, dStart, dAngle);
+      pdraw2dgraphics->arc(r, dStart, dAngle);
 
 
    }

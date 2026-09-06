@@ -27,7 +27,7 @@ namespace helloworld
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
 
-      virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics);
+      virtual void _001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics);
 
    };
 

@@ -22,7 +22,7 @@ namespace simple_app
 //      // void dump(dump_context & dumpcontext) const override;
 
 
-      virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
+      virtual void _001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics) override;
 
 
       DECLARE_MESSAGE_HANDLER(on_message_close);

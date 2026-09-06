@@ -60,7 +60,7 @@ namespace app_complex_video_capture
 
    }
 
-   void impact_base::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void impact_base::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
 
@@ -136,9 +136,9 @@ namespace app_complex_video_capture
 
       //i32_size s = m_pimageTime->get_size();
 
-      //::draw2d::graphics_pointer & pgraphics = m_pimageTime->get_graphics();
+      //::draw2d::graphics_pointer & pdraw2dgraphics = m_pimageTime->get_graphics();
 
-      //pdcParam->from(s, pgraphics);
+      //pdcParam->from(s, pdraw2dgraphics);
 
       //pdcScreen->FillSolidRect(10,10,100,100,argb(184,49,184,60));
 
@@ -167,14 +167,14 @@ namespace app_complex_video_capture
 
    }
 
-   void impact_base::on_draw_image_layer(::draw2d::graphics_pointer & pgraphics)
+   void impact_base::on_draw_image_layer(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
 
    }
 
 
-   void impact_base::_006OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void impact_base::_006OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
 

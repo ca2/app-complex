@@ -45,18 +45,18 @@ namespace simple_app
    }
 
 
-   void window::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void window::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
-      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+      pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
       auto rectangleX = this->rectangle();
 
-      auto pstyle = get_style(pgraphics);
+      auto pstyle = get_style(pdraw2dgraphics);
 
       auto colorBackground = get_color(pstyle, ::e_element_background);
 
-      pgraphics->fill_rectangle(rectangleX, argb(127, 255, 255, 255));
+      pdraw2dgraphics->fill_rectangle(rectangleX, argb(127, 255, 255, 255));
       
       ::f64 dBase = (::f64) rectangleX.minimum_signed_absolute_dimension() / 17.0;
 
@@ -64,18 +64,18 @@ namespace simple_app
 
       ::f64 y = dBase * 3;
 
-      pgraphics->fill_solid_rect_dim(x, y, dBase * 5.0, dBase * 5.0, argb(127, 40, 150, 235));
+      pdraw2dgraphics->fill_solid_rect_dim(x, y, dBase * 5.0, dBase * 5.0, argb(127, 40, 150, 235));
 
-      pgraphics->fill_solid_rect_dim(x + dBase * 6.0, y, dBase * 5.0, dBase * 5.0, argb(127, 40, 150, 235));
+      pdraw2dgraphics->fill_solid_rect_dim(x + dBase * 6.0, y, dBase * 5.0, dBase * 5.0, argb(127, 40, 150, 235));
 
-      pgraphics->fill_solid_rect_dim(x, y + dBase * 6.0, dBase * 11.0, dBase * 5.0, argb(127, 255, 110, 150));
+      pdraw2dgraphics->fill_solid_rect_dim(x, y + dBase * 6.0, dBase * 11.0, dBase * 5.0, argb(127, 255, 110, 150));
 
       rectangleX.deflate(dBase);
 
       for (int i = 0; i < dBase; i++)
       {
 
-         pgraphics->draw_inset_3d_rectangle(rectangleX, argb(255, 127, 127, 127));
+         pdraw2dgraphics->draw_inset_3d_rectangle(rectangleX, argb(255, 127, 127, 127));
 
          rectangleX.deflate(1, 1);
 

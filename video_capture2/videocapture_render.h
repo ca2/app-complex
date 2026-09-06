@@ -35,7 +35,7 @@ namespace app_complex_video_capture
       virtual void full_render();
       virtual void videocapture_render();
       virtual void videocapture_draw();
-      virtual void videocapture_render(::draw2d::graphics_pointer & pgraphics);
+      virtual void videocapture_render(::draw2d::graphics_pointer & pdraw2dgraphics);
 
 
    };

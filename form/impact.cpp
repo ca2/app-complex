@@ -129,17 +129,17 @@ namespace app_complex_form
    }
 
 
-   void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void impact::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       auto rectangleX = this->rectangle();
 
-      pgraphics->fill_rectangle(rectangleX, argb(127, 255, 255, 255));
+      pdraw2dgraphics->fill_rectangle(rectangleX, argb(127, 255, 255, 255));
 
    }
 
 
-   void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void impact::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       auto rectangleX = this->rectangle();
