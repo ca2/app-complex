@@ -776,7 +776,7 @@ namespace video_input_media_foundation
 
       pixmap p;
 
-      p.initialize(m_pdevice->m_size, (image32_t *)pSampleBuffer, m_pdevice->m_size.cx * 4);
+      p.create_from_data(m_pdevice->m_size, (image32_t *)pSampleBuffer, m_pdevice->m_size.cx * 4);
 
       if (!m_pdevice->get_render()->m_pimage)
       {
@@ -807,7 +807,10 @@ namespace video_input_media_foundation
 
       synchronous_lock synchronouslock(m_pdevice->get_render()->synchronization(), m_pdevice, SYNCHRONOUS_LOCK_SUFFIX);
 
-      m_pdevice->get_render()->m_pimage->copy(& p);
+      auto ppixmap = m_pdevice->get_render()->m_pimage->map();
+
+      ppixmap->copy(& p);
+
       return S_OK;
 
    }
@@ -815,7 +818,9 @@ namespace video_input_media_foundation
 
    STDMETHODIMP callback::OnShutdown()
    {
+      
       return S_OK;
+
    }
 
 

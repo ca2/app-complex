@@ -507,7 +507,9 @@ namespace video_input_media_foundation
    
          synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
-         if (m_pimage->is_null() || m_pimage->get_data() == nullptr)
+         auto ppixmap = m_pimage->map();
+
+         if (!ppixmap)
          {
 
             pBuffer->Unlock();
@@ -518,7 +520,7 @@ namespace video_input_media_foundation
 
          }
 
-         ::memory_copy(m_pimage->m_pimage32, p, minimum(m_pimage->area() * 4, dwLen));
+         ppixmap->copy(ppixmap->size(), (::image32_t *) p, minimum(m_pimage->area() * 4, dwLen));
 
       }
 
