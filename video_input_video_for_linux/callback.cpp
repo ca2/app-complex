@@ -404,7 +404,7 @@ namespace video_input_video_for_linux
 
             pimage->map();
 
-            auto pref = pimage->get_data();
+            auto ppixmapImage = pimage->map();
 
 #if defined(MACOS)
 
@@ -418,9 +418,7 @@ namespace video_input_video_for_linux
 
 #else
 
-            pref->copy(m_sizeSwsDest.cx, m_sizeSwsDest.cy,
-                            pimage->scan_size(), (image32_t *) m_pframePicture->data[0],
-                            m_pframePicture->linesize[0]);
+            ppixmapImage->copy(m_sizeSwsDest, (image32_t *) m_pframePicture->data[0], m_pframePicture->linesize[0]);
 
 #endif
 
