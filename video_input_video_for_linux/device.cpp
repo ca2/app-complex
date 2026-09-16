@@ -361,7 +361,7 @@ namespace video_input_video_for_linux
 
 		m_pthread->initialize(this);
 
-		m_pthread->branch();
+		m_pthread->branch_asynchronously();
 
 	}
 
