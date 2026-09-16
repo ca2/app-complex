@@ -735,7 +735,7 @@ namespace video_input_media_foundation
 
       m_pthread->initialize(this);
 
-      m_pthread->branch();
+      m_pthread->branch_asynchronously();
 
    }
 
