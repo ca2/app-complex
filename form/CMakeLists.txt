@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.16)
 project(app_complex_form CXX)
 
 
+message("PROJECT_NAME = ${PROJECT_NAME}")
+
+
 list(APPEND library_source
    _.cpp
    _.h
@@ -79,7 +82,7 @@ if(${WIN32})
    target_link_options(${PROJECT_NAME} PRIVATE "/SUBSYSTEM:WINDOWS")
    target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references} ${global_library_references})
    add_dependencies(${PROJECT_NAME} draw2d_gdiplus imaging_wic)
-elseif(${LINUX} OR ${__BSD__} OR ${ANDROID})
+elseif(${LINUX} OR ${__BSD__} OR ${__ANDROID__})
    target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
    target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references} ${global_library_references})
    target_link_options(${PROJECT_NAME} PRIVATE -Wl,-z,defs)
