@@ -122,21 +122,25 @@ namespace video_input_video_avfoundation
 
 	}
 
-void device::avcapture_device_on_frame(const void * pdata, int width, int height, int scan)
-{
-   synchronous_lock synchronouslock(m_prender->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
-   
-   m_prender->m_pimage->create_as_descriptor({width, height});
-   m_prender->m_pimage->image32()->vertical_swap_copy(
-                           minimum(width,m_prender->m_pimage->width()),
-                           minimum(height,m_prender->m_pimage->height()),
-                           m_prender->m_pimage->m_iScan,
-                           (image32_t *) pdata,
-                           scan);
-                           
-                           
-   
-}
+
+   void device::avcapture_device_on_frame(const void * pdata, int width, int height, int scan)
+   {
+      
+      _synchronous_lock synchronouslock(m_prender->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
+      
+      ::i32_size size(width, height);
+      
+      m_prender->m_pimage->create_as_descriptor(size);
+      
+      auto ppixmapImage = m_prender->m_pimage->map();
+      
+      ppixmapImage->y_swap_copy(
+                              size,
+                              (image32_t *) pdata,
+                              scan);
+                              
+   }
+
 
 //   int device::ioctl(int request, void * arg)
 //   {
@@ -369,7 +373,7 @@ void device::avcapture_device_on_frame(const void * pdata, int width, int height
 
 		m_pthread->initialize(this);
 
-		m_pthread->branch();
+      m_pthread->branch_asynchronously();
 
 	}
 
