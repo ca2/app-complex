@@ -4,6 +4,7 @@
 #include "_struct.h"
 #include "acme/handler/item.h"
 #include "acme/prototype/collection/string_map.h"
+#include "aura/graphics/draw2d/domain_consumer.h"
 
 
 namespace video_input
@@ -28,7 +29,8 @@ namespace video_input
 
 
 	class CLASS_DECL_VIDEO_INPUT device :
-		virtual public ::item
+		virtual public ::item,
+      virtual public ::draw2d::domain_consumer
 	{
 
 	public:

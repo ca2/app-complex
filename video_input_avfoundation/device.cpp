@@ -130,7 +130,7 @@ namespace video_input_video_avfoundation
       
       ::i32_size size(width, height);
       
-      m_prender->m_pimage->create_as_descriptor(size);
+      m_prender->m_pimage->create_as_descriptor(size, draw2d_domain());
       
       auto ppixmapImage = m_prender->m_pimage->map();
       
