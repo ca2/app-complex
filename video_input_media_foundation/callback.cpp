@@ -8,6 +8,8 @@
 #include "render.h"
 #include "acme/parallelization/synchronous_lock.h"
 #include "acme/platform/keep.h"
+#include "aura/graphics/draw2d/domain.h"
+#include "aura/graphics/draw2d/draw2d.h"
 #include "aura/graphics/image/image.h"
 #include "acme/operating_system/windows_common/com/hresult_exception.h"
 #include <Mferror.h>
@@ -776,14 +778,14 @@ namespace video_input_media_foundation
 
       pixmap p;
 
-      p.create_from_data(m_pdevice->m_size, (image32_t *)pSampleBuffer, m_pdevice->m_size.cx * 4);
+      p.create_from_data(m_pdevice->m_size, (image32_t *)pSampleBuffer, m_pdevice->m_size.cx * 4, true, ::e_flag_success);
 
       if (!m_pdevice->get_render()->m_pimage)
       {
 
          m_pdevice->constructø(m_pdevice->get_render()->m_pimage);
 
-         m_pdevice->get_render()->m_pimage->create_as_descriptor(m_pdevice->m_size);
+         m_pdevice->get_render()->m_pimage->create_as_descriptor(m_pdevice->m_size, draw2d()->main_draw2d_domain());
 
       }
 

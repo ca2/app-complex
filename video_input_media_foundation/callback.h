@@ -4,6 +4,7 @@
 #include "acme/prototype/prototype/memory.h"
 #include "acme/operating_system/windows_common/com/comptr.h"
 #include <mfidl.h>
+#include "aura/graphics/draw2d/domain_consumer.h"
 
 
 struct IMFMediaSource;
@@ -14,7 +15,8 @@ namespace video_input_media_foundation
 
 
 	class CLASS_DECL_VIDEO_INPUT_MEDIA_FOUNDATION callback :
-		public IMFSampleGrabberSinkCallback2
+		public IMFSampleGrabberSinkCallback2,
+      public ::draw2d::domain_consumer
 	{
 	public:
 
