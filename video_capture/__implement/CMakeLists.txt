@@ -30,7 +30,7 @@ list(APPEND executable_references
    ${PARENT_PROJECT_NAME})
 
 
-if(${LINUX} OR ${__BSD__})
+if(${LINUX} OR ${__BSD__} OR ${__SUNOS__})
 
    target_sources(${PROJECT_NAME} PRIVATE .link_object/_matter.zip.o)
 
