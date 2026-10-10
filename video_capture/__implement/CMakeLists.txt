@@ -15,6 +15,12 @@ endif()
 
 add_executable(${PROJECT_NAME} ${application_source})
 
+if(__HAIKU__)
+   haiku_set_application_icon(${PROJECT_NAME}
+      "app-complex/video_capture"
+      "../../_matter/video_capture/_std/_std/main/icon.png")
+endif()
+
 
 
 
@@ -30,7 +36,7 @@ list(APPEND executable_references
    ${PARENT_PROJECT_NAME})
 
 
-if(${LINUX} OR ${__BSD__} OR ${__SUNOS__})
+if(${LINUX} OR ${__BSD__} OR ${__SUNOS__} OR ${__HAIKU__})
 
    target_sources(${PROJECT_NAME} PRIVATE .link_object/_matter.zip.o)
 
