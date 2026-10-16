@@ -16,7 +16,7 @@ IMPLEMENT_APPLICATION_FACTORY();
       m_ptemplateNotifyDrawingMain = NULL;
 
       m_strAppId = "app-simple/notify_drawing";
-      m_strAppName = "app-simple/notify_drawing";
+      m_strAppName = "notify_drawing";
       m_strBaseSupportId = "ca2_flag";
       m_bLicense = false;
 

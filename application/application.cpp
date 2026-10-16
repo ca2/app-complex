@@ -19,7 +19,7 @@ IMPLEMENT_APPLICATION_FACTORY();
 
       m_strAppId = "app-simple/application";
 
-      m_strAppName = "app-simple/application";
+      m_strAppName = "application";
 
       m_strBaseSupportId = "app_simple_application";
 
