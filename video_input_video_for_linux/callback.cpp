@@ -7,6 +7,7 @@
 #include "acme/prototype/geometry2d/_text_stream.h"
 #include "aura/graphics/image/image.h"
 #include "app-complex/video_input/frame.h"
+#include "aura/graphics/draw2d/draw2d.h"
 
 
 bool ffmpeg_init_frame(AVFrame **framep, int width, int height);
@@ -397,7 +398,7 @@ namespace video_input_video_for_linux
 
          }
 
-         pimage->create_as_descriptor(m_sizeSwsDest);
+         pimage->create_as_descriptor(m_sizeSwsDest, this->draw2d()->main_draw2d_domain());
 
          if (pimage.ok())
          {
