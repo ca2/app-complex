@@ -87,7 +87,9 @@ add_dependencies(${PROJECT_NAME} experience_core)
 add_dependencies(${PROJECT_NAME} ${default_draw2d})
 add_dependencies(${PROJECT_NAME} ${default_imaging})
 add_dependencies(${PROJECT_NAME} ${default_write_text})
-add_dependencies(${PROJECT_NAME} ${app_common_dependencies})
+if(app_common_dependencies)
+   add_dependencies(${PROJECT_NAME} ${app_common_dependencies})
+endif()
 add_dependencies(${PROJECT_NAME} database_sqlite3)
 
 
