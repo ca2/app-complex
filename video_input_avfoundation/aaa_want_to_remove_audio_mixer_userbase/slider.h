@@ -33,7 +33,7 @@ namespace multimedia
          ::draw2d::pen_pointer        m_ppenHoverB;
          ::draw2d::brush_pointer      m_pbrush;
          int                 m_iMargin;
-         ::pointer < ::mutex >                   m_pmutexPaint;
+         ::pointer < ::parallelization::mutex >                   m_pmutexPaint;
 
 
          slider();

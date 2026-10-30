@@ -15,14 +15,14 @@ namespace multimedia_playlist
 
          int                                                m_iDebug1;
          bool                                               m_bGettingCredentials;
-         ::pointer < ::mutex >                                            m_pmutex2;
+         ::pointer < ::parallelization::mutex >                                            m_pmutex2;
          //thread *                                         m_pthread;
          ::memory_file                                      m_memfile;
          pointer_array < ::image::image >                                m_imagea;
          string                                             m_strListName;
          pointer_array < ::multimedia_playlist::playlist >        m_pla;
          manual_reset_happening                                 m_ev;
-         ::pointer < ::mutex >                                            m_pmutexFile;
+         ::pointer < ::parallelization::mutex >                                            m_pmutexFile;
 
 
          ::pointer<::audio_decode::decoder>    m_pdecoderHold;

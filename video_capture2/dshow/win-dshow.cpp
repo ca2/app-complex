@@ -198,30 +198,30 @@ public:
 };
 
 class CriticalSection {
-	CRITICAL_SECTION ::pointer < ::mutex >;
+	CRITICAL_SECTION ::pointer < ::parallelization::mutex >;
 
 public:
-	inline CriticalSection()  {InitializeCriticalSection(&::pointer < ::mutex >);}
-	inline ~CriticalSection() {DeleteCriticalSection(&::pointer < ::mutex >);}
+	inline CriticalSection()  {InitializeCriticalSection(&::pointer < ::parallelization::mutex >);}
+	inline ~CriticalSection() {DeleteCriticalSection(&::pointer < ::parallelization::mutex >);}
 
-	inline operator CRITICAL_SECTION*() {return &::pointer < ::mutex >;}
+	inline operator CRITICAL_SECTION*() {return &::pointer < ::parallelization::mutex >;}
 };
 
 class CriticalScope {
-	CriticalSection &::pointer < ::mutex >;
+	CriticalSection &::pointer < ::parallelization::mutex >;
 
 	CriticalScope() = delete;
 	CriticalScope& operator=(CriticalScope &cs) = delete;
 
 public:
-	inline CriticalScope(CriticalSection &mutex_) : ::pointer < ::mutex >(mutex_)
+	inline CriticalScope(CriticalSection &mutex_) : ::pointer < ::parallelization::mutex >(mutex_)
 	{
-		EnterCriticalSection(::pointer < ::mutex >);
+		EnterCriticalSection(::pointer < ::parallelization::mutex >);
 	}
 
 	inline ~CriticalScope()
 	{
-		LeaveCriticalSection(::pointer < ::mutex >);
+		LeaveCriticalSection(::pointer < ::parallelization::mutex >);
 	}
 };
 
@@ -257,12 +257,12 @@ struct DShowInput {
 
 //	WinHandle semaphore;
 //	WinHandle thread;
-	CriticalSection ::pointer < ::mutex >;
+	CriticalSection ::pointer < ::parallelization::mutex >;
 	vector<Action> actions;
 
 	inline void QueueAction(Action action)
 	{
-		CriticalScope scope(::pointer < ::mutex >);
+		CriticalScope scope(::pointer < ::parallelization::mutex >);
 		actions.push_back(action);
 //		ReleaseSemaphore(semaphore, 1, nullptr);
 	}
@@ -295,7 +295,7 @@ struct DShowInput {
 	inline ~DShowInput()
 	{
 		{
-			CriticalScope scope(::pointer < ::mutex >);
+			CriticalScope scope(::pointer < ::parallelization::mutex >);
 			actions.resize(1);
 			actions[0] = Action::Shutdown;
 		}
@@ -366,7 +366,7 @@ void DShowInput::DShowLoop()
 
 		Action action = Action::None;
 		{
-			CriticalScope scope(::pointer < ::mutex >);
+			CriticalScope scope(::pointer < ::parallelization::mutex >);
 			if (actions.size()) {
 				action = actions.front();
 				actions.erase(actions.begin());

@@ -33,7 +33,7 @@ namespace multimedia_playlist
       int                                       m_iDebug1;
       bool                                      m_bGettingCredentials;
 
-      ::pointer < ::mutex >                                     m_pmutex2;
+      ::pointer < ::parallelization::mutex >                                     m_pmutex2;
 
       pointer_array < playlist >                             m_plaDeferUpdate;
       pointer_array < playlist >                             m_plaDeferUpdateTracks;
@@ -57,7 +57,7 @@ namespace multimedia_playlist
 
       string                                    m_strUserAgent;
 
-      ::pointer < ::mutex >                                     m_pmutexFile;
+      ::pointer < ::parallelization::mutex >                                     m_pmutexFile;
 
 
       ::pointer<::audio_decode::decoder>  m_pdecoderHold;
