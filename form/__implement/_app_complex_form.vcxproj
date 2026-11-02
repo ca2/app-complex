@@ -29,7 +29,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{DB0DB48E-D598-4534-AC03-7177603F0937}</ProjectGuid>
+    <ProjectGuid>{FEA79BB3-898C-48E0-91DD-7D8E86A0CD55}</ProjectGuid>
     <RootNamespace>app-complex</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
