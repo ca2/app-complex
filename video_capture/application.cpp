@@ -42,6 +42,9 @@ namespace app_complex_video_capture
 
       m_strAppName = "Video Capture";
 
+      m_strGpuImplementation = "opengl";
+      m_strDraw2dImplementation = "opengl";
+
       m_bLicense = false;
 
       m_bNetworking = false;
