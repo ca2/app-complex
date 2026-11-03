@@ -257,6 +257,15 @@ namespace video_input_media_foundation
 
       }
 
+      {
+         auto prender = m_pdevice->get_render();
+         synchronous_lock lock(prender->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
+         prender->m_uFramesReceived = 0;
+         prender->m_uFpsWindowFrames = 0;
+         prender->m_dCaptureFps = 0.0;
+         prender->m_timeFpsWindow = std::chrono::steady_clock::now();
+         prender->m_timeLastFrame = prender->m_timeFpsWindow;
+      }
       m_bStopCapturing = false;
 
    }
@@ -335,6 +344,10 @@ namespace video_input_media_foundation
 
          hr = pEvent->GetStatus(&hrStatus);
 
+         if (FAILED(hrStatus))
+         {
+            m_pdevice->informationf("Video capture: session error HRESULT=0x%08lX", (unsigned long) hrStatus);
+         }
          if (hrStatus == HRESULT_ERROR_MSCRAP_HARDWARE_LOCK)
          {
 
@@ -757,7 +770,18 @@ namespace video_input_media_foundation
       DWORD dwSampleSize)
    {
 
+      const auto size = m_pdevice->m_size;
+      if (!pSampleBuffer || size.cx <= 0 || size.cy <= 0
+         || (::u64) dwSampleSize < (::u64) size.cx * size.cy * 4)
+      {
+         return E_INVALIDARG;
+      }
+
+      const auto processingStarted = std::chrono::steady_clock::now();
+      auto prender = m_pdevice->get_render();
       m_memorya[m_iMemory].copy_from(pSampleBuffer, dwSampleSize);
+      // Modify our own copy, never the read-only Media Foundation buffer.
+      pSampleBuffer = (const BYTE *) m_memorya[m_iMemory].data();
 
       m_memorya[m_iMemory].set_flag(e_flag_changed);
 
@@ -776,18 +800,10 @@ namespace video_input_media_foundation
 
       }
 
-      pixmap p;
-
-      p.create_from_data(m_pdevice->m_size, (image32_t *)pSampleBuffer, m_pdevice->m_size.cx * 4, true, ::e_flag_success);
-
-      if (!m_pdevice->get_render()->m_pimage)
-      {
-
-         m_pdevice->constructø(m_pdevice->get_render()->m_pimage);
-
-         m_pdevice->get_render()->m_pimage->create_as_descriptor(m_pdevice->m_size, draw2d()->main_draw2d_domain());
-
-      }
+      // Publish completed images; the drawing thread keeps its own reference.
+      ::image::image_pointer pimage;
+      m_pdevice->constructø(pimage);
+      pimage->create_as_descriptor(size, draw2d()->main_draw2d_domain());
 
       for (int iLine = 0; iLine < m_pdevice->m_size.cy; iLine++)
       {
@@ -807,11 +823,40 @@ namespace video_input_media_foundation
 
       }
 
-      synchronous_lock synchronouslock(m_pdevice->get_render()->synchronization(), m_pdevice, SYNCHRONOUS_LOCK_SUFFIX);
 
-      auto ppixmap = m_pdevice->get_render()->m_pimage->map();
 
-      ppixmap->copy(& p);
+      {
+      auto ppixmap = pimage->map(::image::e_map_discard);
+
+      if (!ppixmap)
+      {
+         return E_FAIL;
+      }
+      // Copy only after normalizing RGB32's unused alpha byte to opaque.
+      // create_from_data() owns a copy; creating it before that step kept alpha zero.
+      ppixmap->copy(size, (const image32_t *) pSampleBuffer, size.cx * 4, true);
+      }
+      const auto pixelsReady = std::chrono::steady_clock::now();
+      synchronous_lock synchronouslock(prender->synchronization(), m_pdevice, SYNCHRONOUS_LOCK_SUFFIX);
+      prender->m_pimage = pimage;
+      const auto now = std::chrono::steady_clock::now();
+      prender->m_timeLastFrame = now;
+      ++prender->m_uFpsWindowFrames;
+      const double elapsed = std::chrono::duration<double>(now - prender->m_timeFpsWindow).count();
+      if (elapsed >= 1.0)
+      {
+         prender->m_dCaptureFps = prender->m_uFpsWindowFrames / elapsed;
+         m_pdevice->informationf("Video capture: %.1f FPS, processing %.2f ms, publish wait %.2f ms, sample duration %lld (100ns)",
+            prender->m_dCaptureFps,
+            std::chrono::duration<double, std::milli>(pixelsReady - processingStarted).count(),
+            std::chrono::duration<double, std::milli>(now - pixelsReady).count(), llSampleDuration);
+         prender->m_uFpsWindowFrames = 0;
+         prender->m_timeFpsWindow = now;
+      }
+      if (++prender->m_uFramesReceived == 1)
+      {
+         m_pdevice->informationf("Video capture: first frame received (%d x %d, %lu bytes)", size.cx, size.cy, dwSampleSize);
+      }
 
       return S_OK;
 

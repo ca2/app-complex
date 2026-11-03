@@ -1,5 +1,6 @@
 // Created on 2021-07-07 by camilo 14:11 BRT <3ThomasBorregaardSorensen!!
 #pragma once
+#include <chrono>
 
 
 namespace video_input
@@ -12,6 +13,13 @@ namespace video_input
    public:
 
       ::image::image_pointer        m_pimage;
+      ::u64 m_uFramesReceived = 0;
+      // Access capture statistics while holding synchronization().
+      double m_dRequestedFps = 0.0;
+      double m_dCaptureFps = 0.0;
+      ::u64 m_uFpsWindowFrames = 0;
+      std::chrono::steady_clock::time_point m_timeFpsWindow;
+      std::chrono::steady_clock::time_point m_timeLastFrame;
 
 
       manual_reset_happening* m_pevRenderEnd;

@@ -27,6 +27,7 @@ namespace app_complex_video_capture
       // void dump(dump_context & dumpcontext) const override;
 
       void on_create_split_impact() override;
+      void on_perform_top_down_layout(::draw2d::graphics_pointer & pdraw2dgraphics) override;
 
       void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
 

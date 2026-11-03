@@ -30,6 +30,8 @@ namespace app_complex_video_capture
       DECLARE_MESSAGE_HANDLER(on_message_create);
       void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
       void on_change_cur_sel() override;
+      ::i32_rectangle hosting_rectangle(::user::enum_layout elayout = ::user::e_layout_design) override;
+      void on_perform_top_down_layout(::draw2d::graphics_pointer & pdraw2dgraphics) override;
 
 
    };

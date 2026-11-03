@@ -50,6 +50,21 @@ namespace app_complex_video_capture
    }
 
 
+   void main_impact::on_perform_top_down_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
+   {
+      // split_layout defaults to a 1px inset on every side. In fullscreen
+      // the single video pane must occupy every pixel of the screen.
+      const int border = top_level()->layout().is_full_screen() ? 0 : 1;
+      if (m_cxBorder != border || m_cyBorder != border)
+      {
+         informationf("Video geometry: split border=%d fullscreen=%d", border, (int) (border == 0));
+      }
+      m_cxBorder = border;
+      m_cyBorder = border;
+      ::user::split_impact::on_perform_top_down_layout(pdraw2dgraphics);
+   }
+
+
    void main_impact::on_create_split_impact()
    {
 

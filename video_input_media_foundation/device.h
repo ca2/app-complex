@@ -83,7 +83,9 @@ namespace video_input_media_foundation
 
 		//::collection::index find_format(::u32 w, ::u32 h, ::u32 idealFramerate = 0) override;
 
-		void set_format(::collection::index iIndex) override;
+		::collection::index find_argb_32_format() override;
+
+      void set_format(::collection::index iIndex) override;
 
 		bool is_setup() override;
 

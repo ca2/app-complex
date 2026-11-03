@@ -20,6 +20,7 @@ namespace app_complex_video_capture
    impact::impact()
    {
 
+      m_bDefaultClickHandling = true;
       m_enonclient.erase(::user::e_non_client_background);
       m_enonclient.erase(::user::e_non_client_focus_rect);
 
@@ -95,12 +96,22 @@ namespace app_complex_video_capture
    }
 
 
+   bool impact::on_click(::item *, ::user::mouse *)
+   {
+      m_bNativeSize.store(!m_bNativeSize.load());
+      set_need_redraw();
+      post_redraw();
+      return true;
+   }
+
+
    void impact::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
       auto rectangleX = this->rectangle();
+      trace_view_geometry();
 
       auto pvideoinputdevice = get_app()->m_pvideoinputdevice;
 
@@ -142,15 +153,131 @@ namespace app_complex_video_capture
 
       m_prender->prepare_image();
 
-      ::image::image_source imagesource(m_prender->m_pimage);
+      if (!m_prender->m_pimage)
+      {
+         pdraw2dgraphics->fill_inset_rectangle(rectangleX, argb(255, 0, 0, 0));
+         pdraw2dgraphics->set_font(this);
+         pdraw2dgraphics->set_solid_color(::color::white);
+         pdraw2dgraphics->text_out(10, 10, "Waiting for camera frames (0 received).");
+         return;
+      }
 
-      ::image::image_drawing_options imagedrawingoptions(rectangleX);
+      auto pimage = m_prender->m_pimage;
+      const auto lastFrame = m_prender->m_timeLastFrame;
+      const double measuredFps = m_prender->m_dCaptureFps;
+      const double requestedFps = m_prender->m_dRequestedFps;
+      const auto framesReceived = m_prender->m_uFramesReceived;
+      synchronouslock.unlock();
+
+      ::image::image_source imagesource(pimage);
+
+      const bool nativeSize = m_bNativeSize.load();
+      auto target = rectangleX;
+      if (nativeSize)
+      {
+         // One source pixel per destination pixel; excess is clipped by the view.
+         target.right = target.left + pimage->width();
+         target.bottom = target.top + pimage->height();
+         pdraw2dgraphics->fill_inset_rectangle(rectangleX, argb(255, 0, 0, 0));
+      }
+      if (!nativeSize && pimage->width() > 0 && pimage->height() > 0)
+      {
+         const double scale = minimum((double) rectangleX.width() / pimage->width(),
+            (double) rectangleX.height() / pimage->height());
+         const int width = (int) (pimage->width() * scale);
+         const int height = (int) (pimage->height() * scale);
+         target.left = rectangleX.left + (rectangleX.width() - width) / 2;
+         target.top = rectangleX.top + (rectangleX.height() - height) / 2;
+         target.right = target.left + width;
+         target.bottom = target.top + height;
+         pdraw2dgraphics->fill_inset_rectangle(rectangleX, argb(255, 0, 0, 0));
+      }
+      ::image::image_drawing_options imagedrawingoptions(target);
 
       ::image::image_drawing imagedrawing(imagedrawingoptions, imagesource);
 
       pdraw2dgraphics->m_bUseImageMipMapsOrResizedImages = false;
 
-      pdraw2dgraphics->draw(imagedrawing);
+      // Live preview favors throughput. Avoid inheriting expensive interpolation
+      // from other UI drawing on this graphics context.
+      const auto previousInterpolation = pdraw2dgraphics->m_einterpolationmode;
+      pdraw2dgraphics->set_interpolation_mode(::draw2d::e_interpolation_mode_bilinear);
+      const auto drawStarted = std::chrono::steady_clock::now();
+      try
+      {
+         pdraw2dgraphics->draw(imagedrawing);
+      }
+      catch (const ::exception & e)
+      {
+         auto now = std::chrono::steady_clock::now();
+         if (std::chrono::duration<double>(now - m_timePreviewError).count() >= 1.0)
+         {
+            informationf("Video preview: image draw failed: %s", e.get_message().c_str());
+            m_timePreviewError = now;
+         }
+         pdraw2dgraphics->set_interpolation_mode(previousInterpolation);
+         return;
+      }
+      const auto drawFinished = std::chrono::steady_clock::now();
+      pdraw2dgraphics->set_interpolation_mode(previousInterpolation);
+      m_dDrawTotalMilliseconds += std::chrono::duration<double, std::milli>(drawFinished - drawStarted).count();
+      ++m_uPreviewPaints;
+      if (framesReceived != m_uLastPreviewFrame)
+      {
+         ++m_uPreviewFrames;
+         m_uLastPreviewFrame = framesReceived;
+      }
+      const double previewElapsed = std::chrono::duration<double>(drawFinished - m_timePreviewWindow).count();
+      if (previewElapsed >= 1.0)
+      {
+         m_dPreviewFps = m_uPreviewFrames / previewElapsed;
+         m_dDrawMilliseconds = m_dDrawTotalMilliseconds / m_uPreviewPaints;
+         informationf("Video preview: mode=%s viewport=%dx%d capture=%.1f FPS preview=%.1f FPS paints=%.1f/s image draw=%.2f ms",
+            nativeSize ? "native" : "stretch", rectangleX.width(), rectangleX.height(),
+            measuredFps, m_dPreviewFps, m_uPreviewPaints / previewElapsed, m_dDrawMilliseconds);
+         informationf("Video geometry: mode=%s source=%dx%d view=%dx%d aspect=%.6f target=(%d,%d %dx%d) aspect=%.6f margins L=%d T=%d R=%d B=%d root_fullscreen=%d",
+            nativeSize ? "native" : "bilinear", pimage->width(), pimage->height(),
+            rectangleX.width(), rectangleX.height(),
+            rectangleX.height() > 0 ? (double) rectangleX.width() / rectangleX.height() : 0.0,
+            target.left, target.top, target.width(), target.height(),
+            target.height() > 0 ? (double) target.width() / target.height() : 0.0,
+            target.left - rectangleX.left, target.top - rectangleX.top,
+            rectangleX.right - target.right, rectangleX.bottom - target.bottom,
+            (int) top_level()->layout().is_full_screen());
+         m_uPreviewFrames = 0;
+         m_uPreviewPaints = 0;
+         m_dDrawTotalMilliseconds = 0.0;
+         m_timePreviewWindow = drawFinished;
+      }
+
+      ::string strFrames;
+      const auto secondsSinceFrame = std::chrono::duration<double>(
+         std::chrono::steady_clock::now() - lastFrame).count();
+      const double captureFps = secondsSinceFrame > 2.0 ? 0.0 : measuredFps;
+      strFrames.formatf("Capture: %.1f FPS | Mode: %d x %d @ %.2f FPS | Frames: %llu",
+         captureFps, pvideoinputdevice->m_size.cx, pvideoinputdevice->m_size.cy,
+         requestedFps, (unsigned long long) framesReceived);
+      pdraw2dgraphics->fill_inset_rectangle(::i32_rectangle(0, 0, rectangleX.width(), 35), argb(200, 0, 0, 0));
+      pdraw2dgraphics->set_font(this);
+      pdraw2dgraphics->set_solid_color(::color::white);
+      ::string strPreview;
+      strPreview.formatf("Preview: %.1f FPS | Draw: %.2f ms | %s | Click video to toggle native/stretch",
+         m_dPreviewFps, m_dDrawMilliseconds, nativeSize ? "Native 1:1 (clipped)" : "Stretched (bilinear)");
+      pdraw2dgraphics->fill_inset_rectangle(::i32_rectangle(0, 35, rectangleX.width(), 70), argb(200, 0, 0, 0));
+      try
+      {
+         pdraw2dgraphics->text_out(10, 10, strFrames);
+         pdraw2dgraphics->text_out(10, 42, strPreview);
+      }
+      catch (const ::exception & e)
+      {
+         const auto now = std::chrono::steady_clock::now();
+         if (std::chrono::duration<double>(now - m_timePreviewError).count() >= 1.0)
+         {
+            informationf("Video preview: statistics text failed: %s", e.get_message().c_str());
+            m_timePreviewError = now;
+         }
+      }
 
    }
 
@@ -180,8 +307,35 @@ namespace app_complex_video_capture
    }
 
 
+   void impact::trace_view_geometry()
+   {
+      ::string geometry;
+      int level = 0;
+      for (auto interaction = (::user::interaction *) this; interaction; interaction = interaction->get_parent(), ++level)
+      {
+         auto local = interaction->rectangle();
+         auto screen = interaction->screen_rectangle();
+         ::string line;
+         line.formatf("level=%d local=(%d,%d %dx%d) screen=(%d,%d %dx%d) aspect=%.6f delta16:9=%lld fullscreen=%d; ",
+            level, local.left, local.top, local.width(), local.height(),
+            screen.left, screen.top, screen.width(), screen.height(),
+            local.height() > 0 ? (double) local.width() / local.height() : 0.0,
+            (long long) local.width() * 9 - (long long) local.height() * 16,
+            (int) interaction->layout().is_full_screen());
+         geometry += line;
+      }
+      if (geometry != m_strGeometryTrace)
+      {
+         informationf("Video geometry (view level=0, then parents): %s", geometry.c_str());
+         m_strGeometryTrace = geometry;
+      }
+   }
+
+
    void impact::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
+
+      trace_view_geometry();
 
       if (m_prender)
       {

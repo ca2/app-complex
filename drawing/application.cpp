@@ -203,10 +203,10 @@ namespace app_complex_drawing
    }
 
 
-   ::string application::draw2d_get_default_implementation_name()
+   ::string application::draw2d_get_implementation_name()
    {
 
-      return ::app_simple_drawing::application::draw2d_get_default_implementation_name();
+      return ::app_simple_drawing::application::draw2d_get_implementation_name();
 
    }
 

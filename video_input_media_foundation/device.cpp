@@ -4,6 +4,8 @@
 #include "thread.h"
 #include "media_format.h"
 #include "callback.h"
+#include "render.h"
+#include "acme/parallelization/synchronous_lock.h"
 #include "format_reader.h"
 #include "apex/platform/system.h"
 #include "acme/operating_system/windows_common/com/cotaskptr.h"
@@ -864,6 +866,39 @@ namespace video_input_media_foundation
    }
 
 
+   ::collection::index device::find_argb_32_format()
+   {
+      // Select a native camera mode; the topology converts it to RGB32.
+      // MF_MT_SAMPLE_SIZE is bytes per sample, not bits per pixel.
+      ::collection::index iBest = -1;
+      for (::collection::index i = 0; i < m_mediaformata.get_count(); ++i)
+      {
+         auto candidate = m_mediaformata[i].cast<media_format>();
+         if (candidate->m_size.cx <= 0 || candidate->m_size.cy <= 0
+            || !candidate->m_uFrameRate || !candidate->m_uFrameRateLow)
+         {
+            continue;
+         }
+         if (iBest >= 0)
+         {
+            auto best = m_mediaformata[iBest].cast<media_format>();
+            const auto lhs = (::u64) candidate->m_uFrameRate * best->m_uFrameRateLow;
+            const auto rhs = (::u64) best->m_uFrameRate * candidate->m_uFrameRateLow;
+            if (lhs < rhs || (lhs == rhs && candidate->m_size.area() <= best->m_size.area()))
+            {
+               continue;
+            }
+         }
+         iBest = i;
+      }
+      if (iBest < 0)
+      {
+         throw ::exception(error_wrong_state, "Camera has no video mode with a valid frame rate.");
+      }
+      return iBest;
+   }
+
+
    void device::set_format(::collection::index iIndex)
    {
 
@@ -879,6 +914,14 @@ namespace video_input_media_foundation
          _set_device_format((DWORD)iIndex);
 
          m_bSetup = true;
+         auto format = m_mediaformata[iIndex].cast<media_format>();
+         auto prender = get_render();
+         synchronous_lock lock(prender->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
+         prender->m_dRequestedFps = format->m_uFrameRateLow
+            ? (double) format->m_uFrameRate / format->m_uFrameRateLow : 0.0;
+         informationf("Video capture: selected %d x %d, %u/%u FPS, %s",
+            m_size.cx, m_size.cy, format->m_uFrameRate, format->m_uFrameRateLow,
+            format->m_strSubtypeName.c_str());
 
          //if (m_bSetup)
             //pdebugprintout->print_out(L"\n\nVIDEODEVICE %i: Device is setuped \n", m_uCurrentNumber);

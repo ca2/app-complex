@@ -1,5 +1,6 @@
 #include "platform.h"
 #include "pane_impact.h"
+#include "berg/user/user/tab_data.h"
 #include "device_selector.h"
 #include "application.h"
 #include "acme/constant/id.h"
@@ -71,6 +72,28 @@ namespace app_complex_video_capture
 
       set_current_tab_by_id(MAIN_IMPACT);
 
+   }
+
+
+   ::i32_rectangle pane_impact::hosting_rectangle(::user::enum_layout elayout)
+   {
+      if (top_level()->layout().is_full_screen(::user::e_layout_layout))
+      {
+         return rectangle(elayout);
+      }
+      return ::userex::pane_tab_impact::hosting_rectangle(elayout);
+   }
+
+
+   void pane_impact::on_perform_top_down_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
+   {
+      ::userex::pane_tab_impact::on_perform_top_down_layout(pdraw2dgraphics);
+      if (top_level()->layout().is_full_screen(::user::e_layout_layout))
+      {
+         // Fullscreen controls overlay the video instead of reserving a strip.
+         get_data()->m_rectangleHosting = rectangle(::user::e_layout_layout);
+         layout_pane(get_current_tab_index(), is_window_visible());
+      }
    }
 
 
