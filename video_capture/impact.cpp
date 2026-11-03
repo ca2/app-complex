@@ -98,6 +98,11 @@ namespace app_complex_video_capture
 
    bool impact::on_click(::item *, ::user::mouse *)
    {
+      if (!m_bEnableNativeSizeToggle)
+      {
+         m_bNativeSize.store(false);
+         return true;
+      }
       m_bNativeSize.store(!m_bNativeSize.load());
       set_need_redraw();
       post_redraw();
@@ -171,7 +176,10 @@ namespace app_complex_video_capture
 
       ::image::image_source imagesource(pimage);
 
-      const bool nativeSize = m_bNativeSize.load();
+      // Fullscreen always fits the capture to the view. Keep the native-size
+      // preference for windowed inspection without carrying it into fullscreen.
+      const bool fullScreen = top_level()->layout().is_full_screen();
+      const bool nativeSize = m_bEnableNativeSizeToggle && m_bNativeSize.load() && !fullScreen;
       auto target = rectangleX;
       if (nativeSize)
       {
@@ -191,6 +199,15 @@ namespace app_complex_video_capture
          target.right = target.left + width;
          target.bottom = target.top + height;
          pdraw2dgraphics->fill_inset_rectangle(rectangleX, argb(255, 0, 0, 0));
+      }
+      ::string previewGeometry;
+      previewGeometry.formatf("fullscreen=%d source=%dx%d view=%dx%d target=(%d,%d %dx%d) native=%d",
+         (int)fullScreen, pimage->width(), pimage->height(), rectangleX.width(), rectangleX.height(),
+         target.left, target.top, target.width(), target.height(), (int)nativeSize);
+      if (previewGeometry != m_strPreviewGeometry)
+      {
+         informationf("Video scaling: %s", previewGeometry.c_str());
+         m_strPreviewGeometry = previewGeometry;
       }
       ::image::image_drawing_options imagedrawingoptions(target);
 
@@ -219,65 +236,74 @@ namespace app_complex_video_capture
          return;
       }
       const auto drawFinished = std::chrono::steady_clock::now();
-      pdraw2dgraphics->set_interpolation_mode(previousInterpolation);
-      m_dDrawTotalMilliseconds += std::chrono::duration<double, std::milli>(drawFinished - drawStarted).count();
-      ++m_uPreviewPaints;
-      if (framesReceived != m_uLastPreviewFrame)
-      {
-         ++m_uPreviewFrames;
-         m_uLastPreviewFrame = framesReceived;
-      }
-      const double previewElapsed = std::chrono::duration<double>(drawFinished - m_timePreviewWindow).count();
-      if (previewElapsed >= 1.0)
-      {
-         m_dPreviewFps = m_uPreviewFrames / previewElapsed;
-         m_dDrawMilliseconds = m_dDrawTotalMilliseconds / m_uPreviewPaints;
-         informationf("Video preview: mode=%s viewport=%dx%d capture=%.1f FPS preview=%.1f FPS paints=%.1f/s image draw=%.2f ms",
-            nativeSize ? "native" : "stretch", rectangleX.width(), rectangleX.height(),
-            measuredFps, m_dPreviewFps, m_uPreviewPaints / previewElapsed, m_dDrawMilliseconds);
-         informationf("Video geometry: mode=%s source=%dx%d view=%dx%d aspect=%.6f target=(%d,%d %dx%d) aspect=%.6f margins L=%d T=%d R=%d B=%d root_fullscreen=%d",
-            nativeSize ? "native" : "bilinear", pimage->width(), pimage->height(),
-            rectangleX.width(), rectangleX.height(),
-            rectangleX.height() > 0 ? (double) rectangleX.width() / rectangleX.height() : 0.0,
-            target.left, target.top, target.width(), target.height(),
-            target.height() > 0 ? (double) target.width() / target.height() : 0.0,
-            target.left - rectangleX.left, target.top - rectangleX.top,
-            rectangleX.right - target.right, rectangleX.bottom - target.bottom,
-            (int) top_level()->layout().is_full_screen());
-         m_uPreviewFrames = 0;
-         m_uPreviewPaints = 0;
-         m_dDrawTotalMilliseconds = 0.0;
-         m_timePreviewWindow = drawFinished;
-      }
 
-      ::string strFrames;
-      const auto secondsSinceFrame = std::chrono::duration<double>(
-         std::chrono::steady_clock::now() - lastFrame).count();
-      const double captureFps = secondsSinceFrame > 2.0 ? 0.0 : measuredFps;
-      strFrames.formatf("Capture: %.1f FPS | Mode: %d x %d @ %.2f FPS | Frames: %llu",
-         captureFps, pvideoinputdevice->m_size.cx, pvideoinputdevice->m_size.cy,
-         requestedFps, (unsigned long long) framesReceived);
-      pdraw2dgraphics->fill_inset_rectangle(::i32_rectangle(0, 0, rectangleX.width(), 35), argb(200, 0, 0, 0));
-      pdraw2dgraphics->set_font(this);
-      pdraw2dgraphics->set_solid_color(::color::white);
-      ::string strPreview;
-      strPreview.formatf("Preview: %.1f FPS | Draw: %.2f ms | %s | Click video to toggle native/stretch",
-         m_dPreviewFps, m_dDrawMilliseconds, nativeSize ? "Native 1:1 (clipped)" : "Stretched (bilinear)");
-      pdraw2dgraphics->fill_inset_rectangle(::i32_rectangle(0, 35, rectangleX.width(), 70), argb(200, 0, 0, 0));
-      try
-      {
-         pdraw2dgraphics->text_out(10, 10, strFrames);
-         pdraw2dgraphics->text_out(10, 42, strPreview);
-      }
-      catch (const ::exception & e)
-      {
-         const auto now = std::chrono::steady_clock::now();
-         if (std::chrono::duration<double>(now - m_timePreviewError).count() >= 1.0)
+
+      pdraw2dgraphics->set_interpolation_mode(previousInterpolation);
+
+      int iEnableVideoStats = 0;
+
+         if (iEnableVideoStats)
          {
-            informationf("Video preview: statistics text failed: %s", e.get_message().c_str());
-            m_timePreviewError = now;
+            m_dDrawTotalMilliseconds += std::chrono::duration<double, std::milli>(drawFinished - drawStarted).count();
+            ++m_uPreviewPaints;
+            if (framesReceived != m_uLastPreviewFrame)
+            {
+               ++m_uPreviewFrames;
+               m_uLastPreviewFrame = framesReceived;
+            }
+            const double previewElapsed = std::chrono::duration<double>(drawFinished - m_timePreviewWindow).count();
+            if (previewElapsed >= 1.0)
+            {
+               m_dPreviewFps = m_uPreviewFrames / previewElapsed;
+               m_dDrawMilliseconds = m_dDrawTotalMilliseconds / m_uPreviewPaints;
+               informationf("Video preview: mode=%s viewport=%dx%d capture=%.1f FPS preview=%.1f FPS paints=%.1f/s image draw=%.2f ms",
+                  nativeSize ? "native" : "stretch", rectangleX.width(), rectangleX.height(),
+                  measuredFps, m_dPreviewFps, m_uPreviewPaints / previewElapsed, m_dDrawMilliseconds);
+               informationf("Video geometry: mode=%s source=%dx%d view=%dx%d aspect=%.6f target=(%d,%d %dx%d) aspect=%.6f margins L=%d T=%d R=%d B=%d root_fullscreen=%d",
+                  nativeSize ? "native" : "bilinear", pimage->width(), pimage->height(),
+                  rectangleX.width(), rectangleX.height(),
+                  rectangleX.height() > 0 ? (double)rectangleX.width() / rectangleX.height() : 0.0,
+                  target.left, target.top, target.width(), target.height(),
+                  target.height() > 0 ? (double)target.width() / target.height() : 0.0,
+                  target.left - rectangleX.left, target.top - rectangleX.top,
+                  rectangleX.right - target.right, rectangleX.bottom - target.bottom,
+                  (int)top_level()->layout().is_full_screen());
+               m_uPreviewFrames = 0;
+               m_uPreviewPaints = 0;
+               m_dDrawTotalMilliseconds = 0.0;
+               m_timePreviewWindow = drawFinished;
+            }
+
+            ::string strFrames;
+            const auto secondsSinceFrame = std::chrono::duration<double>(
+               std::chrono::steady_clock::now() - lastFrame).count();
+            const double captureFps = secondsSinceFrame > 2.0 ? 0.0 : measuredFps;
+            strFrames.formatf("Capture: %.1f FPS | Mode: %d x %d @ %.2f FPS | Frames: %llu",
+               captureFps, pvideoinputdevice->m_size.cx, pvideoinputdevice->m_size.cy,
+               requestedFps, (unsigned long long) framesReceived);
+            pdraw2dgraphics->fill_inset_rectangle(::i32_rectangle(0, 0, rectangleX.width(), 35), argb(200, 0, 0, 0));
+            pdraw2dgraphics->set_font(this);
+            pdraw2dgraphics->set_solid_color(::color::white);
+            ::string strPreview;
+            strPreview.formatf("Preview: %.1f FPS | Draw: %.2f ms | %s | Click video to toggle native/stretch",
+               m_dPreviewFps, m_dDrawMilliseconds, nativeSize ? "Native 1:1 (clipped)" : "Stretched (bilinear)");
+            pdraw2dgraphics->fill_inset_rectangle(::i32_rectangle(0, 35, rectangleX.width(), 70), argb(200, 0, 0, 0));
+            try
+            {
+               pdraw2dgraphics->text_out(10, 10, strFrames);
+               pdraw2dgraphics->text_out(10, 42, strPreview);
+            }
+            catch (const ::exception & e)
+            {
+               const auto now = std::chrono::steady_clock::now();
+               if (std::chrono::duration<double>(now - m_timePreviewError).count() >= 1.0)
+               {
+                  informationf("Video preview: statistics text failed: %s", e.get_message().c_str());
+                  m_timePreviewError = now;
+               }
+            }
+
          }
-      }
 
    }
 

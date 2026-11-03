@@ -3,6 +3,9 @@
 #include "device.h"
 #include "acme/parallelization/synchronous_lock.h"
 #include "aura/graphics/image/image.h"
+#if defined(_M_X64) || defined(_M_IX86)
+#include <emmintrin.h>
+#endif
 namespace video_input_direct_show
 {
    void render::initialize_video_input_render(::video_input::device * pdevice)
@@ -13,10 +16,22 @@ namespace video_input_direct_show
    {
       if (!m_pdevice || !m_pdevice->m_pgrabber) return;
       synchronous_lock lock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
-      long bytes = 0;
-      if (FAILED(m_pdevice->m_pgrabber->GetCurrentBuffer(&bytes, nullptr)) || bytes <= 0) return;
-      auto & pixels = m_pdevice->m_pixels; pixels.resize(bytes);
-      if (FAILED(m_pdevice->m_pgrabber->GetCurrentBuffer(&bytes, (long *)pixels.data()))) return;
+      auto receiver = m_pdevice->m_preceiver;
+      if (!receiver) return;
+      std::unique_lock<std::mutex> frameLock(receiver->m_mutex);
+      if (!receiver->m_generation || receiver->m_generation == m_uFramesReceived) return;
+      // Exchange reusable buffers, then let capture continue during GPU upload.
+      auto generation = receiver->m_generation;
+      auto captureTime = receiver->m_time;
+      auto & pixels = m_pdevice->m_pixels;
+      pixels.swap(receiver->m_frame);
+      frameLock.unlock();
+      auto bytes = pixels.size();
+      // Previous polling path (the graph interface belongs to the application thread):
+//       long bytes = 0;
+//       if (FAILED(m_pdevice->m_pgrabber->GetCurrentBuffer(&bytes, nullptr)) || bytes <= 0) return;
+//       auto & pixels = m_pdevice->m_pixels; pixels.resize(bytes);
+//       if (FAILED(m_pdevice->m_pgrabber->GetCurrentBuffer(&bytes, (long *)pixels.data()))) return;
       auto size = m_pdevice->m_size;
       if ((size_t)bytes < (size_t)size.cx * size.cy * 4) return;
       if (!m_pimage || m_pimage->size() != size) { defer_constructø(m_pimage); m_pimage->create_as_descriptor(size, m_pdevice->draw2d_domain()); }
@@ -27,11 +42,36 @@ namespace video_input_direct_show
       {
          int sourceY = m_pdevice->m_lConnectedHeight > 0 ? size.cy - 1 - y : y;
          auto dst = (unsigned char *)pixmap->m_pimage32 + y * pixmap->m_iScan;
-         memcpy(dst, pixels.data() + (size_t)sourceY * stride, stride);
-         for (int x = 0; x < size.cx; ++x) dst[x * 4 + 3] = 255;
+         auto src = pixels.data() + (size_t)sourceY * stride;
+         int x = 0;
+#if defined(_M_X64) || defined(_M_IX86)
+         const auto alpha = _mm_set1_epi32((int)0xff000000u);
+         for (; x + 4 <= size.cx; x += 4)
+         {
+            auto rgba = _mm_loadu_si128((const __m128i *)(src + x * 4));
+            _mm_storeu_si128((__m128i *)(dst + x * 4), _mm_or_si128(rgba, alpha));
+         }
+#endif
+         for (; x < size.cx; ++x)
+         {
+            memcpy(dst + x * 4, src + x * 4, 4);
+            dst[x * 4 + 3] = 255;
+         }
       }
-      ++m_uFramesReceived;
-      m_timeLastFrame = std::chrono::steady_clock::now();
+      if (m_timeFpsWindow.time_since_epoch().count() == 0)
+      {
+         m_timeFpsWindow = captureTime;
+         m_uFpsWindowFrames = generation;
+      }
+      auto seconds = std::chrono::duration<double>(captureTime - m_timeFpsWindow).count();
+      if (seconds >= 1.0)
+      {
+         m_dCaptureFps = (generation - m_uFpsWindowFrames) / seconds;
+         m_timeFpsWindow = captureTime;
+         m_uFpsWindowFrames = generation;
+      }
+      m_uFramesReceived = generation;
+      m_timeLastFrame = captureTime;
    }
    void render::destroy()
    {

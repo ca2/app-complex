@@ -20,6 +20,8 @@ namespace app_complex_video_capture
       ::pointer<::video_input::render>   m_prender;
 
 
+      ::string m_strPreviewGeometry;
+      bool m_bEnableNativeSizeToggle = false;
       std::atomic<bool> m_bNativeSize{false};
       std::chrono::steady_clock::time_point m_timePreviewWindow = std::chrono::steady_clock::now();
       std::chrono::steady_clock::time_point m_timePreviewError{};

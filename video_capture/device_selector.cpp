@@ -254,6 +254,8 @@ namespace app_complex_video_capture
                   
                }
                
+               pdraw2dgraphics->set_font(this);
+               pdraw2dgraphics->set_solid_color(::color::white);
                pdraw2dgraphics->draw_text(pdevice->m_strName, puseritem->m_rectangle2, e_align_left_center);
                
             }

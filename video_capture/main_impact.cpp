@@ -54,7 +54,7 @@ namespace app_complex_video_capture
    {
       // split_layout defaults to a 1px inset on every side. In fullscreen
       // the single video pane must occupy every pixel of the screen.
-      const int border = top_level()->layout().is_full_screen() ? 0 : 1;
+      const int border = top_level()->layout().is_full_screen(::user::e_layout_layout) ? 0 : 1;
       if (m_cxBorder != border || m_cyBorder != border)
       {
          informationf("Video geometry: split border=%d fullscreen=%d", border, (int) (border == 0));
@@ -62,6 +62,15 @@ namespace app_complex_video_capture
       m_cxBorder = border;
       m_cyBorder = border;
       ::user::split_impact::on_perform_top_down_layout(pdraw2dgraphics);
+      if (border == 0 && m_pimpact)
+      {
+         // Size the single preview pane from the active layout, not the
+         // preceding design frame. Fullscreen must not depend on overlay draws.
+         auto bounds = rectangle(::user::e_layout_layout);
+         auto holder = get_pane_holder(0);
+         if (holder) holder->place(bounds);
+         m_pimpact->place({ ::i32_point{}, bounds.size() });
+      }
    }
 
 

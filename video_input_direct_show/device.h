@@ -3,6 +3,9 @@
 #include <dshow.h>
 #include <dvdmedia.h>
 #include <vector>
+#include <mutex>
+#include <atomic>
+#include <chrono>
 namespace video_input_direct_show
 {
    MIDL_INTERFACE("6B652FFF-11FE-4FCE-92AD-0266B5D7C78F") sample_grabber : public IUnknown
@@ -15,10 +18,29 @@ namespace video_input_direct_show
       virtual HRESULT STDMETHODCALLTYPE GetCurrentSample(IMediaSample **) = 0;
       virtual HRESULT STDMETHODCALLTYPE SetCallback(IUnknown *, long) = 0;
    };
+   MIDL_INTERFACE("0579154A-2B53-4994-B0D0-E773148EFF85") sample_callback : public IUnknown
+   {
+      virtual HRESULT STDMETHODCALLTYPE SampleCB(double, IMediaSample *) = 0;
+      virtual HRESULT STDMETHODCALLTYPE BufferCB(double, BYTE *, long) = 0;
+   };
+   class frame_receiver : public sample_callback
+   {
+   public:
+      std::atomic<ULONG> m_refs{1};
+      std::mutex m_mutex;
+      std::vector<unsigned char> m_frame;
+      unsigned long long m_generation = 0;
+      std::chrono::steady_clock::time_point m_time;
+      HRESULT STDMETHODCALLTYPE QueryInterface(REFIID iid, void ** out) override;
+      ULONG STDMETHODCALLTYPE AddRef() override { return ++m_refs; }
+      ULONG STDMETHODCALLTYPE Release() override { auto refs = --m_refs; if (!refs) delete this; return refs; }
+      HRESULT STDMETHODCALLTYPE SampleCB(double, IMediaSample *) override { return E_NOTIMPL; }
+      HRESULT STDMETHODCALLTYPE BufferCB(double, BYTE *, long) override;
+   };
    class CLASS_DECL_VIDEO_INPUT_DIRECT_SHOW device : virtual public ::video_input::device
    {
    public:
-      comptr<IMoniker> m_pmoniker;
+      // comptr<IMoniker> m_pmoniker; // Reacquire from m_strHardwareId in the capture apartment.
       comptr<IGraphBuilder> m_pgraph;
       comptr<ICaptureGraphBuilder2> m_pbuilder;
       comptr<IBaseFilter> m_psource;
@@ -30,6 +52,7 @@ namespace video_input_direct_show
       std::vector<int> m_formatindices;
       std::vector<unsigned char> m_pixels;
       long m_lConnectedHeight = 0;
+      frame_receiver * m_preceiver = nullptr;
       device();
       ~device() override;
       void _set_device(IMoniker * pmoniker);

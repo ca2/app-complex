@@ -79,7 +79,7 @@ namespace app_complex_video_capture
    {
       if (top_level()->layout().is_full_screen(::user::e_layout_layout))
       {
-         return rectangle(elayout);
+         return rectangle(::user::e_layout_layout);
       }
       return ::userex::pane_tab_impact::hosting_rectangle(elayout);
    }
@@ -94,6 +94,18 @@ namespace app_complex_video_capture
          get_data()->m_rectangleHosting = rectangle(::user::e_layout_layout);
          layout_pane(get_current_tab_index(), is_window_visible());
       }
+   }
+
+
+   void pane_impact::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
+   {
+      // The active view fills the tab container in fullscreen. Do not paint
+      // the tab strip over its top edge; child views are drawn separately.
+      if (top_level()->layout().is_full_screen())
+      {
+         return;
+      }
+      ::userex::pane_tab_impact::_001OnDraw(pdraw2dgraphics);
    }
 
 

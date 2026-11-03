@@ -6,6 +6,25 @@
 #pragma comment(lib, "strmiids.lib")
 namespace video_input_direct_show
 {
+   HRESULT frame_receiver::QueryInterface(REFIID iid, void ** out)
+   {
+      if (!out) return E_POINTER;
+      *out = nullptr;
+      if (iid != IID_IUnknown && iid != __uuidof(sample_callback)) return E_NOINTERFACE;
+      *out = static_cast<sample_callback *>(this); AddRef(); return S_OK;
+   }
+   HRESULT frame_receiver::BufferCB(double, BYTE * data, long bytes)
+   {
+      if (!data || bytes <= 0) return S_OK;
+      try
+      {
+         std::lock_guard<std::mutex> lock(m_mutex);
+         m_frame.assign(data, data + bytes);
+         m_time = std::chrono::steady_clock::now(); ++m_generation;
+      }
+      catch (...) { return E_OUTOFMEMORY; }
+      return S_OK;
+   }
    static void check(HRESULT hr) { if (FAILED(hr)) throw ::hresult_exception(hr); }
    static void free_type(AM_MEDIA_TYPE & mt)
    {
@@ -17,7 +36,8 @@ namespace video_input_direct_show
    device::~device() { close(); }
    void device::_set_device(IMoniker * pmoniker)
    {
-      m_pmoniker = pmoniker;
+      // m_pmoniker = pmoniker;
+      // Retain the display-name ID, not an interface owned by the enumeration apartment.
       comptr<IPropertyBag> bag;
       check(pmoniker->BindToStorage(nullptr, nullptr, IID_PPV_ARGS(&bag)));
       VARIANT value; VariantInit(&value);
@@ -27,11 +47,41 @@ namespace video_input_direct_show
    }
    void device::initialize_device()
    {
-      if (m_pgraph) return;
+      if (m_pconfig) return;
+      m_pcontrol.release(); m_psource.release(); m_pbuilder.release(); m_pgraph.release();
       check(CoCreateInstance(CLSID_FilterGraph, nullptr, CLSCTX_INPROC_SERVER, IID_PPV_ARGS(&m_pgraph)));
       check(CoCreateInstance(CLSID_CaptureGraphBuilder2, nullptr, CLSCTX_INPROC_SERVER, IID_PPV_ARGS(&m_pbuilder)));
       check(m_pbuilder->SetFiltergraph(m_pgraph));
-      check(m_pmoniker->BindToObject(nullptr, nullptr, IID_PPV_ARGS(&m_psource)));
+      // check(m_pmoniker->BindToObject(nullptr, nullptr, IID_PPV_ARGS(&m_psource)));
+      // Resolve the saved ID in the graph's current COM apartment.
+      comptr<ICreateDevEnum> devices;
+      check(CoCreateInstance(CLSID_SystemDeviceEnum, nullptr, CLSCTX_INPROC_SERVER, IID_PPV_ARGS(&devices)));
+      comptr<IEnumMoniker> enumerator;
+      auto hr = devices->CreateClassEnumerator(CLSID_VideoInputDeviceCategory, &enumerator, 0);
+      check(hr);
+      bool found = false;
+      if (hr == S_OK)
+      {
+         comptr<IMoniker> moniker;
+         while (enumerator->Next(1, &moniker, nullptr) == S_OK)
+         {
+            LPOLESTR display = nullptr;
+            hr = moniker->GetDisplayName(nullptr, nullptr, &display);
+            if (SUCCEEDED(hr))
+            {
+               string id = display;
+               CoTaskMemFree(display);
+               if (id == m_strHardwareId)
+               {
+                  check(moniker->BindToObject(nullptr, nullptr, IID_PPV_ARGS(&m_psource)));
+                  found = true;
+                  break;
+               }
+            }
+            moniker.release();
+         }
+      }
+      if (!found) throw ::exception(error_not_found, "DirectShow camera is no longer available.");
       check(m_pgraph->AddFilter(m_psource, L"Video input"));
       check(m_pbuilder->FindInterface(&PIN_CATEGORY_CAPTURE, &MEDIATYPE_Video, m_psource, IID_IAMStreamConfig, (void **)&m_pconfig));
       check(m_pgraph->QueryInterface(IID_PPV_ARGS(&m_pcontrol)));
@@ -61,7 +111,8 @@ namespace video_input_direct_show
             format->m_iFrameRateNumerator = 10000000;
             format->m_iFrameRateDenominator = interval > 0 ? (int)interval : 333333;
             format->m_uFrameRate = interval > 0 ? (unsigned)(10000000 / interval) : 30;
-            format->m_strSubtypeName = mt->subtype == MEDIASUBTYPE_RGB32 ? "RGB32" : "DirectShow native";
+            format->m_strSubtypeName = mt->subtype == MEDIASUBTYPE_RGB32 ? "RGB32"
+               : mt->subtype == MEDIASUBTYPE_YUY2 ? "YUY2" : "DirectShow native";
             m_mediaformata.add(format); m_formatindices.push_back(i);
          }
          free_type(*mt); CoTaskMemFree(mt);
@@ -72,6 +123,9 @@ namespace video_input_direct_show
       initialize_device();
       for (::collection::index i = 0; i < m_mediaformata.get_count(); ++i)
          if (m_mediaformata[i]->m_strSubtypeName == "RGB32") return i;
+      // Prefer a format the legacy RGB32 capture conversion path can handle.
+      for (::collection::index i = 0; i < m_mediaformata.get_count(); ++i)
+         if (m_mediaformata[i]->m_strSubtypeName == "YUY2") return i;
       return m_mediaformata.has_element() ? 0 : -1;
    }
    void device::set_format(::collection::index i)
@@ -96,7 +150,12 @@ namespace video_input_direct_show
          check(m_pgrabberfilter->QueryInterface(IID_PPV_ARGS(&m_pgrabber)));
          check(m_pgraph->AddFilter(m_pgrabberfilter, L"RGB32 samples"));
          AM_MEDIA_TYPE wanted = {}; wanted.majortype = MEDIATYPE_Video; wanted.subtype = MEDIASUBTYPE_RGB32; wanted.formattype = FORMAT_VideoInfo;
-         check(m_pgrabber->SetMediaType(&wanted)); check(m_pgrabber->SetBufferSamples(TRUE));
+         check(m_pgrabber->SetMediaType(&wanted));
+         // check(m_pgrabber->SetBufferSamples(TRUE));
+         check(m_pgrabber->SetOneShot(FALSE));
+         check(m_pgrabber->SetBufferSamples(FALSE));
+         m_preceiver = new frame_receiver;
+         check(m_pgrabber->SetCallback(m_preceiver, 1));
          check(CoCreateInstance(nullrenderer, nullptr, CLSCTX_INPROC_SERVER, IID_PPV_ARGS(&m_pnullrenderer)));
          check(m_pgraph->AddFilter(m_pnullrenderer, L"Capture sink"));
          check(m_pbuilder->RenderStream(&PIN_CATEGORY_CAPTURE, &MEDIATYPE_Video, m_psource, m_pgrabberfilter, m_pnullrenderer));
@@ -108,6 +167,11 @@ namespace video_input_direct_show
          m_lConnectedHeight = info->bmiHeader.biHeight; free_type(connected);
          m_bSetup = true;
       }
+      // Capture is paced by the camera. A playback clock can stall the sink
+      // on virtual-camera timestamps even though the graph reports running.
+      comptr<IMediaFilter> mediafilter;
+      check(m_pgraph->QueryInterface(IID_PPV_ARGS(&mediafilter)));
+      check(mediafilter->SetSyncSource(nullptr));
       create_render(); check(m_pcontrol->Run()); m_edevicestate = ::video_input::e_device_state_capturing;
    }
    void device::stop_capturing()
@@ -117,7 +181,10 @@ namespace video_input_direct_show
    }
    void device::close()
    {
-      stop_capturing(); if (m_prender) m_prender->destroy(); m_prender.release(); m_pcontrol.release(); m_pconfig.release();
+      stop_capturing();
+      if (m_pgrabber) m_pgrabber->SetCallback(nullptr, 1);
+      if (m_preceiver) { m_preceiver->Release(); m_preceiver = nullptr; }
+      if (m_prender) m_prender->destroy(); m_prender.release(); m_pcontrol.release(); m_pconfig.release();
       m_pgrabber.release(); m_pgrabberfilter.release(); m_pnullrenderer.release();
       m_psource.release(); m_pbuilder.release(); m_pgraph.release(); m_bSetup = false;
    }
