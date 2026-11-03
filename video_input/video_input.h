@@ -58,3 +58,25 @@ namespace video_input
 
 
 
+
+
+namespace video_input
+{
+   inline ::string video_input_get_default_implementation_name()
+   {
+#if defined(WINDOWS) && !defined(UNIVERSAL_WINDOWS)
+      return "direct_show";
+#elif defined(UNIVERSAL_WINDOWS)
+      return "media_capture";
+#elif defined(MACOS)
+      return "avfoundation";
+#else
+      return "video_for_linux";
+#endif
+   }
+
+   inline ::string video_input_get_implementation_name(const ::scoped_string & implementation = {})
+   {
+      return implementation.is_empty() ? video_input_get_default_implementation_name() : ::string(implementation);
+   }
+}

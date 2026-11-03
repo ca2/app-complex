@@ -959,7 +959,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="device.cpp" />
-    <ClCompile Include="format_reader.cpp" />
+    <!-- Previous Media Foundation helper: <ClCompile Include="format_reader.cpp" /> -->
     <ClCompile Include="platform.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -968,9 +968,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="callback.cpp" />
-    <ClCompile Include="media_format.cpp" />
-    <ClCompile Include="thread.cpp" />
+    <!-- Previous Media Foundation helper: <ClCompile Include="callback.cpp" /> -->
+    <!-- Previous Media Foundation helper: <ClCompile Include="media_format.cpp" /> -->
+    <!-- Previous Media Foundation helper: <ClCompile Include="thread.cpp" /> -->
     <ClCompile Include="render.cpp" />
     <ClCompile Include="video_input.cpp" />
     <ClCompile Include="_.cpp" />

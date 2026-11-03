@@ -110,7 +110,8 @@ namespace app_complex_video_capture
 
 #else
 
-      auto pfactory = system()->factory("video_input", "media_foundation");
+      // auto pfactory = system()->factory("video_input", "media_foundation");
+      auto pfactory = system()->factory("video_input", ::video_input::video_input_get_implementation_name());
 
 #endif
 
