@@ -137,16 +137,18 @@ namespace app_complex_video_capture
 
       }
 
-      if (pvideoinputdevice->m_edevicestate == ::video_input::e_device_state_already_in_use_by_other_client)
+      if (pvideoinputdevice->m_edevicestate == ::video_input::e_device_state_already_in_use_by_other_client
+         || pvideoinputdevice->m_edevicestate == ::video_input::e_device_state_capture_failed)
       {
 
          pdraw2dgraphics->set_font(this);
 
          pdraw2dgraphics->set_solid_color(::color::white);
 
-         pdraw2dgraphics->fill_inset_rectangle(rectangleX, argb(127, 0, 0, 0));
+         pdraw2dgraphics->fill_inset_rectangle(rectangleX, argb(255, 0, 0, 0));
 
-         pdraw2dgraphics->text_out(10, 10, "Webcam is in use by other application.");
+         pdraw2dgraphics->text_out(10, 10, "Unable to open camera. It may be in exclusive use by another application (such as OBS).");
+         pdraw2dgraphics->text_out(10, 40, "Release the camera in the other application, then deselect and select it again to retry.");
 
          return;
 

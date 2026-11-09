@@ -6,6 +6,7 @@
 #include "acme/handler/item.h"
 #include "acme/user/user/content.h"
 #include "acme/handler/topic.h"
+#include "acme/user/user/mouse.h"
 #include "app-complex/video_input/video_input.h"
 #include "app-complex/video_input/device.h"
 #include "aura/graphics/draw2d/graphics.h"
@@ -20,6 +21,10 @@ namespace app_complex_video_capture
 
    device_selector::device_selector()
    {
+
+      // Let the tab placeholder size this view below visible tabs.
+      m_bExtendOnParent = false;
+      m_bExtendOnParentHostingArea = false;
 
       m_enonclient.erase(::user::e_non_client_background);
       m_enonclient.erase(::user::e_non_client_focus_rect);
@@ -219,44 +224,48 @@ namespace app_complex_video_capture
             if (::is_set(pdevice))
             {
                
-               if (pdevice == get_app()->m_pvideoinputdevice)
+               const bool selected = pdevice == get_app()->m_pvideoinputdevice;
+               pdraw2dgraphics->fill_inset_rectangle(puseritem->m_rectangle2,
+                  selected ? argb(255, 25, 100, 155)
+                     : m_pitemHover == pdevice ? argb(255, 55, 65, 75) : argb(255, 30, 33, 37));
+               if (selected)
                {
-                  
-                  if (m_pitemHover == pdevice)
-                  {
-                     
-                     pdraw2dgraphics->fill_inset_rectangle(puseritem->m_rectangle2, argb(127, 80, 180, 230));
-                     
-                  }
-                  else
-                  {
-                     
-                     pdraw2dgraphics->fill_inset_rectangle(puseritem->m_rectangle2, argb(127, 50, 150, 200));
-                     
-                  }
-                  
+                  auto marker = puseritem->m_rectangle2;
+                  marker.right = marker.left + 5;
+                  pdraw2dgraphics->fill_inset_rectangle(marker, argb(255, 105, 220, 95));
                }
-               else
+
+               auto rectangleName = puseritem->m_rectangle2;
+               auto rectangleOpen = rectangleName;
+               rectangleOpen.left = rectangleName.left + rectangleName.width() / 2;
+               rectangleName.right = rectangleOpen.left;
+               if (selected)
                {
-                  
-                  if (m_pitemHover == pdevice)
-                  {
-                     
-                     pdraw2dgraphics->fill_inset_rectangle(puseritem->m_rectangle2, argb(127, 100, 200, 255));
-                     
-                  }
-                  else
-                  {
-                     
-                     pdraw2dgraphics->fill_inset_rectangle(puseritem->m_rectangle2, argb(127, 0, 0, 0));
-                     
-                  }
-                  
+                  pdraw2dgraphics->fill_inset_rectangle(rectangleOpen,
+                     argb(255, 64, 70, 62));
+                  auto rectangleDivider = rectangleOpen;
+                  rectangleDivider.right = rectangleDivider.left + 1;
+                  pdraw2dgraphics->fill_inset_rectangle(rectangleDivider, argb(200, 160, 180, 195));
                }
-               
+               rectangleName.left += 10;
+
                pdraw2dgraphics->set_font(this);
                pdraw2dgraphics->set_solid_color(::color::white);
-               pdraw2dgraphics->draw_text(pdevice->m_strName, puseritem->m_rectangle2, e_align_left_center);
+               pdraw2dgraphics->draw_text(pdevice->m_strName, rectangleName, e_align_left_center);
+               if (selected)
+               {
+                  const double playX = rectangleOpen.left + 18.0;
+                  const double playY = (rectangleOpen.top + rectangleOpen.bottom) / 2.0;
+                  ::f64_point play[] = {
+                     {playX, playY - 9.0}, {playX, playY + 9.0}, {playX + 15.0, playY}
+                  };
+                  pdraw2dgraphics->set_solid_color(argb(255, 105, 220, 95));
+                  pdraw2dgraphics->fill_polygon(play, 3);
+                  auto rectangleLabel = rectangleOpen;
+                  rectangleLabel.left += 45;
+                  pdraw2dgraphics->set_solid_color(::color::white);
+                  pdraw2dgraphics->draw_text("View capture", rectangleLabel, e_align_left_center);
+               }
                
             }
             
@@ -307,6 +316,33 @@ namespace app_complex_video_capture
    {
 
       auto pdevice = dynamic_cast <::video_input::device *>(pitem);
+
+      if (!pdevice) return false;
+
+      auto puseritem = user_item(pdevice);
+      ::i32_point point(-1, -1);
+      if (pmouse)
+      {
+         point = pmouse->m_pointHost;
+         point -= host_origin();
+      }
+      if (pmouse && puseritem
+         && point.x >= puseritem->m_rectangle2.left + puseritem->m_rectangle2.width() / 2)
+      {
+         if (pdevice != get_app()->m_pvideoinputdevice) return true;
+
+         ::pointer<::app_complex_video_capture::application> papp = get_app();
+         ::pointer<::video_input::device> pdeviceOpen = pdevice;
+         ::pointer<pane_impact> ppane = get_typed_parent<pane_impact>();
+         // Recheck selection on the application task before opening the tab.
+         papp->post([papp, pdeviceOpen, ppane]()
+         {
+            if (papp->m_pvideoinputdevice != pdeviceOpen) return;
+            if (ppane)
+               ppane->user_post([ppane]() { ppane->set_current_tab_by_id(MAIN_IMPACT); });
+         });
+         return true;
+      }
 
       get_app()->set_current(pdevice);
 

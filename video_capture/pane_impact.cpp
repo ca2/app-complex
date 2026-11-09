@@ -1,6 +1,7 @@
 #include "platform.h"
 #include "pane_impact.h"
 #include "berg/user/user/tab_data.h"
+#include "berg/user/experience/frame_window.h"
 #include "device_selector.h"
 #include "application.h"
 #include "acme/constant/id.h"
@@ -8,8 +9,10 @@
 #include "acme/handler/topic.h"
 #include "berg/user/form/document.h"
 #include "berg/user/user/tab_pane.h"
+#include "berg/user/user/place_holder.h"
 #include "berg/user/user/single_document_template.h"
 #include "aura/user/user/system.h"
+#include "aura/graphics/draw2d/graphics_pointer.h"
 #include "app-complex/video_input/video_input.h"
 #include "app-complex/video_input/device.h"
 
@@ -21,6 +24,8 @@ namespace app_complex_video_capture
    pane_impact::pane_impact()
    {
 
+      // Fullscreen tabs overlay the active view, so draw them after its children.
+      m_bDrawTabAtBackground = false;
    }
 
 
@@ -66,9 +71,19 @@ namespace app_complex_video_capture
 
       }
 
+      ::cast<::experience::frame_window> pframe = top_level_frame();
+      if (pframe)
+      {
+         set_auto_hide_controller(pframe->full_screen_auto_hide());
+      }
+
       set_tab("Select Device","device_selector");
       set_tab("app_complex_video_capture", MAIN_IMPACT);
       set_tab("Open", "file_manager_impact");
+
+      // Each tab chooses whether fullscreen chrome overlays its content.
+      get_tab_by_id(MAIN_IMPACT)->payload("full_screen_overlay") = true;
+      get_tab_by_id("device_selector")->payload("full_screen_overlay") = false;
 
       set_current_tab_by_id(MAIN_IMPACT);
 
@@ -77,9 +92,11 @@ namespace app_complex_video_capture
 
    ::i32_rectangle pane_impact::hosting_rectangle(::user::enum_layout elayout)
    {
-      if (top_level()->layout().is_full_screen(::user::e_layout_layout))
+      auto ppane = get_tab(get_current_tab_index());
+      if (ppane && ppane->payload("full_screen_overlay").as_bool()
+         && top_level()->layout().is_full_screen(::user::e_layout_sketch))
       {
-         return rectangle(::user::e_layout_layout);
+         return rectangle(elayout);
       }
       return ::userex::pane_tab_impact::hosting_rectangle(elayout);
    }
@@ -88,23 +105,43 @@ namespace app_complex_video_capture
    void pane_impact::on_perform_top_down_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
       ::userex::pane_tab_impact::on_perform_top_down_layout(pdraw2dgraphics);
-      if (top_level()->layout().is_full_screen(::user::e_layout_layout))
+
+      auto rectangleClient = rectangle(::user::e_layout_layout);
+      if (m_pAutoHide->m_bEffectiveVisibleControl)
       {
-         // Fullscreen controls overlay the video instead of reserving a strip.
-         get_data()->m_rectangleHosting = rectangle(::user::e_layout_layout);
-         layout_pane(get_current_tab_index(), is_window_visible());
+         if (get_data()->m_bVertical)
+            rectangleClient.left = get_data()->m_rectangleTab.right;
+         else
+            rectangleClient.top = get_data()->m_rectangleTab.bottom;
+      }
+      get_data()->m_rectangleHosting = rectangleClient;
+
+      auto ppane = get_tab(get_current_tab_index());
+      if (ppane && ppane->m_pplaceholder)
+      {
+         const bool bOverlayTabs = ppane->payload("full_screen_overlay").as_bool()
+            && top_level()->layout().is_full_screen(::user::e_layout_sketch);
+         auto rectanglePane = bOverlayTabs ? rectangle(::user::e_layout_layout) : rectangleClient;
+         auto pholder = ppane->m_pplaceholder;
+         auto pchild = pholder->get_hold();
+         if (pchild)
+         {
+            pchild->m_bExtendOnParent = bOverlayTabs;
+            pchild->m_bExtendOnParentIfOnlyClient = false;
+            pchild->m_bExtendOnParentHostingArea = false;
+         }
+         // The wrapper borrows its child's policy, so it cannot independently
+         // force the video back into the smaller tab client area.
+         pholder->payload("borrow_child_layout_properties") = true;
+         pholder->place(rectanglePane, ::user::e_layout_layout, pdraw2dgraphics);
+         pholder->set_need_perform_layout();
       }
    }
 
 
    void pane_impact::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
-      // The active view fills the tab container in fullscreen. Do not paint
-      // the tab strip over its top edge; child views are drawn separately.
-      if (top_level()->layout().is_full_screen())
-      {
-         return;
-      }
+      // The tab's shared auto-hide controller decides whether the strip draws.
       ::userex::pane_tab_impact::_001OnDraw(pdraw2dgraphics);
    }
 
@@ -158,6 +195,12 @@ namespace app_complex_video_capture
 
    void pane_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
+
+      ::userex::pane_tab_impact::handle(ptopic, phandlercontext);
+      if (ptopic->id() == "auto_hide_visibility")
+      {
+         return;
+      }
 
       if (ptopic->user_interaction() && ptopic->user_interaction()->is_ascendant(m_pformdocumentMenu, true))
       {

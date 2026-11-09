@@ -24,6 +24,7 @@ namespace video_input
 	   e_device_state_already_in_use_by_other_client,
 	   e_device_state_capturing,
 	   e_device_state_device_removed,
+	   e_device_state_capture_failed,
 
 	};
 

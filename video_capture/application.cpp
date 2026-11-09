@@ -277,13 +277,39 @@ namespace app_complex_video_capture
       if (::is_set(pdevice))
       {
 
-         pdevice->initialize_device();
+         auto captureFailed = [pdevice]()
+         {
+            // Discard partial graph construction so a later selection can retry.
+            try { pdevice->close(); } catch (...) {}
+            pdevice->m_edevicestate = ::video_input::e_device_state_capture_failed;
+         };
+         try
+         {
+            // stop_capturing() preserves the configured graph. Resume it without
+            // trying to change its format while the capture pins remain connected.
+            if (!pdevice->is_setup())
+            {
 
-         auto iFormat = pdevice->find_argb_32_format();
+               pdevice->initialize_device();
 
-         pdevice->set_format(iFormat);
+               auto iFormat = pdevice->find_argb_32_format();
 
-         pdevice->start_capturing();
+               pdevice->set_format(iFormat);
+
+            }
+
+            pdevice->start_capturing();
+         }
+         catch (const ::exception & e)
+         {
+            informationf("Camera activation failed: %s", e.get_message().c_str());
+            captureFailed();
+         }
+         catch (...)
+         {
+            informationf("Camera activation failed with an unexpected error.");
+            captureFailed();
+         }
 
       }
 
