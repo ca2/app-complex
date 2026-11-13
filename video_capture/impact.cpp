@@ -11,6 +11,9 @@
 #include "aura/graphics/image/image.h"
 #include "aura/graphics/image/drawing.h"
 #include "aura/message/user.h"
+#include "berg/user/user/user.h"
+#include "acme/user/menu/menu.h"
+#include "acme/parallelization/synchronous_lock.h"
 
 
 namespace app_complex_video_capture
@@ -56,6 +59,9 @@ namespace app_complex_video_capture
 
       USER_MESSAGE_LINK(::user::e_message_create,pchannel,this,&impact::on_message_create);
       USER_MESSAGE_LINK(::user::e_message_destroy, pchannel, this, &impact::on_message_destroy);
+      USER_MESSAGE_LINK(::user::e_message_context_menu, pchannel, this, &impact::on_message_context_menu);
+      add_command_handler("video_show_stats", {this, &impact::on_toggle_show_stats});
+      add_command_prober("video_show_stats", {this, &impact::on_update_show_stats});
 
    }
 
@@ -92,6 +98,52 @@ namespace app_complex_video_capture
          m_prender.release();
 
       }
+
+   }
+
+
+   void impact::on_message_context_menu(::message::message * pmessage)
+   {
+
+      pmessage->m_bRet = true;
+      if (m_ptrackpopupContextMenu)
+         return;
+
+      ::pointer<::message::context_menu> pcontextmenu(pmessage);
+      auto pmenu = user()->menu_from_xml(this,
+         "<menubar><item id=\"video_show_stats\">Show stats</item></menubar>");
+      m_ptrackpopupContextMenu = allocateø::menu::track_popup(
+         pmenu, this, this, pcontextmenu->GetPoint());
+      m_ptrackpopupContextMenu->track([this]()
+      {
+         m_ptrackpopupContextMenu.release();
+      });
+
+   }
+
+
+   void impact::on_toggle_show_stats(::message::message * pmessage)
+   {
+
+      {
+         synchronous_lock lock(synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
+         m_bShowStats = !m_bShowStats;
+      }
+      pmessage->m_bRet = true;
+      set_need_redraw();
+      post_redraw();
+
+   }
+
+
+   void impact::on_update_show_stats(::message::message * pmessage)
+   {
+
+      ::pointer<::message::command> pcommand(pmessage);
+      synchronous_lock lock(synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
+      pcommand->enable();
+      pcommand->set_check(m_bShowStats, ::e_source_sync);
+      pcommand->m_bRet = true;
 
    }
 
@@ -200,7 +252,20 @@ namespace app_complex_video_capture
          target.top = rectangleX.top + (rectangleX.height() - height) / 2;
          target.right = target.left + width;
          target.bottom = target.top + height;
-         pdraw2dgraphics->fill_inset_rectangle(rectangleX, argb(255, 0, 0, 0));
+      }
+      if (!nativeSize)
+      {
+         // The opaque video overwrites its target. Clear only the letterbox bars
+         // instead of filling the entire full-screen surface before every frame.
+         const auto black = argb(255, 0, 0, 0);
+         if (target.top > rectangleX.top)
+            pdraw2dgraphics->fill_inset_rectangle(::i32_rectangle(rectangleX.left, rectangleX.top, rectangleX.right, target.top), black);
+         if (target.bottom < rectangleX.bottom)
+            pdraw2dgraphics->fill_inset_rectangle(::i32_rectangle(rectangleX.left, target.bottom, rectangleX.right, rectangleX.bottom), black);
+         if (target.left > rectangleX.left)
+            pdraw2dgraphics->fill_inset_rectangle(::i32_rectangle(rectangleX.left, target.top, target.left, target.bottom), black);
+         if (target.right < rectangleX.right)
+            pdraw2dgraphics->fill_inset_rectangle(::i32_rectangle(target.right, target.top, rectangleX.right, target.bottom), black);
       }
       ::string previewGeometry;
       previewGeometry.formatf("fullscreen=%d source=%dx%d view=%dx%d target=(%d,%d %dx%d) native=%d",
@@ -215,10 +280,13 @@ namespace app_complex_video_capture
 
       ::image::image_drawing imagedrawing(imagedrawingoptions, imagesource);
 
+      const auto previousResizedImages = pdraw2dgraphics->m_bUseImageMipMapsOrResizedImages;
       pdraw2dgraphics->m_bUseImageMipMapsOrResizedImages = false;
+      // Camera frames are opaque; avoid reading and blending the destination.
+      pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_set);
 
-      // Live preview favors throughput. Avoid inheriting expensive interpolation
-      // from other UI drawing on this graphics context.
+      // Keep smooth scaling now that the application requests GPU drawing.
+      const char * scalingMode = nativeSize ? "native" : "bilinear";
       const auto previousInterpolation = pdraw2dgraphics->m_einterpolationmode;
       pdraw2dgraphics->set_interpolation_mode(::draw2d::e_interpolation_mode_bilinear);
       const auto drawStarted = std::chrono::steady_clock::now();
@@ -235,6 +303,8 @@ namespace app_complex_video_capture
             m_timePreviewError = now;
          }
          pdraw2dgraphics->set_interpolation_mode(previousInterpolation);
+         pdraw2dgraphics->m_bUseImageMipMapsOrResizedImages = previousResizedImages;
+         pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
          return;
       }
       const auto drawFinished = std::chrono::steady_clock::now();
@@ -242,9 +312,28 @@ namespace app_complex_video_capture
 
       pdraw2dgraphics->set_interpolation_mode(previousInterpolation);
 
-      int iEnableVideoStats = 0;
+      pdraw2dgraphics->m_bUseImageMipMapsOrResizedImages = previousResizedImages;
+      pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-         if (iEnableVideoStats)
+      bool showStats;
+      {
+         synchronous_lock lock(synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
+         showStats = m_bShowStats;
+      }
+      if (showStats != m_bStatsWereVisible)
+      {
+         // Start a fresh measurement when the overlay is enabled again.
+         m_uPreviewFrames = 0;
+         m_uPreviewPaints = 0;
+         m_uLastPreviewFrame = framesReceived;
+         m_dDrawTotalMilliseconds = 0.0;
+         m_dPreviewFps = 0.0;
+         m_dDrawMilliseconds = 0.0;
+         m_timePreviewWindow = drawFinished;
+         m_bStatsWereVisible = showStats;
+      }
+
+         if (showStats)
          {
             m_dDrawTotalMilliseconds += std::chrono::duration<double, std::milli>(drawFinished - drawStarted).count();
             ++m_uPreviewPaints;
@@ -259,10 +348,10 @@ namespace app_complex_video_capture
                m_dPreviewFps = m_uPreviewFrames / previewElapsed;
                m_dDrawMilliseconds = m_dDrawTotalMilliseconds / m_uPreviewPaints;
                informationf("Video preview: mode=%s viewport=%dx%d capture=%.1f FPS preview=%.1f FPS paints=%.1f/s image draw=%.2f ms",
-                  nativeSize ? "native" : "stretch", rectangleX.width(), rectangleX.height(),
+                  scalingMode, rectangleX.width(), rectangleX.height(),
                   measuredFps, m_dPreviewFps, m_uPreviewPaints / previewElapsed, m_dDrawMilliseconds);
                informationf("Video geometry: mode=%s source=%dx%d view=%dx%d aspect=%.6f target=(%d,%d %dx%d) aspect=%.6f margins L=%d T=%d R=%d B=%d root_fullscreen=%d",
-                  nativeSize ? "native" : "bilinear", pimage->width(), pimage->height(),
+                  scalingMode, pimage->width(), pimage->height(),
                   rectangleX.width(), rectangleX.height(),
                   rectangleX.height() > 0 ? (double)rectangleX.width() / rectangleX.height() : 0.0,
                   target.left, target.top, target.width(), target.height(),

@@ -5,6 +5,7 @@
 
 #include "apex/platform/app_consumer.h"
 #include "berg/user/user/impact.h"
+#include "aura/user/menu/track_popup.h"
 
 
 namespace app_complex_video_capture
@@ -21,6 +22,9 @@ namespace app_complex_video_capture
 
 
       ::string m_strPreviewGeometry;
+      ::pointer<::menu::track_popup> m_ptrackpopupContextMenu;
+      bool m_bShowStats = false;
+      bool m_bStatsWereVisible = false;
       bool m_bEnableNativeSizeToggle = false;
       std::atomic<bool> m_bNativeSize{false};
       std::chrono::steady_clock::time_point m_timePreviewWindow = std::chrono::steady_clock::now();
@@ -66,6 +70,9 @@ namespace app_complex_video_capture
       
       DECLARE_MESSAGE_HANDLER(on_message_create);
       DECLARE_MESSAGE_HANDLER(on_message_destroy);
+      DECLARE_MESSAGE_HANDLER(on_message_context_menu);
+      DECLARE_MESSAGE_HANDLER(on_toggle_show_stats);
+      DECLARE_MESSAGE_HANDLER(on_update_show_stats);
 
       virtual void defer_check_on_draw_layout();
       virtual void on_draw_image_layer(::draw2d::graphics_pointer & pdraw2dgraphics);

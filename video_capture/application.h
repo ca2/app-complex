@@ -32,6 +32,8 @@ namespace app_complex_video_capture
 
 
 
+      ::string draw2d_get_implementation_name() override;
+
       void init_instance() override;
       //virtual void exit_instance() override;
 

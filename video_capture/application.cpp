@@ -44,6 +44,9 @@ namespace app_complex_video_capture
 
       m_strGpuImplementation = "opengl";
       m_strDraw2dImplementation = "opengl";
+      // OpenGL draw2d requires on-screen GPU output; off-screen output selects
+      // a CPU draw2d backend even when OpenGL is requested above.
+      m_strGraphics3dOutput = "on_screen";
 
       m_bLicense = false;
 
@@ -54,6 +57,14 @@ namespace app_complex_video_capture
 
    application::~application()
    {
+
+   }
+
+
+   ::string application::draw2d_get_implementation_name()
+   {
+
+      return system()->implementation_name("draw2d", "opengl");
 
    }
 
