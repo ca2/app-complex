@@ -326,6 +326,14 @@ namespace app_complex_video_capture
 
       m_pvideoinputdevice = pdevice;
 
+      // Selection must wake an idle preview; there is no idle FPS render loop.
+      ::pointer<::user::interaction> pwindow = main_window();
+      if (pwindow)
+      {
+         pwindow->set_need_redraw();
+         pwindow->post_redraw();
+      }
+
       if (::is_set(pdevice))
       {
 

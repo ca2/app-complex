@@ -83,13 +83,15 @@ namespace app_complex_video_capture
 
       //get_top_level()->add_fps_interest(this);
 
-      add_graphical_output_purpose(this, ::graphics::e_output_purpose_screen_fps);
+      // Continuous output is enabled only while a camera is capturing.
       
    }
 
 
    void impact::on_message_destroy(::message::message * pmessage)
    {
+
+      erase_graphical_output_purpose(this);
 
       if (m_prender)
       {
@@ -171,6 +173,17 @@ namespace app_complex_video_capture
       auto rectangleX = this->rectangle();
 
       auto pvideoinputdevice = get_app()->m_pvideoinputdevice;
+
+      const bool continuousPreview = pvideoinputdevice
+         && pvideoinputdevice->m_edevicestate == ::video_input::e_device_state_capturing;
+      if (continuousPreview != m_bContinuousPreview)
+      {
+         if (continuousPreview)
+            add_graphical_output_purpose(this, ::graphics::e_output_purpose_screen_fps);
+         else
+            erase_graphical_output_purpose(this);
+         m_bContinuousPreview = continuousPreview;
+      }
 
       pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 

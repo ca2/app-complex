@@ -23,6 +23,7 @@ namespace app_complex_video_capture
 
       ::string m_strPreviewGeometry;
       ::pointer<::menu::track_popup> m_ptrackpopupContextMenu;
+      bool m_bContinuousPreview = false;
       bool m_bShowStats = false;
       bool m_bStatsWereVisible = false;
       bool m_bEnableNativeSizeToggle = false;

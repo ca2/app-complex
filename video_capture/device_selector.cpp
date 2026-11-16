@@ -68,7 +68,8 @@ namespace app_complex_video_capture
 
       }
 
-      top_level()->add_fps_interest(this);
+      // This list is event-driven; continuous FPS redraws repeatedly swap an
+      // unchanged OpenGL window. The video impact owns capture preview pacing.
       
       get_app()->m_pvideoinput->add_handler(this);
 
