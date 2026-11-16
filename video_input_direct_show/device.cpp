@@ -1,6 +1,7 @@
 #include "platform.h"
 #include "device.h"
 #include "render.h"
+#include "acme/parallelization/synchronous_lock.h"
 #include "app-complex/video_input/media_format.h"
 #include "acme/operating_system/windows_common/com/hresult_exception.h"
 #pragma comment(lib, "strmiids.lib")
@@ -172,7 +173,24 @@ namespace video_input_direct_show
       comptr<IMediaFilter> mediafilter;
       check(m_pgraph->QueryInterface(IID_PPV_ARGS(&mediafilter)));
       check(mediafilter->SetSyncSource(nullptr));
-      create_render(); check(m_pcontrol->Run()); m_edevicestate = ::video_input::e_device_state_capturing;
+      create_render();
+      // Publish the negotiated source cadence so preview pacing does not cap
+      // higher-rate cameras at the fallback rate or redraw low-rate ones twice.
+      AM_MEDIA_TYPE connected = {};
+      check(m_pgrabber->GetConnectedMediaType(&connected));
+      double captureFps = 0.0;
+      if (connected.formattype == FORMAT_VideoInfo && connected.cbFormat >= sizeof(VIDEOINFOHEADER))
+      {
+         auto info = (VIDEOINFOHEADER *)connected.pbFormat;
+         if (info->AvgTimePerFrame > 0)
+            captureFps = 10000000.0 / info->AvgTimePerFrame;
+      }
+      free_type(connected);
+      {
+         synchronous_lock lock(m_prender->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
+         m_prender->m_dRequestedFps = captureFps;
+      }
+      check(m_pcontrol->Run()); m_edevicestate = ::video_input::e_device_state_capturing;
    }
    void device::stop_capturing()
    {

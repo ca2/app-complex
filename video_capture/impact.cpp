@@ -11,6 +11,7 @@
 #include "aura/graphics/image/image.h"
 #include "aura/graphics/image/drawing.h"
 #include "aura/message/user.h"
+#include "aura/windowing/window.h"
 #include "berg/user/user/user.h"
 #include "acme/user/menu/menu.h"
 #include "acme/parallelization/synchronous_lock.h"
@@ -168,7 +169,6 @@ namespace app_complex_video_capture
       pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
       auto rectangleX = this->rectangle();
-      trace_view_geometry();
 
       auto pvideoinputdevice = get_app()->m_pvideoinputdevice;
 
@@ -227,6 +227,15 @@ namespace app_complex_video_capture
       const double requestedFps = m_prender->m_dRequestedFps;
       const auto framesReceived = m_prender->m_uFramesReceived;
       synchronouslock.unlock();
+
+      // Do not render the same camera frame at the desktop refresh rate.
+      // Follow the configured source cadence, including fractional frame rates.
+      const double previewTargetFps = requestedFps > 0.0 ? requestedFps : 30.0;
+      if (previewTargetFps != m_dPreviewTargetFps)
+      {
+         top_level()->window()->set_per_second(previewTargetFps);
+         m_dPreviewTargetFps = previewTargetFps;
+      }
 
       ::image::image_source imagesource(pimage);
 

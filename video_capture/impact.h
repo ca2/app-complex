@@ -32,6 +32,7 @@ namespace app_complex_video_capture
       ::u64 m_uPreviewFrames = 0;
       ::u64 m_uPreviewPaints = 0;
       ::u64 m_uLastPreviewFrame = 0;
+      double m_dPreviewTargetFps = 0.0;
       double m_dPreviewFps = 0.0;
       double m_dDrawMilliseconds = 0.0;
       double m_dDrawTotalMilliseconds = 0.0;
